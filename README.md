@@ -7,10 +7,10 @@ Once we have the data it's up to anyone to build any web-site or apps and work w
 
 ## Convention
 - All the data should be converted into .json files 
-- We should separate the data by path versions (so you can compare the changes between patches easily)
+- We should separate the data by path versions 
+   - So you can compare the changes between patches easily
 - Please provide all the scripts / add manuals how you get the data
-
-We can expect a lot of updates from developers. So we will need to run our scripts many times. 
+   - We can expect a lot of updates from developers. So we will need to run our scripts many times. 
 
 ## Contribution 
 We are looking for more help! If you would like to contribute in any way. Please rech out ot us here in the issues / on the discord https://discord.gg/jRrnwqMfkr

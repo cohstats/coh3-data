@@ -14,3 +14,7 @@ Once we have the data it's up to anyone to build any web-site or apps and work w
 ## Contribution 
 We are looking for more help! If you would like to contribute in any way. Please rech out ot us here in the issues / on the discord https://discord.gg/jRrnwqMfkr
 
+
+### References:
+Big thanks to all open source tools focused on Relic games.
+https://github.com/RobinKa/RGDReader/tree/master/RRTexConverter

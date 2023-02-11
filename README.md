@@ -6,11 +6,10 @@ Goal of this repository is to gather all the data from the game Comapny of Heroe
 Once we have the data it's up to anyone to build any web-site or apps and work with this data. But let's put all our heads together 
 
 ## Convention
-- All the data should be converted into .json files 
-- We should separate the data by path versions 
-   - So you can compare the changes between patches easily
+- All the data should be converted into .json files
 - Please provide all the scripts / add manuals how you get the data
-   - We can expect a lot of updates from developers. So we will need to run our scripts many times. 
+   - We can expect a lot of updates from developers. So we will need to run our scripts many times.
+- We shall do git tags to mark patch changes 
 
 ## Contribution 
 We are looking for more help! If you would like to contribute in any way. Please rech out ot us here in the issues / on the discord https://discord.gg/jRrnwqMfkr

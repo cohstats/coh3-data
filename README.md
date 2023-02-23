@@ -2,7 +2,7 @@
 Data and icons on all Company of Heroes 3 units / stuff in a developer friendly format.
 
 ## Goal 
-Goal of this repository is to gather all the data from the game Comapny of Heroes 3. For example data for all units. As well as tools and scripts for gathering this data from the game. We beliave that open sourcing all the data and tools can only help the game and community.
+Goal of this repository is to gather all the data from the game Company of Heroes 3. For example data for all units. As well as tools and scripts for gathering this data from the game. We beliave that open sourcing all the data and tools can only help the game and community.
 Once we have the data it's up to anyone to build any web-site or apps and work with this data. But let's put all our heads together 
 
 ## Convention

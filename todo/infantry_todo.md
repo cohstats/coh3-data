@@ -20,7 +20,7 @@ Near: 0.513 https://github.com/cohstats/coh3-data/blob/3131e1a9d50e4b262e17d6e94
 Far: 0.23 https://github.com/cohstats/coh3-data/blob/3131e1a9d50e4b262e17d6e940f8eee2d877949f/xml/attrib/instances/weapon/afrika_korps/small_arms/machine_gun/sub_machine_gun/mp40_assault_panzergrenadier_ak.xml#L6
 Mid: 0.37 https://github.com/cohstats/coh3-data/blob/3131e1a9d50e4b262e17d6e940f8eee2d877949f/xml/attrib/instances/weapon/afrika_korps/small_arms/machine_gun/sub_machine_gun/mp40_assault_panzergrenadier_ak.xml#L7
 
-### Damage / DPS / Range / Distances
+### Damage / DPS / Range / Distances / Reload / Burst cooldown / Burst cooldown multiplier
 ## Damage
 
 ## DPS
@@ -34,8 +34,18 @@ Near: 7 https://github.com/cohstats/coh3-data/blob/3131e1a9d50e4b262e17d6e940f8e
 Far: 35 https://github.com/cohstats/coh3-data/blob/3131e1a9d50e4b262e17d6e940f8eee2d877949f/xml/attrib/instances/weapon/afrika_korps/small_arms/machine_gun/sub_machine_gun/mp40_assault_panzergrenadier_ak.xml#L255
 Mid: 20 https://github.com/cohstats/coh3-data/blob/3131e1a9d50e4b262e17d6e940f8eee2d877949f/xml/attrib/instances/weapon/afrika_korps/small_arms/machine_gun/sub_machine_gun/mp40_assault_panzergrenadier_ak.xml#L256
 
+## Reload
+Min: 2.8 https://github.com/cohstats/coh3-data/blob/3131e1a9d50e4b262e17d6e940f8eee2d877949f/xml/attrib/instances/weapon/afrika_korps/small_arms/machine_gun/sub_machine_gun/mp40_assault_panzergrenadier_ak.xml#L265
+Max: 3.5 https://github.com/cohstats/coh3-data/blob/3131e1a9d50e4b262e17d6e940f8eee2d877949f/xml/attrib/instances/weapon/afrika_korps/small_arms/machine_gun/sub_machine_gun/mp40_assault_panzergrenadier_ak.xml#L264
 
+## Burst cooldown
+Min: 0.75 https://github.com/cohstats/coh3-data/blob/3131e1a9d50e4b262e17d6e940f8eee2d877949f/xml/attrib/instances/weapon/afrika_korps/small_arms/machine_gun/sub_machine_gun/mp40_assault_panzergrenadier_ak.xml#L167
+Max: 1.25 https://github.com/cohstats/coh3-data/blob/3131e1a9d50e4b262e17d6e940f8eee2d877949f/xml/attrib/instances/weapon/afrika_korps/small_arms/machine_gun/sub_machine_gun/mp40_assault_panzergrenadier_ak.xml#L166
 
+## Burst cooldown multiplier
+Near: 1 https://github.com/cohstats/coh3-data/blob/3131e1a9d50e4b262e17d6e940f8eee2d877949f/xml/attrib/instances/weapon/afrika_korps/small_arms/machine_gun/sub_machine_gun/mp40_assault_panzergrenadier_ak.xml#L170
+Far: 2.5 https://github.com/cohstats/coh3-data/blob/3131e1a9d50e4b262e17d6e940f8eee2d877949f/xml/attrib/instances/weapon/afrika_korps/small_arms/machine_gun/sub_machine_gun/mp40_assault_panzergrenadier_ak.xml#L171
+Mid: 1.5 https://github.com/cohstats/coh3-data/blob/3131e1a9d50e4b262e17d6e940f8eee2d877949f/xml/attrib/instances/weapon/afrika_korps/small_arms/machine_gun/sub_machine_gun/mp40_assault_panzergrenadier_ak.xml#L172
 ### Abilities
 
 ### Veterancy upgrades

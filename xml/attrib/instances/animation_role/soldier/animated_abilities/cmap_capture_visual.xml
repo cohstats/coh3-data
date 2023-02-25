@@ -1,0 +1,21 @@
+<instance version="5" description="" template="animation_role">
+	<variant name="default">
+		<uniqueid name="pbgid" value="2081968" />
+		<group name="animation_role_bag">
+			<file name="animator" value="armies\common\rigs\infantry\male_soldier_motion\male_soldier_motion" overrideParent="True" />
+			<list name="animation_groups">
+				<group name="group" List.ItemID="243142469" List.ParentItemID="243142469">
+					<list name="set">
+						<group name="entry" List.ItemID="1985058537" List.ParentItemID="1985058537">
+							<template_reference name="animation" value="options\animation_role\animation_role_raw_hkxa" overrideParent="True">
+								<file name="file" value="armies\common\rigs\infantry\male_soldier_motion\animations\unit_behaviours\squadleader_gesture_stand_aim_follow_a" overrideParent="True" />
+							</template_reference>
+							<enum name="slot" value="ability_animation_enter" overrideParent="True" />
+						</group>
+					</list>
+				</group>
+			</list>
+		</group>
+		<instance_reference name="parent_pbg" value="animation_role\soldier\animated_abilities\sab_base" />
+	</variant>
+</instance>

@@ -1,0 +1,1272 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions" overrideParent="True">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1455447066">
+				<file name="alternate_sua" value="" overrideParent="True" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\buildings\industrial_buildings\airfield_hangar_lrg_01\airfield_hangar_center_01" overrideParent="True" />
+				<bool name="always_revealed_in_fow" value="True" />
+				<bool name="is_visible_in_game" value="True" />
+				<int name="precise_size" value="-1" />
+				<enum name="default_spawn_type" value="" />
+				<instance_reference name="unit_badge" value="" />
+				<bool name="is_spawned_when_not_in_interactive_area" value="True" />
+				<bool name="is_wreck" value="False" />
+				<float name="animator_scale" value="100" />
+				<bool name="browsable_in_editor" value="True" />
+				<float name="entity_scale" value="100" />
+				<enum name="subclass_type" value="Generic" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_entity_ext" List.ItemID="54336258">
+				<float name="rotate_snap" value="360" />
+				<bool name="kill_paradrop" value="False" />
+				<enum name="transferable" value="None" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\site_ext" List.ItemID="-2086353425">
+				<float name="extra_build_test_footprint_x" value="0" />
+				<bool name="snap_to_terrain" value="False" />
+				<bool name="lock_to_impass" value="True" />
+				<float name="extra_build_test_footprint_z" value="0" />
+				<float name="extra_build_test_footprint_offset_x" value="0" />
+				<float name="extra_build_test_footprint_offset_z" value="0" />
+				<float name="minimum_build_test_footprint_x" value="0" />
+				<float name="minimum_build_test_footprint_z" value="0" />
+				<enum name="impass_cell_check" value="AllCellsFree" />
+				<group name="footprint_scale">
+					<float name="x" value="0" />
+					<float name="y" value="0" />
+				</group>
+				<bool name="forced_axis_aligned_footprint" value="False" />
+				<bool name="remove_if_constructed_over" value="False" />
+				<list name="snap_to_surface_types">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-2144039447">
+				<bool name="can_repair" value="False" />
+				<bool name="cuttable" value="False" />
+				<string name="death_event_name" value="Death" />
+				<float name="death_seconds" value="0" />
+				<bool name="delete_when_dead" value="True" />
+				<bool name="force_attacker_memory" value="False" />
+				<float name="hitpoints" value="10000" overrideParent="True" />
+				<bool name="is_invincible" value="False" />
+				<bool name="is_salvagable_wreck" value="False" />
+				<instance_reference name="rebuilt_entity" value="" />
+				<instance_reference name="rebuilt_squad" value="" />
+				<bool name="rebuilt_use_wreck_owner" value="False" />
+				<bool name="receive_weapon_cover_modifiers" value="False" />
+				<float name="regeneration" value="0" />
+				<bool name="regeneration_disabled" value="True" />
+				<bool name="remove_from_pathfinding_on_death" value="False" overrideParent="True" />
+				<bool name="reveal_to_all_on_death" value="False" />
+				<bool name="ui_can_scuttle" value="False" />
+				<float name="target_size" value="1" />
+				<float name="weapon_priority" value="0" />
+				<template_reference name="wreck_entity_option" value="options\none">
+				</template_reference>
+				<enum name="armor_type" value="None" />
+				<template_reference name="armor_layout_option" value="options\ebpextensions\healthext\armor_layouts\armor_layout_uniform">
+					<float name="armor" value="25" />
+				</template_reference>
+				<enum name="allegiance_override" value="none" />
+				<bool name="not_default_attackable" value="False" />
+				<enum_table name="armor_scaler_by_damage_type">
+					<float name="True Damage" value="1" />
+					<float name="flame" value="1" />
+					<float name="ballistic" value="1" />
+					<float name="explosive" value="1" />
+				</enum_table>
+				<template_reference name="self_destruct_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="rebuilt_entity_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="on_received_damage_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<state_tree_node name="death_action_tree" value="" />
+				<bool name="can_be_damaged_by_ally" value="False" />
+				<state_tree_node name="on_reach_invulnerable_min_cap_entity_state_tree_ref" value="" />
+				<state_tree_node name="on_reach_max_health_entity_state_tree_ref" value="" />
+				<list name="restore_hook_offsets">
+				</list>
+				<bool name="can_be_restored" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" comment="Most objects should block missed projectiles or at least have the chance to, so that occasionally players will actually see real impacts collide with them." List.ItemID="-15452509">
+				<instance_reference name="hit_material" value="hit_material\metal" overrideParent="True" />
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_artillery" value="False" overrideParent="True" />
+						<bool name="tp_vehicle_collide" value="False" overrideParent="True" />
+						<bool name="tp_piercing_blockers_only" value="False" overrideParent="True" />
+						<bool name="tp_throw" value="True" overrideParent="True" />
+						<bool name="tp_collide" value="False" />
+					</enum_table>
+					<enum_table name="pass_through_relation">
+						<bool name="undefined" value="False" />
+						<bool name="enemy" value="False" />
+						<bool name="ally" value="False" />
+						<bool name="neutral" value="False" />
+					</enum_table>
+					<bool name="pass_through_weapon_ranged_non_projectile" value="False" />
+					<bool name="collide_with_missed_ranged_weapon_shots" value="True" />
+				</group>
+				<float name="hit_chance" value="1" />
+				<template_reference name="projectile_reflect_option" value="options\none">
+				</template_reference>
+				<enum name="projectile_collision_check_type" value="internal_simboxes_only" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="-1861297085">
+				<list name="unit_type_list" overrideParent="True">
+					<enum name="unit_type" value="destructible_object" List.ItemID="-1090652108" />
+				</list>
+				<enum name="weapon_targeting" value="no_targeting" />
+				<enum_table name="weapon_category_targeting_filter">
+					<bool name="1melee" value="True" />
+					<bool name="2ranged" value="True" />
+					<bool name="3siege" value="True" />
+					<bool name="4charge" value="True" />
+					<bool name="5brace" value="True" />
+					<bool name="6auto_ability_cast" value="True" />
+					<bool name="7single_cast_ability" value="True" />
+					<bool name="8dummy" value="True" />
+				</enum_table>
+				<bool name="intersection_testing" value="False" />
+				<list name="race_type_list">
+				</list>
+				<list name="attack_target_restriction_on_attacker">
+				</list>
+				<list name="attack_target_restriction_on_victim">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" List.ItemID="-532763841">
+				<group name="impass_simboxes">
+					<bool name="default_simbox" value="False" overrideParent="True" />
+					<list name="named_simboxes" overrideParent="True">
+					</list>
+				</group>
+				<bool name="cant_build" value="True" />
+				<list name="block_path">
+					<instance_reference name="path_type" value="pass_types\infantry" List.ItemID="-301782508" />
+					<instance_reference name="path_type" value="pass_types\vaulting_infantry" List.ItemID="868153140" />
+					<instance_reference name="path_type" value="pass_types\vehicle_light" List.ItemID="-126025899" />
+					<instance_reference name="path_type" value="pass_types\vehicle_medium" List.ItemID="-344807504" />
+				</list>
+				<bool name="should_rasterize_partial_cells" value="False" overrideParent="True" />
+				<enum name="blocker_lifetime_type" value="match_entity" />
+				<file name="stamp_blockers" value="" />
+				<group name="center_cell">
+					<bool name="cant_build" value="False" />
+					<list name="block_path">
+					</list>
+				</group>
+				<list name="cant_build_exemptions">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_react_tree_ext" List.ItemID="1237385664">
+				<state_tree_node name="ActionTree_OpeningBranch" value="hit_building" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\animation_action_tree_ext" List.ItemID="-1030718582">
+				<state_tree_node name="ActionTree_OpeningBranch" value="physical_prop" />
+				<bool name="use_root_motion" value="True" />
+				<enum name="entity_statetree_sort_tag" value="Default" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\marker_ext" List.ItemID="-1479938230">
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\crushee_ext" List.ItemID="936024386">
+				<enum name="min_crush_mode" value="crush_heavy" overrideParent="True" />
+				<template_reference name="on_crushed_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<bool name="destroy_on_crush" value="True" />
+				<bool name="can_be_crushed_by_allies" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\obj_cover_ext" List.ItemID="-1825158387">
+				<enum name="cover_type" value="" overrideParent="True" />
+				<bool name="is_cover_directional" value="False" overrideParent="True" />
+				<bool name="is_shoot_through" value="False" />
+				<bool name="use_simbox_range" value="True" />
+				<bool name="absorb_explosions" value="False" />
+				<bool name="generate_cover_spots" value="False" overrideParent="True" />
+				<bool name="absorb_non_damaging_shots_and_their_on_penetrated_actions" value="False" />
+				<template_reference name="additional_sim_box_option" value="options\none">
+				</template_reference>
+				<bool name="block_enemy_path" value="False" />
+				<bool name="always_block_shoot_through_projectiles" value="False" />
+				<bool name="start_enabled" value="True" />
+				<float name="cover_spot_distance_from_simbox" value="0.25" />
+				<float name="cover_spot_width" value="1.75" />
+				<float name="cover_hit_hox_expansion_amount" value="0" />
+				<enum name="terrain_cover_type" value="tp_heavy_cover" overrideParent="True" />
+				<bool name="is_solid_cover_object" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-1067332149">
+				<float name="decorator_height" value="9" overrideParent="True" />
+				<enum name="selection_type" value="single_entity_select" overrideParent="True" />
+				<bool name="ap_killed_kicker" value="False" />
+				<bool name="ap_loss_kicker" value="False" />
+				<string name="extra_text_deprecated" value="" />
+				<bool name="ghost_enable" value="False" />
+				<locstring name="help_text" value="0" />
+				<string name="hotkey_name" value="" />
+				<file name="icon_name" value="" />
+				<enum name="kill_type" value="" />
+				<colour name="minimap_color" value="*" />
+				<bool name="minimap_enable" value="False" />
+				<bool name="minimap_team_only" value="False" />
+				<bool name="minimap_teamcolor" value="False" />
+				<string name="overlay_name" value="" />
+				<bool name="reveal_for_decryption" value="False" />
+				<locstring name="screen_name" value="11231363" overrideParent="True" />
+				<enum name="selection_name" value="" />
+				<float name="selection_scale" value="1" />
+				<locstring name="tooltip_txt" value="0" />
+				<int name="ui_priority" value="0" />
+				<file name="minimap_icon" value="" />
+				<float name="minimap_icon_scale" value="1" />
+				<file name="portrait_icon" value="" />
+				<locstring name="brief_text" value="0" />
+				<locstring name="extra_text" value="0" />
+				<locstring name="screen_name_short" value="0" />
+				<bool name="show_in_build_log" value="True" />
+				<bool name="show_entity_appearance" value="True" />
+				<locstring name="screen_name_world" value="0" />
+				<locstring name="help_text_world" value="0" />
+				<locstring name="extra_text_world" value="0" />
+				<enum name="map_rotation_type_override" value="heading" overrideParent="True" />
+				<file name="symbol_icon_name" value="" />
+				<enum name="occlusion_state" value="occlude_others" overrideParent="True" />
+				<enum name="decorator_visibility" value="hidden" />
+				<bool name="skin_pack_override" value="False" />
+				<string name="skin_summer" value="" />
+				<string name="skin_winter" value="" />
+				<enum name="targeting_and_bandbox_selection_priority" value="lowest" />
+				<enum name="selection_method" value="mesh" overrideParent="True" />
+				<group name="terrain_info_display_offset">
+					<float name="x" value="0" />
+					<float name="y" value="0" />
+				</group>
+				<string name="decorator_ledger_key" value="" />
+				<instance_reference name="decorator_ledger_bar_style" value="" />
+				<enum name="selection_name_squad_override" value="" />
+				<string name="selection_grouping_ledger_key" value="" />
+				<string name="debug_text" value="" />
+				<string name="selection_datatemplate" value="" />
+				<bool name="use_construction_range_on_selection" value="False" />
+				<bool name="use_combat_range_on_selection" value="False" />
+				<bool name="is_armoured" value="False" />
+				<string name="decorator_data_template" value="" />
+				<enum name="ui_combine_type" value="intersection" />
+				<bool name="spotted_on_spawn" value="False" />
+				<instance_reference name="district_info" value="" />
+				<bool name="force_facing_and_range_visual_to_center_on_entity" value="False" />
+				<bool name="is_unique_to_race" value="False" />
+				<float name="kicker_offset" value="0" />
+				<file name="portrait_name" value="" />
+				<group name="selection_secondary_bounds_scale">
+					<float name="x" value="1" />
+					<float name="y" value="1" />
+					<float name="z" value="1" />
+				</group>
+				<enum name="decorator" value="" />
+				<int name="map_layer" value="0" />
+				<enum name="map_mark" value="" />
+				<group name="ui_codex_info">
+					<int name="priority" value="0" />
+					<bool name="exclusive" value="False" />
+					<group name="ui_position">
+						<int name="ui_position_column" value="-1" />
+						<int name="ui_position_row" value="-1" />
+					</group>
+				</group>
+				<list name="custom_selection_obbs">
+				</list>
+				<list name="ui_extra_infos">
+				</list>
+				<enum name="screen_name_visibility" value="visible" />
+				<template_reference name="help_text_formatter" value="">
+				</template_reference>
+				<template_reference name="extra_text_formatter" value="">
+				</template_reference>
+				<template_reference name="extra_text_world_formatter" value="">
+				</template_reference>
+				<template_reference name="help_text_world_formatter" value="">
+				</template_reference>
+				<template_reference name="screen_name_formatter" value="">
+				</template_reference>
+				<template_reference name="screen_name_short_formatter" value="">
+				</template_reference>
+				<template_reference name="screen_name_world_formatter" value="">
+				</template_reference>
+				<template_reference name="brief_text_formatter" value="">
+				</template_reference>
+				<string name="sound" value="" />
+				<string name="sound_alternative" value="" />
+				<string name="telemetry_name" value="" />
+				<group name="selection_obb_size">
+					<float name="x" value="1" />
+					<float name="y" value="1" />
+					<float name="z" value="1" />
+				</group>
+				<bool name="selectable_in_non_interactive_area" value="False" overrideParent="True" />
+				<enum name="target_selection_priority_by_owner" value="none" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\burn_ext" List.ItemID="820172071">
+				<float name="on_fire_damage_per_sec" value="2" />
+				<float name="on_fire_decay_amount_per_sec" value="-1" />
+				<float name="on_fire_threshold" value="2" />
+				<float name="max_fire_damage_per_second" value="10000" />
+				<float name="on_fire_health_percentage" value="-1" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\line_of_sight_ext" overrideParent="True" List.ItemID="1259432238">
+				<group name="blocking_box" comment="Sim/ sight blocker was already bigger than physical object, so maintained that ratio. -Brock 6/14/2019">
+					<float name="x" value="5" />
+					<float name="y" value="2.5" />
+					<float name="z" value="5" />
+				</group>
+				<bool name="is_shot_blocking" value="True" overrideParent="True" />
+				<bool name="use_blocking_box" value="False" />
+				<enum name="does_block_line_of_sight" value="never" overrideParent="True" />
+				<bool name="reveal_center_when_outside_is_visible" value="True" />
+				<bool name="disable_shot_blocking_on_death" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\destructible_cell_ext" List.ItemID="-1446127979">
+				<list name="cells" overrideParent="True">
+					<list name="main_cells_1f" overrideParent="True" List.ItemID="-1651057021">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="741312851">
+							<float name="max_health" value="200" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\industrial_buildings\airfield_hangar_lrg_side_01\cell_02" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_02" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\metal" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" overrideParent="True" />
+							<string name="cell_preset" value="" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="656932474">
+							<float name="max_health" value="200" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\industrial_buildings\airfield_hangar_lrg_side_01\cell_03" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_03" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\metal" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" overrideParent="True" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="513627680">
+							<float name="max_health" value="200" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\industrial_buildings\airfield_hangar_lrg_side_01\cell_04" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_04" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\metal" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" overrideParent="True" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1906860432">
+							<float name="max_health" value="200" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\industrial_buildings\airfield_hangar_lrg_side_01\cell_06" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_06" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\metal" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" overrideParent="True" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-1367619901">
+							<float name="max_health" value="200" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\industrial_buildings\airfield_hangar_lrg_side_01\cell_07" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_07" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\metal" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" overrideParent="True" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-447140853">
+							<float name="max_health" value="200" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\industrial_buildings\airfield_hangar_lrg_side_01\cell_08" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_08" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\metal" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" overrideParent="True" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+					</list>
+					<list name="accessories_1f" overrideParent="True" List.ItemID="-1457350906">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="821985485">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells" overrideParent="True">
+								<string name="marker_path" value="loc_cell_02" overrideParent="True" List.ItemID="-1172544201" />
+							</list>
+							<file name="animator" value="art\environment\buildings\industrial_buildings\accessories\ib_ah_inside_lamp_small\ib_ah_inside_lamp_small" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_02\loc_acc_r_inside_lamp_small" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\metal" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="accessory_default" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-41390904">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells" overrideParent="True">
+								<string name="marker_path" value="loc_cell_03" overrideParent="True" List.ItemID="1363552674" />
+							</list>
+							<file name="animator" value="art\environment\buildings\industrial_buildings\accessories\ib_ah_inside_lamp_medium\ib_ah_inside_lamp_medium" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_03\loc_acc_r_inside_lamp_medium" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\metal" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="accessory_default" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-769688913">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells" overrideParent="True">
+								<string name="marker_path" value="loc_cell_04" overrideParent="True" List.ItemID="330158712" />
+							</list>
+							<file name="animator" value="art\environment\buildings\industrial_buildings\accessories\ib_ah_inside_lamp_large\ib_ah_inside_lamp_large" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_04\loc_acc_r_inside_lamp_large" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\metal" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="accessory_default" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1016514748">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells" overrideParent="True">
+								<string name="marker_path" value="loc_cell_06" overrideParent="True" List.ItemID="435275000" />
+							</list>
+							<file name="animator" value="art\environment\buildings\industrial_buildings\accessories\ib_ah_inside_lamp_small\ib_ah_inside_lamp_small" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_06\loc_acc_l_inside_lamp_small" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\metal" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="accessory_default" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="287739547">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells" overrideParent="True">
+								<string name="marker_path" value="loc_cell_07" overrideParent="True" List.ItemID="-371181606" />
+							</list>
+							<file name="animator" value="art\environment\buildings\industrial_buildings\accessories\ib_ah_inside_lamp_medium\ib_ah_inside_lamp_medium" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_07\loc_acc_l_inside_lamp_medium" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\metal" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="accessory_default" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-167024208">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells" overrideParent="True">
+								<string name="marker_path" value="loc_cell_08" overrideParent="True" List.ItemID="1423243616" />
+							</list>
+							<file name="animator" value="art\environment\buildings\industrial_buildings\accessories\ib_ah_inside_lamp_large\ib_ah_inside_lamp_large" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_08\loc_acc_l_inside_lamp_large" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\metal" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="accessory_default" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" overrideParent="True" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+					</list>
+				</list>
+				<list name="dca_initialization">
+				</list>
+				<list name="cell_presets" overrideParent="True">
+					<template_reference name="cell_preset" value="options\ebpextensions\destructible_cell_ext\cell_preset" List.ItemID="-1617916051">
+						<instance_reference name="hit_material" value="hit_material\building_brick" />
+						<float name="max_health" value="200" />
+						<string name="name" value="cell_default" />
+						<bool name="use_as_impass_blocker" value="False" />
+						<state_tree_node name="on_cell_broken_tree" value="cell_destruction_area_damage_1" />
+						<state_tree_node name="on_cell_destroyed_tree" value="cell_destruction_area_damage_2" />
+						<file name="material_override" value="" />
+					</template_reference>
+					<template_reference name="cell_preset" value="options\ebpextensions\destructible_cell_ext\cell_preset" List.ItemID="-799117609">
+						<instance_reference name="hit_material" value="hit_material\building_roof_tile" />
+						<float name="max_health" value="150" />
+						<string name="name" value="cell_roof" />
+						<bool name="use_as_impass_blocker" value="False" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+					</template_reference>
+					<template_reference name="cell_preset" value="options\ebpextensions\destructible_cell_ext\cell_preset" List.ItemID="858282443">
+						<instance_reference name="hit_material" value="" />
+						<float name="max_health" value="5" />
+						<string name="name" value="accessory_default" />
+						<bool name="use_as_impass_blocker" value="False" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+					</template_reference>
+					<template_reference name="cell_preset" value="options\ebpextensions\destructible_cell_ext\cell_preset" List.ItemID="579600951">
+						<instance_reference name="hit_material" value="hit_material\foliage" />
+						<float name="max_health" value="5" />
+						<string name="name" value="accessory_flowers" />
+						<bool name="use_as_impass_blocker" value="False" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+					</template_reference>
+					<template_reference name="cell_preset" value="options\ebpextensions\destructible_cell_ext\cell_preset" List.ItemID="-468975856">
+						<instance_reference name="hit_material" value="" />
+						<float name="max_health" value="50" />
+						<string name="name" value="accessory_door" />
+						<bool name="use_as_impass_blocker" value="False" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+					</template_reference>
+				</list>
+				<group name="core_cells">
+					<int name="num_core_cells" value="0" />
+				</group>
+				<group name="combat_slot_behaviour_info">
+					<float name="indestructible_combatslot_layer_vertical_offset_begin" value="-0.5" />
+					<float name="indestructible_combatslot_layer_vertical_width" value="2" />
+					<bool name="occupants_killed_on_cell_destruction" value="False" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="257576682">
+				<string name="speaker_code" value="" />
+				<group name="speech_parameters">
+					<string name="class_code" value="" />
+					<string name="name_code" value="building" overrideParent="True" />
+					<string name="unit_code" value="building" overrideParent="True" />
+				</group>
+				<int name="importance" value="1" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sight_ext" List.ItemID="-1603085268" List.ParentItemID="-1603085268">
+				<group name="detect_camouflage">
+					<float name="tp_global" value="-1" />
+					<float name="tp_mine" value="-1" />
+					<float name="tp_unit" value="-1" />
+				</group>
+				<bool name="extended_sight" value="False" />
+				<float name="extended_sight_radius" value="90" />
+				<float name="reveal_area_on_death_time" value="6" />
+				<group name="sight_package">
+					<float name="inner_height" value="2.5" />
+					<float name="inner_radius" value="0" />
+					<float name="outer_height" value="0" />
+					<float name="outer_radius" value="50" />
+					<float name="cone_angle" value="360" />
+					<float name="cone_start_radius" value="0" />
+				</group>
+				<list name="specific_detector_actions">
+				</list>
+				<group name="vertical_truesight">
+					<bool name="enable" value="True" />
+					<float name="tolerance" value="1" />
+					<float name="eye_height" value="2.5" />
+				</group>
+				<bool name="camouflage_detection_enabled" value="True" />
+				<bool name="blockers_check_bounding_box" value="True" />
+				<float name="reveal_area_on_death_radius" value="0" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="639787" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\object_heavy_cover" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions" overrideParent="True">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1455447066">
+				<file name="alternate_sua" value="" overrideParent="True" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\buildings\industrial_buildings\airfield_hangar_lrg_01\airfield_hangar_center_01" overrideParent="True" />
+				<bool name="always_revealed_in_fow" value="True" />
+				<bool name="is_visible_in_game" value="True" />
+				<int name="precise_size" value="-1" />
+				<enum name="default_spawn_type" value="" />
+				<instance_reference name="unit_badge" value="" />
+				<bool name="is_spawned_when_not_in_interactive_area" value="True" />
+				<bool name="is_wreck" value="False" />
+				<float name="animator_scale" value="100" />
+				<bool name="browsable_in_editor" value="True" />
+				<float name="entity_scale" value="100" />
+				<enum name="subclass_type" value="Generic" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_entity_ext" List.ItemID="54336258">
+				<float name="rotate_snap" value="360" />
+				<bool name="kill_paradrop" value="False" />
+				<enum name="transferable" value="None" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\site_ext" List.ItemID="-2086353425">
+				<float name="extra_build_test_footprint_x" value="0" />
+				<bool name="snap_to_terrain" value="False" />
+				<bool name="lock_to_impass" value="True" />
+				<float name="extra_build_test_footprint_z" value="0" />
+				<float name="extra_build_test_footprint_offset_x" value="0" />
+				<float name="extra_build_test_footprint_offset_z" value="0" />
+				<float name="minimum_build_test_footprint_x" value="0" />
+				<float name="minimum_build_test_footprint_z" value="0" />
+				<enum name="impass_cell_check" value="AllCellsFree" />
+				<group name="footprint_scale">
+					<float name="x" value="0" />
+					<float name="y" value="0" />
+				</group>
+				<bool name="forced_axis_aligned_footprint" value="False" />
+				<bool name="remove_if_constructed_over" value="False" />
+				<list name="snap_to_surface_types">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-2144039447">
+				<bool name="can_repair" value="False" />
+				<bool name="cuttable" value="False" />
+				<string name="death_event_name" value="Death" />
+				<float name="death_seconds" value="0" />
+				<bool name="delete_when_dead" value="True" />
+				<bool name="force_attacker_memory" value="False" />
+				<float name="hitpoints" value="10000" overrideParent="True" />
+				<bool name="is_invincible" value="False" />
+				<bool name="is_salvagable_wreck" value="False" />
+				<instance_reference name="rebuilt_entity" value="" />
+				<instance_reference name="rebuilt_squad" value="" />
+				<bool name="rebuilt_use_wreck_owner" value="False" />
+				<bool name="receive_weapon_cover_modifiers" value="False" />
+				<float name="regeneration" value="0" />
+				<bool name="regeneration_disabled" value="True" />
+				<bool name="remove_from_pathfinding_on_death" value="False" overrideParent="True" />
+				<bool name="reveal_to_all_on_death" value="False" />
+				<bool name="ui_can_scuttle" value="False" />
+				<float name="target_size" value="1" />
+				<float name="weapon_priority" value="0" />
+				<template_reference name="wreck_entity_option" value="options\none">
+				</template_reference>
+				<enum name="armor_type" value="None" />
+				<template_reference name="armor_layout_option" value="options\ebpextensions\healthext\armor_layouts\armor_layout_uniform">
+					<float name="armor" value="25" />
+				</template_reference>
+				<enum name="allegiance_override" value="none" />
+				<bool name="not_default_attackable" value="False" />
+				<enum_table name="armor_scaler_by_damage_type">
+					<float name="True Damage" value="1" />
+					<float name="flame" value="1" />
+					<float name="ballistic" value="1" />
+					<float name="explosive" value="1" />
+				</enum_table>
+				<template_reference name="self_destruct_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="rebuilt_entity_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="on_received_damage_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<state_tree_node name="death_action_tree" value="" />
+				<bool name="can_be_damaged_by_ally" value="False" />
+				<state_tree_node name="on_reach_invulnerable_min_cap_entity_state_tree_ref" value="" />
+				<state_tree_node name="on_reach_max_health_entity_state_tree_ref" value="" />
+				<list name="restore_hook_offsets">
+				</list>
+				<bool name="can_be_restored" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" comment="Most objects should block missed projectiles or at least have the chance to, so that occasionally players will actually see real impacts collide with them." List.ItemID="-15452509">
+				<instance_reference name="hit_material" value="hit_material\metal" overrideParent="True" />
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_artillery" value="False" overrideParent="True" />
+						<bool name="tp_vehicle_collide" value="False" overrideParent="True" />
+						<bool name="tp_piercing_blockers_only" value="False" overrideParent="True" />
+						<bool name="tp_throw" value="True" overrideParent="True" />
+						<bool name="tp_collide" value="False" />
+					</enum_table>
+					<enum_table name="pass_through_relation">
+						<bool name="undefined" value="False" />
+						<bool name="enemy" value="False" />
+						<bool name="ally" value="False" />
+						<bool name="neutral" value="False" />
+					</enum_table>
+					<bool name="pass_through_weapon_ranged_non_projectile" value="False" />
+					<bool name="collide_with_missed_ranged_weapon_shots" value="True" />
+				</group>
+				<float name="hit_chance" value="1" />
+				<template_reference name="projectile_reflect_option" value="options\none">
+				</template_reference>
+				<enum name="projectile_collision_check_type" value="internal_simboxes_only" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="-1861297085">
+				<list name="unit_type_list" overrideParent="True">
+					<enum name="unit_type" value="destructible_object" List.ItemID="-1090652108" />
+				</list>
+				<enum name="weapon_targeting" value="no_targeting" />
+				<enum_table name="weapon_category_targeting_filter">
+					<bool name="1melee" value="True" />
+					<bool name="2ranged" value="True" />
+					<bool name="3siege" value="True" />
+					<bool name="4charge" value="True" />
+					<bool name="5brace" value="True" />
+					<bool name="6auto_ability_cast" value="True" />
+					<bool name="7single_cast_ability" value="True" />
+					<bool name="8dummy" value="True" />
+				</enum_table>
+				<bool name="intersection_testing" value="False" />
+				<list name="race_type_list">
+				</list>
+				<list name="attack_target_restriction_on_attacker">
+				</list>
+				<list name="attack_target_restriction_on_victim">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" List.ItemID="-532763841">
+				<group name="impass_simboxes">
+					<bool name="default_simbox" value="False" overrideParent="True" />
+					<list name="named_simboxes" overrideParent="True">
+					</list>
+				</group>
+				<bool name="cant_build" value="True" />
+				<list name="block_path">
+					<instance_reference name="path_type" value="pass_types\infantry" List.ItemID="-301782508" />
+					<instance_reference name="path_type" value="pass_types\vaulting_infantry" List.ItemID="868153140" />
+					<instance_reference name="path_type" value="pass_types\vehicle_light" List.ItemID="-126025899" />
+					<instance_reference name="path_type" value="pass_types\vehicle_medium" List.ItemID="-344807504" />
+				</list>
+				<bool name="should_rasterize_partial_cells" value="False" overrideParent="True" />
+				<enum name="blocker_lifetime_type" value="match_entity" />
+				<file name="stamp_blockers" value="" />
+				<group name="center_cell">
+					<bool name="cant_build" value="False" />
+					<list name="block_path">
+					</list>
+				</group>
+				<list name="cant_build_exemptions">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_react_tree_ext" List.ItemID="1237385664">
+				<state_tree_node name="ActionTree_OpeningBranch" value="hit_building" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\animation_action_tree_ext" List.ItemID="-1030718582">
+				<state_tree_node name="ActionTree_OpeningBranch" value="physical_prop" />
+				<bool name="use_root_motion" value="True" />
+				<enum name="entity_statetree_sort_tag" value="Default" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\marker_ext" List.ItemID="-1479938230">
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\crushee_ext" List.ItemID="936024386">
+				<enum name="min_crush_mode" value="crush_heavy" overrideParent="True" />
+				<template_reference name="on_crushed_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<bool name="destroy_on_crush" value="True" />
+				<bool name="can_be_crushed_by_allies" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\obj_cover_ext" List.ItemID="-1825158387">
+				<enum name="cover_type" value="" overrideParent="True" />
+				<bool name="is_cover_directional" value="False" overrideParent="True" />
+				<bool name="is_shoot_through" value="False" />
+				<bool name="use_simbox_range" value="True" />
+				<bool name="absorb_explosions" value="False" />
+				<bool name="generate_cover_spots" value="False" overrideParent="True" />
+				<bool name="absorb_non_damaging_shots_and_their_on_penetrated_actions" value="False" />
+				<template_reference name="additional_sim_box_option" value="options\none">
+				</template_reference>
+				<bool name="block_enemy_path" value="False" />
+				<bool name="always_block_shoot_through_projectiles" value="False" />
+				<bool name="start_enabled" value="True" />
+				<float name="cover_spot_distance_from_simbox" value="0.25" />
+				<float name="cover_spot_width" value="1.75" />
+				<float name="cover_hit_hox_expansion_amount" value="0" />
+				<enum name="terrain_cover_type" value="tp_heavy_cover" overrideParent="True" />
+				<bool name="is_solid_cover_object" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-1067332149">
+				<float name="decorator_height" value="9" overrideParent="True" />
+				<enum name="selection_type" value="single_entity_select" overrideParent="True" />
+				<bool name="ap_killed_kicker" value="False" />
+				<bool name="ap_loss_kicker" value="False" />
+				<string name="extra_text_deprecated" value="" />
+				<bool name="ghost_enable" value="False" />
+				<locstring name="help_text" value="0" />
+				<string name="hotkey_name" value="" />
+				<file name="icon_name" value="" />
+				<enum name="kill_type" value="" />
+				<colour name="minimap_color" value="*" />
+				<bool name="minimap_enable" value="False" />
+				<bool name="minimap_team_only" value="False" />
+				<bool name="minimap_teamcolor" value="False" />
+				<string name="overlay_name" value="" />
+				<bool name="reveal_for_decryption" value="False" />
+				<locstring name="screen_name" value="11231363" overrideParent="True" />
+				<enum name="selection_name" value="" />
+				<float name="selection_scale" value="1" />
+				<locstring name="tooltip_txt" value="0" />
+				<int name="ui_priority" value="0" />
+				<file name="minimap_icon" value="" />
+				<float name="minimap_icon_scale" value="1" />
+				<file name="portrait_icon" value="" />
+				<locstring name="brief_text" value="0" />
+				<locstring name="extra_text" value="0" />
+				<locstring name="screen_name_short" value="0" />
+				<bool name="show_in_build_log" value="True" />
+				<bool name="show_entity_appearance" value="True" />
+				<locstring name="screen_name_world" value="0" />
+				<locstring name="help_text_world" value="0" />
+				<locstring name="extra_text_world" value="0" />
+				<enum name="map_rotation_type_override" value="heading" overrideParent="True" />
+				<file name="symbol_icon_name" value="" />
+				<enum name="occlusion_state" value="occlude_others" overrideParent="True" />
+				<enum name="decorator_visibility" value="hidden" />
+				<bool name="skin_pack_override" value="False" />
+				<string name="skin_summer" value="" />
+				<string name="skin_winter" value="" />
+				<enum name="targeting_and_bandbox_selection_priority" value="lowest" />
+				<enum name="selection_method" value="mesh" overrideParent="True" />
+				<group name="terrain_info_display_offset">
+					<float name="x" value="0" />
+					<float name="y" value="0" />
+				</group>
+				<string name="decorator_ledger_key" value="" />
+				<instance_reference name="decorator_ledger_bar_style" value="" />
+				<enum name="selection_name_squad_override" value="" />
+				<string name="selection_grouping_ledger_key" value="" />
+				<string name="debug_text" value="" />
+				<string name="selection_datatemplate" value="" />
+				<bool name="use_construction_range_on_selection" value="False" />
+				<bool name="use_combat_range_on_selection" value="False" />
+				<bool name="is_armoured" value="False" />
+				<string name="decorator_data_template" value="" />
+				<enum name="ui_combine_type" value="intersection" />
+				<bool name="spotted_on_spawn" value="False" />
+				<instance_reference name="district_info" value="" />
+				<bool name="force_facing_and_range_visual_to_center_on_entity" value="False" />
+				<bool name="is_unique_to_race" value="False" />
+				<float name="kicker_offset" value="0" />
+				<file name="portrait_name" value="" />
+				<group name="selection_secondary_bounds_scale">
+					<float name="x" value="1" />
+					<float name="y" value="1" />
+					<float name="z" value="1" />
+				</group>
+				<enum name="decorator" value="" />
+				<int name="map_layer" value="0" />
+				<enum name="map_mark" value="" />
+				<group name="ui_codex_info">
+					<int name="priority" value="0" />
+					<bool name="exclusive" value="False" />
+					<group name="ui_position">
+						<int name="ui_position_column" value="-1" />
+						<int name="ui_position_row" value="-1" />
+					</group>
+				</group>
+				<list name="custom_selection_obbs">
+				</list>
+				<list name="ui_extra_infos">
+				</list>
+				<enum name="screen_name_visibility" value="visible" />
+				<template_reference name="help_text_formatter" value="">
+				</template_reference>
+				<template_reference name="extra_text_formatter" value="">
+				</template_reference>
+				<template_reference name="extra_text_world_formatter" value="">
+				</template_reference>
+				<template_reference name="help_text_world_formatter" value="">
+				</template_reference>
+				<template_reference name="screen_name_formatter" value="">
+				</template_reference>
+				<template_reference name="screen_name_short_formatter" value="">
+				</template_reference>
+				<template_reference name="screen_name_world_formatter" value="">
+				</template_reference>
+				<template_reference name="brief_text_formatter" value="">
+				</template_reference>
+				<string name="sound" value="" />
+				<string name="sound_alternative" value="" />
+				<string name="telemetry_name" value="" />
+				<group name="selection_obb_size">
+					<float name="x" value="1" />
+					<float name="y" value="1" />
+					<float name="z" value="1" />
+				</group>
+				<bool name="selectable_in_non_interactive_area" value="False" overrideParent="True" />
+				<enum name="target_selection_priority_by_owner" value="none" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\burn_ext" List.ItemID="820172071">
+				<float name="on_fire_damage_per_sec" value="2" />
+				<float name="on_fire_decay_amount_per_sec" value="-1" />
+				<float name="on_fire_threshold" value="2" />
+				<float name="max_fire_damage_per_second" value="10000" />
+				<float name="on_fire_health_percentage" value="-1" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\line_of_sight_ext" overrideParent="True" List.ItemID="1259432238">
+				<group name="blocking_box" comment="Sim/ sight blocker was already bigger than physical object, so maintained that ratio. -Brock 6/14/2019">
+					<float name="x" value="5" />
+					<float name="y" value="2.5" />
+					<float name="z" value="5" />
+				</group>
+				<bool name="is_shot_blocking" value="True" overrideParent="True" />
+				<bool name="use_blocking_box" value="False" />
+				<enum name="does_block_line_of_sight" value="never" overrideParent="True" />
+				<bool name="reveal_center_when_outside_is_visible" value="True" />
+				<bool name="disable_shot_blocking_on_death" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\destructible_cell_ext" List.ItemID="-1446127979">
+				<list name="cells" overrideParent="True">
+					<list name="main_cells_1f" overrideParent="True" List.ItemID="-1651057021">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="741312851">
+							<float name="max_health" value="200" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\industrial_buildings\airfield_hangar_lrg_side_01\cell_02" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_02" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\metal" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" overrideParent="True" />
+							<string name="cell_preset" value="" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="656932474">
+							<float name="max_health" value="200" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\industrial_buildings\airfield_hangar_lrg_side_01\cell_03" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_03" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\metal" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" overrideParent="True" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="513627680">
+							<float name="max_health" value="200" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\industrial_buildings\airfield_hangar_lrg_side_01\cell_04" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_04" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\metal" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" overrideParent="True" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1906860432">
+							<float name="max_health" value="200" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\industrial_buildings\airfield_hangar_lrg_side_01\cell_06" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_06" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\metal" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" overrideParent="True" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-1367619901">
+							<float name="max_health" value="200" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\industrial_buildings\airfield_hangar_lrg_side_01\cell_07" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_07" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\metal" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" overrideParent="True" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-447140853">
+							<float name="max_health" value="200" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\industrial_buildings\airfield_hangar_lrg_side_01\cell_08" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_08" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\metal" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" overrideParent="True" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+					</list>
+					<list name="accessories_1f" overrideParent="True" List.ItemID="-1457350906">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="821985485">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells" overrideParent="True">
+								<string name="marker_path" value="loc_cell_02" overrideParent="True" List.ItemID="-1172544201" />
+							</list>
+							<file name="animator" value="art\environment\buildings\industrial_buildings\accessories\ib_ah_inside_lamp_small\ib_ah_inside_lamp_small" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_02\loc_acc_r_inside_lamp_small" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\metal" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="accessory_default" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-41390904">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells" overrideParent="True">
+								<string name="marker_path" value="loc_cell_03" overrideParent="True" List.ItemID="1363552674" />
+							</list>
+							<file name="animator" value="art\environment\buildings\industrial_buildings\accessories\ib_ah_inside_lamp_medium\ib_ah_inside_lamp_medium" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_03\loc_acc_r_inside_lamp_medium" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\metal" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="accessory_default" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-769688913">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells" overrideParent="True">
+								<string name="marker_path" value="loc_cell_04" overrideParent="True" List.ItemID="330158712" />
+							</list>
+							<file name="animator" value="art\environment\buildings\industrial_buildings\accessories\ib_ah_inside_lamp_large\ib_ah_inside_lamp_large" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_04\loc_acc_r_inside_lamp_large" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\metal" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="accessory_default" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1016514748">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells" overrideParent="True">
+								<string name="marker_path" value="loc_cell_06" overrideParent="True" List.ItemID="435275000" />
+							</list>
+							<file name="animator" value="art\environment\buildings\industrial_buildings\accessories\ib_ah_inside_lamp_small\ib_ah_inside_lamp_small" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_06\loc_acc_l_inside_lamp_small" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\metal" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="accessory_default" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="287739547">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells" overrideParent="True">
+								<string name="marker_path" value="loc_cell_07" overrideParent="True" List.ItemID="-371181606" />
+							</list>
+							<file name="animator" value="art\environment\buildings\industrial_buildings\accessories\ib_ah_inside_lamp_medium\ib_ah_inside_lamp_medium" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_07\loc_acc_l_inside_lamp_medium" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\metal" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="accessory_default" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-167024208">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells" overrideParent="True">
+								<string name="marker_path" value="loc_cell_08" overrideParent="True" List.ItemID="1423243616" />
+							</list>
+							<file name="animator" value="art\environment\buildings\industrial_buildings\accessories\ib_ah_inside_lamp_large\ib_ah_inside_lamp_large" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_08\loc_acc_l_inside_lamp_large" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\metal" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="accessory_default" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" overrideParent="True" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+					</list>
+				</list>
+				<list name="dca_initialization">
+				</list>
+				<list name="cell_presets" overrideParent="True">
+					<template_reference name="cell_preset" value="options\ebpextensions\destructible_cell_ext\cell_preset" List.ItemID="-1617916051">
+						<instance_reference name="hit_material" value="hit_material\building_brick" />
+						<float name="max_health" value="200" />
+						<string name="name" value="cell_default" />
+						<bool name="use_as_impass_blocker" value="False" />
+						<state_tree_node name="on_cell_broken_tree" value="sp_cell_destruction_area_damage_1" />
+						<state_tree_node name="on_cell_destroyed_tree" value="sp_cell_destruction_area_damage_2" />
+						<file name="material_override" value="" />
+					</template_reference>
+					<template_reference name="cell_preset" value="options\ebpextensions\destructible_cell_ext\cell_preset" List.ItemID="-799117609">
+						<instance_reference name="hit_material" value="hit_material\building_roof_tile" />
+						<float name="max_health" value="150" />
+						<string name="name" value="cell_roof" />
+						<bool name="use_as_impass_blocker" value="False" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+					</template_reference>
+					<template_reference name="cell_preset" value="options\ebpextensions\destructible_cell_ext\cell_preset" List.ItemID="858282443">
+						<instance_reference name="hit_material" value="" />
+						<float name="max_health" value="5" />
+						<string name="name" value="accessory_default" />
+						<bool name="use_as_impass_blocker" value="False" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+					</template_reference>
+					<template_reference name="cell_preset" value="options\ebpextensions\destructible_cell_ext\cell_preset" List.ItemID="579600951">
+						<instance_reference name="hit_material" value="hit_material\foliage" />
+						<float name="max_health" value="5" />
+						<string name="name" value="accessory_flowers" />
+						<bool name="use_as_impass_blocker" value="False" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+					</template_reference>
+					<template_reference name="cell_preset" value="options\ebpextensions\destructible_cell_ext\cell_preset" List.ItemID="-468975856">
+						<instance_reference name="hit_material" value="" />
+						<float name="max_health" value="50" />
+						<string name="name" value="accessory_door" />
+						<bool name="use_as_impass_blocker" value="False" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+					</template_reference>
+				</list>
+				<group name="core_cells">
+					<int name="num_core_cells" value="0" />
+				</group>
+				<group name="combat_slot_behaviour_info">
+					<float name="indestructible_combatslot_layer_vertical_offset_begin" value="-0.5" />
+					<float name="indestructible_combatslot_layer_vertical_width" value="2" />
+					<bool name="occupants_killed_on_cell_destruction" value="False" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="257576682">
+				<string name="speaker_code" value="" />
+				<group name="speech_parameters">
+					<string name="class_code" value="" />
+					<string name="name_code" value="building" overrideParent="True" />
+					<string name="unit_code" value="building" overrideParent="True" />
+				</group>
+				<int name="importance" value="1" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sight_ext" List.ItemID="-1603085268" List.ParentItemID="-1603085268">
+				<group name="detect_camouflage">
+					<float name="tp_global" value="-1" />
+					<float name="tp_mine" value="-1" />
+					<float name="tp_unit" value="-1" />
+				</group>
+				<bool name="extended_sight" value="False" />
+				<float name="extended_sight_radius" value="90" />
+				<float name="reveal_area_on_death_time" value="6" />
+				<group name="sight_package">
+					<float name="inner_height" value="2.5" />
+					<float name="inner_radius" value="0" />
+					<float name="outer_height" value="0" />
+					<float name="outer_radius" value="50" />
+					<float name="cone_angle" value="360" />
+					<float name="cone_start_radius" value="0" />
+				</group>
+				<list name="specific_detector_actions">
+				</list>
+				<group name="vertical_truesight">
+					<bool name="enable" value="True" />
+					<float name="tolerance" value="1" />
+					<float name="eye_height" value="2.5" />
+				</group>
+				<bool name="camouflage_detection_enabled" value="True" />
+				<bool name="blockers_check_bounding_box" value="True" />
+				<float name="reveal_area_on_death_radius" value="0" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="639787" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\object_heavy_cover" />
+	</variant>
+</instance>

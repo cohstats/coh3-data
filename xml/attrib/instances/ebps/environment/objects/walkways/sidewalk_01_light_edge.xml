@@ -1,0 +1,78 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1877910406" List.ParentItemID="-1877910406">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\objects\walkways\sidewalk_01_light_edge" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_entity_ext" List.ItemID="1771664565" List.ParentItemID="1771664565">
+				<bool name="kill_paradrop" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="398125404" List.ParentItemID="398125404">
+				<bool name="delete_when_dead" value="False" overrideParent="True" />
+				<bool name="is_invincible" value="True" overrideParent="True" />
+				<bool name="can_be_damaged_by_ally" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="-303000610" List.ParentItemID="-303000610">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_collide" value="True" overrideParent="True" />
+						<bool name="tp_vehicle_collide" value="True" overrideParent="True" />
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_react_tree_ext" List.ItemID="438194077" List.ParentItemID="438194077">
+				<state_tree_node name="ActionTree_OpeningBranch" value="hit_wall" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\crushee_ext" List.ItemID="1875599983" List.ParentItemID="1875599983">
+				<enum name="min_crush_mode" value="crush_medium" overrideParent="True" />
+				<bool name="can_be_crushed_by_allies" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\walkable_surface_ext" List.ItemID="-437824331" List.ParentItemID="-437824331">
+				<file name="animator_dgm_name" value="art\environment\objects\walkways\sidewalk_01\sidewalk_01" overrideParent="True" />
+				<bool name="remove_on_death" value="False" overrideParent="True" />
+				<bool name="should_rasterize_partial_cells" value="True" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2100619" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\walkable_surface_indestructible" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1877910406" List.ParentItemID="-1877910406">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\objects\walkways\sidewalk_01_light_edge" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_entity_ext" List.ItemID="1771664565" List.ParentItemID="1771664565">
+				<bool name="kill_paradrop" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="398125404" List.ParentItemID="398125404">
+				<bool name="delete_when_dead" value="False" overrideParent="True" />
+				<bool name="is_invincible" value="True" overrideParent="True" />
+				<bool name="can_be_damaged_by_ally" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="-303000610" List.ParentItemID="-303000610">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_collide" value="True" overrideParent="True" />
+						<bool name="tp_vehicle_collide" value="True" overrideParent="True" />
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_react_tree_ext" List.ItemID="438194077" List.ParentItemID="438194077">
+				<state_tree_node name="ActionTree_OpeningBranch" value="hit_wall" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\crushee_ext" List.ItemID="1875599983" List.ParentItemID="1875599983">
+				<enum name="min_crush_mode" value="crush_medium" overrideParent="True" />
+				<bool name="can_be_crushed_by_allies" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\walkable_surface_ext" List.ItemID="-437824331" List.ParentItemID="-437824331">
+				<file name="animator_dgm_name" value="art\environment\objects\walkways\sidewalk_01\sidewalk_01" overrideParent="True" />
+				<bool name="remove_on_death" value="False" overrideParent="True" />
+				<bool name="should_rasterize_partial_cells" value="True" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2100619" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\walkable_surface_indestructible" />
+	</variant>
+</instance>

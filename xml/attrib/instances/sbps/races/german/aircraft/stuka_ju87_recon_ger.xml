@@ -1,0 +1,622 @@
+<instance version="5" description="" template="sbps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="squadexts" value="sbpextensions\squad_ability_ext" List.ItemID="1742627069">
+				<list name="abilities">
+				</list>
+				<int name="ui_combine_priority" value="0" />
+				<group name="squad_orders">
+					<group name="abandon_team_weapon">
+						<bool name="available" value="True" />
+					</group>
+					<group name="attack_ground">
+						<bool name="available" value="True" />
+					</group>
+					<group name="attack_move">
+						<bool name="available" value="True" />
+					</group>
+					<group name="cancel_construction">
+						<bool name="available" value="True" />
+					</group>
+					<group name="hold_fire_off">
+						<bool name="available" value="True" />
+					</group>
+					<group name="hold_fire_on">
+						<bool name="available" value="True" />
+					</group>
+					<group name="load">
+						<bool name="available" value="True" />
+						<bool name="default_issuable" value="True" />
+					</group>
+					<group name="move">
+						<bool name="available" value="True" />
+						<bool name="default_issuable" value="True" />
+					</group>
+					<group name="pickup_item">
+						<bool name="available" value="True" />
+						<bool name="default_issuable" value="True" />
+					</group>
+					<group name="plant_demolitions">
+						<bool name="available" value="True" />
+					</group>
+					<group name="prefer_melee">
+						<bool name="available" value="True" />
+					</group>
+					<group name="prefer_ranged">
+						<bool name="available" value="True" />
+					</group>
+					<group name="retire">
+						<bool name="available" value="True" />
+					</group>
+					<group name="retreat">
+						<bool name="available" value="True" />
+					</group>
+					<group name="reverse_move">
+						<bool name="available" value="True" />
+					</group>
+					<group name="stop">
+						<bool name="available" value="True" />
+					</group>
+					<group name="trade">
+						<bool name="available" value="True" />
+					</group>
+					<group name="unload">
+						<bool name="available" value="True" />
+						<bool name="default_issuable" value="True" />
+					</group>
+					<group name="unload_here">
+						<bool name="available" value="True" />
+					</group>
+					<group name="vault">
+						<bool name="available" value="True" />
+					</group>
+					<group name="hold_position">
+						<bool name="available" value="True" />
+					</group>
+				</group>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_action_apply_ext" List.ItemID="-1599012570">
+				<list name="action_state_trees">
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_combat_behaviour_ext" List.ItemID="419618496">
+				<float name="heavy_weapon_setup_delay" value="999" />
+				<float name="reaction_delay_seconds" value="8" />
+				<float name="reveal_self_attacker_time" value="0" />
+				<bool name="reveal_self_attacker_time_use" value="False" />
+				<group name="suppression">
+					<bool name="can_be_suppressed" value="False" />
+					<float name="noncombat_delay" value="7" />
+					<float name="noncombat_recover_multiplier" value="50" />
+					<float name="pin_down_activate_threshold" value="0.6" />
+					<float name="pin_down_recover_threshold" value="0.5" />
+					<float name="recover_rate" value="0.008" />
+					<float name="suppressed_activate_threshold" value="0.2" />
+					<float name="suppressed_recover_threshold" value="0.15" />
+					<enum_table name="cover_info">
+						<template_reference name="tp_defcover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_heavy_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_light_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_negative_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_water_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_smoke_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_garrison_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_trench_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_road_light_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_road_heavy_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+					</enum_table>
+					<template_reference name="pin_down_activate_action_tree" value="state_tree_reference_info">
+						<state_tree_node name="ActionTree_OpeningBranch" value="" />
+					</template_reference>
+					<template_reference name="suppressed_activate_action_tree" value="state_tree_reference_info">
+						<state_tree_node name="ActionTree_OpeningBranch" value="" />
+					</template_reference>
+				</group>
+				<float name="reaction_combat_delay_seconds" value="8" />
+				<template_reference name="can_recrew_abandoned_option" value="options\none">
+				</template_reference>
+				<template_reference name="charge_option" value="options\none">
+				</template_reference>
+				<bool name="ranged_weapons_prefer_single_squad_target" value="True" />
+				<bool name="accept_move_commands_while_combat" value="False" />
+				<float name="reveal_defender_time" value="0" />
+				<bool name="reveal_defender_time_use" value="False" />
+				<instance_reference name="range_reticule" value="" />
+				<bool name="can_be_tied_up" value="False" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_combat_stance_ext" List.ItemID="2080970286">
+				<enum name="default_stance" value="attack" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_loadout_ext" List.ItemID="-120452188">
+				<list name="unit_list">
+					<group name="loadout_data" List.ItemID="-1892750174">
+						<float name="num" value="1" />
+						<instance_reference name="type" value="ebps\races\german\aircraft\stuka_ju87_recon_ger" />
+						<list name="unit_attachments">
+						</list>
+						<bool name="is_default_unit" value="True" />
+					</group>
+				</list>
+				<float name="squad_female_chance" value="0" />
+				<int name="extra_unit_index" value="0" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_modifier_ext" List.ItemID="-1066537866">
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_ui_ext" List.ItemID="-1178888889">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-1578742214">
+						<group name="info">
+							<bool name="allow_spawner_production" value="False" />
+							<locstring name="extra_text" value="0" />
+							<locstring name="help_text" value="0" />
+							<string name="hotkey_name" value="A" />
+							<file name="icon_name" value="common\units\icons\halftrack_m3_us" />
+							<bool name="minimap_team_only" value="False" />
+							<file name="minimap_texture" value="common\units\symbols\l2_grasshopper_recon_us" />
+							<instance_reference name="modal_ability" value="" />
+							<bool name="reveal_for_decryption" value="False" />
+							<locstring name="screen_name" value="0" />
+							<string name="selection_group" value="m3_halftrack_us" />
+							<int name="ui_priority" value="29" />
+							<bool name="use_random_entity_speaker" value="False" />
+							<file name="portrait_name" value="" />
+							<float name="minimap_texture_scale" value="1" />
+							<locstring name="brief_text" value="0" />
+							<locstring name="screen_name_short" value="0" />
+							<enum name="map_rotation_type_override" value="heading" />
+							<bool name="show_in_build_log" value="False" />
+							<file name="symbol_icon_name" value="common\units\symbols\l2_grasshopper_recon_us" />
+							<string name="cover_level_icon_postfix" value="" />
+							<bool name="hide_ucs" value="False" />
+							<enum name="decorator_visibility" value="hidden" />
+							<string name="debug_text" value="" />
+							<string name="selection_datatemplate" value="" />
+							<string name="tooltip_data_template" value="" />
+							<bool name="is_unique" value="False" />
+							<string name="decorator_data_template" value="" />
+							<enum name="ui_combine_type" value="intersection" />
+							<int name="global_unit_control_row" value="4" />
+							<instance_reference name="ui_decorator" value="" />
+							<bool name="decorator_show_reload_progress" value="False" />
+							<bool name="is_respawnable" value="False" />
+							<enum name="respawn_location" value="" />
+							<enum name="respawn_progress" value="" />
+							<enum name="respawn_time" value="" />
+							<locstring name="respawn_help" value="0" />
+							<enum name="respawn_unit_class" value="" />
+							<bool name="is_unique_to_race" value="False" />
+							<bool name="show_production" value="True" />
+							<string name="respawn_datatemplate" value="" />
+							<enum name="decorator" value="" />
+							<int name="map_layer" value="-1" />
+							<enum name="map_mark" value="" />
+							<file name="flag_icon_override" value="" />
+							<file name="extra_icon" value="" />
+							<group name="ui_codex_info">
+								<bool name="exclusive" value="False" />
+								<int name="priority" value="0" />
+								<group name="ui_position">
+									<int name="ui_position_column" value="-1" />
+									<int name="ui_position_row" value="-1" />
+								</group>
+							</group>
+							<template_reference name="extra_text_formatter" value="">
+							</template_reference>
+							<template_reference name="help_text_formatter" value="">
+							</template_reference>
+							<template_reference name="screen_name_formatter" value="">
+							</template_reference>
+							<template_reference name="screen_name_short_formatter" value="">
+							</template_reference>
+							<template_reference name="brief_text_formatter" value="">
+							</template_reference>
+							<enum name="screen_name_visibility" value="visible" />
+							<string name="sound" value="" />
+							<string name="sound_alternative" value="" />
+							<locstring name="extra_help_text" value="0" />
+							<group name="ui_armor_info">
+								<file name="armor_icon" value="" />
+								<list name="armor_critical_damage">
+								</list>
+							</group>
+						</group>
+						<instance_reference name="ext_key" value="" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_upgrade_apply_ext" List.ItemID="-752282852">
+				<list name="upgrades">
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_upgrade_ext" List.ItemID="-1306736282">
+				<float name="number_of_slots" value="-1" />
+				<list name="upgrades">
+					<instance_reference name="upgrade" value="upgrade\american\vehicle\hmg_quadmount_halftrack_us" List.ItemID="-1489235782" />
+				</list>
+				<int name="max_queue_size_override" value="-1" />
+				<list name="tech_trees">
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_type_ext" List.ItemID="-1568228396">
+				<list name="squad_type_list">
+					<enum name="squad_type" value="vehicle" List.ItemID="-600382555" />
+					<enum name="squad_type" value="airplane" List.ItemID="289152957" />
+				</list>
+				<list name="squad_race_type_list">
+					<instance_reference name="squad_race_type" value="racebps\germans" List.ItemID="815242343" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_targeting_system_ext" List.ItemID="-448968649">
+				<bool name="allow_squad_scan_close_enemies" value="True" />
+				<int name="history_size" value="2" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_speech_ext" List.ItemID="-1840816771">
+				<string name="squad_speaker_code" value="wehr_pilot" />
+				<group name="squad_speech_parameters">
+					<string name="squad_class_code" value="aircraft" />
+					<string name="squad_name_code" value="stuka_recon" />
+					<string name="squad_unit_code" value="stuka_ju87_recon_ger" />
+				</group>
+				<int name="importance" value="1" />
+				<list name="age_mapping">
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_blueprint_ext" List.ItemID="-831118010">
+				<enum_table name="QueryTree_States">
+					<state_tree_node name="squad_state_idle" value="" />
+					<state_tree_node name="squad_state_move" value="" />
+					<state_tree_node name="squad_state_attack" value="" />
+					<state_tree_node name="squad_state_gather" value="" />
+					<state_tree_node name="squad_state_gather_food" value="" />
+					<state_tree_node name="squad_state_gather_wood" value="" />
+					<state_tree_node name="squad_state_gather_stone" value="" />
+					<state_tree_node name="squad_state_gather_gold" value="" />
+					<state_tree_node name="squad_state_idle_villager" value="" />
+					<state_tree_node name="squad_state_retreat" value="" />
+					<state_tree_node name="squad_state_construct" value="" />
+					<state_tree_node name="squad_state_capture" value="" />
+					<state_tree_node name="squad_state_attack_move" value="" />
+					<state_tree_node name="squad_state_set_demolitions" value="" />
+					<state_tree_node name="squad_state_ability" value="" />
+					<state_tree_node name="squad_state_evacuate" value="" />
+				</enum_table>
+				<bool name="browsable_in_editor" value="True" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_statemodel_ext" List.ItemID="724316532">
+				<instance_reference name="schema" value="statemodel_schema\plane" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="199296" />
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="squadexts" value="sbpextensions\squad_ability_ext" List.ItemID="1742627069">
+				<list name="abilities">
+				</list>
+				<int name="ui_combine_priority" value="0" />
+				<group name="squad_orders">
+					<group name="abandon_team_weapon">
+						<bool name="available" value="True" />
+					</group>
+					<group name="attack_ground">
+						<bool name="available" value="True" />
+					</group>
+					<group name="attack_move">
+						<bool name="available" value="True" />
+					</group>
+					<group name="cancel_construction">
+						<bool name="available" value="True" />
+					</group>
+					<group name="hold_fire_off">
+						<bool name="available" value="True" />
+					</group>
+					<group name="hold_fire_on">
+						<bool name="available" value="True" />
+					</group>
+					<group name="load">
+						<bool name="available" value="True" />
+						<bool name="default_issuable" value="True" />
+					</group>
+					<group name="move">
+						<bool name="available" value="True" />
+						<bool name="default_issuable" value="True" />
+					</group>
+					<group name="pickup_item">
+						<bool name="available" value="True" />
+						<bool name="default_issuable" value="True" />
+					</group>
+					<group name="plant_demolitions">
+						<bool name="available" value="True" />
+					</group>
+					<group name="prefer_melee">
+						<bool name="available" value="True" />
+					</group>
+					<group name="prefer_ranged">
+						<bool name="available" value="True" />
+					</group>
+					<group name="retire">
+						<bool name="available" value="True" />
+					</group>
+					<group name="retreat">
+						<bool name="available" value="True" />
+					</group>
+					<group name="reverse_move">
+						<bool name="available" value="True" />
+					</group>
+					<group name="stop">
+						<bool name="available" value="True" />
+					</group>
+					<group name="trade">
+						<bool name="available" value="True" />
+					</group>
+					<group name="unload">
+						<bool name="available" value="True" />
+						<bool name="default_issuable" value="True" />
+					</group>
+					<group name="unload_here">
+						<bool name="available" value="True" />
+					</group>
+					<group name="vault">
+						<bool name="available" value="True" />
+					</group>
+					<group name="hold_position">
+						<bool name="available" value="True" />
+					</group>
+				</group>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_action_apply_ext" List.ItemID="-1599012570">
+				<list name="action_state_trees">
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_combat_behaviour_ext" List.ItemID="419618496">
+				<float name="heavy_weapon_setup_delay" value="999" />
+				<float name="reaction_delay_seconds" value="8" />
+				<float name="reveal_self_attacker_time" value="0" />
+				<bool name="reveal_self_attacker_time_use" value="False" />
+				<group name="suppression">
+					<bool name="can_be_suppressed" value="False" />
+					<float name="noncombat_delay" value="7" />
+					<float name="noncombat_recover_multiplier" value="50" />
+					<float name="pin_down_activate_threshold" value="0.6" />
+					<float name="pin_down_recover_threshold" value="0.5" />
+					<float name="recover_rate" value="0.008" />
+					<float name="suppressed_activate_threshold" value="0.2" />
+					<float name="suppressed_recover_threshold" value="0.15" />
+					<enum_table name="cover_info">
+						<template_reference name="tp_defcover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_heavy_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_light_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_negative_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_water_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_smoke_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_garrison_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_trench_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_road_light_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_road_heavy_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+					</enum_table>
+					<template_reference name="pin_down_activate_action_tree" value="state_tree_reference_info">
+						<state_tree_node name="ActionTree_OpeningBranch" value="" />
+					</template_reference>
+					<template_reference name="suppressed_activate_action_tree" value="state_tree_reference_info">
+						<state_tree_node name="ActionTree_OpeningBranch" value="" />
+					</template_reference>
+				</group>
+				<float name="reaction_combat_delay_seconds" value="8" />
+				<template_reference name="can_recrew_abandoned_option" value="options\none">
+				</template_reference>
+				<template_reference name="charge_option" value="options\none">
+				</template_reference>
+				<bool name="ranged_weapons_prefer_single_squad_target" value="True" />
+				<bool name="accept_move_commands_while_combat" value="False" />
+				<float name="reveal_defender_time" value="0" />
+				<bool name="reveal_defender_time_use" value="False" />
+				<instance_reference name="range_reticule" value="" />
+				<bool name="can_be_tied_up" value="False" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_combat_stance_ext" List.ItemID="2080970286">
+				<enum name="default_stance" value="attack" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_loadout_ext" List.ItemID="-120452188">
+				<list name="unit_list">
+					<group name="loadout_data" List.ItemID="-1892750174">
+						<float name="num" value="1" />
+						<instance_reference name="type" value="ebps\races\german\aircraft\stuka_ju87_recon_ger" />
+						<list name="unit_attachments">
+						</list>
+						<bool name="is_default_unit" value="True" />
+					</group>
+				</list>
+				<float name="squad_female_chance" value="0" />
+				<int name="extra_unit_index" value="0" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_modifier_ext" List.ItemID="-1066537866">
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_ui_ext" List.ItemID="-1178888889">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-1578742214">
+						<group name="info">
+							<bool name="allow_spawner_production" value="False" />
+							<locstring name="extra_text" value="0" />
+							<locstring name="help_text" value="0" />
+							<string name="hotkey_name" value="A" />
+							<file name="icon_name" value="common\units\icons\halftrack_m3_us" />
+							<bool name="minimap_team_only" value="False" />
+							<file name="minimap_texture" value="common\units\symbols\l2_grasshopper_recon_us" />
+							<instance_reference name="modal_ability" value="" />
+							<bool name="reveal_for_decryption" value="False" />
+							<locstring name="screen_name" value="0" />
+							<string name="selection_group" value="m3_halftrack_us" />
+							<int name="ui_priority" value="29" />
+							<bool name="use_random_entity_speaker" value="False" />
+							<file name="portrait_name" value="" />
+							<float name="minimap_texture_scale" value="1" />
+							<locstring name="brief_text" value="0" />
+							<locstring name="screen_name_short" value="0" />
+							<enum name="map_rotation_type_override" value="heading" />
+							<bool name="show_in_build_log" value="False" />
+							<file name="symbol_icon_name" value="common\units\symbols\l2_grasshopper_recon_us" />
+							<string name="cover_level_icon_postfix" value="" />
+							<bool name="hide_ucs" value="False" />
+							<enum name="decorator_visibility" value="hidden" />
+							<string name="debug_text" value="" />
+							<string name="selection_datatemplate" value="" />
+							<string name="tooltip_data_template" value="" />
+							<bool name="is_unique" value="False" />
+							<string name="decorator_data_template" value="" />
+							<enum name="ui_combine_type" value="intersection" />
+							<int name="global_unit_control_row" value="4" />
+							<instance_reference name="ui_decorator" value="" />
+							<bool name="decorator_show_reload_progress" value="False" />
+							<bool name="is_respawnable" value="False" />
+							<enum name="respawn_location" value="" />
+							<enum name="respawn_progress" value="" />
+							<enum name="respawn_time" value="" />
+							<locstring name="respawn_help" value="0" />
+							<enum name="respawn_unit_class" value="" />
+							<bool name="is_unique_to_race" value="False" />
+							<bool name="show_production" value="True" />
+							<string name="respawn_datatemplate" value="" />
+							<enum name="decorator" value="" />
+							<int name="map_layer" value="-1" />
+							<enum name="map_mark" value="" />
+							<file name="flag_icon_override" value="" />
+							<file name="extra_icon" value="" />
+							<group name="ui_codex_info">
+								<bool name="exclusive" value="False" />
+								<int name="priority" value="0" />
+								<group name="ui_position">
+									<int name="ui_position_column" value="-1" />
+									<int name="ui_position_row" value="-1" />
+								</group>
+							</group>
+							<template_reference name="extra_text_formatter" value="">
+							</template_reference>
+							<template_reference name="help_text_formatter" value="">
+							</template_reference>
+							<template_reference name="screen_name_formatter" value="">
+							</template_reference>
+							<template_reference name="screen_name_short_formatter" value="">
+							</template_reference>
+							<template_reference name="brief_text_formatter" value="">
+							</template_reference>
+							<enum name="screen_name_visibility" value="visible" />
+							<string name="sound" value="" />
+							<string name="sound_alternative" value="" />
+							<locstring name="extra_help_text" value="0" />
+							<group name="ui_armor_info">
+								<file name="armor_icon" value="" />
+								<list name="armor_critical_damage">
+								</list>
+							</group>
+						</group>
+						<instance_reference name="ext_key" value="" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_upgrade_apply_ext" List.ItemID="-752282852">
+				<list name="upgrades">
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_upgrade_ext" List.ItemID="-1306736282">
+				<float name="number_of_slots" value="-1" />
+				<list name="upgrades">
+					<instance_reference name="upgrade" value="upgrade\american\vehicle\hmg_quadmount_halftrack_us" List.ItemID="-1489235782" />
+				</list>
+				<int name="max_queue_size_override" value="-1" />
+				<list name="tech_trees">
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_type_ext" List.ItemID="-1568228396">
+				<list name="squad_type_list">
+					<enum name="squad_type" value="vehicle" List.ItemID="-600382555" />
+					<enum name="squad_type" value="airplane" List.ItemID="289152957" />
+				</list>
+				<list name="squad_race_type_list">
+					<instance_reference name="squad_race_type" value="racebps\germans" List.ItemID="815242343" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_targeting_system_ext" List.ItemID="-448968649">
+				<bool name="allow_squad_scan_close_enemies" value="True" />
+				<int name="history_size" value="2" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_speech_ext" List.ItemID="-1840816771">
+				<string name="squad_speaker_code" value="wehr_pilot" />
+				<group name="squad_speech_parameters">
+					<string name="squad_class_code" value="aircraft" />
+					<string name="squad_name_code" value="stuka_recon" />
+					<string name="squad_unit_code" value="stuka_ju87_recon_ger" />
+				</group>
+				<int name="importance" value="1" />
+				<list name="age_mapping">
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_blueprint_ext" List.ItemID="-831118010">
+				<enum_table name="QueryTree_States">
+					<state_tree_node name="squad_state_idle" value="" />
+					<state_tree_node name="squad_state_move" value="" />
+					<state_tree_node name="squad_state_attack" value="" />
+					<state_tree_node name="squad_state_gather" value="" />
+					<state_tree_node name="squad_state_gather_food" value="" />
+					<state_tree_node name="squad_state_gather_wood" value="" />
+					<state_tree_node name="squad_state_gather_stone" value="" />
+					<state_tree_node name="squad_state_gather_gold" value="" />
+					<state_tree_node name="squad_state_idle_villager" value="" />
+					<state_tree_node name="squad_state_retreat" value="" />
+					<state_tree_node name="squad_state_construct" value="" />
+					<state_tree_node name="squad_state_capture" value="" />
+					<state_tree_node name="squad_state_attack_move" value="" />
+					<state_tree_node name="squad_state_set_demolitions" value="" />
+					<state_tree_node name="squad_state_ability" value="" />
+					<state_tree_node name="squad_state_evacuate" value="" />
+				</enum_table>
+				<bool name="browsable_in_editor" value="True" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_statemodel_ext" List.ItemID="724316532">
+				<instance_reference name="schema" value="statemodel_schema\plane" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="199296" />
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+</instance>

@@ -1,0 +1,36 @@
+<instance version="5" description="" template="abilities">
+	<variant name="default">
+		<group name="ability_bag">
+			<enum_table name="cost_to_player">
+				<float name="munition" value="30" overrideParent="True" />
+			</enum_table>
+			<group name="ui_info">
+				<file name="icon_name" value="common\abilities\rifle_grenade_jaeger_ger" overrideParent="True" />
+				<locstring name="screen_name" value="11186231" overrideParent="True" />
+				<locstring name="brief_text" value="11240804" overrideParent="True" />
+			</group>
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_entity_tree" value="rifle_grenade_jaeger_ger" overrideParent="True" />
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="195375" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\infantry\grenade_subtypes\rifle_grenade_parent" />
+	</variant>
+	<variant name="sp">
+		<group name="ability_bag">
+			<enum_table name="cost_to_player">
+				<float name="munition" value="30" overrideParent="True" />
+			</enum_table>
+			<group name="ui_info">
+				<file name="icon_name" value="common\abilities\rifle_grenade_jaeger_ger" overrideParent="True" />
+				<locstring name="screen_name" value="11186231" overrideParent="True" />
+				<locstring name="brief_text" value="11240804" overrideParent="True" />
+			</group>
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_entity_tree" value="sp_rifle_grenade_jaeger_ger" overrideParent="True" />
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="195375" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\infantry\grenade_subtypes\rifle_grenade_parent" />
+	</variant>
+</instance>

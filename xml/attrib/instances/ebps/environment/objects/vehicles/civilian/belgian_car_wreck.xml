@@ -1,0 +1,208 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions" removedIds="523022482, -566480903, -601242623, -1931434218, -1803477077, 906760247, 20716117, 1299195682, -1006184464">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="151475666" List.ParentItemID="151475666">
+				<bool name="always_revealed_in_fow" value="True" overrideParent="True" />
+				<bool name="is_wreck" value="False" overrideParent="True" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\objects\vehicles\civilian\belgian_car_wreck" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-655183511" List.ParentItemID="-655183511">
+				<bool name="can_repair" value="False" overrideParent="True" />
+				<float name="death_seconds" value="0" overrideParent="True" />
+				<float name="hitpoints" value="100" overrideParent="True" />
+				<bool name="is_salvagable_wreck" value="False" overrideParent="True" />
+				<bool name="receive_weapon_cover_modifiers" value="False" overrideParent="True" />
+				<float name="target_size" value="1" overrideParent="True" />
+				<template_reference name="armor_layout_option" value="options\ebpextensions\healthext\armor_layouts\armor_layout_uniform">
+					<float name="armor" value="25" overrideParent="True" />
+				</template_reference>
+				<template_reference name="rebuilt_entity_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" overrideParent="True" />
+				</template_reference>
+				<list name="restore_hook_offsets" removedIds="1171535629, 1304175266">
+				</list>
+				<bool name="can_be_restored" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="-383014031" List.ParentItemID="-383014031">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_collide" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="701396440" List.ParentItemID="701396440">
+				<list name="unit_type_list" removedIds="1583616638, 47174672">
+					<enum name="unit_type" value="destructible_object" List.ItemID="157297144" List.ListAction="Append" />
+				</list>
+				<enum name="weapon_targeting" value="no_targeting" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-337428253" List.ParentItemID="-337428253">
+				<bool name="ap_killed_kicker" value="False" overrideParent="True" />
+				<bool name="ap_loss_kicker" value="False" overrideParent="True" />
+				<float name="decorator_height" value="-1" overrideParent="True" />
+				<bool name="ghost_enable" value="False" overrideParent="True" />
+				<locstring name="help_text" value="0" overrideParent="True" />
+				<enum name="kill_type" value="" overrideParent="True" />
+				<bool name="minimap_enable" value="False" overrideParent="True" />
+				<bool name="minimap_teamcolor" value="False" overrideParent="True" />
+				<enum name="selection_name" value="" overrideParent="True" />
+				<enum name="selection_type" value="targettable" overrideParent="True" />
+				<locstring name="help_text_world" value="0" overrideParent="True" />
+				<enum name="occlusion_state" value="occlude_others" overrideParent="True" />
+				<enum name="decorator_visibility" value="hidden" overrideParent="True" />
+				<enum name="targeting_and_bandbox_selection_priority" value="lowest" overrideParent="True" />
+				<enum name="selection_method" value="obb" overrideParent="True" />
+				<bool name="use_combat_range_on_selection" value="False" overrideParent="True" />
+				<bool name="spotted_on_spawn" value="False" overrideParent="True" />
+				<enum name="decorator" value="" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\animation_action_tree_ext" List.ItemID="-822861201" List.ParentItemID="-822861201">
+				<state_tree_node name="ActionTree_OpeningBranch" value="physical_prop" overrideParent="True" />
+				<bool name="use_root_motion" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\action_tree_ext" List.ItemID="-1426648129" List.ParentItemID="-1426648129">
+				<state_tree_node name="ActionTree_OpeningBranch" value="" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\obj_cover_ext" List.ItemID="1494203194" List.ParentItemID="1494203194">
+				<bool name="is_cover_directional" value="True" overrideParent="True" />
+				<bool name="is_solid_cover_object" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" List.ItemID="-234482428" List.ParentItemID="-234482428">
+				<list name="block_path" removedIds="652523757">
+				</list>
+				<enum name="blocker_lifetime_type" value="match_entity" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\crushee_ext" List.ItemID="-1032606943" List.ListAction="Append">
+				<enum name="min_crush_mode" value="crush_medium" />
+				<template_reference name="on_crushed_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<bool name="destroy_on_crush" value="True" />
+				<bool name="can_be_crushed_by_allies" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\action_apply_ext" List.ItemID="303732261" List.ListAction="Append">
+				<list name="action_state_trees">
+					<group name="container" List.ItemID="222112005">
+						<state_tree_node name="state_tree" value="entity_proximity" />
+					</group>
+				</list>
+				<bool name="reset_on_load" value="True" />
+				<list name="physical_state_trees">
+				</list>
+				<list name="deferred_action_state_trees">
+				</list>
+				<list name="action_state_trees_run_once">
+				</list>
+				<list name="deferred_action_state_trees_run_once">
+				</list>
+				<list name="physical_state_trees_run_once">
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="170668" />
+		<instance_reference name="parent_pbg" value="ebps\races\template\wk_template" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions" removedIds="523022482, -566480903, -601242623, -1931434218, -1803477077, 906760247, 20716117, 1299195682, -1006184464">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="151475666" List.ParentItemID="151475666">
+				<bool name="always_revealed_in_fow" value="True" overrideParent="True" />
+				<bool name="is_wreck" value="False" overrideParent="True" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\objects\vehicles\civilian\belgian_car_wreck" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-655183511" List.ParentItemID="-655183511">
+				<bool name="can_repair" value="False" overrideParent="True" />
+				<float name="death_seconds" value="0" overrideParent="True" />
+				<float name="hitpoints" value="100" overrideParent="True" />
+				<bool name="is_salvagable_wreck" value="False" overrideParent="True" />
+				<bool name="receive_weapon_cover_modifiers" value="False" overrideParent="True" />
+				<float name="target_size" value="1" overrideParent="True" />
+				<template_reference name="armor_layout_option" value="options\ebpextensions\healthext\armor_layouts\armor_layout_uniform">
+					<float name="armor" value="25" overrideParent="True" />
+				</template_reference>
+				<template_reference name="rebuilt_entity_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" overrideParent="True" />
+				</template_reference>
+				<list name="restore_hook_offsets" removedIds="1171535629, 1304175266">
+				</list>
+				<bool name="can_be_restored" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="-383014031" List.ParentItemID="-383014031">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_collide" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="701396440" List.ParentItemID="701396440">
+				<list name="unit_type_list" removedIds="1583616638, 47174672">
+					<enum name="unit_type" value="destructible_object" List.ItemID="157297144" List.ListAction="Append" />
+				</list>
+				<enum name="weapon_targeting" value="no_targeting" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-337428253" List.ParentItemID="-337428253">
+				<bool name="ap_killed_kicker" value="False" overrideParent="True" />
+				<bool name="ap_loss_kicker" value="False" overrideParent="True" />
+				<float name="decorator_height" value="-1" overrideParent="True" />
+				<bool name="ghost_enable" value="False" overrideParent="True" />
+				<locstring name="help_text" value="0" overrideParent="True" />
+				<enum name="kill_type" value="" overrideParent="True" />
+				<bool name="minimap_enable" value="False" overrideParent="True" />
+				<bool name="minimap_teamcolor" value="False" overrideParent="True" />
+				<enum name="selection_name" value="" overrideParent="True" />
+				<enum name="selection_type" value="targettable" overrideParent="True" />
+				<locstring name="help_text_world" value="0" overrideParent="True" />
+				<enum name="occlusion_state" value="occlude_others" overrideParent="True" />
+				<enum name="decorator_visibility" value="hidden" overrideParent="True" />
+				<enum name="targeting_and_bandbox_selection_priority" value="lowest" overrideParent="True" />
+				<enum name="selection_method" value="obb" overrideParent="True" />
+				<bool name="use_combat_range_on_selection" value="False" overrideParent="True" />
+				<bool name="spotted_on_spawn" value="False" overrideParent="True" />
+				<enum name="decorator" value="" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\animation_action_tree_ext" List.ItemID="-822861201" List.ParentItemID="-822861201">
+				<state_tree_node name="ActionTree_OpeningBranch" value="physical_prop" overrideParent="True" />
+				<bool name="use_root_motion" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\action_tree_ext" List.ItemID="-1426648129" List.ParentItemID="-1426648129">
+				<state_tree_node name="ActionTree_OpeningBranch" value="" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\obj_cover_ext" List.ItemID="1494203194" List.ParentItemID="1494203194">
+				<bool name="is_cover_directional" value="True" overrideParent="True" />
+				<bool name="is_solid_cover_object" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" List.ItemID="-234482428" List.ParentItemID="-234482428">
+				<list name="block_path" removedIds="652523757">
+				</list>
+				<enum name="blocker_lifetime_type" value="match_entity" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\crushee_ext" List.ItemID="-1032606943" List.ListAction="Append">
+				<enum name="min_crush_mode" value="crush_medium" />
+				<template_reference name="on_crushed_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<bool name="destroy_on_crush" value="True" />
+				<bool name="can_be_crushed_by_allies" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\action_apply_ext" List.ItemID="303732261" List.ListAction="Append">
+				<list name="action_state_trees">
+					<group name="container" List.ItemID="222112005">
+						<state_tree_node name="state_tree" value="entity_proximity" />
+					</group>
+				</list>
+				<bool name="reset_on_load" value="True" />
+				<list name="physical_state_trees">
+				</list>
+				<list name="deferred_action_state_trees">
+				</list>
+				<list name="action_state_trees_run_once">
+				</list>
+				<list name="deferred_action_state_trees_run_once">
+				</list>
+				<list name="physical_state_trees_run_once">
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="170668" />
+		<instance_reference name="parent_pbg" value="ebps\races\template\wk_template" />
+	</variant>
+</instance>

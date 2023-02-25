@@ -1,0 +1,56 @@
+<instance version="5" description="" template="flight_plan">
+	<variant name="default">
+		<uniqueid name="pbgid" value="2072775" />
+		<group name="flight_plan_bag">
+			<list name="flight_maneuvers">
+				<template_reference name="maneuver" value="options\flight_maneuver\attack_loiter_at_target" List.ItemID="1177098513">
+					<float name="approach_length" value="5" />
+					<float name="arrival_time_seconds" value="7" />
+					<float name="circling_duration_seconds" value="60" />
+					<float name="circling_height_multiplier" value="3" />
+					<float name="circling_radius" value="40" />
+					<float name="circling_speed_multiplier" value="0.6" />
+					<float name="default_height_multiplier" value="3" />
+					<float name="default_speed_multiplier" value="0.8" />
+					<float name="dive_height_multiplier" value="0.5" />
+					<float name="dive_length" value="100" />
+					<float name="dive_duration_seconds" value="2.5" />
+					<enum name="loiter_target" value="flight_plan_target_01" />
+					<enum name="attack_target" value="flight_plan_target_02" />
+					<state_tree_node name="payload_tree" value="c_airborne_air_dropped_reinforcements_loiter_us\library\payload_strafe_infantry" />
+					<state_tree_node name="acquire_target_tree" value="c_airborne_air_dropped_reinforcements_loiter_us\library\acquire_infantry_target" />
+					<state_tree_node name="loiter_tree" value="c_airborne_air_dropped_reinforcements_loiter_us\library\loiter" />
+					<float name="payload_offset" value="-7" />
+					<float name="turning_radius" value="25" />
+				</template_reference>
+			</list>
+		</group>
+	</variant>
+	<variant name="sp">
+		<uniqueid name="pbgid" value="2072775" />
+		<group name="flight_plan_bag">
+			<list name="flight_maneuvers">
+				<template_reference name="maneuver" value="options\flight_maneuver\attack_loiter_at_target" List.ItemID="1177098513">
+					<float name="approach_length" value="5" />
+					<float name="arrival_time_seconds" value="3.5" />
+					<float name="circling_duration_seconds" value="60" />
+					<float name="circling_height_multiplier" value="3" />
+					<float name="circling_radius" value="40" />
+					<float name="circling_speed_multiplier" value="0.6" />
+					<float name="default_height_multiplier" value="3" />
+					<float name="default_speed_multiplier" value="0.8" />
+					<float name="dive_height_multiplier" value="0.5" />
+					<float name="dive_length" value="100" />
+					<float name="dive_duration_seconds" value="2.5" />
+					<enum name="loiter_target" value="flight_plan_target_01" />
+					<enum name="attack_target" value="flight_plan_target_02" />
+					<state_tree_node name="payload_tree" value="c_airborne_air_dropped_reinforcements_loiter_us\library\payload_strafe_infantry" />
+					<state_tree_node name="acquire_target_tree" value="c_airborne_air_dropped_reinforcements_loiter_us\library\acquire_infantry_target" />
+					<state_tree_node name="loiter_tree" value="c_airborne_air_dropped_reinforcements_loiter_us\library\loiter" />
+					<float name="payload_offset" value="-7" />
+					<float name="turning_radius" value="25" />
+				</template_reference>
+			</list>
+		</group>
+	</variant>
+</instance>

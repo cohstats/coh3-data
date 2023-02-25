@@ -1,0 +1,56 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1877910406" List.ParentItemID="-1877910406">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\objects\walkways\sidewalk_cobble_01" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_entity_ext" List.ItemID="1771664565" List.ParentItemID="1771664565">
+				<bool name="kill_paradrop" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="398125404" List.ParentItemID="398125404">
+				<bool name="delete_when_dead" value="False" overrideParent="True" />
+				<bool name="is_invincible" value="True" overrideParent="True" />
+				<bool name="can_be_damaged_by_ally" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="-303000610" List.ParentItemID="-303000610">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\walkable_surface_ext" List.ItemID="-437824331" List.ParentItemID="-437824331">
+				<file name="animator_dgm_name" value="art\environment\objects\walkways\sidewalk_01\sidewalk_01" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2072963" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\walkable_surface_indestructible" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1877910406" List.ParentItemID="-1877910406">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\objects\walkways\sidewalk_cobble_01" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_entity_ext" List.ItemID="1771664565" List.ParentItemID="1771664565">
+				<bool name="kill_paradrop" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="398125404" List.ParentItemID="398125404">
+				<bool name="delete_when_dead" value="False" overrideParent="True" />
+				<bool name="is_invincible" value="True" overrideParent="True" />
+				<bool name="can_be_damaged_by_ally" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="-303000610" List.ParentItemID="-303000610">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\walkable_surface_ext" List.ItemID="-437824331" List.ParentItemID="-437824331">
+				<file name="animator_dgm_name" value="art\environment\objects\walkways\sidewalk_01\sidewalk_01" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2072963" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\walkable_surface_indestructible" />
+	</variant>
+</instance>

@@ -1,0 +1,180 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1721059885" List.ParentItemID="1721059885">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\nature\trees\fan_palm_tree_md_01" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="1586029497" List.ParentItemID="1586029497">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" List.ItemID="-374768869" List.ParentItemID="-374768869">
+				<list name="block_path">
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_light" List.ItemID="-1015208067" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-453528199" List.ParentItemID="-453528199">
+				<enum name="occlusion_state" value="occlude_others" overrideParent="True" />
+				<enum name="decorator_visibility" value="hidden" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\destructible_cell_ext" List.ItemID="1154466086" List.ListAction="Append">
+				<list name="cells">
+					<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-1826163603">
+						<float name="max_health" value="5" />
+						<list name="supporting_cells">
+						</list>
+						<file name="animator" value="art\environment\nature\trees\fan_palm_tree_sm_05\fan_palm_tree_sm_05" />
+						<string name="attachment_marker" value="loc_attach_sm_01" />
+						<string name="combat_slot_marker" value="" />
+						<instance_reference name="hit_material" value="" />
+						<bool name="use_as_impass_blocker" value="False" />
+						<string name="cell_preset" value="" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+						<list name="customizations">
+						</list>
+					</template_reference>
+					<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1321671798">
+						<float name="max_health" value="5" />
+						<list name="supporting_cells">
+						</list>
+						<file name="animator" value="art\environment\nature\trees\fan_palm_tree_sm_04\fan_palm_tree_sm_04" />
+						<string name="attachment_marker" value="loc_attach_sm_02" />
+						<string name="combat_slot_marker" value="" />
+						<instance_reference name="hit_material" value="" />
+						<bool name="use_as_impass_blocker" value="False" />
+						<string name="cell_preset" value="" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+						<list name="customizations">
+						</list>
+					</template_reference>
+					<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="936800990">
+						<float name="max_health" value="5" />
+						<list name="supporting_cells">
+						</list>
+						<file name="animator" value="art\environment\nature\trees\fan_palm_tree_sm_02\fan_palm_tree_sm_02" />
+						<string name="attachment_marker" value="loc_attach_sm_03" />
+						<string name="combat_slot_marker" value="" />
+						<instance_reference name="hit_material" value="" />
+						<bool name="use_as_impass_blocker" value="False" />
+						<string name="cell_preset" value="" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+						<list name="customizations">
+						</list>
+					</template_reference>
+				</list>
+				<list name="dca_initialization">
+				</list>
+				<list name="cell_presets">
+				</list>
+				<group name="core_cells">
+					<int name="num_core_cells" value="0" />
+				</group>
+				<group name="combat_slot_behaviour_info">
+					<float name="indestructible_combatslot_layer_vertical_offset_begin" value="-0.5" />
+					<float name="indestructible_combatslot_layer_vertical_width" value="2" />
+					<bool name="occupants_killed_on_cell_destruction" value="False" />
+				</group>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2029774" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\tree_medium_crush" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1721059885" List.ParentItemID="1721059885">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\nature\trees\fan_palm_tree_md_01" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="1586029497" List.ParentItemID="1586029497">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" List.ItemID="-374768869" List.ParentItemID="-374768869">
+				<list name="block_path">
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_light" List.ItemID="-1015208067" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-453528199" List.ParentItemID="-453528199">
+				<enum name="occlusion_state" value="occlude_others" overrideParent="True" />
+				<enum name="decorator_visibility" value="hidden" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\destructible_cell_ext" List.ItemID="1154466086" List.ListAction="Append">
+				<list name="cells">
+					<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-1826163603">
+						<float name="max_health" value="5" />
+						<list name="supporting_cells">
+						</list>
+						<file name="animator" value="art\environment\nature\trees\fan_palm_tree_sm_05\fan_palm_tree_sm_05" />
+						<string name="attachment_marker" value="loc_attach_sm_01" />
+						<string name="combat_slot_marker" value="" />
+						<instance_reference name="hit_material" value="" />
+						<bool name="use_as_impass_blocker" value="False" />
+						<string name="cell_preset" value="" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+						<list name="customizations">
+						</list>
+					</template_reference>
+					<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1321671798">
+						<float name="max_health" value="5" />
+						<list name="supporting_cells">
+						</list>
+						<file name="animator" value="art\environment\nature\trees\fan_palm_tree_sm_04\fan_palm_tree_sm_04" />
+						<string name="attachment_marker" value="loc_attach_sm_02" />
+						<string name="combat_slot_marker" value="" />
+						<instance_reference name="hit_material" value="" />
+						<bool name="use_as_impass_blocker" value="False" />
+						<string name="cell_preset" value="" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+						<list name="customizations">
+						</list>
+					</template_reference>
+					<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="936800990">
+						<float name="max_health" value="5" />
+						<list name="supporting_cells">
+						</list>
+						<file name="animator" value="art\environment\nature\trees\fan_palm_tree_sm_02\fan_palm_tree_sm_02" />
+						<string name="attachment_marker" value="loc_attach_sm_03" />
+						<string name="combat_slot_marker" value="" />
+						<instance_reference name="hit_material" value="" />
+						<bool name="use_as_impass_blocker" value="False" />
+						<string name="cell_preset" value="" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+						<list name="customizations">
+						</list>
+					</template_reference>
+				</list>
+				<list name="dca_initialization">
+				</list>
+				<list name="cell_presets">
+				</list>
+				<group name="core_cells">
+					<int name="num_core_cells" value="0" />
+				</group>
+				<group name="combat_slot_behaviour_info">
+					<float name="indestructible_combatslot_layer_vertical_offset_begin" value="-0.5" />
+					<float name="indestructible_combatslot_layer_vertical_width" value="2" />
+					<bool name="occupants_killed_on_cell_destruction" value="False" />
+				</group>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2029774" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\tree_medium_crush" />
+	</variant>
+</instance>

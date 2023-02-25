@@ -1,0 +1,11 @@
+<template description="" can_be_instantiated="True" virtual_category="" can_be_modded="False" export_for_client="True">
+	<group name="narrative_influence_character_bag" description="Property bag for narrative_influence_character" start_expanded="False">
+		<list name="rewards" description="Rewards this character can provide (May include shared rewards that can be duplicate with other characters)" ordered="True" allow_duplicates="False" can_be_empty="True" start_expanded="False" flat="False">
+			<instance_reference name="reward" description="Instance reference for a reward" template_list="narrative_influence\narrative_influence_reward" relative_path_list="" path_filter="" flat="False" can_be_null="False" />
+		</list>
+		<string name="name" description="Name of the narrative_influence_character" default="" />
+		<locstring name="display_name" description="Localized name to display in the UI." />
+		<file name="portrait_image" description="Image of the character to display in the UI." file_ext="png" file_root="ui\icons\" file_helper_path="" file_default="" />
+	</group>
+	<uniqueid name="pbgid" description="internal id for pbgs" serverpath="/UniqueId/NextElement/pbgid" />
+</template>

@@ -1,0 +1,43 @@
+<instance version="5" description="" template="attachments\attachment_list">
+	<variant name="default">
+		<group name="attachment_list_group">
+			<list name="attachment_list">
+				<template_reference name="attachment" value="options\attachment_types\animator_skin_attachment" List.ItemID="-619678852">
+					<file name="animator" value="art\gameplay\capture_point_victory\capture_point_victory" />
+					<enum name="inventory_item_category" value="" />
+					<bool name="is_selectable" value="True" />
+					<string name="marker_name" value="" />
+					<file name="material_override" value="" />
+					<list name="customizations">
+					</list>
+				</template_reference>
+				<template_reference name="attachment" value="options\attachment_types\entity_create_attachment" List.ItemID="351075590">
+					<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+						<template_reference name="attach_data" value="attachments\attach_data">
+							<string name="marker_name_parent" value="loc_flag" />
+							<string name="parent_rigidbody_target_name" value="" />
+							<enum name="game_object_attachment_type" value="scenegraph" />
+						</template_reference>
+						<instance_reference name="ebp" value="ebps\gameplay\strategic_points\victory\territory_victory_point_flag_ger" />
+						<group name="attachment_flags">
+							<bool name="sim_only" value="False" />
+							<bool name="no_pathfinding" value="True" />
+							<bool name="not_snappable" value="False" />
+							<bool name="restore_snap_to_ground_on_detach" value="False" />
+							<bool name="no_sim_update" value="False" />
+							<bool name="join_parent_squad" value="False" />
+							<bool name="redirect_damage_to_parent_entity" value="True" />
+							<bool name="receive_parent_animations" value="True" />
+							<bool name="receive_parent_death" value="True" />
+						</group>
+					</template_reference>
+				</template_reference>
+			</list>
+			<string name="attachment_category" value="germans" />
+			<string name="attachment_speaker_code" value="" />
+			<string name="inventory_category" value="germans" />
+		</group>
+		<uniqueid name="pbgid" value="1526114" />
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+</instance>

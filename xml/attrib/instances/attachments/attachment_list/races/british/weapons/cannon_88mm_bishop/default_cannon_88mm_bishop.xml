@@ -1,0 +1,39 @@
+<instance version="5" description="" template="attachments\attachment_list">
+	<variant name="default">
+		<group name="attachment_list_group">
+			<list name="attachment_list">
+				<template_reference name="attachment" value="options\attachment_types\animator_skin_attachment" List.ItemID="-1072105453">
+					<file name="animator" value="art\armies\british\vehicles\bishop\weapons\qf_25_pounder\qf_25_pounder" />
+					<enum name="inventory_item_category" value="" />
+					<bool name="is_selectable" value="True" />
+					<string name="marker_name" value="" />
+					<file name="material_override" value="" />
+					<list name="customizations">
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_decal\vehicles\british\british_bishop_decal_default" List.ItemID="-1751597920" />
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_tint\british_tint_italian" List.ItemID="51754423" />
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_charred\charring_damage" List.ItemID="1130048222" />
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_weathering\mud_dry" List.ItemID="-491935146" />
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_damage\ballistic_2x_scale_damage" List.ItemID="1285044276" />
+					</list>
+				</template_reference>
+				<template_reference name="attachment" value="options\attachment_types\destructible_cell_attachment" List.ItemID="-1507890920">
+					<file name="animator" value="art\armies\british\vehicles\accessories\bag_small_group_02\bag_small_group_02" />
+					<file name="material_override" value="" />
+					<string name="attachment_marker" value="loc_turret_acc_secondary_left" />
+					<float name="health" value="60" />
+					<instance_reference name="hit_material" value="hit_material\metal" />
+					<list name="customizations">
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_charred\charring_damage" List.ItemID="887695709" />
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_weathering\mud_dry" List.ItemID="1633307802" />
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_tint\british_tint_italian_default_accessories_tritone" List.ItemID="-1526809598" />
+					</list>
+				</template_reference>
+			</list>
+			<string name="attachment_category" value="default" />
+			<string name="attachment_speaker_code" value="" />
+			<string name="inventory_category" value="default" />
+		</group>
+		<uniqueid name="pbgid" value="1512640" />
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+</instance>

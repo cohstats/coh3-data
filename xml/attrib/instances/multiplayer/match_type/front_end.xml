@@ -1,0 +1,55 @@
+<instance version="5" description="" template="multiplayer\match_type">
+	<variant name="default">
+		<uniqueid name="pbgid" value="156308" />
+		<group name="match_type_bag">
+			<int name="human_players" value="0" />
+			<int name="ai_players" value="0" />
+			<int name="match_type" value="1000" />
+			<string name="name" value="front_end" />
+			<enum name="ai_difficulty" value="standard" />
+			<enum_table name="match_flags">
+				<bool name="automatch_vs_players" value="False" />
+				<bool name="automatch_vs_ai" value="False" />
+				<bool name="1_vs_1" value="False" />
+				<bool name="2_vs_2" value="False" />
+				<bool name="3_vs_3" value="False" />
+				<bool name="4_vs_4" value="False" />
+				<bool name="vs_easy_ai" value="False" />
+				<bool name="vs_normal_ai" value="False" />
+				<bool name="vs_hard_ai" value="False" />
+				<bool name="vs_expert_ai" value="False" />
+				<bool name="automatch_ranked" value="False" />
+				<bool name="automatch_unranked" value="False" />
+				<bool name="singleplayer" value="True" />
+				<bool name="multiplayer" value="False" />
+				<bool name="observer" value="False" />
+				<bool name="skirmish" value="False" />
+				<bool name="replay" value="False" />
+				<bool name="trial" value="False" />
+				<bool name="playlist" value="False" />
+			</enum_table>
+			<locstring name="display_name" value="0" />
+			<list name="allowed_factions">
+			</list>
+			<instance_reference name="crafted_map_choices" value="" />
+			<locstring name="display_players_type" value="0" />
+			<bool name="show_in_automatch_selection" value="False" />
+			<string name="automatch_win_condition" value="" />
+			<bool name="show_in_playlist_selection" value="False" />
+			<int name="team_size" value="0" />
+			<int name="num_teams" value="0" />
+			<int name="category" value="0" />
+			<bool name="enable" value="True" />
+			<int name="reward_multiplier" value="1" />
+			<int name="experience_multiplier" value="1" />
+			<int name="observer_groupid" value="0" />
+			<bool name="check_races" value="False" />
+			<list name="leaderboard_data">
+				<instance_reference name="leaderboard_ref" value="multiplayer\leaderboard\front_end" List.ItemID="-1210218479" />
+			</list>
+			<int name="elo" value="0" />
+			<instance_reference name="required_item" value="" />
+			<bool name="is_excluded_from_match_history" value="False" />
+		</group>
+	</variant>
+</instance>

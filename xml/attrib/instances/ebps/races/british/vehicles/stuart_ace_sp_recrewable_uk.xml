@@ -1,0 +1,334 @@
+<instance version="5" description="Its a Honey Stuart! How sweet." template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\sight_ext" List.ItemID="-64524548" List.ParentItemID="-64524548">
+				<group name="vertical_truesight">
+					<float name="eye_height" value="3" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="652038711" List.ParentItemID="652038711">
+				<list name="race_type_list" removedIds="905306161">
+					<instance_reference name="race_type" value="" List.ItemID="-709582073" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-1350927259" List.ParentItemID="-1350927259">
+				<locstring name="screen_name_world" value="11180071" overrideParent="True" />
+				<locstring name="help_text" value="11153568" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\population_ext" List.ItemID="1973119980" List.ParentItemID="1973119980">
+				<enum_table name="upkeep_per_pop_per_minute_override">
+					<float name="manpower" value="0" overrideParent="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\crew_ext" List.ItemID="2123400154" List.ParentItemID="2123400154">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-25530958" List.ParentItemID="-25530958">
+						<group name="info">
+							<list name="role_list">
+								<group name="role" List.ItemID="-1127441373" List.ParentItemID="-1127441373">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+							</list>
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="933121170" List.ListAction="Append">
+						<instance_reference name="ext_key" value="racebps\americans" />
+						<group name="info">
+							<list name="role_list">
+								<group name="role" List.ItemID="-619477484">
+									<string name="name" value="commander" />
+									<bool name="spawn_crew_on_create" value="False" />
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<template_reference name="attach_data" value="attachments\attach_data">
+											<string name="marker_name_parent" value="loc_crew" />
+											<string name="parent_rigidbody_target_name" value="" />
+											<enum name="game_object_attachment_type" value="scenegraph" />
+										</template_reference>
+										<instance_reference name="ebp" value="ebps\races\american\vehicles\crew\tank_commander_sherman_us" />
+										<group name="attachment_flags">
+											<bool name="sim_only" value="False" />
+											<bool name="no_pathfinding" value="True" />
+											<bool name="not_snappable" value="True" />
+											<bool name="restore_snap_to_ground_on_detach" value="False" />
+											<bool name="no_sim_update" value="False" />
+											<bool name="join_parent_squad" value="False" />
+											<bool name="redirect_damage_to_parent_entity" value="False" />
+											<bool name="receive_parent_animations" value="True" />
+											<bool name="receive_parent_death" value="False" />
+										</group>
+									</template_reference>
+									<instance_reference name="animation_role" value="animation_role\vehicle_turret\uk_stuart\vt_stuart_commander" />
+									<string name="parent_inventory_slot" value="hard_point_5" />
+									<bool name="invulnerable" value="True" />
+									<template_reference name="weapon_override" value="">
+									</template_reference>
+									<string name="setup_marker_override" value="" />
+									<bool name="can_ragdoll" value="True" />
+								</group>
+							</list>
+							<template_reference name="additional_crew_option" value="options\none">
+							</template_reference>
+							<bool name="add_attachment_dynamics_to_crew_and_apply_root_motion" value="False" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\recrewable_ext" List.ItemID="590294820" List.ListAction="Append">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="293791471">
+						<instance_reference name="ext_key" value="racebps\germans" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british\vehicles\stuart_ace_recrewable_sp_uk" />
+							<float name="max_capture_crew_size" value="4" />
+							<float name="min_capture_crew_size" value="1" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="2118326657">
+						<instance_reference name="ext_key" value="racebps\americans" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british\vehicles\stuart_ace_recrewable_sp_uk" />
+							<float name="max_capture_crew_size" value="4" />
+							<float name="min_capture_crew_size" value="1" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="490420128">
+						<instance_reference name="ext_key" value="racebps\british" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british\vehicles\stuart_ace_recrewable_sp_uk" />
+							<float name="max_capture_crew_size" value="4" />
+							<float name="min_capture_crew_size" value="1" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-316035810">
+						<instance_reference name="ext_key" value="" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="" />
+							<float name="max_capture_crew_size" value="4" />
+							<float name="min_capture_crew_size" value="1" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="8113915">
+						<instance_reference name="ext_key" value="racebps\afrika_korps" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british\vehicles\stuart_ace_recrewable_sp_uk" />
+							<float name="max_capture_crew_size" value="4" />
+							<float name="min_capture_crew_size" value="1" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2071885" />
+		<instance_reference name="parent_pbg" value="ebps\races\british\vehicles\stuart_ace_sp_uk" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\sight_ext" List.ItemID="-64524548" List.ParentItemID="-64524548">
+				<group name="vertical_truesight">
+					<float name="eye_height" value="3" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="652038711" List.ParentItemID="652038711">
+				<list name="race_type_list" removedIds="905306161">
+					<instance_reference name="race_type" value="" List.ItemID="-709582073" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-1350927259" List.ParentItemID="-1350927259">
+				<locstring name="screen_name_world" value="11180071" overrideParent="True" />
+				<locstring name="help_text" value="11153568" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\population_ext" List.ItemID="1973119980" List.ParentItemID="1973119980">
+				<enum_table name="upkeep_per_pop_per_minute_override">
+					<float name="manpower" value="0" overrideParent="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\crew_ext" List.ItemID="2123400154" List.ParentItemID="2123400154">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-25530958" List.ParentItemID="-25530958">
+						<group name="info">
+							<list name="role_list">
+								<group name="role" List.ItemID="-1127441373" List.ParentItemID="-1127441373">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+							</list>
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="933121170" List.ListAction="Append">
+						<instance_reference name="ext_key" value="racebps\americans" />
+						<group name="info">
+							<list name="role_list">
+								<group name="role" List.ItemID="-619477484">
+									<string name="name" value="commander" />
+									<bool name="spawn_crew_on_create" value="False" />
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<template_reference name="attach_data" value="attachments\attach_data">
+											<string name="marker_name_parent" value="loc_crew" />
+											<string name="parent_rigidbody_target_name" value="" />
+											<enum name="game_object_attachment_type" value="scenegraph" />
+										</template_reference>
+										<instance_reference name="ebp" value="ebps\races\american\vehicles\crew\tank_commander_sherman_us" />
+										<group name="attachment_flags">
+											<bool name="sim_only" value="False" />
+											<bool name="no_pathfinding" value="True" />
+											<bool name="not_snappable" value="True" />
+											<bool name="restore_snap_to_ground_on_detach" value="False" />
+											<bool name="no_sim_update" value="False" />
+											<bool name="join_parent_squad" value="False" />
+											<bool name="redirect_damage_to_parent_entity" value="False" />
+											<bool name="receive_parent_animations" value="True" />
+											<bool name="receive_parent_death" value="False" />
+										</group>
+									</template_reference>
+									<instance_reference name="animation_role" value="animation_role\vehicle_turret\uk_stuart\vt_stuart_commander" />
+									<string name="parent_inventory_slot" value="hard_point_5" />
+									<bool name="invulnerable" value="True" />
+									<template_reference name="weapon_override" value="">
+									</template_reference>
+									<string name="setup_marker_override" value="" />
+									<bool name="can_ragdoll" value="True" />
+								</group>
+							</list>
+							<template_reference name="additional_crew_option" value="options\none">
+							</template_reference>
+							<bool name="add_attachment_dynamics_to_crew_and_apply_root_motion" value="False" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\recrewable_ext" List.ItemID="590294820" List.ListAction="Append">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="293791471">
+						<instance_reference name="ext_key" value="racebps\germans" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british\vehicles\stuart_ace_recrewable_sp_uk" />
+							<float name="max_capture_crew_size" value="4" />
+							<float name="min_capture_crew_size" value="1" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="2118326657">
+						<instance_reference name="ext_key" value="racebps\americans" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british\vehicles\stuart_ace_recrewable_sp_uk" />
+							<float name="max_capture_crew_size" value="4" />
+							<float name="min_capture_crew_size" value="1" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="490420128">
+						<instance_reference name="ext_key" value="racebps\british" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british\vehicles\stuart_ace_recrewable_sp_uk" />
+							<float name="max_capture_crew_size" value="4" />
+							<float name="min_capture_crew_size" value="1" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-316035810">
+						<instance_reference name="ext_key" value="" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="" />
+							<float name="max_capture_crew_size" value="4" />
+							<float name="min_capture_crew_size" value="1" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="8113915">
+						<instance_reference name="ext_key" value="racebps\afrika_korps" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british\vehicles\stuart_ace_recrewable_sp_uk" />
+							<float name="max_capture_crew_size" value="4" />
+							<float name="min_capture_crew_size" value="1" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2071885" />
+		<instance_reference name="parent_pbg" value="ebps\races\british\vehicles\stuart_ace_sp_uk" />
+	</variant>
+</instance>

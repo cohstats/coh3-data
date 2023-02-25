@@ -1,0 +1,74 @@
+<instance version="5" description="" template="abilities">
+	<variant name="default">
+		<group name="ability_bag">
+			<bool name="can_target_in_fow" value="False" overrideParent="True" />
+			<enum_table name="cost_to_player">
+				<float name="fuel" value="50" overrideParent="True" />
+			</enum_table>
+			<group name="ui_cursor">
+				<string name="cursor_good" value="modal_ability" overrideParent="True" />
+				<string name="cursor_nonmodal_good" value="" overrideParent="True" />
+			</group>
+			<group name="ui_info">
+				<locstring name="extra_text" value="11239856" overrideParent="True" />
+				<locstring name="help_text" value="11189609" overrideParent="True" />
+				<file name="icon_name" value="common\abilities\dev\cmap_landing_craft_transport" overrideParent="True" />
+				<locstring name="brief_text" value="11216504" overrideParent="True" />
+			</group>
+			<list name="requirements">
+				<template_reference name="required" value="requirements\required_race" List.ItemID="-1389895116" List.ParentItemID="-1389895116">
+					<instance_reference name="race" value="racebps\germans_campaign" overrideParent="True" />
+				</template_reference>
+			</list>
+			<instance_reference name="ui_reticule" value="ui_reticule\cmap_ability_reticule_default" overrideParent="True" />
+			<float name="ui_reticule_radius_min" value="1" overrideParent="True" />
+			<float name="ui_reticule_radius_max" value="1" overrideParent="True" />
+			<enum name="ui_progress_bar_type" value="no_bar" overrideParent="True" />
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_squad_tree" value="cmap_aircraft_deploy_ger\deploy_transport_run_ger" overrideParent="True" />
+			</group>
+			<state_tree_node name="statetree_node_prereq_self_requirement" value="cmap_aircraft_deploy_us\library\transport_self_requirement" overrideParent="True" />
+			<state_tree_node name="statetree_node_prereq_target_requirement" value="cmap_aircraft_deploy_us\library\transport_target_requirement" overrideParent="True" />
+			<bool name="can_move_to_cast" value="True" overrideParent="True" />
+			<float name="min_range" value="20" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2061864" />
+		<instance_reference name="parent_pbg" value="abilities\races\american\campaign\aircraft\cmap_deploy_transport_run_us" />
+	</variant>
+	<variant name="sp">
+		<group name="ability_bag">
+			<bool name="can_target_in_fow" value="False" overrideParent="True" />
+			<enum_table name="cost_to_player">
+				<float name="fuel" value="50" overrideParent="True" />
+			</enum_table>
+			<group name="ui_cursor">
+				<string name="cursor_good" value="modal_ability" overrideParent="True" />
+				<string name="cursor_nonmodal_good" value="" overrideParent="True" />
+			</group>
+			<group name="ui_info">
+				<locstring name="extra_text" value="11239856" overrideParent="True" />
+				<locstring name="help_text" value="11189609" overrideParent="True" />
+				<file name="icon_name" value="common\abilities\dev\cmap_landing_craft_transport" overrideParent="True" />
+				<locstring name="brief_text" value="11216504" overrideParent="True" />
+			</group>
+			<list name="requirements">
+				<template_reference name="required" value="requirements\required_race" List.ItemID="-1389895116" List.ParentItemID="-1389895116">
+					<instance_reference name="race" value="racebps\germans_campaign" overrideParent="True" />
+				</template_reference>
+			</list>
+			<instance_reference name="ui_reticule" value="ui_reticule\cmap_ability_reticule_default" overrideParent="True" />
+			<float name="ui_reticule_radius_min" value="1" overrideParent="True" />
+			<float name="ui_reticule_radius_max" value="1" overrideParent="True" />
+			<enum name="ui_progress_bar_type" value="no_bar" overrideParent="True" />
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_squad_tree" value="cmap_aircraft_deploy_ger\deploy_transport_run_ger" overrideParent="True" />
+			</group>
+			<state_tree_node name="statetree_node_prereq_self_requirement" value="cmap_aircraft_deploy_us\library\transport_self_requirement" overrideParent="True" />
+			<state_tree_node name="statetree_node_prereq_target_requirement" value="cmap_aircraft_deploy_us\library\transport_target_requirement" overrideParent="True" />
+			<bool name="can_move_to_cast" value="True" overrideParent="True" />
+			<float name="min_range" value="20" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2061864" />
+		<instance_reference name="parent_pbg" value="abilities\races\american\campaign\aircraft\cmap_deploy_transport_run_us" />
+	</variant>
+</instance>

@@ -1,0 +1,70 @@
+<instance version="5" description="" template="abilities">
+	<variant name="default">
+		<group name="ability_bag">
+			<group name="ui_info">
+				<locstring name="extra_text" value="0" overrideParent="True" />
+				<locstring name="help_text" value="0" overrideParent="True" />
+				<file name="icon_name" value="races\common\abilities\advanced_repair" overrideParent="True" />
+				<locstring name="screen_name" value="0" overrideParent="True" />
+				<locstring name="brief_text" value="0" overrideParent="True" />
+			</group>
+			<list name="requirements">
+				<template_reference name="required" value="requirements\required_squad_upgrade" List.ItemID="-1411708941" List.ListAction="Append">
+					<enum name="reason" value="usage_and_display" />
+					<locstring name="ui_name" value="0" />
+					<bool name="include_completed" value="True" />
+					<bool name="include_queued" value="False" />
+					<bool name="is_present" value="True" />
+					<instance_reference name="upgrade_name" value="upgrade\afrika_korps\infantry\fieldcraft_panzerpioneer_ak" />
+					<int name="min_completed" value="1" />
+					<int name="max_completed" value="100" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+				</template_reference>
+			</list>
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_squad_tree" value="squad_repair_library\ger\type" overrideParent="True" />
+			</group>
+			<enum name="ui_progress_bar_type" value="no_bar" overrideParent="True" />
+			<bool name="facing_ignore" value="True" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2099432" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\infantry\repair_parent" />
+	</variant>
+	<variant name="sp">
+		<group name="ability_bag">
+			<group name="ui_info">
+				<locstring name="extra_text" value="0" overrideParent="True" />
+				<locstring name="help_text" value="0" overrideParent="True" />
+				<file name="icon_name" value="races\common\abilities\advanced_repair" overrideParent="True" />
+				<locstring name="screen_name" value="0" overrideParent="True" />
+				<locstring name="brief_text" value="0" overrideParent="True" />
+			</group>
+			<list name="requirements">
+				<template_reference name="required" value="requirements\required_squad_upgrade" List.ItemID="-1411708941" List.ListAction="Append">
+					<enum name="reason" value="usage_and_display" />
+					<locstring name="ui_name" value="0" />
+					<bool name="include_completed" value="True" />
+					<bool name="include_queued" value="False" />
+					<bool name="is_present" value="True" />
+					<instance_reference name="upgrade_name" value="upgrade\afrika_korps\infantry\fieldcraft_panzerpioneer_ak" />
+					<int name="min_completed" value="1" />
+					<int name="max_completed" value="100" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+				</template_reference>
+			</list>
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_squad_tree" value="sp_squad_repair_library\ger\type" overrideParent="True" />
+			</group>
+			<enum name="ui_progress_bar_type" value="no_bar" overrideParent="True" />
+			<bool name="facing_ignore" value="True" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2099432" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\infantry\repair_parent" />
+	</variant>
+</instance>

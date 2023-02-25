@@ -1,0 +1,78 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="2125339466" List.ParentItemID="2125339466">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\german\infantry\crew_vehicle_ger" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\stimulus_perception_ext" List.ItemID="-346843107" List.ParentItemID="-346843107">
+				<enum_table name="stimulus_perception_info">
+					<group name="evacuate_area">
+						<bool name="enable_perception" value="True" overrideParent="True" />
+					</group>
+				</enum_table>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\animation_role_ext" List.ItemID="-1515028801" List.ParentItemID="-1515028801">
+				<enum name="flavour_key" value="wehrmacht" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\moving_ext" List.ItemID="1814975213" List.ParentItemID="1814975213">
+				<enum_table name="speed_scaling_table">
+					<float name="reverse_max_speed" value="0" overrideParent="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="670499551" List.ParentItemID="670499551">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="1121803333" List.ParentItemID="1121803333">
+				<group name="speech_parameters">
+					<string name="class_code" value="vehicles" overrideParent="True" />
+					<string name="name_code" value="crew" overrideParent="True" />
+					<string name="unit_code" value="vehicle_crew_ger" overrideParent="True" />
+				</group>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2032120" />
+		<instance_reference name="parent_pbg" value="ebps\races\american\vehicles\crew\vehicle_crew_us" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="2125339466" List.ParentItemID="2125339466">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\german\infantry\crew_vehicle_ger" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\stimulus_perception_ext" List.ItemID="-346843107" List.ParentItemID="-346843107">
+				<enum_table name="stimulus_perception_info">
+					<group name="evacuate_area">
+						<bool name="enable_perception" value="True" overrideParent="True" />
+					</group>
+				</enum_table>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\animation_role_ext" List.ItemID="-1515028801" List.ParentItemID="-1515028801">
+				<enum name="flavour_key" value="wehrmacht" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\moving_ext" List.ItemID="1814975213" List.ParentItemID="1814975213">
+				<enum_table name="speed_scaling_table">
+					<float name="reverse_max_speed" value="0" overrideParent="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="670499551" List.ParentItemID="670499551">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="1121803333" List.ParentItemID="1121803333">
+				<group name="speech_parameters">
+					<string name="class_code" value="vehicles" overrideParent="True" />
+					<string name="name_code" value="crew" overrideParent="True" />
+					<string name="unit_code" value="vehicle_crew_ger" overrideParent="True" />
+				</group>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2032120" />
+		<instance_reference name="parent_pbg" value="ebps\races\american\vehicles\crew\vehicle_crew_us" />
+	</variant>
+</instance>

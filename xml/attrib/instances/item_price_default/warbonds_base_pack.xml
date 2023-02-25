@@ -1,0 +1,32 @@
+<instance version="5" description="" template="item_price_default">
+	<variant name="default">
+		<group name="item_price_default_bag">
+			<int name="min_durability" value="500" />
+			<list name="item_definitions">
+				<instance_reference name="item" value="currency\warbonds" List.ItemID="1059326242" />
+			</list>
+			<bool name="enable" value="True" />
+			<enum name="action" value="Buy" />
+			<enum name="inventory_item_durability_type" value="COUNT" />
+			<list name="permission_flags">
+				<enum name="item_price_default_permission_flags" value="Mergeable" List.ItemID="190594362" />
+				<enum name="item_price_default_permission_flags" value="Allow Merge With Different MetaData" List.ItemID="41285953" />
+			</list>
+			<list name="pricepoint_pairs">
+				<group name="pricepoint_pair" List.ItemID="-453365509">
+					<enum name="hard_itempricepoint_key" value="UNIVERSAL_499" />
+					<enum name="soft_itempricepoint_key" value="INVALID" />
+				</group>
+			</list>
+			<list name="metadata">
+				<file name="sale_icon" value="allied_canadian_portrait" List.ItemID="-922627172" />
+				<locstring name="pack_name" value="11232141" List.ItemID="891559585" />
+			</list>
+			<list name="permission_masks">
+				<enum name="item_price_default_permission_flags" value="Mergeable" List.ItemID="-477259985" />
+				<enum name="item_price_default_permission_flags" value="Allow Merge With Different MetaData" List.ItemID="-2110929313" />
+			</list>
+		</group>
+		<uniqueid name="pbgid" value="2100542" />
+	</variant>
+</instance>

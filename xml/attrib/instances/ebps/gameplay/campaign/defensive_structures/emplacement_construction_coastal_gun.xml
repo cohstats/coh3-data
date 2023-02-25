@@ -1,0 +1,27 @@
+<instance version="5" description="Clone of the coastal_gun with longer construction duration" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="-685773830" List.ParentItemID="-685773830">
+				<group name="time_cost">
+					<int name="time_turns" value="3" overrideParent="True" />
+				</group>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2124279" />
+		<instance_reference name="parent_pbg" value="ebps\gameplay\campaign\defensive_structures\emplacement_coastal_gun" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="-685773830" List.ParentItemID="-685773830">
+				<group name="time_cost">
+					<int name="time_turns" value="3" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="1573947227" List.ParentItemID="1573947227">
+				<locstring name="brief_text" value="11247259" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2124279" />
+		<instance_reference name="parent_pbg" value="ebps\gameplay\campaign\defensive_structures\emplacement_coastal_gun" />
+	</variant>
+</instance>

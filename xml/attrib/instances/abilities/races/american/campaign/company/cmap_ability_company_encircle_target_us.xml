@@ -1,0 +1,40 @@
+<instance version="5" description="" template="abilities">
+	<variant name="default">
+		<group name="ability_bag">
+			<list name="requirements">
+				<template_reference name="required" value="requirements\required_squad_type_in_structure" List.ItemID="41939673" List.ListAction="Append">
+					<enum name="reason" value="usage" />
+					<int name="required_count" value="1" />
+					<locstring name="ui_name" value="11244677" overrideParent="True" />
+					<instance_reference name="squad_type" value="sbps\races\american\campaign\attachment\attachment_rifle_us" overrideParent="True" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="True" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+				</template_reference>
+			</list>
+			<state_tree_node name="statetree_node_prereq_self_requirement" value="ability_company_encircle_target\global_library\global\self_requirement" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2117409" />
+		<instance_reference name="parent_pbg" value="abilities\campaign\company\cmap_ability_company_encircle_target" />
+	</variant>
+	<variant name="sp">
+		<group name="ability_bag">
+			<list name="requirements">
+				<template_reference name="required" value="requirements\required_squad_type_in_structure" List.ItemID="41939673" List.ListAction="Append">
+					<enum name="reason" value="usage" />
+					<int name="required_count" value="1" />
+					<locstring name="ui_name" value="11244677" overrideParent="True" />
+					<instance_reference name="squad_type" value="sbps\races\american\campaign\attachment\attachment_rifle_us" overrideParent="True" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="True" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+				</template_reference>
+			</list>
+			<state_tree_node name="statetree_node_prereq_self_requirement" value="ability_company_encircle_target\global_library\global\self_requirement" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2117409" />
+		<instance_reference name="parent_pbg" value="abilities\campaign\company\cmap_ability_company_encircle_target" />
+	</variant>
+</instance>

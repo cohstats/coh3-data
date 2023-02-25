@@ -1,0 +1,60 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1476554938" List.ParentItemID="1476554938">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\objects\walls\low_walls\stone_balustrade_vase_01" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="490781217" List.ParentItemID="490781217">
+				<float name="hitpoints" value="280" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="-1742279009" List.ParentItemID="-1742279009">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+				<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\obj_cover_ext" List.ItemID="-570465707" List.ParentItemID="-570465707">
+				<bool name="is_solid_cover_object" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="442358422" List.ParentItemID="442358422">
+				<enum name="occlusion_state" value="occlude_others" overrideParent="True" />
+				<enum name="decorator_visibility" value="hidden" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\vaultable_ext" List.ItemID="62762957" List.ListAction="Append">
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2032191" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\wall_heavy_cover_no_vault" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1476554938" List.ParentItemID="1476554938">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\objects\walls\low_walls\stone_balustrade_vase_01" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="490781217" List.ParentItemID="490781217">
+				<float name="hitpoints" value="280" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="-1742279009" List.ParentItemID="-1742279009">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+				<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\obj_cover_ext" List.ItemID="-570465707" List.ParentItemID="-570465707">
+				<bool name="is_solid_cover_object" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="442358422" List.ParentItemID="442358422">
+				<enum name="occlusion_state" value="occlude_others" overrideParent="True" />
+				<enum name="decorator_visibility" value="hidden" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\vaultable_ext" List.ItemID="62762957" List.ListAction="Append">
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2032191" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\wall_heavy_cover_no_vault" />
+	</variant>
+</instance>

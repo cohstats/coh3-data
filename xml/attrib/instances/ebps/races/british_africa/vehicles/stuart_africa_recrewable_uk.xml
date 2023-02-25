@@ -1,0 +1,430 @@
+<instance version="5" description="Its a Honey Stuart! How sweet." template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="2016925706" List.ParentItemID="2016925706">
+				<bool name="browsable_in_editor" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="433366582" List.ParentItemID="433366582">
+				<float name="hitpoints" value="360" overrideParent="True" />
+				<bool name="can_repair" value="False" overrideParent="True" />
+				<bool name="delete_when_dead" value="True" overrideParent="True" />
+				<bool name="reveal_to_all_on_death" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="-1776010655" List.ParentItemID="-1776010655">
+				<group name="time_cost">
+					<enum_table name="cost">
+						<float name="fuel" value="55" overrideParent="True" />
+					</enum_table>
+					<float name="time_seconds" value="1" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="1799437018" List.ParentItemID="1799437018">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_artillery" value="False" overrideParent="True" />
+						<bool name="tp_piercing_blockers_only" value="False" overrideParent="True" />
+					</enum_table>
+					<enum_table name="pass_through_relation">
+						<bool name="ally" value="False" overrideParent="True" />
+					</enum_table>
+					<bool name="collide_with_missed_ranged_weapon_shots" value="True" overrideParent="True" />
+				</group>
+				<instance_reference name="hit_material" value="" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sight_ext" List.ItemID="-64524548" List.ParentItemID="-64524548">
+				<float name="reveal_area_on_death_time" value="1.5" overrideParent="True" />
+				<float name="reveal_area_on_death_radius" value="0" overrideParent="True" />
+				<group name="vertical_truesight">
+					<float name="eye_height" value="3" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="1213515032" List.ParentItemID="1213515032">
+				<group name="speech_parameters">
+					<string name="name_code" value="" overrideParent="True" />
+					<string name="unit_code" value="" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-1350927259" List.ParentItemID="-1350927259">
+				<float name="decorator_height" value="-1" overrideParent="True" />
+				<enum name="kill_type" value="" overrideParent="True" />
+				<bool name="minimap_enable" value="False" overrideParent="True" />
+				<bool name="minimap_teamcolor" value="False" overrideParent="True" />
+				<locstring name="screen_name" value="11189143" overrideParent="True" />
+				<enum name="selection_name" value="" overrideParent="True" />
+				<enum name="map_rotation_type_override" value="no_override" overrideParent="True" />
+				<enum name="targeting_and_bandbox_selection_priority" value="lowest" overrideParent="True" />
+				<locstring name="help_text" value="11153568" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\moving_ext" List.ItemID="-1164819730" List.ParentItemID="-1164819730">
+				<enum_table name="speed_scaling_table">
+					<float name="min_speed" value="1" overrideParent="True" />
+					<float name="default_speed" value="1" overrideParent="True" />
+					<float name="max_speed" value="1" overrideParent="True" />
+				</enum_table>
+				<float name="acceleration" value="-1" overrideParent="True" />
+				<float name="deceleration" value="-1" overrideParent="True" />
+				<float name="high_path_look_ahead_max_dist" value="10" overrideParent="True" />
+				<instance_reference name="pass_type" value="" overrideParent="True" />
+				<float name="rotation_rate" value="10000" overrideParent="True" />
+				<float name="on_land_overturn_scale" value="0" overrideParent="True" />
+				<int name="right_of_way_priority" value="-1" overrideParent="True" />
+				<template_reference name="pathfinding_option" value="options\none" overrideParent="True">
+				</template_reference>
+				<enum_table name="speed_levels">
+					<float name="speed_level_0" value="0" overrideParent="True" />
+					<float name="speed_level_1" value="0" overrideParent="True" />
+					<float name="speed_level_2" value="0" overrideParent="True" />
+					<float name="speed_level_3" value="0" overrideParent="True" />
+					<float name="speed_level_4" value="0" overrideParent="True" />
+				</enum_table>
+				<instance_reference name="pass_type_destination" value="" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="-1137803893" List.ParentItemID="-1137803893">
+				<list name="hardpoints">
+					<group name="hardpoint" List.ItemID="-1724676053" List.ParentItemID="-1724676053">
+						<list name="weapon_table">
+							<group name="weapon" List.ItemID="-1357278939" List.ParentItemID="-1357278939">
+								<template_reference name="weapon_entity_attachment" value="options\attachment_types\entity_create_attachment">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<template_reference name="attach_data" value="attachments\attach_data">
+											<string name="marker_name_parent" value="loc_turret" overrideParent="True" />
+											<string name="parent_rigidbody_target_name" value="hull_stuart_chassis_01" overrideParent="True" />
+											<enum name="game_object_attachment_type" value="physical_shared_motion" overrideParent="True" />
+										</template_reference>
+										<instance_reference name="ebp" value="ebps\races\british\weapons\ballistic_weapon\tank_gun\w_37mm_stuart_uk" overrideParent="True" />
+										<group name="attachment_flags">
+											<bool name="receive_parent_animations" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</template_reference>
+							</group>
+						</list>
+					</group>
+				</list>
+				<bool name="unequip_weapons_on_death" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\population_ext" List.ItemID="1973119980" List.ParentItemID="1973119980">
+				<float name="personnel_pop" value="6" overrideParent="True" />
+				<enum_table name="upkeep_per_pop_per_minute_override">
+					<float name="manpower" value="1.4" overrideParent="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\statemodel_ext" List.ItemID="-1046500866" List.ParentItemID="-1046500866">
+				<instance_reference name="schema" value="" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\obj_cover_ext" List.ItemID="-329962189" List.ParentItemID="-329962189">
+				<bool name="is_solid_cover_object" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\crew_ext" List.ItemID="2123400154" List.ParentItemID="2123400154">
+				<list name="race_list" removedIds="537475788, 703024694, -1914105611">
+					<group name="race_data" List.ItemID="181891216" List.ParentItemID="181891216">
+						<instance_reference name="ext_key" value="racebps\afrika_korps" overrideParent="True" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\burn_ext" List.ItemID="1233252182" List.ParentItemID="1233252182">
+				<float name="on_fire_threshold" value="0" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\recrewable_ext" List.ItemID="1032134984" List.ListAction="Append">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-1143847575">
+						<instance_reference name="ext_key" value="racebps\germans" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british_africa\vehicles\stuart_africa_recrewable_uk" />
+							<float name="max_capture_crew_size" value="3" />
+							<float name="min_capture_crew_size" value="3" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="217624818">
+						<instance_reference name="ext_key" value="racebps\americans" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british_africa\vehicles\stuart_africa_recrewable_uk" />
+							<float name="max_capture_crew_size" value="3" />
+							<float name="min_capture_crew_size" value="3" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-1243271998">
+						<instance_reference name="ext_key" value="racebps\british" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british_africa\vehicles\stuart_africa_recrewable_uk" />
+							<float name="max_capture_crew_size" value="3" />
+							<float name="min_capture_crew_size" value="3" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-2005273698">
+						<instance_reference name="ext_key" value="" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="" />
+							<float name="max_capture_crew_size" value="3" />
+							<float name="min_capture_crew_size" value="3" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-2013833546">
+						<instance_reference name="ext_key" value="racebps\afrika_korps" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british_africa\vehicles\stuart_africa_recrewable_uk" />
+							<float name="max_capture_crew_size" value="3" />
+							<float name="min_capture_crew_size" value="3" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2062011" />
+		<instance_reference name="parent_pbg" value="ebps\races\british_africa\vehicles\stuart_africa_uk" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="2016925706" List.ParentItemID="2016925706">
+				<bool name="browsable_in_editor" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="433366582" List.ParentItemID="433366582">
+				<float name="hitpoints" value="360" overrideParent="True" />
+				<bool name="can_repair" value="False" overrideParent="True" />
+				<bool name="delete_when_dead" value="True" overrideParent="True" />
+				<bool name="reveal_to_all_on_death" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="-1776010655" List.ParentItemID="-1776010655">
+				<group name="time_cost">
+					<enum_table name="cost">
+						<float name="fuel" value="55" overrideParent="True" />
+					</enum_table>
+					<float name="time_seconds" value="1" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="1799437018" List.ParentItemID="1799437018">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_artillery" value="False" overrideParent="True" />
+						<bool name="tp_piercing_blockers_only" value="False" overrideParent="True" />
+					</enum_table>
+					<enum_table name="pass_through_relation">
+						<bool name="ally" value="False" overrideParent="True" />
+					</enum_table>
+					<bool name="collide_with_missed_ranged_weapon_shots" value="True" overrideParent="True" />
+				</group>
+				<instance_reference name="hit_material" value="" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sight_ext" List.ItemID="-64524548" List.ParentItemID="-64524548">
+				<float name="reveal_area_on_death_time" value="1.5" overrideParent="True" />
+				<float name="reveal_area_on_death_radius" value="0" overrideParent="True" />
+				<group name="vertical_truesight">
+					<float name="eye_height" value="3" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="1213515032" List.ParentItemID="1213515032">
+				<group name="speech_parameters">
+					<string name="name_code" value="" overrideParent="True" />
+					<string name="unit_code" value="" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-1350927259" List.ParentItemID="-1350927259">
+				<float name="decorator_height" value="-1" overrideParent="True" />
+				<enum name="kill_type" value="" overrideParent="True" />
+				<bool name="minimap_enable" value="False" overrideParent="True" />
+				<bool name="minimap_teamcolor" value="False" overrideParent="True" />
+				<locstring name="screen_name" value="11189143" overrideParent="True" />
+				<enum name="selection_name" value="" overrideParent="True" />
+				<enum name="map_rotation_type_override" value="no_override" overrideParent="True" />
+				<enum name="targeting_and_bandbox_selection_priority" value="lowest" overrideParent="True" />
+				<locstring name="help_text" value="11153568" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\moving_ext" List.ItemID="-1164819730" List.ParentItemID="-1164819730">
+				<enum_table name="speed_scaling_table">
+					<float name="min_speed" value="1" overrideParent="True" />
+					<float name="default_speed" value="1" overrideParent="True" />
+					<float name="max_speed" value="1" overrideParent="True" />
+				</enum_table>
+				<float name="acceleration" value="-1" overrideParent="True" />
+				<float name="deceleration" value="-1" overrideParent="True" />
+				<float name="high_path_look_ahead_max_dist" value="10" overrideParent="True" />
+				<instance_reference name="pass_type" value="" overrideParent="True" />
+				<float name="rotation_rate" value="10000" overrideParent="True" />
+				<float name="on_land_overturn_scale" value="0" overrideParent="True" />
+				<int name="right_of_way_priority" value="-1" overrideParent="True" />
+				<template_reference name="pathfinding_option" value="options\none" overrideParent="True">
+				</template_reference>
+				<enum_table name="speed_levels">
+					<float name="speed_level_0" value="0" overrideParent="True" />
+					<float name="speed_level_1" value="0" overrideParent="True" />
+					<float name="speed_level_2" value="0" overrideParent="True" />
+					<float name="speed_level_3" value="0" overrideParent="True" />
+					<float name="speed_level_4" value="0" overrideParent="True" />
+				</enum_table>
+				<instance_reference name="pass_type_destination" value="" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="-1137803893" List.ParentItemID="-1137803893">
+				<list name="hardpoints">
+					<group name="hardpoint" List.ItemID="-1724676053" List.ParentItemID="-1724676053">
+						<list name="weapon_table">
+							<group name="weapon" List.ItemID="-1357278939" List.ParentItemID="-1357278939">
+								<template_reference name="weapon_entity_attachment" value="options\attachment_types\entity_create_attachment">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<template_reference name="attach_data" value="attachments\attach_data">
+											<string name="marker_name_parent" value="loc_turret" overrideParent="True" />
+											<string name="parent_rigidbody_target_name" value="hull_stuart_chassis_01" overrideParent="True" />
+											<enum name="game_object_attachment_type" value="physical_shared_motion" overrideParent="True" />
+										</template_reference>
+										<instance_reference name="ebp" value="ebps\races\british\weapons\ballistic_weapon\tank_gun\w_37mm_stuart_uk" overrideParent="True" />
+										<group name="attachment_flags">
+											<bool name="receive_parent_animations" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</template_reference>
+							</group>
+						</list>
+					</group>
+				</list>
+				<bool name="unequip_weapons_on_death" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\population_ext" List.ItemID="1973119980" List.ParentItemID="1973119980">
+				<float name="personnel_pop" value="6" overrideParent="True" />
+				<enum_table name="upkeep_per_pop_per_minute_override">
+					<float name="manpower" value="1.4" overrideParent="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\statemodel_ext" List.ItemID="-1046500866" List.ParentItemID="-1046500866">
+				<instance_reference name="schema" value="" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\obj_cover_ext" List.ItemID="-329962189" List.ParentItemID="-329962189">
+				<bool name="is_solid_cover_object" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\crew_ext" List.ItemID="2123400154" List.ParentItemID="2123400154">
+				<list name="race_list" removedIds="537475788, 703024694, -1914105611">
+					<group name="race_data" List.ItemID="181891216" List.ParentItemID="181891216">
+						<instance_reference name="ext_key" value="racebps\afrika_korps" overrideParent="True" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\burn_ext" List.ItemID="1233252182" List.ParentItemID="1233252182">
+				<float name="on_fire_threshold" value="0" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\recrewable_ext" List.ItemID="1032134984" List.ListAction="Append">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-1143847575">
+						<instance_reference name="ext_key" value="racebps\germans" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british_africa\vehicles\stuart_africa_recrewable_uk" />
+							<float name="max_capture_crew_size" value="3" />
+							<float name="min_capture_crew_size" value="3" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="217624818">
+						<instance_reference name="ext_key" value="racebps\americans" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british_africa\vehicles\stuart_africa_recrewable_uk" />
+							<float name="max_capture_crew_size" value="3" />
+							<float name="min_capture_crew_size" value="3" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-1243271998">
+						<instance_reference name="ext_key" value="racebps\british" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british_africa\vehicles\stuart_africa_recrewable_uk" />
+							<float name="max_capture_crew_size" value="3" />
+							<float name="min_capture_crew_size" value="3" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-2005273698">
+						<instance_reference name="ext_key" value="" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="" />
+							<float name="max_capture_crew_size" value="3" />
+							<float name="min_capture_crew_size" value="3" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-2013833546">
+						<instance_reference name="ext_key" value="racebps\afrika_korps" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british_africa\vehicles\stuart_africa_recrewable_uk" />
+							<float name="max_capture_crew_size" value="3" />
+							<float name="min_capture_crew_size" value="3" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2062011" />
+		<instance_reference name="parent_pbg" value="ebps\races\british_africa\vehicles\stuart_africa_uk" />
+	</variant>
+</instance>

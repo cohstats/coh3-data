@@ -1,0 +1,72 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="892757990" List.ParentItemID="892757990">
+				<bool name="always_revealed_in_fow" value="True" overrideParent="True" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\projectile\p_rocket_bazooka_m9" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\explosion_ext" List.ItemID="-1203549952" List.ParentItemID="-1203549952">
+				<group name="terrain_hit">
+					<float name="radius_max" value="2" overrideParent="True" />
+					<float name="radius_min" value="1" overrideParent="True" />
+				</group>
+				<template_reference name="on_detonate_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="dot_white_phosphorus_damage" overrideParent="True" />
+				</template_reference>
+				<template_reference name="on_absorbed_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="dot_white_phosphorus_damage" overrideParent="True" />
+				</template_reference>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\projectile_ext" List.ItemID="-238641361" List.ParentItemID="-238641361">
+				<float name="acceleration" value="25" overrideParent="True" />
+				<group name="collision_type">
+					<enum name="enum_projectile_collision" value="tp_piercing_blockers_only" overrideParent="True" />
+				</group>
+				<string name="launcher_marker" value="fx_muzzle" overrideParent="True" />
+				<float name="speed" value="60" overrideParent="True" />
+				<bool name="force_3d_collision" value="True" comment="Must be enabled to allow cell-based building destruction." overrideParent="True" />
+				<template_reference name="projectile_piercing_damage_option" value="options\none" overrideParent="True">
+				</template_reference>
+				<bool name="use_target_entity_position" value="True" overrideParent="True" />
+				<bool name="collision_land_ignore" value="True" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2102484" />
+		<instance_reference name="parent_pbg" value="ebps\gameplay\projectiles\parent\p_straight_shot_parent" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="892757990" List.ParentItemID="892757990">
+				<bool name="always_revealed_in_fow" value="True" overrideParent="True" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\projectile\p_rocket_bazooka_m9" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\explosion_ext" List.ItemID="-1203549952" List.ParentItemID="-1203549952">
+				<group name="terrain_hit">
+					<float name="radius_max" value="2" overrideParent="True" />
+					<float name="radius_min" value="1" overrideParent="True" />
+				</group>
+				<template_reference name="on_detonate_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="sp_dot_white_phosphorus_damage" overrideParent="True" />
+				</template_reference>
+				<template_reference name="on_absorbed_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="sp_dot_white_phosphorus_damage" overrideParent="True" />
+				</template_reference>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\projectile_ext" List.ItemID="-238641361" List.ParentItemID="-238641361">
+				<float name="acceleration" value="25" overrideParent="True" />
+				<group name="collision_type">
+					<enum name="enum_projectile_collision" value="tp_piercing_blockers_only" overrideParent="True" />
+				</group>
+				<string name="launcher_marker" value="fx_muzzle" overrideParent="True" />
+				<float name="speed" value="60" overrideParent="True" />
+				<bool name="force_3d_collision" value="True" comment="Must be enabled to allow cell-based building destruction." overrideParent="True" />
+				<template_reference name="projectile_piercing_damage_option" value="options\none" overrideParent="True">
+				</template_reference>
+				<bool name="use_target_entity_position" value="True" overrideParent="True" />
+				<bool name="collision_land_ignore" value="True" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2102484" />
+		<instance_reference name="parent_pbg" value="ebps\gameplay\projectiles\parent\p_straight_shot_parent" />
+	</variant>
+</instance>

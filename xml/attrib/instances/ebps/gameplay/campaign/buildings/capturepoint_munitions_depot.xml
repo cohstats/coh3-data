@@ -1,0 +1,1158 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="350830738">
+				<file name="alternate_sua" value="" />
+				<bool name="always_revealed_in_fow" value="True" />
+				<bool name="is_visible_in_game" value="True" />
+				<int name="precise_size" value="-1" />
+				<enum name="default_spawn_type" value="" />
+				<instance_reference name="unit_badge" value="" />
+				<bool name="is_spawned_when_not_in_interactive_area" value="True" />
+				<bool name="is_wreck" value="False" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\campaign_map\muni_depot\muni_depot" />
+				<float name="animator_scale" value="100" />
+				<bool name="browsable_in_editor" value="True" />
+				<float name="entity_scale" value="75" />
+				<enum name="subclass_type" value="Generic" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="-2108422786">
+				<group name="time_cost">
+					<enum_table name="cost">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" />
+						<float name="fuel" value="15" />
+						<float name="munition" value="0" />
+						<float name="manpower" value="160" />
+						<float name="requisition" value="0" />
+						<float name="ultimate" value="0" />
+					</enum_table>
+					<float name="time_seconds" value="70" />
+					<int name="time_turns" value="0" />
+					<group name="builder_cost">
+						<float name="action_points" value="0" />
+					</group>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="156642983">
+				<instance_reference name="hit_material" value="hit_material\stone" />
+				<float name="hit_chance" value="1" />
+				<template_reference name="projectile_reflect_option" value="options\none">
+				</template_reference>
+				<enum name="projectile_collision_check_type" value="main_simbox_only" />
+				<group name="shot_collision">
+					<enum_table name="pass_through_relation">
+						<bool name="undefined" value="False" />
+						<bool name="enemy" value="False" />
+						<bool name="ally" value="False" />
+						<bool name="neutral" value="False" />
+					</enum_table>
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_artillery" value="True" />
+						<bool name="tp_collide" value="False" />
+						<bool name="tp_vehicle_collide" value="False" />
+						<bool name="tp_piercing_blockers_only" value="True" />
+						<bool name="tp_throw" value="True" />
+					</enum_table>
+					<bool name="pass_through_weapon_ranged_non_projectile" value="False" />
+					<bool name="collide_with_missed_ranged_weapon_shots" value="False" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\marker_ext" List.ItemID="-1104388550">
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\modifier_ext" List.ItemID="1813855694">
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sight_ext" List.ItemID="-566028079">
+				<group name="detect_camouflage">
+					<float name="tp_global" value="3" />
+					<float name="tp_mine" value="-1" />
+					<float name="tp_unit" value="-1" />
+				</group>
+				<bool name="extended_sight" value="False" />
+				<float name="extended_sight_radius" value="50" />
+				<float name="reveal_area_on_death_time" value="1.5" />
+				<group name="sight_package">
+					<float name="inner_height" value="2.5" />
+					<float name="inner_radius" value="0" />
+					<float name="outer_height" value="-3" comment="Based on the comments, it feels like this should be less than 0 and it traditionally has been. However, through testing, it seems like even if this is set to 0, units are still able to see below them just fine.&#xD;&#xA;&#xD;&#xA;NOTE: Jianfu suggested that this may exist just to soften the slope of the lampshade.&#xD;&#xA;-Brock 2017" />
+					<float name="outer_radius" value="15" />
+					<float name="cone_angle" value="360" />
+					<float name="cone_start_radius" value="0" />
+				</group>
+				<list name="specific_detector_actions">
+				</list>
+				<group name="vertical_truesight">
+					<bool name="enable" value="True" />
+					<float name="tolerance" value="1" />
+					<float name="eye_height" value="2.5" />
+				</group>
+				<bool name="camouflage_detection_enabled" value="True" />
+				<bool name="blockers_check_bounding_box" value="True" />
+				<float name="reveal_area_on_death_radius" value="0" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_entity_ext" List.ItemID="-606575788">
+				<float name="rotate_snap" value="360" />
+				<bool name="kill_paradrop" value="False" />
+				<enum name="transferable" value="None" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\site_ext" List.ItemID="-842702741">
+				<float name="extra_build_test_footprint_x" value="2" />
+				<bool name="snap_to_terrain" value="False" />
+				<bool name="lock_to_impass" value="True" />
+				<float name="extra_build_test_footprint_z" value="2" />
+				<float name="extra_build_test_footprint_offset_x" value="0" />
+				<float name="extra_build_test_footprint_offset_z" value="0" />
+				<float name="minimum_build_test_footprint_x" value="0" />
+				<float name="minimum_build_test_footprint_z" value="0" />
+				<enum name="impass_cell_check" value="AllCellsFree" />
+				<group name="footprint_scale">
+					<float name="x" value="0" />
+					<float name="y" value="0" />
+				</group>
+				<bool name="forced_axis_aligned_footprint" value="False" />
+				<bool name="remove_if_constructed_over" value="False" />
+				<list name="snap_to_surface_types">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="1466914075">
+				<list name="unit_type_list">
+					<enum name="unit_type" value="building" List.ItemID="-293038457" />
+					<enum name="unit_type" value="resource_point_munition" List.ItemID="-1857335498" />
+					<enum name="unit_type" value="capture" List.ItemID="-433324025" />
+					<enum name="unit_type" value="overview_hidden" List.ItemID="-1969429163" />
+				</list>
+				<enum name="weapon_targeting" value="automatic" />
+				<bool name="intersection_testing" value="True" />
+				<list name="race_type_list">
+				</list>
+				<list name="attack_target_restriction_on_attacker">
+				</list>
+				<list name="attack_target_restriction_on_victim">
+				</list>
+				<enum_table name="weapon_category_targeting_filter">
+					<bool name="1melee" value="True" />
+					<bool name="2ranged" value="True" />
+					<bool name="3siege" value="True" />
+					<bool name="4charge" value="True" />
+					<bool name="5brace" value="True" />
+					<bool name="6auto_ability_cast" value="True" />
+					<bool name="7single_cast_ability" value="True" />
+					<bool name="8dummy" value="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="888114207">
+				<bool name="ap_killed_kicker" value="True" />
+				<bool name="ap_loss_kicker" value="True" />
+				<float name="decorator_height" value="2" />
+				<string name="extra_text_deprecated" value="" />
+				<bool name="ghost_enable" value="True" />
+				<locstring name="help_text" value="0" />
+				<string name="hotkey_name" value="A" />
+				<file name="icon_name" value="" />
+				<enum name="kill_type" value="building" />
+				<colour name="minimap_color" value="*" />
+				<bool name="minimap_enable" value="True" />
+				<bool name="minimap_team_only" value="False" />
+				<bool name="minimap_teamcolor" value="True" />
+				<string name="overlay_name" value="" />
+				<bool name="reveal_for_decryption" value="True" />
+				<locstring name="screen_name" value="11168986" />
+				<enum name="selection_name" value="buildings_campaign" />
+				<float name="selection_scale" value="1" />
+				<enum name="selection_type" value="single_entity_select" />
+				<locstring name="tooltip_txt" value="0" />
+				<int name="ui_priority" value="0" />
+				<file name="minimap_icon" value="common\resources\resource_small_munition_small" />
+				<float name="minimap_icon_scale" value="0.5" />
+				<locstring name="brief_text" value="11169030" />
+				<locstring name="extra_text" value="0" />
+				<locstring name="screen_name_short" value="0" />
+				<bool name="show_in_build_log" value="True" />
+				<bool name="show_entity_appearance" value="True" />
+				<locstring name="screen_name_world" value="0" />
+				<locstring name="help_text_world" value="0" />
+				<locstring name="extra_text_world" value="0" />
+				<enum name="map_rotation_type_override" value="none" />
+				<file name="symbol_icon_name" value="campaign\buildings\cmap_munition_depot_decorator" />
+				<enum name="occlusion_state" value="no_occlusion" />
+				<enum name="decorator_visibility" value="visible" />
+				<bool name="skin_pack_override" value="False" />
+				<string name="skin_summer" value="" />
+				<string name="skin_winter" value="" />
+				<enum name="targeting_and_bandbox_selection_priority" value="low" />
+				<enum name="selection_method" value="footprint" />
+				<group name="terrain_info_display_offset">
+					<float name="x" value="0" />
+					<float name="y" value="0" />
+				</group>
+				<string name="decorator_ledger_key" value="" />
+				<instance_reference name="decorator_ledger_bar_style" value="" />
+				<enum name="selection_name_squad_override" value="" />
+				<string name="selection_grouping_ledger_key" value="" />
+				<string name="debug_text" value="" />
+				<string name="selection_datatemplate" value="supplyreceiverdatatemplate" />
+				<bool name="use_construction_range_on_selection" value="False" />
+				<bool name="use_combat_range_on_selection" value="True" />
+				<bool name="is_armoured" value="False" />
+				<string name="decorator_data_template" value="" />
+				<enum name="ui_combine_type" value="intersection" />
+				<bool name="spotted_on_spawn" value="True" />
+				<instance_reference name="district_info" value="" />
+				<bool name="force_facing_and_range_visual_to_center_on_entity" value="True" />
+				<bool name="is_unique_to_race" value="False" />
+				<float name="kicker_offset" value="0" />
+				<file name="portrait_name" value="races\common\buildings\capturepoint_munitions_depot_portrait" />
+				<group name="selection_secondary_bounds_scale">
+					<float name="x" value="1" />
+					<float name="y" value="1" />
+					<float name="z" value="1" />
+				</group>
+				<enum name="decorator" value="" />
+				<int name="map_layer" value="0" />
+				<enum name="map_mark" value="" />
+				<file name="portrait_icon" value="" />
+				<group name="ui_codex_info">
+					<int name="priority" value="0" />
+					<bool name="exclusive" value="False" />
+					<group name="ui_position">
+						<int name="ui_position_column" value="-1" />
+						<int name="ui_position_row" value="-1" />
+					</group>
+				</group>
+				<list name="custom_selection_obbs">
+				</list>
+				<list name="ui_extra_infos">
+				</list>
+				<enum name="screen_name_visibility" value="visible" />
+				<template_reference name="help_text_formatter" value="">
+				</template_reference>
+				<template_reference name="extra_text_formatter" value="">
+				</template_reference>
+				<template_reference name="extra_text_world_formatter" value="">
+				</template_reference>
+				<template_reference name="help_text_world_formatter" value="">
+				</template_reference>
+				<template_reference name="screen_name_formatter" value="">
+				</template_reference>
+				<template_reference name="screen_name_short_formatter" value="">
+				</template_reference>
+				<template_reference name="screen_name_world_formatter" value="">
+				</template_reference>
+				<template_reference name="brief_text_formatter" value="">
+				</template_reference>
+				<string name="sound" value="" />
+				<string name="sound_alternative" value="" />
+				<string name="telemetry_name" value="" />
+				<bool name="selectable_in_non_interactive_area" value="False" />
+				<group name="selection_obb_size">
+					<float name="x" value="1" />
+					<float name="y" value="1" />
+					<float name="z" value="1" />
+				</group>
+				<enum name="target_selection_priority_by_owner" value="none" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\line_of_sight_ext" List.ItemID="424162574">
+				<group name="blocking_box">
+					<float name="x" value="0.01" />
+					<float name="y" value="0.01" />
+					<float name="z" value="0.01" />
+				</group>
+				<bool name="is_shot_blocking" value="True" />
+				<bool name="use_blocking_box" value="False" />
+				<enum name="does_block_line_of_sight" value="Never" />
+				<bool name="reveal_center_when_outside_is_visible" value="True" />
+				<bool name="disable_shot_blocking_on_death" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\action_tree_ext" List.ItemID="355441441">
+				<state_tree_node name="ActionTree_OpeningBranch" value="entity_hold_campaign_root" />
+				<state_tree_node name="fallback_default_move_command_conditions" value="" />
+				<enum name="stop_on_death" value="Default" />
+				<list name="events">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\action_apply_ext" List.ItemID="1779111413">
+				<list name="action_state_trees">
+				</list>
+				<bool name="reset_on_load" value="True" />
+				<list name="physical_state_trees">
+					<group name="container" List.ItemID="-1630480884">
+						<state_tree_node name="state_tree" value="physical_cmp_flag_attach\ownership_check\ownership_check" />
+					</group>
+				</list>
+				<list name="deferred_action_state_trees">
+				</list>
+				<list name="action_state_trees_run_once">
+				</list>
+				<list name="deferred_action_state_trees_run_once">
+				</list>
+				<list name="physical_state_trees_run_once">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_react_tree_ext" List.ItemID="286515343">
+				<state_tree_node name="ActionTree_OpeningBranch" value="hit_basebuilding" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\animation_action_tree_ext" List.ItemID="-427193643">
+				<state_tree_node name="ActionTree_OpeningBranch" value="physical_prop" />
+				<bool name="use_root_motion" value="True" />
+				<enum name="entity_statetree_sort_tag" value="Default" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\movement_node_placeable_ext" List.ItemID="1917506121">
+				<bool name="snap_to_node" value="True" />
+				<bool name="is_notch_placeable" value="True" />
+				<bool name="is_node_blocker" value="True" />
+				<bool name="supply_block_adjacent_nodes" value="False" />
+				<bool name="is_buoy" value="False" />
+				<float name="buoy_connection_radius" value="30" />
+				<bool name="occupy_outline" value="False" />
+				<bool name="is_supply_blocker" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hold_ext" List.ItemID="1758242113">
+				<list name="acceptable_types">
+					<enum name="acceptable_type" value="hold_company" List.ItemID="-1951387690" />
+					<enum name="acceptable_type" value="hold_kradschutzen" List.ItemID="-843186998" />
+					<enum name="acceptable_type" value="hold_extra" List.ItemID="1393314250" />
+				</list>
+				<bool name="attach_passenger_animator" value="False" />
+				<bool name="can_attack_occupant" value="False" />
+				<bool name="invulnerable_in_hold" value="False" />
+				<bool name="disable_area_effect_on_overflow_slot" value="False" />
+				<bool name="disable_unload" value="False" />
+				<bool name="disallow_load_command" value="False" />
+				<bool name="enable_trigger_abilities_in_hold" value="True" />
+				<bool name="enable_trigger_attack_in_hold" value="False" />
+				<bool name="holds_produced_squads" value="False" />
+				<bool name="keep_abandoned_team_weapon" value="False" />
+				<float name="load_seconds" value="1" />
+				<float name="max_load_seconds" value="5" />
+				<float name="min_hold_seconds" value="1" />
+				<float name="num_slots" value="30" />
+				<float name="num_squad_slots" value="1" />
+				<float name="percent_unload_on_death" value="1" />
+				<bool name="revert_ownership" value="False" />
+				<bool name="scavenge_enabled" value="False" />
+				<enum_table name="scavenge_resource">
+					<float name="action" value="0" />
+					<float name="command" value="0" />
+					<float name="popcap" value="0" />
+					<float name="fuel" value="0" />
+					<float name="munition" value="0" />
+					<float name="manpower" value="0" />
+					<float name="requisition" value="0" />
+					<float name="ultimate" value="0" />
+				</enum_table>
+				<bool name="shared_with_other_same_type_units" value="False" />
+				<bool name="use_building_target_scan_radius" value="True" />
+				<bool name="use_crouching_posture" value="False" />
+				<list name="on_loading_modifiers">
+				</list>
+				<bool name="despawn_on_load" value="False" />
+				<float name="load_distance" value="1" />
+				<bool name="maintain_selection" value="False" />
+				<template_reference name="on_loaded_hold_action_tree" value="state_tree_global_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="on_loaded_squad_action_tree" value="state_tree_global_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="unit_loading\unit_loading_structure" />
+				</template_reference>
+				<template_reference name="on_unloaded_squad_instant_action_tree" value="state_tree_global_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<bool name="convert_garrision_on_owner_change" value="False" />
+				<bool name="move_on_remove_hold" value="True" />
+				<bool name="load_separate_entrances" value="False" />
+				<bool name="can_issue_retreat_to_hold_contents" value="False" />
+				<bool name="is_indoors" value="True" />
+				<bool name="ensure_pathability_to_hold_for_unload" value="False" />
+				<float name="unload_path_distance_max" value="0" />
+				<bool name="count_units_in_units" value="False" />
+				<float name="unload_seconds_total" value="2" />
+				<float name="unload_seconds_per_entity" value="0.25" />
+				<bool name="allow_allies_to_occupy" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ability_ext" List.ItemID="-1658011271">
+				<list name="abilities">
+					<instance_reference name="ability" value="abilities\campaign\influence\civilian_intelligence_influence" List.ItemID="-1163496967" />
+					<instance_reference name="ability" value="abilities\campaign\buildings\cmap_ability_capture_point_heal_passive" List.ItemID="-1069262126" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_targeting_ext" List.ItemID="-1825344088">
+				<bool name="allow_weapon_target_scanning" value="False" />
+				<int name="history_size" value="2" />
+				<bool name="allow_entity_scan_close_enemies" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\statemodel_ext" List.ItemID="-857245970">
+				<instance_reference name="schema" value="statemodel_schema\campaign\building_campaign" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\movement_node_modifier_ext" List.ItemID="-2090063008">
+				<list name="ability_modifiers">
+				</list>
+				<list name="state_tree_events">
+				</list>
+				<template_reference name="state_tree_area" value="options\area_info_options\circle_area_option">
+					<float name="outer_radius" value="35" />
+					<float name="inner_radius" value="0" />
+					<bool name="is_two_dimensional" value="True" />
+					<enum name="dynamic_radius_type" value="fixed" />
+				</template_reference>
+				<instance_reference name="DEPRECATED_ui_reticule" value="ui_reticule\cmap_building_range_default" />
+				<instance_reference name="DEPRECATED_ui_facing" value="" />
+				<enum name="state_tree_area_option" value="normal" />
+				<bool name="is_dangerous" value="False" />
+				<list name="upgrade_modifiers">
+				</list>
+				<bool name="can_exert_zone_control" value="False" />
+				<template_reference name="modifier_area" value="options\area_info_options\circle_area_option">
+					<float name="outer_radius" value="35" />
+					<float name="inner_radius" value="0" />
+					<bool name="is_two_dimensional" value="True" />
+					<enum name="dynamic_radius_type" value="fixed" />
+				</template_reference>
+				<group name="ui">
+					<group name="modifier">
+						<instance_reference name="facing" value="" />
+						<instance_reference name="reticule" value="" />
+					</group>
+					<group name="state_tree">
+						<instance_reference name="reticule" value="" />
+						<instance_reference name="facing" value="" />
+					</group>
+				</group>
+				<instance_reference name="reinforcement_ability" value="" />
+				<instance_reference name="garrison_ability" value="" />
+				<list name="health_affected_modifiers">
+				</list>
+				<list name="health_modifier_slot_counts">
+				</list>
+				<list name="supply_affected_modifiers">
+				</list>
+				<list name="supply_modifier_slot_counts">
+				</list>
+				<state_tree_node name="on_ambush_statetree" value="" />
+				<instance_reference name="garrison_reinforcement_ability" value="" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\multi_control_territory_controller_ext" List.ItemID="1403640910">
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\territory_ext" List.ItemID="-1058023650">
+				<bool name="command_provider" value="False" />
+				<bool name="default_on" value="True" />
+				<bool name="secures_territory_sector" value="False" />
+				<enum name="sector_entity_type" value="sector_creator" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\town_ext" List.ItemID="1619999940">
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\upgrade_ext" List.ItemID="-1418205732">
+				<bool name="must_be_in_supply" value="False" />
+				<float name="number_of_standard_slots" value="5" />
+				<list name="standard_upgrades">
+					<instance_reference name="upgrade" value="upgrade\campaign\resources\cmap_munitions_income_rate" List.ItemID="-1775084727" />
+					<instance_reference name="upgrade" value="upgrade\campaign\capturepoints\cmap_capture_point_forward_headquarters" List.ItemID="-682925517" />
+				</list>
+				<int name="max_queue_size_override" value="-1" />
+				<state_tree_node name="production_item_completed_openingbranch" value="" />
+				<bool name="shared_team_production" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="2125785862">
+				<bool name="can_repair" value="True" />
+				<bool name="cuttable" value="False" />
+				<string name="death_event_name" value="Death" />
+				<float name="death_seconds" value="0" />
+				<bool name="delete_when_dead" value="False" />
+				<bool name="force_attacker_memory" value="False" />
+				<float name="hitpoints" value="2000" />
+				<bool name="is_invincible" value="False" />
+				<bool name="is_salvagable_wreck" value="False" />
+				<instance_reference name="rebuilt_entity" value="" />
+				<instance_reference name="rebuilt_squad" value="" />
+				<bool name="rebuilt_use_wreck_owner" value="False" />
+				<bool name="receive_weapon_cover_modifiers" value="False" />
+				<float name="regeneration" value="0" />
+				<bool name="regeneration_disabled" value="True" />
+				<bool name="remove_from_pathfinding_on_death" value="False" />
+				<bool name="reveal_to_all_on_death" value="False" />
+				<bool name="ui_can_scuttle" value="False" />
+				<float name="target_size" value="1" />
+				<float name="weapon_priority" value="0" />
+				<template_reference name="wreck_entity_option" value="options\ebpextensions\healthext\wreck_table">
+					<enum_table name="wreck_entities">
+						<instance_reference name="default" value="ebps\gameplay\campaign\buildings\wrecks\capturepoint_munitions_depot_wreck" />
+						<instance_reference name="brewup" value="" />
+					</enum_table>
+					<list name="spawn_wreck_requirements">
+					</list>
+					<bool name="keep_wreck_ownership" value="False" />
+				</template_reference>
+				<enum name="armor_type" value="None" />
+				<template_reference name="armor_layout_option" value="options\ebpextensions\healthext\armor_layouts\armor_layout_uniform">
+					<float name="armor" value="10" />
+				</template_reference>
+				<enum name="allegiance_override" value="none" />
+				<bool name="not_default_attackable" value="False" />
+				<enum_table name="armor_scaler_by_damage_type">
+					<float name="True Damage" value="1" />
+					<float name="flame" value="1" />
+					<float name="ballistic" value="1" />
+					<float name="explosive" value="1" />
+				</enum_table>
+				<state_tree_node name="death_action_tree" value="" />
+				<template_reference name="self_destruct_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="rebuilt_entity_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="on_received_damage_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<bool name="can_be_damaged_by_ally" value="False" />
+				<state_tree_node name="on_reach_invulnerable_min_cap_entity_state_tree_ref" value="" />
+				<state_tree_node name="on_reach_max_health_entity_state_tree_ref" value="" />
+				<list name="restore_hook_offsets">
+				</list>
+				<bool name="can_be_restored" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\mission_entry_point_ext" List.ItemID="810638738">
+				<bool name="is_popup_mission" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_inventory_ext" List.ItemID="1583556716">
+				<enum_table name="category_capacity">
+					<int name="special" value="0" />
+					<int name="default" value="-1" />
+					<int name="upgrade" value="0" />
+					<int name="casualty" value="0" />
+					<int name="vehicle_wreck" value="0" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\destructible_cell_ext" List.ItemID="-1366730020">
+				<list name="cells">
+					<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="163784128">
+						<float name="max_health" value="0" />
+						<list name="supporting_cells">
+						</list>
+						<file name="animator" value="art\debug\test_campaign_map\node_icons\node_medium" />
+						<string name="attachment_marker" value="" />
+						<string name="combat_slot_marker" value="" />
+						<instance_reference name="hit_material" value="hit_material\metal" />
+						<bool name="use_as_impass_blocker" value="False" />
+						<string name="cell_preset" value="" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+						<list name="customizations">
+						</list>
+					</template_reference>
+				</list>
+				<list name="dca_initialization">
+				</list>
+				<list name="cell_presets">
+				</list>
+				<group name="core_cells">
+					<int name="num_core_cells" value="0" />
+				</group>
+				<group name="combat_slot_behaviour_info">
+					<float name="indestructible_combatslot_layer_vertical_offset_begin" value="-0.5" />
+					<float name="indestructible_combatslot_layer_vertical_width" value="2" />
+					<bool name="occupants_killed_on_cell_destruction" value="False" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\audio_ext" List.ItemID="-389230042">
+				<list name="rtpc_events">
+				</list>
+				<string name="single_select_event" value="sfx_ui_campaign_main_location_select_play" />
+				<int name="music_importance" value="0" />
+				<int name="combat_importance" value="0" />
+				<list name="select_audible_to_relation_list">
+					<enum name="relationship_type" value="undefined" List.ItemID="1476563456" />
+					<enum name="relationship_type" value="enemy" List.ItemID="-612579220" />
+					<enum name="relationship_type" value="ally" List.ItemID="824238472" />
+					<enum name="relationship_type" value="neutral" List.ItemID="404474974" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\board_turn_ext" List.ItemID="722758586">
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\supply_ext" List.ItemID="1955028863">
+				<bool name="default_on" value="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="198501" />
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="350830738">
+				<file name="alternate_sua" value="" />
+				<bool name="always_revealed_in_fow" value="True" />
+				<bool name="is_visible_in_game" value="True" />
+				<int name="precise_size" value="-1" />
+				<enum name="default_spawn_type" value="" />
+				<instance_reference name="unit_badge" value="" />
+				<bool name="is_spawned_when_not_in_interactive_area" value="True" />
+				<bool name="is_wreck" value="False" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\campaign_map\muni_depot\muni_depot" />
+				<float name="animator_scale" value="100" />
+				<bool name="browsable_in_editor" value="True" />
+				<float name="entity_scale" value="75" />
+				<enum name="subclass_type" value="Generic" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="-2108422786">
+				<group name="time_cost">
+					<enum_table name="cost">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" />
+						<float name="fuel" value="15" />
+						<float name="munition" value="0" />
+						<float name="manpower" value="160" />
+						<float name="requisition" value="0" />
+						<float name="ultimate" value="0" />
+					</enum_table>
+					<float name="time_seconds" value="70" />
+					<int name="time_turns" value="0" />
+					<group name="builder_cost">
+						<float name="action_points" value="0" />
+					</group>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="156642983">
+				<instance_reference name="hit_material" value="hit_material\stone" />
+				<float name="hit_chance" value="1" />
+				<template_reference name="projectile_reflect_option" value="options\none">
+				</template_reference>
+				<enum name="projectile_collision_check_type" value="main_simbox_only" />
+				<group name="shot_collision">
+					<enum_table name="pass_through_relation">
+						<bool name="undefined" value="False" />
+						<bool name="enemy" value="False" />
+						<bool name="ally" value="False" />
+						<bool name="neutral" value="False" />
+					</enum_table>
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_artillery" value="True" />
+						<bool name="tp_collide" value="False" />
+						<bool name="tp_vehicle_collide" value="False" />
+						<bool name="tp_piercing_blockers_only" value="True" />
+						<bool name="tp_throw" value="True" />
+					</enum_table>
+					<bool name="pass_through_weapon_ranged_non_projectile" value="False" />
+					<bool name="collide_with_missed_ranged_weapon_shots" value="False" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\marker_ext" List.ItemID="-1104388550">
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\modifier_ext" List.ItemID="1813855694">
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sight_ext" List.ItemID="-566028079">
+				<group name="detect_camouflage">
+					<float name="tp_global" value="3" />
+					<float name="tp_mine" value="-1" />
+					<float name="tp_unit" value="-1" />
+				</group>
+				<bool name="extended_sight" value="False" />
+				<float name="extended_sight_radius" value="50" />
+				<float name="reveal_area_on_death_time" value="1.5" />
+				<group name="sight_package">
+					<float name="inner_height" value="2.5" />
+					<float name="inner_radius" value="0" />
+					<float name="outer_height" value="-3" comment="Based on the comments, it feels like this should be less than 0 and it traditionally has been. However, through testing, it seems like even if this is set to 0, units are still able to see below them just fine.&#xD;&#xA;&#xD;&#xA;NOTE: Jianfu suggested that this may exist just to soften the slope of the lampshade.&#xD;&#xA;-Brock 2017" />
+					<float name="outer_radius" value="15" />
+					<float name="cone_angle" value="360" />
+					<float name="cone_start_radius" value="0" />
+				</group>
+				<list name="specific_detector_actions">
+				</list>
+				<group name="vertical_truesight">
+					<bool name="enable" value="True" />
+					<float name="tolerance" value="1" />
+					<float name="eye_height" value="2.5" />
+				</group>
+				<bool name="camouflage_detection_enabled" value="True" />
+				<bool name="blockers_check_bounding_box" value="True" />
+				<float name="reveal_area_on_death_radius" value="0" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_entity_ext" List.ItemID="-606575788">
+				<float name="rotate_snap" value="360" />
+				<bool name="kill_paradrop" value="False" />
+				<enum name="transferable" value="None" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\site_ext" List.ItemID="-842702741">
+				<float name="extra_build_test_footprint_x" value="2" />
+				<bool name="snap_to_terrain" value="False" />
+				<bool name="lock_to_impass" value="True" />
+				<float name="extra_build_test_footprint_z" value="2" />
+				<float name="extra_build_test_footprint_offset_x" value="0" />
+				<float name="extra_build_test_footprint_offset_z" value="0" />
+				<float name="minimum_build_test_footprint_x" value="0" />
+				<float name="minimum_build_test_footprint_z" value="0" />
+				<enum name="impass_cell_check" value="AllCellsFree" />
+				<group name="footprint_scale">
+					<float name="x" value="0" />
+					<float name="y" value="0" />
+				</group>
+				<bool name="forced_axis_aligned_footprint" value="False" />
+				<bool name="remove_if_constructed_over" value="False" />
+				<list name="snap_to_surface_types">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="1466914075">
+				<list name="unit_type_list">
+					<enum name="unit_type" value="building" List.ItemID="-293038457" />
+					<enum name="unit_type" value="resource_point_munition" List.ItemID="-1857335498" />
+					<enum name="unit_type" value="capture" List.ItemID="-433324025" />
+					<enum name="unit_type" value="overview_hidden" List.ItemID="-1969429163" />
+				</list>
+				<enum name="weapon_targeting" value="automatic" />
+				<bool name="intersection_testing" value="True" />
+				<list name="race_type_list">
+				</list>
+				<list name="attack_target_restriction_on_attacker">
+				</list>
+				<list name="attack_target_restriction_on_victim">
+				</list>
+				<enum_table name="weapon_category_targeting_filter">
+					<bool name="1melee" value="True" />
+					<bool name="2ranged" value="True" />
+					<bool name="3siege" value="True" />
+					<bool name="4charge" value="True" />
+					<bool name="5brace" value="True" />
+					<bool name="6auto_ability_cast" value="True" />
+					<bool name="7single_cast_ability" value="True" />
+					<bool name="8dummy" value="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="888114207">
+				<bool name="ap_killed_kicker" value="True" />
+				<bool name="ap_loss_kicker" value="True" />
+				<float name="decorator_height" value="2" />
+				<string name="extra_text_deprecated" value="" />
+				<bool name="ghost_enable" value="True" />
+				<locstring name="help_text" value="0" />
+				<string name="hotkey_name" value="A" />
+				<file name="icon_name" value="" />
+				<enum name="kill_type" value="building" />
+				<colour name="minimap_color" value="*" />
+				<bool name="minimap_enable" value="True" />
+				<bool name="minimap_team_only" value="False" />
+				<bool name="minimap_teamcolor" value="True" />
+				<string name="overlay_name" value="" />
+				<bool name="reveal_for_decryption" value="True" />
+				<locstring name="screen_name" value="11168986" />
+				<enum name="selection_name" value="buildings_campaign" />
+				<float name="selection_scale" value="1" />
+				<enum name="selection_type" value="single_entity_select" />
+				<locstring name="tooltip_txt" value="0" />
+				<int name="ui_priority" value="0" />
+				<file name="minimap_icon" value="common\resources\resource_small_munition_small" />
+				<float name="minimap_icon_scale" value="0.5" />
+				<locstring name="brief_text" value="11169030" />
+				<locstring name="extra_text" value="0" />
+				<locstring name="screen_name_short" value="0" />
+				<bool name="show_in_build_log" value="True" />
+				<bool name="show_entity_appearance" value="True" />
+				<locstring name="screen_name_world" value="0" />
+				<locstring name="help_text_world" value="0" />
+				<locstring name="extra_text_world" value="0" />
+				<enum name="map_rotation_type_override" value="none" />
+				<file name="symbol_icon_name" value="campaign\buildings\cmap_munition_depot_decorator" />
+				<enum name="occlusion_state" value="no_occlusion" />
+				<enum name="decorator_visibility" value="visible" />
+				<bool name="skin_pack_override" value="False" />
+				<string name="skin_summer" value="" />
+				<string name="skin_winter" value="" />
+				<enum name="targeting_and_bandbox_selection_priority" value="low" />
+				<enum name="selection_method" value="footprint" />
+				<group name="terrain_info_display_offset">
+					<float name="x" value="0" />
+					<float name="y" value="0" />
+				</group>
+				<string name="decorator_ledger_key" value="" />
+				<instance_reference name="decorator_ledger_bar_style" value="" />
+				<enum name="selection_name_squad_override" value="" />
+				<string name="selection_grouping_ledger_key" value="" />
+				<string name="debug_text" value="" />
+				<string name="selection_datatemplate" value="supplyreceiverdatatemplate" />
+				<bool name="use_construction_range_on_selection" value="False" />
+				<bool name="use_combat_range_on_selection" value="True" />
+				<bool name="is_armoured" value="False" />
+				<string name="decorator_data_template" value="" />
+				<enum name="ui_combine_type" value="intersection" />
+				<bool name="spotted_on_spawn" value="True" />
+				<instance_reference name="district_info" value="" />
+				<bool name="force_facing_and_range_visual_to_center_on_entity" value="True" />
+				<bool name="is_unique_to_race" value="False" />
+				<float name="kicker_offset" value="0" />
+				<file name="portrait_name" value="races\common\buildings\capturepoint_munitions_depot_portrait" />
+				<group name="selection_secondary_bounds_scale">
+					<float name="x" value="1" />
+					<float name="y" value="1" />
+					<float name="z" value="1" />
+				</group>
+				<enum name="decorator" value="" />
+				<int name="map_layer" value="0" />
+				<enum name="map_mark" value="" />
+				<file name="portrait_icon" value="" />
+				<group name="ui_codex_info">
+					<int name="priority" value="0" />
+					<bool name="exclusive" value="False" />
+					<group name="ui_position">
+						<int name="ui_position_column" value="-1" />
+						<int name="ui_position_row" value="-1" />
+					</group>
+				</group>
+				<list name="custom_selection_obbs">
+				</list>
+				<list name="ui_extra_infos">
+				</list>
+				<enum name="screen_name_visibility" value="visible" />
+				<template_reference name="help_text_formatter" value="">
+				</template_reference>
+				<template_reference name="extra_text_formatter" value="">
+				</template_reference>
+				<template_reference name="extra_text_world_formatter" value="">
+				</template_reference>
+				<template_reference name="help_text_world_formatter" value="">
+				</template_reference>
+				<template_reference name="screen_name_formatter" value="">
+				</template_reference>
+				<template_reference name="screen_name_short_formatter" value="">
+				</template_reference>
+				<template_reference name="screen_name_world_formatter" value="">
+				</template_reference>
+				<template_reference name="brief_text_formatter" value="">
+				</template_reference>
+				<string name="sound" value="" />
+				<string name="sound_alternative" value="" />
+				<string name="telemetry_name" value="" />
+				<bool name="selectable_in_non_interactive_area" value="False" />
+				<group name="selection_obb_size">
+					<float name="x" value="1" />
+					<float name="y" value="1" />
+					<float name="z" value="1" />
+				</group>
+				<enum name="target_selection_priority_by_owner" value="none" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\line_of_sight_ext" List.ItemID="424162574">
+				<group name="blocking_box">
+					<float name="x" value="0.01" />
+					<float name="y" value="0.01" />
+					<float name="z" value="0.01" />
+				</group>
+				<bool name="is_shot_blocking" value="True" />
+				<bool name="use_blocking_box" value="False" />
+				<enum name="does_block_line_of_sight" value="Never" />
+				<bool name="reveal_center_when_outside_is_visible" value="True" />
+				<bool name="disable_shot_blocking_on_death" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\action_tree_ext" List.ItemID="355441441">
+				<state_tree_node name="ActionTree_OpeningBranch" value="entity_hold_campaign_root" />
+				<state_tree_node name="fallback_default_move_command_conditions" value="" />
+				<enum name="stop_on_death" value="Default" />
+				<list name="events">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\action_apply_ext" List.ItemID="1779111413">
+				<list name="action_state_trees">
+				</list>
+				<bool name="reset_on_load" value="True" />
+				<list name="physical_state_trees">
+					<group name="container" List.ItemID="-1630480884">
+						<state_tree_node name="state_tree" value="physical_cmp_flag_attach\ownership_check\ownership_check" />
+					</group>
+				</list>
+				<list name="deferred_action_state_trees">
+				</list>
+				<list name="action_state_trees_run_once">
+				</list>
+				<list name="deferred_action_state_trees_run_once">
+				</list>
+				<list name="physical_state_trees_run_once">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_react_tree_ext" List.ItemID="286515343">
+				<state_tree_node name="ActionTree_OpeningBranch" value="hit_basebuilding" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\animation_action_tree_ext" List.ItemID="-427193643">
+				<state_tree_node name="ActionTree_OpeningBranch" value="physical_prop" />
+				<bool name="use_root_motion" value="True" />
+				<enum name="entity_statetree_sort_tag" value="Default" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\movement_node_placeable_ext" List.ItemID="1917506121">
+				<bool name="snap_to_node" value="True" />
+				<bool name="is_notch_placeable" value="True" />
+				<bool name="is_node_blocker" value="True" />
+				<bool name="supply_block_adjacent_nodes" value="False" />
+				<bool name="is_buoy" value="False" />
+				<float name="buoy_connection_radius" value="30" />
+				<bool name="occupy_outline" value="False" />
+				<bool name="is_supply_blocker" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hold_ext" List.ItemID="1758242113">
+				<list name="acceptable_types">
+					<enum name="acceptable_type" value="hold_company" List.ItemID="-1951387690" />
+					<enum name="acceptable_type" value="hold_kradschutzen" List.ItemID="-843186998" />
+					<enum name="acceptable_type" value="hold_extra" List.ItemID="1393314250" />
+				</list>
+				<bool name="attach_passenger_animator" value="False" />
+				<bool name="can_attack_occupant" value="False" />
+				<bool name="invulnerable_in_hold" value="False" />
+				<bool name="disable_area_effect_on_overflow_slot" value="False" />
+				<bool name="disable_unload" value="False" />
+				<bool name="disallow_load_command" value="False" />
+				<bool name="enable_trigger_abilities_in_hold" value="True" />
+				<bool name="enable_trigger_attack_in_hold" value="False" />
+				<bool name="holds_produced_squads" value="False" />
+				<bool name="keep_abandoned_team_weapon" value="False" />
+				<float name="load_seconds" value="1" />
+				<float name="max_load_seconds" value="5" />
+				<float name="min_hold_seconds" value="1" />
+				<float name="num_slots" value="30" />
+				<float name="num_squad_slots" value="1" />
+				<float name="percent_unload_on_death" value="1" />
+				<bool name="revert_ownership" value="False" />
+				<bool name="scavenge_enabled" value="False" />
+				<enum_table name="scavenge_resource">
+					<float name="action" value="0" />
+					<float name="command" value="0" />
+					<float name="popcap" value="0" />
+					<float name="fuel" value="0" />
+					<float name="munition" value="0" />
+					<float name="manpower" value="0" />
+					<float name="requisition" value="0" />
+					<float name="ultimate" value="0" />
+				</enum_table>
+				<bool name="shared_with_other_same_type_units" value="False" />
+				<bool name="use_building_target_scan_radius" value="True" />
+				<bool name="use_crouching_posture" value="False" />
+				<list name="on_loading_modifiers">
+				</list>
+				<bool name="despawn_on_load" value="False" />
+				<float name="load_distance" value="1" />
+				<bool name="maintain_selection" value="False" />
+				<template_reference name="on_loaded_hold_action_tree" value="state_tree_global_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="on_loaded_squad_action_tree" value="state_tree_global_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="unit_loading\unit_loading_structure" />
+				</template_reference>
+				<template_reference name="on_unloaded_squad_instant_action_tree" value="state_tree_global_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<bool name="convert_garrision_on_owner_change" value="False" />
+				<bool name="move_on_remove_hold" value="True" />
+				<bool name="load_separate_entrances" value="False" />
+				<bool name="can_issue_retreat_to_hold_contents" value="False" />
+				<bool name="is_indoors" value="True" />
+				<bool name="ensure_pathability_to_hold_for_unload" value="False" />
+				<float name="unload_path_distance_max" value="0" />
+				<bool name="count_units_in_units" value="False" />
+				<float name="unload_seconds_total" value="2" />
+				<float name="unload_seconds_per_entity" value="0.25" />
+				<bool name="allow_allies_to_occupy" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ability_ext" List.ItemID="-1658011271">
+				<list name="abilities">
+					<instance_reference name="ability" value="abilities\campaign\influence\civilian_intelligence_influence" List.ItemID="-1163496967" />
+					<instance_reference name="ability" value="abilities\campaign\buildings\cmap_ability_capture_point_heal_passive" List.ItemID="-1756316880" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_targeting_ext" List.ItemID="-1825344088">
+				<bool name="allow_weapon_target_scanning" value="False" />
+				<int name="history_size" value="2" />
+				<bool name="allow_entity_scan_close_enemies" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\statemodel_ext" List.ItemID="-857245970">
+				<instance_reference name="schema" value="statemodel_schema\campaign\building_campaign" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\movement_node_modifier_ext" List.ItemID="-2090063008">
+				<list name="ability_modifiers">
+				</list>
+				<list name="state_tree_events">
+				</list>
+				<template_reference name="state_tree_area" value="options\area_info_options\circle_area_option">
+					<float name="outer_radius" value="35" />
+					<float name="inner_radius" value="0" />
+					<bool name="is_two_dimensional" value="True" />
+					<enum name="dynamic_radius_type" value="fixed" />
+				</template_reference>
+				<instance_reference name="DEPRECATED_ui_reticule" value="ui_reticule\cmap_building_range_default" />
+				<instance_reference name="DEPRECATED_ui_facing" value="" />
+				<enum name="state_tree_area_option" value="normal" />
+				<bool name="is_dangerous" value="False" />
+				<list name="upgrade_modifiers">
+				</list>
+				<bool name="can_exert_zone_control" value="False" />
+				<template_reference name="modifier_area" value="options\area_info_options\circle_area_option">
+					<float name="outer_radius" value="35" />
+					<float name="inner_radius" value="0" />
+					<bool name="is_two_dimensional" value="True" />
+					<enum name="dynamic_radius_type" value="fixed" />
+				</template_reference>
+				<group name="ui">
+					<group name="modifier">
+						<instance_reference name="facing" value="" />
+						<instance_reference name="reticule" value="" />
+					</group>
+					<group name="state_tree">
+						<instance_reference name="reticule" value="" />
+						<instance_reference name="facing" value="" />
+					</group>
+				</group>
+				<instance_reference name="reinforcement_ability" value="" />
+				<instance_reference name="garrison_ability" value="" />
+				<list name="health_affected_modifiers">
+				</list>
+				<list name="health_modifier_slot_counts">
+				</list>
+				<list name="supply_affected_modifiers">
+				</list>
+				<list name="supply_modifier_slot_counts">
+				</list>
+				<state_tree_node name="on_ambush_statetree" value="" />
+				<instance_reference name="garrison_reinforcement_ability" value="" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\multi_control_territory_controller_ext" List.ItemID="1403640910">
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\territory_ext" List.ItemID="-1058023650">
+				<bool name="command_provider" value="False" />
+				<bool name="default_on" value="True" />
+				<bool name="secures_territory_sector" value="False" />
+				<enum name="sector_entity_type" value="sector_creator" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\town_ext" List.ItemID="1619999940">
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\upgrade_ext" List.ItemID="-1418205732">
+				<bool name="must_be_in_supply" value="False" />
+				<float name="number_of_standard_slots" value="5" />
+				<list name="standard_upgrades">
+					<instance_reference name="upgrade" value="upgrade\campaign\resources\cmap_munitions_income_rate" List.ItemID="-1775084727" />
+					<instance_reference name="upgrade" value="upgrade\campaign\capturepoints\cmap_capture_point_forward_headquarters" List.ItemID="1071156272" />
+				</list>
+				<int name="max_queue_size_override" value="-1" />
+				<state_tree_node name="production_item_completed_openingbranch" value="" />
+				<bool name="shared_team_production" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="2125785862">
+				<bool name="can_repair" value="True" />
+				<bool name="cuttable" value="False" />
+				<string name="death_event_name" value="Death" />
+				<float name="death_seconds" value="0" />
+				<bool name="delete_when_dead" value="False" />
+				<bool name="force_attacker_memory" value="False" />
+				<float name="hitpoints" value="2000" />
+				<bool name="is_invincible" value="False" />
+				<bool name="is_salvagable_wreck" value="False" />
+				<instance_reference name="rebuilt_entity" value="" />
+				<instance_reference name="rebuilt_squad" value="" />
+				<bool name="rebuilt_use_wreck_owner" value="False" />
+				<bool name="receive_weapon_cover_modifiers" value="False" />
+				<float name="regeneration" value="0" />
+				<bool name="regeneration_disabled" value="True" />
+				<bool name="remove_from_pathfinding_on_death" value="False" />
+				<bool name="reveal_to_all_on_death" value="False" />
+				<bool name="ui_can_scuttle" value="False" />
+				<float name="target_size" value="1" />
+				<float name="weapon_priority" value="0" />
+				<template_reference name="wreck_entity_option" value="options\ebpextensions\healthext\wreck_table">
+					<enum_table name="wreck_entities">
+						<instance_reference name="default" value="ebps\gameplay\campaign\buildings\wrecks\capturepoint_munitions_depot_wreck" />
+						<instance_reference name="brewup" value="" />
+					</enum_table>
+					<list name="spawn_wreck_requirements">
+					</list>
+					<bool name="keep_wreck_ownership" value="False" />
+				</template_reference>
+				<enum name="armor_type" value="None" />
+				<template_reference name="armor_layout_option" value="options\ebpextensions\healthext\armor_layouts\armor_layout_uniform">
+					<float name="armor" value="10" />
+				</template_reference>
+				<enum name="allegiance_override" value="none" />
+				<bool name="not_default_attackable" value="False" />
+				<enum_table name="armor_scaler_by_damage_type">
+					<float name="True Damage" value="1" />
+					<float name="flame" value="1" />
+					<float name="ballistic" value="1" />
+					<float name="explosive" value="1" />
+				</enum_table>
+				<state_tree_node name="death_action_tree" value="" />
+				<template_reference name="self_destruct_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="rebuilt_entity_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="on_received_damage_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<bool name="can_be_damaged_by_ally" value="False" />
+				<state_tree_node name="on_reach_invulnerable_min_cap_entity_state_tree_ref" value="" />
+				<state_tree_node name="on_reach_max_health_entity_state_tree_ref" value="" />
+				<list name="restore_hook_offsets">
+				</list>
+				<bool name="can_be_restored" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\mission_entry_point_ext" List.ItemID="810638738">
+				<bool name="is_popup_mission" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_inventory_ext" List.ItemID="1583556716">
+				<enum_table name="category_capacity">
+					<int name="special" value="0" />
+					<int name="default" value="-1" />
+					<int name="upgrade" value="0" />
+					<int name="casualty" value="0" />
+					<int name="vehicle_wreck" value="0" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\destructible_cell_ext" List.ItemID="-1366730020">
+				<list name="cells">
+					<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="163784128">
+						<float name="max_health" value="0" />
+						<list name="supporting_cells">
+						</list>
+						<file name="animator" value="art\debug\test_campaign_map\node_icons\node_medium" />
+						<string name="attachment_marker" value="" />
+						<string name="combat_slot_marker" value="" />
+						<instance_reference name="hit_material" value="hit_material\metal" />
+						<bool name="use_as_impass_blocker" value="False" />
+						<string name="cell_preset" value="" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+						<list name="customizations">
+						</list>
+					</template_reference>
+				</list>
+				<list name="dca_initialization">
+				</list>
+				<list name="cell_presets">
+				</list>
+				<group name="core_cells">
+					<int name="num_core_cells" value="0" />
+				</group>
+				<group name="combat_slot_behaviour_info">
+					<float name="indestructible_combatslot_layer_vertical_offset_begin" value="-0.5" />
+					<float name="indestructible_combatslot_layer_vertical_width" value="2" />
+					<bool name="occupants_killed_on_cell_destruction" value="False" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\audio_ext" List.ItemID="-389230042">
+				<list name="rtpc_events">
+				</list>
+				<string name="single_select_event" value="sfx_ui_campaign_main_location_select_play" />
+				<int name="music_importance" value="0" />
+				<int name="combat_importance" value="0" />
+				<list name="select_audible_to_relation_list">
+					<enum name="relationship_type" value="undefined" List.ItemID="1476563456" />
+					<enum name="relationship_type" value="enemy" List.ItemID="-612579220" />
+					<enum name="relationship_type" value="ally" List.ItemID="824238472" />
+					<enum name="relationship_type" value="neutral" List.ItemID="404474974" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\board_turn_ext" List.ItemID="722758586">
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\supply_ext" List.ItemID="1955028863">
+				<bool name="default_on" value="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="198501" />
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+</instance>

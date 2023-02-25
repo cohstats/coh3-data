@@ -1,0 +1,22 @@
+<template description="Property bag for match type buttons for frontend multiplayer menu. This has a list of possible match types and a set of conditions for each." can_be_instantiated="True" virtual_category="Front End/layout" can_be_modded="False" export_for_client="True">
+	<uniqueid name="pbgid" description="internal id for pbgs" serverpath="/UniqueId/NextElement/pbgid" />
+	<group name="match_type_button_bag" description="List of match types and conditions" start_expanded="False">
+		<list name="match_types" description="List of match types and conditions" ordered="False" allow_duplicates="False" can_be_empty="True" start_expanded="False" flat="False">
+			<instance_reference name="match_type" description="" template_list="multiplayer\match_type" relative_path_list="" path_filter="" flat="False" can_be_null="False" />
+		</list>
+		<locstring name="display_text" description="Localized display text" />
+		<string name="page_transition" description="Xaml to load if this button is clicked" default="" />
+		<file name="image_large" description="The largest image to use when displaying this button" file_ext="png;tga" file_root="ui\images\" file_helper_path="" file_default="" />
+		<file name="image_small" description="The smallest image to use when displaying this button" file_ext="png;tga" file_root="ui\images\" file_helper_path="" file_default="" />
+		<file name="image_medium" description="The mid-sized image to when displaying this button" file_ext="png;tga" file_root="ui\images\" file_helper_path="" file_default="" />
+		<string name="page_category" description="What category does the new page fall under" default="" />
+		<string name="datatemplate" description="Data template for display purposes or distinguishing different types of buttons from each other." default="" />
+		<locstring name="display_title" description="Localized title for this button" />
+		<file name="image_background" description="An image to use as a button background" file_ext="png;tga" file_root="ui\images\" file_helper_path="" file_default="" />
+		<locstring name="tooltip_about" description="Description of the MenuTile displayed in tooltip" />
+		<locstring name="tooltip_config_player_count" description="This is displayed in the tooltip for MenuTile under Configuration" />
+		<locstring name="tooltip_config_game_mode" description="This is displayed in the tooltip for MenuTile under Configuration" />
+		<locstring name="tooltip_config_maps" description="This is displayed in the tooltip for MenuTile under Configuration" />
+		<string name="custom_model_type" description="Use a custom model type in code that's derived from MenuTileElementModel." max_length="128" default="" />
+	</group>
+</template>

@@ -1,0 +1,50 @@
+<instance version="5" description="" template="abilities">
+	<variant name="default">
+		<group name="ability_bag">
+			<list name="requirements">
+				<template_reference name="required" value="requirements\required_squad_type_in_structure" List.ItemID="59967076" List.ParentItemID="59967076">
+					<instance_reference name="squad_type" value="sbps\races\german\campaign\attachment\attachment_team_weapon_at_gun_ger" overrideParent="True" />
+				</template_reference>
+			</list>
+			<instance_reference name="cursor_ghost_ebp" value="ebps\races\german\campaign\defenses\emplacement_anti_tank_gun_ger" overrideParent="True" />
+			<instance_reference name="construction_preview_override" value="ebps\races\german\campaign\defenses\emplacement_anti_tank_gun_ger" overrideParent="True" />
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_squad_tree" value="ability_company_attachment_emplacements\construct_anti_tank_gun\anti_tank_gun_ger" overrideParent="True" />
+			</group>
+			<enum_table name="cost_to_player">
+				<float name="popcap" value="0" overrideParent="True" />
+			</enum_table>
+			<group name="ui_position">
+				<int name="ui_position_column" value="4" overrideParent="True" />
+			</group>
+			<instance_reference name="ui_menu" value="menu\cmap_company_management" overrideParent="True" />
+			<enum name="ui_progress_bar_type" value="no_bar" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2064759" />
+		<instance_reference name="parent_pbg" value="abilities\races\american\campaign\company\cmap_company_construct_anti_tank_emplacement_us" />
+	</variant>
+	<variant name="sp">
+		<group name="ability_bag">
+			<list name="requirements">
+				<template_reference name="required" value="requirements\required_squad_type_in_structure" List.ItemID="59967076" List.ParentItemID="59967076">
+					<instance_reference name="squad_type" value="sbps\races\german\campaign\attachment\attachment_team_weapon_at_gun_ger" overrideParent="True" />
+				</template_reference>
+			</list>
+			<instance_reference name="cursor_ghost_ebp" value="ebps\races\german\campaign\defenses\emplacement_anti_tank_gun_ger" overrideParent="True" />
+			<instance_reference name="construction_preview_override" value="ebps\races\german\campaign\defenses\emplacement_anti_tank_gun_ger" overrideParent="True" />
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_squad_tree" value="ability_company_attachment_emplacements\construct_anti_tank_gun\anti_tank_gun_ger" overrideParent="True" />
+			</group>
+			<enum_table name="cost_to_player">
+				<float name="popcap" value="0" overrideParent="True" />
+			</enum_table>
+			<group name="ui_position">
+				<int name="ui_position_column" value="4" overrideParent="True" />
+			</group>
+			<instance_reference name="ui_menu" value="menu\cmap_company_management" overrideParent="True" />
+			<enum name="ui_progress_bar_type" value="no_bar" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2064759" />
+		<instance_reference name="parent_pbg" value="abilities\races\american\campaign\company\cmap_company_construct_anti_tank_emplacement_us" />
+	</variant>
+</instance>

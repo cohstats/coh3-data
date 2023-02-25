@@ -1,0 +1,80 @@
+<instance version="5" description="" template="abilities">
+	<variant name="default">
+		<group name="ability_bag">
+			<group name="ui_info">
+				<locstring name="screen_name" value="11192242" overrideParent="True" />
+				<locstring name="brief_text" value="11240730" overrideParent="True" />
+			</group>
+			<list name="requirements">
+				<template_reference name="required" value="requirements\required_not" List.ItemID="646959392" List.ListAction="Append">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="0" />
+					<list name="requirement_table">
+						<template_reference name="required" value="requirements\required_in_state" List.ItemID="512373486">
+							<enum name="reason" value="usage" />
+							<locstring name="ui_name" value="0" />
+							<float name="was_attacked_within_seconds" value="-1" />
+							<list name="check_states">
+								<enum name="state_requirement_type" value="pinned" List.ItemID="1867734761" />
+							</list>
+							<float name="was_attacking_within_seconds" value="-1" />
+						</template_reference>
+					</list>
+				</template_reference>
+				<template_reference name="required" value="requirements\required_squad_veterancy" List.ItemID="-1117136964" List.ListAction="Append">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="11219717" />
+					<float name="veterancy_rank" value="1" />
+				</template_reference>
+			</list>
+			<group name="ui_position">
+				<int name="ui_position_column" value="4" overrideParent="True" />
+			</group>
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_entity_tree" value="grenade_no69_africa_uk" overrideParent="True" />
+			</group>
+			<float name="min_range" value="5" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2071666" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\infantry\grenade_parent" />
+	</variant>
+	<variant name="sp">
+		<group name="ability_bag">
+			<group name="ui_info">
+				<locstring name="screen_name" value="11192242" overrideParent="True" />
+				<locstring name="brief_text" value="11240730" overrideParent="True" />
+			</group>
+			<list name="requirements">
+				<template_reference name="required" value="requirements\required_not" List.ItemID="646959392" List.ListAction="Append">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="0" />
+					<list name="requirement_table">
+						<template_reference name="required" value="requirements\required_in_state" List.ItemID="512373486">
+							<enum name="reason" value="usage" />
+							<locstring name="ui_name" value="0" />
+							<float name="was_attacked_within_seconds" value="-1" />
+							<list name="check_states">
+								<enum name="state_requirement_type" value="pinned" List.ItemID="1867734761" />
+							</list>
+							<float name="was_attacking_within_seconds" value="-1" />
+						</template_reference>
+					</list>
+				</template_reference>
+				<template_reference name="required" value="requirements\required_squad_veterancy" List.ItemID="-1117136964" List.ListAction="Append">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="11219717" />
+					<float name="veterancy_rank" value="1" />
+				</template_reference>
+			</list>
+			<group name="ui_position">
+				<int name="ui_position_column" value="4" overrideParent="True" />
+			</group>
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_entity_tree" value="sp_grenade_no69_africa_uk" overrideParent="True" />
+			</group>
+			<float name="min_range" value="5" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2071666" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\infantry\grenade_parent" />
+	</variant>
+</instance>

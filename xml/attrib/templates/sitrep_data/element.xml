@@ -1,0 +1,18 @@
+<template description="" can_be_instantiated="False" virtual_category="" can_be_modded="False" export_for_client="True">
+	<string name="custom_label" description="Only used by the Sitrep Editor.&#xD;&#xA;Custom name of this element. If left empty, an auto generated name will be displayed." max_length="100" default="" />
+	<string name="type" description="XAML element type to generate (Ellipse, Rectangle, ...)&#xD;&#xA;Must match a style's TargetType from ui/HUD/Controls/SitrepResources.xaml." default="" />
+	<string name="style" description="XAML element style.&#xD;&#xA;Must match a style name from ui/HUD/Controls/SitrepResources.xaml." default="" />
+	<file name="image_path" description="Only used if the type is &quot;Image&quot;." file_ext="png;jpg;jpeg" file_root="ui\" file_helper_path="icons\" file_default="" />
+	<group name="dimension" description="" start_expanded="False">
+		<float name="width" description="" min="0" max="3.402823E+38" default="0" />
+		<float name="height" description="" min="0" max="3.402823E+38" default="0" />
+		<enum name="type" description="" enum="sitrep_dimension_type" default="Pixels" can_be_null="False" />
+	</group>
+	<group name="position" description="" start_expanded="False">
+		<template_reference name="world_position" description="3D position, only the X and Z is used right now." template_list="basic_data_types\vector3" relative_path_list="" default="basic_data_types\vector3" can_be_null="False" export_flat="False" />
+		<enum name="type" description="Type of position." enum="sitrep_position_type" default="WorldPosition" can_be_null="False" />
+	</group>
+	<list name="timeline" description="List of properties with their keyframes to animate this element." ordered="True" allow_duplicates="True" can_be_empty="True" start_expanded="False" flat="False">
+		<template_reference name="animated_property" description="" template_list="sitrep_data\animated_property" relative_path_list="" default="sitrep_data\animated_property" can_be_null="False" export_flat="False" />
+	</list>
+</template>

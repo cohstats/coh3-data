@@ -1,0 +1,296 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions" removedIds="2146639850">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1856908301" List.ParentItemID="1856908301">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\american\props\medical_paradrop_crate" overrideParent="True" />
+				<float name="animator_scale" value="75" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_inventory_item_ext" List.ItemID="-452458619" List.ParentItemID="-452458619">
+				<template_reference name="simulation_item" value="sim_inventory_item\sim_inventory_item">
+					<template_reference name="item_data" value="sim_inventory_item\sim_item_data\attachment_inventory_data">
+						<template_reference name="attachment_data" value="options\attachment_types\entity_attachment">
+							<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+								<instance_reference name="ebp" value="ebps\races\german\gameplay\medkit_halftrack_ger" overrideParent="True" />
+							</template_reference>
+						</template_reference>
+					</template_reference>
+				</template_reference>
+				<group name="requirement">
+					<state_tree_node name="statetree_condition_node" value="" overrideParent="True" />
+					<state_tree_node name="statetree_condition_default_command_prioritize_as_success" value="" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="1131043906" List.ParentItemID="1131043906">
+				<locstring name="screen_name" value="11243703" overrideParent="True" />
+				<locstring name="extra_text" value="0" overrideParent="True" />
+				<enum name="decorator_visibility" value="default" overrideParent="True" />
+				<locstring name="help_text" value="11243706" overrideParent="True" />
+				<locstring name="brief_text" value="0" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\movement_node_modifier_ext" List.ItemID="31294239" List.ListAction="Append">
+				<list name="ability_modifiers">
+				</list>
+				<list name="state_tree_events">
+					<group name="state_tree_event" List.ItemID="1785680786">
+						<state_tree_node name="statetree_event" value="resource_crates\small_manpower" />
+						<bool name="trigger_at_beginning_of_turn" value="False" />
+					</group>
+				</list>
+				<template_reference name="modifier_area" value="options\area_info_options\circle_area_option">
+					<float name="outer_radius" value="3" />
+					<float name="inner_radius" value="0" />
+					<bool name="is_two_dimensional" value="True" />
+					<enum name="dynamic_radius_type" value="fixed" />
+				</template_reference>
+				<bool name="is_dangerous" value="False" />
+				<list name="upgrade_modifiers">
+				</list>
+				<bool name="can_exert_zone_control" value="False" />
+				<template_reference name="state_tree_area" value="options\area_info_options\circle_area_option">
+					<float name="outer_radius" value="0" />
+					<float name="inner_radius" value="0" />
+					<bool name="is_two_dimensional" value="True" />
+					<enum name="dynamic_radius_type" value="fixed" />
+				</template_reference>
+				<instance_reference name="DEPRECATED_ui_reticule" value="" />
+				<instance_reference name="DEPRECATED_ui_facing" value="" />
+				<enum name="state_tree_area_option" value="same_node_only" />
+				<group name="ui">
+					<group name="modifier">
+						<instance_reference name="facing" value="" />
+						<instance_reference name="reticule" value="" />
+					</group>
+					<group name="state_tree">
+						<instance_reference name="reticule" value="" />
+						<instance_reference name="facing" value="" />
+					</group>
+				</group>
+				<instance_reference name="reinforcement_ability" value="" />
+				<instance_reference name="garrison_ability" value="" />
+				<list name="health_affected_modifiers">
+				</list>
+				<list name="health_modifier_slot_counts">
+				</list>
+				<list name="supply_affected_modifiers">
+				</list>
+				<list name="supply_modifier_slot_counts">
+				</list>
+				<state_tree_node name="on_ambush_statetree" value="" />
+				<instance_reference name="garrison_reinforcement_ability" value="" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="2092258784" List.ListAction="Append">
+				<bool name="can_repair" value="False" />
+				<bool name="cuttable" value="False" />
+				<string name="death_event_name" value="Death" />
+				<float name="death_seconds" value="1" />
+				<bool name="delete_when_dead" value="True" />
+				<bool name="force_attacker_memory" value="False" />
+				<float name="hitpoints" value="50" />
+				<bool name="is_invincible" value="False" />
+				<bool name="is_salvagable_wreck" value="False" />
+				<instance_reference name="rebuilt_entity" value="" />
+				<instance_reference name="rebuilt_squad" value="" />
+				<bool name="rebuilt_use_wreck_owner" value="False" />
+				<bool name="receive_weapon_cover_modifiers" value="False" />
+				<float name="regeneration" value="0" />
+				<bool name="regeneration_disabled" value="True" />
+				<bool name="remove_from_pathfinding_on_death" value="False" />
+				<bool name="reveal_to_all_on_death" value="False" />
+				<bool name="ui_can_scuttle" value="True" />
+				<float name="target_size" value="26" />
+				<float name="weapon_priority" value="-80" />
+				<template_reference name="wreck_entity_option" value="options\none">
+				</template_reference>
+				<enum name="armor_type" value="None" />
+				<template_reference name="armor_layout_option" value="options\ebpextensions\healthext\armor_layouts\armor_layout_uniform">
+					<float name="armor" value="0" />
+				</template_reference>
+				<enum name="allegiance_override" value="none" />
+				<bool name="not_default_attackable" value="False" />
+				<enum_table name="armor_scaler_by_damage_type">
+					<float name="flame" value="1" />
+					<float name="True Damage" value="1" />
+					<float name="ballistic" value="1" />
+					<float name="explosive" value="1" />
+				</enum_table>
+				<template_reference name="self_destruct_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="rebuilt_entity_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="on_received_damage_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<state_tree_node name="death_action_tree" value="" />
+				<bool name="can_be_damaged_by_ally" value="False" />
+				<state_tree_node name="on_reach_invulnerable_min_cap_entity_state_tree_ref" value="" />
+				<state_tree_node name="on_reach_max_health_entity_state_tree_ref" value="" />
+				<list name="restore_hook_offsets">
+				</list>
+				<bool name="can_be_restored" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\movement_node_placeable_ext" List.ItemID="418976420" List.ListAction="Append">
+				<bool name="snap_to_node" value="True" />
+				<bool name="is_notch_placeable" value="True" />
+				<bool name="is_node_blocker" value="False" />
+				<bool name="supply_block_adjacent_nodes" value="False" />
+				<bool name="is_buoy" value="False" />
+				<float name="buoy_connection_radius" value="30" />
+				<bool name="occupy_outline" value="False" />
+				<bool name="is_supply_blocker" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\board_turn_ext" List.ItemID="872974796" List.ListAction="Append">
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="209985" />
+		<instance_reference name="parent_pbg" value="ebps\races\common\gameplay\airdrop_crate_template" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions" removedIds="2146639850">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1856908301" List.ParentItemID="1856908301">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\american\props\medical_paradrop_crate" overrideParent="True" />
+				<float name="animator_scale" value="75" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_inventory_item_ext" List.ItemID="-452458619" List.ParentItemID="-452458619">
+				<template_reference name="simulation_item" value="sim_inventory_item\sim_inventory_item">
+					<template_reference name="item_data" value="sim_inventory_item\sim_item_data\attachment_inventory_data">
+						<template_reference name="attachment_data" value="options\attachment_types\entity_attachment">
+							<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+								<instance_reference name="ebp" value="ebps\races\german\gameplay\medkit_halftrack_ger" overrideParent="True" />
+							</template_reference>
+						</template_reference>
+					</template_reference>
+				</template_reference>
+				<group name="requirement">
+					<state_tree_node name="statetree_condition_node" value="" overrideParent="True" />
+					<state_tree_node name="statetree_condition_default_command_prioritize_as_success" value="" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="1131043906" List.ParentItemID="1131043906">
+				<locstring name="screen_name" value="11243703" overrideParent="True" />
+				<locstring name="extra_text" value="0" overrideParent="True" />
+				<enum name="decorator_visibility" value="default" overrideParent="True" />
+				<locstring name="help_text" value="11243706" overrideParent="True" />
+				<locstring name="brief_text" value="0" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\movement_node_modifier_ext" List.ItemID="31294239" List.ListAction="Append">
+				<list name="ability_modifiers">
+				</list>
+				<list name="state_tree_events">
+					<group name="state_tree_event" List.ItemID="1785680786">
+						<state_tree_node name="statetree_event" value="resource_crates\small_manpower" />
+						<bool name="trigger_at_beginning_of_turn" value="False" />
+					</group>
+				</list>
+				<template_reference name="modifier_area" value="options\area_info_options\circle_area_option">
+					<float name="outer_radius" value="3" />
+					<float name="inner_radius" value="0" />
+					<bool name="is_two_dimensional" value="True" />
+					<enum name="dynamic_radius_type" value="fixed" />
+				</template_reference>
+				<bool name="is_dangerous" value="False" />
+				<list name="upgrade_modifiers">
+				</list>
+				<bool name="can_exert_zone_control" value="False" />
+				<template_reference name="state_tree_area" value="options\area_info_options\circle_area_option">
+					<float name="outer_radius" value="0" />
+					<float name="inner_radius" value="0" />
+					<bool name="is_two_dimensional" value="True" />
+					<enum name="dynamic_radius_type" value="fixed" />
+				</template_reference>
+				<instance_reference name="DEPRECATED_ui_reticule" value="" />
+				<instance_reference name="DEPRECATED_ui_facing" value="" />
+				<enum name="state_tree_area_option" value="same_node_only" />
+				<group name="ui">
+					<group name="modifier">
+						<instance_reference name="facing" value="" />
+						<instance_reference name="reticule" value="" />
+					</group>
+					<group name="state_tree">
+						<instance_reference name="reticule" value="" />
+						<instance_reference name="facing" value="" />
+					</group>
+				</group>
+				<instance_reference name="reinforcement_ability" value="" />
+				<instance_reference name="garrison_ability" value="" />
+				<list name="health_affected_modifiers">
+				</list>
+				<list name="health_modifier_slot_counts">
+				</list>
+				<list name="supply_affected_modifiers">
+				</list>
+				<list name="supply_modifier_slot_counts">
+				</list>
+				<state_tree_node name="on_ambush_statetree" value="" />
+				<instance_reference name="garrison_reinforcement_ability" value="" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="2092258784" List.ListAction="Append">
+				<bool name="can_repair" value="False" />
+				<bool name="cuttable" value="False" />
+				<string name="death_event_name" value="Death" />
+				<float name="death_seconds" value="1" />
+				<bool name="delete_when_dead" value="True" />
+				<bool name="force_attacker_memory" value="False" />
+				<float name="hitpoints" value="50" />
+				<bool name="is_invincible" value="False" />
+				<bool name="is_salvagable_wreck" value="False" />
+				<instance_reference name="rebuilt_entity" value="" />
+				<instance_reference name="rebuilt_squad" value="" />
+				<bool name="rebuilt_use_wreck_owner" value="False" />
+				<bool name="receive_weapon_cover_modifiers" value="False" />
+				<float name="regeneration" value="0" />
+				<bool name="regeneration_disabled" value="True" />
+				<bool name="remove_from_pathfinding_on_death" value="False" />
+				<bool name="reveal_to_all_on_death" value="False" />
+				<bool name="ui_can_scuttle" value="True" />
+				<float name="target_size" value="26" />
+				<float name="weapon_priority" value="-80" />
+				<template_reference name="wreck_entity_option" value="options\none">
+				</template_reference>
+				<enum name="armor_type" value="None" />
+				<template_reference name="armor_layout_option" value="options\ebpextensions\healthext\armor_layouts\armor_layout_uniform">
+					<float name="armor" value="0" />
+				</template_reference>
+				<enum name="allegiance_override" value="none" />
+				<bool name="not_default_attackable" value="False" />
+				<enum_table name="armor_scaler_by_damage_type">
+					<float name="flame" value="1" />
+					<float name="True Damage" value="1" />
+					<float name="ballistic" value="1" />
+					<float name="explosive" value="1" />
+				</enum_table>
+				<template_reference name="self_destruct_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="rebuilt_entity_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="on_received_damage_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<state_tree_node name="death_action_tree" value="" />
+				<bool name="can_be_damaged_by_ally" value="False" />
+				<state_tree_node name="on_reach_invulnerable_min_cap_entity_state_tree_ref" value="" />
+				<state_tree_node name="on_reach_max_health_entity_state_tree_ref" value="" />
+				<list name="restore_hook_offsets">
+				</list>
+				<bool name="can_be_restored" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\movement_node_placeable_ext" List.ItemID="418976420" List.ListAction="Append">
+				<bool name="snap_to_node" value="True" />
+				<bool name="is_notch_placeable" value="True" />
+				<bool name="is_node_blocker" value="False" />
+				<bool name="supply_block_adjacent_nodes" value="False" />
+				<bool name="is_buoy" value="False" />
+				<float name="buoy_connection_radius" value="30" />
+				<bool name="occupy_outline" value="False" />
+				<bool name="is_supply_blocker" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\board_turn_ext" List.ItemID="872974796" List.ListAction="Append">
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="209985" />
+		<instance_reference name="parent_pbg" value="ebps\races\common\gameplay\airdrop_crate_template" />
+	</variant>
+</instance>

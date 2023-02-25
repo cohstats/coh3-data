@@ -1,0 +1,314 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions" removedIds="1596167063, -234482428, 1299195682, -1006184464">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="151475666" List.ParentItemID="151475666">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\campaign_map\cmap_anti_air\cmap_anti_air_ger" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-655183511" List.ParentItemID="-655183511">
+				<float name="hitpoints" value="720" overrideParent="True" />
+				<template_reference name="armor_layout_option" value="options\ebpextensions\healthext\armor_layouts\armor_layout_front_rear" overrideParent="True">
+					<float name="front_armor" value="180" />
+					<float name="rear_armor" value="80" />
+					<float name="rear_damage_multiplier" value="1" />
+				</template_reference>
+				<template_reference name="rebuilt_entity_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" overrideParent="True" />
+				</template_reference>
+				<list name="restore_hook_offsets" removedIds="1171535629, 1304175266">
+				</list>
+				<bool name="can_be_restored" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="701396440" List.ParentItemID="701396440">
+				<list name="unit_type_list" removedIds="-1404130009">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-337428253" List.ParentItemID="-337428253">
+				<enum name="occlusion_state" value="can_be_occluded" overrideParent="True" />
+				<enum name="selection_method" value="terrain_obb" overrideParent="True" />
+				<locstring name="help_text_world" value="0" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="870580012" List.ListAction="Append">
+				<group name="time_cost">
+					<enum_table name="cost">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" />
+						<float name="fuel" value="90" />
+						<float name="munition" value="0" />
+						<float name="manpower" value="420" />
+						<float name="requisition" value="0" />
+						<float name="ultimate" value="0" />
+					</enum_table>
+					<float name="time_seconds" value="55" />
+					<int name="time_turns" value="0" />
+					<group name="builder_cost">
+						<float name="action_points" value="0" />
+					</group>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sight_ext" List.ItemID="230365755" List.ListAction="Append">
+				<group name="detect_camouflage">
+					<float name="tp_global" value="-1" />
+					<float name="tp_mine" value="-1" />
+					<float name="tp_unit" value="-1" />
+				</group>
+				<bool name="extended_sight" value="False" />
+				<float name="extended_sight_radius" value="70" />
+				<float name="reveal_area_on_death_time" value="1.5" />
+				<group name="sight_package">
+					<float name="inner_height" value="2.5" />
+					<float name="inner_radius" value="0" />
+					<float name="outer_height" value="0" comment="Based on the comments, it feels like this should be less than 0 and it traditionally has been. However, through testing, it seems like even if this is set to 0, units are still able to see below them just fine.&#xD;&#xA;&#xD;&#xA;NOTE: Jianfu suggested that this may exist just to soften the slope of the lampshade.&#xD;&#xA;-Brock 2017" />
+					<float name="outer_radius" value="35" />
+					<float name="cone_angle" value="360" />
+					<float name="cone_start_radius" value="0" />
+				</group>
+				<list name="specific_detector_actions">
+				</list>
+				<group name="vertical_truesight">
+					<bool name="enable" value="True" />
+					<float name="tolerance" value="1" />
+					<float name="eye_height" value="2.5" />
+				</group>
+				<bool name="camouflage_detection_enabled" value="True" />
+				<bool name="blockers_check_bounding_box" value="True" />
+				<float name="reveal_area_on_death_radius" value="0" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\spawner_ext" List.ItemID="-1280088713" List.ListAction="Append">
+				<bool name="must_be_in_supply" value="False" />
+				<float name="reinforce_radius" value="0" />
+				<list name="spawn_items">
+				</list>
+				<list name="bonus_xp_from_hold_list">
+				</list>
+				<list name="reinforce_requirements">
+				</list>
+				<bool name="spawn_to_hold_try_first" value="False" />
+				<list name="queue_requirements">
+				</list>
+				<bool name="can_rally" value="True" />
+				<template_reference name="animated_spawn_option" value="options\none">
+				</template_reference>
+				<int name="max_queue_size_override" value="-1" />
+				<state_tree_node name="queue_requirements_openingbranch" value="" />
+				<state_tree_node name="reinforce_requirements_openingbranch" value="" />
+				<state_tree_node name="production_item_completed_openingbranch" value="" />
+				<bool name="enforce_minimum_clearance_at_spawn_positions" value="False" />
+				<bool name="enforce_minimum_clearance_if_entities_blocking" value="True" />
+				<float name="enforce_minimum_clearance_at_spawn_positions_search_range" value="0" />
+				<instance_reference name="rally_pass_type" value="" />
+				<int name="parallel_production_count" value="1" />
+				<template_reference name="default_rally_point_offset" value="">
+				</template_reference>
+				<bool name="always_paradrop_spawn" value="False" />
+				<bool name="shared_team_production" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\supply_ext" List.ItemID="43398752" List.ListAction="Append">
+				<bool name="default_on" value="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\upgrade_ext" List.ItemID="588857256" List.ListAction="Append">
+				<bool name="must_be_in_supply" value="False" />
+				<float name="number_of_standard_slots" value="-1" />
+				<list name="standard_upgrades">
+				</list>
+				<int name="max_queue_size_override" value="-1" />
+				<state_tree_node name="production_item_completed_openingbranch" value="" />
+				<bool name="shared_team_production" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\population_ext" List.ItemID="-1489611177" List.ListAction="Append">
+				<float name="medic_pop" value="0" />
+				<float name="personnel_pop" value="6" />
+				<float name="vehicle_pop" value="0" />
+				<enum_table name="upkeep_per_pop_per_minute_override">
+					<float name="action" value="0" />
+					<float name="command" value="0" />
+					<float name="popcap" value="0" />
+					<float name="fuel" value="0" />
+					<float name="munition" value="0" />
+					<float name="manpower" value="0" />
+					<float name="requisition" value="0" />
+					<float name="ultimate" value="0" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\camouflage_ext" List.ItemID="1876712286" List.ListAction="Append">
+				<float name="attack_priority" value="5" />
+				<enum name="camouflage_type" value="tp_global" />
+				<bool name="chain_revealer" value="False" />
+				<float name="detection_radius" value="1" />
+				<bool name="must_be_fully_constructed" value="False" />
+				<bool name="permanently_activated" value="False" />
+				<float name="combat_reset_time" value="16" />
+				<float name="first_strike_shots" value="1" />
+				<float name="revert_max" value="30" />
+				<float name="revert_multiplier" value="2" />
+				<float name="revert_time" value="3" />
+				<float name="revert_time_on_detection" value="1" />
+				<enum name="camouflaged_combat_stance" value="cease_fire" />
+				<template_reference name="camouflage_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="first_strike_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="191304" />
+		<instance_reference name="parent_pbg" value="ebps\races\template\wk_template" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions" removedIds="1596167063, -234482428, 1299195682, -1006184464">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="151475666" List.ParentItemID="151475666">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\campaign_map\cmap_anti_air\cmap_anti_air_ger" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-655183511" List.ParentItemID="-655183511">
+				<float name="hitpoints" value="720" overrideParent="True" />
+				<template_reference name="armor_layout_option" value="options\ebpextensions\healthext\armor_layouts\armor_layout_front_rear" overrideParent="True">
+					<float name="front_armor" value="180" />
+					<float name="rear_armor" value="80" />
+					<float name="rear_damage_multiplier" value="1" />
+				</template_reference>
+				<template_reference name="rebuilt_entity_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" overrideParent="True" />
+				</template_reference>
+				<list name="restore_hook_offsets" removedIds="1171535629, 1304175266">
+				</list>
+				<bool name="can_be_restored" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="701396440" List.ParentItemID="701396440">
+				<list name="unit_type_list" removedIds="-1404130009">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-337428253" List.ParentItemID="-337428253">
+				<enum name="occlusion_state" value="can_be_occluded" overrideParent="True" />
+				<enum name="selection_method" value="terrain_obb" overrideParent="True" />
+				<locstring name="help_text_world" value="0" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="870580012" List.ListAction="Append">
+				<group name="time_cost">
+					<enum_table name="cost">
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" />
+						<float name="fuel" value="90" />
+						<float name="munition" value="0" />
+						<float name="manpower" value="420" />
+						<float name="requisition" value="0" />
+						<float name="ultimate" value="0" />
+					</enum_table>
+					<float name="time_seconds" value="55" />
+					<int name="time_turns" value="0" />
+					<group name="builder_cost">
+						<float name="action_points" value="0" />
+					</group>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sight_ext" List.ItemID="230365755" List.ListAction="Append">
+				<group name="detect_camouflage">
+					<float name="tp_global" value="-1" />
+					<float name="tp_mine" value="-1" />
+					<float name="tp_unit" value="-1" />
+				</group>
+				<bool name="extended_sight" value="False" />
+				<float name="extended_sight_radius" value="70" />
+				<float name="reveal_area_on_death_time" value="1.5" />
+				<group name="sight_package">
+					<float name="inner_height" value="2.5" />
+					<float name="inner_radius" value="0" />
+					<float name="outer_height" value="0" comment="Based on the comments, it feels like this should be less than 0 and it traditionally has been. However, through testing, it seems like even if this is set to 0, units are still able to see below them just fine.&#xD;&#xA;&#xD;&#xA;NOTE: Jianfu suggested that this may exist just to soften the slope of the lampshade.&#xD;&#xA;-Brock 2017" />
+					<float name="outer_radius" value="35" />
+					<float name="cone_angle" value="360" />
+					<float name="cone_start_radius" value="0" />
+				</group>
+				<list name="specific_detector_actions">
+				</list>
+				<group name="vertical_truesight">
+					<bool name="enable" value="True" />
+					<float name="tolerance" value="1" />
+					<float name="eye_height" value="2.5" />
+				</group>
+				<bool name="camouflage_detection_enabled" value="True" />
+				<bool name="blockers_check_bounding_box" value="True" />
+				<float name="reveal_area_on_death_radius" value="0" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\spawner_ext" List.ItemID="-1280088713" List.ListAction="Append">
+				<bool name="must_be_in_supply" value="False" />
+				<float name="reinforce_radius" value="0" />
+				<list name="spawn_items">
+				</list>
+				<list name="bonus_xp_from_hold_list">
+				</list>
+				<list name="reinforce_requirements">
+				</list>
+				<bool name="spawn_to_hold_try_first" value="False" />
+				<list name="queue_requirements">
+				</list>
+				<bool name="can_rally" value="True" />
+				<template_reference name="animated_spawn_option" value="options\none">
+				</template_reference>
+				<int name="max_queue_size_override" value="-1" />
+				<state_tree_node name="queue_requirements_openingbranch" value="" />
+				<state_tree_node name="reinforce_requirements_openingbranch" value="" />
+				<state_tree_node name="production_item_completed_openingbranch" value="" />
+				<bool name="enforce_minimum_clearance_at_spawn_positions" value="False" />
+				<bool name="enforce_minimum_clearance_if_entities_blocking" value="True" />
+				<float name="enforce_minimum_clearance_at_spawn_positions_search_range" value="0" />
+				<instance_reference name="rally_pass_type" value="" />
+				<int name="parallel_production_count" value="1" />
+				<template_reference name="default_rally_point_offset" value="">
+				</template_reference>
+				<bool name="always_paradrop_spawn" value="False" />
+				<bool name="shared_team_production" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\supply_ext" List.ItemID="43398752" List.ListAction="Append">
+				<bool name="default_on" value="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\upgrade_ext" List.ItemID="588857256" List.ListAction="Append">
+				<bool name="must_be_in_supply" value="False" />
+				<float name="number_of_standard_slots" value="-1" />
+				<list name="standard_upgrades">
+				</list>
+				<int name="max_queue_size_override" value="-1" />
+				<state_tree_node name="production_item_completed_openingbranch" value="" />
+				<bool name="shared_team_production" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\population_ext" List.ItemID="-1489611177" List.ListAction="Append">
+				<float name="medic_pop" value="0" />
+				<float name="personnel_pop" value="6" />
+				<float name="vehicle_pop" value="0" />
+				<enum_table name="upkeep_per_pop_per_minute_override">
+					<float name="action" value="0" />
+					<float name="command" value="0" />
+					<float name="popcap" value="0" />
+					<float name="fuel" value="0" />
+					<float name="munition" value="0" />
+					<float name="manpower" value="0" />
+					<float name="requisition" value="0" />
+					<float name="ultimate" value="0" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\camouflage_ext" List.ItemID="1876712286" List.ListAction="Append">
+				<float name="attack_priority" value="5" />
+				<enum name="camouflage_type" value="tp_global" />
+				<bool name="chain_revealer" value="False" />
+				<float name="detection_radius" value="1" />
+				<bool name="must_be_fully_constructed" value="False" />
+				<bool name="permanently_activated" value="False" />
+				<float name="combat_reset_time" value="16" />
+				<float name="first_strike_shots" value="1" />
+				<float name="revert_max" value="30" />
+				<float name="revert_multiplier" value="2" />
+				<float name="revert_time" value="3" />
+				<float name="revert_time_on_detection" value="1" />
+				<enum name="camouflaged_combat_stance" value="cease_fire" />
+				<template_reference name="camouflage_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="first_strike_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="191304" />
+		<instance_reference name="parent_pbg" value="ebps\races\template\wk_template" />
+	</variant>
+</instance>

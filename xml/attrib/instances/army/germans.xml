@@ -1,0 +1,1012 @@
+<instance version="5" description="" template="army">
+	<variant name="default">
+		<group name="army_bag">
+			<group name="actions">
+				<string name="ability_ally_reinforcement_action_name" value="" />
+				<string name="ability_self_reinforcement_action_name" value="" />
+				<string name="ally_attack_here_action_name" value="" />
+				<string name="ally_capture_here_action_name" value="" />
+				<string name="ally_defend_here_action_name" value="" />
+				<string name="fx_rally_point_action_name" value="" />
+				<string name="self_attack_here_action_name" value="" />
+				<string name="self_capture_here_action_name" value="" />
+				<string name="self_defend_here_action_name" value="" />
+				<string name="self_question_here_action_name" value="" />
+				<string name="ally_question_here_action_name" value="" />
+				<colour name="fx_rally_point_line_color_move" value="16777215" />
+				<colour name="fx_rally_point_line_color_special" value="16777215" />
+				<string name="fx_rally_point_action_name_special" value="" />
+			</group>
+			<enum_table name="resource_income_cap">
+				<float name="action" value="9999" />
+				<float name="command" value="32" />
+				<float name="popcap" value="9999" />
+				<float name="fuel" value="9999" />
+				<float name="munition" value="9999" />
+				<float name="manpower" value="9999" />
+				<float name="requisition" value="9999" />
+				<float name="ultimate" value="9999" />
+			</enum_table>
+			<group name="race_population_cap_table">
+				<float name="base_medic_cap" value="0" />
+				<float name="base_personnel_cap" value="100" />
+				<float name="base_vehicle_cap" value="0" />
+				<float name="max_medic_cap" value="0" />
+				<float name="max_personnel_cap" value="100" />
+				<float name="max_vehicle_cap" value="0" />
+			</group>
+			<list name="abilities">
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mechanized\mechanized_left_1b_raid_ger" List.ItemID="-902427225" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mechanized\mechanized_left_3a_wespe_ger" List.ItemID="1952051126" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mechanized\mechanized_right_1b_smoke_canisters_ger" List.ItemID="2131501647" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mechanized\mechanized_right_2a_stug_assault_group_ger" List.ItemID="-1782722840" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mechanized\mechanized_right_3_panther_ger" List.ItemID="-1547932302" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\breakthrough\breakthrough_left_1a_rapid_production_ger" List.ItemID="-1387724647" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\breakthrough\breakthrough_left_1b_truck_2_5_ger" List.ItemID="1235764960" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\breakthrough\breakthrough_left_2a_blitzkrieg_ger" List.ItemID="1913843774" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\breakthrough\breakthrough_left_2b_panzer_iv_cmd_ger" List.ItemID="-2040578594" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\breakthrough\breakthrough_left_3_tiger_ger" List.ItemID="-569985874" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\breakthrough\breakthrough_right_1_assault_grenadiers_ger" List.ItemID="1647784868" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\breakthrough\breakthrough_right_2a_breakthrough_ger" List.ItemID="-265808000" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\breakthrough\breakthrough_right_2b_smoke_bombing_run_ger" List.ItemID="-1769506703" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\breakthrough\breakthrough_right_3a_assault_group_ger" List.ItemID="-709487692" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\breakthrough\breakthrough_right_3b_incendiary_bombing_run_ger" List.ItemID="-1791009393" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\luftwaffe\luftwaffe_left_1a_infantry_reserves_ger" List.ItemID="-605576481" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\luftwaffe\luftwaffe_left_1b_fallschirmpioneers_ger" List.ItemID="-746834889" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\luftwaffe\luftwaffe_left_2a_weapon_drop_ger" List.ItemID="1746992871" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\luftwaffe\luftwaffe_left_3_88mm_at_gun_ger" List.ItemID="568426943" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\luftwaffe\luftwaffe_right_1a_recon_run_ger" List.ItemID="-922191" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\luftwaffe\luftwaffe_right_1b_strafing_run_ger" List.ItemID="-488066700" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\luftwaffe\luftwaffe_right_2_fallschirmjagers_ger" List.ItemID="-158316216" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\luftwaffe\cut\luftwaffe_right_3a_butterfly_bombs_ger" List.ItemID="-629807432" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\luftwaffe\luftwaffe_right_3b_attack_loiter_ger" List.ItemID="894786775" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\defense\defense_left_1_fortress_pioneers_ger" List.ItemID="695465461" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\defense\defense_left_2a_support_bunkers_ger" List.ItemID="1461346423" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\defense\defense_left_2b_early_warning_ger" List.ItemID="-118732332" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\defense\defense_left_3a_defensive_artillery_ger" List.ItemID="-37606684" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\defense\defense_left_3b_heavy_artillery_barrage_ger" List.ItemID="929644220" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\defense\defense_right_1a_kettenkrad_observation_ger" List.ItemID="-163890255" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\defense\defense_right_1b_medical_halftrack_ger" List.ItemID="-135943659" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\defense\defense_right_2a_sdfkz9_recovery_vehicle_ger" List.ItemID="-1186524164" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\defense\defense_right_2b_flak_halftrack_ger" List.ItemID="-1860191860" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\defense\defense_right_3_nashorn_tank_destroyer_ger" List.ItemID="1156944270" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mountain\mountain_left_1a_tactical_sprint_ger" List.ItemID="622909988" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mountain\mountain_left_1b_med_supply_drop_ger" List.ItemID="-1014940851" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mountain\mountain_left_2a_mountain_senses_ger" List.ItemID="1196294061" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mountain\mountain_left_2b_flashlight_bombs_ger" List.ItemID="-1765808023" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mountain\mountain_left_3a_zeal_ger" List.ItemID="587932004" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mountain\mountain_left_3b_cas_anti_vehicle_loiter_ger" List.ItemID="1105287249" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mountain\mountain_right_1_gebirgsjagers_ger" List.ItemID="-949652599" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mountain\mountain_right_2a_kettenkrad_atg_ger" List.ItemID="-1863750860" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mountain\mountain_right_2b_kettenkrad_leig_ger" List.ItemID="2091059694" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mountain\mountain_right_3_8_rad_ger" List.ItemID="-1162619292" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\italian_artillery\left\italian_artillery_artillery_saturation_ger" List.ItemID="-700586586" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\italian_artillery\left\italian_artillery_bulwark_ger" List.ItemID="1905929375" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\italian_artillery\left\italian_artillery_obice_210_emplacement_ger" List.ItemID="-324720985" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\italian_artillery\left\italian_artillery_sector_warning_ger" List.ItemID="-1733163699" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\italian_artillery\left\italian_artillery_zero_in_ger" List.ItemID="1622276216" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\italian_artillery\right\italian_artillery_cannone_da_105_howitzer_ger" List.ItemID="630227723" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\italian_artillery\right\italian_artillery_guastatori_ger" List.ItemID="-1749789601" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\italian_artillery\right\italian_artillery_heavy_weapon_training_ger" List.ItemID="750651463" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\italian_artillery\right\italian_artillery_scorched_earth_ger" List.ItemID="1963718035" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\italian_artillery\right\italian_artillery_sector_artillery_ger" List.ItemID="-1056727242" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\panzer\passive\c_panzer_operate_under_pressure_ger" List.ItemID="2055605631" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\panzer\passive\c_panzer_vehicle_cost_reduction_ger" List.ItemID="783001207" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\panzer\passive\c_panzer_veteran_vehicles_ger" List.ItemID="-1921139838" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\coastal\coastal_left_3a_l640_ger" List.ItemID="-1778794063" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\coastal\coastal_left_3b_semonvente7518_ger" List.ItemID="-1273173170" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\coastal\coastal_right_2a_man_the_defenses_ger" List.ItemID="-226522978" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\coastal\coastal_right_2b_sector_artillery_ger" List.ItemID="-1394320190" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\coastal\coastal_right_3a_emergency_supplies_ger" List.ItemID="-1911254895" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\coastal\coastal_right_3b_coastal_batteries_ger" List.ItemID="-1670338667" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\coastal\coastal_left_1_coastal_reserve_ger" List.ItemID="991569595" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\coastal\coastal_left_2_officer_ger" List.ItemID="-535055092" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\coastal\coastal_right_1b_artillery_flares_ger" List.ItemID="-685195037" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\coastal\coastal_right_1a_withdraw_ger" List.ItemID="136555383" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\panzer\passive\c_panzer_assault_grenadiers_ger" List.ItemID="-1763392517" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\panzer\active\c_panzer_incendiary_bombing_run_extended_ger" List.ItemID="-1418326516" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\panzer\active\c_panzer_incendiary_bombing_run_ger" List.ItemID="-1368202373" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\panzer\active\c_panzer_logistics_truck_ger" List.ItemID="-1505661659" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\panzer\active\c_panzer_smoke_bombing_run_ger" List.ItemID="-244925244" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\panzer\active\c_panzer_blitzkrieg_ger" List.ItemID="-1922042479" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\panzer\active\c_panzer_breakthrough_ger" List.ItemID="-1126713561" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\panzer\active\c_panzer_rocket_strafe_ger" List.ItemID="-163676980" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\mechanized\active\c_mechanized_deploy_panther_ger" List.ItemID="2125991440" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\mechanized\active\c_mechanized_light_artillery_barrage_extended_ger" List.ItemID="1444805956" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\mechanized\active\c_mechanized_light_artillery_barrage_ger" List.ItemID="911080384" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\mechanized\active\c_mechanized_self_repair_ger" List.ItemID="2135772906" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\mechanized\active\c_mechanized_smoke_canisters_ger" List.ItemID="499871114" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\mechanized\active\c_mechanized_stug_assault_group_ger" List.ItemID="645261677" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\common\passive_unlocks\c_common_increased_fuel_rate_ger" List.ItemID="-1007494387" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\common\passive_unlocks\c_common_increased_muni_rate_ger" List.ItemID="-1817366644" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\common\passive_unlocks\c_common_infantry_reserves_ger" List.ItemID="320436459" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\common\passive_unlocks\c_common_vehicle_upkeep_reduction_ger" List.ItemID="-1025136498" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\common\passive_unlocks\c_common_infantry_upkeep_reduction_ger" List.ItemID="-398133358" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\mechanized\passive\c_mechanized_raid_ger" List.ItemID="-932353982" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\italian_artillery\italian_artillery_snap_artillery_ger" List.ItemID="95020986" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\italian_artillery\italian_artillery_assault_artillery_ger" List.ItemID="1509192546" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\italian_artillery\italian_artillery_hardened_weapon_crews_ger" List.ItemID="-1004306608" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\italian_artillery\italian_artillery_deep_reserves_ger" List.ItemID="-990167767" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\italian_artillery\right\italian_artillery_semovente_ger" List.ItemID="282881762" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\luftwaffe\luftwaffe_left_2b_combat_group_ger" List.ItemID="-1638560056" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\luftwaffe\luftwaffe_right_3a_fragmentation_bombs_ger" List.ItemID="563640995" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mechanized\mechanized_left_2b_8_rad_ger" List.ItemID="-649271045" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mechanized\mechanized_right_1a_fuel_siphon_ger" List.ItemID="1140389540" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mechanized\mechanized_right_1b_spotting_scopes_ger" List.ItemID="-561886625" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mechanized\mechanized_right_2a_mechanized_assault_ger" List.ItemID="2055285050" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mechanized\mechanized_right_2b_encirclement_barrage_ger" List.ItemID="838655108" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mechanized\mechanized_right_3a_stosstruppen_package_ger" List.ItemID="-2006155653" />
+			</list>
+			<enum_table name="resource_max_cap">
+				<float name="action" value="9999" />
+				<float name="command" value="32" />
+				<float name="popcap" value="9999" />
+				<float name="fuel" value="9999" />
+				<float name="munition" value="9999" />
+				<float name="manpower" value="9999" />
+				<float name="requisition" value="9999" />
+				<float name="ultimate" value="9999" />
+			</enum_table>
+			<string name="badge_path" value="" />
+			<list name="production_buildings">
+				<group name="production_building" List.ItemID="1918677399">
+					<group name="builder">
+						<instance_reference name="dispatch_ability" value="" />
+						<enum name="unit_class" value="" />
+						<group name="ui_info">
+							<locstring name="screen_name" value="0" />
+							<locstring name="help_text" value="0" />
+							<file name="icon_name" value="" />
+							<file name="symbol_icon_name" value="" />
+							<string name="hotkey_name" value="" />
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+					<group name="building">
+						<instance_reference name="self_destruct_ability" value="" />
+						<enum name="unit_class" value="hq" />
+						<group name="ui_info">
+							<locstring name="help_text" value="0" />
+							<string name="hotkey_name" value="" />
+							<file name="icon_name" value="hud\building_tabs\building_hq" />
+							<locstring name="screen_name" value="11153658" />
+							<file name="symbol_icon_name" value="" />
+							<group name="ui_position">
+								<int name="ui_position_column" value="1" />
+								<int name="ui_position_row" value="0" />
+								<int name="ui_position_column_span" value="1" />
+								<int name="ui_position_row_span" value="1" />
+							</group>
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+				</group>
+				<group name="production_building" List.ItemID="1042813187">
+					<group name="builder">
+						<instance_reference name="dispatch_ability" value="" />
+						<enum name="unit_class" value="" />
+						<group name="ui_info">
+							<locstring name="screen_name" value="0" />
+							<locstring name="help_text" value="0" />
+							<file name="icon_name" value="" />
+							<file name="symbol_icon_name" value="" />
+							<string name="hotkey_name" value="" />
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+					<group name="building">
+						<instance_reference name="self_destruct_ability" value="" />
+						<enum name="unit_class" value="infanterie_kompanie" />
+						<group name="ui_info">
+							<locstring name="help_text" value="0" />
+							<string name="hotkey_name" value="" />
+							<file name="icon_name" value="hud\building_tabs\building_barracks" />
+							<locstring name="screen_name" value="0" />
+							<file name="symbol_icon_name" value="" />
+							<group name="ui_position">
+								<int name="ui_position_column" value="2" />
+								<int name="ui_position_row" value="0" />
+								<int name="ui_position_column_span" value="1" />
+								<int name="ui_position_row_span" value="1" />
+							</group>
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+				</group>
+				<group name="production_building" List.ItemID="-1805715781">
+					<group name="builder">
+						<instance_reference name="dispatch_ability" value="" />
+						<enum name="unit_class" value="" />
+						<group name="ui_info">
+							<locstring name="screen_name" value="0" />
+							<locstring name="help_text" value="0" />
+							<file name="icon_name" value="" />
+							<file name="symbol_icon_name" value="" />
+							<string name="hotkey_name" value="" />
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+					<group name="building">
+						<instance_reference name="self_destruct_ability" value="" />
+						<enum name="unit_class" value="mechanized_kompanie" />
+						<group name="ui_info">
+							<locstring name="help_text" value="0" />
+							<string name="hotkey_name" value="" />
+							<file name="icon_name" value="hud\building_tabs\building_weapon_support" />
+							<locstring name="screen_name" value="0" />
+							<file name="symbol_icon_name" value="" />
+							<group name="ui_position">
+								<int name="ui_position_column" value="3" />
+								<int name="ui_position_row" value="0" />
+								<int name="ui_position_column_span" value="1" />
+								<int name="ui_position_row_span" value="1" />
+							</group>
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+				</group>
+				<group name="production_building" List.ItemID="781623954">
+					<group name="builder">
+						<instance_reference name="dispatch_ability" value="" />
+						<enum name="unit_class" value="" />
+						<group name="ui_info">
+							<locstring name="screen_name" value="0" />
+							<locstring name="help_text" value="0" />
+							<file name="icon_name" value="" />
+							<file name="symbol_icon_name" value="" />
+							<string name="hotkey_name" value="" />
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+					<group name="building">
+						<instance_reference name="self_destruct_ability" value="" />
+						<enum name="unit_class" value="support_armory" />
+						<group name="ui_info">
+							<locstring name="help_text" value="0" />
+							<string name="hotkey_name" value="" />
+							<file name="icon_name" value="hud\building_tabs\building_motor_pool" />
+							<locstring name="screen_name" value="0" />
+							<file name="symbol_icon_name" value="" />
+							<group name="ui_position">
+								<int name="ui_position_column" value="4" />
+								<int name="ui_position_row" value="0" />
+								<int name="ui_position_column_span" value="1" />
+								<int name="ui_position_row_span" value="1" />
+							</group>
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+				</group>
+				<group name="production_building" List.ItemID="1433738008">
+					<group name="builder">
+						<instance_reference name="dispatch_ability" value="" />
+						<enum name="unit_class" value="" />
+						<group name="ui_info">
+							<locstring name="screen_name" value="0" />
+							<locstring name="help_text" value="0" />
+							<file name="icon_name" value="" />
+							<file name="symbol_icon_name" value="" />
+							<string name="hotkey_name" value="" />
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+					<group name="building">
+						<instance_reference name="self_destruct_ability" value="" />
+						<enum name="unit_class" value="panzer_armory" />
+						<group name="ui_info">
+							<locstring name="help_text" value="0" />
+							<string name="hotkey_name" value="" />
+							<file name="icon_name" value="hud\building_tabs\building_tank_depot" />
+							<locstring name="screen_name" value="0" />
+							<file name="symbol_icon_name" value="" />
+							<group name="ui_position">
+								<int name="ui_position_column" value="5" />
+								<int name="ui_position_row" value="0" />
+								<int name="ui_position_column_span" value="1" />
+								<int name="ui_position_row_span" value="1" />
+							</group>
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+				</group>
+			</list>
+			<group name="ai_production_info">
+				<list name="unlocking_upgrade_list">
+				</list>
+				<list name="loadouts">
+					<instance_reference name="loadout" value="ai\ai_loadout\germans" List.ItemID="2022607620" />
+				</list>
+				<group name="available">
+					<list name="upgrades">
+						<instance_reference name="upgrade" value="army_upgrade\battlegroups\german\breakthrough" List.ItemID="-33423069" />
+						<instance_reference name="upgrade" value="army_upgrade\battlegroups\german\luftwaffe" List.ItemID="619030776" />
+						<instance_reference name="upgrade" value="army_upgrade\battlegroups\german\mechanized" List.ItemID="1423971814" />
+					</list>
+					<list name="abilities">
+					</list>
+					<list name="units">
+					</list>
+				</group>
+			</group>
+			<list name="team_size_point_resource_multiplier">
+			</list>
+			<list name="starting_buildings">
+				<group name="starting_building" List.ItemID="973175947">
+					<string name="key" value="default" />
+					<instance_reference name="building" value="ebps\races\german\buildings\production\hq_ger" />
+					<list name="starting_squads">
+						<group name="starting_squad" List.ItemID="-1814339185">
+							<instance_reference name="squad" value="sbps\races\german\infantry\pioneer_ger" />
+							<bool name="check_requirements" value="False" />
+							<group name="position_offset">
+								<float name="x" value="0" />
+								<float name="y" value="15" />
+							</group>
+						</group>
+					</list>
+					<list name="player_upgrades">
+					</list>
+				</group>
+				<group name="starting_building" List.ItemID="689202865">
+					<string name="key" value="base_bunker" />
+					<instance_reference name="building" value="ebps\races\german\buildings\defensive\base_defense_ger" />
+					<list name="starting_squads">
+					</list>
+					<list name="player_upgrades">
+					</list>
+				</group>
+			</list>
+			<list name="field_support_production_styles">
+				<group name="field_support_production_style" List.ItemID="59862852">
+					<string name="key" value="" />
+					<list name="spawn_items">
+						<group name="spawn_item" List.ItemID="-493473070">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\german\infantry\grenadier_ger" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="2" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="641003615">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\german\team_weapons\hmg_mg42_ger" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="3" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-1477761792">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\german\team_weapons\mortar_81mm_ger" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="2" />
+								<int name="ui_position_column" value="2" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="1747834517">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\german\infantry\pioneer_ger" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="1" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+					</list>
+				</group>
+			</list>
+			<enum_table name="resource_starting_amount">
+				<float name="action" value="0" />
+				<float name="command" value="0" />
+				<float name="popcap" value="0" />
+				<float name="fuel" value="15" />
+				<float name="munition" value="25" />
+				<float name="manpower" value="390" />
+				<float name="requisition" value="0" />
+				<float name="ultimate" value="0" />
+			</enum_table>
+			<state_tree_node name="start_actions_statetree" value="german" />
+			<list name="upgrades">
+			</list>
+			<group name="ui">
+				<list name="global_traits_summary">
+				</list>
+				<locstring name="subheader" value="0" />
+				<locstring name="one_liner" value="0" />
+				<file name="background_image" value="common\races\fe_factionselect_window_wehrmacht" />
+				<int name="difficulty" value="0" />
+				<enum name="research_upgrade" value="" />
+			</group>
+			<bool name="check_pop_cap_when_queuing_production_item" value="True" />
+			<group name="casualties">
+				<float name="guaranteed_casualty_per_number_of_deaths" value="5" />
+				<int name="max_rescued_casualty_count" value="10" />
+			</group>
+			<enum_table name="upkeep_per_pop_per_minute_override">
+				<float name="action" value="0" />
+				<float name="command" value="0" />
+				<float name="popcap" value="0" />
+				<float name="fuel" value="0" />
+				<float name="munition" value="0" />
+				<float name="manpower" value="0" />
+				<float name="requisition" value="0" />
+				<float name="ultimate" value="0" />
+			</enum_table>
+			<instance_reference name="generic_weapon_crew_blueprint" value="sbps\races\german\gameplay\crew_team_weapon_generic_ger" />
+		</group>
+		<uniqueid name="pbgid" value="137124" />
+	</variant>
+	<variant name="sp">
+		<group name="army_bag">
+			<group name="actions">
+				<string name="ability_ally_reinforcement_action_name" value="" />
+				<string name="ability_self_reinforcement_action_name" value="" />
+				<string name="ally_attack_here_action_name" value="" />
+				<string name="ally_capture_here_action_name" value="" />
+				<string name="ally_defend_here_action_name" value="" />
+				<string name="fx_rally_point_action_name" value="" />
+				<string name="self_attack_here_action_name" value="" />
+				<string name="self_capture_here_action_name" value="" />
+				<string name="self_defend_here_action_name" value="" />
+				<string name="self_question_here_action_name" value="" />
+				<string name="ally_question_here_action_name" value="" />
+				<colour name="fx_rally_point_line_color_move" value="16777215" />
+				<colour name="fx_rally_point_line_color_special" value="16777215" />
+				<string name="fx_rally_point_action_name_special" value="" />
+			</group>
+			<enum_table name="resource_income_cap">
+				<float name="action" value="9999" />
+				<float name="command" value="32" />
+				<float name="popcap" value="9999" />
+				<float name="fuel" value="9999" />
+				<float name="munition" value="9999" />
+				<float name="manpower" value="9999" />
+				<float name="requisition" value="9999" />
+				<float name="ultimate" value="9999" />
+			</enum_table>
+			<group name="race_population_cap_table">
+				<float name="base_medic_cap" value="0" />
+				<float name="base_personnel_cap" value="100" />
+				<float name="base_vehicle_cap" value="0" />
+				<float name="max_medic_cap" value="0" />
+				<float name="max_personnel_cap" value="100" />
+				<float name="max_vehicle_cap" value="0" />
+			</group>
+			<list name="abilities">
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mechanized\mechanized_left_1b_raid_ger" List.ItemID="-902427225" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mechanized\mechanized_left_3a_wespe_ger" List.ItemID="1952051126" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mechanized\mechanized_right_1b_smoke_canisters_ger" List.ItemID="2131501647" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mechanized\mechanized_right_2a_stug_assault_group_ger" List.ItemID="-1782722840" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mechanized\mechanized_right_3_panther_ger" List.ItemID="-1547932302" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\breakthrough\breakthrough_left_1a_rapid_production_ger" List.ItemID="-1387724647" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\breakthrough\breakthrough_left_1b_truck_2_5_ger" List.ItemID="1235764960" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\breakthrough\breakthrough_left_2a_blitzkrieg_ger" List.ItemID="1913843774" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\breakthrough\breakthrough_left_2b_panzer_iv_cmd_ger" List.ItemID="-2040578594" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\breakthrough\breakthrough_left_3_tiger_ger" List.ItemID="-569985874" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\breakthrough\breakthrough_right_1_assault_grenadiers_ger" List.ItemID="1647784868" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\breakthrough\breakthrough_right_2a_breakthrough_ger" List.ItemID="-265808000" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\breakthrough\breakthrough_right_2b_smoke_bombing_run_ger" List.ItemID="-1769506703" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\breakthrough\breakthrough_right_3a_assault_group_ger" List.ItemID="-709487692" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\breakthrough\breakthrough_right_3b_incendiary_bombing_run_ger" List.ItemID="-1791009393" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\luftwaffe\luftwaffe_left_1a_infantry_reserves_ger" List.ItemID="-605576481" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\luftwaffe\luftwaffe_left_1b_fallschirmpioneers_ger" List.ItemID="-746834889" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\luftwaffe\luftwaffe_left_2a_weapon_drop_ger" List.ItemID="1746992871" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\luftwaffe\luftwaffe_left_3_88mm_at_gun_ger" List.ItemID="568426943" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\luftwaffe\luftwaffe_right_1a_recon_run_ger" List.ItemID="-922191" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\luftwaffe\luftwaffe_right_1b_strafing_run_ger" List.ItemID="-488066700" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\luftwaffe\luftwaffe_right_2_fallschirmjagers_ger" List.ItemID="-158316216" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\luftwaffe\cut\luftwaffe_right_3a_butterfly_bombs_ger" List.ItemID="-629807432" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\luftwaffe\luftwaffe_right_3b_attack_loiter_ger" List.ItemID="894786775" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\defense\defense_left_1_fortress_pioneers_ger" List.ItemID="695465461" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\defense\defense_left_2a_support_bunkers_ger" List.ItemID="1461346423" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\defense\defense_left_2b_early_warning_ger" List.ItemID="-118732332" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\defense\defense_left_3a_defensive_artillery_ger" List.ItemID="-37606684" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\defense\defense_left_3b_heavy_artillery_barrage_ger" List.ItemID="929644220" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\defense\defense_right_1a_kettenkrad_observation_ger" List.ItemID="-163890255" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\defense\defense_right_1b_medical_halftrack_ger" List.ItemID="-135943659" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\defense\defense_right_2a_sdfkz9_recovery_vehicle_ger" List.ItemID="-1186524164" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\defense\defense_right_2b_flak_halftrack_ger" List.ItemID="-1860191860" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\defense\defense_right_3_nashorn_tank_destroyer_ger" List.ItemID="1156944270" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mountain\mountain_left_1a_tactical_sprint_ger" List.ItemID="622909988" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mountain\mountain_left_1b_med_supply_drop_ger" List.ItemID="-1014940851" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mountain\mountain_left_2a_mountain_senses_ger" List.ItemID="1196294061" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mountain\mountain_left_2b_flashlight_bombs_ger" List.ItemID="-1765808023" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mountain\mountain_left_3a_zeal_ger" List.ItemID="587932004" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mountain\mountain_left_3b_cas_anti_vehicle_loiter_ger" List.ItemID="1105287249" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mountain\mountain_right_1_gebirgsjagers_ger" List.ItemID="-949652599" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mountain\mountain_right_2a_kettenkrad_atg_ger" List.ItemID="-1863750860" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mountain\mountain_right_2b_kettenkrad_leig_ger" List.ItemID="2091059694" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mountain\mountain_right_3_8_rad_ger" List.ItemID="-1162619292" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\italian_artillery\left\italian_artillery_artillery_saturation_ger" List.ItemID="-700586586" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\italian_artillery\left\italian_artillery_bulwark_ger" List.ItemID="1905929375" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\italian_artillery\left\italian_artillery_obice_210_emplacement_ger" List.ItemID="-324720985" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\italian_artillery\left\italian_artillery_sector_warning_ger" List.ItemID="-1733163699" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\italian_artillery\left\italian_artillery_zero_in_ger" List.ItemID="1622276216" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\italian_artillery\right\italian_artillery_cannone_da_105_howitzer_ger" List.ItemID="630227723" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\italian_artillery\right\italian_artillery_guastatori_ger" List.ItemID="-1749789601" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\italian_artillery\right\italian_artillery_heavy_weapon_training_ger" List.ItemID="750651463" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\italian_artillery\right\italian_artillery_scorched_earth_ger" List.ItemID="1963718035" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\italian_artillery\right\italian_artillery_sector_artillery_ger" List.ItemID="-1056727242" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\panzer\passive\c_panzer_operate_under_pressure_ger" List.ItemID="2055605631" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\panzer\passive\c_panzer_vehicle_cost_reduction_ger" List.ItemID="783001207" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\panzer\passive\c_panzer_veteran_vehicles_ger" List.ItemID="-1921139838" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\coastal\coastal_left_3a_l640_ger" List.ItemID="-1778794063" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\coastal\coastal_left_3b_semonvente7518_ger" List.ItemID="-1273173170" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\coastal\coastal_right_2a_man_the_defenses_ger" List.ItemID="-226522978" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\coastal\coastal_right_2b_sector_artillery_ger" List.ItemID="-1394320190" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\coastal\coastal_right_3a_emergency_supplies_ger" List.ItemID="-1911254895" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\coastal\coastal_right_3b_coastal_batteries_ger" List.ItemID="-1670338667" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\coastal\coastal_left_1_coastal_reserve_ger" List.ItemID="991569595" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\coastal\coastal_left_2_officer_ger" List.ItemID="-535055092" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\coastal\coastal_right_1b_artillery_flares_ger" List.ItemID="-685195037" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\coastal\coastal_right_1a_withdraw_ger" List.ItemID="136555383" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\panzer\passive\c_panzer_assault_grenadiers_ger" List.ItemID="-1763392517" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\panzer\active\c_panzer_incendiary_bombing_run_extended_ger" List.ItemID="-1418326516" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\panzer\active\c_panzer_incendiary_bombing_run_ger" List.ItemID="-1368202373" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\panzer\active\c_panzer_logistics_truck_ger" List.ItemID="-1505661659" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\panzer\active\c_panzer_smoke_bombing_run_ger" List.ItemID="-244925244" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\panzer\active\c_panzer_blitzkrieg_ger" List.ItemID="-1922042479" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\panzer\active\c_panzer_breakthrough_ger" List.ItemID="-1126713561" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\panzer\active\c_panzer_rocket_strafe_ger" List.ItemID="-163676980" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\mechanized\active\c_mechanized_deploy_panther_ger" List.ItemID="2125991440" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\mechanized\active\c_mechanized_light_artillery_barrage_extended_ger" List.ItemID="1444805956" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\mechanized\active\c_mechanized_light_artillery_barrage_ger" List.ItemID="911080384" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\mechanized\active\c_mechanized_self_repair_ger" List.ItemID="2135772906" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\mechanized\active\c_mechanized_smoke_canisters_ger" List.ItemID="499871114" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\mechanized\active\c_mechanized_stug_assault_group_ger" List.ItemID="645261677" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\common\passive_unlocks\c_common_increased_fuel_rate_ger" List.ItemID="-1007494387" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\common\passive_unlocks\c_common_increased_muni_rate_ger" List.ItemID="-1817366644" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\common\passive_unlocks\c_common_infantry_reserves_ger" List.ItemID="320436459" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\common\passive_unlocks\c_common_vehicle_upkeep_reduction_ger" List.ItemID="-1025136498" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\common\passive_unlocks\c_common_infantry_upkeep_reduction_ger" List.ItemID="-398133358" />
+				<instance_reference name="ability" value="abilities\races\german\campaign\company\mechanized\passive\c_mechanized_raid_ger" List.ItemID="-932353982" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\italian_artillery\italian_artillery_snap_artillery_ger" List.ItemID="95020986" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\italian_artillery\italian_artillery_assault_artillery_ger" List.ItemID="1509192546" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\italian_artillery\italian_artillery_hardened_weapon_crews_ger" List.ItemID="-1004306608" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\italian_artillery\italian_artillery_deep_reserves_ger" List.ItemID="-990167767" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\italian_artillery\right\italian_artillery_semovente_ger" List.ItemID="282881762" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\luftwaffe\luftwaffe_left_2b_combat_group_ger" List.ItemID="-1638560056" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\luftwaffe\luftwaffe_right_3a_fragmentation_bombs_ger" List.ItemID="563640995" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mechanized\mechanized_left_2b_8_rad_ger" List.ItemID="-649271045" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mechanized\mechanized_right_1a_fuel_siphon_ger" List.ItemID="1140389540" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mechanized\mechanized_right_1b_spotting_scopes_ger" List.ItemID="-561886625" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mechanized\mechanized_right_2a_mechanized_assault_ger" List.ItemID="2055285050" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mechanized\mechanized_right_2b_encirclement_barrage_ger" List.ItemID="838655108" />
+				<instance_reference name="ability" value="abilities\races\german\battlegroups\mechanized\mechanized_right_3a_stosstruppen_package_ger" List.ItemID="-2006155653" />
+			</list>
+			<enum_table name="resource_max_cap">
+				<float name="action" value="9999" />
+				<float name="command" value="32" />
+				<float name="popcap" value="9999" />
+				<float name="fuel" value="9999" />
+				<float name="munition" value="9999" />
+				<float name="manpower" value="9999" />
+				<float name="requisition" value="9999" />
+				<float name="ultimate" value="9999" />
+			</enum_table>
+			<string name="badge_path" value="" />
+			<list name="production_buildings">
+				<group name="production_building" List.ItemID="1918677399">
+					<group name="builder">
+						<instance_reference name="dispatch_ability" value="" />
+						<enum name="unit_class" value="" />
+						<group name="ui_info">
+							<locstring name="screen_name" value="0" />
+							<locstring name="help_text" value="0" />
+							<file name="icon_name" value="" />
+							<file name="symbol_icon_name" value="" />
+							<string name="hotkey_name" value="" />
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+					<group name="building">
+						<instance_reference name="self_destruct_ability" value="" />
+						<enum name="unit_class" value="hq" />
+						<group name="ui_info">
+							<locstring name="help_text" value="0" />
+							<string name="hotkey_name" value="" />
+							<file name="icon_name" value="hud\building_tabs\building_hq" />
+							<locstring name="screen_name" value="11153658" />
+							<file name="symbol_icon_name" value="" />
+							<group name="ui_position">
+								<int name="ui_position_column" value="1" />
+								<int name="ui_position_row" value="0" />
+								<int name="ui_position_column_span" value="1" />
+								<int name="ui_position_row_span" value="1" />
+							</group>
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+				</group>
+				<group name="production_building" List.ItemID="1042813187">
+					<group name="builder">
+						<instance_reference name="dispatch_ability" value="" />
+						<enum name="unit_class" value="" />
+						<group name="ui_info">
+							<locstring name="screen_name" value="0" />
+							<locstring name="help_text" value="0" />
+							<file name="icon_name" value="" />
+							<file name="symbol_icon_name" value="" />
+							<string name="hotkey_name" value="" />
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+					<group name="building">
+						<instance_reference name="self_destruct_ability" value="" />
+						<enum name="unit_class" value="infanterie_kompanie" />
+						<group name="ui_info">
+							<locstring name="help_text" value="0" />
+							<string name="hotkey_name" value="" />
+							<file name="icon_name" value="hud\building_tabs\building_barracks" />
+							<locstring name="screen_name" value="0" />
+							<file name="symbol_icon_name" value="" />
+							<group name="ui_position">
+								<int name="ui_position_column" value="2" />
+								<int name="ui_position_row" value="0" />
+								<int name="ui_position_column_span" value="1" />
+								<int name="ui_position_row_span" value="1" />
+							</group>
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+				</group>
+				<group name="production_building" List.ItemID="-1805715781">
+					<group name="builder">
+						<instance_reference name="dispatch_ability" value="" />
+						<enum name="unit_class" value="" />
+						<group name="ui_info">
+							<locstring name="screen_name" value="0" />
+							<locstring name="help_text" value="0" />
+							<file name="icon_name" value="" />
+							<file name="symbol_icon_name" value="" />
+							<string name="hotkey_name" value="" />
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+					<group name="building">
+						<instance_reference name="self_destruct_ability" value="" />
+						<enum name="unit_class" value="mechanized_kompanie" />
+						<group name="ui_info">
+							<locstring name="help_text" value="0" />
+							<string name="hotkey_name" value="" />
+							<file name="icon_name" value="hud\building_tabs\building_weapon_support" />
+							<locstring name="screen_name" value="0" />
+							<file name="symbol_icon_name" value="" />
+							<group name="ui_position">
+								<int name="ui_position_column" value="3" />
+								<int name="ui_position_row" value="0" />
+								<int name="ui_position_column_span" value="1" />
+								<int name="ui_position_row_span" value="1" />
+							</group>
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+				</group>
+				<group name="production_building" List.ItemID="781623954">
+					<group name="builder">
+						<instance_reference name="dispatch_ability" value="" />
+						<enum name="unit_class" value="" />
+						<group name="ui_info">
+							<locstring name="screen_name" value="0" />
+							<locstring name="help_text" value="0" />
+							<file name="icon_name" value="" />
+							<file name="symbol_icon_name" value="" />
+							<string name="hotkey_name" value="" />
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+					<group name="building">
+						<instance_reference name="self_destruct_ability" value="" />
+						<enum name="unit_class" value="support_armory" />
+						<group name="ui_info">
+							<locstring name="help_text" value="0" />
+							<string name="hotkey_name" value="" />
+							<file name="icon_name" value="hud\building_tabs\building_motor_pool" />
+							<locstring name="screen_name" value="0" />
+							<file name="symbol_icon_name" value="" />
+							<group name="ui_position">
+								<int name="ui_position_column" value="4" />
+								<int name="ui_position_row" value="0" />
+								<int name="ui_position_column_span" value="1" />
+								<int name="ui_position_row_span" value="1" />
+							</group>
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+				</group>
+				<group name="production_building" List.ItemID="1433738008">
+					<group name="builder">
+						<instance_reference name="dispatch_ability" value="" />
+						<enum name="unit_class" value="" />
+						<group name="ui_info">
+							<locstring name="screen_name" value="0" />
+							<locstring name="help_text" value="0" />
+							<file name="icon_name" value="" />
+							<file name="symbol_icon_name" value="" />
+							<string name="hotkey_name" value="" />
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+					<group name="building">
+						<instance_reference name="self_destruct_ability" value="" />
+						<enum name="unit_class" value="panzer_armory" />
+						<group name="ui_info">
+							<locstring name="help_text" value="0" />
+							<string name="hotkey_name" value="" />
+							<file name="icon_name" value="hud\building_tabs\building_tank_depot" />
+							<locstring name="screen_name" value="0" />
+							<file name="symbol_icon_name" value="" />
+							<group name="ui_position">
+								<int name="ui_position_column" value="5" />
+								<int name="ui_position_row" value="0" />
+								<int name="ui_position_column_span" value="1" />
+								<int name="ui_position_row_span" value="1" />
+							</group>
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+				</group>
+			</list>
+			<group name="ai_production_info">
+				<list name="unlocking_upgrade_list">
+				</list>
+				<list name="loadouts">
+					<instance_reference name="loadout" value="ai\ai_loadout\germans" List.ItemID="2022607620" />
+				</list>
+				<group name="available">
+					<list name="upgrades">
+						<instance_reference name="upgrade" value="army_upgrade\battlegroups\german\breakthrough" List.ItemID="-33423069" />
+						<instance_reference name="upgrade" value="army_upgrade\battlegroups\german\luftwaffe" List.ItemID="619030776" />
+						<instance_reference name="upgrade" value="army_upgrade\battlegroups\german\mechanized" List.ItemID="1423971814" />
+					</list>
+					<list name="abilities">
+					</list>
+					<list name="units">
+					</list>
+				</group>
+			</group>
+			<list name="team_size_point_resource_multiplier">
+			</list>
+			<list name="starting_buildings">
+				<group name="starting_building" List.ItemID="973175947">
+					<string name="key" value="default" />
+					<instance_reference name="building" value="ebps\races\german\buildings\production\hq_ger" />
+					<list name="starting_squads">
+						<group name="starting_squad" List.ItemID="-1814339185">
+							<instance_reference name="squad" value="sbps\races\german\infantry\pioneer_ger" />
+							<bool name="check_requirements" value="False" />
+							<group name="position_offset">
+								<float name="x" value="0" />
+								<float name="y" value="15" />
+							</group>
+						</group>
+					</list>
+					<list name="player_upgrades">
+					</list>
+				</group>
+				<group name="starting_building" List.ItemID="689202865">
+					<string name="key" value="base_bunker" />
+					<instance_reference name="building" value="ebps\races\german\buildings\defensive\base_defense_ger" />
+					<list name="starting_squads">
+					</list>
+					<list name="player_upgrades">
+					</list>
+				</group>
+			</list>
+			<list name="field_support_production_styles">
+				<group name="field_support_production_style" List.ItemID="59862852">
+					<string name="key" value="" />
+					<list name="spawn_items">
+						<group name="spawn_item" List.ItemID="-493473070">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\german\infantry\grenadier_ger" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="2" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="641003615">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\german\team_weapons\hmg_mg42_ger" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="3" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-1477761792">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\german\team_weapons\mortar_81mm_ger" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="2" />
+								<int name="ui_position_column" value="2" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="1747834517">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\german\infantry\pioneer_ger" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="1" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+					</list>
+				</group>
+			</list>
+			<enum_table name="resource_starting_amount">
+				<float name="action" value="0" />
+				<float name="command" value="0" />
+				<float name="popcap" value="0" />
+				<float name="fuel" value="15" />
+				<float name="munition" value="25" />
+				<float name="manpower" value="390" />
+				<float name="requisition" value="0" />
+				<float name="ultimate" value="0" />
+			</enum_table>
+			<state_tree_node name="start_actions_statetree" value="sp_german" />
+			<list name="upgrades">
+			</list>
+			<group name="ui">
+				<list name="global_traits_summary">
+				</list>
+				<locstring name="subheader" value="0" />
+				<locstring name="one_liner" value="0" />
+				<file name="background_image" value="common\races\fe_factionselect_window_wehrmacht" />
+				<int name="difficulty" value="0" />
+				<enum name="research_upgrade" value="" />
+			</group>
+			<bool name="check_pop_cap_when_queuing_production_item" value="True" />
+			<group name="casualties">
+				<float name="guaranteed_casualty_per_number_of_deaths" value="5" />
+				<int name="max_rescued_casualty_count" value="10" />
+			</group>
+			<enum_table name="upkeep_per_pop_per_minute_override">
+				<float name="action" value="0" />
+				<float name="command" value="0" />
+				<float name="popcap" value="0" />
+				<float name="fuel" value="0" />
+				<float name="munition" value="0" />
+				<float name="manpower" value="0" />
+				<float name="requisition" value="0" />
+				<float name="ultimate" value="0" />
+			</enum_table>
+			<instance_reference name="generic_weapon_crew_blueprint" value="sbps\races\german\gameplay\crew_team_weapon_generic_ger" />
+		</group>
+		<uniqueid name="pbgid" value="137124" />
+	</variant>
+</instance>

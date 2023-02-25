@@ -1,0 +1,80 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-112477501" List.ParentItemID="-112477501">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\nature\cliffs_rocks\sedi_cliff_lg_05" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" comment="Making all these rocks invincible!" List.ItemID="-1655736512" List.ParentItemID="-1655736512">
+				<bool name="is_invincible" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="-1702320986" List.ParentItemID="-1702320986">
+				<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+				<float name="hit_chance" value="1" overrideParent="True" />
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_artillery" value="False" overrideParent="True" />
+						<bool name="tp_piercing_blockers_only" value="False" overrideParent="True" />
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" List.ItemID="-27317073" List.ParentItemID="-27317073">
+				<list name="block_path" overrideParent="True">
+					<instance_reference name="path_type" value="pass_types\infantry" List.ItemID="-782647525" />
+					<instance_reference name="path_type" value="pass_types\vehicle_light" List.ItemID="1949081188" />
+					<instance_reference name="path_type" value="pass_types\vehicle_medium" List.ItemID="-86044714" />
+					<instance_reference name="path_type" value="pass_types\vehicle_heavy" List.ItemID="-523018759" />
+					<instance_reference name="path_type" value="pass_types\vaulting_infantry" List.ItemID="1151148723" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_light" List.ItemID="-275215138" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_medium" List.ItemID="633240513" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_heavy" List.ItemID="280443150" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-117130769" List.ParentItemID="-117130769">
+				<enum name="occlusion_state" value="occlude_others" overrideParent="True" />
+				<enum name="decorator_visibility" value="hidden" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="173638" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\object_shot_blocker_uncrushable" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-112477501" List.ParentItemID="-112477501">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\nature\cliffs_rocks\sedi_cliff_lg_05" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" comment="Making all these rocks invincible!" List.ItemID="-1655736512" List.ParentItemID="-1655736512">
+				<bool name="is_invincible" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="-1702320986" List.ParentItemID="-1702320986">
+				<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+				<float name="hit_chance" value="1" overrideParent="True" />
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_artillery" value="False" overrideParent="True" />
+						<bool name="tp_piercing_blockers_only" value="False" overrideParent="True" />
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" List.ItemID="-27317073" List.ParentItemID="-27317073">
+				<list name="block_path" overrideParent="True">
+					<instance_reference name="path_type" value="pass_types\infantry" List.ItemID="-782647525" />
+					<instance_reference name="path_type" value="pass_types\vehicle_light" List.ItemID="1949081188" />
+					<instance_reference name="path_type" value="pass_types\vehicle_medium" List.ItemID="-86044714" />
+					<instance_reference name="path_type" value="pass_types\vehicle_heavy" List.ItemID="-523018759" />
+					<instance_reference name="path_type" value="pass_types\vaulting_infantry" List.ItemID="1151148723" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_light" List.ItemID="-275215138" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_medium" List.ItemID="633240513" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_heavy" List.ItemID="280443150" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-117130769" List.ParentItemID="-117130769">
+				<enum name="occlusion_state" value="occlude_others" overrideParent="True" />
+				<enum name="decorator_visibility" value="hidden" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="173638" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\object_shot_blocker_uncrushable" />
+	</variant>
+</instance>

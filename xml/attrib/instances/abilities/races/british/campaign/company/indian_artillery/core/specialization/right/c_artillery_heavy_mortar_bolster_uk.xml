@@ -1,0 +1,52 @@
+<instance version="5" description="" template="abilities">
+	<variant name="default">
+		<group name="ability_bag">
+			<enum_table name="cost_to_player">
+				<float name="popcap" value="8" overrideParent="True" />
+			</enum_table>
+			<group name="ui_info">
+				<locstring name="screen_name" value="11239124" overrideParent="True" />
+				<locstring name="brief_text" value="11240581" overrideParent="True" />
+			</group>
+			<list name="requirements" removedIds="-1716499062, -1840201148">
+				<template_reference name="required" value="requirements\required_player_upgrade" List.ItemID="-1091945193" List.ParentItemID="-1091945193">
+					<instance_reference name="upgrade_name" value="upgrade\british\campaign\company\indian_artillery\core_unlocks\specialization\right\c_artillery_heavy_mortar_bolster_uk" overrideParent="True" />
+				</template_reference>
+				<template_reference name="required" value="requirements\required_population" List.ItemID="1906019764" List.ParentItemID="1906019764">
+					<group name="free_pop">
+						<float name="personnel" value="8" overrideParent="True" />
+					</group>
+				</template_reference>
+			</list>
+			<enum name="ui_progress_bar_type" value="no_bar" overrideParent="True" />
+			<bool name="facing_ignore" value="True" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2050950" />
+		<instance_reference name="parent_pbg" value="abilities\races\british\campaign\company\indian_artillery\core\right\c_artillery_heavy_mortar_core_uk" />
+	</variant>
+	<variant name="sp">
+		<group name="ability_bag">
+			<enum_table name="cost_to_player">
+				<float name="popcap" value="8" overrideParent="True" />
+			</enum_table>
+			<group name="ui_info">
+				<locstring name="screen_name" value="11239124" overrideParent="True" />
+				<locstring name="brief_text" value="11240581" overrideParent="True" />
+			</group>
+			<list name="requirements" removedIds="-1716499062, -1840201148">
+				<template_reference name="required" value="requirements\required_player_upgrade" List.ItemID="-1091945193" List.ParentItemID="-1091945193">
+					<instance_reference name="upgrade_name" value="upgrade\british\campaign\company\indian_artillery\core_unlocks\specialization\right\c_artillery_heavy_mortar_bolster_uk" overrideParent="True" />
+				</template_reference>
+				<template_reference name="required" value="requirements\required_population" List.ItemID="1906019764" List.ParentItemID="1906019764">
+					<group name="free_pop">
+						<float name="personnel" value="8" overrideParent="True" />
+					</group>
+				</template_reference>
+			</list>
+			<enum name="ui_progress_bar_type" value="no_bar" overrideParent="True" />
+			<bool name="facing_ignore" value="True" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2050950" />
+		<instance_reference name="parent_pbg" value="abilities\races\british\campaign\company\indian_artillery\core\right\c_artillery_heavy_mortar_core_uk" />
+	</variant>
+</instance>

@@ -1,0 +1,31 @@
+<template description="" can_be_instantiated="False" virtual_category="" can_be_modded="False" export_for_client="True">
+	<group name="showcase" description="showcase related tunings." start_expanded="False">
+		<list name="tag_groups" description="Tag groups.&#xD;&#xA;Each tag group shares the same tag name and have differnt custom behaviours." ordered="True" allow_duplicates="False" can_be_empty="True" start_expanded="False" flat="False">
+			<group name="tag_group" description="A tag group.&#xD;&#xA;Contains a set of army skins. Those skins can be tagged by user or randomly selected depending on its type property." start_expanded="False">
+				<string name="name" description="tag name of the tag group. Cannot be empty and must be unique." max_length="32" default="" />
+				<int name="default_random_count" description="Default count for randomly picked army skins if type is set to random." min="0" max="256" default="0" />
+				<enum name="type" description="Single:&#xD;&#xA;Only one skin can be tagged in this group. If another skin is tagged, the previous tagged skin will be untagged automatically.&#xD;&#xA;Mulitple:&#xD;&#xA;Muliple skins in this group can be tagged.&#xD;&#xA;Random:&#xD;&#xA;Randomly pick tagged skins." enum="showcase_tag_type" default="single" can_be_null="False" />
+				<list name="units" description="" ordered="False" allow_duplicates="False" can_be_empty="False" start_expanded="False" flat="False">
+					<instance_reference name="entity" description="" template_list="ebps" relative_path_list="" path_filter="" flat="False" can_be_null="False" />
+					<instance_reference name="squad" description="" template_list="sbps" relative_path_list="" path_filter="" flat="False" can_be_null="False" />
+				</list>
+			</group>
+		</list>
+		<group name="home_screen" description="" start_expanded="False">
+			<instance_reference name="default_race" description="" template_list="racebps" relative_path_list="" path_filter="" flat="False" can_be_null="False" />
+			<list name="default_units_per_race" description="" ordered="False" allow_duplicates="False" can_be_empty="False" start_expanded="False" flat="False">
+				<group name="units_per_race" description="" start_expanded="False">
+					<instance_reference name="race" description="" template_list="racebps" relative_path_list="" path_filter="" flat="False" can_be_null="False" />
+					<list name="units" description="" ordered="False" allow_duplicates="False" can_be_empty="False" start_expanded="False" flat="False">
+						<group name="unit_role" description="" start_expanded="False">
+							<string name="spawn_point" description="The name of the spawn point marker in mode_showcase.scar. It is also the variable name for the unit in the &quot;inventory_tag&quot; Lua data store. For example a value of &quot;vehicle&quot; will be found at &quot;inventory_tag.vehicle&quot;." default="" />
+							<instance_reference name="unit" description="Can be a squad (infantry, tanks, etc...) or an entity (building, capture point, etc...)" template_list="ebps, sbps" relative_path_list="" path_filter="" flat="False" can_be_null="False" />
+							<string name="user_tag" description="The name of the tag when the user explicitly tags the unit. When non-empty, this choice has priority over the randomized tag." default="" />
+							<string name="random_tag" description="If there is no user_tag then get a random unit from this tag group." default="" />
+						</group>
+					</list>
+				</group>
+			</list>
+		</group>
+	</group>
+</template>

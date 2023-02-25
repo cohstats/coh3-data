@@ -1,0 +1,182 @@
+<instance version="5" description="" template="abilities">
+	<variant name="default">
+		<group name="ability_bag">
+			<enum name="activation" value="targeted" overrideParent="True" />
+			<enum_table name="cost_to_player">
+				<float name="munition" value="75" overrideParent="True" />
+			</enum_table>
+			<bool name="facing_ignore" value="True" overrideParent="True" />
+			<bool name="range_ignore" value="True" overrideParent="True" />
+			<float name="recharge_time" value="60" overrideParent="True" />
+			<enum name="squad_caster" value="one_entity" overrideParent="True" />
+			<enum name="target" value="tp_position" overrideParent="True" />
+			<group name="ui_cursor">
+				<string name="cursor_bad" value="modal_ability_cancel" overrideParent="True" />
+				<string name="cursor_good" value="modal_ability" overrideParent="True" />
+			</group>
+			<group name="ui_info">
+				<locstring name="extra_text" value="11239837" overrideParent="True" />
+				<locstring name="help_text" value="11241443" overrideParent="True" />
+				<string name="hotkey_name" value="W" overrideParent="True" />
+				<file name="icon_name" value="races\german\abilities\stuka_strafing_run" overrideParent="True" />
+				<locstring name="screen_name" value="11216563" overrideParent="True" />
+				<locstring name="brief_text" value="11240762" overrideParent="True" />
+			</group>
+			<list name="requirements">
+				<template_reference name="required" value="requirements\required_player_upgrade" List.ItemID="1646541981" List.ListAction="Append">
+					<enum name="reason" value="usage_and_display" />
+					<locstring name="ui_name" value="0" />
+					<bool name="is_present" value="True" />
+					<int name="max_completed" value="100" />
+					<int name="min_completed" value="1" />
+					<instance_reference name="upgrade_name" value="upgrade\german\battlegroups\luftwaffe\luftwaffe_right_1b_strafing_run_ger" />
+					<bool name="include_completed" value="True" />
+					<bool name="include_queued" value="False" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+				</template_reference>
+			</list>
+			<group name="ui_position">
+				<int name="ui_position_row" value="3" overrideParent="True" />
+				<int name="ui_position_column" value="1" overrideParent="True" />
+			</group>
+			<bool name="ui_mini_map_capture" value="True" overrideParent="True" />
+			<instance_reference name="ui_range" value="ui_reticule\ability_range_default" overrideParent="True" />
+			<instance_reference name="ui_reticule" value="ui_reticule\ability_reticule_directional" overrideParent="True" />
+			<float name="ui_reticule_radius_min" value="5" overrideParent="True" />
+			<float name="ui_reticule_radius_max" value="10" overrideParent="True" />
+			<enum name="ui_ability_group" value="group_global" overrideParent="True" />
+			<list name="requirements_target">
+				<template_reference name="required" value="requirements\required_not" List.ItemID="1194909993" List.ListAction="Append">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="11218243" />
+					<list name="requirement_table">
+						<template_reference name="required" value="requirements\required_sector_type" List.ItemID="-1114950875">
+							<enum name="reason" value="usage" />
+							<enum name="resource_type" value="command" />
+							<bool name="victory_sector" value="False" />
+						</template_reference>
+					</list>
+				</template_reference>
+			</list>
+			<enum name="ui_direction_requirement" value="directional" overrideParent="True" />
+			<enum name="ui_progress_bar_type" value="no_bar" overrideParent="True" />
+			<string name="speech_code" value="luftwaffe_right_1b_strafing_run_ger" overrideParent="True" />
+			<state_tree_node name="entity_tree" value="" overrideParent="True" />
+			<state_tree_node name="squad_tree" value="" overrideParent="True" />
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_squad_tree" value="" overrideParent="True" />
+				<state_tree_node name="ability_activate_entity_tree" value="" overrideParent="True" />
+				<state_tree_node name="ability_activate_deferred_tree" value="" overrideParent="True" />
+			</group>
+			<state_tree_node name="statetree_node_prereq_self_requirement" value="" overrideParent="True" />
+			<state_tree_node name="statetree_node_prereq_target_requirement" value="" overrideParent="True" />
+			<state_tree_node name="statetree_node_prereq_self_recharge_requirement" value="" overrideParent="True" />
+			<state_tree_node name="global_tree" value="luftwaffe_strafing_run_ger" overrideParent="True" />
+			<bool name="ui_visibility_ignore_prerequisite" value="True" overrideParent="True" />
+			<enum name="ui_target_origin_point" value="rear" overrideParent="True" />
+			<state_tree_node name="squad_caster_entity_filter_condition" value="" overrideParent="True" />
+			<state_tree_node name="statetree_node_prereq_highlight_requirement" value="" overrideParent="True" />
+			<group name="statetree_node_prereq_default_command_prioritize_as_success">
+				<state_tree_node name="statetree_node_self" value="" overrideParent="True" />
+				<state_tree_node name="statetree_node_target" value="" overrideParent="True" />
+			</group>
+			<state_tree_node name="statetree_node_prereq_entity_target_filter" value="" overrideParent="True" />
+			<state_tree_node name="statetree_node_prereq_entity_target_default_command_filter" value="" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2061903" />
+		<instance_reference name="parent_pbg" value="abilities\races\german\battlegroups\luftwaffe\german_luftwaffe_bg_ability_parent_ger" />
+	</variant>
+	<variant name="sp">
+		<group name="ability_bag">
+			<enum name="activation" value="targeted" overrideParent="True" />
+			<enum_table name="cost_to_player">
+				<float name="munition" value="75" overrideParent="True" />
+			</enum_table>
+			<bool name="facing_ignore" value="True" overrideParent="True" />
+			<bool name="range_ignore" value="True" overrideParent="True" />
+			<float name="recharge_time" value="60" overrideParent="True" />
+			<enum name="squad_caster" value="one_entity" overrideParent="True" />
+			<enum name="target" value="tp_position" overrideParent="True" />
+			<group name="ui_cursor">
+				<string name="cursor_bad" value="modal_ability_cancel" overrideParent="True" />
+				<string name="cursor_good" value="modal_ability" overrideParent="True" />
+			</group>
+			<group name="ui_info">
+				<locstring name="extra_text" value="11239837" overrideParent="True" />
+				<locstring name="help_text" value="11241443" overrideParent="True" />
+				<string name="hotkey_name" value="W" overrideParent="True" />
+				<file name="icon_name" value="races\german\abilities\stuka_strafing_run" overrideParent="True" />
+				<locstring name="screen_name" value="11216563" overrideParent="True" />
+				<locstring name="brief_text" value="11240762" overrideParent="True" />
+			</group>
+			<list name="requirements">
+				<template_reference name="required" value="requirements\required_player_upgrade" List.ItemID="1646541981" List.ListAction="Append">
+					<enum name="reason" value="usage_and_display" />
+					<locstring name="ui_name" value="0" />
+					<bool name="is_present" value="True" />
+					<int name="max_completed" value="100" />
+					<int name="min_completed" value="1" />
+					<instance_reference name="upgrade_name" value="upgrade\german\battlegroups\luftwaffe\luftwaffe_right_1b_strafing_run_ger" />
+					<bool name="include_completed" value="True" />
+					<bool name="include_queued" value="False" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+				</template_reference>
+			</list>
+			<group name="ui_position">
+				<int name="ui_position_row" value="3" overrideParent="True" />
+				<int name="ui_position_column" value="1" overrideParent="True" />
+			</group>
+			<bool name="ui_mini_map_capture" value="True" overrideParent="True" />
+			<instance_reference name="ui_range" value="ui_reticule\ability_range_default" overrideParent="True" />
+			<instance_reference name="ui_reticule" value="ui_reticule\ability_reticule_directional" overrideParent="True" />
+			<float name="ui_reticule_radius_min" value="5" overrideParent="True" />
+			<float name="ui_reticule_radius_max" value="10" overrideParent="True" />
+			<enum name="ui_ability_group" value="group_global" overrideParent="True" />
+			<list name="requirements_target">
+				<template_reference name="required" value="requirements\required_not" List.ItemID="1194909993" List.ListAction="Append">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="11218243" />
+					<list name="requirement_table">
+						<template_reference name="required" value="requirements\required_sector_type" List.ItemID="-1114950875">
+							<enum name="reason" value="usage" />
+							<enum name="resource_type" value="command" />
+							<bool name="victory_sector" value="False" />
+						</template_reference>
+					</list>
+				</template_reference>
+			</list>
+			<enum name="ui_direction_requirement" value="directional" overrideParent="True" />
+			<enum name="ui_progress_bar_type" value="no_bar" overrideParent="True" />
+			<string name="speech_code" value="luftwaffe_right_1b_strafing_run_ger" overrideParent="True" />
+			<state_tree_node name="entity_tree" value="" overrideParent="True" />
+			<state_tree_node name="squad_tree" value="" overrideParent="True" />
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_squad_tree" value="" overrideParent="True" />
+				<state_tree_node name="ability_activate_entity_tree" value="" overrideParent="True" />
+				<state_tree_node name="ability_activate_deferred_tree" value="" overrideParent="True" />
+			</group>
+			<state_tree_node name="statetree_node_prereq_self_requirement" value="" overrideParent="True" />
+			<state_tree_node name="statetree_node_prereq_target_requirement" value="" overrideParent="True" />
+			<state_tree_node name="statetree_node_prereq_self_recharge_requirement" value="" overrideParent="True" />
+			<state_tree_node name="global_tree" value="sp_luftwaffe_strafing_run_ger" overrideParent="True" />
+			<bool name="ui_visibility_ignore_prerequisite" value="True" overrideParent="True" />
+			<enum name="ui_target_origin_point" value="rear" overrideParent="True" />
+			<state_tree_node name="squad_caster_entity_filter_condition" value="" overrideParent="True" />
+			<state_tree_node name="statetree_node_prereq_highlight_requirement" value="" overrideParent="True" />
+			<group name="statetree_node_prereq_default_command_prioritize_as_success">
+				<state_tree_node name="statetree_node_self" value="" overrideParent="True" />
+				<state_tree_node name="statetree_node_target" value="" overrideParent="True" />
+			</group>
+			<state_tree_node name="statetree_node_prereq_entity_target_filter" value="" overrideParent="True" />
+			<state_tree_node name="statetree_node_prereq_entity_target_default_command_filter" value="" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2061903" />
+		<instance_reference name="parent_pbg" value="abilities\races\german\battlegroups\luftwaffe\german_luftwaffe_bg_ability_parent_ger" />
+	</variant>
+</instance>

@@ -1,0 +1,296 @@
+<instance version="5" description="emplacement entity for flak 88 but with no sandbags" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-2093801880" List.ParentItemID="-2093801880">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\german\weapons\at_gun_88mm_flak_36_emplacement_no_sandbags_ger" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-752077791" List.ParentItemID="-752077791">
+				<bool name="can_repair" comment="Pretty sure this means nothing, but who knows if legacy AI code might think it does!" />
+				<float name="hitpoints" value="160" overrideParent="True" />
+				<float name="target_size" value="10" overrideParent="True" />
+				<template_reference name="armor_layout_option" value="options\ebpextensions\healthext\armor_layouts\armor_layout_uniform">
+					<float name="armor" value="2.5" overrideParent="True" />
+				</template_reference>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-1773686325" List.ParentItemID="-1773686325">
+				<locstring name="help_text" value="11158242" overrideParent="True" />
+				<locstring name="brief_text" value="11235549" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" List.ItemID="-440413677" List.ParentItemID="-440413677">
+				<group name="impass_simboxes">
+					<bool name="default_simbox" value="True" overrideParent="True" />
+					<list name="named_simboxes" overrideParent="True">
+					</list>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\crew_ext" List.ItemID="-742232994" List.ParentItemID="-742232994">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="1834870160" List.ParentItemID="1834870160">
+						<group name="info">
+							<list name="role_list">
+								<group name="role" List.ItemID="-1695498561" List.ParentItemID="-1695498561">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+								<group name="role" List.ItemID="-1533843135" List.ParentItemID="-1533843135">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+							</list>
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="1416333874" List.ParentItemID="1416333874">
+						<group name="info">
+							<list name="role_list">
+								<group name="role" List.ItemID="-1316135494" List.ParentItemID="-1316135494">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+								<group name="role" List.ItemID="-2063238094" List.ParentItemID="-2063238094">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+							</list>
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-1261666770" List.ParentItemID="-1261666770">
+						<group name="info">
+							<list name="role_list">
+								<group name="role" List.ItemID="120667578" List.ParentItemID="120667578">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+							</list>
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-145253989" List.ParentItemID="-145253989">
+						<group name="info">
+							<list name="role_list">
+								<group name="role" List.ItemID="-1573739328" List.ParentItemID="-1573739328">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+								<group name="role" List.ItemID="1667859059" List.ParentItemID="1667859059">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+							</list>
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="299783274" List.ParentItemID="299783274">
+						<group name="info">
+							<list name="role_list">
+								<group name="role" List.ItemID="636132898" List.ParentItemID="636132898">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+							</list>
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\recrewable_ext" List.ItemID="1549841603" List.ParentItemID="1549841603">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="223937353" List.ParentItemID="223937353">
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\emplacements\sp\at_gun_88mm_no_sandbags_ger" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-1778104276" List.ParentItemID="-1778104276">
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\emplacements\sp\at_gun_88mm_no_sandbags_ger" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="956756522" List.ParentItemID="956756522">
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\emplacements\sp\at_gun_88mm_no_sandbags_ger" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="387109000" List.ParentItemID="387109000">
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\emplacements\sp\at_gun_88mm_no_sandbags_ger" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-1366775893" List.ParentItemID="-1366775893">
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\emplacements\sp\at_gun_88mm_no_sandbags_ger" overrideParent="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2073441" />
+		<instance_reference name="parent_pbg" value="ebps\races\german\emplacements\tw_88mm_emplacement_ger" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-2093801880" List.ParentItemID="-2093801880">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\german\weapons\at_gun_88mm_flak_36_emplacement_no_sandbags_ger" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-752077791" List.ParentItemID="-752077791">
+				<bool name="can_repair" comment="Pretty sure this means nothing, but who knows if legacy AI code might think it does!" />
+				<float name="hitpoints" value="160" overrideParent="True" />
+				<float name="target_size" value="10" overrideParent="True" />
+				<template_reference name="armor_layout_option" value="options\ebpextensions\healthext\armor_layouts\armor_layout_uniform">
+					<float name="armor" value="2.5" overrideParent="True" />
+				</template_reference>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-1773686325" List.ParentItemID="-1773686325">
+				<locstring name="help_text" value="11158242" overrideParent="True" />
+				<locstring name="brief_text" value="11235549" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" List.ItemID="-440413677" List.ParentItemID="-440413677">
+				<group name="impass_simboxes">
+					<bool name="default_simbox" value="True" overrideParent="True" />
+					<list name="named_simboxes" overrideParent="True">
+					</list>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\crew_ext" List.ItemID="-742232994" List.ParentItemID="-742232994">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="1834870160" List.ParentItemID="1834870160">
+						<group name="info">
+							<list name="role_list">
+								<group name="role" List.ItemID="-1695498561" List.ParentItemID="-1695498561">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+								<group name="role" List.ItemID="-1533843135" List.ParentItemID="-1533843135">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+							</list>
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="1416333874" List.ParentItemID="1416333874">
+						<group name="info">
+							<list name="role_list">
+								<group name="role" List.ItemID="-1316135494" List.ParentItemID="-1316135494">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+								<group name="role" List.ItemID="-2063238094" List.ParentItemID="-2063238094">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+							</list>
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-1261666770" List.ParentItemID="-1261666770">
+						<group name="info">
+							<list name="role_list">
+								<group name="role" List.ItemID="120667578" List.ParentItemID="120667578">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+							</list>
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-145253989" List.ParentItemID="-145253989">
+						<group name="info">
+							<list name="role_list">
+								<group name="role" List.ItemID="-1573739328" List.ParentItemID="-1573739328">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+								<group name="role" List.ItemID="1667859059" List.ParentItemID="1667859059">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+							</list>
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="299783274" List.ParentItemID="299783274">
+						<group name="info">
+							<list name="role_list">
+								<group name="role" List.ItemID="636132898" List.ParentItemID="636132898">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+							</list>
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\recrewable_ext" List.ItemID="1549841603" List.ParentItemID="1549841603">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="223937353" List.ParentItemID="223937353">
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\emplacements\sp\at_gun_88mm_no_sandbags_ger" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-1778104276" List.ParentItemID="-1778104276">
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\emplacements\sp\at_gun_88mm_no_sandbags_ger" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="956756522" List.ParentItemID="956756522">
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\emplacements\sp\at_gun_88mm_no_sandbags_ger" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="387109000" List.ParentItemID="387109000">
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\emplacements\sp\at_gun_88mm_no_sandbags_ger" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-1366775893" List.ParentItemID="-1366775893">
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\emplacements\sp\at_gun_88mm_no_sandbags_ger" overrideParent="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2073441" />
+		<instance_reference name="parent_pbg" value="ebps\races\german\emplacements\tw_88mm_emplacement_ger" />
+	</variant>
+</instance>

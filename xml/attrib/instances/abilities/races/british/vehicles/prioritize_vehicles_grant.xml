@@ -1,0 +1,42 @@
+<instance version="5" description="" template="abilities">
+	<variant name="default">
+		<group name="ability_bag">
+			<state_tree_node name="statetree_node_prereq_self_requirement" value="" overrideParent="True" />
+			<state_tree_node name="statetree_node_prereq_target_requirement" value="" overrideParent="True" />
+			<state_tree_node name="statetree_node_prereq_self_recharge_requirement" value="" overrideParent="True" />
+			<state_tree_node name="entity_tree" value="prioritize_vehicles_grant" overrideParent="True" />
+			<state_tree_node name="squad_tree" value="" overrideParent="True" />
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_squad_tree" value="" overrideParent="True" />
+				<state_tree_node name="ability_activate_entity_tree" value="" overrideParent="True" />
+				<state_tree_node name="ability_activate_deferred_tree" value="" overrideParent="True" />
+			</group>
+			<state_tree_node name="squad_caster_entity_filter_condition" value="" overrideParent="True" />
+			<state_tree_node name="statetree_node_prereq_highlight_requirement" value="" overrideParent="True" />
+			<enum name="ui_progress_bar_type" value="no_bar" overrideParent="True" />
+			<bool name="facing_ignore" value="True" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2103263" />
+		<instance_reference name="parent_pbg" value="abilities\prioritize_vehicles" />
+	</variant>
+	<variant name="sp">
+		<group name="ability_bag">
+			<state_tree_node name="statetree_node_prereq_self_requirement" value="" overrideParent="True" />
+			<state_tree_node name="statetree_node_prereq_target_requirement" value="" overrideParent="True" />
+			<state_tree_node name="statetree_node_prereq_self_recharge_requirement" value="" overrideParent="True" />
+			<state_tree_node name="entity_tree" value="sp_prioritize_vehicles_grant" overrideParent="True" />
+			<state_tree_node name="squad_tree" value="" overrideParent="True" />
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_squad_tree" value="" overrideParent="True" />
+				<state_tree_node name="ability_activate_entity_tree" value="" overrideParent="True" />
+				<state_tree_node name="ability_activate_deferred_tree" value="" overrideParent="True" />
+			</group>
+			<state_tree_node name="squad_caster_entity_filter_condition" value="" overrideParent="True" />
+			<state_tree_node name="statetree_node_prereq_highlight_requirement" value="" overrideParent="True" />
+			<enum name="ui_progress_bar_type" value="no_bar" overrideParent="True" />
+			<bool name="facing_ignore" value="True" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2103263" />
+		<instance_reference name="parent_pbg" value="abilities\prioritize_vehicles" />
+	</variant>
+</instance>

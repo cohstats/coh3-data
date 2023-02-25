@@ -1,0 +1,51 @@
+<instance version="5" description="" template="multiplayer\automatch_maps">
+	<variant name="default">
+		<uniqueid name="pbgid" value="2104763" />
+		<group name="automatch_map_bag">
+			<file name="teaser_image" value="" />
+			<locstring name="name" value="0" />
+			<list name="available_modes">
+				<template_reference name="mode" value="multiplayer\mp_map_mode" List.ItemID="1775132068">
+					<int name="team_count" value="2" />
+					<int name="max_player" value="8" />
+					<bool name="enable" value="False" />
+					<instance_reference name="match_type" value="multiplayer\match_type\4v4_ranked" />
+				</template_reference>
+				<template_reference name="mode" value="multiplayer\mp_map_mode" List.ItemID="1811937939">
+					<int name="team_count" value="2" />
+					<int name="max_player" value="8" />
+					<bool name="enable" value="True" />
+					<instance_reference name="match_type" value="multiplayer\match_type\4v4_unranked" />
+				</template_reference>
+				<template_reference name="mode" value="multiplayer\mp_map_mode" List.ItemID="-1352084819">
+					<int name="team_count" value="2" />
+					<int name="max_player" value="8" />
+					<bool name="enable" value="False" />
+					<instance_reference name="match_type" value="multiplayer\match_type\4v4_ai_easy" />
+				</template_reference>
+				<template_reference name="mode" value="multiplayer\mp_map_mode" List.ItemID="541355896">
+					<int name="team_count" value="2" />
+					<int name="max_player" value="8" />
+					<bool name="enable" value="True" />
+					<instance_reference name="match_type" value="multiplayer\match_type\4v4_ai_medium" />
+				</template_reference>
+				<template_reference name="mode" value="multiplayer\mp_map_mode" List.ItemID="1040479397">
+					<int name="team_count" value="2" />
+					<int name="max_player" value="8" />
+					<bool name="enable" value="False" />
+					<instance_reference name="match_type" value="multiplayer\match_type\4v4_ai_hard" />
+				</template_reference>
+				<template_reference name="mode" value="multiplayer\mp_map_mode" List.ItemID="-2100110890">
+					<int name="team_count" value="2" />
+					<int name="max_player" value="8" />
+					<bool name="enable" value="False" />
+					<instance_reference name="match_type" value="multiplayer\match_type\4v4_ai_expert" />
+				</template_reference>
+			</list>
+			<locstring name="description" value="0" />
+			<template_reference name="scenario" value="multiplayer\mp_map_crafted_scenario">
+				<file name="crafted_scenario" value="multiplayer\winter_line_8p_mkii\winter_line_8p_mkii" />
+			</template_reference>
+		</group>
+	</variant>
+</instance>

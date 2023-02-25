@@ -1,0 +1,70 @@
+<instance version="5" description="Fake wreck for PCgamer" template="ebps">
+	<variant name="default">
+		<list name="extensions" removedIds="-1006184464">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="151475666" List.ParentItemID="151475666">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\british\buildings\barracks_uk" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-655183511" List.ParentItemID="-655183511">
+				<float name="hitpoints" value="220" overrideParent="True" />
+				<template_reference name="armor_layout_option" value="options\ebpextensions\healthext\armor_layouts\armor_layout_front_rear" overrideParent="True">
+					<float name="front_armor" value="67" />
+					<float name="rear_armor" value="67" />
+					<float name="rear_damage_multiplier" value="1" />
+				</template_reference>
+				<template_reference name="rebuilt_entity_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" overrideParent="True" />
+				</template_reference>
+				<list name="restore_hook_offsets">
+					<group name="restore_hook_offset" List.ItemID="1171535629" List.ParentItemID="1171535629">
+						<float name="z" value="2.5" overrideParent="True" />
+					</group>
+					<group name="restore_hook_offset" List.ItemID="1304175266" List.ParentItemID="1304175266">
+						<float name="z" value="-2.5" overrideParent="True" />
+					</group>
+				</list>
+				<bool name="can_be_restored" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-337428253" List.ParentItemID="-337428253">
+				<enum name="occlusion_state" value="can_be_occluded" overrideParent="True" />
+				<enum name="selection_type" value="targettable" overrideParent="True" />
+				<enum name="selection_method" value="terrain_obb" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="208696" />
+		<instance_reference name="parent_pbg" value="ebps\races\template\wk_template" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions" removedIds="-1006184464">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="151475666" List.ParentItemID="151475666">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\british\buildings\barracks_uk" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-655183511" List.ParentItemID="-655183511">
+				<float name="hitpoints" value="220" overrideParent="True" />
+				<template_reference name="armor_layout_option" value="options\ebpextensions\healthext\armor_layouts\armor_layout_front_rear" overrideParent="True">
+					<float name="front_armor" value="67" />
+					<float name="rear_armor" value="67" />
+					<float name="rear_damage_multiplier" value="1" />
+				</template_reference>
+				<template_reference name="rebuilt_entity_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" overrideParent="True" />
+				</template_reference>
+				<list name="restore_hook_offsets">
+					<group name="restore_hook_offset" List.ItemID="1171535629" List.ParentItemID="1171535629">
+						<float name="z" value="2.5" overrideParent="True" />
+					</group>
+					<group name="restore_hook_offset" List.ItemID="1304175266" List.ParentItemID="1304175266">
+						<float name="z" value="-2.5" overrideParent="True" />
+					</group>
+				</list>
+				<bool name="can_be_restored" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-337428253" List.ParentItemID="-337428253">
+				<enum name="occlusion_state" value="can_be_occluded" overrideParent="True" />
+				<enum name="selection_type" value="targettable" overrideParent="True" />
+				<enum name="selection_method" value="terrain_obb" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="208696" />
+		<instance_reference name="parent_pbg" value="ebps\races\template\wk_template" />
+	</variant>
+</instance>

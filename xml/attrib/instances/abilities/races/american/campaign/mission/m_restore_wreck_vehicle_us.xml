@@ -1,0 +1,52 @@
+<instance version="5" description="Turns the wreck back into a functional vehicle" template="abilities">
+	<variant name="default">
+		<group name="ability_bag">
+			<list name="requirements" removedIds="-1028949376">
+				<template_reference name="required" value="requirements\required_statemodelbool" List.ItemID="-1642334469" List.ListAction="Append">
+					<locstring name="ui_name" value="0" />
+					<enum name="reason" value="usage_and_display" overrideParent="True" />
+					<enum name="key" value="campaign_use_no_pop_recovery_ability_us" overrideParent="True" />
+					<enum name="data_source_type" value="player_datasource" overrideParent="True" />
+					<bool name="default_value" value="False" />
+					<bool name="compare_to_value" value="True" overrideParent="True" />
+				</template_reference>
+			</list>
+			<group name="HACK">
+				<bool name="HACK_apply_restoration_cost_for_targets" value="False" overrideParent="True" />
+			</group>
+			<group name="ui_info">
+				<locstring name="brief_text" value="11235192" overrideParent="True" />
+			</group>
+			<group name="statetree_node_prereq_default_command_prioritize_as_success">
+				<state_tree_node name="statetree_node_target" value="squad_restore_wreck\AbilityPrerequisites\default_command_prioritize_condition_target_no_cost" overrideParent="True" />
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="2105441" />
+		<instance_reference name="parent_pbg" value="abilities\races\american\vehicles\restore_wreck_vehicle_us" />
+	</variant>
+	<variant name="sp">
+		<group name="ability_bag">
+			<list name="requirements" removedIds="-1028949376">
+				<template_reference name="required" value="requirements\required_statemodelbool" List.ItemID="-1642334469" List.ListAction="Append">
+					<locstring name="ui_name" value="0" />
+					<enum name="reason" value="usage_and_display" overrideParent="True" />
+					<enum name="key" value="campaign_use_no_pop_recovery_ability_us" overrideParent="True" />
+					<enum name="data_source_type" value="player_datasource" overrideParent="True" />
+					<bool name="default_value" value="False" />
+					<bool name="compare_to_value" value="True" overrideParent="True" />
+				</template_reference>
+			</list>
+			<group name="HACK">
+				<bool name="HACK_apply_restoration_cost_for_targets" value="False" overrideParent="True" />
+			</group>
+			<group name="ui_info">
+				<locstring name="brief_text" value="11235192" overrideParent="True" />
+			</group>
+			<group name="statetree_node_prereq_default_command_prioritize_as_success">
+				<state_tree_node name="statetree_node_target" value="squad_restore_wreck\AbilityPrerequisites\default_command_prioritize_condition_target_no_cost" overrideParent="True" />
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="2105441" />
+		<instance_reference name="parent_pbg" value="abilities\races\american\vehicles\restore_wreck_vehicle_us" />
+	</variant>
+</instance>

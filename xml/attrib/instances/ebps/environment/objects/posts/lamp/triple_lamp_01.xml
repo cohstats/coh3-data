@@ -1,0 +1,114 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1588943975" List.ParentItemID="-1588943975">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\objects\posts\lamp\triple_lamp_01" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-844435906" List.ParentItemID="-844435906">
+				<bool name="delete_when_dead" value="False" overrideParent="True" />
+				<template_reference name="armor_layout_option" value="options\ebpextensions\healthext\armor_layouts\armor_layout_uniform">
+					<float name="armor" value="0" overrideParent="True" />
+				</template_reference>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="1239090663" List.ParentItemID="1239090663">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" List.ItemID="-2116666765" List.ParentItemID="-2116666765">
+				<list name="block_path" overrideParent="True">
+					<instance_reference name="path_type" value="pass_types\infantry" List.ItemID="1549133745" />
+					<instance_reference name="path_type" value="pass_types\vaulting_infantry" List.ItemID="-398159227" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_heavy" List.ItemID="-1330245990" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_light" List.ItemID="-2050225497" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_medium" List.ItemID="1483957960" />
+					<instance_reference name="path_type" value="pass_types\vehicle_heavy" List.ItemID="-1150206061" />
+					<instance_reference name="path_type" value="pass_types\vehicle_light" List.ItemID="174521808" />
+					<instance_reference name="path_type" value="pass_types\vehicle_medium" List.ItemID="-43691888" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="263224866" List.ParentItemID="263224866">
+				<enum name="occlusion_state" value="occlude_others" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\obj_cover_ext" List.ItemID="-606503479" List.ListAction="Append">
+				<enum name="cover_type" value="tp_light_cover" />
+				<bool name="is_cover_directional" value="True" />
+				<bool name="is_shoot_through" value="False" />
+				<bool name="use_simbox_range" value="True" />
+				<bool name="absorb_explosions" value="False" />
+				<bool name="generate_cover_spots" value="True" />
+				<bool name="absorb_non_damaging_shots_and_their_on_penetrated_actions" value="False" />
+				<template_reference name="additional_sim_box_option" value="options\none">
+				</template_reference>
+				<bool name="block_enemy_path" value="False" />
+				<bool name="always_block_shoot_through_projectiles" value="False" />
+				<bool name="start_enabled" value="True" />
+				<float name="cover_spot_distance_from_simbox" value="0.25" />
+				<float name="cover_spot_width" value="1.75" />
+				<float name="cover_hit_hox_expansion_amount" value="0" />
+				<enum name="terrain_cover_type" value="" />
+				<bool name="is_solid_cover_object" value="False" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2063032" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\object_path_blocker" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1588943975" List.ParentItemID="-1588943975">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\objects\posts\lamp\triple_lamp_01" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-844435906" List.ParentItemID="-844435906">
+				<bool name="delete_when_dead" value="False" overrideParent="True" />
+				<template_reference name="armor_layout_option" value="options\ebpextensions\healthext\armor_layouts\armor_layout_uniform">
+					<float name="armor" value="0" overrideParent="True" />
+				</template_reference>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="1239090663" List.ParentItemID="1239090663">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" List.ItemID="-2116666765" List.ParentItemID="-2116666765">
+				<list name="block_path" overrideParent="True">
+					<instance_reference name="path_type" value="pass_types\infantry" List.ItemID="1549133745" />
+					<instance_reference name="path_type" value="pass_types\vaulting_infantry" List.ItemID="-398159227" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_heavy" List.ItemID="-1330245990" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_light" List.ItemID="-2050225497" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_medium" List.ItemID="1483957960" />
+					<instance_reference name="path_type" value="pass_types\vehicle_heavy" List.ItemID="-1150206061" />
+					<instance_reference name="path_type" value="pass_types\vehicle_light" List.ItemID="174521808" />
+					<instance_reference name="path_type" value="pass_types\vehicle_medium" List.ItemID="-43691888" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="263224866" List.ParentItemID="263224866">
+				<enum name="occlusion_state" value="occlude_others" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\obj_cover_ext" List.ItemID="-606503479" List.ListAction="Append">
+				<enum name="cover_type" value="tp_light_cover" />
+				<bool name="is_cover_directional" value="True" />
+				<bool name="is_shoot_through" value="False" />
+				<bool name="use_simbox_range" value="True" />
+				<bool name="absorb_explosions" value="False" />
+				<bool name="generate_cover_spots" value="True" />
+				<bool name="absorb_non_damaging_shots_and_their_on_penetrated_actions" value="False" />
+				<template_reference name="additional_sim_box_option" value="options\none">
+				</template_reference>
+				<bool name="block_enemy_path" value="False" />
+				<bool name="always_block_shoot_through_projectiles" value="False" />
+				<bool name="start_enabled" value="True" />
+				<float name="cover_spot_distance_from_simbox" value="0.25" />
+				<float name="cover_spot_width" value="1.75" />
+				<float name="cover_hit_hox_expansion_amount" value="0" />
+				<enum name="terrain_cover_type" value="" />
+				<bool name="is_solid_cover_object" value="False" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2063032" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\object_path_blocker" />
+	</variant>
+</instance>

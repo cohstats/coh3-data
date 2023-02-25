@@ -1,0 +1,24 @@
+<instance version="5" description="" template="abilities">
+	<variant name="default">
+		<group name="ability_bag">
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_squad_tree" value="squad_repair_library\uk_africa\type" overrideParent="True" />
+			</group>
+			<enum name="ui_progress_bar_type" value="no_bar" overrideParent="True" />
+			<bool name="facing_ignore" value="True" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2071748" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\infantry\repair_parent" />
+	</variant>
+	<variant name="sp">
+		<group name="ability_bag">
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_squad_tree" value="sp_squad_repair_library\uk_africa\type" overrideParent="True" />
+			</group>
+			<enum name="ui_progress_bar_type" value="no_bar" overrideParent="True" />
+			<bool name="facing_ignore" value="True" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2071748" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\infantry\repair_parent" />
+	</variant>
+</instance>

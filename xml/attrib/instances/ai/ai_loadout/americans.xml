@@ -1,0 +1,31 @@
+<instance version="5" description="" template="ai\ai_loadout">
+	<variant name="default">
+		<group name="ai_loadout_bag">
+			<group name="filters">
+				<list name="personalities">
+					<instance_reference name="personality" value="ai\ai_personality\default_ai_personality" List.ItemID="-396890594" />
+				</list>
+				<enum_table name="difficulty_levels">
+					<bool name="easy" value="True" />
+					<bool name="standard" value="True" />
+					<bool name="hard" value="True" />
+					<bool name="expert" value="True" />
+				</enum_table>
+			</group>
+			<group name="equipped">
+				<list name="abilities">
+				</list>
+				<list name="units">
+				</list>
+				<list name="upgrades">
+					<instance_reference name="upgrade" value="army_upgrade\battlegroups\american\airborne" List.ItemID="-157079954" />
+					<instance_reference name="upgrade" value="army_upgrade\battlegroups\american\special_operations" List.ItemID="-1404214381" />
+					<instance_reference name="upgrade" value="army_upgrade\battlegroups\american\armored" List.ItemID="1916623291" />
+				</list>
+			</group>
+			<locstring name="loadout_name" value="0" />
+			<int name="ui_priority" value="0" />
+		</group>
+		<uniqueid name="pbgid" value="2074878" />
+	</variant>
+</instance>

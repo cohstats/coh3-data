@@ -1,0 +1,248 @@
+<instance version="5" description="Special Critical Shot for the 2.8 cm schwere Panzerbüchse 41 (sPzB 41)" template="ebps">
+	<variant name="default">
+		<list name="extensions" comment="In order for weapons to function correctly on vehicles the following needs to be set:&#xD;&#xA;- action_tree_ext -&gt; entity_weapon_smart_turret_root&#xD;&#xA;-- allows the sim weapon to rotate&#xD;&#xA;&#xD;&#xA;- animation_action_tree_ext -&gt; physical_weapon_single_shot&#xD;&#xA;-- allows the physical weapon to rotate&#xD;&#xA;&#xD;&#xA;- attachment_child_ext -&gt; requires_attachment_dynamics set to TRUE&#xD;&#xA;-- allows the weapon to get targets outside of its fire_cone, utilizing the max left/right of its tracking cone.">
+			<template_reference name="exts" value="ebpextensions\action_tree_ext" List.ItemID="908747353">
+				<state_tree_node name="ActionTree_OpeningBranch" value="entity_weapon_smart_turret_root" />
+				<state_tree_node name="fallback_default_move_command_conditions" value="" />
+				<enum name="stop_on_death" value="Default" />
+				<list name="events">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\animation_action_tree_ext" List.ItemID="678575434">
+				<state_tree_node name="ActionTree_OpeningBranch" value="physical_weapon_single_shot" />
+				<bool name="use_root_motion" value="True" />
+				<enum name="entity_statetree_sort_tag" value="weapon_default" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1674334731">
+				<file name="alternate_sua" value="" />
+				<bool name="always_revealed_in_fow" value="False" />
+				<bool name="is_visible_in_game" value="True" />
+				<int name="precise_size" value="-1" />
+				<enum name="default_spawn_type" value="" />
+				<instance_reference name="unit_badge" value="" />
+				<bool name="is_spawned_when_not_in_interactive_area" value="True" />
+				<bool name="is_wreck" value="False" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\german\weapons\at_gun_20mm_spzb41_armored_car" />
+				<float name="animator_scale" value="100" />
+				<bool name="browsable_in_editor" value="True" />
+				<float name="entity_scale" value="100" />
+				<enum name="subclass_type" value="Generic" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_targeting_ext" List.ItemID="-1568962416">
+				<bool name="allow_weapon_target_scanning" value="False" />
+				<int name="history_size" value="2" />
+				<bool name="allow_entity_scan_close_enemies" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\weapon_ext" List.ItemID="1802065062">
+				<instance_reference name="weapon" value="weapon\german\ballistic_weapon\tank_gun\20mm_panzerbuchse_critical_shot_armored_car_ger" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_entity_ext" List.ItemID="585477665">
+				<float name="rotate_snap" value="90" />
+				<bool name="kill_paradrop" value="False" />
+				<enum name="transferable" value="None" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\marker_ext" List.ItemID="-1979767517">
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_inventory_item_ext" List.ItemID="1929147664">
+				<template_reference name="simulation_item" value="sim_inventory_item\sim_inventory_item">
+					<int name="capacity_required" value="0" />
+					<group name="ownership_attributes">
+						<enum name="compatible_owner_type" value="entity" />
+						<enum name="ownership_sharing_type" value="single" />
+						<float name="drop_on_death_chance" value="0" />
+						<bool name="auto_equip" value="False" />
+					</group>
+					<template_reference name="item_data" value="sim_inventory_item\sim_item_data\attachment_inventory_data">
+						<template_reference name="attachment_data" value="options\attachment_types\entity_attachment">
+							<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+								<template_reference name="attach_data" value="attachments\attach_data">
+									<string name="marker_name_parent" value="" />
+									<string name="parent_rigidbody_target_name" value="" />
+									<enum name="game_object_attachment_type" value="scenegraph" />
+								</template_reference>
+								<instance_reference name="ebp" value="ebps\races\german\weapons\ballistic_weapon\tank_gun\w_20mm_panzerbuchse_critical_shot_armored_car_ger" />
+								<group name="attachment_flags">
+									<bool name="sim_only" value="False" />
+									<bool name="no_pathfinding" value="True" />
+									<bool name="not_snappable" value="False" />
+									<bool name="restore_snap_to_ground_on_detach" value="True" />
+									<bool name="no_sim_update" value="False" />
+									<bool name="join_parent_squad" value="False" />
+									<bool name="redirect_damage_to_parent_entity" value="True" />
+									<bool name="receive_parent_animations" value="True" />
+									<bool name="receive_parent_death" value="False" />
+								</group>
+							</template_reference>
+						</template_reference>
+					</template_reference>
+					<string name="default_slot" value="" />
+					<enum name="category" value="default" />
+				</template_reference>
+				<group name="requirement">
+					<state_tree_node name="statetree_condition_node" value="" />
+					<instance_reference name="requirement_param" value="" />
+					<state_tree_node name="statetree_condition_default_command_prioritize_as_success" value="" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\attachment_child_ext" List.ItemID="1360073321">
+				<template_reference name="on_attach" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="on_detach" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<bool name="requires_attachment_dynamics" value="True" />
+				<bool name="tracking_affects_transformation_when_setup" value="True" />
+				<string name="rotation_rate_degrees_per_second_signed_dca_key" value="turret_rotation_rate" />
+				<bool name="output_dca_to_parent" value="False" />
+				<float name="dca_vertical_degrees_offset" value="0" />
+				<bool name="horizontal_angle_limits_only_apply_when_setup" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\animation_role_ext" List.ItemID="941597908">
+				<instance_reference name="default_role" value="animation_role\vehicle_turret\ger_scoutcar\vt_scoutcar_panzerbuchse_gun" />
+				<enum name="flavour_key" value="wehrmacht" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\destructible_cell_ext" List.ItemID="-883760123">
+				<list name="cells">
+				</list>
+				<list name="dca_initialization">
+				</list>
+				<list name="cell_presets">
+				</list>
+				<group name="core_cells">
+					<int name="num_core_cells" value="0" />
+				</group>
+				<group name="combat_slot_behaviour_info">
+					<float name="indestructible_combatslot_layer_vertical_offset_begin" value="-0.5" />
+					<float name="indestructible_combatslot_layer_vertical_width" value="2" />
+					<bool name="occupants_killed_on_cell_destruction" value="False" />
+				</group>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="195441" />
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions" comment="In order for weapons to function correctly on vehicles the following needs to be set:&#xD;&#xA;- action_tree_ext -&gt; entity_weapon_smart_turret_root&#xD;&#xA;-- allows the sim weapon to rotate&#xD;&#xA;&#xD;&#xA;- animation_action_tree_ext -&gt; physical_weapon_single_shot&#xD;&#xA;-- allows the physical weapon to rotate&#xD;&#xA;&#xD;&#xA;- attachment_child_ext -&gt; requires_attachment_dynamics set to TRUE&#xD;&#xA;-- allows the weapon to get targets outside of its fire_cone, utilizing the max left/right of its tracking cone.">
+			<template_reference name="exts" value="ebpextensions\action_tree_ext" List.ItemID="908747353">
+				<state_tree_node name="ActionTree_OpeningBranch" value="entity_weapon_smart_turret_root" />
+				<state_tree_node name="fallback_default_move_command_conditions" value="" />
+				<enum name="stop_on_death" value="Default" />
+				<list name="events">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\animation_action_tree_ext" List.ItemID="678575434">
+				<state_tree_node name="ActionTree_OpeningBranch" value="physical_weapon_single_shot" />
+				<bool name="use_root_motion" value="True" />
+				<enum name="entity_statetree_sort_tag" value="weapon_default" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1674334731">
+				<file name="alternate_sua" value="" />
+				<bool name="always_revealed_in_fow" value="False" />
+				<bool name="is_visible_in_game" value="True" />
+				<int name="precise_size" value="-1" />
+				<enum name="default_spawn_type" value="" />
+				<instance_reference name="unit_badge" value="" />
+				<bool name="is_spawned_when_not_in_interactive_area" value="True" />
+				<bool name="is_wreck" value="False" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\german\weapons\at_gun_20mm_spzb41_armored_car" />
+				<float name="animator_scale" value="100" />
+				<bool name="browsable_in_editor" value="True" />
+				<float name="entity_scale" value="100" />
+				<enum name="subclass_type" value="Generic" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_targeting_ext" List.ItemID="-1568962416">
+				<bool name="allow_weapon_target_scanning" value="False" />
+				<int name="history_size" value="2" />
+				<bool name="allow_entity_scan_close_enemies" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\weapon_ext" List.ItemID="1802065062">
+				<instance_reference name="weapon" value="weapon\german\ballistic_weapon\tank_gun\20mm_panzerbuchse_critical_shot_armored_car_ger" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_entity_ext" List.ItemID="585477665">
+				<float name="rotate_snap" value="90" />
+				<bool name="kill_paradrop" value="False" />
+				<enum name="transferable" value="None" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\marker_ext" List.ItemID="-1979767517">
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_inventory_item_ext" List.ItemID="1929147664">
+				<template_reference name="simulation_item" value="sim_inventory_item\sim_inventory_item">
+					<int name="capacity_required" value="0" />
+					<group name="ownership_attributes">
+						<enum name="compatible_owner_type" value="entity" />
+						<enum name="ownership_sharing_type" value="single" />
+						<float name="drop_on_death_chance" value="0" />
+						<bool name="auto_equip" value="False" />
+					</group>
+					<template_reference name="item_data" value="sim_inventory_item\sim_item_data\attachment_inventory_data">
+						<template_reference name="attachment_data" value="options\attachment_types\entity_attachment">
+							<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+								<template_reference name="attach_data" value="attachments\attach_data">
+									<string name="marker_name_parent" value="" />
+									<string name="parent_rigidbody_target_name" value="" />
+									<enum name="game_object_attachment_type" value="scenegraph" />
+								</template_reference>
+								<instance_reference name="ebp" value="ebps\races\german\weapons\ballistic_weapon\tank_gun\w_20mm_panzerbuchse_critical_shot_armored_car_ger" />
+								<group name="attachment_flags">
+									<bool name="sim_only" value="False" />
+									<bool name="no_pathfinding" value="True" />
+									<bool name="not_snappable" value="False" />
+									<bool name="restore_snap_to_ground_on_detach" value="True" />
+									<bool name="no_sim_update" value="False" />
+									<bool name="join_parent_squad" value="False" />
+									<bool name="redirect_damage_to_parent_entity" value="True" />
+									<bool name="receive_parent_animations" value="True" />
+									<bool name="receive_parent_death" value="False" />
+								</group>
+							</template_reference>
+						</template_reference>
+					</template_reference>
+					<string name="default_slot" value="" />
+					<enum name="category" value="default" />
+				</template_reference>
+				<group name="requirement">
+					<state_tree_node name="statetree_condition_node" value="" />
+					<instance_reference name="requirement_param" value="" />
+					<state_tree_node name="statetree_condition_default_command_prioritize_as_success" value="" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\attachment_child_ext" List.ItemID="1360073321">
+				<template_reference name="on_attach" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="on_detach" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<bool name="requires_attachment_dynamics" value="True" />
+				<bool name="tracking_affects_transformation_when_setup" value="True" />
+				<string name="rotation_rate_degrees_per_second_signed_dca_key" value="turret_rotation_rate" />
+				<bool name="output_dca_to_parent" value="False" />
+				<float name="dca_vertical_degrees_offset" value="0" />
+				<bool name="horizontal_angle_limits_only_apply_when_setup" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\animation_role_ext" List.ItemID="941597908">
+				<instance_reference name="default_role" value="animation_role\vehicle_turret\ger_scoutcar\vt_scoutcar_panzerbuchse_gun" />
+				<enum name="flavour_key" value="wehrmacht" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\destructible_cell_ext" List.ItemID="-883760123">
+				<list name="cells">
+				</list>
+				<list name="dca_initialization">
+				</list>
+				<list name="cell_presets">
+				</list>
+				<group name="core_cells">
+					<int name="num_core_cells" value="0" />
+				</group>
+				<group name="combat_slot_behaviour_info">
+					<float name="indestructible_combatslot_layer_vertical_offset_begin" value="-0.5" />
+					<float name="indestructible_combatslot_layer_vertical_width" value="2" />
+					<bool name="occupants_killed_on_cell_destruction" value="False" />
+				</group>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="195441" />
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+</instance>

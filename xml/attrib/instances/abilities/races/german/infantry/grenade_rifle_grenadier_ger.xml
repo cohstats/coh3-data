@@ -1,0 +1,198 @@
+<instance version="5" description="" template="abilities">
+	<variant name="default">
+		<group name="ability_bag">
+			<enum_table name="cost_to_player">
+				<float name="munition" value="35" overrideParent="True" />
+			</enum_table>
+			<float name="facing_angle" value="5" overrideParent="True" />
+			<bool name="require_no_shot_block" value="False" overrideParent="True" />
+			<group name="ui_info">
+				<file name="icon_name" value="common\abilities\rifle_grenade_jaeger_ger" overrideParent="True" />
+				<locstring name="screen_name" value="11186231" overrideParent="True" />
+				<locstring name="brief_text" value="11240803" overrideParent="True" />
+			</group>
+			<list name="requirements">
+				<template_reference name="required" value="requirements\required_not" List.ItemID="1586500511" List.ListAction="Append">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="0" />
+					<list name="requirement_table">
+						<template_reference name="required" value="requirements\required_in_state" List.ItemID="930174231">
+							<enum name="reason" value="usage" />
+							<locstring name="ui_name" value="0" />
+							<float name="was_attacked_within_seconds" value="-1" />
+							<list name="check_states">
+								<enum name="state_requirement_type" value="pinned" List.ItemID="-1227915516" />
+								<enum name="state_requirement_type" value="suppressed" List.ItemID="1586220786" />
+							</list>
+							<float name="was_attacking_within_seconds" value="-1" />
+						</template_reference>
+					</list>
+				</template_reference>
+				<template_reference name="required" value="requirements\required_player_upgrade" List.ItemID="373616833" List.ListAction="Append">
+					<enum name="reason" value="usage_and_display" />
+					<locstring name="ui_name" value="0" />
+					<bool name="is_present" value="True" />
+					<int name="max_completed" value="100" />
+					<int name="min_completed" value="1" />
+					<instance_reference name="upgrade_name" value="upgrade\german\research\field_marshal\field_commander_defensive_ger" />
+					<bool name="include_completed" value="True" />
+					<bool name="include_queued" value="False" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+				</template_reference>
+				<template_reference name="required" value="requirements\required_squad_upgrade" List.ItemID="-725585814" List.ListAction="Append">
+					<enum name="reason" value="usage_and_display" />
+					<locstring name="ui_name" value="0" />
+					<bool name="include_completed" value="True" />
+					<bool name="include_queued" value="False" />
+					<bool name="is_present" value="False" />
+					<instance_reference name="upgrade_name" value="upgrade\german\infantry\assault_package_grenadiers_ger" />
+					<int name="min_completed" value="1" />
+					<int name="max_completed" value="100" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+				</template_reference>
+				<template_reference name="required" value="requirements\required_any_in_list" List.ItemID="252707932" List.ListAction="Append">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="11215503" />
+					<list name="requirements">
+						<template_reference name="requirement" value="requirements\required_structure" List.ItemID="-1942591273">
+							<enum name="reason" value="usage" />
+							<locstring name="ui_name" value="0" />
+							<instance_reference name="structure_name" value="ebps\races\german\buildings\production\support_armory_ger" />
+							<int name="required_structure_count" value="1" />
+							<bool name="check_team" value="False" />
+							<bool name="require_construction_complete" value="True" />
+							<group name="include_pbg_parenting">
+								<bool name="include_child_pbgs" value="False" />
+								<bool name="include_parent_pbgs" value="False" />
+							</group>
+						</template_reference>
+						<template_reference name="requirement" value="requirements\required_structure" List.ItemID="-590946131">
+							<enum name="reason" value="usage" />
+							<locstring name="ui_name" value="0" />
+							<instance_reference name="structure_name" value="ebps\races\german\buildings\production\mechanized_kompanie_ger" />
+							<int name="required_structure_count" value="1" />
+							<bool name="check_team" value="False" />
+							<bool name="require_construction_complete" value="True" />
+							<group name="include_pbg_parenting">
+								<bool name="include_child_pbgs" value="False" />
+								<bool name="include_parent_pbgs" value="False" />
+							</group>
+						</template_reference>
+					</list>
+				</template_reference>
+			</list>
+			<group name="ui_position">
+				<int name="ui_position_column" value="2" overrideParent="True" />
+			</group>
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_entity_tree" value="rifle_grenade_jaeger_ger" overrideParent="True" />
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="1140392" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\infantry\grenade_subtypes\rifle_grenade_parent" />
+	</variant>
+	<variant name="sp">
+		<group name="ability_bag">
+			<enum_table name="cost_to_player">
+				<float name="munition" value="35" overrideParent="True" />
+			</enum_table>
+			<float name="facing_angle" value="5" overrideParent="True" />
+			<bool name="require_no_shot_block" value="False" overrideParent="True" />
+			<group name="ui_info">
+				<file name="icon_name" value="common\abilities\rifle_grenade_jaeger_ger" overrideParent="True" />
+				<locstring name="screen_name" value="11186231" overrideParent="True" />
+				<locstring name="brief_text" value="11240803" overrideParent="True" />
+			</group>
+			<list name="requirements">
+				<template_reference name="required" value="requirements\required_not" List.ItemID="1586500511" List.ListAction="Append">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="0" />
+					<list name="requirement_table">
+						<template_reference name="required" value="requirements\required_in_state" List.ItemID="930174231">
+							<enum name="reason" value="usage" />
+							<locstring name="ui_name" value="0" />
+							<float name="was_attacked_within_seconds" value="-1" />
+							<list name="check_states">
+								<enum name="state_requirement_type" value="pinned" List.ItemID="-1227915516" />
+								<enum name="state_requirement_type" value="suppressed" List.ItemID="1586220786" />
+							</list>
+							<float name="was_attacking_within_seconds" value="-1" />
+						</template_reference>
+					</list>
+				</template_reference>
+				<template_reference name="required" value="requirements\required_player_upgrade" List.ItemID="373616833" List.ListAction="Append">
+					<enum name="reason" value="usage_and_display" />
+					<locstring name="ui_name" value="0" />
+					<bool name="is_present" value="True" />
+					<int name="max_completed" value="100" />
+					<int name="min_completed" value="1" />
+					<instance_reference name="upgrade_name" value="upgrade\german\research\field_marshal\field_commander_defensive_ger" />
+					<bool name="include_completed" value="True" />
+					<bool name="include_queued" value="False" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+				</template_reference>
+				<template_reference name="required" value="requirements\required_squad_upgrade" List.ItemID="-725585814" List.ListAction="Append">
+					<enum name="reason" value="usage_and_display" />
+					<locstring name="ui_name" value="0" />
+					<bool name="include_completed" value="True" />
+					<bool name="include_queued" value="False" />
+					<bool name="is_present" value="False" />
+					<instance_reference name="upgrade_name" value="upgrade\german\infantry\assault_package_grenadiers_ger" />
+					<int name="min_completed" value="1" />
+					<int name="max_completed" value="100" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+				</template_reference>
+				<template_reference name="required" value="requirements\required_any_in_list" List.ItemID="252707932" List.ListAction="Append">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="11215503" />
+					<list name="requirements">
+						<template_reference name="requirement" value="requirements\required_structure" List.ItemID="-1942591273">
+							<enum name="reason" value="usage" />
+							<locstring name="ui_name" value="0" />
+							<instance_reference name="structure_name" value="ebps\races\german\buildings\production\support_armory_ger" />
+							<int name="required_structure_count" value="1" />
+							<bool name="check_team" value="False" />
+							<bool name="require_construction_complete" value="True" />
+							<group name="include_pbg_parenting">
+								<bool name="include_child_pbgs" value="False" />
+								<bool name="include_parent_pbgs" value="False" />
+							</group>
+						</template_reference>
+						<template_reference name="requirement" value="requirements\required_structure" List.ItemID="-590946131">
+							<enum name="reason" value="usage" />
+							<locstring name="ui_name" value="0" />
+							<instance_reference name="structure_name" value="ebps\races\german\buildings\production\mechanized_kompanie_ger" />
+							<int name="required_structure_count" value="1" />
+							<bool name="check_team" value="False" />
+							<bool name="require_construction_complete" value="True" />
+							<group name="include_pbg_parenting">
+								<bool name="include_child_pbgs" value="False" />
+								<bool name="include_parent_pbgs" value="False" />
+							</group>
+						</template_reference>
+					</list>
+				</template_reference>
+			</list>
+			<group name="ui_position">
+				<int name="ui_position_column" value="2" overrideParent="True" />
+			</group>
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_entity_tree" value="sp_rifle_grenade_jaeger_ger" overrideParent="True" />
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="1140392" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\infantry\grenade_subtypes\rifle_grenade_parent" />
+	</variant>
+</instance>

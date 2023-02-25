@@ -1,0 +1,52 @@
+<instance version="5" description="" template="abilities">
+	<variant name="default">
+		<group name="ability_bag">
+			<enum_table name="cost_to_player">
+				<float name="munition" value="0" overrideParent="True" />
+			</enum_table>
+			<bool name="disable_when_active" value="True" overrideParent="True" />
+			<float name="facing_angle" value="5" overrideParent="True" />
+			<float name="recharge_time" value="180" overrideParent="True" />
+			<group name="ui_info">
+				<locstring name="extra_text" value="11239887" overrideParent="True" />
+				<locstring name="help_text" value="11241490" overrideParent="True" />
+				<file name="icon_name" value="legacy\abilities\ability_west_german_m23_rifle_smoke_grenade" overrideParent="True" />
+				<locstring name="screen_name" value="11183368" overrideParent="True" />
+				<locstring name="brief_text" value="11240820" overrideParent="True" />
+			</group>
+			<float name="ui_reticule_radius_min" value="5" overrideParent="True" />
+			<float name="ui_reticule_radius_max" value="5" overrideParent="True" />
+			<instance_reference name="ability_category" value="" overrideParent="True" />
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_entity_tree" value="smoke_jaeger_ger" overrideParent="True" />
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="188673" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\infantry\grenade_subtypes\rifle_smoke_grenade_parent" />
+	</variant>
+	<variant name="sp">
+		<group name="ability_bag">
+			<enum_table name="cost_to_player">
+				<float name="munition" value="0" overrideParent="True" />
+			</enum_table>
+			<bool name="disable_when_active" value="True" overrideParent="True" />
+			<float name="facing_angle" value="5" overrideParent="True" />
+			<float name="recharge_time" value="180" overrideParent="True" />
+			<group name="ui_info">
+				<locstring name="extra_text" value="11239887" overrideParent="True" />
+				<locstring name="help_text" value="11241490" overrideParent="True" />
+				<file name="icon_name" value="legacy\abilities\ability_west_german_m23_rifle_smoke_grenade" overrideParent="True" />
+				<locstring name="screen_name" value="11183368" overrideParent="True" />
+				<locstring name="brief_text" value="11240820" overrideParent="True" />
+			</group>
+			<float name="ui_reticule_radius_min" value="5" overrideParent="True" />
+			<float name="ui_reticule_radius_max" value="5" overrideParent="True" />
+			<instance_reference name="ability_category" value="" overrideParent="True" />
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_entity_tree" value="sp_smoke_jaeger_ger" overrideParent="True" />
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="188673" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\infantry\grenade_subtypes\rifle_smoke_grenade_parent" />
+	</variant>
+</instance>

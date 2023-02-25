@@ -1,0 +1,62 @@
+<instance version="5" description="A fountain for drinking" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1634866897" List.ParentItemID="-1634866897">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\objects\urban_features\fountain_drinking\fountain_drinking" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="935189326" List.ParentItemID="935189326">
+				<float name="death_seconds" value="5" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="1242838774" List.ParentItemID="1242838774">
+				<instance_reference name="hit_material" value="hit_material\metal" overrideParent="True" />
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-1512556190" List.ParentItemID="-1512556190">
+				<enum name="occlusion_state" value="occlude_others" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\burn_ext" List.ItemID="1204528790" List.ListAction="Append">
+				<float name="on_fire_damage_per_sec" value="2" />
+				<float name="on_fire_decay_amount_per_sec" value="-1" />
+				<float name="on_fire_threshold" value="2" />
+				<float name="max_fire_damage_per_second" value="10000" />
+				<float name="on_fire_health_percentage" value="-1" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2044788" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\object_heavy_cover_heavy_crush" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1634866897" List.ParentItemID="-1634866897">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\objects\urban_features\fountain_drinking\fountain_drinking" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="935189326" List.ParentItemID="935189326">
+				<float name="death_seconds" value="5" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="1242838774" List.ParentItemID="1242838774">
+				<instance_reference name="hit_material" value="hit_material\metal" overrideParent="True" />
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-1512556190" List.ParentItemID="-1512556190">
+				<enum name="occlusion_state" value="occlude_others" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\burn_ext" List.ItemID="1204528790" List.ListAction="Append">
+				<float name="on_fire_damage_per_sec" value="2" />
+				<float name="on_fire_decay_amount_per_sec" value="-1" />
+				<float name="on_fire_threshold" value="2" />
+				<float name="max_fire_damage_per_second" value="10000" />
+				<float name="on_fire_health_percentage" value="-1" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2044788" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\object_heavy_cover_heavy_crush" />
+	</variant>
+</instance>

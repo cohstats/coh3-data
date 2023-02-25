@@ -1,0 +1,23 @@
+<instance version="5" description="" template="animation_role">
+	<variant name="default">
+		<uniqueid name="pbgid" value="2059872" />
+		<group name="animation_role_bag">
+			<file name="animator" value="armies\common\rigs\infantry\male_soldier_motion\male_soldier_motion" comment="Since each crew member shares MaleSoldierMotion we can fill this out in the base." overrideParent="True" />
+			<list name="animation_groups">
+				<group name="group" List.ItemID="1050117663" List.ParentItemID="1050117663">
+					<list name="set">
+						<group name="entry" List.ItemID="-564768320" List.ParentItemID="-564768320">
+							<template_reference name="animation" value="options\animation_role\animation_role_empty" overrideParent="True">
+							</template_reference>
+						</group>
+						<group name="entry" List.ItemID="729617880" List.ParentItemID="729617880">
+							<template_reference name="animation" value="options\animation_role\animation_role_empty" overrideParent="True">
+							</template_reference>
+						</group>
+					</list>
+				</group>
+			</list>
+		</group>
+		<instance_reference name="parent_pbg" value="animation_role\team_weapon\tw_base" />
+	</variant>
+</instance>

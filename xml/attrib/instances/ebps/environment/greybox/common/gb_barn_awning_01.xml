@@ -1,0 +1,64 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1588943975" List.ParentItemID="-1588943975">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\greybox\common\gb_barn_awning_01" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-844435906" List.ParentItemID="-844435906">
+				<float name="hitpoints" value="500" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="1239090663" List.ParentItemID="1239090663">
+				<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+				<float name="hit_chance" value="1" overrideParent="True" />
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_react_tree_ext" List.ItemID="-2037793871" List.ParentItemID="-2037793871">
+				<state_tree_node name="ActionTree_OpeningBranch" value="hit_wall" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="263224866" List.ParentItemID="263224866">
+				<file name="symbol_icon_name" value="" overrideParent="True" />
+				<enum name="occlusion_state" value="terrain_layer" overrideParent="True" />
+				<file name="portrait_name" value="" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\wall_ext" List.ItemID="1341129789" List.ListAction="Append">
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="173680" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\object_path_blocker" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1588943975" List.ParentItemID="-1588943975">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\greybox\common\gb_barn_awning_01" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-844435906" List.ParentItemID="-844435906">
+				<float name="hitpoints" value="500" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="1239090663" List.ParentItemID="1239090663">
+				<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+				<float name="hit_chance" value="1" overrideParent="True" />
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_react_tree_ext" List.ItemID="-2037793871" List.ParentItemID="-2037793871">
+				<state_tree_node name="ActionTree_OpeningBranch" value="hit_wall" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="263224866" List.ParentItemID="263224866">
+				<file name="symbol_icon_name" value="" overrideParent="True" />
+				<enum name="occlusion_state" value="terrain_layer" overrideParent="True" />
+				<file name="portrait_name" value="" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\wall_ext" List.ItemID="1341129789" List.ListAction="Append">
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="173680" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\object_path_blocker" />
+	</variant>
+</instance>

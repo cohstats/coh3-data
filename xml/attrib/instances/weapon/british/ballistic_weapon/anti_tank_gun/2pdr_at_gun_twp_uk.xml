@@ -1,0 +1,84 @@
+<instance version="5" description="M1 57mm anti-tank gun, used by the AT gun squad." template="weapon">
+	<variant name="default">
+		<group name="weapon_bag">
+			<group name="accuracy">
+				<float name="near" value="0.065" overrideParent="True" />
+				<float name="far" value="0.04" overrideParent="True" />
+			</group>
+			<group name="damage">
+				<float name="max" value="120" overrideParent="True" />
+				<float name="min" value="120" overrideParent="True" />
+				<list name="on_penetrated_state_trees">
+					<group name="container" List.ItemID="-1231924902" List.ListAction="Append">
+						<state_tree_node name="state_tree" value="twp_vehicle_stun_uk" />
+					</group>
+				</list>
+			</group>
+			<string name="fx_munition_name" value="\cannon\shell_medium" overrideParent="True" />
+			<group name="reload">
+				<group name="duration">
+					<float name="max" value="3.25" overrideParent="True" />
+					<float name="min" value="3.25" overrideParent="True" />
+				</group>
+				<bool name="require_reload_after_switch" value="False" overrideParent="True" />
+			</group>
+			<group name="penetration">
+				<float name="near" value="1000" overrideParent="True" />
+				<float name="far" value="1000" overrideParent="True" />
+				<float name="mid" value="1000" overrideParent="True" />
+			</group>
+			<group name="deflection">
+				<bool name="has_deflection_damage" value="False" overrideParent="True" />
+			</group>
+			<group name="aim">
+				<group name="fire_aim_time">
+					<float name="max" value="0.5" overrideParent="True" />
+					<float name="min" value="0.5" overrideParent="True" />
+				</group>
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="2031559" />
+		<instance_reference name="parent_pbg" value="weapon\british\ballistic_weapon\anti_tank_gun\2pdr_at_gun_uk" />
+	</variant>
+	<variant name="sp">
+		<group name="weapon_bag">
+			<group name="accuracy">
+				<float name="near" value="0.065" overrideParent="True" />
+				<float name="far" value="0.04" overrideParent="True" />
+			</group>
+			<group name="damage">
+				<float name="max" value="120" overrideParent="True" />
+				<float name="min" value="120" overrideParent="True" />
+				<list name="on_penetrated_state_trees">
+					<group name="container" List.ItemID="-1231924902" List.ListAction="Append">
+						<state_tree_node name="state_tree" value="sp_twp_vehicle_stun_uk" />
+					</group>
+				</list>
+			</group>
+			<string name="fx_munition_name" value="\cannon\shell_medium" overrideParent="True" />
+			<group name="reload">
+				<group name="duration">
+					<float name="max" value="3.25" overrideParent="True" />
+					<float name="min" value="3.25" overrideParent="True" />
+				</group>
+				<bool name="require_reload_after_switch" value="False" overrideParent="True" />
+			</group>
+			<group name="penetration">
+				<float name="near" value="1000" overrideParent="True" />
+				<float name="far" value="1000" overrideParent="True" />
+				<float name="mid" value="1000" overrideParent="True" />
+			</group>
+			<group name="deflection">
+				<bool name="has_deflection_damage" value="False" overrideParent="True" />
+			</group>
+			<group name="aim">
+				<group name="fire_aim_time">
+					<float name="max" value="0.5" overrideParent="True" />
+					<float name="min" value="0.5" overrideParent="True" />
+				</group>
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="2031559" />
+		<instance_reference name="parent_pbg" value="weapon\british\ballistic_weapon\anti_tank_gun\2pdr_at_gun_uk" />
+	</variant>
+</instance>

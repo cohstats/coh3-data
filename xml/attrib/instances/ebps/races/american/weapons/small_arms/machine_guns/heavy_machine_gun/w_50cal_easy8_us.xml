@@ -1,0 +1,40 @@
+<instance version="5" description="M2HB 50 cal HMG top gunner for the M4A1 Sherman" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-515180771" List.ParentItemID="-515180771">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\american\weapons\hmg_50cal_sherman_easy8" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\animation_role_ext" List.ItemID="-584100331" List.ParentItemID="-584100331">
+				<instance_reference name="default_role" value="animation_role\vehicle_turret\us_sherman\vt_easy8_cupola_gun" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="-2012737422" List.ParentItemID="-2012737422">
+				<group name="speech_parameters">
+					<string name="class_code" value="weapons" overrideParent="True" />
+					<string name="name_code" value="50cal" overrideParent="True" />
+					<string name="unit_code" value="w_50cal_easy8_us" overrideParent="True" />
+				</group>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="1772098" />
+		<instance_reference name="parent_pbg" value="ebps\races\american\weapons\small_arms\machine_guns\heavy_machine_gun\w_50cal_sherman_us" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-515180771" List.ParentItemID="-515180771">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\american\weapons\hmg_50cal_sherman_easy8" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\animation_role_ext" List.ItemID="-584100331" List.ParentItemID="-584100331">
+				<instance_reference name="default_role" value="animation_role\vehicle_turret\us_sherman\vt_easy8_cupola_gun" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="-2012737422" List.ParentItemID="-2012737422">
+				<group name="speech_parameters">
+					<string name="class_code" value="weapons" overrideParent="True" />
+					<string name="name_code" value="50cal" overrideParent="True" />
+					<string name="unit_code" value="w_50cal_easy8_us" overrideParent="True" />
+				</group>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="1772098" />
+		<instance_reference name="parent_pbg" value="ebps\races\american\weapons\small_arms\machine_guns\heavy_machine_gun\w_50cal_sherman_us" />
+	</variant>
+</instance>

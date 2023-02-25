@@ -1,0 +1,92 @@
+<instance version="5" description="6 pounder 57mm anti-tank gun" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-485308748" List.ParentItemID="-485308748">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\british\weapons\cannon_57mm_command_churchill" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_inventory_item_ext" List.ItemID="-552796306" List.ParentItemID="-552796306">
+				<template_reference name="simulation_item" value="sim_inventory_item\sim_inventory_item">
+					<template_reference name="item_data" value="sim_inventory_item\sim_item_data\attachment_inventory_data">
+						<template_reference name="attachment_data" value="options\attachment_types\entity_attachment">
+							<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+								<instance_reference name="ebp" value="ebps\races\british\weapons\ballistic_weapon\tank_gun\w_40mm_churchill_command_uk" overrideParent="True" />
+							</template_reference>
+						</template_reference>
+					</template_reference>
+				</template_reference>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="-1908191267" List.ParentItemID="-1908191267">
+				<group name="speech_parameters">
+					<string name="class_code" value="weapons" overrideParent="True" />
+					<string name="name_code" value="cannon" overrideParent="True" />
+					<string name="unit_code" value="w_40mm_churchill_command_uk" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\animation_role_ext" List.ItemID="-1987999535" List.ParentItemID="-1987999535">
+				<instance_reference name="default_role" value="animation_role\vehicle_turret\uk_churchill\vt_churchill_command_turret" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\destructible_cell_ext" List.ItemID="506847459" List.ParentItemID="506847459">
+				<list name="cells" overrideParent="True">
+				</list>
+				<list name="cell_presets" overrideParent="True">
+					<template_reference name="cell_preset" value="options\ebpextensions\destructible_cell_ext\cell_preset" List.ItemID="811283952">
+						<instance_reference name="hit_material" value="hit_material\metal" overrideParent="True" />
+						<float name="max_health" value="80" overrideParent="True" />
+						<string name="name" value="default" overrideParent="True" />
+						<bool name="use_as_impass_blocker" value="False" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+					</template_reference>
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="224599" />
+		<instance_reference name="parent_pbg" value="ebps\races\british\weapons\ballistic_weapon\tank_gun\w_40mm_churchill_uk" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-485308748" List.ParentItemID="-485308748">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\british\weapons\cannon_57mm_command_churchill" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_inventory_item_ext" List.ItemID="-552796306" List.ParentItemID="-552796306">
+				<template_reference name="simulation_item" value="sim_inventory_item\sim_inventory_item">
+					<template_reference name="item_data" value="sim_inventory_item\sim_item_data\attachment_inventory_data">
+						<template_reference name="attachment_data" value="options\attachment_types\entity_attachment">
+							<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+								<instance_reference name="ebp" value="ebps\races\british\weapons\ballistic_weapon\tank_gun\w_40mm_churchill_command_uk" overrideParent="True" />
+							</template_reference>
+						</template_reference>
+					</template_reference>
+				</template_reference>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="-1908191267" List.ParentItemID="-1908191267">
+				<group name="speech_parameters">
+					<string name="class_code" value="weapons" overrideParent="True" />
+					<string name="name_code" value="cannon" overrideParent="True" />
+					<string name="unit_code" value="w_40mm_churchill_command_uk" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\animation_role_ext" List.ItemID="-1987999535" List.ParentItemID="-1987999535">
+				<instance_reference name="default_role" value="animation_role\vehicle_turret\uk_churchill\vt_churchill_command_turret" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\destructible_cell_ext" List.ItemID="506847459" List.ParentItemID="506847459">
+				<list name="cells" overrideParent="True">
+				</list>
+				<list name="cell_presets" overrideParent="True">
+					<template_reference name="cell_preset" value="options\ebpextensions\destructible_cell_ext\cell_preset" List.ItemID="811283952">
+						<instance_reference name="hit_material" value="hit_material\metal" overrideParent="True" />
+						<float name="max_health" value="80" overrideParent="True" />
+						<string name="name" value="default" overrideParent="True" />
+						<bool name="use_as_impass_blocker" value="False" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+					</template_reference>
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="224599" />
+		<instance_reference name="parent_pbg" value="ebps\races\british\weapons\ballistic_weapon\tank_gun\w_40mm_churchill_uk" />
+	</variant>
+</instance>

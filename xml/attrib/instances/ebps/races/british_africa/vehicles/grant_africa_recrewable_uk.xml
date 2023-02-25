@@ -1,0 +1,352 @@
+<instance version="5" description="Sherman armed with a 75mm cannon" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="433366582" List.ParentItemID="433366582">
+				<bool name="reveal_to_all_on_death" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sight_ext" List.ItemID="-64524548" List.ParentItemID="-64524548">
+				<float name="reveal_area_on_death_time" value="1.5" overrideParent="True" />
+				<float name="reveal_area_on_death_radius" value="0" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-1350927259" List.ParentItemID="-1350927259">
+				<locstring name="screen_name" value="11180068" overrideParent="True" />
+				<locstring name="help_text" value="11153568" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hold_ext" List.ItemID="1079511088" List.ListAction="Append">
+				<list name="acceptable_types">
+					<enum name="acceptable_type" value="hold_infantry" List.ItemID="-61384836" />
+					<enum name="acceptable_type" value="hold_kradschutzen" List.ItemID="1864689150" />
+				</list>
+				<bool name="attach_passenger_animator" value="True" />
+				<bool name="can_attack_occupant" value="False" />
+				<bool name="invulnerable_in_hold" value="False" />
+				<bool name="disable_area_effect_on_overflow_slot" value="False" />
+				<bool name="disable_unload" value="False" />
+				<bool name="disallow_load_command" value="False" />
+				<bool name="enable_trigger_abilities_in_hold" value="True" />
+				<bool name="enable_trigger_attack_in_hold" value="False" />
+				<bool name="holds_produced_squads" value="False" />
+				<bool name="keep_abandoned_team_weapon" value="False" />
+				<float name="load_seconds" value="1" />
+				<float name="max_load_seconds" value="1" />
+				<float name="min_hold_seconds" value="1" />
+				<float name="num_slots" value="6" />
+				<float name="num_squad_slots" value="1" />
+				<float name="percent_unload_on_death" value="0.5" />
+				<bool name="revert_ownership" value="False" />
+				<bool name="scavenge_enabled" value="False" />
+				<enum_table name="scavenge_resource">
+					<float name="action" value="0" />
+					<float name="command" value="0" />
+					<float name="popcap" value="0" />
+					<float name="fuel" value="0" />
+					<float name="munition" value="0" />
+					<float name="manpower" value="0" />
+					<float name="requisition" value="0" />
+					<float name="ultimate" value="0" />
+				</enum_table>
+				<bool name="shared_with_other_same_type_units" value="False" />
+				<bool name="use_building_target_scan_radius" value="True" />
+				<bool name="use_crouching_posture" value="False" />
+				<list name="on_loading_modifiers">
+					<template_reference name="modifier" value="modifiers\entity_modifier" List.ItemID="-1942344711">
+						<enum name="type" value="" />
+						<enum name="application_type" value="apply_to_entity" />
+						<enum name="usage_type" value="" />
+						<float name="value" value="0" />
+						<instance_reference name="tooltip" value="" />
+						<bool name="exclusive" value="False" />
+						<string name="modifier_id" value="" />
+						<instance_reference name="target_type_name" value="" />
+						<instance_reference name="description_pbg" value="" />
+						<enum name="description_storage_index" value="" />
+					</template_reference>
+				</list>
+				<bool name="despawn_on_load" value="False" />
+				<float name="load_distance" value="1" />
+				<bool name="maintain_selection" value="True" />
+				<template_reference name="on_loaded_hold_action_tree" value="state_tree_global_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="on_loaded_squad_action_tree" value="state_tree_global_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="on_unloaded_squad_instant_action_tree" value="state_tree_global_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<bool name="convert_garrision_on_owner_change" value="False" />
+				<bool name="move_on_remove_hold" value="True" />
+				<bool name="load_separate_entrances" value="True" />
+				<bool name="can_issue_retreat_to_hold_contents" value="True" />
+				<bool name="ensure_pathability_to_hold_for_unload" value="False" />
+				<float name="unload_path_distance_max" value="0" />
+				<bool name="is_indoors" value="True" />
+				<bool name="count_units_in_units" value="True" />
+				<float name="unload_seconds_total" value="2" />
+				<float name="unload_seconds_per_entity" value="0" overrideParent="True" />
+				<bool name="allow_allies_to_occupy" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\recrewable_ext" List.ItemID="733964047" List.ListAction="Append">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="64316350">
+						<instance_reference name="ext_key" value="racebps\germans" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british_africa\vehicles\grant_africa_recrewable_uk" />
+							<float name="max_capture_crew_size" value="3" />
+							<float name="min_capture_crew_size" value="3" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-1662449516">
+						<instance_reference name="ext_key" value="racebps\americans" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british_africa\vehicles\grant_africa_recrewable_uk" />
+							<float name="max_capture_crew_size" value="3" />
+							<float name="min_capture_crew_size" value="3" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-1099801974">
+						<instance_reference name="ext_key" value="racebps\british" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british_africa\vehicles\grant_africa_recrewable_uk" />
+							<float name="max_capture_crew_size" value="3" />
+							<float name="min_capture_crew_size" value="3" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-308550969">
+						<instance_reference name="ext_key" value="" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british_africa\vehicles\grant_africa_recrewable_uk" />
+							<float name="max_capture_crew_size" value="3" />
+							<float name="min_capture_crew_size" value="3" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="2105506629">
+						<instance_reference name="ext_key" value="racebps\afrika_korps" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british_africa\vehicles\grant_africa_recrewable_uk" />
+							<float name="max_capture_crew_size" value="3" />
+							<float name="min_capture_crew_size" value="3" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2072082" />
+		<instance_reference name="parent_pbg" value="ebps\races\british_africa\vehicles\grant_africa_uk" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="433366582" List.ParentItemID="433366582">
+				<bool name="reveal_to_all_on_death" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sight_ext" List.ItemID="-64524548" List.ParentItemID="-64524548">
+				<float name="reveal_area_on_death_time" value="1.5" overrideParent="True" />
+				<float name="reveal_area_on_death_radius" value="0" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-1350927259" List.ParentItemID="-1350927259">
+				<locstring name="screen_name" value="11180068" overrideParent="True" />
+				<locstring name="help_text" value="11153568" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hold_ext" List.ItemID="1079511088" List.ListAction="Append">
+				<list name="acceptable_types">
+					<enum name="acceptable_type" value="hold_infantry" List.ItemID="-61384836" />
+					<enum name="acceptable_type" value="hold_kradschutzen" List.ItemID="1864689150" />
+				</list>
+				<bool name="attach_passenger_animator" value="True" />
+				<bool name="can_attack_occupant" value="False" />
+				<bool name="invulnerable_in_hold" value="False" />
+				<bool name="disable_area_effect_on_overflow_slot" value="False" />
+				<bool name="disable_unload" value="False" />
+				<bool name="disallow_load_command" value="False" />
+				<bool name="enable_trigger_abilities_in_hold" value="True" />
+				<bool name="enable_trigger_attack_in_hold" value="False" />
+				<bool name="holds_produced_squads" value="False" />
+				<bool name="keep_abandoned_team_weapon" value="False" />
+				<float name="load_seconds" value="1" />
+				<float name="max_load_seconds" value="1" />
+				<float name="min_hold_seconds" value="1" />
+				<float name="num_slots" value="6" />
+				<float name="num_squad_slots" value="1" />
+				<float name="percent_unload_on_death" value="0.5" />
+				<bool name="revert_ownership" value="False" />
+				<bool name="scavenge_enabled" value="False" />
+				<enum_table name="scavenge_resource">
+					<float name="action" value="0" />
+					<float name="command" value="0" />
+					<float name="popcap" value="0" />
+					<float name="fuel" value="0" />
+					<float name="munition" value="0" />
+					<float name="manpower" value="0" />
+					<float name="requisition" value="0" />
+					<float name="ultimate" value="0" />
+				</enum_table>
+				<bool name="shared_with_other_same_type_units" value="False" />
+				<bool name="use_building_target_scan_radius" value="True" />
+				<bool name="use_crouching_posture" value="False" />
+				<list name="on_loading_modifiers">
+					<template_reference name="modifier" value="modifiers\entity_modifier" List.ItemID="-1942344711">
+						<enum name="type" value="" />
+						<enum name="application_type" value="apply_to_entity" />
+						<enum name="usage_type" value="" />
+						<float name="value" value="0" />
+						<instance_reference name="tooltip" value="" />
+						<bool name="exclusive" value="False" />
+						<string name="modifier_id" value="" />
+						<instance_reference name="target_type_name" value="" />
+						<instance_reference name="description_pbg" value="" />
+						<enum name="description_storage_index" value="" />
+					</template_reference>
+				</list>
+				<bool name="despawn_on_load" value="False" />
+				<float name="load_distance" value="1" />
+				<bool name="maintain_selection" value="True" />
+				<template_reference name="on_loaded_hold_action_tree" value="state_tree_global_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="on_loaded_squad_action_tree" value="state_tree_global_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="on_unloaded_squad_instant_action_tree" value="state_tree_global_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<bool name="convert_garrision_on_owner_change" value="False" />
+				<bool name="move_on_remove_hold" value="True" />
+				<bool name="load_separate_entrances" value="True" />
+				<bool name="can_issue_retreat_to_hold_contents" value="True" />
+				<bool name="ensure_pathability_to_hold_for_unload" value="False" />
+				<float name="unload_path_distance_max" value="0" />
+				<bool name="is_indoors" value="True" />
+				<bool name="count_units_in_units" value="True" />
+				<float name="unload_seconds_total" value="2" />
+				<float name="unload_seconds_per_entity" value="0" overrideParent="True" />
+				<bool name="allow_allies_to_occupy" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\recrewable_ext" List.ItemID="733964047" List.ListAction="Append">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="64316350">
+						<instance_reference name="ext_key" value="racebps\germans" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british_africa\vehicles\grant_africa_recrewable_uk" />
+							<float name="max_capture_crew_size" value="3" />
+							<float name="min_capture_crew_size" value="3" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-1662449516">
+						<instance_reference name="ext_key" value="racebps\americans" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british_africa\vehicles\grant_africa_recrewable_uk" />
+							<float name="max_capture_crew_size" value="3" />
+							<float name="min_capture_crew_size" value="3" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-1099801974">
+						<instance_reference name="ext_key" value="racebps\british" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british_africa\vehicles\grant_africa_recrewable_uk" />
+							<float name="max_capture_crew_size" value="3" />
+							<float name="min_capture_crew_size" value="3" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-308550969">
+						<instance_reference name="ext_key" value="" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british_africa\vehicles\grant_africa_recrewable_uk" />
+							<float name="max_capture_crew_size" value="3" />
+							<float name="min_capture_crew_size" value="3" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="2105506629">
+						<instance_reference name="ext_key" value="racebps\afrika_korps" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british_africa\vehicles\grant_africa_recrewable_uk" />
+							<float name="max_capture_crew_size" value="3" />
+							<float name="min_capture_crew_size" value="3" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2072082" />
+		<instance_reference name="parent_pbg" value="ebps\races\british_africa\vehicles\grant_africa_uk" />
+	</variant>
+</instance>

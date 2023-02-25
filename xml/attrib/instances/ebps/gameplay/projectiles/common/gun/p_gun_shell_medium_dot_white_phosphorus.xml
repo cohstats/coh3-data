@@ -1,0 +1,94 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="892757990" List.ParentItemID="892757990">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\projectile\common\gun\p_gun_shell_medium_white_phosphorus" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\explosion_ext" overrideParent="True" List.ItemID="-1203549952" List.ParentItemID="-1203549952">
+				<group name="terrain_hit">
+					<float name="chance_splat_only" value="0" />
+					<enum name="cover_type" value="" overrideParent="True" />
+					<group name="deformation">
+						<string name="deform_decal_file" value="crater" />
+						<bool name="limited" value="True" />
+						<bool name="random_rotation" value="True" />
+						<float name="rotation" value="0" />
+						<float name="vertical_scale" value="0.001" />
+						<enum name="deform_type" value="tp_additive" />
+						<list name="splat_list">
+						</list>
+					</group>
+					<float name="radius_max" value="4" />
+					<float name="radius_min" value="3" />
+					<float name="splat_only_splat_seconds" value="60" />
+					<list name="splat_only_splats">
+					</list>
+				</group>
+				<template_reference name="area_over_time_option" value="options\none">
+				</template_reference>
+				<template_reference name="on_detonate_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="dot_white_phosphorus_damage" />
+				</template_reference>
+				<template_reference name="on_absorbed_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="dot_white_phosphorus_damage" />
+				</template_reference>
+				<bool name="can_hit_targets_outside_interactive_area" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\projectile_ext" List.ItemID="-238641361" List.ParentItemID="-238641361">
+				<bool name="collision_building_wall_panel_ignore" value="False" overrideParent="True" />
+				<float name="deathtimer" value="0" overrideParent="True" />
+				<float name="speed" value="120" comment="I removed the acceleration above and increased the speed from 80 to 120.  It feels better. - MOose" overrideParent="True" />
+				<float name="acceleration" value="0" comment="Having the projectile accelerate doesn't feel right.. the shell would decelerate if anything.  I increased the speed instead.  The original accelerate was set to 20, incase you really need it. - moose." overrideParent="True" />
+				<bool name="collision_land_ignore" value="True" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2102487" />
+		<instance_reference name="parent_pbg" value="ebps\gameplay\projectiles\parent\p_straight_shot_parent" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="892757990" List.ParentItemID="892757990">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\projectile\common\gun\p_gun_shell_medium_white_phosphorus" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\explosion_ext" overrideParent="True" List.ItemID="-1203549952" List.ParentItemID="-1203549952">
+				<group name="terrain_hit">
+					<float name="chance_splat_only" value="0" />
+					<enum name="cover_type" value="" overrideParent="True" />
+					<group name="deformation">
+						<string name="deform_decal_file" value="crater" />
+						<bool name="limited" value="True" />
+						<bool name="random_rotation" value="True" />
+						<float name="rotation" value="0" />
+						<float name="vertical_scale" value="0.001" />
+						<enum name="deform_type" value="tp_additive" />
+						<list name="splat_list">
+						</list>
+					</group>
+					<float name="radius_max" value="4" />
+					<float name="radius_min" value="3" />
+					<float name="splat_only_splat_seconds" value="60" />
+					<list name="splat_only_splats">
+					</list>
+				</group>
+				<template_reference name="area_over_time_option" value="options\none">
+				</template_reference>
+				<template_reference name="on_detonate_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="sp_dot_white_phosphorus_damage" />
+				</template_reference>
+				<template_reference name="on_absorbed_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="sp_dot_white_phosphorus_damage" />
+				</template_reference>
+				<bool name="can_hit_targets_outside_interactive_area" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\projectile_ext" List.ItemID="-238641361" List.ParentItemID="-238641361">
+				<bool name="collision_building_wall_panel_ignore" value="False" overrideParent="True" />
+				<float name="deathtimer" value="0" overrideParent="True" />
+				<float name="speed" value="120" comment="I removed the acceleration above and increased the speed from 80 to 120.  It feels better. - MOose" overrideParent="True" />
+				<float name="acceleration" value="0" comment="Having the projectile accelerate doesn't feel right.. the shell would decelerate if anything.  I increased the speed instead.  The original accelerate was set to 20, incase you really need it. - moose." overrideParent="True" />
+				<bool name="collision_land_ignore" value="True" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2102487" />
+		<instance_reference name="parent_pbg" value="ebps\gameplay\projectiles\parent\p_straight_shot_parent" />
+	</variant>
+</instance>

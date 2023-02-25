@@ -1,0 +1,58 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1856908301" List.ParentItemID="1856908301">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\american\props\munitions_paradrop_crate" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_inventory_item_ext" List.ItemID="-452458619" List.ParentItemID="-452458619">
+				<group name="requirement">
+					<state_tree_node name="statetree_condition_node" value="" overrideParent="True" />
+					<state_tree_node name="statetree_condition_default_command_prioritize_as_success" value="" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="1131043906" List.ParentItemID="1131043906">
+				<locstring name="help_text" value="11235558" overrideParent="True" />
+				<locstring name="screen_name" value="11235468" overrideParent="True" />
+				<locstring name="brief_text" value="11235908" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\attachment_child_ext" List.ItemID="2146639850" List.ParentItemID="2146639850">
+				<template_reference name="on_attach" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="munitions_c_airborne_supply_crates_more_muni_fuel_us" overrideParent="True" />
+				</template_reference>
+				<template_reference name="on_detach" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="weapon_detach" overrideParent="True" />
+				</template_reference>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="205830" />
+		<instance_reference name="parent_pbg" value="ebps\races\common\gameplay\airdrop_crate_template" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1856908301" List.ParentItemID="1856908301">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\american\props\munitions_paradrop_crate" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_inventory_item_ext" List.ItemID="-452458619" List.ParentItemID="-452458619">
+				<group name="requirement">
+					<state_tree_node name="statetree_condition_node" value="" overrideParent="True" />
+					<state_tree_node name="statetree_condition_default_command_prioritize_as_success" value="" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="1131043906" List.ParentItemID="1131043906">
+				<locstring name="help_text" value="11235558" overrideParent="True" />
+				<locstring name="screen_name" value="11235468" overrideParent="True" />
+				<locstring name="brief_text" value="11235908" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\attachment_child_ext" List.ItemID="2146639850" List.ParentItemID="2146639850">
+				<template_reference name="on_attach" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="munitions_c_airborne_supply_crates_more_muni_fuel_us" overrideParent="True" />
+				</template_reference>
+				<template_reference name="on_detach" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="weapon_detach" overrideParent="True" />
+				</template_reference>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="205830" />
+		<instance_reference name="parent_pbg" value="ebps\races\common\gameplay\airdrop_crate_template" />
+	</variant>
+</instance>

@@ -1,0 +1,428 @@
+<instance version="5" description="" template="abilities">
+	<variant name="default">
+		<group name="ability_bag">
+			<enum name="activation" value="targeted" />
+			<bool name="can_target_in_fow" value="True" />
+			<float name="caster_close_in_distance" value="0" />
+			<bool name="casters_can_evacuate" value="False" />
+			<enum_table name="cost_to_player">
+				<float name="action" value="0" />
+				<float name="command" value="0" />
+				<float name="popcap" value="0" />
+				<float name="fuel" value="0" />
+				<float name="munition" value="0" />
+				<float name="manpower" value="0" />
+				<float name="requisition" value="0" />
+				<float name="ultimate" value="0" />
+			</enum_table>
+			<string name="cursor_ghost_blueprint" value="" />
+			<float name="cursor_ghost_blueprint_angle" value="0" />
+			<bool name="disable_combat" value="False" />
+			<bool name="disable_when_active" value="False" />
+			<bool name="enable_in_building" value="False" />
+			<bool name="enable_in_vehicle" value="False" />
+			<bool name="engage_combat" value="False" />
+			<float name="entity_busy_time" value="0" />
+			<float name="facing_angle" value="5" />
+			<bool name="facing_ignore" value="True" />
+			<float name="final_close_in_distance" value="0" />
+			<bool name="fire_and_forget" value="False" />
+			<bool name="garrison_target" value="False" />
+			<bool name="initial_recharge" value="False" />
+			<bool name="move_back" value="False" />
+			<float name="move_back_distance" value="10" />
+			<float name="range" value="0" />
+			<bool name="range_ignore" value="True" />
+			<float name="recharge_time" value="0" />
+			<bool name="refundable" value="True" />
+			<bool name="require_no_shot_block" value="False" />
+			<enum name="shared_timer" value="" />
+			<bool name="shared_timer_player_wide" value="False" />
+			<enum name="squad_caster" value="one_entity" />
+			<enum name="target" value="tp_position" />
+			<float name="toggled_recharge_time_off" value="0" />
+			<float name="toggled_recharge_time_on" value="0" />
+			<group name="ui_cursor">
+				<string name="cursor_bad" value="modal_ability_cancel" />
+				<string name="cursor_good" value="modal_ability" />
+				<string name="cursor_nonmodal_good" value="" />
+			</group>
+			<group name="ui_info">
+				<locstring name="extra_text" value="0" />
+				<locstring name="help_text" value="0" />
+				<string name="hotkey_name" value="W" />
+				<file name="icon_name" value="common\battlegroups\airborne_right_1a_recon_loiter_us" />
+				<string name="overlay_name" value="" />
+				<bool name="reveal_for_decryption" value="False" />
+				<locstring name="screen_name" value="11189848" />
+				<file name="icon_alternate_name" value="" />
+				<locstring name="brief_text" value="0" />
+				<locstring name="help_text_alternate" value="0" />
+				<locstring name="screen_name_alternate" value="0" />
+				<locstring name="screen_name_short" value="0" />
+				<string name="debug_text" value="" />
+				<string name="tooltip_data_template" value="" />
+				<enum name="ui_combine_type" value="intersection" />
+				<template_reference name="brief_text_formatter" value="">
+				</template_reference>
+				<template_reference name="extra_text_formatter" value="">
+				</template_reference>
+				<template_reference name="help_text_formatter" value="">
+				</template_reference>
+				<template_reference name="help_text_alternate_formatter" value="">
+				</template_reference>
+				<template_reference name="screen_name_formatter" value="">
+				</template_reference>
+				<template_reference name="screen_name_alternate_formatter" value="">
+				</template_reference>
+				<template_reference name="screen_name_short_formatter" value="">
+				</template_reference>
+				<enum name="screen_name_visibility" value="visible" />
+				<string name="sound" value="" />
+				<string name="sound_alternative" value="" />
+			</group>
+			<locstring name="ui_usage_txt" value="0" />
+			<bool name="validate_actions" value="True" />
+			<list name="requirements">
+			</list>
+			<enum name="ability_super" value="tp_none" />
+			<group name="ui_position">
+				<int name="ui_position_row" value="3" />
+				<int name="ui_position_column" value="1" />
+			</group>
+			<bool name="ui_mini_map_capture" value="False" />
+			<bool name="facing_ignore_during_active" value="False" />
+			<instance_reference name="ui_range" value="ui_reticule\ability_range_default" />
+			<instance_reference name="ui_reticule" value="ui_reticule\ability_reticule_barrage_smoke" />
+			<float name="ui_reticule_radius_min" value="75" />
+			<float name="ui_reticule_radius_max" value="75" />
+			<enum name="pending_ability_out_of_range_behaviour" value="chase" />
+			<enum name="ui_ability_group" value="group_global" />
+			<string name="ui_targetable_sm_key" value="" />
+			<string name="ui_targetable_on_key" value="" />
+			<string name="ui_targetable_off_key" value="" />
+			<enum name="ui_targetable_receiver" value="local" />
+			<enum name="ui_combine_type" value="intersection" />
+			<enum_table name="ui_modal_highlight">
+				<bool name="world_sector" value="False" />
+				<bool name="map_sector" value="False" />
+				<bool name="map_sector_hq_link_extender" value="False" />
+			</enum_table>
+			<enum name="ui_group_cast_type" value="single" />
+			<list name="requirements_target">
+			</list>
+			<template_reference name="targeted_ability_option" value="options\none">
+			</template_reference>
+			<enum name="ui_direction_requirement" value="nondirectional" />
+			<instance_reference name="cursor_ghost_ebp" value="" />
+			<bool name="can_cast_whilst_constructing" value="False" />
+			<list name="requirements_self_recharge">
+			</list>
+			<bool name="can_cast_outside_active_battle_field" value="False" />
+			<enum_table name="cost_to_squad">
+				<float name="action" value="0" />
+				<float name="command" value="0" />
+				<float name="popcap" value="0" />
+				<float name="fuel" value="0" />
+				<float name="munition" value="0" />
+				<float name="manpower" value="0" />
+				<float name="requisition" value="0" />
+				<float name="ultimate" value="0" />
+			</enum_table>
+			<bool name="ability_super_event_cue" value="False" />
+			<enum name="ui_progress_bar_type" value="no_bar" />
+			<enum name="ui_ability_issue_type" value="Normal" />
+			<string name="speech_code" value="" />
+			<template_reference name="channeling" value="options\none">
+			</template_reference>
+			<bool name="can_be_interrupted" value="True" />
+			<template_reference name="casting_option" value="options\none">
+			</template_reference>
+			<template_reference name="proxy_range_option" value="options\none">
+			</template_reference>
+			<instance_reference name="ability_category" value="" />
+			<bool name="always_refund_cost_if_failed" value="False" />
+			<instance_reference name="ui_menu" value="" />
+			<int name="ui_combine_priority" value="0" />
+			<instance_reference name="construction_preview_override" value="" />
+			<enum name="statetree_ability_id" value="" />
+			<bool name="construction_preview" value="False" />
+			<state_tree_node name="entity_tree" value="" />
+			<state_tree_node name="squad_tree" value="" />
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_squad_tree" value="" />
+				<state_tree_node name="ability_activate_entity_tree" value="" />
+				<state_tree_node name="ability_activate_deferred_tree" value="" />
+			</group>
+			<state_tree_node name="statetree_node_prereq_self_requirement" value="" />
+			<state_tree_node name="statetree_node_prereq_target_requirement" value="" />
+			<state_tree_node name="statetree_node_prereq_self_recharge_requirement" value="" />
+			<float name="hold_period" value="0" />
+			<float name="min_range" value="0" />
+			<bool name="clear_ability_on_blueprint_conversion" value="True" />
+			<instance_reference name="ability_description" value="" />
+			<enum name="ability_description_storage_index" value="" />
+			<int name="default_command_weight_modifier" value="0" />
+			<state_tree_node name="global_tree" value="airborne_right_1a_recon_loiter_us" />
+			<bool name="ui_visibility_ignore_prerequisite" value="True" />
+			<bool name="use_simbox_to_simbox_range" value="True" />
+			<bool name="ui_range_reticule_shows_while_active" value="False" />
+			<bool name="can_move_to_cast" value="True" />
+			<list name="ui_contextual_info">
+			</list>
+			<bool name="show_range_reticule_in_contruction_item_preview" value="False" />
+			<string name="toggle_ability_group" value="" />
+			<instance_reference name="projectile_for_preview" value="" />
+			<bool name="ui_ability_can_display" value="True" />
+			<list name="enable_in_unit_types">
+			</list>
+			<enum name="ui_target_origin_point" value="center" />
+			<float name="can_use_ability_check_interval" value="0.125" />
+			<bool name="should_trigger_immediately" value="False" />
+			<locstring name="ui_user_prompt_issue_message" value="0" />
+			<state_tree_node name="squad_caster_entity_filter_condition" value="" />
+			<instance_reference name="ui_range_min" value="" />
+			<bool name="ui_range_reticule_can_cast_only" value="False" />
+			<bool name="ui_range_reticule_first_caster_only" value="True" />
+			<bool name="ui_range_reticule_enable_team_color" value="False" />
+			<bool name="terminal_command" value="False" />
+			<bool name="can_passive_ability_create_formation_squad_group" value="False" />
+			<bool name="can_cast_again_whilst_pending" value="False" />
+			<string name="ui_click_point_action_key" value="" />
+			<template_reference name="ui_ability_options" value="options\none">
+			</template_reference>
+			<state_tree_node name="statetree_node_prereq_highlight_requirement" value="" />
+			<bool name="highlight_targets" value="False" />
+			<bool name="use_movement_node_positions" value="False" />
+			<bool name="shared_timer_team_wide" value="False" />
+			<bool name="show_damage_preview" value="False" />
+			<bool name="use_concurrent_cast" value="False" />
+			<group name="HACK">
+				<bool name="HACK_apply_restoration_cost_for_targets" value="False" />
+			</group>
+			<bool name="toggled_dectivate_on_failed_requirements" value="True" />
+			<float name="min_shot_blocker_height" value="0" />
+			<group name="statetree_node_prereq_default_command_prioritize_as_success">
+				<state_tree_node name="statetree_node_self" value="" />
+				<state_tree_node name="statetree_node_target" value="" />
+			</group>
+			<state_tree_node name="statetree_node_prereq_entity_target_filter" value="" />
+			<state_tree_node name="statetree_node_prereq_entity_target_default_command_filter" value="" />
+		</group>
+		<uniqueid name="pbgid" value="204853" />
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+	<variant name="sp">
+		<group name="ability_bag">
+			<enum name="activation" value="targeted" />
+			<bool name="can_target_in_fow" value="True" />
+			<float name="caster_close_in_distance" value="0" />
+			<bool name="casters_can_evacuate" value="False" />
+			<enum_table name="cost_to_player">
+				<float name="action" value="0" />
+				<float name="command" value="0" />
+				<float name="popcap" value="0" />
+				<float name="fuel" value="0" />
+				<float name="munition" value="0" />
+				<float name="manpower" value="0" />
+				<float name="requisition" value="0" />
+				<float name="ultimate" value="0" />
+			</enum_table>
+			<string name="cursor_ghost_blueprint" value="" />
+			<float name="cursor_ghost_blueprint_angle" value="0" />
+			<bool name="disable_combat" value="False" />
+			<bool name="disable_when_active" value="False" />
+			<bool name="enable_in_building" value="False" />
+			<bool name="enable_in_vehicle" value="False" />
+			<bool name="engage_combat" value="False" />
+			<float name="entity_busy_time" value="0" />
+			<float name="facing_angle" value="5" />
+			<bool name="facing_ignore" value="True" />
+			<float name="final_close_in_distance" value="0" />
+			<bool name="fire_and_forget" value="False" />
+			<bool name="garrison_target" value="False" />
+			<bool name="initial_recharge" value="False" />
+			<bool name="move_back" value="False" />
+			<float name="move_back_distance" value="10" />
+			<float name="range" value="0" />
+			<bool name="range_ignore" value="True" />
+			<float name="recharge_time" value="0" />
+			<bool name="refundable" value="True" />
+			<bool name="require_no_shot_block" value="False" />
+			<enum name="shared_timer" value="" />
+			<bool name="shared_timer_player_wide" value="False" />
+			<enum name="squad_caster" value="one_entity" />
+			<enum name="target" value="tp_position" />
+			<float name="toggled_recharge_time_off" value="0" />
+			<float name="toggled_recharge_time_on" value="0" />
+			<group name="ui_cursor">
+				<string name="cursor_bad" value="modal_ability_cancel" />
+				<string name="cursor_good" value="modal_ability" />
+				<string name="cursor_nonmodal_good" value="" />
+			</group>
+			<group name="ui_info">
+				<locstring name="extra_text" value="0" />
+				<locstring name="help_text" value="0" />
+				<string name="hotkey_name" value="W" />
+				<file name="icon_name" value="common\battlegroups\airborne_right_1a_recon_loiter_us" />
+				<string name="overlay_name" value="" />
+				<bool name="reveal_for_decryption" value="False" />
+				<locstring name="screen_name" value="11189848" />
+				<file name="icon_alternate_name" value="" />
+				<locstring name="brief_text" value="0" />
+				<locstring name="help_text_alternate" value="0" />
+				<locstring name="screen_name_alternate" value="0" />
+				<locstring name="screen_name_short" value="0" />
+				<string name="debug_text" value="" />
+				<string name="tooltip_data_template" value="" />
+				<enum name="ui_combine_type" value="intersection" />
+				<template_reference name="brief_text_formatter" value="">
+				</template_reference>
+				<template_reference name="extra_text_formatter" value="">
+				</template_reference>
+				<template_reference name="help_text_formatter" value="">
+				</template_reference>
+				<template_reference name="help_text_alternate_formatter" value="">
+				</template_reference>
+				<template_reference name="screen_name_formatter" value="">
+				</template_reference>
+				<template_reference name="screen_name_alternate_formatter" value="">
+				</template_reference>
+				<template_reference name="screen_name_short_formatter" value="">
+				</template_reference>
+				<enum name="screen_name_visibility" value="visible" />
+				<string name="sound" value="" />
+				<string name="sound_alternative" value="" />
+			</group>
+			<locstring name="ui_usage_txt" value="0" />
+			<bool name="validate_actions" value="True" />
+			<list name="requirements">
+			</list>
+			<enum name="ability_super" value="tp_none" />
+			<group name="ui_position">
+				<int name="ui_position_row" value="3" />
+				<int name="ui_position_column" value="1" />
+			</group>
+			<bool name="ui_mini_map_capture" value="False" />
+			<bool name="facing_ignore_during_active" value="False" />
+			<instance_reference name="ui_range" value="ui_reticule\ability_range_default" />
+			<instance_reference name="ui_reticule" value="ui_reticule\ability_reticule_barrage_smoke" />
+			<float name="ui_reticule_radius_min" value="75" />
+			<float name="ui_reticule_radius_max" value="75" />
+			<enum name="pending_ability_out_of_range_behaviour" value="chase" />
+			<enum name="ui_ability_group" value="group_global" />
+			<string name="ui_targetable_sm_key" value="" />
+			<string name="ui_targetable_on_key" value="" />
+			<string name="ui_targetable_off_key" value="" />
+			<enum name="ui_targetable_receiver" value="local" />
+			<enum name="ui_combine_type" value="intersection" />
+			<enum_table name="ui_modal_highlight">
+				<bool name="world_sector" value="False" />
+				<bool name="map_sector" value="False" />
+				<bool name="map_sector_hq_link_extender" value="False" />
+			</enum_table>
+			<enum name="ui_group_cast_type" value="single" />
+			<list name="requirements_target">
+			</list>
+			<template_reference name="targeted_ability_option" value="options\none">
+			</template_reference>
+			<enum name="ui_direction_requirement" value="nondirectional" />
+			<instance_reference name="cursor_ghost_ebp" value="" />
+			<bool name="can_cast_whilst_constructing" value="False" />
+			<list name="requirements_self_recharge">
+			</list>
+			<bool name="can_cast_outside_active_battle_field" value="False" />
+			<enum_table name="cost_to_squad">
+				<float name="action" value="0" />
+				<float name="command" value="0" />
+				<float name="popcap" value="0" />
+				<float name="fuel" value="0" />
+				<float name="munition" value="0" />
+				<float name="manpower" value="0" />
+				<float name="requisition" value="0" />
+				<float name="ultimate" value="0" />
+			</enum_table>
+			<bool name="ability_super_event_cue" value="False" />
+			<enum name="ui_progress_bar_type" value="no_bar" />
+			<enum name="ui_ability_issue_type" value="Normal" />
+			<string name="speech_code" value="" />
+			<template_reference name="channeling" value="options\none">
+			</template_reference>
+			<bool name="can_be_interrupted" value="True" />
+			<template_reference name="casting_option" value="options\none">
+			</template_reference>
+			<template_reference name="proxy_range_option" value="options\none">
+			</template_reference>
+			<instance_reference name="ability_category" value="" />
+			<bool name="always_refund_cost_if_failed" value="False" />
+			<instance_reference name="ui_menu" value="" />
+			<int name="ui_combine_priority" value="0" />
+			<instance_reference name="construction_preview_override" value="" />
+			<enum name="statetree_ability_id" value="" />
+			<bool name="construction_preview" value="False" />
+			<state_tree_node name="entity_tree" value="" />
+			<state_tree_node name="squad_tree" value="" />
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_squad_tree" value="" />
+				<state_tree_node name="ability_activate_entity_tree" value="" />
+				<state_tree_node name="ability_activate_deferred_tree" value="" />
+			</group>
+			<state_tree_node name="statetree_node_prereq_self_requirement" value="" />
+			<state_tree_node name="statetree_node_prereq_target_requirement" value="" />
+			<state_tree_node name="statetree_node_prereq_self_recharge_requirement" value="" />
+			<float name="hold_period" value="0" />
+			<float name="min_range" value="0" />
+			<bool name="clear_ability_on_blueprint_conversion" value="True" />
+			<instance_reference name="ability_description" value="" />
+			<enum name="ability_description_storage_index" value="" />
+			<int name="default_command_weight_modifier" value="0" />
+			<state_tree_node name="global_tree" value="sp_airborne_right_1a_recon_loiter_us" />
+			<bool name="ui_visibility_ignore_prerequisite" value="True" />
+			<bool name="use_simbox_to_simbox_range" value="True" />
+			<bool name="ui_range_reticule_shows_while_active" value="False" />
+			<bool name="can_move_to_cast" value="True" />
+			<list name="ui_contextual_info">
+			</list>
+			<bool name="show_range_reticule_in_contruction_item_preview" value="False" />
+			<string name="toggle_ability_group" value="" />
+			<instance_reference name="projectile_for_preview" value="" />
+			<bool name="ui_ability_can_display" value="True" />
+			<list name="enable_in_unit_types">
+			</list>
+			<enum name="ui_target_origin_point" value="center" />
+			<float name="can_use_ability_check_interval" value="0.125" />
+			<bool name="should_trigger_immediately" value="False" />
+			<locstring name="ui_user_prompt_issue_message" value="0" />
+			<state_tree_node name="squad_caster_entity_filter_condition" value="" />
+			<instance_reference name="ui_range_min" value="" />
+			<bool name="ui_range_reticule_can_cast_only" value="False" />
+			<bool name="ui_range_reticule_first_caster_only" value="True" />
+			<bool name="ui_range_reticule_enable_team_color" value="False" />
+			<bool name="terminal_command" value="False" />
+			<bool name="can_passive_ability_create_formation_squad_group" value="False" />
+			<bool name="can_cast_again_whilst_pending" value="False" />
+			<string name="ui_click_point_action_key" value="" />
+			<template_reference name="ui_ability_options" value="options\none">
+			</template_reference>
+			<state_tree_node name="statetree_node_prereq_highlight_requirement" value="" />
+			<bool name="highlight_targets" value="False" />
+			<bool name="use_movement_node_positions" value="False" />
+			<bool name="shared_timer_team_wide" value="False" />
+			<bool name="show_damage_preview" value="False" />
+			<bool name="use_concurrent_cast" value="False" />
+			<group name="HACK">
+				<bool name="HACK_apply_restoration_cost_for_targets" value="False" />
+			</group>
+			<bool name="toggled_dectivate_on_failed_requirements" value="True" />
+			<float name="min_shot_blocker_height" value="0" />
+			<group name="statetree_node_prereq_default_command_prioritize_as_success">
+				<state_tree_node name="statetree_node_self" value="" />
+				<state_tree_node name="statetree_node_target" value="" />
+			</group>
+			<state_tree_node name="statetree_node_prereq_entity_target_filter" value="" />
+			<state_tree_node name="statetree_node_prereq_entity_target_default_command_filter" value="" />
+		</group>
+		<uniqueid name="pbgid" value="204853" />
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+</instance>

@@ -1,0 +1,33 @@
+<instance version="5" description="" template="army_skin">
+	<variant name="default">
+		<group name="army_skin_bag">
+			<file name="icon" value="races\common\buildings\capture_point" overrideParent="True" />
+			<locstring name="description" value="11226933" overrideParent="True" />
+			<template_reference name="inventory_item" value="inventory_item">
+				<uniqueid name="server_id" value="454130" />
+				<list name="races" overrideParent="True">
+					<instance_reference name="race" value="racebps\afrika_korps" overrideParent="True" List.ItemID="-1427672441" />
+				</list>
+				<list name="inventory_item_categories" overrideParent="True">
+					<instance_reference name="inventory_item_category" value="inventory_item_category\cosmetics\afrika_korps\capture_points\resource_point_ak_cosmetic" overrideParent="True" List.ItemID="-2114027304" />
+				</list>
+				<list name="inventory_item_attributes" removedIds="-1654155119">
+				</list>
+				<int name="ui_priority" value="0" overrideParent="True" />
+			</template_reference>
+			<locstring name="name" value="11227298" overrideParent="True" />
+			<list name="unit_references" overrideParent="True">
+				<instance_reference name="entity" value="ebps\gameplay\strategic_points\strategic\territory_strategic_point" List.ItemID="178235016" />
+				<instance_reference name="entity" value="ebps\gameplay\strategic_points\fuel\territory_fuel_point_high" List.ItemID="1818219900" />
+				<instance_reference name="entity" value="ebps\gameplay\strategic_points\fuel\territory_fuel_point_low" List.ItemID="226656843" />
+				<instance_reference name="entity" value="ebps\gameplay\strategic_points\fuel\territory_fuel_point_medium" List.ItemID="-109268168" />
+				<instance_reference name="entity" value="ebps\gameplay\strategic_points\munitions\territory_munitions_point_medium" List.ItemID="-1965237724" />
+				<instance_reference name="entity" value="ebps\gameplay\strategic_points\munitions\territory_munitions_point_low" List.ItemID="-1113940994" />
+				<instance_reference name="entity" value="ebps\gameplay\strategic_points\munitions\territory_munitions_point_high" List.ItemID="1158943412" />
+			</list>
+			<file name="icon_secondary_small" value="common\loadout\capturepoints_icn" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2081640" />
+		<instance_reference name="parent_pbg" value="army_skin\army_skin_root" />
+	</variant>
+</instance>

@@ -1,0 +1,52 @@
+<tuningtemplate csvfilename = "credits.csv" template="credits\section" pathregex="^credits\\section" createnewlocstringsonimport="true" exportlocstringastext="true" csvformatter="map">
+	<columns>
+		<attribute columnname="Section">
+			<query name="default">
+				<query name="credits_bag">
+					<value name="title" />
+				</query>
+			</query>
+		</attribute>
+		<attribute columnname="Subsection">
+			<query name="default">
+				<query name="credits_bag">
+					<query name="subsections">
+						<query name="subsection" rowset="subsection" usename="false">
+							<value name="title" />
+						</query>
+					</query>
+				</query>
+			</query>
+		</attribute>
+		<attribute columnname="Title">
+			<query name="default">
+				<query name="credits_bag">
+					<query name="subsections">
+						<query name="subsection" rowset="subsection" usename="false">
+							<query name="members">
+								<query name="member" rowset="member" usename="false">
+									<value name="title" />
+								</query>
+							</query>
+						</query>
+					</query>
+				</query>
+			</query>
+		</attribute>
+		<attribute columnname="Name">
+			<query name="default">
+				<query name="credits_bag">
+					<query name="subsections">
+						<query name="subsection" rowset="subsection" usename="false">
+							<query name="members">
+								<query name="member" rowset="member" usename="false">
+									<value name="name" />
+								</query>
+							</query>
+						</query>
+					</query>
+				</query>
+			</query>
+		</attribute>
+	</columns>
+</tuningtemplate>

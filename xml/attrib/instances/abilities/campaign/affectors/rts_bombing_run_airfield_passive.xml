@@ -1,0 +1,46 @@
+<instance version="5" description="Passive ability that does nothing (Used to trigger the actual ability unlock in RTS using the movement_node_modifier_ext)" template="abilities">
+	<variant name="default">
+		<group name="ability_bag">
+			<enum name="activation" value="always_on" overrideParent="True" />
+			<enum_table name="cost_to_player">
+				<float name="munition" value="0" overrideParent="True" />
+			</enum_table>
+			<group name="ui_position">
+				<int name="ui_position_row" value="-1" overrideParent="True" />
+				<int name="ui_position_column" value="-1" overrideParent="True" />
+			</group>
+			<instance_reference name="ui_range" value="" overrideParent="True" />
+			<instance_reference name="ui_reticule" value="" overrideParent="True" />
+			<enum name="ui_progress_bar_type" value="no_bar" overrideParent="True" />
+			<instance_reference name="ability_category" value="ability_category\cmap_mission_modifier_ability" overrideParent="True" />
+			<state_tree_node name="squad_tree" value="" overrideParent="True" />
+			<state_tree_node name="global_tree" value="rts_bombing_run_airfield_passive" overrideParent="True" />
+			<bool name="ui_range_reticule_first_caster_only" value="False" overrideParent="True" />
+			<bool name="facing_ignore" value="True" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="210344" />
+		<instance_reference name="parent_pbg" value="abilities\campaign\affectors\rts_bombing_run_airfield_us" />
+	</variant>
+	<variant name="sp">
+		<group name="ability_bag">
+			<enum name="activation" value="always_on" overrideParent="True" />
+			<enum_table name="cost_to_player">
+				<float name="munition" value="0" overrideParent="True" />
+			</enum_table>
+			<group name="ui_position">
+				<int name="ui_position_row" value="-1" overrideParent="True" />
+				<int name="ui_position_column" value="-1" overrideParent="True" />
+			</group>
+			<instance_reference name="ui_range" value="" overrideParent="True" />
+			<instance_reference name="ui_reticule" value="" overrideParent="True" />
+			<enum name="ui_progress_bar_type" value="no_bar" overrideParent="True" />
+			<instance_reference name="ability_category" value="ability_category\cmap_mission_modifier_ability" overrideParent="True" />
+			<state_tree_node name="squad_tree" value="" overrideParent="True" />
+			<state_tree_node name="global_tree" value="rts_bombing_run_airfield_passive" overrideParent="True" />
+			<bool name="ui_range_reticule_first_caster_only" value="False" overrideParent="True" />
+			<bool name="facing_ignore" value="True" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="210344" />
+		<instance_reference name="parent_pbg" value="abilities\campaign\affectors\rts_bombing_run_airfield_us" />
+	</variant>
+</instance>

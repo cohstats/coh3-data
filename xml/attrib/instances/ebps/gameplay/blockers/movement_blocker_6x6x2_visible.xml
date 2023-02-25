@@ -1,0 +1,148 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\impass_ext" List.ItemID="-664772419">
+				<bool name="cant_build" value="True" />
+				<group name="impass_simboxes">
+					<bool name="default_simbox" value="True" />
+					<list name="named_simboxes">
+					</list>
+				</group>
+				<list name="block_path">
+					<instance_reference name="path_type" value="pass_types\infantry" List.ItemID="-2145462367" />
+					<instance_reference name="path_type" value="pass_types\vehicle_light" List.ItemID="1532964847" />
+					<instance_reference name="path_type" value="pass_types\vehicle_medium" List.ItemID="-120482013" />
+					<instance_reference name="path_type" value="pass_types\vehicle_heavy" List.ItemID="-14678274" />
+					<instance_reference name="path_type" value="pass_types\vaulting_infantry" List.ItemID="-17363530" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_heavy" List.ItemID="1344860813" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_light" List.ItemID="-1242125745" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_medium" List.ItemID="-1291766358" />
+				</list>
+				<bool name="should_rasterize_partial_cells" value="False" />
+				<enum name="blocker_lifetime_type" value="add_once_to_terrain_and_never_remove" />
+				<file name="stamp_blockers" value="" />
+				<group name="center_cell">
+					<bool name="cant_build" value="False" />
+					<list name="block_path">
+					</list>
+				</group>
+				<list name="cant_build_exemptions">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-622785641">
+				<file name="alternate_sua" value="" />
+				<bool name="always_revealed_in_fow" value="True" />
+				<bool name="is_visible_in_game" value="True" />
+				<int name="precise_size" value="3" />
+				<enum name="default_spawn_type" value="" />
+				<instance_reference name="unit_badge" value="" />
+				<bool name="is_spawned_when_not_in_interactive_area" value="True" />
+				<bool name="is_wreck" value="False" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\gameplay\blockers\movement_blocker_6x6x2" />
+				<float name="animator_scale" value="100" />
+				<bool name="browsable_in_editor" value="True" />
+				<float name="entity_scale" value="100" />
+				<enum name="subclass_type" value="Generic" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\site_ext" List.ItemID="732175751">
+				<float name="extra_build_test_footprint_x" value="0" />
+				<bool name="snap_to_terrain" value="False" />
+				<bool name="lock_to_impass" value="True" />
+				<float name="extra_build_test_footprint_z" value="0" />
+				<float name="extra_build_test_footprint_offset_x" value="0" />
+				<float name="extra_build_test_footprint_offset_z" value="0" />
+				<float name="minimum_build_test_footprint_x" value="0" />
+				<float name="minimum_build_test_footprint_z" value="0" />
+				<enum name="impass_cell_check" value="AllCellsFree" />
+				<group name="footprint_scale">
+					<float name="x" value="0" />
+					<float name="y" value="0" />
+				</group>
+				<bool name="forced_axis_aligned_footprint" value="False" />
+				<bool name="remove_if_constructed_over" value="False" />
+				<list name="snap_to_surface_types">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_entity_ext" List.ItemID="1390141097">
+				<float name="rotate_snap" value="90" />
+				<bool name="kill_paradrop" value="False" />
+				<enum name="transferable" value="None" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="203147" />
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\impass_ext" List.ItemID="-664772419">
+				<bool name="cant_build" value="True" />
+				<group name="impass_simboxes">
+					<bool name="default_simbox" value="True" />
+					<list name="named_simboxes">
+					</list>
+				</group>
+				<list name="block_path">
+					<instance_reference name="path_type" value="pass_types\infantry" List.ItemID="-2145462367" />
+					<instance_reference name="path_type" value="pass_types\vehicle_light" List.ItemID="1532964847" />
+					<instance_reference name="path_type" value="pass_types\vehicle_medium" List.ItemID="-120482013" />
+					<instance_reference name="path_type" value="pass_types\vehicle_heavy" List.ItemID="-14678274" />
+					<instance_reference name="path_type" value="pass_types\vaulting_infantry" List.ItemID="-17363530" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_heavy" List.ItemID="1344860813" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_light" List.ItemID="-1242125745" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_medium" List.ItemID="-1291766358" />
+				</list>
+				<bool name="should_rasterize_partial_cells" value="False" />
+				<enum name="blocker_lifetime_type" value="add_once_to_terrain_and_never_remove" />
+				<file name="stamp_blockers" value="" />
+				<group name="center_cell">
+					<bool name="cant_build" value="False" />
+					<list name="block_path">
+					</list>
+				</group>
+				<list name="cant_build_exemptions">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-622785641">
+				<file name="alternate_sua" value="" />
+				<bool name="always_revealed_in_fow" value="True" />
+				<bool name="is_visible_in_game" value="True" />
+				<int name="precise_size" value="3" />
+				<enum name="default_spawn_type" value="" />
+				<instance_reference name="unit_badge" value="" />
+				<bool name="is_spawned_when_not_in_interactive_area" value="True" />
+				<bool name="is_wreck" value="False" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\gameplay\blockers\movement_blocker_6x6x2" />
+				<float name="animator_scale" value="100" />
+				<bool name="browsable_in_editor" value="True" />
+				<float name="entity_scale" value="100" />
+				<enum name="subclass_type" value="Generic" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\site_ext" List.ItemID="732175751">
+				<float name="extra_build_test_footprint_x" value="0" />
+				<bool name="snap_to_terrain" value="False" />
+				<bool name="lock_to_impass" value="True" />
+				<float name="extra_build_test_footprint_z" value="0" />
+				<float name="extra_build_test_footprint_offset_x" value="0" />
+				<float name="extra_build_test_footprint_offset_z" value="0" />
+				<float name="minimum_build_test_footprint_x" value="0" />
+				<float name="minimum_build_test_footprint_z" value="0" />
+				<enum name="impass_cell_check" value="AllCellsFree" />
+				<group name="footprint_scale">
+					<float name="x" value="0" />
+					<float name="y" value="0" />
+				</group>
+				<bool name="forced_axis_aligned_footprint" value="False" />
+				<bool name="remove_if_constructed_over" value="False" />
+				<list name="snap_to_surface_types">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_entity_ext" List.ItemID="1390141097">
+				<float name="rotate_snap" value="90" />
+				<bool name="kill_paradrop" value="False" />
+				<enum name="transferable" value="None" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="203147" />
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+</instance>

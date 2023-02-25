@@ -1,0 +1,11 @@
+<template description="A template to set up date and time. This implementation is a temp solution to cover date/time set up for game_mode_config. Shoud be set in UTC time zone. " can_be_instantiated="False" virtual_category="" can_be_modded="False" export_for_client="True">
+	<group name="date" description="A part that sets up a date" start_expanded="False">
+		<int name="day" description="Day of the month" min="1" max="31" default="1" />
+		<int name="month" description="Month of the year in numeric format" min="1" max="12" default="1" />
+		<int name="year" description="Year" min="1900" default="1900" />
+	</group>
+	<group name="time" description="A group that sets up time in 24h format" start_expanded="False">
+		<int name="hour" description="Hours since midnight" min="0" max="23" default="0" />
+		<int name="min" description="Minutes after the hour" min="0" max="59" default="0" />
+	</group>
+</template>

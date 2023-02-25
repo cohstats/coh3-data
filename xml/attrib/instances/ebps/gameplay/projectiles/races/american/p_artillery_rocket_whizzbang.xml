@@ -1,0 +1,124 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" comment="Temporarily scaled the rockets down to a smaller size in lieu of a better placeholder" List.ItemID="-679465560" List.ParentItemID="-679465560">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\projectile\p_whizzbang_180mm_demo_rocket" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\explosion_ext" List.ItemID="-993917996" List.ParentItemID="-993917996">
+				<group name="terrain_hit">
+					<enum name="cover_type" value="tp_light_cover" overrideParent="True" />
+					<group name="deformation">
+						<string name="deform_decal_file" value="deform_crater_a_hgt" overrideParent="True" />
+						<float name="rotation" value="1" overrideParent="True" />
+						<float name="vertical_scale" value="0.004" overrideParent="True" />
+					</group>
+					<float name="radius_max" value="6" overrideParent="True" />
+					<float name="radius_min" value="4" overrideParent="True" />
+					<float name="splat_only_splat_seconds" value="0" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\projectile_ext" List.ItemID="-242076861" List.ParentItemID="-242076861">
+				<float name="deathtimer" value="0" overrideParent="True" />
+				<bool name="delay_detonate_ui_enabled" value="True" overrideParent="True" />
+				<string name="launcher_marker" value="n/a" comment="not needed, using barrels_info for this whizzbang" overrideParent="True" />
+				<group name="barrels_info">
+					<list name="markers">
+						<string name="marker" value="fx_muzzle_01" List.ItemID="1308859562" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_02" List.ItemID="1776836347" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_03" List.ItemID="1896384487" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_04" List.ItemID="-1471042022" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_05" List.ItemID="1832578170" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_06" List.ItemID="-1997065541" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_07" List.ItemID="1867462300" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_08" List.ItemID="2140473395" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_09" List.ItemID="401169618" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_010" List.ItemID="-1674650160" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_011" List.ItemID="1928756311" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_012" List.ItemID="-1189766128" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_013" List.ItemID="-1539703870" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_014" List.ItemID="-324120277" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_015" List.ItemID="1886061313" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_016" List.ItemID="631195175" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_017" List.ItemID="-2101660101" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_018" List.ItemID="382699708" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_019" List.ItemID="-786824678" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_020" List.ItemID="16059511" List.ListAction="Append" />
+					</list>
+					<string name="cur_barrel_parameter" value="cur_barrel" overrideParent="True" />
+				</group>
+				<group name="artillery">
+					<bool name="can_counter_barrage" value="False" overrideParent="True" />
+					<enum name="firing_angle_type" value="lowest_non_collide_angle" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\animation_action_tree_ext" List.ItemID="-775565360" List.ListAction="Append">
+				<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				<bool name="use_root_motion" value="True" />
+				<enum name="entity_statetree_sort_tag" value="Default" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2102020" />
+		<instance_reference name="parent_pbg" value="ebps\gameplay\projectiles\parent\p_arc_shot_parent" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" comment="Temporarily scaled the rockets down to a smaller size in lieu of a better placeholder" List.ItemID="-679465560" List.ParentItemID="-679465560">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\projectile\p_whizzbang_180mm_demo_rocket" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\explosion_ext" List.ItemID="-993917996" List.ParentItemID="-993917996">
+				<group name="terrain_hit">
+					<enum name="cover_type" value="tp_light_cover" overrideParent="True" />
+					<group name="deformation">
+						<string name="deform_decal_file" value="deform_crater_a_hgt" overrideParent="True" />
+						<float name="rotation" value="1" overrideParent="True" />
+						<float name="vertical_scale" value="0.004" overrideParent="True" />
+					</group>
+					<float name="radius_max" value="6" overrideParent="True" />
+					<float name="radius_min" value="4" overrideParent="True" />
+					<float name="splat_only_splat_seconds" value="0" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\projectile_ext" List.ItemID="-242076861" List.ParentItemID="-242076861">
+				<float name="deathtimer" value="0" overrideParent="True" />
+				<bool name="delay_detonate_ui_enabled" value="True" overrideParent="True" />
+				<string name="launcher_marker" value="n/a" comment="not needed, using barrels_info for this whizzbang" overrideParent="True" />
+				<group name="barrels_info">
+					<list name="markers">
+						<string name="marker" value="fx_muzzle_01" List.ItemID="1308859562" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_02" List.ItemID="1776836347" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_03" List.ItemID="1896384487" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_04" List.ItemID="-1471042022" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_05" List.ItemID="1832578170" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_06" List.ItemID="-1997065541" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_07" List.ItemID="1867462300" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_08" List.ItemID="2140473395" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_09" List.ItemID="401169618" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_010" List.ItemID="-1674650160" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_011" List.ItemID="1928756311" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_012" List.ItemID="-1189766128" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_013" List.ItemID="-1539703870" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_014" List.ItemID="-324120277" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_015" List.ItemID="1886061313" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_016" List.ItemID="631195175" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_017" List.ItemID="-2101660101" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_018" List.ItemID="382699708" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_019" List.ItemID="-786824678" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_020" List.ItemID="16059511" List.ListAction="Append" />
+					</list>
+					<string name="cur_barrel_parameter" value="cur_barrel" overrideParent="True" />
+				</group>
+				<group name="artillery">
+					<bool name="can_counter_barrage" value="False" overrideParent="True" />
+					<enum name="firing_angle_type" value="lowest_non_collide_angle" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\animation_action_tree_ext" List.ItemID="-775565360" List.ListAction="Append">
+				<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				<bool name="use_root_motion" value="True" />
+				<enum name="entity_statetree_sort_tag" value="Default" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2102020" />
+		<instance_reference name="parent_pbg" value="ebps\gameplay\projectiles\parent\p_arc_shot_parent" />
+	</variant>
+</instance>

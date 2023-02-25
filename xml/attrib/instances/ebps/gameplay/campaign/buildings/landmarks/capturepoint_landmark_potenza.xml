@@ -1,0 +1,40 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="685403146" List.ParentItemID="685403146">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\campaign_map\buildings\castle_set\cm_castle_potenza" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="1645957704" List.ParentItemID="1645957704">
+				<list name="unit_type_list" removedIds="-966532861">
+					<enum name="unit_type" value="campaign_supply_point" List.ItemID="-789173044" List.ListAction="Append" />
+				</list>
+				<bool name="intersection_testing" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-1358206750" List.ParentItemID="-1358206750">
+				<locstring name="help_text" value="0" overrideParent="True" />
+				<locstring name="screen_name" value="11205230" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2062647" />
+		<instance_reference name="parent_pbg" value="ebps\gameplay\campaign\buildings\landmarks\capturepoint_landmark_church" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="685403146" List.ParentItemID="685403146">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\campaign_map\buildings\castle_set\cm_castle_potenza" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="1645957704" List.ParentItemID="1645957704">
+				<list name="unit_type_list" removedIds="-966532861">
+					<enum name="unit_type" value="campaign_supply_point" List.ItemID="-789173044" List.ListAction="Append" />
+				</list>
+				<bool name="intersection_testing" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-1358206750" List.ParentItemID="-1358206750">
+				<locstring name="help_text" value="0" overrideParent="True" />
+				<locstring name="screen_name" value="11205230" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2062647" />
+		<instance_reference name="parent_pbg" value="ebps\gameplay\campaign\buildings\landmarks\capturepoint_landmark_church" />
+	</variant>
+</instance>

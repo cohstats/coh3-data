@@ -1,0 +1,122 @@
+<instance version="5" description="" template="abilities">
+	<variant name="default">
+		<group name="ability_bag">
+			<enum_table name="cost_to_player">
+				<float name="munition" value="30" overrideParent="True" />
+			</enum_table>
+			<group name="ui_info">
+				<locstring name="help_text" value="11240971" overrideParent="True" />
+				<file name="icon_name" value="common\abilities\grenade_sturmpioneer_ger" overrideParent="True" />
+				<locstring name="screen_name" value="11238883" overrideParent="True" />
+				<locstring name="brief_text" value="11240058" overrideParent="True" />
+			</group>
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_entity_tree" value="grenade_oto_m35_ak" overrideParent="True" />
+			</group>
+			<instance_reference name="projectile_for_preview" value="ebps\gameplay\projectiles\races\afrika_korps\p_throw_grenade_oto" overrideParent="True" />
+			<list name="requirements">
+				<template_reference name="required" value="requirements\required_any_in_list" List.ItemID="1505181274" List.ListAction="Append">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="0" />
+					<list name="requirements">
+						<template_reference name="requirement" value="requirements\required_structure" List.ItemID="1173393124">
+							<enum name="reason" value="usage" />
+							<locstring name="ui_name" value="0" />
+							<instance_reference name="structure_name" value="ebps\races\afrika_korps\buildings\production\mechanized_kompanie_ak" />
+							<int name="required_structure_count" value="1" />
+							<bool name="check_team" value="False" />
+							<bool name="require_construction_complete" value="True" />
+							<group name="include_pbg_parenting">
+								<bool name="include_child_pbgs" value="False" />
+								<bool name="include_parent_pbgs" value="False" />
+							</group>
+						</template_reference>
+						<template_reference name="requirement" value="requirements\required_player_upgrade" List.ItemID="973326064">
+							<enum name="reason" value="usage" />
+							<locstring name="ui_name" value="0" />
+							<bool name="is_present" value="True" />
+							<int name="max_completed" value="100" />
+							<int name="min_completed" value="1" />
+							<instance_reference name="upgrade_name" value="upgrade\afrika_korps\research\t1\t1_unit_unlock_ak" />
+							<bool name="include_completed" value="True" />
+							<bool name="include_queued" value="False" />
+							<group name="include_pbg_parenting">
+								<bool name="include_child_pbgs" value="False" />
+								<bool name="include_parent_pbgs" value="False" />
+							</group>
+						</template_reference>
+					</list>
+				</template_reference>
+			</list>
+		</group>
+		<uniqueid name="pbgid" value="2059636" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\infantry\grenade_parent" />
+	</variant>
+	<variant name="sp">
+		<group name="ability_bag">
+			<enum_table name="cost_to_player">
+				<float name="munition" value="30" overrideParent="True" />
+			</enum_table>
+			<group name="ui_info">
+				<locstring name="help_text" value="11240971" overrideParent="True" />
+				<file name="icon_name" value="common\abilities\grenade_sturmpioneer_ger" overrideParent="True" />
+				<locstring name="screen_name" value="11238883" overrideParent="True" />
+				<locstring name="brief_text" value="11240058" overrideParent="True" />
+			</group>
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_entity_tree" value="sp_grenade_oto_m35_ak" overrideParent="True" />
+			</group>
+			<instance_reference name="projectile_for_preview" value="ebps\gameplay\projectiles\races\afrika_korps\p_throw_grenade_oto" overrideParent="True" />
+			<list name="requirements">
+				<template_reference name="required" value="requirements\required_any_in_list" List.ItemID="1663889902" List.ListAction="Append">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="0" />
+					<list name="requirements">
+						<template_reference name="requirement" value="requirements\required_structure" List.ItemID="1173393124">
+							<enum name="reason" value="usage" />
+							<locstring name="ui_name" value="0" />
+							<instance_reference name="structure_name" value="ebps\races\afrika_korps\buildings\production\mechanized_kompanie_ak" />
+							<int name="required_structure_count" value="1" />
+							<bool name="check_team" value="False" />
+							<bool name="require_construction_complete" value="True" />
+							<group name="include_pbg_parenting">
+								<bool name="include_child_pbgs" value="False" />
+								<bool name="include_parent_pbgs" value="False" />
+							</group>
+						</template_reference>
+						<template_reference name="requirement" value="requirements\required_player_upgrade" List.ItemID="544885568">
+							<enum name="reason" value="usage" />
+							<locstring name="ui_name" value="0" />
+							<bool name="is_present" value="True" />
+							<int name="max_completed" value="100" />
+							<int name="min_completed" value="1" />
+							<instance_reference name="upgrade_name" value="upgrade\campaign\missions\sp_generic_tech_unlock" />
+							<bool name="include_completed" value="True" />
+							<bool name="include_queued" value="False" />
+							<group name="include_pbg_parenting">
+								<bool name="include_child_pbgs" value="False" />
+								<bool name="include_parent_pbgs" value="False" />
+							</group>
+						</template_reference>
+						<template_reference name="requirement" value="requirements\required_player_upgrade" List.ItemID="973326064">
+							<enum name="reason" value="usage" />
+							<locstring name="ui_name" value="0" />
+							<bool name="is_present" value="True" />
+							<int name="max_completed" value="100" />
+							<int name="min_completed" value="1" />
+							<instance_reference name="upgrade_name" value="upgrade\afrika_korps\research\t1\t1_unit_unlock_ak" />
+							<bool name="include_completed" value="True" />
+							<bool name="include_queued" value="False" />
+							<group name="include_pbg_parenting">
+								<bool name="include_child_pbgs" value="False" />
+								<bool name="include_parent_pbgs" value="False" />
+							</group>
+						</template_reference>
+					</list>
+				</template_reference>
+			</list>
+		</group>
+		<uniqueid name="pbgid" value="2059636" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\infantry\grenade_parent" />
+	</variant>
+</instance>

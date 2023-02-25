@@ -1,0 +1,238 @@
+<instance version="5" description="" template="statemodel_schema">
+	<variant name="default">
+		<uniqueid name="pbgid" value="181187" />
+		<group name="schema_bag">
+			<list name="bool_properties">
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="1759728483">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="critical_engine_damage" />
+				</template_reference>
+				<template_reference name="boolean" value="statemodel_bool_property" comment="This exists as a hack to force the restore ability to end early (if you can't afford to restore the wreck, it will set this to true)" List.ItemID="1787633482">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="end_ability_early_hack_for_vehicle_restore" />
+				</template_reference>
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="1778576215">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="buttoned" />
+				</template_reference>
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="1721127190">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="towing" />
+				</template_reference>
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="-1360036972">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="hold_occupied" />
+				</template_reference>
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="-884376623">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="has_pending_death_critical" />
+				</template_reference>
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="-1295083970">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="has_completed_death_critical" />
+				</template_reference>
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="1266644109">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="campaign_supply_cache" />
+				</template_reference>
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="380615221">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="campaign_current_partisan_target" />
+				</template_reference>
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="1863700116">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="command_piv_aura" />
+				</template_reference>
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="-1405673984">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="snare_immune" />
+				</template_reference>
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="87115871">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="use_weapon_range_for_ability_chase" />
+				</template_reference>
+			</list>
+			<list name="float_properties">
+				<template_reference name="float" value="statemodel_float_property" comment="FIX for a UI crash.. DO NOT DELETE WITHOUT TESTING THE GAME" List.ItemID="-760789073">
+					<float name="default" value="0" />
+					<enum name="float_property_id" value="UI_Progress" />
+				</template_reference>
+				<template_reference name="float" value="statemodel_float_property" List.ItemID="937286630">
+					<float name="default" value="0" />
+					<enum name="float_property_id" value="vehicle_button_count" comment="note: This is not how many buttons it can have, 'buttoning' a vehicle refers to attacking it with small arms fire, disabling vision slots, etc." />
+				</template_reference>
+			</list>
+			<list name="int_properties">
+				<template_reference name="int" value="statemodel_int_property" comment="FIX for a UI crash.. DO NOT DELETE WITHOUT TESTING THE GAME" List.ItemID="-754103030">
+					<int name="default" value="0" />
+					<enum name="int_property_id" value="UI_Duration" />
+				</template_reference>
+				<template_reference name="int" value="statemodel_int_property" List.ItemID="264202720">
+					<int name="default" value="0" />
+					<enum name="int_property_id" value="posture" />
+				</template_reference>
+				<template_reference name="int" value="statemodel_int_property" List.ItemID="665278675">
+					<int name="default" value="0" />
+					<enum name="int_property_id" value="ally_death_count" />
+				</template_reference>
+				<template_reference name="int" value="statemodel_int_property" List.ItemID="-1493972345">
+					<int name="default" value="0" />
+					<enum name="int_property_id" value="number_italian_units" />
+				</template_reference>
+			</list>
+			<list name="vector3f_properties">
+			</list>
+			<list name="enum_table_properties">
+			</list>
+			<list name="target_properties">
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="586733981">
+					<enum name="target_property_id" value="temporary_ability_target_01" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-1163157919">
+					<enum name="target_property_id" value="meta_mission_node_winner" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-614466500">
+					<enum name="target_property_id" value="recovery_vehicle_restore_target" />
+				</template_reference>
+			</list>
+			<list name="list_properties">
+			</list>
+			<list name="pbgid_properties">
+				<template_reference name="pbgid" value="statemodel_pbgid_property" List.ItemID="-672450228">
+					<enum name="pbgid_property_id" value="turret_ability" />
+					<instance_reference name="default" value="" />
+				</template_reference>
+				<template_reference name="pbgid" value="statemodel_pbgid_property" List.ItemID="1939803680">
+					<enum name="pbgid_property_id" value="ability_weapon_concurrent" />
+					<instance_reference name="default" value="" />
+				</template_reference>
+			</list>
+			<list name="sub_schemas">
+				<instance_reference name="schema" value="statemodel_schema\forced_critical" List.ItemID="1537772527" />
+			</list>
+			<list name="attribute_enum_properties">
+			</list>
+			<list name="generic_handle_properties">
+			</list>
+		</group>
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+	<variant name="sp">
+		<uniqueid name="pbgid" value="181187" />
+		<group name="schema_bag">
+			<list name="bool_properties">
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="1759728483">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="critical_engine_damage" />
+				</template_reference>
+				<template_reference name="boolean" value="statemodel_bool_property" comment="This exists as a hack to force the restore ability to end early (if you can't afford to restore the wreck, it will set this to true)" List.ItemID="1787633482">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="end_ability_early_hack_for_vehicle_restore" />
+				</template_reference>
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="1778576215">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="buttoned" />
+				</template_reference>
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="1721127190">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="towing" />
+				</template_reference>
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="-1360036972">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="hold_occupied" />
+				</template_reference>
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="-884376623">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="has_pending_death_critical" />
+				</template_reference>
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="-1295083970">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="has_completed_death_critical" />
+				</template_reference>
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="1266644109">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="campaign_supply_cache" />
+				</template_reference>
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="380615221">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="campaign_current_partisan_target" />
+				</template_reference>
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="1863700116">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="command_piv_aura" />
+				</template_reference>
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="-1405673984">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="snare_immune" />
+				</template_reference>
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="87115871">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="use_weapon_range_for_ability_chase" />
+				</template_reference>
+			</list>
+			<list name="float_properties">
+				<template_reference name="float" value="statemodel_float_property" comment="FIX for a UI crash.. DO NOT DELETE WITHOUT TESTING THE GAME" List.ItemID="-760789073">
+					<float name="default" value="0" />
+					<enum name="float_property_id" value="UI_Progress" />
+				</template_reference>
+				<template_reference name="float" value="statemodel_float_property" List.ItemID="937286630">
+					<float name="default" value="0" />
+					<enum name="float_property_id" value="vehicle_button_count" comment="note: This is not how many buttons it can have, 'buttoning' a vehicle refers to attacking it with small arms fire, disabling vision slots, etc." />
+				</template_reference>
+			</list>
+			<list name="int_properties">
+				<template_reference name="int" value="statemodel_int_property" comment="FIX for a UI crash.. DO NOT DELETE WITHOUT TESTING THE GAME" List.ItemID="-754103030">
+					<int name="default" value="0" />
+					<enum name="int_property_id" value="UI_Duration" />
+				</template_reference>
+				<template_reference name="int" value="statemodel_int_property" List.ItemID="264202720">
+					<int name="default" value="0" />
+					<enum name="int_property_id" value="posture" />
+				</template_reference>
+				<template_reference name="int" value="statemodel_int_property" List.ItemID="665278675">
+					<int name="default" value="0" />
+					<enum name="int_property_id" value="ally_death_count" />
+				</template_reference>
+				<template_reference name="int" value="statemodel_int_property" List.ItemID="-1493972345">
+					<int name="default" value="0" />
+					<enum name="int_property_id" value="number_italian_units" />
+				</template_reference>
+			</list>
+			<list name="vector3f_properties">
+			</list>
+			<list name="enum_table_properties">
+			</list>
+			<list name="target_properties">
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="586733981">
+					<enum name="target_property_id" value="temporary_ability_target_01" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-1163157919">
+					<enum name="target_property_id" value="meta_mission_node_winner" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-614466500">
+					<enum name="target_property_id" value="recovery_vehicle_restore_target" />
+				</template_reference>
+			</list>
+			<list name="list_properties">
+			</list>
+			<list name="pbgid_properties">
+				<template_reference name="pbgid" value="statemodel_pbgid_property" List.ItemID="-672450228">
+					<enum name="pbgid_property_id" value="turret_ability" />
+					<instance_reference name="default" value="" />
+				</template_reference>
+				<template_reference name="pbgid" value="statemodel_pbgid_property" List.ItemID="1939803680">
+					<enum name="pbgid_property_id" value="ability_weapon_concurrent" />
+					<instance_reference name="default" value="" />
+				</template_reference>
+			</list>
+			<list name="sub_schemas">
+				<instance_reference name="schema" value="statemodel_schema\forced_critical" List.ItemID="1537772527" />
+			</list>
+			<list name="attribute_enum_properties">
+			</list>
+			<list name="generic_handle_properties">
+			</list>
+		</group>
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+</instance>

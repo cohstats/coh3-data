@@ -1,0 +1,194 @@
+<instance version="5" description="Lee Enfield for Tommy africa UK" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\animation_action_tree_ext" List.ItemID="-253452022">
+				<state_tree_node name="ActionTree_OpeningBranch" value="physical_weapon_ranged" />
+				<bool name="use_root_motion" value="True" />
+				<enum name="entity_statetree_sort_tag" value="weapon_default" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-281467554">
+				<file name="alternate_sua" value="" />
+				<bool name="always_revealed_in_fow" value="False" />
+				<bool name="is_visible_in_game" value="True" />
+				<int name="precise_size" value="-1" />
+				<enum name="default_spawn_type" value="" />
+				<instance_reference name="unit_badge" value="" />
+				<bool name="is_spawned_when_not_in_interactive_area" value="True" />
+				<bool name="is_wreck" value="False" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\british_africa\weapons\rifle_lee_enfield_africa" />
+				<float name="animator_scale" value="100" />
+				<bool name="browsable_in_editor" value="True" />
+				<float name="entity_scale" value="100" />
+				<enum name="subclass_type" value="Generic" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_targeting_ext" List.ItemID="-1752547359">
+				<bool name="allow_weapon_target_scanning" value="False" />
+				<int name="history_size" value="2" />
+				<bool name="allow_entity_scan_close_enemies" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\weapon_ext" List.ItemID="115730712">
+				<instance_reference name="weapon" value="weapon\british_africa\small_arms\single_fire\rifle\lee_enfield_tommy_africa_uk" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\marker_ext" List.ItemID="1648784754">
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_inventory_item_ext" List.ItemID="-2023966462">
+				<template_reference name="simulation_item" value="sim_inventory_item\sim_inventory_item">
+					<int name="capacity_required" value="0" />
+					<group name="ownership_attributes">
+						<enum name="compatible_owner_type" value="entity" />
+						<enum name="ownership_sharing_type" value="single" />
+						<float name="drop_on_death_chance" value="0" />
+						<bool name="auto_equip" value="False" />
+					</group>
+					<template_reference name="item_data" value="sim_inventory_item\sim_item_data\attachment_inventory_data">
+						<template_reference name="attachment_data" value="options\attachment_types\entity_attachment">
+							<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+								<template_reference name="attach_data" value="attachments\attach_data">
+									<string name="marker_name_parent" value="" />
+									<string name="parent_rigidbody_target_name" value="" />
+									<enum name="game_object_attachment_type" value="scenegraph" />
+								</template_reference>
+								<instance_reference name="ebp" value="ebps\races\british_africa\weapons\small_arms\single_fire\rifle\w_lee_enfield_tommy_africa_uk" />
+								<group name="attachment_flags">
+									<bool name="sim_only" value="False" />
+									<bool name="no_pathfinding" value="True" />
+									<bool name="not_snappable" value="False" />
+									<bool name="restore_snap_to_ground_on_detach" value="True" />
+									<bool name="no_sim_update" value="False" />
+									<bool name="join_parent_squad" value="False" />
+									<bool name="redirect_damage_to_parent_entity" value="True" />
+									<bool name="receive_parent_animations" value="False" />
+									<bool name="receive_parent_death" value="False" />
+								</group>
+							</template_reference>
+						</template_reference>
+					</template_reference>
+					<string name="default_slot" value="" />
+					<enum name="category" value="default" />
+				</template_reference>
+				<group name="requirement">
+					<state_tree_node name="statetree_condition_node" value="" />
+					<instance_reference name="requirement_param" value="" />
+					<state_tree_node name="statetree_condition_default_command_prioritize_as_success" value="" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\requirement_ext" List.ItemID="1407918789">
+				<list name="requirement_table">
+				</list>
+				<state_tree_node name="requirement_statetree" value="" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_entity_ext" List.ItemID="-1442452716">
+				<float name="rotate_snap" value="90" />
+				<bool name="kill_paradrop" value="False" />
+				<enum name="transferable" value="None" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="1711863892">
+				<string name="speaker_code" value="" />
+				<group name="speech_parameters">
+					<string name="class_code" value="weapons" />
+					<string name="name_code" value="rifle" />
+					<string name="unit_code" value="w_lee_enfield_tommy_uk" />
+				</group>
+				<int name="importance" value="1" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2071349" />
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\animation_action_tree_ext" List.ItemID="-253452022">
+				<state_tree_node name="ActionTree_OpeningBranch" value="physical_weapon_ranged" />
+				<bool name="use_root_motion" value="True" />
+				<enum name="entity_statetree_sort_tag" value="weapon_default" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-281467554">
+				<file name="alternate_sua" value="" />
+				<bool name="always_revealed_in_fow" value="False" />
+				<bool name="is_visible_in_game" value="True" />
+				<int name="precise_size" value="-1" />
+				<enum name="default_spawn_type" value="" />
+				<instance_reference name="unit_badge" value="" />
+				<bool name="is_spawned_when_not_in_interactive_area" value="True" />
+				<bool name="is_wreck" value="False" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\british_africa\weapons\rifle_lee_enfield_africa" />
+				<float name="animator_scale" value="100" />
+				<bool name="browsable_in_editor" value="True" />
+				<float name="entity_scale" value="100" />
+				<enum name="subclass_type" value="Generic" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_targeting_ext" List.ItemID="-1752547359">
+				<bool name="allow_weapon_target_scanning" value="False" />
+				<int name="history_size" value="2" />
+				<bool name="allow_entity_scan_close_enemies" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\weapon_ext" List.ItemID="115730712">
+				<instance_reference name="weapon" value="weapon\british_africa\small_arms\single_fire\rifle\lee_enfield_tommy_africa_uk" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\marker_ext" List.ItemID="1648784754">
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_inventory_item_ext" List.ItemID="-2023966462">
+				<template_reference name="simulation_item" value="sim_inventory_item\sim_inventory_item">
+					<int name="capacity_required" value="0" />
+					<group name="ownership_attributes">
+						<enum name="compatible_owner_type" value="entity" />
+						<enum name="ownership_sharing_type" value="single" />
+						<float name="drop_on_death_chance" value="0" />
+						<bool name="auto_equip" value="False" />
+					</group>
+					<template_reference name="item_data" value="sim_inventory_item\sim_item_data\attachment_inventory_data">
+						<template_reference name="attachment_data" value="options\attachment_types\entity_attachment">
+							<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+								<template_reference name="attach_data" value="attachments\attach_data">
+									<string name="marker_name_parent" value="" />
+									<string name="parent_rigidbody_target_name" value="" />
+									<enum name="game_object_attachment_type" value="scenegraph" />
+								</template_reference>
+								<instance_reference name="ebp" value="ebps\races\british_africa\weapons\small_arms\single_fire\rifle\w_lee_enfield_tommy_africa_uk" />
+								<group name="attachment_flags">
+									<bool name="sim_only" value="False" />
+									<bool name="no_pathfinding" value="True" />
+									<bool name="not_snappable" value="False" />
+									<bool name="restore_snap_to_ground_on_detach" value="True" />
+									<bool name="no_sim_update" value="False" />
+									<bool name="join_parent_squad" value="False" />
+									<bool name="redirect_damage_to_parent_entity" value="True" />
+									<bool name="receive_parent_animations" value="False" />
+									<bool name="receive_parent_death" value="False" />
+								</group>
+							</template_reference>
+						</template_reference>
+					</template_reference>
+					<string name="default_slot" value="" />
+					<enum name="category" value="default" />
+				</template_reference>
+				<group name="requirement">
+					<state_tree_node name="statetree_condition_node" value="" />
+					<instance_reference name="requirement_param" value="" />
+					<state_tree_node name="statetree_condition_default_command_prioritize_as_success" value="" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\requirement_ext" List.ItemID="1407918789">
+				<list name="requirement_table">
+				</list>
+				<state_tree_node name="requirement_statetree" value="" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_entity_ext" List.ItemID="-1442452716">
+				<float name="rotate_snap" value="90" />
+				<bool name="kill_paradrop" value="False" />
+				<enum name="transferable" value="None" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="1711863892">
+				<string name="speaker_code" value="" />
+				<group name="speech_parameters">
+					<string name="class_code" value="weapons" />
+					<string name="name_code" value="rifle" />
+					<string name="unit_code" value="w_lee_enfield_tommy_uk" />
+				</group>
+				<int name="importance" value="1" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2071349" />
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+</instance>

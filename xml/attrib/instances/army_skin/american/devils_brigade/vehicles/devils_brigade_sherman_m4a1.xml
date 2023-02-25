@@ -1,0 +1,35 @@
+<instance version="5" description="" template="army_skin">
+	<variant name="default">
+		<group name="army_skin_bag">
+			<file name="icon" value="races\american\cosmetics\devils_brigade\vehicles\us_sherman_devilsbrigade" overrideParent="True" />
+			<locstring name="description" value="11232138" overrideParent="True" />
+			<template_reference name="inventory_item" value="inventory_item">
+				<uniqueid name="server_id" value="453391" />
+				<list name="races" overrideParent="True">
+					<instance_reference name="race" value="racebps\americans" List.ItemID="-379575045" />
+				</list>
+				<list name="inventory_item_categories" overrideParent="True">
+					<instance_reference name="inventory_item_category" value="inventory_item_category\cosmetics\american\vehicles\sherman_us_cosmetic" List.ItemID="-1526313492" />
+				</list>
+				<instance_reference name="rarity" value="loot_tier\legendary" overrideParent="True" />
+			</template_reference>
+			<locstring name="name" value="11222451" overrideParent="True" />
+			<list name="remapped_pbgs" overrideParent="True">
+				<template_reference name="remapped_attachment_list" value="pbg_remapping\attachment_list_remapping" List.ItemID="707183705">
+					<instance_reference name="original_pbg" value="attachments\attachment_list\races\american\vehicles\sherman_m4a1\default_sherman_m4a1" />
+					<instance_reference name="replacement_pbg" value="attachments\attachment_list\cosmetics\american\devils_brigade\heavy_vehicles\devils_brigade_sherman_m4a1" />
+				</template_reference>
+				<template_reference name="remapped_attachment_list" value="pbg_remapping\attachment_list_remapping" List.ItemID="-610296058">
+					<instance_reference name="original_pbg" value="attachments\attachment_list\races\american\weapons\cannon_75mm_sherman\default_cannon_75mm_sherman" />
+					<instance_reference name="replacement_pbg" value="attachments\attachment_list\cosmetics\american\devils_brigade\weapons\devils_brigade_cannon_75mm_sherman" />
+				</template_reference>
+			</list>
+			<list name="unit_references" overrideParent="True">
+				<instance_reference name="squad" value="sbps\races\american\vehicles\sherman_us" List.ItemID="-1236115152" />
+			</list>
+			<file name="icon_secondary_small" value="common\loadout\tanks_icn" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2074244" />
+		<instance_reference name="parent_pbg" value="army_skin\army_skin_root" />
+	</variant>
+</instance>

@@ -1,0 +1,196 @@
+<instance version="5" description="" template="statemodel_schema">
+	<variant name="default">
+		<uniqueid name="pbgid" value="2064317" />
+		<group name="schema_bag">
+			<list name="int_properties">
+				<template_reference name="int" value="statemodel_int_property" List.ItemID="-708999186" List.ParentItemID="-708999186">
+					<int name="default" value="0" overrideParent="True" />
+					<enum name="int_property_id" value="campaign_partisan_group_duration" overrideParent="True" />
+				</template_reference>
+				<template_reference name="int" value="statemodel_int_property" List.ItemID="-2109004029" List.ParentItemID="-2109004029">
+					<int name="default" value="0" overrideParent="True" />
+					<enum name="int_property_id" value="campaign_partisan_group_chance" overrideParent="True" />
+				</template_reference>
+			</list>
+			<list name="target_properties" overrideParent="True">
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-651994239">
+					<enum name="target_property_id" value="unload_destination_node" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-41224777">
+					<enum name="target_property_id" value="meta_visual_attack_target" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-1926222684">
+					<enum name="target_property_id" value="meta_move_destination_target" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-1739111679">
+					<enum name="target_property_id" value="company_facing_direction" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="971536417">
+					<enum name="target_property_id" value="spawned_hmg_platoon" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-1774315580">
+					<enum name="target_property_id" value="spawned_riflemen_platoon" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-757657366">
+					<enum name="target_property_id" value="spawned_paratrooper_platoon" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-1567235973">
+					<enum name="target_property_id" value="campaign_attachment_owner" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-1357101389">
+					<enum name="target_property_id" value="paradrop_target" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-1892425831">
+					<enum name="target_property_id" value="retreat_from_target" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-462516774">
+					<enum name="target_property_id" value="retreat_exclude_target" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-1594881437">
+					<enum name="target_property_id" value="overwatch_target" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-2083443948">
+					<enum name="target_property_id" value="crowdlife_start" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-244075237">
+					<enum name="target_property_id" value="crowdlife_destination" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="297642602">
+					<enum name="target_property_id" value="campaign_detachment_fixed_position" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-421962628">
+					<enum name="target_property_id" value="campaign_spawner_supply_provider_target" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="1306486599">
+					<enum name="target_property_id" value="campaign_capture_target" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-1790783461">
+					<enum name="target_property_id" value="campaign_partisan_group_ability_target" overrideParent="True" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-1644725447">
+					<enum name="target_property_id" value="campaign_partisan_group_spawn_target" overrideParent="True" />
+				</template_reference>
+			</list>
+			<list name="list_properties" overrideParent="True">
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="901664131">
+					<int name="max_list_size" value="3" />
+					<enum name="data_type" value="target" />
+					<enum name="list_property_id" value="owned_platoons" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="1106503999">
+					<int name="max_list_size" value="100" />
+					<enum name="data_type" value="target" />
+					<enum name="list_property_id" value="registered_construction_structures" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="40273177">
+					<int name="max_list_size" value="10" />
+					<enum name="data_type" value="target" />
+					<enum name="list_property_id" value="owned_aircrafts" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-775361716">
+					<int name="max_list_size" value="15" overrideParent="True" />
+					<enum name="data_type" value="target" />
+					<enum name="list_property_id" value="campaign_partisan_group_locations" overrideParent="True" />
+				</template_reference>
+			</list>
+		</group>
+		<instance_reference name="parent_pbg" value="statemodel_schema\campaign\squad_campaign" />
+	</variant>
+	<variant name="sp">
+		<uniqueid name="pbgid" value="2064317" />
+		<group name="schema_bag">
+			<list name="int_properties">
+				<template_reference name="int" value="statemodel_int_property" List.ItemID="-708999186" List.ParentItemID="-708999186">
+					<int name="default" value="0" overrideParent="True" />
+					<enum name="int_property_id" value="campaign_partisan_group_duration" overrideParent="True" />
+				</template_reference>
+				<template_reference name="int" value="statemodel_int_property" List.ItemID="-2109004029" List.ParentItemID="-2109004029">
+					<int name="default" value="0" overrideParent="True" />
+					<enum name="int_property_id" value="campaign_partisan_group_chance" overrideParent="True" />
+				</template_reference>
+			</list>
+			<list name="target_properties" overrideParent="True">
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-651994239">
+					<enum name="target_property_id" value="unload_destination_node" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-41224777">
+					<enum name="target_property_id" value="meta_visual_attack_target" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-1926222684">
+					<enum name="target_property_id" value="meta_move_destination_target" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-1739111679">
+					<enum name="target_property_id" value="company_facing_direction" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="971536417">
+					<enum name="target_property_id" value="spawned_hmg_platoon" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-1774315580">
+					<enum name="target_property_id" value="spawned_riflemen_platoon" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-757657366">
+					<enum name="target_property_id" value="spawned_paratrooper_platoon" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-1567235973">
+					<enum name="target_property_id" value="campaign_attachment_owner" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-1357101389">
+					<enum name="target_property_id" value="paradrop_target" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-1892425831">
+					<enum name="target_property_id" value="retreat_from_target" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-462516774">
+					<enum name="target_property_id" value="retreat_exclude_target" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-1594881437">
+					<enum name="target_property_id" value="overwatch_target" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-2083443948">
+					<enum name="target_property_id" value="crowdlife_start" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-244075237">
+					<enum name="target_property_id" value="crowdlife_destination" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="297642602">
+					<enum name="target_property_id" value="campaign_detachment_fixed_position" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-421962628">
+					<enum name="target_property_id" value="campaign_spawner_supply_provider_target" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="1306486599">
+					<enum name="target_property_id" value="campaign_capture_target" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-1790783461">
+					<enum name="target_property_id" value="campaign_partisan_group_ability_target" overrideParent="True" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-1644725447">
+					<enum name="target_property_id" value="campaign_partisan_group_spawn_target" overrideParent="True" />
+				</template_reference>
+			</list>
+			<list name="list_properties" overrideParent="True">
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="901664131">
+					<int name="max_list_size" value="3" />
+					<enum name="data_type" value="target" />
+					<enum name="list_property_id" value="owned_platoons" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="1106503999">
+					<int name="max_list_size" value="100" />
+					<enum name="data_type" value="target" />
+					<enum name="list_property_id" value="registered_construction_structures" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="40273177">
+					<int name="max_list_size" value="10" />
+					<enum name="data_type" value="target" />
+					<enum name="list_property_id" value="owned_aircrafts" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-775361716">
+					<int name="max_list_size" value="15" overrideParent="True" />
+					<enum name="data_type" value="target" />
+					<enum name="list_property_id" value="campaign_partisan_group_locations" overrideParent="True" />
+				</template_reference>
+			</list>
+		</group>
+		<instance_reference name="parent_pbg" value="statemodel_schema\campaign\squad_campaign" />
+	</variant>
+</instance>

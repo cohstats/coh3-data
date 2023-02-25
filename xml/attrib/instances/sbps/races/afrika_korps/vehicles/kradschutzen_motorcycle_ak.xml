@@ -1,0 +1,274 @@
+<instance version="5" description="" template="sbps">
+	<variant name="default">
+		<list name="extensions" removedIds="-1052523762">
+			<template_reference name="squadexts" value="sbpextensions\squad_ability_ext" List.ItemID="-282815056" List.ParentItemID="-282815056">
+				<list name="abilities">
+					<instance_reference name="ability" value="abilities\races\afrika_korps\vehicles\recon_kradschutzen_ak" List.ItemID="-888196375" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\afrika_korps\vehicles\self_repair_sdkfz_254_ak" List.ItemID="85868084" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\afrika_korps\vehicles\veterancy_abilities\infantry_support_motorcycle_ak" List.ItemID="1582194555" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\common\veterancy\vehicle\common_shared_veterancy_dummy_parent" overrideParent="True" List.ItemID="-1573465711" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_action_apply_ext" List.ItemID="-1221160168" List.ParentItemID="-1221160168">
+				<list name="action_state_trees">
+					<group name="container" List.ItemID="1894453801" List.ListAction="Append">
+						<state_tree_node name="state_tree" value="" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_loadout_ext" List.ItemID="-1664135055" List.ParentItemID="-1664135055">
+				<list name="unit_list">
+					<group name="loadout_data" List.ItemID="-226045775" List.ParentItemID="-226045775">
+						<instance_reference name="type" value="ebps\races\afrika_korps\vehicles\kradschutzen_motorcycle_ak" overrideParent="True" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_ui_ext" List.ItemID="538184085" List.ParentItemID="538184085">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-660682231" List.ParentItemID="-660682231">
+						<group name="info">
+							<locstring name="extra_text" value="0" overrideParent="True" />
+							<locstring name="help_text" value="11235814" overrideParent="True" />
+							<file name="icon_name" value="races\afrika_corps\vehicles\kradschutzen_motorcycle_ak" overrideParent="True" />
+							<file name="minimap_texture" value="common\units\symbols\vehicle_light_symbol" overrideParent="True" />
+							<locstring name="screen_name" value="11181945" overrideParent="True" />
+							<string name="selection_group" value="kradschutzen_ak" overrideParent="True" />
+							<int name="ui_priority" value="27" overrideParent="True" />
+							<locstring name="brief_text" value="11242023" overrideParent="True" />
+							<locstring name="screen_name_short" value="11221175" overrideParent="True" />
+							<file name="symbol_icon_name" value="common\units\symbols\kettenkrad_sdkfz_2_ger" overrideParent="True" />
+							<group name="ui_armor_info">
+								<file name="armor_icon" value="common\units\vehicle_armor\ultra_light_motorcycle" overrideParent="True" />
+								<list name="armor_critical_damage" removedIds="-1700889201, 435372287">
+									<group name="critical_damage_coordinate_bag" List.ItemID="-444383023" List.ParentItemID="-444383023">
+										<float name="x" value="64" overrideParent="True" />
+										<file name="armor_section_highlight_icon" value="common\units\vehicle_armor\ultra_light_motorcycle_engine_damaged" overrideParent="True" />
+									</group>
+									<group name="critical_damage_coordinate_bag" List.ItemID="140851124" List.ParentItemID="140851124">
+										<instance_reference name="squad_status" value="squad_status\indicators\heavy_engine_damaged" overrideParent="True" />
+										<float name="x" value="64" overrideParent="True" />
+										<float name="y" value="33" overrideParent="True" />
+										<file name="armor_section_highlight_icon" value="common\units\vehicle_armor\ultra_light_motorcycle_engine_critical" overrideParent="True" />
+									</group>
+								</list>
+							</group>
+							<file name="portrait_name" value="races\afrika_corps\vehicles\kradschutzen_motorcycle_ak_portrait" overrideParent="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_veterancy_ext" List.ItemID="2097749377" List.ParentItemID="2097749377">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="875582807" List.ParentItemID="875582807">
+						<group name="info">
+							<list name="veterancy_rank_info">
+								<group name="veterancy_rank" List.ItemID="-27007290" List.ParentItemID="-27007290">
+									<float name="veterancy_value" value="600" overrideParent="True" />
+									<group name="state_tree_references">
+										<template_reference name="squad_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="veterancy_level_up\level_up" overrideParent="True" />
+										</template_reference>
+									</group>
+									<locstring name="screen_name" value="11153313" overrideParent="True" />
+									<locstring name="brief_text" value="11243238" overrideParent="True" />
+								</group>
+								<group name="veterancy_rank" List.ItemID="1804371674" List.ParentItemID="1804371674">
+									<float name="veterancy_value" value="1800" overrideParent="True" />
+									<group name="state_tree_references">
+										<template_reference name="squad_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="veterancy_level_up\level_up" overrideParent="True" />
+										</template_reference>
+									</group>
+									<locstring name="screen_name" value="11153314" overrideParent="True" />
+									<locstring name="brief_text" value="11243328" overrideParent="True" />
+								</group>
+								<group name="veterancy_rank" List.ItemID="724926371" List.ParentItemID="724926371">
+									<float name="veterancy_value" value="4200" overrideParent="True" />
+									<group name="state_tree_references">
+										<template_reference name="squad_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="veterancy_level_up\level_up" overrideParent="True" />
+										</template_reference>
+									</group>
+									<locstring name="screen_name" value="11153315" overrideParent="True" />
+									<locstring name="brief_text" value="11243243" overrideParent="True" />
+								</group>
+							</list>
+							<bool name="can_receive_shared_veterancy" value="True" overrideParent="True" />
+							<enum name="shared_veterancy_type" value="vet_support_vehicle" comment="This is whether the unit RECEIVES shared veterancy from squads with squad_shared_veterancy_ext. In general, any squad that can fight should have no_sharing." overrideParent="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_type_ext" List.ItemID="29649503" List.ParentItemID="29649503">
+				<list name="squad_type_list" removedIds="1246486437, -824999149, -1069887652">
+					<enum name="squad_type" value="ultra_light" overrideParent="True" List.ItemID="598256563" List.ListAction="Append" />
+					<enum name="squad_type" value="dak_light_vehicle" List.ItemID="-1652418553" List.ListAction="Append" />
+					<enum name="squad_type" value="tier1" List.ItemID="-2084438089" List.ListAction="Append" />
+					<enum name="squad_type" value="vehicle_support" overrideParent="True" List.ItemID="-440328347" List.ListAction="Append" />
+				</list>
+				<list name="squad_race_type_list" removedIds="1428119654">
+					<instance_reference name="squad_race_type" value="racebps\afrika_korps" List.ItemID="314574576" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_speech_ext" List.ItemID="1947268137" List.ParentItemID="1947268137">
+				<string name="squad_speaker_code" value="dak_light_utility_vehicle" overrideParent="True" />
+				<group name="squad_speech_parameters">
+					<string name="squad_name_code" value="motorcycle" overrideParent="True" />
+					<string name="squad_unit_code" value="kradschutzen_motorcycle_ak" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_formation_ext" List.ItemID="2092017614" List.ParentItemID="2092017614">
+				<float name="combat_follower_cover_search_radius" value="0" overrideParent="True" />
+				<float name="move_dest_cover_search_radius" value="0" overrideParent="True" />
+				<bool name="support_weapons_to_flanks" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_capture_strategic_point_ext" List.ItemID="308165257" List.ParentItemID="308165257">
+				<float name="capture_rate_multiplier" value="1.25" overrideParent="True" />
+				<float name="revert_rate_multiplier" value="1" overrideParent="True" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_audio_ext" List.ItemID="40543565" List.ParentItemID="40543565">
+				<enum name="unit_type" value="vehicle_small" overrideParent="True" />
+				<int name="importance" value="25" overrideParent="True" />
+				<bool name="disable_reverb" value="False" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="198355" />
+		<instance_reference name="parent_pbg" value="sbps\races\common\parent\vehicle_parent" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions" removedIds="-1052523762">
+			<template_reference name="squadexts" value="sbpextensions\squad_ability_ext" List.ItemID="-282815056" List.ParentItemID="-282815056">
+				<list name="abilities">
+					<instance_reference name="ability" value="abilities\races\afrika_korps\vehicles\recon_kradschutzen_ak" List.ItemID="-888196375" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\afrika_korps\vehicles\self_repair_sdkfz_254_ak" List.ItemID="85868084" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\afrika_korps\vehicles\veterancy_abilities\infantry_support_motorcycle_ak" List.ItemID="1582194555" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\common\veterancy\vehicle\common_shared_veterancy_dummy_parent" overrideParent="True" List.ItemID="-1573465711" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_action_apply_ext" List.ItemID="-1221160168" List.ParentItemID="-1221160168">
+				<list name="action_state_trees">
+					<group name="container" List.ItemID="1894453801" List.ListAction="Append">
+						<state_tree_node name="state_tree" value="" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_loadout_ext" List.ItemID="-1664135055" List.ParentItemID="-1664135055">
+				<list name="unit_list">
+					<group name="loadout_data" List.ItemID="-226045775" List.ParentItemID="-226045775">
+						<instance_reference name="type" value="ebps\races\afrika_korps\vehicles\kradschutzen_motorcycle_ak" overrideParent="True" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_ui_ext" List.ItemID="538184085" List.ParentItemID="538184085">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-660682231" List.ParentItemID="-660682231">
+						<group name="info">
+							<locstring name="extra_text" value="0" overrideParent="True" />
+							<locstring name="help_text" value="11235814" overrideParent="True" />
+							<file name="icon_name" value="races\afrika_corps\vehicles\kradschutzen_motorcycle_ak" overrideParent="True" />
+							<file name="minimap_texture" value="common\units\symbols\vehicle_light_symbol" overrideParent="True" />
+							<locstring name="screen_name" value="11181945" overrideParent="True" />
+							<string name="selection_group" value="kradschutzen_ak" overrideParent="True" />
+							<int name="ui_priority" value="27" overrideParent="True" />
+							<locstring name="brief_text" value="11242023" overrideParent="True" />
+							<locstring name="screen_name_short" value="11221175" overrideParent="True" />
+							<file name="symbol_icon_name" value="common\units\symbols\kettenkrad_sdkfz_2_ger" overrideParent="True" />
+							<group name="ui_armor_info">
+								<file name="armor_icon" value="common\units\vehicle_armor\ultra_light_motorcycle" overrideParent="True" />
+								<list name="armor_critical_damage" removedIds="-1700889201, 435372287">
+									<group name="critical_damage_coordinate_bag" List.ItemID="-444383023" List.ParentItemID="-444383023">
+										<float name="x" value="64" overrideParent="True" />
+										<file name="armor_section_highlight_icon" value="common\units\vehicle_armor\ultra_light_motorcycle_engine_damaged" overrideParent="True" />
+									</group>
+									<group name="critical_damage_coordinate_bag" List.ItemID="140851124" List.ParentItemID="140851124">
+										<instance_reference name="squad_status" value="squad_status\indicators\heavy_engine_damaged" overrideParent="True" />
+										<float name="x" value="64" overrideParent="True" />
+										<float name="y" value="33" overrideParent="True" />
+										<file name="armor_section_highlight_icon" value="common\units\vehicle_armor\ultra_light_motorcycle_engine_critical" overrideParent="True" />
+									</group>
+								</list>
+							</group>
+							<file name="portrait_name" value="races\afrika_corps\vehicles\kradschutzen_motorcycle_ak_portrait" overrideParent="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_veterancy_ext" List.ItemID="2097749377" List.ParentItemID="2097749377">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="875582807" List.ParentItemID="875582807">
+						<group name="info">
+							<list name="veterancy_rank_info">
+								<group name="veterancy_rank" List.ItemID="-27007290" List.ParentItemID="-27007290">
+									<float name="veterancy_value" value="600" overrideParent="True" />
+									<group name="state_tree_references">
+										<template_reference name="squad_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="sp_veterancy_level_up\level_up" overrideParent="True" />
+										</template_reference>
+									</group>
+									<locstring name="screen_name" value="11153313" overrideParent="True" />
+									<locstring name="brief_text" value="11243238" overrideParent="True" />
+								</group>
+								<group name="veterancy_rank" List.ItemID="1804371674" List.ParentItemID="1804371674">
+									<float name="veterancy_value" value="1800" overrideParent="True" />
+									<group name="state_tree_references">
+										<template_reference name="squad_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="sp_veterancy_level_up\level_up" overrideParent="True" />
+										</template_reference>
+									</group>
+									<locstring name="screen_name" value="11153314" overrideParent="True" />
+									<locstring name="brief_text" value="11243328" overrideParent="True" />
+								</group>
+								<group name="veterancy_rank" List.ItemID="724926371" List.ParentItemID="724926371">
+									<float name="veterancy_value" value="4200" overrideParent="True" />
+									<group name="state_tree_references">
+										<template_reference name="squad_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="sp_veterancy_level_up\level_up" overrideParent="True" />
+										</template_reference>
+									</group>
+									<locstring name="screen_name" value="11153315" overrideParent="True" />
+									<locstring name="brief_text" value="11243243" overrideParent="True" />
+								</group>
+							</list>
+							<bool name="can_receive_shared_veterancy" value="True" overrideParent="True" />
+							<enum name="shared_veterancy_type" value="vet_support_vehicle" comment="This is whether the unit RECEIVES shared veterancy from squads with squad_shared_veterancy_ext. In general, any squad that can fight should have no_sharing." overrideParent="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_type_ext" List.ItemID="29649503" List.ParentItemID="29649503">
+				<list name="squad_type_list" removedIds="1246486437, -824999149, -1069887652">
+					<enum name="squad_type" value="ultra_light" overrideParent="True" List.ItemID="598256563" List.ListAction="Append" />
+					<enum name="squad_type" value="dak_light_vehicle" List.ItemID="-1652418553" List.ListAction="Append" />
+					<enum name="squad_type" value="tier1" List.ItemID="-2084438089" List.ListAction="Append" />
+					<enum name="squad_type" value="vehicle_support" overrideParent="True" List.ItemID="-440328347" List.ListAction="Append" />
+				</list>
+				<list name="squad_race_type_list" removedIds="1428119654">
+					<instance_reference name="squad_race_type" value="racebps\afrika_korps" List.ItemID="314574576" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_speech_ext" List.ItemID="1947268137" List.ParentItemID="1947268137">
+				<string name="squad_speaker_code" value="dak_light_utility_vehicle" overrideParent="True" />
+				<group name="squad_speech_parameters">
+					<string name="squad_name_code" value="motorcycle" overrideParent="True" />
+					<string name="squad_unit_code" value="kradschutzen_motorcycle_ak" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_formation_ext" List.ItemID="2092017614" List.ParentItemID="2092017614">
+				<float name="combat_follower_cover_search_radius" value="0" overrideParent="True" />
+				<float name="move_dest_cover_search_radius" value="0" overrideParent="True" />
+				<bool name="support_weapons_to_flanks" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_capture_strategic_point_ext" List.ItemID="308165257" List.ParentItemID="308165257">
+				<float name="capture_rate_multiplier" value="1.25" overrideParent="True" />
+				<float name="revert_rate_multiplier" value="1" overrideParent="True" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_audio_ext" List.ItemID="40543565" List.ParentItemID="40543565">
+				<enum name="unit_type" value="vehicle_small" overrideParent="True" />
+				<int name="importance" value="25" overrideParent="True" />
+				<bool name="disable_reverb" value="False" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="198355" />
+		<instance_reference name="parent_pbg" value="sbps\races\common\parent\vehicle_parent" />
+	</variant>
+</instance>

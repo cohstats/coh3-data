@@ -1,0 +1,200 @@
+<instance version="5" description="" template="sbps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="squadexts" value="sbpextensions\squad_ability_ext" List.ItemID="-282815056" List.ParentItemID="-282815056">
+				<list name="abilities">
+					<instance_reference name="ability" value="abilities\prioritize_vehicles" List.ItemID="1974248159" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\british\vehicles\repair_critical_engine_damage_uk" List.ItemID="1813344489" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\british\vehicles\veterancy_abilities\heroic_charge_crusader_uk" List.ItemID="-520945027" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\common\hold_fire" List.ItemID="970232554" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\british\vehicles\veterancy_abilities\heroic_charge_crusader_triggered_uk" overrideParent="True" List.ItemID="1580507192" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_loadout_ext" List.ItemID="-1664135055" List.ParentItemID="-1664135055">
+				<list name="unit_list">
+					<group name="loadout_data" List.ItemID="-226045775" List.ParentItemID="-226045775">
+						<instance_reference name="type" value="ebps\races\british\vehicles\crusader_uk" overrideParent="True" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_ui_ext" List.ItemID="538184085" List.ParentItemID="538184085">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-660682231" List.ParentItemID="-660682231">
+						<group name="info">
+							<locstring name="extra_text" value="0" overrideParent="True" />
+							<locstring name="help_text" value="11241849" overrideParent="True" />
+							<file name="icon_name" value="common\units\icons\vehicle_british_cromwell" overrideParent="True" />
+							<locstring name="screen_name" value="11180065" overrideParent="True" />
+							<string name="selection_group" value="crusader_uk" overrideParent="True" />
+							<locstring name="brief_text" value="11242143" overrideParent="True" />
+							<file name="symbol_icon_name" value="races\british\symbols\crusader_uk" overrideParent="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_upgrade_ext" List.ItemID="-1882955164" List.ParentItemID="-1882955164">
+				<list name="upgrades">
+					<instance_reference name="upgrade" value="upgrade\british\vehicle\weapon_57mm_crusader_uk" List.ItemID="-114377633" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_veterancy_ext" List.ItemID="2097749377" List.ParentItemID="2097749377">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="875582807" List.ParentItemID="875582807">
+						<group name="info">
+							<list name="veterancy_rank_info">
+								<group name="veterancy_rank" List.ItemID="-27007290" List.ParentItemID="-27007290">
+									<float name="veterancy_value" value="1950" overrideParent="True" />
+									<group name="state_tree_references">
+										<template_reference name="squad_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="veterancy_level_up\level_up" overrideParent="True" />
+										</template_reference>
+									</group>
+									<locstring name="screen_name" value="11153313" overrideParent="True" />
+									<locstring name="brief_text" value="11243490" overrideParent="True" />
+								</group>
+								<group name="veterancy_rank" List.ItemID="1804371674" List.ParentItemID="1804371674">
+									<float name="veterancy_value" value="5850" overrideParent="True" />
+									<group name="state_tree_references">
+										<template_reference name="squad_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="veterancy_level_up\level_up" overrideParent="True" />
+										</template_reference>
+									</group>
+									<locstring name="screen_name" value="11153314" overrideParent="True" />
+									<locstring name="brief_text" value="11243633" overrideParent="True" />
+								</group>
+								<group name="veterancy_rank" List.ItemID="724926371" List.ParentItemID="724926371">
+									<float name="veterancy_value" value="13650" overrideParent="True" />
+									<group name="state_tree_references">
+										<template_reference name="squad_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="veterancy_level_up\level_up" overrideParent="True" />
+										</template_reference>
+									</group>
+									<locstring name="screen_name" value="11153315" overrideParent="True" />
+									<locstring name="brief_text" value="11243629" overrideParent="True" />
+								</group>
+							</list>
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_type_ext" List.ItemID="29649503" List.ParentItemID="29649503">
+				<list name="squad_race_type_list" removedIds="1428119654">
+					<instance_reference name="squad_race_type" value="racebps\british" List.ItemID="661238412" List.ListAction="Append" />
+				</list>
+				<list name="squad_type_list">
+					<enum name="squad_type" value="vehicle_turret" overrideParent="True" List.ItemID="-1069887652" List.ParentItemID="-1069887652" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_speech_ext" List.ItemID="1947268137" List.ParentItemID="1947268137">
+				<string name="squad_speaker_code" value="uk_medium_armor" overrideParent="True" />
+				<group name="squad_speech_parameters">
+					<string name="squad_unit_code" value="crusader_uk" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_audio_ext" List.ItemID="40543565" List.ParentItemID="40543565">
+				<int name="importance" value="25" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="197515" />
+		<instance_reference name="parent_pbg" value="sbps\races\common\parent\vehicle_parent" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="squadexts" value="sbpextensions\squad_ability_ext" List.ItemID="-282815056" List.ParentItemID="-282815056">
+				<list name="abilities">
+					<instance_reference name="ability" value="abilities\prioritize_vehicles" List.ItemID="1974248159" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\british\vehicles\repair_critical_engine_damage_uk" List.ItemID="1813344489" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\british\vehicles\veterancy_abilities\heroic_charge_crusader_uk" List.ItemID="-520945027" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\common\hold_fire" List.ItemID="970232554" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\british\vehicles\veterancy_abilities\heroic_charge_crusader_triggered_uk" overrideParent="True" List.ItemID="1580507192" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_loadout_ext" List.ItemID="-1664135055" List.ParentItemID="-1664135055">
+				<list name="unit_list">
+					<group name="loadout_data" List.ItemID="-226045775" List.ParentItemID="-226045775">
+						<instance_reference name="type" value="ebps\races\british\vehicles\crusader_uk" overrideParent="True" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_ui_ext" List.ItemID="538184085" List.ParentItemID="538184085">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-660682231" List.ParentItemID="-660682231">
+						<group name="info">
+							<locstring name="extra_text" value="0" overrideParent="True" />
+							<locstring name="help_text" value="11241849" overrideParent="True" />
+							<file name="icon_name" value="common\units\icons\vehicle_british_cromwell" overrideParent="True" />
+							<locstring name="screen_name" value="11180065" overrideParent="True" />
+							<string name="selection_group" value="crusader_uk" overrideParent="True" />
+							<locstring name="brief_text" value="11242143" overrideParent="True" />
+							<file name="symbol_icon_name" value="races\british\symbols\crusader_uk" overrideParent="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_upgrade_ext" List.ItemID="-1882955164" List.ParentItemID="-1882955164">
+				<list name="upgrades">
+					<instance_reference name="upgrade" value="upgrade\british\vehicle\weapon_57mm_crusader_uk" List.ItemID="-114377633" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_veterancy_ext" List.ItemID="2097749377" List.ParentItemID="2097749377">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="875582807" List.ParentItemID="875582807">
+						<group name="info">
+							<list name="veterancy_rank_info">
+								<group name="veterancy_rank" List.ItemID="-27007290" List.ParentItemID="-27007290">
+									<float name="veterancy_value" value="1950" overrideParent="True" />
+									<group name="state_tree_references">
+										<template_reference name="squad_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="sp_veterancy_level_up\level_up" overrideParent="True" />
+										</template_reference>
+									</group>
+									<locstring name="screen_name" value="11153313" overrideParent="True" />
+									<locstring name="brief_text" value="11243490" overrideParent="True" />
+								</group>
+								<group name="veterancy_rank" List.ItemID="1804371674" List.ParentItemID="1804371674">
+									<float name="veterancy_value" value="5850" overrideParent="True" />
+									<group name="state_tree_references">
+										<template_reference name="squad_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="sp_veterancy_level_up\level_up" overrideParent="True" />
+										</template_reference>
+									</group>
+									<locstring name="screen_name" value="11153314" overrideParent="True" />
+									<locstring name="brief_text" value="11243633" overrideParent="True" />
+								</group>
+								<group name="veterancy_rank" List.ItemID="724926371" List.ParentItemID="724926371">
+									<float name="veterancy_value" value="13650" overrideParent="True" />
+									<group name="state_tree_references">
+										<template_reference name="squad_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="sp_veterancy_level_up\level_up" overrideParent="True" />
+										</template_reference>
+									</group>
+									<locstring name="screen_name" value="11153315" overrideParent="True" />
+									<locstring name="brief_text" value="11243629" overrideParent="True" />
+								</group>
+							</list>
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_type_ext" List.ItemID="29649503" List.ParentItemID="29649503">
+				<list name="squad_race_type_list" removedIds="1428119654">
+					<instance_reference name="squad_race_type" value="racebps\british" List.ItemID="661238412" List.ListAction="Append" />
+				</list>
+				<list name="squad_type_list">
+					<enum name="squad_type" value="vehicle_turret" overrideParent="True" List.ItemID="-1069887652" List.ParentItemID="-1069887652" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_speech_ext" List.ItemID="1947268137" List.ParentItemID="1947268137">
+				<string name="squad_speaker_code" value="uk_medium_armor" overrideParent="True" />
+				<group name="squad_speech_parameters">
+					<string name="squad_unit_code" value="crusader_uk" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_audio_ext" List.ItemID="40543565" List.ParentItemID="40543565">
+				<int name="importance" value="25" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="197515" />
+		<instance_reference name="parent_pbg" value="sbps\races\common\parent\vehicle_parent" />
+	</variant>
+</instance>

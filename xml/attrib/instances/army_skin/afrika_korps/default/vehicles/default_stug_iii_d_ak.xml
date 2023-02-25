@@ -1,0 +1,30 @@
+<instance version="5" description="" template="army_skin">
+	<variant name="default">
+		<group name="army_skin_bag">
+			<locstring name="description" value="11226933" overrideParent="True" />
+			<template_reference name="inventory_item" value="inventory_item">
+				<uniqueid name="server_id" value="454535" />
+				<list name="races">
+					<instance_reference name="race" value="racebps\afrika_korps" List.ItemID="809536080" List.ListAction="Append" />
+				</list>
+				<list name="inventory_item_categories">
+					<instance_reference name="inventory_item_category" value="inventory_item_category\cosmetics\afrika_korps\vehicles\stug_iii_d_ak" List.ItemID="954619751" List.ListAction="Append" />
+				</list>
+				<list name="inventory_item_attributes" removedIds="-1654155119, 1047926885">
+					<instance_reference name="inventory_item_attribute" value="inventory_item_attribute\tag" List.ItemID="2058727187" List.ListAction="Append" />
+				</list>
+				<bool name="droppable" value="False" overrideParent="True" />
+				<int name="ui_priority" value="0" overrideParent="True" />
+				<instance_reference name="rarity" value="loot_tier\common" overrideParent="True" />
+			</template_reference>
+			<locstring name="name" value="11233422" overrideParent="True" />
+			<list name="unit_references">
+				<instance_reference name="squad" value="sbps\races\afrika_korps\vehicles\stug_iii_d_ak" List.ItemID="-81831688" List.ListAction="Append" />
+			</list>
+			<file name="icon" value="races\afrika_corps\vehicles\stug_iii_d_ak" overrideParent="True" />
+			<file name="icon_secondary_small" value="common\loadout\tanks_icn" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2103658" />
+		<instance_reference name="parent_pbg" value="army_skin\army_skin_root" />
+	</variant>
+</instance>

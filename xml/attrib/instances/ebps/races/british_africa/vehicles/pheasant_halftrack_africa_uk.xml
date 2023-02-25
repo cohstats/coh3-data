@@ -1,0 +1,686 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="2016925706" List.ParentItemID="2016925706">
+				<file name="alternate_sua" value="art\armies\british\vehicles\cwt_15_truck\body\chassis\chassis" overrideParent="True" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\british_africa\vehicles\cwt_truck_default_africa" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="433366582" List.ParentItemID="433366582">
+				<float name="hitpoints" value="280" overrideParent="True" />
+				<float name="target_size" value="16" overrideParent="True" />
+				<template_reference name="wreck_entity_option" value="options\ebpextensions\healthext\wreck_table">
+					<enum_table name="wreck_entities">
+						<instance_reference name="default" value="ebps\races\british_africa\wrecks\cwt_15_wreck_africa_uk" overrideParent="True" />
+					</enum_table>
+				</template_reference>
+				<template_reference name="armor_layout_option" value="options\ebpextensions\healthext\armor_layouts\armor_layout_front_rear_side">
+					<float name="front_armor" value="8" overrideParent="True" />
+					<float name="rear_armor" value="4" overrideParent="True" />
+					<float name="side_armor" value="6" overrideParent="True" />
+				</template_reference>
+				<enum_table name="armor_scaler_by_damage_type">
+					<float name="flame" value="1" overrideParent="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="-1776010655" List.ParentItemID="-1776010655">
+				<group name="time_cost">
+					<enum_table name="cost">
+						<float name="fuel" value="40" overrideParent="True" />
+						<float name="manpower" value="280" overrideParent="True" />
+					</enum_table>
+					<float name="time_seconds" value="45" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="1799437018" List.ParentItemID="1799437018">
+				<instance_reference name="hit_material" value="hit_material\metal" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sight_ext" List.ItemID="-64524548" List.ParentItemID="-64524548">
+				<group name="sight_package">
+					<float name="outer_height" comment="Based on the comments, it feels like this should be less than 0 and it traditionally has been. However, through testing, it seems like even if this is set to 0, units are still able to see below them just fine.&#xD;&#xA;&#xD;&#xA;NOTE: Jianfu suggested that this may exist just to soften the slope of the lampshade.&#xD;&#xA;-Brock 2017" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="1213515032" List.ParentItemID="1213515032">
+				<group name="speech_parameters">
+					<string name="name_code" value="halftrack" overrideParent="True" />
+					<string name="unit_code" value="pheasant_halftrack_uk" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="652038711" List.ParentItemID="652038711">
+				<list name="unit_type_list">
+					<enum name="unit_type" value="light_vehicle" List.ItemID="-732403360" List.ListAction="Append" />
+					<enum name="unit_type" value="british_africa" List.ItemID="487300584" List.ListAction="Append" />
+					<enum name="unit_type" value="reinforce_vehicle" List.ItemID="1262321604" List.ListAction="Append" />
+					<enum name="unit_type" value="vehicle_wheeled" List.ItemID="1486082361" List.ListAction="Append" />
+					<enum name="unit_type" value="rideable_vehicle" List.ItemID="1955357260" List.ListAction="Append" />
+					<enum name="unit_type" value="support_vehicle" List.ItemID="-1431956117" List.ListAction="Append" />
+					<enum name="unit_type" value="allow_track_damage_when_immobilized" List.ItemID="-1759603210" List.ListAction="Append" />
+				</list>
+				<list name="race_type_list" removedIds="464986086">
+					<instance_reference name="race_type" value="racebps\british_africa" List.ItemID="1376467687" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-1350927259" List.ParentItemID="-1350927259">
+				<float name="decorator_height" value="4" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\moving_ext" List.ItemID="-1164819730" List.ParentItemID="-1164819730">
+				<float name="acceleration" value="3" overrideParent="True" />
+				<float name="deceleration" value="5.5" overrideParent="True" />
+				<instance_reference name="pass_type" value="pass_types\vehicle_light" overrideParent="True" />
+				<float name="rotation_rate" value="32" overrideParent="True" />
+				<float name="on_land_overturn_scale" value="0.15" overrideParent="True" />
+				<enum_table name="speed_levels">
+					<float name="speed_level_0" value="7" overrideParent="True" />
+					<float name="speed_level_1" value="7" overrideParent="True" />
+					<float name="speed_level_2" value="7" overrideParent="True" />
+					<float name="speed_level_3" value="7" overrideParent="True" />
+					<float name="speed_level_4" value="7" overrideParent="True" />
+				</enum_table>
+				<instance_reference name="pass_type_destination" value="" overrideParent="True" />
+				<enum_table name="speed_scaling_table">
+					<float name="default_speed" value="7" overrideParent="True" />
+					<float name="max_speed" value="7" overrideParent="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\crush_ext" List.ItemID="1177723462" List.ParentItemID="1177723462">
+				<enum name="default_crush_mode" value="crush_light" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="-1137803893" List.ParentItemID="-1137803893">
+				<list name="hardpoints">
+					<group name="hardpoint" List.ItemID="-423195254" List.ListAction="Append">
+						<float name="parent_hardpoint" value="-1" />
+						<list name="weapon_table">
+						</list>
+						<bool name="receives_attack_commands" value="True" />
+						<string name="base_marker" value="loc_turret" />
+						<list name="preferred_inventory_item_categories">
+						</list>
+						<list name="firing_offset_markers">
+						</list>
+						<string name="offhand_marker" value="" />
+						<bool name="initialize_weapons_on_creation" value="True" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\population_ext" List.ItemID="1973119980" List.ParentItemID="1973119980">
+				<float name="personnel_pop" value="12" overrideParent="True" />
+				<enum_table name="upkeep_per_pop_per_minute_override">
+					<float name="manpower" value="1.25" overrideParent="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\camouflage_ext" List.ItemID="1525857700" List.ParentItemID="1525857700">
+				<float name="detection_radius" value="1" overrideParent="True" />
+				<float name="combat_reset_time" value="16" overrideParent="True" />
+				<float name="revert_max" value="30" overrideParent="True" />
+				<float name="revert_time" value="3" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\crew_ext" List.ItemID="2123400154" List.ParentItemID="2123400154">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="786547776" List.ListAction="Append">
+						<instance_reference name="ext_key" value="" />
+						<group name="info">
+							<list name="role_list">
+								<group name="role" List.ItemID="260775823">
+									<string name="name" value="driver" />
+									<bool name="spawn_crew_on_create" value="True" />
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<template_reference name="attach_data" value="attachments\attach_data">
+											<string name="marker_name_parent" value="loc_driver" />
+											<string name="parent_rigidbody_target_name" value="" />
+											<enum name="game_object_attachment_type" value="scenegraph" />
+										</template_reference>
+										<instance_reference name="ebp" value="ebps\races\british_africa\vehicles\crew\vehicle_crew_africa_uk" />
+										<group name="attachment_flags">
+											<bool name="sim_only" value="False" />
+											<bool name="no_pathfinding" value="True" />
+											<bool name="not_snappable" value="True" />
+											<bool name="restore_snap_to_ground_on_detach" value="False" />
+											<bool name="no_sim_update" value="False" />
+											<bool name="join_parent_squad" value="False" />
+											<bool name="redirect_damage_to_parent_entity" value="False" />
+											<bool name="receive_parent_animations" value="True" />
+											<bool name="receive_parent_death" value="False" />
+										</group>
+									</template_reference>
+									<instance_reference name="animation_role" value="animation_role\vehicle\us_truck_4x4\v_truck_4x4_driver" />
+									<string name="parent_inventory_slot" value="" />
+									<bool name="invulnerable" value="True" />
+									<template_reference name="weapon_override" value="">
+									</template_reference>
+									<string name="setup_marker_override" value="" />
+									<bool name="can_ragdoll" value="True" />
+								</group>
+								<group name="role" List.ItemID="-1222387865">
+									<string name="name" value="passenger" />
+									<bool name="spawn_crew_on_create" value="True" />
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<template_reference name="attach_data" value="attachments\attach_data">
+											<string name="marker_name_parent" value="loc_passenger" />
+											<string name="parent_rigidbody_target_name" value="" />
+											<enum name="game_object_attachment_type" value="scenegraph" />
+										</template_reference>
+										<instance_reference name="ebp" value="ebps\races\british_africa\vehicles\crew\vehicle_crew_africa_uk" />
+										<group name="attachment_flags">
+											<bool name="sim_only" value="False" />
+											<bool name="no_pathfinding" value="True" />
+											<bool name="not_snappable" value="True" />
+											<bool name="restore_snap_to_ground_on_detach" value="False" />
+											<bool name="no_sim_update" value="False" />
+											<bool name="join_parent_squad" value="False" />
+											<bool name="redirect_damage_to_parent_entity" value="False" />
+											<bool name="receive_parent_animations" value="True" />
+											<bool name="receive_parent_death" value="False" />
+										</group>
+									</template_reference>
+									<instance_reference name="animation_role" value="animation_role\vehicle\us_truck_4x4\v_truck_4x4_passenger" />
+									<string name="parent_inventory_slot" value="" />
+									<bool name="invulnerable" value="True" />
+									<template_reference name="weapon_override" value="">
+									</template_reference>
+									<string name="setup_marker_override" value="" />
+									<bool name="can_ragdoll" value="True" />
+								</group>
+							</list>
+							<template_reference name="additional_crew_option" value="options\none">
+							</template_reference>
+							<bool name="add_attachment_dynamics_to_crew_and_apply_root_motion" value="False" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\animation_role_ext" List.ItemID="-741368874" List.ParentItemID="-741368874">
+				<instance_reference name="default_role" value="animation_role\vehicle\uk_cwt_15_truck\v_cwt_15_truck_chassis" overrideParent="True" />
+				<enum name="flavour_key" value="british" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\destructible_cell_ext" List.ItemID="-307100313" List.ParentItemID="-307100313">
+				<list name="cell_presets" removedIds="1390702102">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\cover_ext" List.ItemID="-773928275" List.ParentItemID="-773928275">
+				<enum_table name="cover_types">
+					<template_reference name="tp_trench_cover" value="cover_ext_cover_type">
+						<float name="speed_multiplier" value="1" overrideParent="True" />
+					</template_reference>
+				</enum_table>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\presentation_override_ext" List.ItemID="1259435531" List.ParentItemID="1259435531">
+				<list name="race_mapping_list">
+					<group name="race_mapping" List.ItemID="-1273396653" List.ListAction="Append">
+						<instance_reference name="race_key" value="racebps\americans" />
+						<instance_reference name="presentation_entity_override" value="ebps\races\american\vehicles\m20_utility_car_us" />
+						<instance_reference name="presentation_squad_override" value="sbps\races\american\vehicles\m20_utility_car_us" />
+					</group>
+					<group name="race_mapping" List.ItemID="-557150940" List.ListAction="Append">
+						<instance_reference name="race_key" value="racebps\british" />
+						<instance_reference name="presentation_entity_override" value="ebps\races\british\vehicles\humber_uk" />
+						<instance_reference name="presentation_squad_override" value="sbps\races\british\vehicles\humber_uk" />
+					</group>
+					<group name="race_mapping" List.ItemID="-894787001" List.ListAction="Append">
+						<instance_reference name="race_key" value="racebps\germans" />
+						<instance_reference name="presentation_entity_override" value="ebps\races\german\vehicles\armored_car_8_rad_ger" />
+						<instance_reference name="presentation_squad_override" value="sbps\races\german\vehicles\armored_car_8_rad_ger" />
+					</group>
+					<group name="race_mapping" List.ItemID="410804348" List.ListAction="Append">
+						<instance_reference name="race_key" value="racebps\afrika_korps" />
+						<instance_reference name="presentation_entity_override" value="ebps\races\afrika_korps\vehicles\armored_car_8_rad_ak" />
+						<instance_reference name="presentation_squad_override" value="sbps\races\afrika_korps\vehicles\armored_car_8_rad_ak" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hold_ext" List.ItemID="-365426938" List.ListAction="Append">
+				<list name="acceptable_types">
+					<enum name="acceptable_type" value="hold_infantry" List.ItemID="-1597665724" />
+					<enum name="acceptable_type" value="hold_heavy_machine_gun" List.ItemID="-1800487809" />
+					<enum name="acceptable_type" value="hold_mortar" List.ItemID="1261206017" />
+				</list>
+				<bool name="attach_passenger_animator" value="True" />
+				<bool name="can_attack_occupant" value="False" />
+				<bool name="invulnerable_in_hold" value="False" />
+				<bool name="disable_area_effect_on_overflow_slot" value="False" />
+				<bool name="disable_unload" value="False" />
+				<bool name="disallow_load_command" value="False" />
+				<bool name="enable_trigger_abilities_in_hold" value="True" />
+				<bool name="enable_trigger_attack_in_hold" value="False" />
+				<bool name="holds_produced_squads" value="False" />
+				<bool name="keep_abandoned_team_weapon" value="False" />
+				<float name="load_seconds" value="1" />
+				<float name="max_load_seconds" value="2" />
+				<float name="min_hold_seconds" value="1" />
+				<float name="num_slots" value="1000" />
+				<float name="num_squad_slots" value="2" />
+				<float name="percent_unload_on_death" value="0.5" />
+				<bool name="revert_ownership" value="False" />
+				<bool name="scavenge_enabled" value="False" />
+				<enum_table name="scavenge_resource">
+					<float name="action" value="0" />
+					<float name="command" value="0" />
+					<float name="popcap" value="0" />
+					<float name="fuel" value="0" />
+					<float name="munition" value="0" />
+					<float name="manpower" value="0" />
+					<float name="requisition" value="0" />
+					<float name="ultimate" value="0" />
+				</enum_table>
+				<bool name="shared_with_other_same_type_units" value="False" />
+				<bool name="use_building_target_scan_radius" value="True" />
+				<bool name="use_crouching_posture" value="True" />
+				<list name="on_loading_modifiers">
+				</list>
+				<bool name="despawn_on_load" value="False" />
+				<float name="load_distance" value="1" />
+				<bool name="maintain_selection" value="False" />
+				<template_reference name="on_loaded_hold_action_tree" value="state_tree_global_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="on_loaded_squad_action_tree" value="state_tree_global_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="on_unloaded_squad_instant_action_tree" value="state_tree_global_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<bool name="convert_garrision_on_owner_change" value="False" />
+				<bool name="move_on_remove_hold" value="True" />
+				<bool name="load_separate_entrances" value="True" />
+				<bool name="can_issue_retreat_to_hold_contents" value="True" />
+				<bool name="is_indoors" value="True" />
+				<bool name="ensure_pathability_to_hold_for_unload" value="False" />
+				<float name="unload_path_distance_max" value="0" />
+				<bool name="count_units_in_units" value="True" />
+				<float name="unload_seconds_total" value="2" />
+				<float name="unload_seconds_per_entity" value="0.25" />
+				<bool name="allow_allies_to_occupy" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\towing_tractor_ext" List.ItemID="2082935406" List.ListAction="Append">
+				<float name="pivot_offset" value="3" />
+				<float name="max_trailer_weight" value="100" />
+				<instance_reference name="turn_plan" value="" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\spawner_ext" List.ItemID="-225831089" List.ListAction="Append">
+				<bool name="must_be_in_supply" value="False" />
+				<float name="reinforce_radius" value="20" />
+				<list name="spawn_items">
+				</list>
+				<list name="bonus_xp_from_hold_list">
+				</list>
+				<list name="reinforce_requirements">
+					<template_reference name="required" value="requirements\required_entity_upgrade" List.ItemID="-1511722494">
+						<enum name="reason" value="usage" />
+						<locstring name="ui_name" value="0" />
+						<bool name="is_present" value="False" />
+						<instance_reference name="upgrade_name" value="upgrade\american\vehicle\hmg_quadmount_halftrack_us" />
+						<bool name="include_queued" value="False" />
+						<int name="min_completed" value="1" />
+						<int name="max_completed" value="100" />
+						<group name="include_pbg_parenting">
+							<bool name="include_child_pbgs" value="False" />
+							<bool name="include_parent_pbgs" value="False" />
+						</group>
+						<bool name="include_completed" value="True" />
+					</template_reference>
+				</list>
+				<bool name="spawn_to_hold_try_first" value="False" />
+				<list name="queue_requirements">
+				</list>
+				<bool name="can_rally" value="True" />
+				<template_reference name="animated_spawn_option" value="options\none">
+				</template_reference>
+				<int name="max_queue_size_override" value="-1" />
+				<state_tree_node name="queue_requirements_openingbranch" value="" />
+				<state_tree_node name="reinforce_requirements_openingbranch" value="" />
+				<state_tree_node name="production_item_completed_openingbranch" value="" />
+				<bool name="enforce_minimum_clearance_at_spawn_positions" value="False" />
+				<bool name="enforce_minimum_clearance_if_entities_blocking" value="True" />
+				<float name="enforce_minimum_clearance_at_spawn_positions_search_range" value="0" />
+				<instance_reference name="rally_pass_type" value="" />
+				<int name="parallel_production_count" value="1" />
+				<template_reference name="default_rally_point_offset" value="">
+				</template_reference>
+				<bool name="always_paradrop_spawn" value="False" />
+				<bool name="shared_team_production" value="False" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="224380" />
+		<instance_reference name="parent_pbg" value="ebps\races\common\parent\vehicle_parent" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="2016925706" List.ParentItemID="2016925706">
+				<file name="alternate_sua" value="art\armies\british\vehicles\cwt_15_truck\body\chassis\chassis" overrideParent="True" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\british_africa\vehicles\cwt_truck_default_africa" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="433366582" List.ParentItemID="433366582">
+				<float name="hitpoints" value="280" overrideParent="True" />
+				<float name="target_size" value="16" overrideParent="True" />
+				<template_reference name="wreck_entity_option" value="options\ebpextensions\healthext\wreck_table">
+					<enum_table name="wreck_entities">
+						<instance_reference name="default" value="ebps\races\british_africa\wrecks\cwt_15_wreck_africa_uk" overrideParent="True" />
+					</enum_table>
+				</template_reference>
+				<template_reference name="armor_layout_option" value="options\ebpextensions\healthext\armor_layouts\armor_layout_front_rear_side">
+					<float name="front_armor" value="8" overrideParent="True" />
+					<float name="rear_armor" value="4" overrideParent="True" />
+					<float name="side_armor" value="6" overrideParent="True" />
+				</template_reference>
+				<enum_table name="armor_scaler_by_damage_type">
+					<float name="flame" value="1" overrideParent="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="-1776010655" List.ParentItemID="-1776010655">
+				<group name="time_cost">
+					<enum_table name="cost">
+						<float name="fuel" value="40" overrideParent="True" />
+						<float name="manpower" value="280" overrideParent="True" />
+					</enum_table>
+					<float name="time_seconds" value="45" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="1799437018" List.ParentItemID="1799437018">
+				<instance_reference name="hit_material" value="hit_material\metal" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sight_ext" List.ItemID="-64524548" List.ParentItemID="-64524548">
+				<group name="sight_package">
+					<float name="outer_height" comment="Based on the comments, it feels like this should be less than 0 and it traditionally has been. However, through testing, it seems like even if this is set to 0, units are still able to see below them just fine.&#xD;&#xA;&#xD;&#xA;NOTE: Jianfu suggested that this may exist just to soften the slope of the lampshade.&#xD;&#xA;-Brock 2017" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="1213515032" List.ParentItemID="1213515032">
+				<group name="speech_parameters">
+					<string name="name_code" value="halftrack" overrideParent="True" />
+					<string name="unit_code" value="pheasant_halftrack_uk" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="652038711" List.ParentItemID="652038711">
+				<list name="unit_type_list">
+					<enum name="unit_type" value="light_vehicle" List.ItemID="-732403360" List.ListAction="Append" />
+					<enum name="unit_type" value="british_africa" List.ItemID="487300584" List.ListAction="Append" />
+					<enum name="unit_type" value="reinforce_vehicle" List.ItemID="1262321604" List.ListAction="Append" />
+					<enum name="unit_type" value="vehicle_wheeled" List.ItemID="1486082361" List.ListAction="Append" />
+					<enum name="unit_type" value="rideable_vehicle" List.ItemID="1955357260" List.ListAction="Append" />
+					<enum name="unit_type" value="support_vehicle" List.ItemID="-1431956117" List.ListAction="Append" />
+					<enum name="unit_type" value="allow_track_damage_when_immobilized" List.ItemID="-1759603210" List.ListAction="Append" />
+				</list>
+				<list name="race_type_list" removedIds="464986086">
+					<instance_reference name="race_type" value="racebps\british_africa" List.ItemID="1376467687" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-1350927259" List.ParentItemID="-1350927259">
+				<float name="decorator_height" value="4" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\moving_ext" List.ItemID="-1164819730" List.ParentItemID="-1164819730">
+				<float name="acceleration" value="3" overrideParent="True" />
+				<float name="deceleration" value="5.5" overrideParent="True" />
+				<instance_reference name="pass_type" value="pass_types\vehicle_light" overrideParent="True" />
+				<float name="rotation_rate" value="32" overrideParent="True" />
+				<float name="on_land_overturn_scale" value="0.15" overrideParent="True" />
+				<enum_table name="speed_levels">
+					<float name="speed_level_0" value="7" overrideParent="True" />
+					<float name="speed_level_1" value="7" overrideParent="True" />
+					<float name="speed_level_2" value="7" overrideParent="True" />
+					<float name="speed_level_3" value="7" overrideParent="True" />
+					<float name="speed_level_4" value="7" overrideParent="True" />
+				</enum_table>
+				<instance_reference name="pass_type_destination" value="" overrideParent="True" />
+				<enum_table name="speed_scaling_table">
+					<float name="default_speed" value="7" overrideParent="True" />
+					<float name="max_speed" value="7" overrideParent="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\crush_ext" List.ItemID="1177723462" List.ParentItemID="1177723462">
+				<enum name="default_crush_mode" value="crush_light" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="-1137803893" List.ParentItemID="-1137803893">
+				<list name="hardpoints">
+					<group name="hardpoint" List.ItemID="-423195254" List.ListAction="Append">
+						<float name="parent_hardpoint" value="-1" />
+						<list name="weapon_table">
+						</list>
+						<bool name="receives_attack_commands" value="True" />
+						<string name="base_marker" value="loc_turret" />
+						<list name="preferred_inventory_item_categories">
+						</list>
+						<list name="firing_offset_markers">
+						</list>
+						<string name="offhand_marker" value="" />
+						<bool name="initialize_weapons_on_creation" value="True" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\population_ext" List.ItemID="1973119980" List.ParentItemID="1973119980">
+				<float name="personnel_pop" value="12" overrideParent="True" />
+				<enum_table name="upkeep_per_pop_per_minute_override">
+					<float name="manpower" value="1.25" overrideParent="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\camouflage_ext" List.ItemID="1525857700" List.ParentItemID="1525857700">
+				<float name="detection_radius" value="1" overrideParent="True" />
+				<float name="combat_reset_time" value="16" overrideParent="True" />
+				<float name="revert_max" value="30" overrideParent="True" />
+				<float name="revert_time" value="3" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\crew_ext" List.ItemID="2123400154" List.ParentItemID="2123400154">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="786547776" List.ListAction="Append">
+						<instance_reference name="ext_key" value="" />
+						<group name="info">
+							<list name="role_list">
+								<group name="role" List.ItemID="260775823">
+									<string name="name" value="driver" />
+									<bool name="spawn_crew_on_create" value="True" />
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<template_reference name="attach_data" value="attachments\attach_data">
+											<string name="marker_name_parent" value="loc_driver" />
+											<string name="parent_rigidbody_target_name" value="" />
+											<enum name="game_object_attachment_type" value="scenegraph" />
+										</template_reference>
+										<instance_reference name="ebp" value="ebps\races\british_africa\vehicles\crew\vehicle_crew_africa_uk" />
+										<group name="attachment_flags">
+											<bool name="sim_only" value="False" />
+											<bool name="no_pathfinding" value="True" />
+											<bool name="not_snappable" value="True" />
+											<bool name="restore_snap_to_ground_on_detach" value="False" />
+											<bool name="no_sim_update" value="False" />
+											<bool name="join_parent_squad" value="False" />
+											<bool name="redirect_damage_to_parent_entity" value="False" />
+											<bool name="receive_parent_animations" value="True" />
+											<bool name="receive_parent_death" value="False" />
+										</group>
+									</template_reference>
+									<instance_reference name="animation_role" value="animation_role\vehicle\us_truck_4x4\v_truck_4x4_driver" />
+									<string name="parent_inventory_slot" value="" />
+									<bool name="invulnerable" value="True" />
+									<template_reference name="weapon_override" value="">
+									</template_reference>
+									<string name="setup_marker_override" value="" />
+									<bool name="can_ragdoll" value="True" />
+								</group>
+								<group name="role" List.ItemID="-1222387865">
+									<string name="name" value="passenger" />
+									<bool name="spawn_crew_on_create" value="True" />
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<template_reference name="attach_data" value="attachments\attach_data">
+											<string name="marker_name_parent" value="loc_passenger" />
+											<string name="parent_rigidbody_target_name" value="" />
+											<enum name="game_object_attachment_type" value="scenegraph" />
+										</template_reference>
+										<instance_reference name="ebp" value="ebps\races\british_africa\vehicles\crew\vehicle_crew_africa_uk" />
+										<group name="attachment_flags">
+											<bool name="sim_only" value="False" />
+											<bool name="no_pathfinding" value="True" />
+											<bool name="not_snappable" value="True" />
+											<bool name="restore_snap_to_ground_on_detach" value="False" />
+											<bool name="no_sim_update" value="False" />
+											<bool name="join_parent_squad" value="False" />
+											<bool name="redirect_damage_to_parent_entity" value="False" />
+											<bool name="receive_parent_animations" value="True" />
+											<bool name="receive_parent_death" value="False" />
+										</group>
+									</template_reference>
+									<instance_reference name="animation_role" value="animation_role\vehicle\us_truck_4x4\v_truck_4x4_passenger" />
+									<string name="parent_inventory_slot" value="" />
+									<bool name="invulnerable" value="True" />
+									<template_reference name="weapon_override" value="">
+									</template_reference>
+									<string name="setup_marker_override" value="" />
+									<bool name="can_ragdoll" value="True" />
+								</group>
+							</list>
+							<template_reference name="additional_crew_option" value="options\none">
+							</template_reference>
+							<bool name="add_attachment_dynamics_to_crew_and_apply_root_motion" value="False" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\animation_role_ext" List.ItemID="-741368874" List.ParentItemID="-741368874">
+				<instance_reference name="default_role" value="animation_role\vehicle\uk_cwt_15_truck\v_cwt_15_truck_chassis" overrideParent="True" />
+				<enum name="flavour_key" value="british" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\destructible_cell_ext" List.ItemID="-307100313" List.ParentItemID="-307100313">
+				<list name="cell_presets" removedIds="1390702102">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\cover_ext" List.ItemID="-773928275" List.ParentItemID="-773928275">
+				<enum_table name="cover_types">
+					<template_reference name="tp_trench_cover" value="cover_ext_cover_type">
+						<float name="speed_multiplier" value="1" overrideParent="True" />
+					</template_reference>
+				</enum_table>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\presentation_override_ext" List.ItemID="1259435531" List.ParentItemID="1259435531">
+				<list name="race_mapping_list">
+					<group name="race_mapping" List.ItemID="-1273396653" List.ListAction="Append">
+						<instance_reference name="race_key" value="racebps\americans" />
+						<instance_reference name="presentation_entity_override" value="ebps\races\american\vehicles\m20_utility_car_us" />
+						<instance_reference name="presentation_squad_override" value="sbps\races\american\vehicles\m20_utility_car_us" />
+					</group>
+					<group name="race_mapping" List.ItemID="-557150940" List.ListAction="Append">
+						<instance_reference name="race_key" value="racebps\british" />
+						<instance_reference name="presentation_entity_override" value="ebps\races\british\vehicles\humber_uk" />
+						<instance_reference name="presentation_squad_override" value="sbps\races\british\vehicles\humber_uk" />
+					</group>
+					<group name="race_mapping" List.ItemID="-894787001" List.ListAction="Append">
+						<instance_reference name="race_key" value="racebps\germans" />
+						<instance_reference name="presentation_entity_override" value="ebps\races\german\vehicles\armored_car_8_rad_ger" />
+						<instance_reference name="presentation_squad_override" value="sbps\races\german\vehicles\armored_car_8_rad_ger" />
+					</group>
+					<group name="race_mapping" List.ItemID="410804348" List.ListAction="Append">
+						<instance_reference name="race_key" value="racebps\afrika_korps" />
+						<instance_reference name="presentation_entity_override" value="ebps\races\afrika_korps\vehicles\armored_car_8_rad_ak" />
+						<instance_reference name="presentation_squad_override" value="sbps\races\afrika_korps\vehicles\armored_car_8_rad_ak" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hold_ext" List.ItemID="-365426938" List.ListAction="Append">
+				<list name="acceptable_types">
+					<enum name="acceptable_type" value="hold_infantry" List.ItemID="-1597665724" />
+					<enum name="acceptable_type" value="hold_heavy_machine_gun" List.ItemID="-1800487809" />
+					<enum name="acceptable_type" value="hold_mortar" List.ItemID="1261206017" />
+				</list>
+				<bool name="attach_passenger_animator" value="True" />
+				<bool name="can_attack_occupant" value="False" />
+				<bool name="invulnerable_in_hold" value="False" />
+				<bool name="disable_area_effect_on_overflow_slot" value="False" />
+				<bool name="disable_unload" value="False" />
+				<bool name="disallow_load_command" value="False" />
+				<bool name="enable_trigger_abilities_in_hold" value="True" />
+				<bool name="enable_trigger_attack_in_hold" value="False" />
+				<bool name="holds_produced_squads" value="False" />
+				<bool name="keep_abandoned_team_weapon" value="False" />
+				<float name="load_seconds" value="1" />
+				<float name="max_load_seconds" value="2" />
+				<float name="min_hold_seconds" value="1" />
+				<float name="num_slots" value="1000" />
+				<float name="num_squad_slots" value="2" />
+				<float name="percent_unload_on_death" value="0.5" />
+				<bool name="revert_ownership" value="False" />
+				<bool name="scavenge_enabled" value="False" />
+				<enum_table name="scavenge_resource">
+					<float name="action" value="0" />
+					<float name="command" value="0" />
+					<float name="popcap" value="0" />
+					<float name="fuel" value="0" />
+					<float name="munition" value="0" />
+					<float name="manpower" value="0" />
+					<float name="requisition" value="0" />
+					<float name="ultimate" value="0" />
+				</enum_table>
+				<bool name="shared_with_other_same_type_units" value="False" />
+				<bool name="use_building_target_scan_radius" value="True" />
+				<bool name="use_crouching_posture" value="True" />
+				<list name="on_loading_modifiers">
+				</list>
+				<bool name="despawn_on_load" value="False" />
+				<float name="load_distance" value="1" />
+				<bool name="maintain_selection" value="False" />
+				<template_reference name="on_loaded_hold_action_tree" value="state_tree_global_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="on_loaded_squad_action_tree" value="state_tree_global_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="on_unloaded_squad_instant_action_tree" value="state_tree_global_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<bool name="convert_garrision_on_owner_change" value="False" />
+				<bool name="move_on_remove_hold" value="True" />
+				<bool name="load_separate_entrances" value="True" />
+				<bool name="can_issue_retreat_to_hold_contents" value="True" />
+				<bool name="is_indoors" value="True" />
+				<bool name="ensure_pathability_to_hold_for_unload" value="False" />
+				<float name="unload_path_distance_max" value="0" />
+				<bool name="count_units_in_units" value="True" />
+				<float name="unload_seconds_total" value="2" />
+				<float name="unload_seconds_per_entity" value="0.25" />
+				<bool name="allow_allies_to_occupy" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\towing_tractor_ext" List.ItemID="2082935406" List.ListAction="Append">
+				<float name="pivot_offset" value="3" />
+				<float name="max_trailer_weight" value="100" />
+				<instance_reference name="turn_plan" value="" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\spawner_ext" List.ItemID="-225831089" List.ListAction="Append">
+				<bool name="must_be_in_supply" value="False" />
+				<float name="reinforce_radius" value="20" />
+				<list name="spawn_items">
+				</list>
+				<list name="bonus_xp_from_hold_list">
+				</list>
+				<list name="reinforce_requirements">
+					<template_reference name="required" value="requirements\required_entity_upgrade" List.ItemID="-1511722494">
+						<enum name="reason" value="usage" />
+						<locstring name="ui_name" value="0" />
+						<bool name="is_present" value="False" />
+						<instance_reference name="upgrade_name" value="upgrade\american\vehicle\hmg_quadmount_halftrack_us" />
+						<bool name="include_queued" value="False" />
+						<int name="min_completed" value="1" />
+						<int name="max_completed" value="100" />
+						<group name="include_pbg_parenting">
+							<bool name="include_child_pbgs" value="False" />
+							<bool name="include_parent_pbgs" value="False" />
+						</group>
+						<bool name="include_completed" value="True" />
+					</template_reference>
+				</list>
+				<bool name="spawn_to_hold_try_first" value="False" />
+				<list name="queue_requirements">
+				</list>
+				<bool name="can_rally" value="True" />
+				<template_reference name="animated_spawn_option" value="options\none">
+				</template_reference>
+				<int name="max_queue_size_override" value="-1" />
+				<state_tree_node name="queue_requirements_openingbranch" value="" />
+				<state_tree_node name="reinforce_requirements_openingbranch" value="" />
+				<state_tree_node name="production_item_completed_openingbranch" value="" />
+				<bool name="enforce_minimum_clearance_at_spawn_positions" value="False" />
+				<bool name="enforce_minimum_clearance_if_entities_blocking" value="True" />
+				<float name="enforce_minimum_clearance_at_spawn_positions_search_range" value="0" />
+				<instance_reference name="rally_pass_type" value="" />
+				<int name="parallel_production_count" value="1" />
+				<template_reference name="default_rally_point_offset" value="">
+				</template_reference>
+				<bool name="always_paradrop_spawn" value="False" />
+				<bool name="shared_team_production" value="False" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="224380" />
+		<instance_reference name="parent_pbg" value="ebps\races\common\parent\vehicle_parent" />
+	</variant>
+</instance>

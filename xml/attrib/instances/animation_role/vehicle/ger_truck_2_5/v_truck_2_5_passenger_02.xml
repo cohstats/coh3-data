@@ -1,0 +1,33 @@
+<instance version="5" description="" template="animation_role">
+	<variant name="default">
+		<uniqueid name="pbgid" value="2073086" />
+		<group name="animation_role_bag">
+			<file name="animator" value="armies\common\rigs\infantry\male_soldier_motion\male_soldier_motion" overrideParent="True" />
+			<list name="animation_groups">
+				<group name="group" List.ItemID="-957148990" List.ParentItemID="-957148990">
+					<list name="set" overrideParent="True">
+						<group name="entry" List.ItemID="1519473018">
+							<template_reference name="animation" value="options\animation_role\animation_role_raw_hkxa">
+								<file name="file" value="armies\common\rigs\infantry\male_soldier_motion\animations\vehicles\ger_truck_2_5\crew_passenger2_truck_2_5_idle_calm_a" overrideParent="True" />
+							</template_reference>
+							<enum name="slot" value="vehicle_idle_calm_a" />
+						</group>
+						<group name="entry" List.ItemID="-1889906208">
+							<template_reference name="animation" value="options\animation_role\animation_role_raw_hkxa">
+								<file name="file" value="armies\common\rigs\infantry\male_soldier_motion\animations\vehicles\ger_truck_2_5\crew_passenger2_truck_2_5_idle_tense_a" overrideParent="True" />
+							</template_reference>
+							<enum name="slot" value="vehicle_idle_tense_a" />
+						</group>
+						<group name="entry" List.ItemID="1322897427">
+							<template_reference name="animation" value="options\animation_role\animation_role_raw_hkxa">
+								<file name="file" value="armies\common\rigs\infantry\male_soldier_motion\animations\vehicles\ger_truck_2_5\crew_passenger2_truck_2_5_idle_underfire_a" overrideParent="True" />
+							</template_reference>
+							<enum name="slot" value="vehicle_idle_under_attack_a" />
+						</group>
+					</list>
+				</group>
+			</list>
+		</group>
+		<instance_reference name="parent_pbg" value="animation_role\vehicle\v_crew_base" />
+	</variant>
+</instance>

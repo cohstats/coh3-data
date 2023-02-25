@@ -1,0 +1,40 @@
+<instance version="5" description="" template="flight_plan">
+	<variant name="default">
+		<uniqueid name="pbgid" value="205226" />
+		<group name="flight_plan_bag">
+			<list name="flight_maneuvers">
+				<template_reference name="maneuver" value="options\flight_maneuver\loiter_at_target" List.ItemID="1357555399">
+					<float name="circling_height_multiplier" value="1" />
+					<float name="approach_length" value="100" />
+					<float name="default_height_multiplier" value="1" />
+					<float name="default_speed_multiplier" value="1" />
+					<float name="circling_radius" value="30" />
+					<float name="circling_duration_seconds" value="60" />
+					<enum name="loiter_target" value="flight_plan_target_01" />
+					<state_tree_node name="loiter_tree" value="c_armored_designate_targets_uk\flight_plan_and_payload_library\reveal_area_default" />
+					<float name="circling_speed_multiplier" value="1" />
+					<float name="arrival_time_seconds" value="3.5" />
+				</template_reference>
+			</list>
+		</group>
+	</variant>
+	<variant name="sp">
+		<uniqueid name="pbgid" value="205226" />
+		<group name="flight_plan_bag">
+			<list name="flight_maneuvers">
+				<template_reference name="maneuver" value="options\flight_maneuver\loiter_at_target" List.ItemID="1357555399">
+					<float name="circling_height_multiplier" value="1" />
+					<float name="approach_length" value="100" />
+					<float name="default_height_multiplier" value="1" />
+					<float name="default_speed_multiplier" value="1" />
+					<float name="circling_radius" value="30" />
+					<float name="circling_duration_seconds" value="60" />
+					<enum name="loiter_target" value="flight_plan_target_01" />
+					<state_tree_node name="loiter_tree" value="c_armored_designate_targets_uk\flight_plan_and_payload_library\reveal_area_default" />
+					<float name="circling_speed_multiplier" value="1" />
+					<float name="arrival_time_seconds" value="3.5" />
+				</template_reference>
+			</list>
+		</group>
+	</variant>
+</instance>

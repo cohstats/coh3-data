@@ -1,0 +1,337 @@
+<instance version="5" description="" template="tuning_ai">
+	<variant name="default">
+		<group name="ai_info">
+			<enum_table name="default_personalities">
+				<instance_reference name="campaign" value="ai\ai_personality\campaign_ai_personality" />
+				<instance_reference name="multiplayer" value="ai\ai_personality\default_ai_personality" />
+				<instance_reference name="tutorial" value="ai\ai_personality\default_ai_personality" />
+				<instance_reference name="singleplayer_mod" value="ai\ai_personality\default_ai_personality" />
+				<instance_reference name="invalid" value="ai\ai_personality\default_ai_personality" />
+				<instance_reference name="frontend" value="ai\ai_personality\default_ai_personality" />
+				<instance_reference name="benchmark" value="ai\ai_personality\default_ai_personality" />
+			</enum_table>
+			<group name="medics">
+				<list name="healing_auras">
+				</list>
+			</group>
+			<group name="functions">
+				<string name="decide_entity_military_target_type_function" value="ANVIL_DetermineAIStatsMilitaryPointTypeEntity" />
+				<string name="decide_squad_military_target_type_function" value="ANVIL_DetermineAIStatsMilitaryPointTypeSquad" />
+				<string name="decide_capture_point_military_target_type_function" value="ANVIL_DetermineAIStatsCapturePointTypeEntity" />
+				<string name="military_target_scoring_function" value="" comment="DEPRECATED. &#xD;&#xA;Please use ai_settings/score_military_target_function instead. Anvil needs this to be tunable per ai settings so the campaign map AI can use a different function than the rts ai." />
+				<string name="decide_gather_point_military_target_type_function" value="ANVIL_DetermineAIGatheringPointType" />
+			</group>
+			<group name="threat_path">
+				<float name="threatened_lerp_max_multiplier" value="1" />
+				<float name="invincible_enemies_threat_multiplier" value="1" />
+				<float name="unsafe_terrain_cover_threat_lerp_max_multiplier" value="1" />
+				<float name="suppression_threat_multiplier" value="1" />
+				<int name="max_asynchronous_paths_per_frame" value="-1" />
+				<group name="melee_avoidance">
+					<float name="avoidance_threat_scale" value="1" />
+					<float name="melee_avoidance_radius" value="0" />
+				</group>
+				<int name="max_immediate_paths_per_frame" value="-1" />
+			</group>
+			<enum_table name="regions_generation">
+				<template_reference name="campaign" value="ai\ai_region_generation_info">
+					<group name="ai_region_generation_info">
+						<list name="military_point_region_generator_types">
+						</list>
+						<float name="region_map_cell_size" value="4" />
+						<float name="region_generation_flood_fill_max_distance" value="120" />
+						<list name="user_defined_painted_pass_type_list">
+						</list>
+					</group>
+				</template_reference>
+				<template_reference name="multiplayer" value="ai\ai_region_generation_info">
+					<group name="ai_region_generation_info">
+						<list name="military_point_region_generator_types">
+							<enum name="military_point_type" value="capture" List.ItemID="124158543" />
+							<enum name="military_point_type" value="victory_point" List.ItemID="279151885" />
+						</list>
+						<float name="region_map_cell_size" value="4" />
+						<float name="region_generation_flood_fill_max_distance" value="120" />
+						<list name="user_defined_painted_pass_type_list">
+						</list>
+					</group>
+				</template_reference>
+				<template_reference name="tutorial" value="ai\ai_region_generation_info">
+					<group name="ai_region_generation_info">
+						<list name="military_point_region_generator_types">
+						</list>
+						<float name="region_map_cell_size" value="4" />
+						<float name="region_generation_flood_fill_max_distance" value="120" />
+						<list name="user_defined_painted_pass_type_list">
+						</list>
+					</group>
+				</template_reference>
+				<template_reference name="singleplayer_mod" value="ai\ai_region_generation_info">
+					<group name="ai_region_generation_info">
+						<list name="military_point_region_generator_types">
+						</list>
+						<float name="region_map_cell_size" value="4" />
+						<float name="region_generation_flood_fill_max_distance" value="120" />
+						<list name="user_defined_painted_pass_type_list">
+						</list>
+					</group>
+				</template_reference>
+				<template_reference name="invalid" value="ai\ai_region_generation_info">
+					<group name="ai_region_generation_info">
+						<list name="military_point_region_generator_types">
+						</list>
+						<float name="region_map_cell_size" value="4" />
+						<float name="region_generation_flood_fill_max_distance" value="120" />
+						<list name="user_defined_painted_pass_type_list">
+						</list>
+					</group>
+				</template_reference>
+				<template_reference name="frontend" value="ai\ai_region_generation_info">
+					<group name="ai_region_generation_info">
+						<list name="military_point_region_generator_types">
+						</list>
+						<float name="region_map_cell_size" value="4" />
+						<float name="region_generation_flood_fill_max_distance" value="120" />
+						<list name="user_defined_painted_pass_type_list">
+						</list>
+					</group>
+				</template_reference>
+				<template_reference name="benchmark" value="ai\ai_region_generation_info">
+					<group name="ai_region_generation_info">
+						<list name="military_point_region_generator_types">
+						</list>
+						<float name="region_map_cell_size" value="4" />
+						<float name="region_generation_flood_fill_max_distance" value="120" />
+						<list name="user_defined_painted_pass_type_list">
+						</list>
+					</group>
+				</template_reference>
+			</enum_table>
+			<string name="ai_world_lua_script" value="anvil_ai_world" />
+			<group name="debug">
+				<list name="debug_production_resources">
+					<instance_reference name="resource" value="resource_type_info\munition" List.ItemID="383826780" />
+					<instance_reference name="resource" value="resource_type_info\manpower" List.ItemID="-1939325504" />
+					<instance_reference name="resource" value="resource_type_info\fuel" List.ItemID="1352636011" />
+				</list>
+			</group>
+			<list name="support_squad_types">
+				<enum name="squad_type" value="combat_engineer" List.ItemID="-1526226871" />
+			</list>
+			<list name="builder_squad_types">
+				<enum name="squad_type" value="auto_builder" List.ItemID="-1818895222" />
+			</list>
+			<int name="max_ai_players" value="7" />
+			<group name="combat">
+				<bool name="use_formation_attack_encounter" value="False" />
+				<bool name="require_all_paths_to_HQ_before_attack" value="False" />
+				<instance_reference name="formation_encounter_rally_position_test_structure" value="" />
+				<list name="formation_engagement_tasks">
+				</list>
+				<list name="army_state_filter_types">
+					<enum name="squad_type" value="airplane" List.ItemID="1165330671" />
+					<enum name="squad_type" value="base_defense" List.ItemID="621339285" />
+					<enum name="squad_type" value="auto_builder" List.ItemID="1410708938" />
+				</list>
+				<list name="excluded_from_military_role">
+				</list>
+				<list name="counter_weights">
+				</list>
+				<bool name="disable_inverse_scores" value="False" />
+				<bool name="allow_idle_melee_squad_combat" value="False" />
+			</group>
+			<group name="production">
+				<int name="min_buildinfo_updates" value="10" />
+				<int name="target_buildinfo_update_period_ms" value="5" />
+				<int name="initial_min_buildinfo_updates" value="50" />
+				<float name="player_combat_upgrade_exponent" value="10" />
+				<int name="num_ticks_left_before_enqueuing_next_item" value="0" />
+			</group>
+			<group name="scouting">
+				<list name="scout_squad_types">
+				</list>
+				<float name="scout_map_grid_size" value="32" />
+				<float name="scout_map_min_seconds_since_seen_to_consider_uncertain" value="30" />
+				<float name="scout_map_certainty_curve_halflife" value="30" />
+			</group>
+			<bool name="force_disable_ai" value="False" />
+			<group name="combat_machine_learning">
+				<bool name="disable_combat_machine_learning" value="True" />
+				<list name="rating_input_feature_set">
+				</list>
+				<list name="player_input_feature_set">
+				</list>
+				<template_reference name="combat_model_config" value="">
+				</template_reference>
+				<template_reference name="player_model_config" value="">
+				</template_reference>
+			</group>
+			<group name="formations">
+				<list name="formup_at_building_types">
+				</list>
+			</group>
+			<group name="wall">
+				<float name="max_distance_from_base" value="25" />
+				<int name="min_num_owned_structures" value="3" />
+				<float name="wall_perimeter_offset" value="7" />
+				<list name="wall_prerequisite_unit_types">
+				</list>
+				<enum name="wall_unit_type" value="" />
+				<enum name="gate_unit_type" value="" />
+				<enum name="stone_wall_unit_type" value="" />
+				<enum name="stone_gate_unit_type" value="" />
+				<list name="stone_wall_prerequisite_unit_types">
+				</list>
+				<float name="max_distance_from_base_stone_wall" value="50" />
+				<float name="max_distance_from_anchor_wall" value="25" />
+				<float name="expansion_protection_radius" value="5" />
+				<float name="blocking_wall_max_distance_from_base" value="200" />
+				<float name="blocking_wall_min_distance_from_base" value="45" />
+				<float name="blocking_wall_max_section_length" value="200" />
+				<enum name="stone_tower_unit_type" value="" />
+				<bool name="formation_move_to_nearside_of_wall" value="False" />
+				<enum name="bastion_unit_type" value="" />
+				<enum name="stone_bastion_unit_type" value="" />
+				<float name="wall_height_for_trajectory" value="9" />
+				<float name="gates_separation_distance" value="30" />
+				<float name="max_allies_distance_share_surrounding_wall" value="80" />
+				<list name="race_wall_mapping">
+				</list>
+				<int name="num_checks_for_entity_on_perimeter" value="3" />
+				<float name="min_wall_distance_to_enemy_territory" value="70" />
+			</group>
+			<list name="economy_building_types">
+			</list>
+			<group name="siege">
+				<list name="siege_weapon_squad_types">
+				</list>
+				<list name="siege_weapon_entity_types">
+				</list>
+				<list name="siegeable_entity_types">
+				</list>
+			</group>
+			<group name="builder">
+				<float name="build_time_per_builder" value="10" />
+				<int name="max_num_additional_builders" value="4" />
+			</group>
+			<group name="gathering">
+				<float name="distance_to_dropoff_factor" value="10" />
+				<float name="num_task_locked_factor" value="800" />
+				<float name="max_distance_to_dropoff" value="25" />
+				<float name="max_distance_to_naval_dropoff" value="200" />
+				<list name="squad_resource_preferences">
+				</list>
+			</group>
+			<group name="state_model">
+				<instance_reference name="ai_player_state_model_schema" value="statemodel_schema\aiplayer\aiplayer" />
+				<instance_reference name="custom_data_state_model_schema" value="statemodel_schema\aiplayer\aicustomdata" />
+				<instance_reference name="ai_squad_state_model_schema" value="statemodel_schema\aiplayer\aisquad" />
+				<enum name="ai_squad_record_spawn_position" value="ai_initial_position" />
+				<instance_reference name="ai_entity_state_model_schema" value="statemodel_schema\aiplayer\aientity" />
+			</group>
+			<group name="threatmap">
+				<int name="grid_size" value="8" />
+				<float name="melee_threat_radius" value="0" />
+				<group name="kill_history">
+					<bool name="use_kill_history" value="True" />
+					<float name="kill_history_max_attacker_distance" value="8" />
+					<float name="kill_history_duration_secs" value="0" />
+				</group>
+				<group name="avoidance">
+					<bool name="use_avoidance" value="True" />
+					<int name="kill_limit_to_consider_avoidance" value="3" />
+				</group>
+			</group>
+			<list name="landmark_building_types">
+			</list>
+			<group name="production_queue_contention">
+				<float name="contention_thershold" value="25" />
+				<float name="contention_update_period" value="45" />
+				<int name="max_num_contentions_recorded" value="300" />
+			</group>
+			<group name="nearby_entities">
+				<float name="entity_nearby_max_range" value="100" />
+				<float name="squad_nearby_max_range" value="100" />
+			</group>
+			<group name="military_points">
+				<list name="path_check_data">
+				</list>
+				<instance_reference name="infantry_path_ebp" value="ebps\races\american\infantry\engineer_us" />
+				<instance_reference name="large_path_ebp" value="ebps\races\american\vehicles\sherman_us" />
+				<float name="blocker_scan_radius" value="10" />
+				<float name="consider_blocked_threshold" value="3.402823E+38" />
+				<instance_reference name="large_naval_path_ebp" value="" />
+				<int name="blocker_min_connected_wall_sections" value="4" />
+			</group>
+			<group name="defense_structure_types">
+				<enum name="outpost_unit_type" value="" />
+				<enum name="keep_unit_type" value="" />
+			</group>
+			<group name="upgrades">
+				<list name="high_priority_upgrade_types">
+				</list>
+			</group>
+			<group name="religion">
+				<list name="monk_squad_types">
+				</list>
+			</group>
+			<group name="construction">
+				<float name="nearly_finished_construction_progress" value="0.8" />
+				<list name="ignore_repair_finish_unit_types">
+				</list>
+				<float name="health_threshold_construction_cancel" value="0.25" />
+			</group>
+			<file name="ai_markers_lua_script" value="editor\markers\ai_markers" />
+			<group name="repair">
+				<list name="always_repair_unit_types">
+				</list>
+			</group>
+			<list name="siege_build_info">
+			</list>
+			<group name="islandmap">
+				<bool name="enable_island_mapping" value="False" />
+			</group>
+			<list name="naval_production_building_types">
+			</list>
+			<instance_reference name="naval_passtype" value="" />
+			<group name="trading">
+				<instance_reference name="trader_squad" value="" />
+				<float name="minimum_distance_to_enemy_territory" value="50" />
+				<instance_reference name="trader_squad_naval" value="" />
+				<float name="maximum_distance_to_water_for_naval_trading" value="10" />
+			</group>
+			<bool name="player_uses_constraints" value="False" />
+			<group name="teamplay">
+				<float name="starting_position_exclusion_radius" value="100" />
+				<float name="player_dropoff_exclusion_radius" value="30" />
+				<float name="ally_ping_expiration_time" value="200" />
+			</group>
+			<group name="strategy">
+				<group name="personality">
+					<enum name="default_personality_type" value="balanced" />
+					<enum_table name="personality_tuning_pbgs">
+						<instance_reference name="balanced" value="ai\ai_strategizer_personality\strategy_balanced" />
+						<instance_reference name="locked" value="ai\ai_strategizer_personality\strategy_locked" />
+					</enum_table>
+				</group>
+			</group>
+			<list name="expansion_base_building_ebps">
+			</list>
+			<list name="naval_squad_types">
+			</list>
+			<list name="forward_base_types">
+			</list>
+			<group name="vision">
+				<float name="box_height" value="90" />
+				<float name="box_width" value="50" />
+			</group>
+			<group name="flee">
+				<list name="flee_alt_direction_angles">
+				</list>
+			</group>
+			<list name="wonder_building_types">
+			</list>
+		</group>
+		<uniqueid name="pbgid" value="1411425" />
+	</variant>
+</instance>

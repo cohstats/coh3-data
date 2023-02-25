@@ -1,0 +1,60 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1042848564" List.ParentItemID="-1042848564">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\nature\trees\oak_wall_01" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-2125641824" List.ParentItemID="-2125641824">
+				<float name="hitpoints" value="250" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="306130869" List.ParentItemID="306130869">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\obj_cover_ext" List.ItemID="427076488" List.ParentItemID="427076488">
+				<bool name="is_cover_directional" value="True" overrideParent="True" />
+				<bool name="is_shoot_through" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-108481391" List.ParentItemID="-108481391">
+				<bool name="ap_killed_kicker" value="True" overrideParent="True" />
+				<bool name="ap_loss_kicker" value="True" overrideParent="True" />
+				<enum name="decorator_visibility" value="hidden" overrideParent="True" />
+				<bool name="use_combat_range_on_selection" value="True" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="178815" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\foliage_light_cover" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1042848564" List.ParentItemID="-1042848564">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\nature\trees\oak_wall_01" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-2125641824" List.ParentItemID="-2125641824">
+				<float name="hitpoints" value="250" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="306130869" List.ParentItemID="306130869">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\obj_cover_ext" List.ItemID="427076488" List.ParentItemID="427076488">
+				<bool name="is_cover_directional" value="True" overrideParent="True" />
+				<bool name="is_shoot_through" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-108481391" List.ParentItemID="-108481391">
+				<bool name="ap_killed_kicker" value="True" overrideParent="True" />
+				<bool name="ap_loss_kicker" value="True" overrideParent="True" />
+				<enum name="decorator_visibility" value="hidden" overrideParent="True" />
+				<bool name="use_combat_range_on_selection" value="True" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="178815" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\foliage_light_cover" />
+	</variant>
+</instance>

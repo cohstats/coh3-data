@@ -1,0 +1,52 @@
+<instance version="5" description="" template="attachments\attachment_list">
+	<variant name="default">
+		<group name="attachment_list_group">
+			<list name="attachment_list">
+				<template_reference name="attachment" value="options\attachment_types\entity_create_attachment" List.ItemID="-1669724664" List.ListAction="Append">
+					<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+						<template_reference name="attach_data" value="attachments\attach_data">
+							<string name="marker_name_parent" value="loc_acc_outer_04" overrideParent="True" />
+							<string name="parent_rigidbody_target_name" value="" />
+							<enum name="game_object_attachment_type" value="scenegraph" />
+						</template_reference>
+						<instance_reference name="ebp" value="ebps\environment\debug\capture_point_table" overrideParent="True" />
+						<group name="attachment_flags">
+							<bool name="sim_only" value="False" />
+							<bool name="no_pathfinding" value="False" overrideParent="True" />
+							<bool name="not_snappable" value="False" />
+							<bool name="restore_snap_to_ground_on_detach" value="False" />
+							<bool name="no_sim_update" value="False" />
+							<bool name="join_parent_squad" value="False" />
+							<bool name="redirect_damage_to_parent_entity" value="True" />
+							<bool name="receive_parent_animations" value="False" />
+							<bool name="receive_parent_death" value="True" />
+						</group>
+					</template_reference>
+				</template_reference>
+				<template_reference name="attachment" value="options\attachment_types\entity_create_attachment" List.ItemID="1103612998" List.ListAction="Append">
+					<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+						<template_reference name="attach_data" value="attachments\attach_data">
+							<string name="marker_name_parent" value="loc_acc_outer_06" overrideParent="True" />
+							<string name="parent_rigidbody_target_name" value="" />
+							<enum name="game_object_attachment_type" value="scenegraph" />
+						</template_reference>
+						<instance_reference name="ebp" value="ebps\environment\objects\market_features\food_crate_set\food_crate_01" overrideParent="True" />
+						<group name="attachment_flags">
+							<bool name="sim_only" value="False" />
+							<bool name="no_pathfinding" value="False" overrideParent="True" />
+							<bool name="not_snappable" value="False" />
+							<bool name="restore_snap_to_ground_on_detach" value="False" />
+							<bool name="no_sim_update" value="False" />
+							<bool name="join_parent_squad" value="False" />
+							<bool name="redirect_damage_to_parent_entity" value="True" />
+							<bool name="receive_parent_animations" value="False" />
+							<bool name="receive_parent_death" value="True" />
+						</group>
+					</template_reference>
+				</template_reference>
+			</list>
+		</group>
+		<uniqueid name="pbgid" value="1517710" />
+		<instance_reference name="parent_pbg" value="attachments\attachment_list\gameplay\strategic_points\territory_capture_point_manpower_circle\default_territory_capture_point_manpower_circle" />
+	</variant>
+</instance>

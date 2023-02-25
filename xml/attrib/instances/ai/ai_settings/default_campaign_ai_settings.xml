@@ -1,0 +1,274 @@
+<instance version="5" description="" template="ai\ai_settings">
+	<variant name="default">
+		<group name="ai_settings_bag">
+			<enum_table name="tactic_wait_timeout_defaults">
+				<float name="ability" value="-1" />
+				<float name="cover" value="-1" />
+				<float name="hold" value="-1" />
+				<float name="avoid" value="-1" />
+				<float name="vehicle" value="-1" />
+				<float name="force_attack" value="-1" />
+				<float name="pickup" value="-1" />
+				<float name="capture_team_weapon" value="-1" />
+				<float name="recrew" value="-1" />
+				<float name="provide_reinforcement_point" value="-1" />
+				<float name="finish_healing" value="-1" />
+				<float name="capture_point" value="-1" />
+				<float name="warm_up" value="-1" />
+				<float name="min_range" value="-1" />
+				<float name="vehicle_decrew" value="-1" />
+				<float name="tactic_sequence" value="-1" />
+				<float name="tactic_lua" value="-1" />
+			</enum_table>
+			<enum_table name="tactic_retry_timeout_defaults">
+				<float name="ability" value="5" />
+				<float name="cover" value="5" />
+				<float name="hold" value="5" />
+				<float name="avoid" value="5" />
+				<float name="vehicle" value="5" />
+				<float name="force_attack" value="5" />
+				<float name="pickup" value="5" />
+				<float name="capture_team_weapon" value="5" />
+				<float name="recrew" value="5" />
+				<float name="provide_reinforcement_point" value="5" />
+				<float name="finish_healing" value="5" />
+				<float name="capture_point" value="5" />
+				<float name="warm_up" value="5" />
+				<float name="min_range" value="5" />
+				<float name="vehicle_decrew" value="5" />
+				<float name="tactic_sequence" value="5" />
+				<float name="tactic_lua" value="5" />
+			</enum_table>
+			<enum_table name="tactic_max_timeout_defaults">
+				<float name="ability" value="35" />
+				<float name="cover" value="35" />
+				<float name="hold" value="35" />
+				<float name="avoid" value="35" />
+				<float name="vehicle" value="35" />
+				<float name="force_attack" value="35" />
+				<float name="pickup" value="35" />
+				<float name="capture_team_weapon" value="35" />
+				<float name="recrew" value="35" />
+				<float name="provide_reinforcement_point" value="35" />
+				<float name="finish_healing" value="35" />
+				<float name="capture_point" value="35" />
+				<float name="warm_up" value="35" />
+				<float name="min_range" value="35" />
+				<float name="vehicle_decrew" value="35" />
+				<float name="tactic_sequence" value="35" />
+				<float name="tactic_lua" value="35" />
+			</enum_table>
+			<group name="target_identification">
+				<bool name="detect_squads_in_camoflauge" value="True" />
+				<bool name="detect_squads_in_fog_of_war" value="True" />
+				<bool name="lead_targeting_of_moving_squad_clumps" value="True" />
+				<bool name="detect_squads_decapping_points" value="True" />
+				<float name="clump_detection_refresh_time" value="-1" />
+				<float name="clump_detection_size" value="12" />
+				<float name="clump_detection_lead_movement_time" value="3" />
+				<float name="max_dist_to_still_detect_in_camo" value="1" />
+				<float name="max_dist_to_still_detect_in_fow" value="10" />
+				<float name="targeting_memory_duration" value="30" />
+				<bool name="target_invulnerable" value="False" />
+				<group name="enemy_clump_path_to_hq_settings">
+					<float name="raw_distance_to_hq_max" value="-1" />
+					<int name="minimum_unit_count" value="0" />
+					<float name="raw_distance_to_hq_min" value="0" />
+					<float name="path_recalculate_interval_secs" value="10" />
+				</group>
+				<list name="clump_detection_exclude_unit_types">
+				</list>
+			</group>
+			<group name="pathing">
+				<bool name="pathing_detects_squads_in_camoflauge" value="True" />
+				<bool name="pathing_detects_squads_in_fog_of_war" value="True" />
+				<bool name="pathing_detects_accurate_enemy_sight" value="False" />
+				<bool name="pathing_detects_opponents_fog_of_war" value="True" />
+				<bool name="pathing_detects_suppression" value="True" />
+				<bool name="pathing_detects_firing_arcs" value="True" />
+				<bool name="pathing_detects_min_firing_range" value="True" />
+				<float name="pathing_threat_memory_duration" value="30" />
+			</group>
+			<group name="fallback">
+				<float name="fallback_combat_rating" value="0.25" />
+				<float name="fallback_squad_health_ratio_start" value="0.5" />
+				<float name="fallback_squad_health_ratio_end" value="0.99" />
+				<float name="fallback_vehicle_health_ratio_start" value="0.5" />
+				<float name="fallback_vehicle_health_ratio_end" value="0.99" />
+				<float name="fallback_capacity_ratio" value="0.5" />
+				<float name="retreat_combat_rating" value="0.25" />
+				<float name="retreat_health_ratio" value="0.3" />
+				<float name="retreat_capacity_ratio" value="0.3" />
+				<bool name="retreat_on_suppression" value="True" />
+				<bool name="retreat_on_pinned" value="True" />
+				<float name="retreat_on_suppression_reaction_time" value="6" />
+				<float name="retreat_delay_time_min" value="0" />
+				<float name="retreat_delay_time_max" value="0" />
+				<float name="reinforce_wait_time" value="15" />
+				<float name="reinforce_failed_retry_wait_time" value="60" />
+				<float name="reinforce_max_distance" value="-1" />
+				<float name="reinforce_health_ratio" value="0.3" />
+				<bool name="reinforce_during_combat" value="True" />
+				<bool name="reinforce_enabled" value="True" />
+				<float name="reinforce_min_health_ratio_to_reach_reinforce_point" value="-1" />
+				<float name="fallback_squad_shield_ratio_start" value="-1" />
+				<float name="fallback_squad_shield_ratio_end" value="-1" />
+				<float name="fallback_encounter_squad_ratio" value="1" />
+				<float name="fallback_encounter_squad_remaining_ratio" value="-1" />
+			</group>
+			<group name="skirmish_settings">
+				<group name="capture">
+					<float name="capture_max_territory_ratio" value="1" />
+					<float name="capture_max_territory_relative_ratio" value="-1" />
+					<enum_table name="max_capture_points_ratio">
+					</enum_table>
+					<enum_table name="max_capture_points_relative_ratio">
+					</enum_table>
+					<int name="capture_min_num_territories" value="3" />
+					<enum_table name="min_capture_points">
+					</enum_table>
+					<bool name="forward_base_setup_at_hq" value="False" />
+				</group>
+				<group name="catchup">
+					<float name="catchup_max_resource_bonus" value="1" />
+					<float name="catchup_max_resource_deficit" value="1000" />
+				</group>
+				<group name="combat_eval">
+					<float name="desired_ratio" value="0.75" />
+				</group>
+				<group name="tasks">
+					<int name="max_num_attack_objectives" value="100" />
+					<int name="max_num_capture_tasks" value="100" />
+					<int name="max_num_construction_tasks" value="100" />
+				</group>
+				<bool name="use_offensive_player_abilities" value="False" />
+				<enum_table name="resource_multipliers">
+					<float name="action" value="1" />
+					<float name="command" value="1" />
+					<float name="popcap" value="1" />
+					<float name="fuel" value="1" />
+					<float name="munition" value="1" />
+					<float name="manpower" value="1" />
+					<float name="requisition" value="1" />
+					<float name="ultimate" value="1" />
+				</enum_table>
+			</group>
+			<group name="encounter_positions">
+				<float name="encounter_pos_threat_scale" value="10" />
+				<float name="encounter_pos_preferred_firing_range_scale" value="1" />
+				<float name="encounter_pos_distance_scale" value="0.001" />
+				<float name="encounter_pos_in_combat_cover_user_distance_scale" value="0.1" />
+				<float name="encounter_pos_in_combat_setup_weapon_distance_scale" value="0.1" />
+			</group>
+			<bool name="should_update_threat_map" value="True" />
+			<float name="attack_objective_replan_time" value="5" />
+			<group name="combat_ratings">
+				<enum_table name="cover_table">
+					<template_reference name="tp_defcover" value="combat_ratings_cover_info">
+						<float name="class_rating_multiplier" value="1" />
+					</template_reference>
+					<template_reference name="tp_heavy_cover" value="combat_ratings_cover_info">
+						<float name="class_rating_multiplier" value="1" />
+					</template_reference>
+					<template_reference name="tp_light_cover" value="combat_ratings_cover_info">
+						<float name="class_rating_multiplier" value="1" />
+					</template_reference>
+					<template_reference name="tp_negative_cover" value="combat_ratings_cover_info">
+						<float name="class_rating_multiplier" value="1" />
+					</template_reference>
+					<template_reference name="tp_water_cover" value="combat_ratings_cover_info">
+						<float name="class_rating_multiplier" value="1" />
+					</template_reference>
+					<template_reference name="tp_smoke_cover" value="combat_ratings_cover_info">
+						<float name="class_rating_multiplier" value="1" />
+					</template_reference>
+					<template_reference name="tp_garrison_cover" value="combat_ratings_cover_info">
+						<float name="class_rating_multiplier" value="1" />
+					</template_reference>
+					<template_reference name="tp_trench_cover" value="combat_ratings_cover_info">
+						<float name="class_rating_multiplier" value="1" />
+					</template_reference>
+					<template_reference name="tp_road_light_cover" value="combat_ratings_cover_info">
+						<float name="class_rating_multiplier" value="1" />
+					</template_reference>
+					<template_reference name="tp_road_heavy_cover" value="combat_ratings_cover_info">
+						<float name="class_rating_multiplier" value="1" />
+					</template_reference>
+				</enum_table>
+				<enum name="weapon_stance_mode" value="highest_delta_dps_against_enemy" />
+				<bool name="should_attack_target_in_heavy_cover_when_cant_enter" value="True" />
+				<bool name="allow_builders_to_enter_combat" value="True" />
+			</group>
+			<group name="tactics">
+				<float name="avoidance_delay_time_min" value="0" />
+				<float name="avoidance_ignore_chance" value="0" />
+				<float name="vehicle_update_pos_delay_time" value="5" />
+				<bool name="should_protect_weak_rear_armour" value="True" />
+				<bool name="should_vehicle_out_maneuvre_enemy" value="True" />
+				<float name="avoidance_delay_time_max" value="0" />
+				<float name="kiting_target_update_delay" value="5" />
+				<float name="kiting_chance" value="0.5" />
+				<float name="kiting_update_length" value="5" />
+				<group name="heavy_cover_max_occupancy">
+					<int name="default_max_squad_occupancy" value="2" />
+					<list name="occupancy_area_interval_list">
+					</list>
+					<list name="occupancy_ebp_override_list">
+					</list>
+				</group>
+			</group>
+			<float name="combat_task_retargeting_time" value="5" />
+			<bool name="designer_lock_squads_by_default" value="False" />
+			<group name="features">
+				<bool name="kiting_enabled" value="True" />
+				<bool name="use_abilities" value="False" />
+				<bool name="use_cover" value="True" />
+				<bool name="fast_skimmers_strafing_entry_enabled" value="True" />
+				<bool name="can_attack_from_fow" value="True" />
+				<group name="pathfinding">
+					<bool name="avoid_threats_inside_encounter_area" value="True" />
+					<bool name="avoid_threats_outside_encounter_area" value="True" />
+					<bool name="can_leave_encounter_area" value="True" />
+					<instance_reference name="pass_type_pbg_override" value="" />
+				</group>
+				<bool name="can_attack_targets_outside_encounter" value="True" />
+				<bool name="can_leave_heavy_cover_to_chase_target" value="False" />
+			</group>
+			<enum name="production_mode" value="full_production" />
+			<enum_table name="starting_resource_bonuses">
+				<float name="action" value="0" />
+				<float name="command" value="0" />
+				<float name="popcap" value="0" />
+				<float name="fuel" value="0" />
+				<float name="munition" value="0" />
+				<float name="manpower" value="0" />
+				<float name="requisition" value="0" />
+				<float name="ultimate" value="0" />
+			</enum_table>
+			<enum_table name="tactic_enabled">
+				<bool name="ability" value="False" />
+				<bool name="cover" value="False" />
+				<bool name="hold" value="False" />
+				<bool name="avoid" value="False" />
+				<bool name="vehicle" value="False" />
+				<bool name="force_attack" value="False" />
+				<bool name="pickup" value="False" />
+				<bool name="capture_team_weapon" value="False" />
+				<bool name="recrew" value="False" />
+				<bool name="provide_reinforcement_point" value="False" />
+				<bool name="finish_healing" value="False" />
+				<bool name="capture_point" value="False" />
+				<bool name="warm_up" value="False" />
+				<bool name="min_range" value="False" />
+				<bool name="vehicle_decrew" value="False" />
+				<bool name="tactic_sequence" value="False" />
+				<bool name="tactic_lua" value="False" />
+			</enum_table>
+			<string name="military_target_scoring_function" value="ANVIL_Campaign_ScoreMilitaryTarget" />
+			<bool name="should_update_slotted_spline_region_infos" value="False" />
+			<locstring name="profile_alias" value="0" />
+			<bool name="naval_ai_enabled" value="False" />
+		</group>
+		<uniqueid name="pbgid" value="186920" />
+	</variant>
+</instance>

@@ -1,0 +1,36 @@
+<instance version="5" description="" template="abilities">
+	<variant name="default">
+		<group name="ability_bag">
+			<group name="ui_info">
+				<string name="hotkey_name" value="z" overrideParent="True" />
+				<file name="icon_name" value="legacy\abilities\at_satchel" overrideParent="True" />
+			</group>
+			<group name="ui_position">
+				<int name="ui_position_column" value="4" overrideParent="True" />
+			</group>
+			<state_tree_node name="statetree_node_prereq_self_requirement" value="ability_requirement_queries\caster_entity_or_squad_requirements\self_presets\veterancy_1_grenade" overrideParent="True" />
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_entity_tree" value="anti_tank_satchel_guastatori" overrideParent="True" />
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="2081881" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\infantry\single_target_anti_tank_subtypes\single_target_anti_tank_satchel_parent" />
+	</variant>
+	<variant name="sp">
+		<group name="ability_bag">
+			<group name="ui_info">
+				<string name="hotkey_name" value="z" overrideParent="True" />
+				<file name="icon_name" value="legacy\abilities\at_satchel" overrideParent="True" />
+			</group>
+			<group name="ui_position">
+				<int name="ui_position_column" value="4" overrideParent="True" />
+			</group>
+			<state_tree_node name="statetree_node_prereq_self_requirement" value="ability_requirement_queries\caster_entity_or_squad_requirements\self_presets\veterancy_1_grenade" overrideParent="True" />
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_entity_tree" value="sp_anti_tank_satchel_guastatori" overrideParent="True" />
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="2081881" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\infantry\single_target_anti_tank_subtypes\single_target_anti_tank_satchel_parent" />
+	</variant>
+</instance>

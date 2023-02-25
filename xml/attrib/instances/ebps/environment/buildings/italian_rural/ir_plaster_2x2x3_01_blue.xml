@@ -1,0 +1,298 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="-776904135" List.ParentItemID="-776904135">
+				<enum name="weapon_targeting" value="manual_only" comment="This must be set to manual_only to fix a bug where squads can auto-target the building for a few moments even after the enemy has vacated." overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-1071825118" List.ParentItemID="-1071825118">
+				<enum name="selection_name" value="building" overrideParent="True" />
+				<enum name="selection_type" value="single_entity_select" overrideParent="True" />
+				<locstring name="brief_text" value="11206314" overrideParent="True" />
+				<file name="symbol_icon_name" value="common\buildings\symbols\garrisoning_icon" overrideParent="True" />
+				<string name="debug_text" value="" overrideParent="True" />
+				<locstring name="screen_name" value="11235966" overrideParent="True" />
+				<locstring name="help_text" value="0" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="1539822770" List.ParentItemID="1539822770">
+				<bool name="delete_when_dead" value="True" overrideParent="True" />
+				<bool name="remove_from_pathfinding_on_death" value="False" overrideParent="True" />
+				<template_reference name="wreck_entity_option" value="options\ebpextensions\healthext\wreck_table">
+					<enum_table name="wreck_entities">
+						<instance_reference name="default" value="ebps\environment\buildings\italian_rural\wrecks\ir_plaster_2x2_wreck" overrideParent="True" />
+					</enum_table>
+				</template_reference>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\line_of_sight_ext" List.ItemID="1343454112" List.ParentItemID="1343454112">
+				<bool name="use_blocking_box" value="False" overrideParent="True" />
+				<enum name="does_block_line_of_sight" value="always" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hold_ext" List.ItemID="-1678685761" List.ParentItemID="-1678685761">
+				<list name="acceptable_types" overrideParent="True">
+					<enum name="acceptable_type" value="hold_infantry" List.ItemID="348262555" />
+					<enum name="acceptable_type" value="hold_heavy_machine_gun" List.ItemID="1453496144" />
+					<enum name="acceptable_type" value="hold_large_gun" List.ItemID="2055746590" />
+					<enum name="acceptable_type" value="hold_kradschutzen" List.ItemID="1388155594" />
+				</list>
+				<float name="load_seconds" value="0" overrideParent="True" />
+				<float name="max_load_seconds" value="6" overrideParent="True" />
+				<float name="min_hold_seconds" value="0" overrideParent="True" />
+				<float name="num_squad_slots" value="2" overrideParent="True" />
+				<bool name="ensure_pathability_to_hold_for_unload" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sight_ext" List.ItemID="1083425219" List.ParentItemID="1083425219">
+				<float name="extended_sight_radius" value="90" overrideParent="True" />
+				<group name="sight_package">
+					<float name="outer_radius" value="50" overrideParent="True" />
+				</group>
+				<group name="vertical_truesight">
+					<bool name="enable" value="True" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="656701784" List.ParentItemID="656701784">
+				<float name="hit_chance" value="1" overrideParent="True" />
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_vehicle_collide" value="False" overrideParent="True" />
+						<bool name="tp_piercing_blockers_only" value="False" overrideParent="True" />
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="1861269152" List.ParentItemID="1861269152">
+				<group name="speech_parameters">
+					<string name="name_code" value="tall_building" overrideParent="True" />
+					<string name="unit_code" value="tall_building" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\destructible_cell_ext" List.ItemID="1843214211" List.ParentItemID="1843214211">
+				<list name="cells">
+					<list name="main_cells_1f" List.ItemID="58189947" List.ParentItemID="58189947">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-775699399" List.ParentItemID="-775699399">
+							<file name="material_override" value="art\environment\buildings\italian_rural\ir_plaster_2x2x3_01\ir_plaster_2x2x3_01_blue" overrideParent="True" />
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="41258275" List.ParentItemID="41258275">
+							<file name="material_override" value="art\environment\buildings\italian_rural\ir_plaster_2x2x3_01\ir_plaster_2x2x3_01_blue" overrideParent="True" />
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1940080842" List.ParentItemID="1940080842">
+							<file name="material_override" value="art\environment\buildings\italian_rural\ir_plaster_2x2x3_01\ir_plaster_2x2x3_01_blue" overrideParent="True" />
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-119528445" List.ParentItemID="-119528445">
+							<file name="material_override" value="art\environment\buildings\italian_rural\ir_plaster_2x2x3_01\ir_plaster_2x2x3_01_blue" overrideParent="True" />
+						</template_reference>
+					</list>
+					<list name="main_cells_2f" List.ItemID="848800009" List.ParentItemID="848800009">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-771323489" List.ParentItemID="-771323489">
+							<file name="material_override" value="art\environment\buildings\italian_rural\ir_plaster_2x2x3_01\ir_plaster_2x2x3_01_blue" overrideParent="True" />
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="492507750" List.ParentItemID="492507750">
+							<file name="material_override" value="art\environment\buildings\italian_rural\ir_plaster_2x2x3_01\ir_plaster_2x2x3_01_blue" overrideParent="True" />
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="784862616" List.ParentItemID="784862616">
+							<file name="material_override" value="art\environment\buildings\italian_rural\ir_plaster_2x2x3_01\ir_plaster_2x2x3_01_blue" overrideParent="True" />
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-790571042" List.ParentItemID="-790571042">
+							<file name="material_override" value="art\environment\buildings\italian_rural\ir_plaster_2x2x3_01\ir_plaster_2x2x3_01_blue" overrideParent="True" />
+						</template_reference>
+					</list>
+					<list name="main_cells_3f" List.ItemID="-197687977" List.ParentItemID="-197687977">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-24587058" List.ParentItemID="-24587058">
+							<file name="material_override" value="art\environment\buildings\italian_rural\ir_plaster_2x2x3_01\ir_plaster_2x2x3_01_blue" overrideParent="True" />
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1552672951" List.ParentItemID="1552672951">
+							<file name="material_override" value="art\environment\buildings\italian_rural\ir_plaster_2x2x3_01\ir_plaster_2x2x3_01_blue" overrideParent="True" />
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="392773450" List.ParentItemID="392773450">
+							<file name="material_override" value="art\environment\buildings\italian_rural\ir_plaster_2x2x3_01\ir_plaster_2x2x3_01_blue" overrideParent="True" />
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="426385427" List.ParentItemID="426385427">
+							<file name="material_override" value="art\environment\buildings\italian_rural\ir_plaster_2x2x3_01\ir_plaster_2x2x3_01_blue" overrideParent="True" />
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-1695692985" List.ParentItemID="-1695692985">
+							<file name="material_override" value="art\environment\buildings\italian_rural\ir_plaster_2x2x3_01\ir_plaster_2x2x3_01_blue" overrideParent="True" />
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-180895947" List.ParentItemID="-180895947">
+							<file name="material_override" value="art\environment\buildings\italian_rural\ir_plaster_2x2x3_01\ir_plaster_2x2x3_01_blue" overrideParent="True" />
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1979772079" List.ParentItemID="1979772079">
+							<file name="material_override" value="art\environment\buildings\italian_rural\ir_plaster_2x2x3_01\ir_plaster_2x2x3_01_blue" overrideParent="True" />
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1633460837" List.ParentItemID="1633460837">
+							<file name="material_override" value="art\environment\buildings\italian_rural\ir_plaster_2x2x3_01\ir_plaster_2x2x3_01_blue" overrideParent="True" />
+						</template_reference>
+					</list>
+				</list>
+				<list name="dca_initialization" overrideParent="True">
+					<string name="action" value="act_main_colour_blue" overrideParent="True" List.ItemID="2067824188" />
+				</list>
+				<list name="cell_presets">
+					<template_reference name="cell_preset" value="options\ebpextensions\destructible_cell_ext\cell_preset" List.ItemID="376478281" List.ParentItemID="376478281">
+						<state_tree_node name="on_cell_broken_tree" value="cell_destruction_area_damage_1" overrideParent="True" />
+						<state_tree_node name="on_cell_destroyed_tree" value="cell_destruction_area_damage_2" overrideParent="True" />
+					</template_reference>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\field_support_ext" List.ItemID="-330940433" List.ParentItemID="-330940433">
+				<list name="added_abilities_on_convert">
+					<instance_reference name="ability" value="abilities\races\common\buildings\forward_base\forward_base_healing_aura" overrideParent="True" List.ItemID="777708699" List.ParentItemID="777708699" />
+					<instance_reference name="ability" value="abilities\races\common\buildings\withdraw_infantry" overrideParent="True" List.ItemID="971928059" List.ParentItemID="971928059" />
+					<instance_reference name="ability" value="abilities\races\common\buildings\retreat_point_mobile_toggle_sp" overrideParent="True" List.ItemID="-173445828" List.ParentItemID="-173445828" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\spawner_ext" List.ItemID="-740329758" List.ParentItemID="-740329758">
+				<bool name="must_be_in_supply" value="True" overrideParent="True" />
+				<state_tree_node name="queue_requirements_openingbranch" value="convert_to_forward_base\ability_prerequisites\spawner_reinforce_prerequisites" overrideParent="True" />
+				<state_tree_node name="reinforce_requirements_openingbranch" value="convert_to_forward_base\ability_prerequisites\spawner_reinforce_prerequisites" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="191562" />
+		<instance_reference name="parent_pbg" value="ebps\environment\buildings\italian_rural\ir_plaster_2x2x3_01" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="-776904135" List.ParentItemID="-776904135">
+				<enum name="weapon_targeting" value="manual_only" comment="This must be set to manual_only to fix a bug where squads can auto-target the building for a few moments even after the enemy has vacated." overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-1071825118" List.ParentItemID="-1071825118">
+				<enum name="selection_name" value="building" overrideParent="True" />
+				<enum name="selection_type" value="single_entity_select" overrideParent="True" />
+				<locstring name="brief_text" value="11206314" overrideParent="True" />
+				<file name="symbol_icon_name" value="common\buildings\symbols\garrisoning_icon" overrideParent="True" />
+				<string name="debug_text" value="" overrideParent="True" />
+				<locstring name="screen_name" value="11235966" overrideParent="True" />
+				<locstring name="help_text" value="0" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="1539822770" List.ParentItemID="1539822770">
+				<bool name="delete_when_dead" value="True" overrideParent="True" />
+				<bool name="remove_from_pathfinding_on_death" value="False" overrideParent="True" />
+				<template_reference name="wreck_entity_option" value="options\ebpextensions\healthext\wreck_table">
+					<enum_table name="wreck_entities">
+						<instance_reference name="default" value="ebps\environment\buildings\italian_rural\wrecks\ir_plaster_2x2_wreck" overrideParent="True" />
+					</enum_table>
+				</template_reference>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\line_of_sight_ext" List.ItemID="1343454112" List.ParentItemID="1343454112">
+				<bool name="use_blocking_box" value="False" overrideParent="True" />
+				<enum name="does_block_line_of_sight" value="always" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hold_ext" List.ItemID="-1678685761" List.ParentItemID="-1678685761">
+				<list name="acceptable_types" overrideParent="True">
+					<enum name="acceptable_type" value="hold_infantry" List.ItemID="348262555" />
+					<enum name="acceptable_type" value="hold_heavy_machine_gun" List.ItemID="1453496144" />
+					<enum name="acceptable_type" value="hold_large_gun" List.ItemID="2055746590" />
+					<enum name="acceptable_type" value="hold_kradschutzen" List.ItemID="1388155594" />
+				</list>
+				<float name="load_seconds" value="0" overrideParent="True" />
+				<float name="max_load_seconds" value="6" overrideParent="True" />
+				<float name="min_hold_seconds" value="0" overrideParent="True" />
+				<float name="num_squad_slots" value="2" overrideParent="True" />
+				<bool name="ensure_pathability_to_hold_for_unload" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sight_ext" List.ItemID="1083425219" List.ParentItemID="1083425219">
+				<float name="extended_sight_radius" value="90" overrideParent="True" />
+				<group name="sight_package">
+					<float name="outer_radius" value="50" overrideParent="True" />
+				</group>
+				<group name="vertical_truesight">
+					<bool name="enable" value="True" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="656701784" List.ParentItemID="656701784">
+				<float name="hit_chance" value="1" overrideParent="True" />
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_vehicle_collide" value="False" overrideParent="True" />
+						<bool name="tp_piercing_blockers_only" value="False" overrideParent="True" />
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="1861269152" List.ParentItemID="1861269152">
+				<group name="speech_parameters">
+					<string name="name_code" value="tall_building" overrideParent="True" />
+					<string name="unit_code" value="tall_building" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\destructible_cell_ext" List.ItemID="1843214211" List.ParentItemID="1843214211">
+				<list name="cells">
+					<list name="main_cells_1f" List.ItemID="58189947" List.ParentItemID="58189947">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-775699399" List.ParentItemID="-775699399">
+							<file name="material_override" value="art\environment\buildings\italian_rural\ir_plaster_2x2x3_01\ir_plaster_2x2x3_01_blue" overrideParent="True" />
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="41258275" List.ParentItemID="41258275">
+							<file name="material_override" value="art\environment\buildings\italian_rural\ir_plaster_2x2x3_01\ir_plaster_2x2x3_01_blue" overrideParent="True" />
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1940080842" List.ParentItemID="1940080842">
+							<file name="material_override" value="art\environment\buildings\italian_rural\ir_plaster_2x2x3_01\ir_plaster_2x2x3_01_blue" overrideParent="True" />
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-119528445" List.ParentItemID="-119528445">
+							<file name="material_override" value="art\environment\buildings\italian_rural\ir_plaster_2x2x3_01\ir_plaster_2x2x3_01_blue" overrideParent="True" />
+						</template_reference>
+					</list>
+					<list name="main_cells_2f" List.ItemID="848800009" List.ParentItemID="848800009">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-771323489" List.ParentItemID="-771323489">
+							<file name="material_override" value="art\environment\buildings\italian_rural\ir_plaster_2x2x3_01\ir_plaster_2x2x3_01_blue" overrideParent="True" />
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="492507750" List.ParentItemID="492507750">
+							<file name="material_override" value="art\environment\buildings\italian_rural\ir_plaster_2x2x3_01\ir_plaster_2x2x3_01_blue" overrideParent="True" />
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="784862616" List.ParentItemID="784862616">
+							<file name="material_override" value="art\environment\buildings\italian_rural\ir_plaster_2x2x3_01\ir_plaster_2x2x3_01_blue" overrideParent="True" />
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-790571042" List.ParentItemID="-790571042">
+							<file name="material_override" value="art\environment\buildings\italian_rural\ir_plaster_2x2x3_01\ir_plaster_2x2x3_01_blue" overrideParent="True" />
+						</template_reference>
+					</list>
+					<list name="main_cells_3f" List.ItemID="-197687977" List.ParentItemID="-197687977">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-24587058" List.ParentItemID="-24587058">
+							<file name="material_override" value="art\environment\buildings\italian_rural\ir_plaster_2x2x3_01\ir_plaster_2x2x3_01_blue" overrideParent="True" />
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1552672951" List.ParentItemID="1552672951">
+							<file name="material_override" value="art\environment\buildings\italian_rural\ir_plaster_2x2x3_01\ir_plaster_2x2x3_01_blue" overrideParent="True" />
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="392773450" List.ParentItemID="392773450">
+							<file name="material_override" value="art\environment\buildings\italian_rural\ir_plaster_2x2x3_01\ir_plaster_2x2x3_01_blue" overrideParent="True" />
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="426385427" List.ParentItemID="426385427">
+							<file name="material_override" value="art\environment\buildings\italian_rural\ir_plaster_2x2x3_01\ir_plaster_2x2x3_01_blue" overrideParent="True" />
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-1695692985" List.ParentItemID="-1695692985">
+							<file name="material_override" value="art\environment\buildings\italian_rural\ir_plaster_2x2x3_01\ir_plaster_2x2x3_01_blue" overrideParent="True" />
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-180895947" List.ParentItemID="-180895947">
+							<file name="material_override" value="art\environment\buildings\italian_rural\ir_plaster_2x2x3_01\ir_plaster_2x2x3_01_blue" overrideParent="True" />
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1979772079" List.ParentItemID="1979772079">
+							<file name="material_override" value="art\environment\buildings\italian_rural\ir_plaster_2x2x3_01\ir_plaster_2x2x3_01_blue" overrideParent="True" />
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1633460837" List.ParentItemID="1633460837">
+							<file name="material_override" value="art\environment\buildings\italian_rural\ir_plaster_2x2x3_01\ir_plaster_2x2x3_01_blue" overrideParent="True" />
+						</template_reference>
+					</list>
+				</list>
+				<list name="dca_initialization" overrideParent="True">
+					<string name="action" value="act_main_colour_blue" overrideParent="True" List.ItemID="2067824188" />
+				</list>
+				<list name="cell_presets">
+					<template_reference name="cell_preset" value="options\ebpextensions\destructible_cell_ext\cell_preset" List.ItemID="376478281" List.ParentItemID="376478281">
+						<state_tree_node name="on_cell_broken_tree" value="sp_cell_destruction_area_damage_1" overrideParent="True" />
+						<state_tree_node name="on_cell_destroyed_tree" value="sp_cell_destruction_area_damage_2" overrideParent="True" />
+					</template_reference>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\field_support_ext" List.ItemID="-330940433" List.ParentItemID="-330940433">
+				<list name="added_abilities_on_convert">
+					<instance_reference name="ability" value="abilities\races\common\buildings\forward_base\forward_base_healing_aura" overrideParent="True" List.ItemID="777708699" List.ParentItemID="777708699" />
+					<instance_reference name="ability" value="abilities\races\common\buildings\withdraw_infantry" overrideParent="True" List.ItemID="971928059" List.ParentItemID="971928059" />
+					<instance_reference name="ability" value="abilities\races\common\buildings\retreat_point_mobile_toggle_sp" overrideParent="True" List.ItemID="-173445828" List.ParentItemID="-173445828" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\spawner_ext" List.ItemID="-740329758" List.ParentItemID="-740329758">
+				<bool name="must_be_in_supply" value="True" overrideParent="True" />
+				<state_tree_node name="queue_requirements_openingbranch" value="sp_convert_to_forward_base\ability_prerequisites\spawner_reinforce_prerequisites" overrideParent="True" />
+				<state_tree_node name="reinforce_requirements_openingbranch" value="sp_convert_to_forward_base\ability_prerequisites\spawner_reinforce_prerequisites" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="191562" />
+		<instance_reference name="parent_pbg" value="ebps\environment\buildings\italian_rural\ir_plaster_2x2x3_01" />
+	</variant>
+</instance>

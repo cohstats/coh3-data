@@ -1,0 +1,263 @@
+<instance version="5" description="Recrewable Humber" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="433366582" List.ParentItemID="433366582">
+				<bool name="reveal_to_all_on_death" value="False" overrideParent="True" />
+				<template_reference name="armor_layout_option" value="options\ebpextensions\healthext\armor_layouts\armor_layout_front_rear_side">
+					<float name="front_armor" value="25" overrideParent="True" />
+				</template_reference>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sight_ext" List.ItemID="-64524548" List.ParentItemID="-64524548">
+				<float name="reveal_area_on_death_time" value="1.5" overrideParent="True" />
+				<float name="reveal_area_on_death_radius" value="0" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="652038711" List.ParentItemID="652038711">
+				<list name="race_type_list" removedIds="-985652957">
+					<instance_reference name="race_type" value="" List.ItemID="-985652957" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-1350927259" List.ParentItemID="-1350927259">
+				<locstring name="screen_name" value="11180069" overrideParent="True" />
+				<locstring name="help_text_world" value="11205501" overrideParent="True" />
+				<file name="icon_name" value="common\units\icons\armored_car_sdkfz_222_ger" overrideParent="True" />
+				<float name="minimap_icon_scale" value="0.5" overrideParent="True" />
+				<locstring name="help_text" value="11153568" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="-1137803893" List.ParentItemID="-1137803893">
+				<list name="hardpoints" removedIds="-764087047">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\recrewable_ext" List.ItemID="1857557288" List.ListAction="Append">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="1253571873">
+						<instance_reference name="ext_key" value="" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british\vehicles\humber_recrewable_uk" />
+							<float name="max_capture_crew_size" value="3" />
+							<float name="min_capture_crew_size" value="3" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="961159107">
+						<instance_reference name="ext_key" value="racebps\afrika_korps" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british\vehicles\humber_recrewable_uk" />
+							<float name="max_capture_crew_size" value="3" />
+							<float name="min_capture_crew_size" value="3" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-2023774046">
+						<instance_reference name="ext_key" value="racebps\americans" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british\vehicles\humber_recrewable_uk" />
+							<float name="max_capture_crew_size" value="3" />
+							<float name="min_capture_crew_size" value="3" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-503596092">
+						<instance_reference name="ext_key" value="racebps\british" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british\vehicles\humber_recrewable_uk" />
+							<float name="max_capture_crew_size" value="3" />
+							<float name="min_capture_crew_size" value="3" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="1047754440">
+						<instance_reference name="ext_key" value="racebps\germans" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british\vehicles\humber_recrewable_uk" />
+							<float name="max_capture_crew_size" value="3" />
+							<float name="min_capture_crew_size" value="3" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="1968556114">
+						<instance_reference name="ext_key" value="racebps\partisan" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british\vehicles\humber_recrewable_uk" />
+							<float name="max_capture_crew_size" value="3" />
+							<float name="min_capture_crew_size" value="3" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2072113" />
+		<instance_reference name="parent_pbg" value="ebps\races\british\vehicles\humber_uk" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="433366582" List.ParentItemID="433366582">
+				<bool name="reveal_to_all_on_death" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sight_ext" List.ItemID="-64524548" List.ParentItemID="-64524548">
+				<float name="reveal_area_on_death_time" value="1.5" overrideParent="True" />
+				<float name="reveal_area_on_death_radius" value="0" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="652038711" List.ParentItemID="652038711">
+				<list name="race_type_list" removedIds="-985652957">
+					<instance_reference name="race_type" value="" List.ItemID="-985652957" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-1350927259" List.ParentItemID="-1350927259">
+				<locstring name="screen_name" value="11180069" overrideParent="True" />
+				<locstring name="help_text_world" value="0" overrideParent="True" />
+				<file name="icon_name" value="common\units\icons\armored_car_sdkfz_222_ger" overrideParent="True" />
+				<float name="minimap_icon_scale" value="0.5" overrideParent="True" />
+				<locstring name="help_text" value="11153568" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="-1137803893" List.ParentItemID="-1137803893">
+				<list name="hardpoints" removedIds="-764087047">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\recrewable_ext" List.ItemID="1857557288" List.ListAction="Append">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="1253571873">
+						<instance_reference name="ext_key" value="" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british\vehicles\humber_recrewable_uk" />
+							<float name="max_capture_crew_size" value="3" />
+							<float name="min_capture_crew_size" value="3" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="961159107">
+						<instance_reference name="ext_key" value="racebps\afrika_korps" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british\vehicles\humber_recrewable_uk" />
+							<float name="max_capture_crew_size" value="3" />
+							<float name="min_capture_crew_size" value="3" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-2023774046">
+						<instance_reference name="ext_key" value="racebps\americans" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british\vehicles\humber_recrewable_uk" />
+							<float name="max_capture_crew_size" value="3" />
+							<float name="min_capture_crew_size" value="3" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-503596092">
+						<instance_reference name="ext_key" value="racebps\british" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british\vehicles\humber_recrewable_uk" />
+							<float name="max_capture_crew_size" value="3" />
+							<float name="min_capture_crew_size" value="3" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="1047754440">
+						<instance_reference name="ext_key" value="racebps\germans" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british\vehicles\humber_recrewable_uk" />
+							<float name="max_capture_crew_size" value="3" />
+							<float name="min_capture_crew_size" value="3" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="1968556114">
+						<instance_reference name="ext_key" value="racebps\partisan" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british\vehicles\humber_recrewable_uk" />
+							<float name="max_capture_crew_size" value="3" />
+							<float name="min_capture_crew_size" value="3" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2072113" />
+		<instance_reference name="parent_pbg" value="ebps\races\british\vehicles\humber_uk" />
+	</variant>
+</instance>

@@ -1,0 +1,18 @@
+<instance version="5" description="" template="abilities">
+	<variant name="default">
+		<group name="ability_bag">
+			<state_tree_node name="statetree_node_prereq_target_requirement" value="ability_requirement_queries\target_requirements\target_presets\standard_anti_tank" overrideParent="True" />
+			<state_tree_node name="squad_caster_entity_filter_condition" value="ability_requirement_queries\caster_entity_requirements\is_team_weapon_or_carrying_team_weapon" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2122541" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\team_weapons\team_weapon_setup_single_target_parent" />
+	</variant>
+	<variant name="sp">
+		<group name="ability_bag">
+			<state_tree_node name="statetree_node_prereq_target_requirement" value="ability_requirement_queries\target_requirements\target_presets\standard_anti_tank" overrideParent="True" />
+			<state_tree_node name="squad_caster_entity_filter_condition" value="ability_requirement_queries\caster_entity_requirements\is_team_weapon_or_carrying_team_weapon" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2122541" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\team_weapons\team_weapon_setup_single_target_parent" />
+	</variant>
+</instance>

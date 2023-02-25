@@ -1,0 +1,160 @@
+<instance version="5" description="M1A1 76mm used by the M18 Hellcat" template="weapon">
+	<variant name="default">
+		<group name="weapon_bag">
+			<group name="accuracy">
+				<float name="near" value="1" comment="Intentionally set to always hit at close range, even while moving" overrideParent="True" />
+				<float name="far" value="1" overrideParent="True" />
+				<float name="mid" value="1" overrideParent="True" />
+			</group>
+			<group name="area_effect">
+				<template_reference name="area_info" value="options\area_info_options\circle_area_option">
+					<float name="outer_radius" value="4" overrideParent="True" />
+				</template_reference>
+				<group name="damage">
+					<float name="mid" value="0.15" overrideParent="True" />
+					<float name="near" value="1" overrideParent="True" />
+				</group>
+				<group name="distance">
+					<float name="near" value="1" overrideParent="True" />
+					<float name="mid" value="2" overrideParent="True" />
+				</group>
+				<bool name="has_friendly_fire" value="True" overrideParent="True" />
+				<group name="suppression">
+					<float name="far" value="0.25" overrideParent="True" />
+					<float name="near" value="0.25" overrideParent="True" />
+					<float name="mid" value="0.25" overrideParent="True" />
+				</group>
+				<template_reference name="aoe_penetration" value="tables\range_table">
+					<float name="far" value="50" overrideParent="True" />
+					<float name="mid" value="50" overrideParent="True" />
+					<float name="near" value="50" overrideParent="True" />
+				</template_reference>
+				<int name="damage_max_members_per_squad" value="-1" overrideParent="True" />
+			</group>
+			<group name="behaviour">
+				<float name="reaction_radius" value="0.5" overrideParent="True" />
+			</group>
+			<string name="fx_munition_name" value="\cannon\shell_medium_he" overrideParent="True" />
+			<group name="moving">
+				<float name="accuracy_multiplier" value="0.5" overrideParent="True" />
+			</group>
+			<group name="projectile">
+				<instance_reference name="projectile" value="ebps\gameplay\projectiles\common\artillery\p_artillery_medium" overrideParent="True" />
+			</group>
+			<group name="range">
+				<float name="max" value="55" comment="Must be greater than ability range or ability breaks. Difference is the buffer zone for moving away from target before ability stops." overrideParent="True" />
+				<float name="min" value="15" overrideParent="True" />
+				<group name="distance">
+					<float name="near" value="-1" overrideParent="True" />
+					<float name="far" value="-1" overrideParent="True" />
+					<float name="mid" value="-1" overrideParent="True" />
+				</group>
+			</group>
+			<group name="penetration">
+				<float name="near" value="50" overrideParent="True" />
+				<float name="far" value="50" overrideParent="True" />
+				<float name="mid" value="50" overrideParent="True" />
+			</group>
+			<group name="aim">
+				<group name="fire_aim_time">
+					<float name="max" value="0.125" overrideParent="True" />
+					<float name="min" value="0.125" overrideParent="True" />
+				</group>
+				<group name="ready_aim_time">
+					<float name="max" value="0.125" overrideParent="True" />
+					<float name="min" value="0.125" overrideParent="True" />
+				</group>
+			</group>
+			<group name="reload">
+				<group name="duration">
+					<float name="max" value="4.5" overrideParent="True" />
+					<float name="min" value="4" overrideParent="True" />
+				</group>
+			</group>
+			<group name="deflection">
+				<bool name="has_deflection_damage" value="True" overrideParent="True" />
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="177819" />
+		<instance_reference name="parent_pbg" value="weapon\american\ballistic_weapon\tank_gun\76mm_hellcat_us" />
+	</variant>
+	<variant name="sp">
+		<group name="weapon_bag">
+			<group name="accuracy">
+				<float name="near" value="1" comment="Intentionally set to always hit at close range, even while moving" overrideParent="True" />
+				<float name="far" value="1" overrideParent="True" />
+				<float name="mid" value="1" overrideParent="True" />
+			</group>
+			<group name="area_effect">
+				<template_reference name="area_info" value="options\area_info_options\circle_area_option">
+					<float name="outer_radius" value="4" overrideParent="True" />
+				</template_reference>
+				<group name="damage">
+					<float name="mid" value="0.15" overrideParent="True" />
+					<float name="near" value="1" overrideParent="True" />
+				</group>
+				<group name="distance">
+					<float name="near" value="1" overrideParent="True" />
+					<float name="mid" value="2" overrideParent="True" />
+				</group>
+				<bool name="has_friendly_fire" value="True" overrideParent="True" />
+				<group name="suppression">
+					<float name="far" value="0.25" overrideParent="True" />
+					<float name="near" value="0.25" overrideParent="True" />
+					<float name="mid" value="0.25" overrideParent="True" />
+				</group>
+				<template_reference name="aoe_penetration" value="tables\range_table">
+					<float name="far" value="50" overrideParent="True" />
+					<float name="mid" value="50" overrideParent="True" />
+					<float name="near" value="50" overrideParent="True" />
+				</template_reference>
+				<int name="damage_max_members_per_squad" value="-1" overrideParent="True" />
+			</group>
+			<group name="behaviour">
+				<float name="reaction_radius" value="0.5" overrideParent="True" />
+			</group>
+			<string name="fx_munition_name" value="\cannon\shell_medium_he" overrideParent="True" />
+			<group name="moving">
+				<float name="accuracy_multiplier" value="0.5" overrideParent="True" />
+			</group>
+			<group name="projectile">
+				<instance_reference name="projectile" value="ebps\gameplay\projectiles\common\artillery\p_artillery_medium" overrideParent="True" />
+			</group>
+			<group name="range">
+				<float name="max" value="55" comment="Must be greater than ability range or ability breaks. Difference is the buffer zone for moving away from target before ability stops." overrideParent="True" />
+				<float name="min" value="15" overrideParent="True" />
+				<group name="distance">
+					<float name="near" value="-1" overrideParent="True" />
+					<float name="far" value="-1" overrideParent="True" />
+					<float name="mid" value="-1" overrideParent="True" />
+				</group>
+			</group>
+			<group name="penetration">
+				<float name="near" value="50" overrideParent="True" />
+				<float name="far" value="50" overrideParent="True" />
+				<float name="mid" value="50" overrideParent="True" />
+			</group>
+			<group name="aim">
+				<group name="fire_aim_time">
+					<float name="max" value="0.125" overrideParent="True" />
+					<float name="min" value="0.125" overrideParent="True" />
+				</group>
+				<group name="ready_aim_time">
+					<float name="max" value="0.125" overrideParent="True" />
+					<float name="min" value="0.125" overrideParent="True" />
+				</group>
+			</group>
+			<group name="reload">
+				<group name="duration">
+					<float name="max" value="4.5" overrideParent="True" />
+					<float name="min" value="4" overrideParent="True" />
+				</group>
+			</group>
+			<group name="deflection">
+				<bool name="has_deflection_damage" value="True" overrideParent="True" />
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="177819" />
+		<instance_reference name="parent_pbg" value="weapon\american\ballistic_weapon\tank_gun\76mm_hellcat_us" />
+	</variant>
+</instance>

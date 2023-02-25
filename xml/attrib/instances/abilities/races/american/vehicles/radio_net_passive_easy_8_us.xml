@@ -1,0 +1,50 @@
+<instance version="5" description="Passive Self-repair ability on halftracks. Researched in the the mechanized centre." template="abilities">
+	<variant name="default">
+		<group name="ability_bag">
+			<list name="requirements">
+				<template_reference name="required" value="requirements\required_player_upgrade" List.ItemID="1897142208" List.ListAction="Append">
+					<enum name="reason" value="usage_and_display" overrideParent="True" />
+					<locstring name="ui_name" value="0" />
+					<bool name="is_present" value="True" />
+					<int name="max_completed" value="100" />
+					<int name="min_completed" value="1" />
+					<instance_reference name="upgrade_name" value="upgrade\american\campaign\company\armoured\passive_unlocks\middle\c_armoured_improved_radio_net_passive_us" overrideParent="True" />
+					<bool name="include_completed" value="True" />
+					<bool name="include_queued" value="False" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+				</template_reference>
+			</list>
+			<enum name="ui_progress_bar_type" value="no_bar" overrideParent="True" />
+			<bool name="facing_ignore" value="True" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2085303" />
+		<instance_reference name="parent_pbg" value="abilities\races\american\vehicles\radio_net_passive_us" />
+	</variant>
+	<variant name="sp">
+		<group name="ability_bag">
+			<list name="requirements">
+				<template_reference name="required" value="requirements\required_player_upgrade" List.ItemID="1897142208" List.ListAction="Append">
+					<enum name="reason" value="usage_and_display" overrideParent="True" />
+					<locstring name="ui_name" value="0" />
+					<bool name="is_present" value="True" />
+					<int name="max_completed" value="100" />
+					<int name="min_completed" value="1" />
+					<instance_reference name="upgrade_name" value="upgrade\american\campaign\company\armoured\passive_unlocks\middle\c_armoured_improved_radio_net_passive_us" overrideParent="True" />
+					<bool name="include_completed" value="True" />
+					<bool name="include_queued" value="False" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+				</template_reference>
+			</list>
+			<enum name="ui_progress_bar_type" value="no_bar" overrideParent="True" />
+			<bool name="facing_ignore" value="True" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2085303" />
+		<instance_reference name="parent_pbg" value="abilities\races\american\vehicles\radio_net_passive_us" />
+	</variant>
+</instance>

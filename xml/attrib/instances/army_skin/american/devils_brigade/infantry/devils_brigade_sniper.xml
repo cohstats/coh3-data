@@ -1,0 +1,35 @@
+<instance version="5" description="" template="army_skin">
+	<variant name="default">
+		<group name="army_skin_bag">
+			<file name="icon" value="races\american\cosmetics\devils_brigade\infantry\us_sniper_devilsbrigade" overrideParent="True" />
+			<locstring name="description" value="11183740" overrideParent="True" />
+			<template_reference name="inventory_item" value="inventory_item">
+				<uniqueid name="server_id" value="453358" />
+				<list name="races" overrideParent="True">
+					<instance_reference name="race" value="racebps\americans" List.ItemID="1044935669" />
+				</list>
+				<list name="inventory_item_categories" overrideParent="True">
+					<instance_reference name="inventory_item_category" value="inventory_item_category\cosmetics\american\infantry\sniper_us_cosmetic" List.ItemID="1202691715" />
+				</list>
+				<instance_reference name="rarity" value="loot_tier\legendary" overrideParent="True" />
+			</template_reference>
+			<locstring name="name" value="11222732" overrideParent="True" />
+			<list name="remapped_pbgs" overrideParent="True">
+				<template_reference name="remapped_attachment_list" value="pbg_remapping\attachment_list_remapping" List.ItemID="-1927749298">
+					<instance_reference name="original_pbg" value="attachments\attachment_list\races\american\infantry\sniper_us\default_sniper_us" />
+					<instance_reference name="replacement_pbg" value="attachments\attachment_list\cosmetics\american\devils_brigade\infantry\devils_brigade_sniper_us" />
+				</template_reference>
+				<template_reference name="remapped_attachment_list" value="pbg_remapping\attachment_list_remapping" List.ItemID="-1716143680">
+					<instance_reference name="original_pbg" value="attachments\attachment_list\races\american\weapons\rifle_m1903a1_springfield\default_rifle_m1903a1_springfield" />
+					<instance_reference name="replacement_pbg" value="attachments\attachment_list\cosmetics\american\devils_brigade\weapons\devils_brigade_rifle_m1903a1_springfield" />
+				</template_reference>
+			</list>
+			<list name="unit_references" overrideParent="True">
+				<instance_reference name="squad" value="sbps\races\american\infantry\sniper_us" List.ItemID="-723407899" />
+			</list>
+			<file name="icon_secondary_small" value="common\loadout\infantry_icn" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2073511" />
+		<instance_reference name="parent_pbg" value="army_skin\army_skin_root" />
+	</variant>
+</instance>

@@ -1,0 +1,34 @@
+<instance version="5" description="" template="animation_role">
+	<variant name="default">
+		<uniqueid name="pbgid" value="2063279" />
+		<group name="animation_role_bag">
+			<file name="animator" value="armies\common\rigs\vehicle_weapons\dak_marder_iii_pak40_75mm\dak_marder_iii_pak40_75mm" overrideParent="True" />
+			<list name="animation_groups">
+				<group name="group" List.ItemID="-1970521859" List.ParentItemID="-1970521859">
+					<list name="set">
+						<group name="entry" List.ItemID="794144066" List.ParentItemID="794144066">
+							<template_reference name="animation" value="options\animation_role\animation_role_raw_hkxa">
+								<file name="file" value="armies\common\rigs\vehicle_weapons\dak_panzer3_turret_75mm\animations\vehicles\panzer\turret_75mm_vehicle_death_a" overrideParent="True" />
+							</template_reference>
+						</group>
+					</list>
+				</group>
+				<group name="group" List.ItemID="1235671658" List.ParentItemID="1235671658">
+					<list name="set">
+						<group name="entry" List.ItemID="-500293957" List.ParentItemID="-500293957">
+							<template_reference name="animation" value="options\animation_role\animation_role_raw_hkxa" overrideParent="True">
+								<file name="file" value="armies\common\rigs\vehicle_weapons\dak_panzer3_turret_75mm\animations\vehicles\panzer\turret_75mm_vehicle_fire_additive_a" overrideParent="True" />
+							</template_reference>
+						</group>
+						<group name="entry" List.ItemID="-1890664416" List.ParentItemID="-1890664416">
+							<template_reference name="animation" value="options\animation_role\animation_role_raw_matrix">
+								<string name="matrix" value="vehicles\panzer\turret_aim_matrix" overrideParent="True" />
+							</template_reference>
+						</group>
+					</list>
+				</group>
+			</list>
+		</group>
+		<instance_reference name="parent_pbg" value="animation_role\vehicle_turret\vt_base" />
+	</variant>
+</instance>

@@ -1,0 +1,63 @@
+<instance version="5" description="" template="attachments\attachment_list">
+	<variant name="default">
+		<group name="attachment_list_group">
+			<list name="attachment_list" comment="If you are updating this list, please be aware of the second attachment list. That list has an additional Flag object for the campaign map. If appropriate, update the second list to match visuals.">
+				<template_reference name="attachment" value="options\attachment_types\animator_skin_attachment" List.ItemID="-1336287935">
+					<file name="animator" value="art\armies\german\vehicles\scout_car\body\chassis\chassis" />
+					<enum name="inventory_item_category" value="" />
+					<bool name="is_selectable" value="True" />
+					<string name="marker_name" value="" />
+					<file name="material_override" value="" />
+					<list name="customizations">
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_decal\vehicles\german\german_scout_car_decal_default" List.ItemID="-1861302261" />
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_tint\german_tint_ral_7021" List.ItemID="-828120689" />
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_charred\charring_damage" List.ItemID="517494387" />
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_weathering\mud_dry" List.ItemID="-477884971" />
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_damage\ballistic_2x_scale_damage" List.ItemID="-570882676" />
+					</list>
+				</template_reference>
+				<template_reference name="attachment" value="options\attachment_types\destructible_cell_attachment" List.ItemID="413817808">
+					<file name="animator" value="art\armies\german\vehicles\accessories\jerrycan_holder_group_small\jerrycan_holder_group_small" />
+					<file name="material_override" value="" />
+					<string name="attachment_marker" value="loc_main_acc_secondary_back_02" />
+					<float name="health" value="60" />
+					<instance_reference name="hit_material" value="hit_material\metal" />
+					<list name="customizations">
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_charred\charring_damage" List.ItemID="2116552707" />
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_weathering\mud_dry" List.ItemID="337765735" />
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_tint\german_tint_default_accessories_tritone" List.ItemID="-1332596648" />
+					</list>
+				</template_reference>
+				<template_reference name="attachment" value="options\attachment_types\destructible_cell_attachment" List.ItemID="1036418182">
+					<file name="animator" value="art\armies\german\vehicles\accessories\ammo_group_01\ammo_group_01" />
+					<file name="material_override" value="" />
+					<string name="attachment_marker" value="loc_main_acc_secondary_frontright" />
+					<float name="health" value="60" />
+					<instance_reference name="hit_material" value="hit_material\metal" />
+					<list name="customizations">
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_charred\charring_damage" List.ItemID="-1805620828" />
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_weathering\mud_dry" List.ItemID="-2036469557" />
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_tint\german_tint_default_accessories_tritone" List.ItemID="-1453622458" />
+					</list>
+				</template_reference>
+				<template_reference name="attachment" value="options\attachment_types\destructible_cell_attachment" List.ItemID="-1578549957">
+					<file name="animator" value="art\armies\german\vehicles\accessories\bedroll_group_02\bedroll_group_02" />
+					<file name="material_override" value="" />
+					<string name="attachment_marker" value="loc_main_acc_primary_left" />
+					<float name="health" value="60" />
+					<instance_reference name="hit_material" value="hit_material\metal" />
+					<list name="customizations">
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_charred\charring_damage" List.ItemID="2121576425" />
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_weathering\mud_dry" List.ItemID="-1143363168" />
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_tint\german_tint_default_accessories_tritone" List.ItemID="1437964212" />
+					</list>
+				</template_reference>
+			</list>
+			<string name="attachment_category" value="default" />
+			<string name="attachment_speaker_code" value="" />
+			<string name="inventory_category" value="default" />
+		</group>
+		<uniqueid name="pbgid" value="1512726" />
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+</instance>

@@ -1,0 +1,50 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions" removedIds="-596383487">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="728155595" List.ParentItemID="728155595">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\american\buildings\triage_station_us" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="1015231600" List.ParentItemID="1015231600">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\movement_node_modifier_ext" List.ItemID="623077084" List.ParentItemID="623077084">
+				<instance_reference name="DEPRECATED_ui_facing" value="" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ability_ext" List.ItemID="-1464628603" List.ParentItemID="-1464628603">
+				<list name="abilities">
+					<instance_reference name="ability" value="abilities\campaign\buildings\cmap_ability_emplacement_combat_support_triage_center" List.ItemID="2116544303" List.ListAction="Append" />
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2062282" />
+		<instance_reference name="parent_pbg" value="ebps\races\common\campaign\defenses\emplacement_triage_center_core" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions" removedIds="-596383487">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="728155595" List.ParentItemID="728155595">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\american\buildings\triage_station_us" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="1015231600" List.ParentItemID="1015231600">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\movement_node_modifier_ext" List.ItemID="623077084" List.ParentItemID="623077084">
+				<instance_reference name="DEPRECATED_ui_facing" value="" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ability_ext" List.ItemID="-1464628603" List.ParentItemID="-1464628603">
+				<list name="abilities">
+					<instance_reference name="ability" value="abilities\campaign\buildings\cmap_ability_emplacement_combat_support_triage_center" List.ItemID="2116544303" List.ListAction="Append" />
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2062282" />
+		<instance_reference name="parent_pbg" value="ebps\races\common\campaign\defenses\emplacement_triage_center_core" />
+	</variant>
+</instance>

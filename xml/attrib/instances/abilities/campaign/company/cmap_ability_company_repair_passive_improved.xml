@@ -1,0 +1,44 @@
+<instance version="5" description="" template="abilities">
+	<variant name="default">
+		<group name="ability_bag">
+			<group name="ui_info">
+				<locstring name="screen_name" value="11230852" overrideParent="True" />
+			</group>
+			<list name="requirements">
+				<template_reference name="required" value="requirements\required_squad_upgrade" List.ItemID="1673337938" List.ParentItemID="1673337938">
+					<int name="min_completed" value="1" overrideParent="True" />
+					<int name="max_completed" value="1" overrideParent="True" />
+				</template_reference>
+			</list>
+			<enum name="squad_caster" value="squad" overrideParent="True" />
+			<group name="ui_position">
+				<int name="ui_position_row" value="2" overrideParent="True" />
+				<int name="ui_position_column" value="2" overrideParent="True" />
+			</group>
+			<enum name="ui_progress_bar_type" value="no_bar" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2099896" />
+		<instance_reference name="parent_pbg" value="abilities\campaign\company\cmap_ability_company_repair_passive" />
+	</variant>
+	<variant name="sp">
+		<group name="ability_bag">
+			<group name="ui_info">
+				<locstring name="screen_name" value="11230852" overrideParent="True" />
+			</group>
+			<list name="requirements">
+				<template_reference name="required" value="requirements\required_squad_upgrade" List.ItemID="1673337938" List.ParentItemID="1673337938">
+					<int name="min_completed" value="1" overrideParent="True" />
+					<int name="max_completed" value="1" overrideParent="True" />
+				</template_reference>
+			</list>
+			<enum name="squad_caster" value="squad" overrideParent="True" />
+			<group name="ui_position">
+				<int name="ui_position_row" value="2" overrideParent="True" />
+				<int name="ui_position_column" value="2" overrideParent="True" />
+			</group>
+			<enum name="ui_progress_bar_type" value="no_bar" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2099896" />
+		<instance_reference name="parent_pbg" value="abilities\campaign\company\cmap_ability_company_repair_passive" />
+	</variant>
+</instance>

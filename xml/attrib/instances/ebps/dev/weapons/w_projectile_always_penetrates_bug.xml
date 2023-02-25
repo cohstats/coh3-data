@@ -1,0 +1,418 @@
+<instance version="5" description="M9 Bazooka used by the Bazooka Team" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\animation_action_tree_ext" List.ItemID="-562546183">
+				<state_tree_node name="ActionTree_OpeningBranch" value="physical_weapon_ranged" />
+				<bool name="use_root_motion" value="True" />
+				<enum name="entity_statetree_sort_tag" value="weapon_default" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="338586907">
+				<file name="alternate_sua" value="" />
+				<bool name="always_revealed_in_fow" value="False" />
+				<bool name="is_visible_in_game" value="True" />
+				<int name="precise_size" value="-1" />
+				<enum name="default_spawn_type" value="" />
+				<instance_reference name="unit_badge" value="" />
+				<bool name="is_spawned_when_not_in_interactive_area" value="True" />
+				<bool name="is_wreck" value="False" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\american\weapons\flamethrower_m2" />
+				<float name="animator_scale" value="100" />
+				<bool name="browsable_in_editor" value="True" />
+				<float name="entity_scale" value="100" />
+				<enum name="subclass_type" value="Generic" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_targeting_ext" List.ItemID="-1697328535">
+				<bool name="allow_weapon_target_scanning" value="False" />
+				<int name="history_size" value="2" />
+				<bool name="allow_entity_scan_close_enemies" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_react_tree_ext" List.ItemID="635998465">
+				<state_tree_node name="ActionTree_OpeningBranch" value="" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\weapon_ext" List.ItemID="-1286774621">
+				<instance_reference name="weapon" value="weapon\dev\projectile_always_penetrates_bug" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_entity_ext" List.ItemID="-999023717">
+				<float name="rotate_snap" value="90" />
+				<bool name="kill_paradrop" value="False" />
+				<enum name="transferable" value="None" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_inventory_item_ext" List.ItemID="-567205218">
+				<template_reference name="simulation_item" value="sim_inventory_item\sim_inventory_item">
+					<int name="capacity_required" value="0" />
+					<group name="ownership_attributes">
+						<enum name="compatible_owner_type" value="entity" />
+						<enum name="ownership_sharing_type" value="shared" />
+						<float name="drop_on_death_chance" value="0.33" />
+						<bool name="auto_equip" value="True" />
+					</group>
+					<template_reference name="item_data" value="sim_inventory_item\sim_item_data\attachment_inventory_data">
+						<template_reference name="attachment_data" value="options\attachment_types\entity_attachment">
+							<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+								<template_reference name="attach_data" value="attachments\attach_data">
+									<string name="marker_name_parent" value="" />
+									<string name="parent_rigidbody_target_name" value="" />
+									<enum name="game_object_attachment_type" value="scenegraph" />
+								</template_reference>
+								<instance_reference name="ebp" value="ebps\races\american\weapons\ballistic_weapon\infantry_anti_tank_weapon\w_bazooka_bazooka_team_us" />
+								<group name="attachment_flags">
+									<bool name="sim_only" value="False" />
+									<bool name="no_pathfinding" value="True" />
+									<bool name="not_snappable" value="False" />
+									<bool name="restore_snap_to_ground_on_detach" value="True" />
+									<bool name="no_sim_update" value="False" />
+									<bool name="join_parent_squad" value="False" />
+									<bool name="redirect_damage_to_parent_entity" value="True" />
+									<bool name="receive_parent_animations" value="False" />
+									<bool name="receive_parent_death" value="False" />
+								</group>
+							</template_reference>
+						</template_reference>
+					</template_reference>
+					<string name="default_slot" value="" />
+					<enum name="category" value="default" />
+				</template_reference>
+				<group name="requirement">
+					<state_tree_node name="statetree_condition_node" value="" />
+					<instance_reference name="requirement_param" value="" />
+					<state_tree_node name="statetree_condition_default_command_prioritize_as_success" value="" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\attachment_child_ext" List.ItemID="-487065237">
+				<template_reference name="on_attach" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="weapon_attach" />
+				</template_reference>
+				<template_reference name="on_detach" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="weapon_detach" />
+				</template_reference>
+				<bool name="requires_attachment_dynamics" value="False" />
+				<bool name="tracking_affects_transformation_when_setup" value="True" />
+				<string name="rotation_rate_degrees_per_second_signed_dca_key" value="" />
+				<bool name="output_dca_to_parent" value="False" />
+				<float name="dca_vertical_degrees_offset" value="0" />
+				<bool name="horizontal_angle_limits_only_apply_when_setup" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-1206565762">
+				<bool name="ap_killed_kicker" value="True" />
+				<bool name="ap_loss_kicker" value="True" />
+				<float name="decorator_height" value="-1" />
+				<string name="extra_text_deprecated" value="" />
+				<bool name="ghost_enable" value="False" />
+				<locstring name="help_text" value="0" />
+				<string name="hotkey_name" value="" />
+				<file name="icon_name" value="" />
+				<enum name="kill_type" value="" />
+				<colour name="minimap_color" value="*" />
+				<bool name="minimap_enable" value="False" />
+				<bool name="minimap_team_only" value="False" />
+				<bool name="minimap_teamcolor" value="False" />
+				<string name="overlay_name" value="" />
+				<bool name="reveal_for_decryption" value="False" />
+				<locstring name="screen_name" value="0" />
+				<enum name="selection_name" value="weapon" />
+				<float name="selection_scale" value="1" />
+				<enum name="selection_type" value="single_entity_select" />
+				<locstring name="tooltip_txt" value="0" />
+				<int name="ui_priority" value="-10" />
+				<file name="minimap_icon" value="" />
+				<float name="minimap_icon_scale" value="1" />
+				<locstring name="brief_text" value="0" />
+				<locstring name="extra_text" value="0" />
+				<locstring name="screen_name_short" value="0" />
+				<bool name="show_in_build_log" value="True" />
+				<bool name="show_entity_appearance" value="True" />
+				<locstring name="screen_name_world" value="0" />
+				<locstring name="help_text_world" value="0" />
+				<locstring name="extra_text_world" value="0" />
+				<enum name="map_rotation_type_override" value="no_override" />
+				<file name="symbol_icon_name" value="" />
+				<enum name="occlusion_state" value="can_be_occluded" />
+				<enum name="decorator_visibility" value="default" />
+				<bool name="skin_pack_override" value="False" />
+				<string name="skin_summer" value="" />
+				<string name="skin_winter" value="" />
+				<enum name="targeting_and_bandbox_selection_priority" value="low" />
+				<enum name="selection_method" value="obb_sphere" />
+				<group name="terrain_info_display_offset">
+					<float name="x" value="0" />
+					<float name="y" value="0" />
+				</group>
+				<string name="decorator_ledger_key" value="" />
+				<instance_reference name="decorator_ledger_bar_style" value="" />
+				<enum name="selection_name_squad_override" value="" />
+				<string name="selection_grouping_ledger_key" value="" />
+				<string name="debug_text" value="" />
+				<string name="selection_datatemplate" value="" />
+				<bool name="use_construction_range_on_selection" value="False" />
+				<bool name="use_combat_range_on_selection" value="True" />
+				<bool name="is_armoured" value="False" />
+				<string name="decorator_data_template" value="" />
+				<enum name="ui_combine_type" value="intersection" />
+				<bool name="spotted_on_spawn" value="False" />
+				<instance_reference name="district_info" value="" />
+				<bool name="force_facing_and_range_visual_to_center_on_entity" value="False" />
+				<bool name="is_unique_to_race" value="False" />
+				<float name="kicker_offset" value="0" />
+				<file name="portrait_name" value="" />
+				<group name="selection_secondary_bounds_scale">
+					<float name="x" value="1" />
+					<float name="y" value="1" />
+					<float name="z" value="1" />
+				</group>
+				<enum name="decorator" value="" />
+				<int name="map_layer" value="0" />
+				<enum name="map_mark" value="" />
+				<file name="portrait_icon" value="" />
+				<group name="ui_codex_info">
+					<int name="priority" value="0" />
+					<bool name="exclusive" value="False" />
+					<group name="ui_position">
+						<int name="ui_position_column" value="-1" />
+						<int name="ui_position_row" value="-1" />
+					</group>
+				</group>
+				<list name="custom_selection_obbs">
+				</list>
+				<list name="ui_extra_infos">
+				</list>
+				<enum name="screen_name_visibility" value="visible" />
+				<template_reference name="help_text_formatter" value="">
+				</template_reference>
+				<template_reference name="extra_text_formatter" value="">
+				</template_reference>
+				<template_reference name="extra_text_world_formatter" value="">
+				</template_reference>
+				<template_reference name="help_text_world_formatter" value="">
+				</template_reference>
+				<template_reference name="screen_name_formatter" value="">
+				</template_reference>
+				<template_reference name="screen_name_short_formatter" value="">
+				</template_reference>
+				<template_reference name="screen_name_world_formatter" value="">
+				</template_reference>
+				<template_reference name="brief_text_formatter" value="">
+				</template_reference>
+				<string name="sound" value="" />
+				<string name="sound_alternative" value="" />
+				<string name="telemetry_name" value="" />
+				<bool name="selectable_in_non_interactive_area" value="True" />
+				<group name="selection_obb_size">
+					<float name="x" value="1" />
+					<float name="y" value="1" />
+					<float name="z" value="1" />
+				</group>
+				<enum name="target_selection_priority_by_owner" value="none" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="183161" />
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\animation_action_tree_ext" List.ItemID="-562546183">
+				<state_tree_node name="ActionTree_OpeningBranch" value="physical_weapon_ranged" />
+				<bool name="use_root_motion" value="True" />
+				<enum name="entity_statetree_sort_tag" value="weapon_default" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="338586907">
+				<file name="alternate_sua" value="" />
+				<bool name="always_revealed_in_fow" value="False" />
+				<bool name="is_visible_in_game" value="True" />
+				<int name="precise_size" value="-1" />
+				<enum name="default_spawn_type" value="" />
+				<instance_reference name="unit_badge" value="" />
+				<bool name="is_spawned_when_not_in_interactive_area" value="True" />
+				<bool name="is_wreck" value="False" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\american\weapons\flamethrower_m2" />
+				<float name="animator_scale" value="100" />
+				<bool name="browsable_in_editor" value="True" />
+				<float name="entity_scale" value="100" />
+				<enum name="subclass_type" value="Generic" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_targeting_ext" List.ItemID="-1697328535">
+				<bool name="allow_weapon_target_scanning" value="False" />
+				<int name="history_size" value="2" />
+				<bool name="allow_entity_scan_close_enemies" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_react_tree_ext" List.ItemID="635998465">
+				<state_tree_node name="ActionTree_OpeningBranch" value="" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\weapon_ext" List.ItemID="-1286774621">
+				<instance_reference name="weapon" value="weapon\dev\projectile_always_penetrates_bug" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_entity_ext" List.ItemID="-999023717">
+				<float name="rotate_snap" value="90" />
+				<bool name="kill_paradrop" value="False" />
+				<enum name="transferable" value="None" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_inventory_item_ext" List.ItemID="-567205218">
+				<template_reference name="simulation_item" value="sim_inventory_item\sim_inventory_item">
+					<int name="capacity_required" value="0" />
+					<group name="ownership_attributes">
+						<enum name="compatible_owner_type" value="entity" />
+						<enum name="ownership_sharing_type" value="shared" />
+						<float name="drop_on_death_chance" value="0.33" />
+						<bool name="auto_equip" value="True" />
+					</group>
+					<template_reference name="item_data" value="sim_inventory_item\sim_item_data\attachment_inventory_data">
+						<template_reference name="attachment_data" value="options\attachment_types\entity_attachment">
+							<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+								<template_reference name="attach_data" value="attachments\attach_data">
+									<string name="marker_name_parent" value="" />
+									<string name="parent_rigidbody_target_name" value="" />
+									<enum name="game_object_attachment_type" value="scenegraph" />
+								</template_reference>
+								<instance_reference name="ebp" value="ebps\races\american\weapons\ballistic_weapon\infantry_anti_tank_weapon\w_bazooka_bazooka_team_us" />
+								<group name="attachment_flags">
+									<bool name="sim_only" value="False" />
+									<bool name="no_pathfinding" value="True" />
+									<bool name="not_snappable" value="False" />
+									<bool name="restore_snap_to_ground_on_detach" value="True" />
+									<bool name="no_sim_update" value="False" />
+									<bool name="join_parent_squad" value="False" />
+									<bool name="redirect_damage_to_parent_entity" value="True" />
+									<bool name="receive_parent_animations" value="False" />
+									<bool name="receive_parent_death" value="False" />
+								</group>
+							</template_reference>
+						</template_reference>
+					</template_reference>
+					<string name="default_slot" value="" />
+					<enum name="category" value="default" />
+				</template_reference>
+				<group name="requirement">
+					<state_tree_node name="statetree_condition_node" value="" />
+					<instance_reference name="requirement_param" value="" />
+					<state_tree_node name="statetree_condition_default_command_prioritize_as_success" value="" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\attachment_child_ext" List.ItemID="-487065237">
+				<template_reference name="on_attach" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="weapon_attach" />
+				</template_reference>
+				<template_reference name="on_detach" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="weapon_detach" />
+				</template_reference>
+				<bool name="requires_attachment_dynamics" value="False" />
+				<bool name="tracking_affects_transformation_when_setup" value="True" />
+				<string name="rotation_rate_degrees_per_second_signed_dca_key" value="" />
+				<bool name="output_dca_to_parent" value="False" />
+				<float name="dca_vertical_degrees_offset" value="0" />
+				<bool name="horizontal_angle_limits_only_apply_when_setup" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-1206565762">
+				<bool name="ap_killed_kicker" value="True" />
+				<bool name="ap_loss_kicker" value="True" />
+				<float name="decorator_height" value="-1" />
+				<string name="extra_text_deprecated" value="" />
+				<bool name="ghost_enable" value="False" />
+				<locstring name="help_text" value="0" />
+				<string name="hotkey_name" value="" />
+				<file name="icon_name" value="" />
+				<enum name="kill_type" value="" />
+				<colour name="minimap_color" value="*" />
+				<bool name="minimap_enable" value="False" />
+				<bool name="minimap_team_only" value="False" />
+				<bool name="minimap_teamcolor" value="False" />
+				<string name="overlay_name" value="" />
+				<bool name="reveal_for_decryption" value="False" />
+				<locstring name="screen_name" value="0" />
+				<enum name="selection_name" value="weapon" />
+				<float name="selection_scale" value="1" />
+				<enum name="selection_type" value="single_entity_select" />
+				<locstring name="tooltip_txt" value="0" />
+				<int name="ui_priority" value="-10" />
+				<file name="minimap_icon" value="" />
+				<float name="minimap_icon_scale" value="1" />
+				<locstring name="brief_text" value="0" />
+				<locstring name="extra_text" value="0" />
+				<locstring name="screen_name_short" value="0" />
+				<bool name="show_in_build_log" value="True" />
+				<bool name="show_entity_appearance" value="True" />
+				<locstring name="screen_name_world" value="0" />
+				<locstring name="help_text_world" value="0" />
+				<locstring name="extra_text_world" value="0" />
+				<enum name="map_rotation_type_override" value="no_override" />
+				<file name="symbol_icon_name" value="" />
+				<enum name="occlusion_state" value="can_be_occluded" />
+				<enum name="decorator_visibility" value="default" />
+				<bool name="skin_pack_override" value="False" />
+				<string name="skin_summer" value="" />
+				<string name="skin_winter" value="" />
+				<enum name="targeting_and_bandbox_selection_priority" value="low" />
+				<enum name="selection_method" value="obb_sphere" />
+				<group name="terrain_info_display_offset">
+					<float name="x" value="0" />
+					<float name="y" value="0" />
+				</group>
+				<string name="decorator_ledger_key" value="" />
+				<instance_reference name="decorator_ledger_bar_style" value="" />
+				<enum name="selection_name_squad_override" value="" />
+				<string name="selection_grouping_ledger_key" value="" />
+				<string name="debug_text" value="" />
+				<string name="selection_datatemplate" value="" />
+				<bool name="use_construction_range_on_selection" value="False" />
+				<bool name="use_combat_range_on_selection" value="True" />
+				<bool name="is_armoured" value="False" />
+				<string name="decorator_data_template" value="" />
+				<enum name="ui_combine_type" value="intersection" />
+				<bool name="spotted_on_spawn" value="False" />
+				<instance_reference name="district_info" value="" />
+				<bool name="force_facing_and_range_visual_to_center_on_entity" value="False" />
+				<bool name="is_unique_to_race" value="False" />
+				<float name="kicker_offset" value="0" />
+				<file name="portrait_name" value="" />
+				<group name="selection_secondary_bounds_scale">
+					<float name="x" value="1" />
+					<float name="y" value="1" />
+					<float name="z" value="1" />
+				</group>
+				<enum name="decorator" value="" />
+				<int name="map_layer" value="0" />
+				<enum name="map_mark" value="" />
+				<file name="portrait_icon" value="" />
+				<group name="ui_codex_info">
+					<int name="priority" value="0" />
+					<bool name="exclusive" value="False" />
+					<group name="ui_position">
+						<int name="ui_position_column" value="-1" />
+						<int name="ui_position_row" value="-1" />
+					</group>
+				</group>
+				<list name="custom_selection_obbs">
+				</list>
+				<list name="ui_extra_infos">
+				</list>
+				<enum name="screen_name_visibility" value="visible" />
+				<template_reference name="help_text_formatter" value="">
+				</template_reference>
+				<template_reference name="extra_text_formatter" value="">
+				</template_reference>
+				<template_reference name="extra_text_world_formatter" value="">
+				</template_reference>
+				<template_reference name="help_text_world_formatter" value="">
+				</template_reference>
+				<template_reference name="screen_name_formatter" value="">
+				</template_reference>
+				<template_reference name="screen_name_short_formatter" value="">
+				</template_reference>
+				<template_reference name="screen_name_world_formatter" value="">
+				</template_reference>
+				<template_reference name="brief_text_formatter" value="">
+				</template_reference>
+				<string name="sound" value="" />
+				<string name="sound_alternative" value="" />
+				<string name="telemetry_name" value="" />
+				<bool name="selectable_in_non_interactive_area" value="True" />
+				<group name="selection_obb_size">
+					<float name="x" value="1" />
+					<float name="y" value="1" />
+					<float name="z" value="1" />
+				</group>
+				<enum name="target_selection_priority_by_owner" value="none" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="183161" />
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+</instance>

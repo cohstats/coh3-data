@@ -1,0 +1,46 @@
+<instance version="5" description="" template="abilities">
+	<variant name="default">
+		<group name="ability_bag">
+			<group name="ui_info">
+				<locstring name="extra_text" value="11239955" overrideParent="True" />
+				<locstring name="help_text" value="11241565" overrideParent="True" />
+				<file name="icon_name" value="common\abilities\ability_german_defensive_smoke" overrideParent="True" />
+				<locstring name="screen_name" value="11183368" overrideParent="True" />
+				<locstring name="brief_text" value="11240920" overrideParent="True" />
+			</group>
+			<group name="ui_position">
+				<int name="ui_position_column" value="2" overrideParent="True" />
+			</group>
+			<float name="ui_reticule_radius_min" value="6" overrideParent="True" />
+			<float name="ui_reticule_radius_max" value="6" overrideParent="True" />
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_squad_tree" value="" overrideParent="True" />
+				<state_tree_node name="ability_activate_entity_tree" value="ability_vet_smoke_grenade" overrideParent="True" />
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="197313" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\infantry\grenade_subtypes\smoke_grenade_parent" />
+	</variant>
+	<variant name="sp">
+		<group name="ability_bag">
+			<group name="ui_info">
+				<locstring name="extra_text" value="11239955" overrideParent="True" />
+				<locstring name="help_text" value="11241565" overrideParent="True" />
+				<file name="icon_name" value="common\abilities\ability_german_defensive_smoke" overrideParent="True" />
+				<locstring name="screen_name" value="11183368" overrideParent="True" />
+				<locstring name="brief_text" value="11240920" overrideParent="True" />
+			</group>
+			<group name="ui_position">
+				<int name="ui_position_column" value="2" overrideParent="True" />
+			</group>
+			<float name="ui_reticule_radius_min" value="6" overrideParent="True" />
+			<float name="ui_reticule_radius_max" value="6" overrideParent="True" />
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_squad_tree" value="" overrideParent="True" />
+				<state_tree_node name="ability_activate_entity_tree" value="sp_ability_vet_smoke_grenade" overrideParent="True" />
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="197313" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\infantry\grenade_subtypes\smoke_grenade_parent" />
+	</variant>
+</instance>

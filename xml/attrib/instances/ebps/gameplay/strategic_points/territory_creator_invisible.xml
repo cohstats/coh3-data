@@ -1,0 +1,252 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1548632812">
+				<file name="alternate_sua" value="" />
+				<bool name="always_revealed_in_fow" value="False" />
+				<bool name="is_visible_in_game" value="False" />
+				<int name="precise_size" value="-1" />
+				<enum name="default_spawn_type" value="" />
+				<instance_reference name="unit_badge" value="" />
+				<bool name="is_spawned_when_not_in_interactive_area" value="True" />
+				<bool name="is_wreck" value="False" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\gameplay\starting_territory_team" />
+				<float name="animator_scale" value="100" />
+				<bool name="browsable_in_editor" value="True" />
+				<float name="entity_scale" value="100" />
+				<enum name="subclass_type" value="Generic" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_entity_ext" List.ItemID="1377727345">
+				<float name="rotate_snap" value="360" />
+				<bool name="kill_paradrop" value="False" />
+				<enum name="transferable" value="Team" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\territory_ext" List.ItemID="-990052905">
+				<bool name="command_provider" value="True" />
+				<bool name="default_on" value="True" />
+				<bool name="secures_territory_sector" value="True" />
+				<enum name="sector_entity_type" value="sector_creator" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\site_ext" List.ItemID="-382174206">
+				<float name="extra_build_test_footprint_x" value="0" />
+				<bool name="snap_to_terrain" value="False" />
+				<bool name="lock_to_impass" value="True" />
+				<float name="extra_build_test_footprint_z" value="0" />
+				<float name="extra_build_test_footprint_offset_x" value="0" />
+				<float name="extra_build_test_footprint_offset_z" value="0" />
+				<float name="minimum_build_test_footprint_x" value="0" />
+				<float name="minimum_build_test_footprint_z" value="0" />
+				<enum name="impass_cell_check" value="AllCellsFree" />
+				<group name="footprint_scale">
+					<float name="x" value="0" />
+					<float name="y" value="0" />
+				</group>
+				<bool name="forced_axis_aligned_footprint" value="False" />
+				<bool name="remove_if_constructed_over" value="False" />
+				<list name="snap_to_surface_types">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\strategic_point_ext" List.ItemID="-15428479">
+				<float name="capture_time" value="10" />
+				<float name="revert_time" value="15" />
+				<float name="secure_radius" value="6" />
+				<bool name="use_decorator" value="True" />
+				<instance_reference name="entity_for_annihilation" value="" />
+				<list name="unsecure_time_by_race">
+				</list>
+				<template_reference name="capture_area_info" value="options\area_info_options\circle_area_option">
+					<float name="outer_radius" value="0" />
+					<float name="inner_radius" value="0" />
+					<bool name="is_two_dimensional" value="True" />
+					<enum name="dynamic_radius_type" value="fixed" />
+				</template_reference>
+				<bool name="instant_uncapture" value="False" />
+				<enum name="auto_revert_condition" value="none" />
+				<enum name="point_type" value="strategic_point" />
+				<group name="ui_reticules">
+					<instance_reference name="ui_reticule_neutral" value="" />
+					<instance_reference name="ui_reticule_ally" value="" />
+					<instance_reference name="ui_reticule_enemy" value="" />
+					<instance_reference name="ui_reticule_ally_outofsupply" value="" />
+					<instance_reference name="ui_reticule_enemy_outofsupply" value="" />
+					<bool name="enable_team_color" value="False" />
+					<instance_reference name="ui_reticule_ally_capturing" value="" />
+					<instance_reference name="ui_reticule_enemy_capturing" value="" />
+				</group>
+				<enum name="on_capture_ownership_change" value="capturing_team" />
+				<enum name="contested_capture_type" value="pause_capture" />
+				<enum name="can_capture_team" value="any_team" />
+				<bool name="start_captured_if_owned" value="True" />
+				<list name="exclude_unit_types">
+				</list>
+				<group name="state_tree_references">
+					<template_reference name="self_capturing_action_tree" value="state_tree_reference_info">
+						<state_tree_node name="ActionTree_OpeningBranch" value="physical_capture_states\capturing" />
+					</template_reference>
+					<template_reference name="self_captured_action_tree" value="state_tree_reference_info">
+						<state_tree_node name="ActionTree_OpeningBranch" value="physical_capture_states\captured" />
+					</template_reference>
+					<template_reference name="self_secured_action_tree" value="state_tree_reference_info">
+						<state_tree_node name="ActionTree_OpeningBranch" value="physical_capture_states\secured" />
+					</template_reference>
+					<template_reference name="self_reverting_action_tree" value="state_tree_reference_info">
+						<state_tree_node name="ActionTree_OpeningBranch" value="physical_capture_states\reverting" />
+					</template_reference>
+					<template_reference name="self_uncaptured_action_tree" value="state_tree_reference_info">
+						<state_tree_node name="ActionTree_OpeningBranch" value="physical_capture_states\uncaptured" />
+					</template_reference>
+					<template_reference name="lost_point_player_action_tree" value="state_tree_reference_info">
+						<state_tree_node name="ActionTree_OpeningBranch" value="" />
+					</template_reference>
+					<template_reference name="lost_point_team_action_tree" value="state_tree_reference_info">
+						<state_tree_node name="ActionTree_OpeningBranch" value="" />
+					</template_reference>
+					<template_reference name="decapture_point_player_action_tree" value="state_tree_reference_info">
+						<state_tree_node name="ActionTree_OpeningBranch" value="" />
+					</template_reference>
+					<template_reference name="halted_action_tree" value="state_tree_reference_info">
+						<state_tree_node name="ActionTree_OpeningBranch" value="" />
+					</template_reference>
+				</group>
+				<template_reference name="secure_area_info" value="options\area_info_options\sector_area_option">
+				</template_reference>
+				<bool name="allow_capture_or_secure_from_hold" value="True" />
+				<bool name="ui_use_local_colour_for_ally_team_owned_objects" value="False" />
+				<template_reference name="capture_area_offset" value="basic_data_types\vector2">
+					<float name="x" value="0" />
+					<float name="y" value="0" />
+				</template_reference>
+				<float name="capture_area_angle" value="0" />
+				<bool name="check_territory_capturable" value="False" />
+				<float name="post_stat_weight" value="1" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="201941" />
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1548632812">
+				<file name="alternate_sua" value="" />
+				<bool name="always_revealed_in_fow" value="False" />
+				<bool name="is_visible_in_game" value="False" />
+				<int name="precise_size" value="-1" />
+				<enum name="default_spawn_type" value="" />
+				<instance_reference name="unit_badge" value="" />
+				<bool name="is_spawned_when_not_in_interactive_area" value="True" />
+				<bool name="is_wreck" value="False" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\gameplay\starting_territory_team" />
+				<float name="animator_scale" value="100" />
+				<bool name="browsable_in_editor" value="True" />
+				<float name="entity_scale" value="100" />
+				<enum name="subclass_type" value="Generic" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_entity_ext" List.ItemID="1377727345">
+				<float name="rotate_snap" value="360" />
+				<bool name="kill_paradrop" value="False" />
+				<enum name="transferable" value="Team" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\territory_ext" List.ItemID="-990052905">
+				<bool name="command_provider" value="True" />
+				<bool name="default_on" value="True" />
+				<bool name="secures_territory_sector" value="True" />
+				<enum name="sector_entity_type" value="sector_creator" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\site_ext" List.ItemID="-382174206">
+				<float name="extra_build_test_footprint_x" value="0" />
+				<bool name="snap_to_terrain" value="False" />
+				<bool name="lock_to_impass" value="True" />
+				<float name="extra_build_test_footprint_z" value="0" />
+				<float name="extra_build_test_footprint_offset_x" value="0" />
+				<float name="extra_build_test_footprint_offset_z" value="0" />
+				<float name="minimum_build_test_footprint_x" value="0" />
+				<float name="minimum_build_test_footprint_z" value="0" />
+				<enum name="impass_cell_check" value="AllCellsFree" />
+				<group name="footprint_scale">
+					<float name="x" value="0" />
+					<float name="y" value="0" />
+				</group>
+				<bool name="forced_axis_aligned_footprint" value="False" />
+				<bool name="remove_if_constructed_over" value="False" />
+				<list name="snap_to_surface_types">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\strategic_point_ext" List.ItemID="-15428479">
+				<float name="capture_time" value="10" />
+				<float name="revert_time" value="15" />
+				<float name="secure_radius" value="6" />
+				<bool name="use_decorator" value="True" />
+				<instance_reference name="entity_for_annihilation" value="" />
+				<list name="unsecure_time_by_race">
+				</list>
+				<template_reference name="capture_area_info" value="options\area_info_options\circle_area_option">
+					<float name="outer_radius" value="0" />
+					<float name="inner_radius" value="0" />
+					<bool name="is_two_dimensional" value="True" />
+					<enum name="dynamic_radius_type" value="fixed" />
+				</template_reference>
+				<bool name="instant_uncapture" value="False" />
+				<enum name="auto_revert_condition" value="none" />
+				<enum name="point_type" value="strategic_point" />
+				<group name="ui_reticules">
+					<instance_reference name="ui_reticule_neutral" value="" />
+					<instance_reference name="ui_reticule_ally" value="" />
+					<instance_reference name="ui_reticule_enemy" value="" />
+					<instance_reference name="ui_reticule_ally_outofsupply" value="" />
+					<instance_reference name="ui_reticule_enemy_outofsupply" value="" />
+					<bool name="enable_team_color" value="False" />
+					<instance_reference name="ui_reticule_ally_capturing" value="" />
+					<instance_reference name="ui_reticule_enemy_capturing" value="" />
+				</group>
+				<enum name="on_capture_ownership_change" value="capturing_team" />
+				<enum name="contested_capture_type" value="pause_capture" />
+				<enum name="can_capture_team" value="any_team" />
+				<bool name="start_captured_if_owned" value="True" />
+				<list name="exclude_unit_types">
+				</list>
+				<group name="state_tree_references">
+					<template_reference name="self_capturing_action_tree" value="state_tree_reference_info">
+						<state_tree_node name="ActionTree_OpeningBranch" value="sp_physical_capture_states\capturing" />
+					</template_reference>
+					<template_reference name="self_captured_action_tree" value="state_tree_reference_info">
+						<state_tree_node name="ActionTree_OpeningBranch" value="sp_physical_capture_states\captured" />
+					</template_reference>
+					<template_reference name="self_secured_action_tree" value="state_tree_reference_info">
+						<state_tree_node name="ActionTree_OpeningBranch" value="sp_physical_capture_states\secured" />
+					</template_reference>
+					<template_reference name="self_reverting_action_tree" value="state_tree_reference_info">
+						<state_tree_node name="ActionTree_OpeningBranch" value="sp_physical_capture_states\reverting" />
+					</template_reference>
+					<template_reference name="self_uncaptured_action_tree" value="state_tree_reference_info">
+						<state_tree_node name="ActionTree_OpeningBranch" value="sp_physical_capture_states\uncaptured" />
+					</template_reference>
+					<template_reference name="lost_point_player_action_tree" value="state_tree_reference_info">
+						<state_tree_node name="ActionTree_OpeningBranch" value="" />
+					</template_reference>
+					<template_reference name="lost_point_team_action_tree" value="state_tree_reference_info">
+						<state_tree_node name="ActionTree_OpeningBranch" value="" />
+					</template_reference>
+					<template_reference name="decapture_point_player_action_tree" value="state_tree_reference_info">
+						<state_tree_node name="ActionTree_OpeningBranch" value="" />
+					</template_reference>
+					<template_reference name="halted_action_tree" value="state_tree_reference_info">
+						<state_tree_node name="ActionTree_OpeningBranch" value="" />
+					</template_reference>
+				</group>
+				<template_reference name="secure_area_info" value="options\area_info_options\sector_area_option">
+				</template_reference>
+				<bool name="allow_capture_or_secure_from_hold" value="True" />
+				<bool name="ui_use_local_colour_for_ally_team_owned_objects" value="False" />
+				<template_reference name="capture_area_offset" value="basic_data_types\vector2">
+					<float name="x" value="0" />
+					<float name="y" value="0" />
+				</template_reference>
+				<float name="capture_area_angle" value="0" />
+				<bool name="check_territory_capturable" value="False" />
+				<float name="post_stat_weight" value="1" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="201941" />
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+</instance>

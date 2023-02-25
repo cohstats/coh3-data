@@ -1,0 +1,472 @@
+<instance version="5" description="" template="sbps">
+	<variant name="default">
+		<list name="extensions" removedIds="-1052523762">
+			<template_reference name="squadexts" value="sbpextensions\squad_ability_ext" List.ItemID="-282815056" List.ParentItemID="-282815056">
+				<list name="abilities">
+					<instance_reference name="ability" value="abilities\races\british\vehicles\repair_critical_engine_damage_uk" List.ItemID="1489913346" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\american\vehicles\recrew_team_weapon_halftrack_us" List.ItemID="115518999" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\common\vehicles\towing_pickup" List.ItemID="741725821" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\common\vehicles\towing_drop" List.ItemID="2074867842" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\common\veterancy\vehicle\common_shared_veterancy_dummy_parent" overrideParent="True" List.ItemID="1285195905" List.ListAction="Append" />
+				</list>
+				<group name="squad_orders">
+					<group name="attack_move">
+						<bool name="available" value="False" overrideParent="True" />
+					</group>
+				</group>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_combat_behaviour_ext" List.ItemID="1634617383" List.ParentItemID="1634617383">
+				<float name="reaction_delay_seconds" value="8" overrideParent="True" />
+				<float name="reaction_combat_delay_seconds" value="8" overrideParent="True" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_loadout_ext" List.ItemID="-1664135055" List.ParentItemID="-1664135055">
+				<list name="unit_list">
+					<group name="loadout_data" List.ItemID="-226045775" List.ParentItemID="-226045775">
+						<instance_reference name="type" value="ebps\races\british\vehicles\cwt_15_flatbed_uk" overrideParent="True" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_requirement_ext" List.ItemID="1025783431" List.ParentItemID="1025783431">
+				<list name="requirement_table">
+					<template_reference name="required" value="requirements\required_any_in_list" List.ItemID="-278612637" List.ListAction="Append">
+						<enum name="reason" value="usage_and_display" />
+						<locstring name="ui_name" value="0" />
+						<list name="requirements">
+							<template_reference name="requirement" value="requirements\required_all_in_list" List.ItemID="-909389992">
+								<enum name="reason" value="usage_and_display" />
+								<locstring name="ui_name" value="0" />
+								<list name="requirements">
+									<template_reference name="requirement" value="requirements\required_player_upgrade" List.ItemID="386167509">
+										<enum name="reason" value="usage_and_display" />
+										<locstring name="ui_name" value="0" />
+										<bool name="is_present" value="False" />
+										<int name="max_completed" value="100" />
+										<int name="min_completed" value="1" />
+										<instance_reference name="upgrade_name" value="upgrade\british\campaign\company\armored\c_armored_company_uk" />
+										<bool name="include_completed" value="True" />
+										<bool name="include_queued" value="False" />
+										<group name="include_pbg_parenting">
+											<bool name="include_child_pbgs" value="False" />
+											<bool name="include_parent_pbgs" value="False" />
+										</group>
+									</template_reference>
+									<template_reference name="requirement" value="requirements\required_player_upgrade" List.ItemID="-1299317042">
+										<enum name="reason" value="usage_and_display" />
+										<locstring name="ui_name" value="0" />
+										<bool name="is_present" value="False" />
+										<int name="max_completed" value="100" />
+										<int name="min_completed" value="1" />
+										<instance_reference name="upgrade_name" value="upgrade\british\campaign\company\indian_artillery\c_indian_artillery_company_uk" />
+										<bool name="include_completed" value="True" />
+										<bool name="include_queued" value="False" />
+										<group name="include_pbg_parenting">
+											<bool name="include_child_pbgs" value="False" />
+											<bool name="include_parent_pbgs" value="False" />
+										</group>
+									</template_reference>
+								</list>
+							</template_reference>
+							<template_reference name="requirement" value="requirements\required_all_in_list" List.ItemID="-661705456">
+								<enum name="reason" value="usage_and_display" />
+								<locstring name="ui_name" value="0" />
+								<list name="requirements">
+									<template_reference name="requirement" value="requirements\required_player_upgrade" List.ItemID="148014610">
+										<enum name="reason" value="usage_and_display" />
+										<locstring name="ui_name" value="0" />
+										<bool name="is_present" value="True" />
+										<int name="max_completed" value="100" />
+										<int name="min_completed" value="1" />
+										<instance_reference name="upgrade_name" value="upgrade\british\campaign\company\armored\c_armored_company_uk" />
+										<bool name="include_completed" value="True" />
+										<bool name="include_queued" value="False" />
+										<group name="include_pbg_parenting">
+											<bool name="include_child_pbgs" value="False" />
+											<bool name="include_parent_pbgs" value="False" />
+										</group>
+									</template_reference>
+									<template_reference name="requirement" value="requirements\required_player_upgrade" List.ItemID="2120965371">
+										<enum name="reason" value="usage_and_display" />
+										<locstring name="ui_name" value="0" />
+										<bool name="is_present" value="True" />
+										<int name="max_completed" value="100" />
+										<int name="min_completed" value="1" />
+										<instance_reference name="upgrade_name" value="upgrade\british\campaign\company\armored\unit_unlocks\motor\c_armored_cwt_truck_unlock_uk" />
+										<bool name="include_completed" value="True" />
+										<bool name="include_queued" value="False" />
+										<group name="include_pbg_parenting">
+											<bool name="include_child_pbgs" value="False" />
+											<bool name="include_parent_pbgs" value="False" />
+										</group>
+									</template_reference>
+								</list>
+							</template_reference>
+							<template_reference name="requirement" value="requirements\required_all_in_list" List.ItemID="1348151080">
+								<enum name="reason" value="usage_and_display" />
+								<locstring name="ui_name" value="0" />
+								<list name="requirements">
+									<template_reference name="requirement" value="requirements\required_player_upgrade" List.ItemID="-127728179">
+										<enum name="reason" value="usage_and_display" />
+										<locstring name="ui_name" value="0" />
+										<bool name="is_present" value="True" />
+										<int name="max_completed" value="100" />
+										<int name="min_completed" value="1" />
+										<instance_reference name="upgrade_name" value="upgrade\british\campaign\company\indian_artillery\c_indian_artillery_company_uk" />
+										<bool name="include_completed" value="True" />
+										<bool name="include_queued" value="False" />
+										<group name="include_pbg_parenting">
+											<bool name="include_child_pbgs" value="False" />
+											<bool name="include_parent_pbgs" value="False" />
+										</group>
+									</template_reference>
+									<template_reference name="requirement" value="requirements\required_player_upgrade" List.ItemID="-1494620042">
+										<enum name="reason" value="usage_and_display" />
+										<locstring name="ui_name" value="0" />
+										<bool name="is_present" value="True" />
+										<int name="max_completed" value="100" />
+										<int name="min_completed" value="1" />
+										<instance_reference name="upgrade_name" value="upgrade\british\campaign\company\indian_artillery\unit_unlocks\motor\c_artillery_cwt_unit_unlock_uk" />
+										<bool name="include_completed" value="True" />
+										<bool name="include_queued" value="False" />
+										<group name="include_pbg_parenting">
+											<bool name="include_child_pbgs" value="False" />
+											<bool name="include_parent_pbgs" value="False" />
+										</group>
+									</template_reference>
+								</list>
+							</template_reference>
+						</list>
+					</template_reference>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_ui_ext" List.ItemID="538184085" List.ParentItemID="538184085">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-660682231" List.ParentItemID="-660682231">
+						<group name="info">
+							<locstring name="extra_text" value="0" overrideParent="True" />
+							<locstring name="help_text" value="11241983" overrideParent="True" />
+							<file name="icon_name" value="races\british\vehicles\cwt_15_uk" overrideParent="True" />
+							<file name="minimap_texture" value="common\units\symbols\vehicle_light_symbol" overrideParent="True" />
+							<bool name="reveal_for_decryption" value="True" overrideParent="True" />
+							<locstring name="screen_name" value="11241699" overrideParent="True" />
+							<string name="selection_group" value="truck_4x4_us" overrideParent="True" />
+							<int name="ui_priority" value="28" overrideParent="True" />
+							<locstring name="brief_text" value="11242144" overrideParent="True" />
+							<file name="symbol_icon_name" value="common\units\symbols\vehicle_german_2_5_truck_symbol" overrideParent="True" />
+							<group name="ui_armor_info">
+								<file name="armor_icon" value="common\units\vehicle_armor\light_armoured_car" overrideParent="True" />
+								<list name="armor_critical_damage" removedIds="-1700889201, 435372287">
+									<group name="critical_damage_coordinate_bag" List.ItemID="-444383023" List.ParentItemID="-444383023">
+										<float name="x" value="30" overrideParent="True" />
+										<float name="y" value="34" overrideParent="True" />
+										<file name="armor_section_highlight_icon" value="common\units\vehicle_armor\light_armoured_car_engine_damaged" overrideParent="True" />
+									</group>
+									<group name="critical_damage_coordinate_bag" List.ItemID="140851124" List.ParentItemID="140851124">
+										<instance_reference name="squad_status" value="squad_status\indicators\heavy_engine_damaged" overrideParent="True" />
+										<float name="x" value="30" overrideParent="True" />
+										<float name="y" value="34" overrideParent="True" />
+										<file name="armor_section_highlight_icon" value="common\units\vehicle_armor\light_armoured_car_engine_critical" overrideParent="True" />
+									</group>
+								</list>
+							</group>
+							<file name="portrait_name" value="races\british\vehicles\cwt_15_uk_portrait" overrideParent="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_veterancy_ext" List.ItemID="2097749377" List.ParentItemID="2097749377">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="875582807" List.ParentItemID="875582807">
+						<group name="info">
+							<list name="veterancy_rank_info">
+								<group name="veterancy_rank" List.ItemID="-27007290" List.ParentItemID="-27007290">
+									<float name="veterancy_value" value="1000" overrideParent="True" />
+									<group name="state_tree_references">
+										<template_reference name="squad_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="veterancy_level_up\level_up" overrideParent="True" />
+										</template_reference>
+									</group>
+								</group>
+								<group name="veterancy_rank" List.ItemID="1804371674" List.ParentItemID="1804371674">
+									<float name="veterancy_value" value="3000" overrideParent="True" />
+									<group name="state_tree_references">
+										<template_reference name="squad_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="veterancy_level_up\level_up" overrideParent="True" />
+										</template_reference>
+									</group>
+								</group>
+								<group name="veterancy_rank" List.ItemID="724926371" List.ParentItemID="724926371">
+									<float name="veterancy_value" value="7000" overrideParent="True" />
+									<group name="state_tree_references">
+										<template_reference name="squad_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="veterancy_level_up\level_up" overrideParent="True" />
+										</template_reference>
+									</group>
+								</group>
+							</list>
+							<bool name="can_receive_shared_veterancy" value="True" overrideParent="True" />
+							<enum name="shared_veterancy_type" value="vet_support_vehicle" overrideParent="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_type_ext" List.ItemID="29649503" List.ParentItemID="29649503">
+				<list name="squad_type_list" removedIds="1246486437, -824999149, -1069887652">
+					<enum name="squad_type" value="light_armor" List.ItemID="-373622017" List.ListAction="Append" />
+					<enum name="squad_type" value="tier2" List.ItemID="-1220659397" List.ListAction="Append" />
+					<enum name="squad_type" value="reinforce_healing_platform" overrideParent="True" List.ItemID="-2053623614" List.ListAction="Append" />
+				</list>
+				<list name="squad_race_type_list" removedIds="1428119654">
+					<instance_reference name="squad_race_type" value="racebps\british" List.ItemID="580844144" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_speech_ext" List.ItemID="1947268137" List.ParentItemID="1947268137">
+				<string name="squad_speaker_code" value="uk_light_vehicle" overrideParent="True" />
+				<group name="squad_speech_parameters">
+					<string name="squad_name_code" value="cwt_truck" overrideParent="True" />
+					<string name="squad_unit_code" value="cwt_15_truck_uk" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_audio_ext" List.ItemID="40543565" List.ParentItemID="40543565">
+				<int name="importance" value="25" overrideParent="True" />
+				<bool name="enable_radio" value="True" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2073048" />
+		<instance_reference name="parent_pbg" value="sbps\races\common\parent\vehicle_parent" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions" removedIds="-1052523762">
+			<template_reference name="squadexts" value="sbpextensions\squad_ability_ext" List.ItemID="-282815056" List.ParentItemID="-282815056">
+				<list name="abilities">
+					<instance_reference name="ability" value="abilities\races\british\vehicles\repair_critical_engine_damage_uk" List.ItemID="1489913346" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\american\vehicles\recrew_team_weapon_halftrack_us" List.ItemID="115518999" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\common\vehicles\towing_pickup" List.ItemID="741725821" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\common\vehicles\towing_drop" List.ItemID="2074867842" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\common\veterancy\vehicle\common_shared_veterancy_dummy_parent" overrideParent="True" List.ItemID="1285195905" List.ListAction="Append" />
+				</list>
+				<group name="squad_orders">
+					<group name="attack_move">
+						<bool name="available" value="False" overrideParent="True" />
+					</group>
+				</group>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_combat_behaviour_ext" List.ItemID="1634617383" List.ParentItemID="1634617383">
+				<float name="reaction_delay_seconds" value="8" overrideParent="True" />
+				<float name="reaction_combat_delay_seconds" value="8" overrideParent="True" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_loadout_ext" List.ItemID="-1664135055" List.ParentItemID="-1664135055">
+				<list name="unit_list">
+					<group name="loadout_data" List.ItemID="-226045775" List.ParentItemID="-226045775">
+						<instance_reference name="type" value="ebps\races\british\vehicles\cwt_15_flatbed_uk" overrideParent="True" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_requirement_ext" List.ItemID="1025783431" List.ParentItemID="1025783431">
+				<list name="requirement_table">
+					<template_reference name="required" value="requirements\required_any_in_list" List.ItemID="-278612637" List.ListAction="Append">
+						<enum name="reason" value="usage_and_display" />
+						<locstring name="ui_name" value="0" />
+						<list name="requirements">
+							<template_reference name="requirement" value="requirements\required_all_in_list" List.ItemID="-909389992">
+								<enum name="reason" value="usage_and_display" />
+								<locstring name="ui_name" value="0" />
+								<list name="requirements">
+									<template_reference name="requirement" value="requirements\required_player_upgrade" List.ItemID="386167509">
+										<enum name="reason" value="usage_and_display" />
+										<locstring name="ui_name" value="0" />
+										<bool name="is_present" value="False" />
+										<int name="max_completed" value="100" />
+										<int name="min_completed" value="1" />
+										<instance_reference name="upgrade_name" value="upgrade\british\campaign\company\armored\c_armored_company_uk" />
+										<bool name="include_completed" value="True" />
+										<bool name="include_queued" value="False" />
+										<group name="include_pbg_parenting">
+											<bool name="include_child_pbgs" value="False" />
+											<bool name="include_parent_pbgs" value="False" />
+										</group>
+									</template_reference>
+									<template_reference name="requirement" value="requirements\required_player_upgrade" List.ItemID="-1299317042">
+										<enum name="reason" value="usage_and_display" />
+										<locstring name="ui_name" value="0" />
+										<bool name="is_present" value="False" />
+										<int name="max_completed" value="100" />
+										<int name="min_completed" value="1" />
+										<instance_reference name="upgrade_name" value="upgrade\british\campaign\company\indian_artillery\c_indian_artillery_company_uk" />
+										<bool name="include_completed" value="True" />
+										<bool name="include_queued" value="False" />
+										<group name="include_pbg_parenting">
+											<bool name="include_child_pbgs" value="False" />
+											<bool name="include_parent_pbgs" value="False" />
+										</group>
+									</template_reference>
+								</list>
+							</template_reference>
+							<template_reference name="requirement" value="requirements\required_all_in_list" List.ItemID="-661705456">
+								<enum name="reason" value="usage_and_display" />
+								<locstring name="ui_name" value="0" />
+								<list name="requirements">
+									<template_reference name="requirement" value="requirements\required_player_upgrade" List.ItemID="148014610">
+										<enum name="reason" value="usage_and_display" />
+										<locstring name="ui_name" value="0" />
+										<bool name="is_present" value="True" />
+										<int name="max_completed" value="100" />
+										<int name="min_completed" value="1" />
+										<instance_reference name="upgrade_name" value="upgrade\british\campaign\company\armored\c_armored_company_uk" />
+										<bool name="include_completed" value="True" />
+										<bool name="include_queued" value="False" />
+										<group name="include_pbg_parenting">
+											<bool name="include_child_pbgs" value="False" />
+											<bool name="include_parent_pbgs" value="False" />
+										</group>
+									</template_reference>
+									<template_reference name="requirement" value="requirements\required_player_upgrade" List.ItemID="2120965371">
+										<enum name="reason" value="usage_and_display" />
+										<locstring name="ui_name" value="0" />
+										<bool name="is_present" value="True" />
+										<int name="max_completed" value="100" />
+										<int name="min_completed" value="1" />
+										<instance_reference name="upgrade_name" value="upgrade\british\campaign\company\armored\unit_unlocks\motor\c_armored_cwt_truck_unlock_uk" />
+										<bool name="include_completed" value="True" />
+										<bool name="include_queued" value="False" />
+										<group name="include_pbg_parenting">
+											<bool name="include_child_pbgs" value="False" />
+											<bool name="include_parent_pbgs" value="False" />
+										</group>
+									</template_reference>
+								</list>
+							</template_reference>
+							<template_reference name="requirement" value="requirements\required_all_in_list" List.ItemID="1348151080">
+								<enum name="reason" value="usage_and_display" />
+								<locstring name="ui_name" value="0" />
+								<list name="requirements">
+									<template_reference name="requirement" value="requirements\required_player_upgrade" List.ItemID="-127728179">
+										<enum name="reason" value="usage_and_display" />
+										<locstring name="ui_name" value="0" />
+										<bool name="is_present" value="True" />
+										<int name="max_completed" value="100" />
+										<int name="min_completed" value="1" />
+										<instance_reference name="upgrade_name" value="upgrade\british\campaign\company\indian_artillery\c_indian_artillery_company_uk" />
+										<bool name="include_completed" value="True" />
+										<bool name="include_queued" value="False" />
+										<group name="include_pbg_parenting">
+											<bool name="include_child_pbgs" value="False" />
+											<bool name="include_parent_pbgs" value="False" />
+										</group>
+									</template_reference>
+									<template_reference name="requirement" value="requirements\required_player_upgrade" List.ItemID="-1494620042">
+										<enum name="reason" value="usage_and_display" />
+										<locstring name="ui_name" value="0" />
+										<bool name="is_present" value="True" />
+										<int name="max_completed" value="100" />
+										<int name="min_completed" value="1" />
+										<instance_reference name="upgrade_name" value="upgrade\british\campaign\company\indian_artillery\unit_unlocks\motor\c_artillery_cwt_unit_unlock_uk" />
+										<bool name="include_completed" value="True" />
+										<bool name="include_queued" value="False" />
+										<group name="include_pbg_parenting">
+											<bool name="include_child_pbgs" value="False" />
+											<bool name="include_parent_pbgs" value="False" />
+										</group>
+									</template_reference>
+								</list>
+							</template_reference>
+						</list>
+					</template_reference>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_ui_ext" List.ItemID="538184085" List.ParentItemID="538184085">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-660682231" List.ParentItemID="-660682231">
+						<group name="info">
+							<locstring name="extra_text" value="0" overrideParent="True" />
+							<locstring name="help_text" value="11241983" overrideParent="True" />
+							<file name="icon_name" value="races\british\vehicles\cwt_15_uk" overrideParent="True" />
+							<file name="minimap_texture" value="common\units\symbols\vehicle_light_symbol" overrideParent="True" />
+							<bool name="reveal_for_decryption" value="True" overrideParent="True" />
+							<locstring name="screen_name" value="11241699" overrideParent="True" />
+							<string name="selection_group" value="truck_4x4_us" overrideParent="True" />
+							<int name="ui_priority" value="28" overrideParent="True" />
+							<locstring name="brief_text" value="11242144" overrideParent="True" />
+							<file name="symbol_icon_name" value="common\units\symbols\vehicle_german_2_5_truck_symbol" overrideParent="True" />
+							<group name="ui_armor_info">
+								<file name="armor_icon" value="common\units\vehicle_armor\light_armoured_car" overrideParent="True" />
+								<list name="armor_critical_damage" removedIds="-1700889201, 435372287">
+									<group name="critical_damage_coordinate_bag" List.ItemID="-444383023" List.ParentItemID="-444383023">
+										<float name="x" value="30" overrideParent="True" />
+										<float name="y" value="34" overrideParent="True" />
+										<file name="armor_section_highlight_icon" value="common\units\vehicle_armor\light_armoured_car_engine_damaged" overrideParent="True" />
+									</group>
+									<group name="critical_damage_coordinate_bag" List.ItemID="140851124" List.ParentItemID="140851124">
+										<instance_reference name="squad_status" value="squad_status\indicators\heavy_engine_damaged" overrideParent="True" />
+										<float name="x" value="30" overrideParent="True" />
+										<float name="y" value="34" overrideParent="True" />
+										<file name="armor_section_highlight_icon" value="common\units\vehicle_armor\light_armoured_car_engine_critical" overrideParent="True" />
+									</group>
+								</list>
+							</group>
+							<file name="portrait_name" value="races\british\vehicles\cwt_15_uk_portrait" overrideParent="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_veterancy_ext" List.ItemID="2097749377" List.ParentItemID="2097749377">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="875582807" List.ParentItemID="875582807">
+						<group name="info">
+							<list name="veterancy_rank_info">
+								<group name="veterancy_rank" List.ItemID="-27007290" List.ParentItemID="-27007290">
+									<float name="veterancy_value" value="1000" overrideParent="True" />
+									<group name="state_tree_references">
+										<template_reference name="squad_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="sp_veterancy_level_up\level_up" overrideParent="True" />
+										</template_reference>
+									</group>
+								</group>
+								<group name="veterancy_rank" List.ItemID="1804371674" List.ParentItemID="1804371674">
+									<float name="veterancy_value" value="3000" overrideParent="True" />
+									<group name="state_tree_references">
+										<template_reference name="squad_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="sp_veterancy_level_up\level_up" overrideParent="True" />
+										</template_reference>
+									</group>
+								</group>
+								<group name="veterancy_rank" List.ItemID="724926371" List.ParentItemID="724926371">
+									<float name="veterancy_value" value="7000" overrideParent="True" />
+									<group name="state_tree_references">
+										<template_reference name="squad_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="sp_veterancy_level_up\level_up" overrideParent="True" />
+										</template_reference>
+									</group>
+								</group>
+							</list>
+							<bool name="can_receive_shared_veterancy" value="True" overrideParent="True" />
+							<enum name="shared_veterancy_type" value="vet_support_vehicle" overrideParent="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_type_ext" List.ItemID="29649503" List.ParentItemID="29649503">
+				<list name="squad_type_list" removedIds="1246486437, -824999149, -1069887652">
+					<enum name="squad_type" value="light_armor" List.ItemID="-373622017" List.ListAction="Append" />
+					<enum name="squad_type" value="tier2" List.ItemID="-1220659397" List.ListAction="Append" />
+					<enum name="squad_type" value="reinforce_healing_platform" overrideParent="True" List.ItemID="-2053623614" List.ListAction="Append" />
+				</list>
+				<list name="squad_race_type_list" removedIds="1428119654">
+					<instance_reference name="squad_race_type" value="racebps\british" List.ItemID="580844144" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_speech_ext" List.ItemID="1947268137" List.ParentItemID="1947268137">
+				<string name="squad_speaker_code" value="uk_light_vehicle" overrideParent="True" />
+				<group name="squad_speech_parameters">
+					<string name="squad_name_code" value="cwt_truck" overrideParent="True" />
+					<string name="squad_unit_code" value="cwt_15_truck_uk" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_audio_ext" List.ItemID="40543565" List.ParentItemID="40543565">
+				<int name="importance" value="25" overrideParent="True" />
+				<bool name="enable_radio" value="True" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2073048" />
+		<instance_reference name="parent_pbg" value="sbps\races\common\parent\vehicle_parent" />
+	</variant>
+</instance>

@@ -1,0 +1,542 @@
+<instance version="5" description="El Alamein Sitrep" template="sitrep">
+	<variant name="default">
+		<uniqueid name="pbgid" value="2081576" />
+		<group name="sitrep_bag">
+			<float name="timeline_extra_duration" value="2" />
+			<list name="elements">
+				<template_reference name="element" value="sitrep_data\element" List.ItemID="739475649">
+					<string name="custom_label" value="Photo 1" />
+					<string name="type" value="Image" />
+					<string name="style" value="Image" />
+					<file name="image_path" value="icons\sitrep\camp_na\el_alamein_hold\el_alamein_hold_tank1" />
+					<group name="dimension">
+						<float name="width" value="400" />
+						<float name="height" value="400" />
+						<enum name="type" value="Pixels" />
+					</group>
+					<group name="position">
+						<template_reference name="world_position" value="basic_data_types\vector3">
+							<float name="x" value="-300" />
+							<float name="y" value="0" />
+							<float name="z" value="-300" />
+						</template_reference>
+						<enum name="type" value="WorldPosition" />
+					</group>
+					<list name="timeline">
+						<template_reference name="animated_property" value="sitrep_data\animated_property" List.ItemID="1679953218">
+							<list name="keyframes">
+								<template_reference name="keyframe" value="sitrep_data\position_keyframe" List.ItemID="1089852735">
+									<float name="key_time" value="0" />
+									<group name="value">
+										<template_reference name="world_position" value="basic_data_types\vector3">
+											<float name="x" value="-550" />
+											<float name="y" value="0" />
+											<float name="z" value="-350" />
+										</template_reference>
+										<enum name="type" value="WorldPosition" />
+									</group>
+									<enum name="interpolation_type" value="Discrete" />
+								</template_reference>
+								<template_reference name="keyframe" value="sitrep_data\position_keyframe" List.ItemID="729000162">
+									<float name="key_time" value="18" />
+									<group name="value">
+										<template_reference name="world_position" value="basic_data_types\vector3">
+											<float name="x" value="-550" />
+											<float name="y" value="0" />
+											<float name="z" value="-350" />
+										</template_reference>
+										<enum name="type" value="WorldPosition" />
+									</group>
+									<enum name="interpolation_type" value="Linear" />
+								</template_reference>
+								<template_reference name="keyframe" value="sitrep_data\position_keyframe" List.ItemID="1925690758">
+									<float name="key_time" value="19" />
+									<group name="value">
+										<template_reference name="world_position" value="basic_data_types\vector3">
+											<float name="x" value="-300" />
+											<float name="y" value="0" />
+											<float name="z" value="-300" />
+										</template_reference>
+										<enum name="type" value="WorldPosition" />
+									</group>
+									<enum name="interpolation_type" value="Linear" />
+								</template_reference>
+								<template_reference name="keyframe" value="sitrep_data\position_keyframe" List.ItemID="661758399">
+									<float name="key_time" value="24" />
+									<group name="value">
+										<template_reference name="world_position" value="basic_data_types\vector3">
+											<float name="x" value="-300" />
+											<float name="y" value="0" />
+											<float name="z" value="-300" />
+										</template_reference>
+										<enum name="type" value="WorldPosition" />
+									</group>
+									<enum name="interpolation_type" value="Linear" />
+								</template_reference>
+							</list>
+							<enum name="property" value="Translate" />
+							<float name="repeat_count" value="0" />
+						</template_reference>
+						<template_reference name="animated_property" value="sitrep_data\animated_property" List.ItemID="295426841">
+							<list name="keyframes">
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="1772242503">
+									<float name="key_time" value="0" />
+									<float name="value" value="15" />
+									<enum name="interpolation_type" value="Discrete" />
+								</template_reference>
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="1620750513">
+									<float name="key_time" value="18" />
+									<float name="value" value="15" />
+									<enum name="interpolation_type" value="Linear" />
+								</template_reference>
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="452740020">
+									<float name="key_time" value="19" />
+									<float name="value" value="-5" />
+									<enum name="interpolation_type" value="Linear" />
+								</template_reference>
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="1915431986">
+									<float name="key_time" value="24" />
+									<float name="value" value="-5" />
+									<enum name="interpolation_type" value="Linear" />
+								</template_reference>
+							</list>
+							<enum name="property" value="Rotate" />
+							<float name="repeat_count" value="0" />
+						</template_reference>
+						<template_reference name="animated_property" value="sitrep_data\animated_property" List.ItemID="2140894420">
+							<list name="keyframes">
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="1445399299">
+									<float name="key_time" value="0" />
+									<float name="value" value="0" />
+									<enum name="interpolation_type" value="Discrete" />
+								</template_reference>
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="1171763033">
+									<float name="key_time" value="18" />
+									<float name="value" value="0" />
+									<enum name="interpolation_type" value="Linear" />
+								</template_reference>
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="1768541995">
+									<float name="key_time" value="19" />
+									<float name="value" value="1" />
+									<enum name="interpolation_type" value="Linear" />
+								</template_reference>
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="1491567906">
+									<float name="key_time" value="24" />
+									<float name="value" value="1" />
+									<enum name="interpolation_type" value="Linear" />
+								</template_reference>
+							</list>
+							<enum name="property" value="Opacity" />
+							<float name="repeat_count" value="0" />
+						</template_reference>
+					</list>
+				</template_reference>
+				<template_reference name="element" value="sitrep_data\element" List.ItemID="873519134">
+					<string name="custom_label" value="Allied Line 1" />
+					<string name="type" value="Image" />
+					<string name="style" value="Image" />
+					<file name="image_path" value="icons\sitrep\friendly_alliedcross" />
+					<group name="dimension">
+						<float name="width" value="200" />
+						<float name="height" value="200" />
+						<enum name="type" value="Pixels" />
+					</group>
+					<group name="position">
+						<template_reference name="world_position" value="basic_data_types\vector3">
+							<float name="x" value="-200" />
+							<float name="y" value="0" />
+							<float name="z" value="160" />
+						</template_reference>
+						<enum name="type" value="WorldPosition" />
+					</group>
+					<list name="timeline">
+						<template_reference name="animated_property" value="sitrep_data\animated_property" List.ItemID="87722669">
+							<list name="keyframes">
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="613213758">
+									<float name="key_time" value="0" />
+									<float name="value" value="30" />
+									<enum name="interpolation_type" value="Discrete" />
+								</template_reference>
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="1420162221">
+									<float name="key_time" value="24" />
+									<float name="value" value="30" />
+									<enum name="interpolation_type" value="Linear" />
+								</template_reference>
+							</list>
+							<enum name="property" value="Rotate" />
+							<float name="repeat_count" value="0" />
+						</template_reference>
+						<template_reference name="animated_property" value="sitrep_data\animated_property" List.ItemID="1436162576">
+							<list name="keyframes">
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="1444837029">
+									<float name="key_time" value="0" />
+									<float name="value" value="0" />
+									<enum name="interpolation_type" value="Discrete" />
+								</template_reference>
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="635518828">
+									<float name="key_time" value="9" />
+									<float name="value" value="0" />
+									<enum name="interpolation_type" value="Linear" />
+								</template_reference>
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="155477882">
+									<float name="key_time" value="10" />
+									<float name="value" value="1" />
+									<enum name="interpolation_type" value="Linear" />
+								</template_reference>
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="1232749037">
+									<float name="key_time" value="24" />
+									<float name="value" value="1" />
+									<enum name="interpolation_type" value="Linear" />
+								</template_reference>
+							</list>
+							<enum name="property" value="Opacity" />
+							<float name="repeat_count" value="0" />
+						</template_reference>
+					</list>
+				</template_reference>
+				<template_reference name="element" value="sitrep_data\element" List.ItemID="1070916350">
+					<string name="custom_label" value="Allied Line 2" />
+					<string name="type" value="Image" />
+					<string name="style" value="Image" />
+					<file name="image_path" value="icons\sitrep\friendly_alliedcross" />
+					<group name="dimension">
+						<float name="width" value="200" />
+						<float name="height" value="200" />
+						<enum name="type" value="Pixels" />
+					</group>
+					<group name="position">
+						<template_reference name="world_position" value="basic_data_types\vector3">
+							<float name="x" value="-40" />
+							<float name="y" value="0" />
+							<float name="z" value="220" />
+						</template_reference>
+						<enum name="type" value="WorldPosition" />
+					</group>
+					<list name="timeline">
+						<template_reference name="animated_property" value="sitrep_data\animated_property" List.ItemID="227397438">
+							<list name="keyframes">
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="1393621844">
+									<float name="key_time" value="0" />
+									<float name="value" value="0" />
+									<enum name="interpolation_type" value="Discrete" />
+								</template_reference>
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="698247921">
+									<float name="key_time" value="10" />
+									<float name="value" value="0" />
+									<enum name="interpolation_type" value="Linear" />
+								</template_reference>
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="1830577572">
+									<float name="key_time" value="11" />
+									<float name="value" value="1" />
+									<enum name="interpolation_type" value="Linear" />
+								</template_reference>
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="321693397">
+									<float name="key_time" value="24" />
+									<float name="value" value="1" />
+									<enum name="interpolation_type" value="Linear" />
+								</template_reference>
+							</list>
+							<enum name="property" value="Opacity" />
+							<float name="repeat_count" value="0" />
+						</template_reference>
+						<template_reference name="animated_property" value="sitrep_data\animated_property" List.ItemID="659619171">
+							<list name="keyframes">
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="1014421050">
+									<float name="key_time" value="0" />
+									<float name="value" value="10" />
+									<enum name="interpolation_type" value="Discrete" />
+								</template_reference>
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="134043485">
+									<float name="key_time" value="24" />
+									<float name="value" value="10" />
+									<enum name="interpolation_type" value="Linear" />
+								</template_reference>
+							</list>
+							<enum name="property" value="Rotate" />
+							<float name="repeat_count" value="0" />
+						</template_reference>
+					</list>
+				</template_reference>
+				<template_reference name="element" value="sitrep_data\element" List.ItemID="1771810463">
+					<string name="custom_label" value="Threat 1" />
+					<string name="type" value="Image" />
+					<string name="style" value="Image" />
+					<file name="image_path" value="icons\sitrep\threat_icon" />
+					<group name="dimension">
+						<float name="width" value="200" />
+						<float name="height" value="200" />
+						<enum name="type" value="Pixels" />
+					</group>
+					<group name="position">
+						<template_reference name="world_position" value="basic_data_types\vector3">
+							<float name="x" value="-100" />
+							<float name="y" value="0" />
+							<float name="z" value="50" />
+						</template_reference>
+						<enum name="type" value="WorldPosition" />
+					</group>
+					<list name="timeline">
+						<template_reference name="animated_property" value="sitrep_data\animated_property" List.ItemID="1538446779">
+							<list name="keyframes">
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="1989489836">
+									<float name="key_time" value="0" />
+									<float name="value" value="0" />
+									<enum name="interpolation_type" value="Discrete" />
+								</template_reference>
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="1070459731">
+									<float name="key_time" value="14" />
+									<float name="value" value="0" />
+									<enum name="interpolation_type" value="Linear" />
+								</template_reference>
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="1146409070">
+									<float name="key_time" value="15" />
+									<float name="value" value="1" />
+									<enum name="interpolation_type" value="Linear" />
+								</template_reference>
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="309515558">
+									<float name="key_time" value="24" />
+									<float name="value" value="1" />
+									<enum name="interpolation_type" value="Linear" />
+								</template_reference>
+							</list>
+							<enum name="property" value="Opacity" />
+							<float name="repeat_count" value="0" />
+						</template_reference>
+						<template_reference name="animated_property" value="sitrep_data\animated_property" List.ItemID="1476383622">
+							<list name="keyframes">
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="774404177">
+									<float name="key_time" value="0" />
+									<float name="value" value="30" />
+									<enum name="interpolation_type" value="Discrete" />
+								</template_reference>
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="988454902">
+									<float name="key_time" value="24" />
+									<float name="value" value="30" />
+									<enum name="interpolation_type" value="Linear" />
+								</template_reference>
+							</list>
+							<enum name="property" value="Rotate" />
+							<float name="repeat_count" value="0" />
+						</template_reference>
+					</list>
+				</template_reference>
+				<template_reference name="element" value="sitrep_data\element" List.ItemID="1982900609">
+					<string name="custom_label" value="Threat 2" />
+					<string name="type" value="Image" />
+					<string name="style" value="Image" />
+					<file name="image_path" value="icons\sitrep\threat_icon" />
+					<group name="dimension">
+						<float name="width" value="200" />
+						<float name="height" value="200" />
+						<enum name="type" value="Pixels" />
+					</group>
+					<group name="position">
+						<template_reference name="world_position" value="basic_data_types\vector3">
+							<float name="x" value="40" />
+							<float name="y" value="0" />
+							<float name="z" value="100" />
+						</template_reference>
+						<enum name="type" value="WorldPosition" />
+					</group>
+					<list name="timeline">
+						<template_reference name="animated_property" value="sitrep_data\animated_property" List.ItemID="1946895355">
+							<list name="keyframes">
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="867570489">
+									<float name="key_time" value="0" />
+									<float name="value" value="0" />
+									<enum name="interpolation_type" value="Discrete" />
+								</template_reference>
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="857562230">
+									<float name="key_time" value="14.5" />
+									<float name="value" value="0" />
+									<enum name="interpolation_type" value="Linear" />
+								</template_reference>
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="60986004">
+									<float name="key_time" value="15.5" />
+									<float name="value" value="1" />
+									<enum name="interpolation_type" value="Linear" />
+								</template_reference>
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="606339090">
+									<float name="key_time" value="24" />
+									<float name="value" value="1" />
+									<enum name="interpolation_type" value="Linear" />
+								</template_reference>
+							</list>
+							<enum name="property" value="Opacity" />
+							<float name="repeat_count" value="0" />
+						</template_reference>
+						<template_reference name="animated_property" value="sitrep_data\animated_property" List.ItemID="992097009">
+							<list name="keyframes">
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="1315534912">
+									<float name="key_time" value="0" />
+									<float name="value" value="10" />
+									<enum name="interpolation_type" value="Discrete" />
+								</template_reference>
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="1763674243">
+									<float name="key_time" value="24" />
+									<float name="value" value="10" />
+									<enum name="interpolation_type" value="Linear" />
+								</template_reference>
+							</list>
+							<enum name="property" value="Rotate" />
+							<float name="repeat_count" value="0" />
+						</template_reference>
+					</list>
+				</template_reference>
+				<template_reference name="element" value="sitrep_data\element" List.ItemID="342948874">
+					<string name="custom_label" value="Threat 3" />
+					<string name="type" value="Image" />
+					<string name="style" value="Image" />
+					<file name="image_path" value="icons\sitrep\threat_icon" />
+					<group name="dimension">
+						<float name="width" value="200" />
+						<float name="height" value="200" />
+						<enum name="type" value="Pixels" />
+					</group>
+					<group name="position">
+						<template_reference name="world_position" value="basic_data_types\vector3">
+							<float name="x" value="300" />
+							<float name="y" value="0" />
+							<float name="z" value="270" />
+						</template_reference>
+						<enum name="type" value="WorldPosition" />
+					</group>
+					<list name="timeline">
+						<template_reference name="animated_property" value="sitrep_data\animated_property" List.ItemID="1249212312">
+							<list name="keyframes">
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="1204811140">
+									<float name="key_time" value="0" />
+									<float name="value" value="0" />
+									<enum name="interpolation_type" value="Discrete" />
+								</template_reference>
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="2105327440">
+									<float name="key_time" value="15" />
+									<float name="value" value="0" />
+									<enum name="interpolation_type" value="Linear" />
+								</template_reference>
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="119855672">
+									<float name="key_time" value="16" />
+									<float name="value" value="1" />
+									<enum name="interpolation_type" value="Linear" />
+								</template_reference>
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="599614203">
+									<float name="key_time" value="24" />
+									<float name="value" value="1" />
+									<enum name="interpolation_type" value="Linear" />
+								</template_reference>
+							</list>
+							<enum name="property" value="Opacity" />
+							<float name="repeat_count" value="0" />
+						</template_reference>
+						<template_reference name="animated_property" value="sitrep_data\animated_property" List.ItemID="1928098142">
+							<list name="keyframes">
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="1483987912">
+									<float name="key_time" value="0" />
+									<float name="value" value="80" />
+									<enum name="interpolation_type" value="Discrete" />
+								</template_reference>
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="1780494192">
+									<float name="key_time" value="24" />
+									<float name="value" value="80" />
+									<enum name="interpolation_type" value="Linear" />
+								</template_reference>
+							</list>
+							<enum name="property" value="Rotate" />
+							<float name="repeat_count" value="0" />
+						</template_reference>
+					</list>
+				</template_reference>
+				<template_reference name="element" value="sitrep_data\element" List.ItemID="12828819">
+					<string name="custom_label" value="Friendly Arrow" />
+					<string name="type" value="Image" />
+					<string name="style" value="ImageWithDropShadow" />
+					<file name="image_path" value="icons\sitrep\friendly_arrow" />
+					<group name="dimension">
+						<float name="width" value="200" />
+						<float name="height" value="200" />
+						<enum name="type" value="Pixels" />
+					</group>
+					<group name="position">
+						<template_reference name="world_position" value="basic_data_types\vector3">
+							<float name="x" value="420" />
+							<float name="y" value="0" />
+							<float name="z" value="-240" />
+						</template_reference>
+						<enum name="type" value="WorldPosition" />
+					</group>
+					<list name="timeline">
+						<template_reference name="animated_property" value="sitrep_data\animated_property" List.ItemID="1199984109">
+							<list name="keyframes">
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="2073786694">
+									<float name="key_time" value="0" />
+									<float name="value" value="-120" />
+									<enum name="interpolation_type" value="Discrete" />
+								</template_reference>
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="1232993326">
+									<float name="key_time" value="24" />
+									<float name="value" value="-120" />
+									<enum name="interpolation_type" value="Linear" />
+								</template_reference>
+							</list>
+							<enum name="property" value="Rotate" />
+							<float name="repeat_count" value="0" />
+						</template_reference>
+					</list>
+				</template_reference>
+				<template_reference name="element" value="sitrep_data\element" List.ItemID="1875409232">
+					<string name="custom_label" value="Objective - Fuel Reserve" />
+					<string name="type" value="Image" />
+					<string name="style" value="ImageWithDropShadow" />
+					<file name="image_path" value="icons\sitrep\primary_objective" />
+					<group name="dimension">
+						<float name="width" value="200" />
+						<float name="height" value="200" />
+						<enum name="type" value="Pixels" />
+					</group>
+					<group name="position">
+						<template_reference name="world_position" value="basic_data_types\vector3">
+							<float name="x" value="120" />
+							<float name="y" value="0" />
+							<float name="z" value="-180" />
+						</template_reference>
+						<enum name="type" value="WorldPosition" />
+					</group>
+					<list name="timeline">
+						<template_reference name="animated_property" value="sitrep_data\animated_property" List.ItemID="1487505039">
+							<list name="keyframes">
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="93820788">
+									<float name="key_time" value="0" />
+									<float name="value" value="0" />
+									<enum name="interpolation_type" value="Discrete" />
+								</template_reference>
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="185684456">
+									<float name="key_time" value="4" />
+									<float name="value" value="0" />
+									<enum name="interpolation_type" value="Linear" />
+								</template_reference>
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="463866420">
+									<float name="key_time" value="5" />
+									<float name="value" value="1" />
+									<enum name="interpolation_type" value="Linear" />
+								</template_reference>
+								<template_reference name="keyframe" value="sitrep_data\double_keyframe" List.ItemID="2078923723">
+									<float name="key_time" value="24" />
+									<float name="value" value="1" />
+									<enum name="interpolation_type" value="Linear" />
+								</template_reference>
+							</list>
+							<enum name="property" value="Opacity" />
+							<float name="repeat_count" value="0" />
+						</template_reference>
+					</list>
+				</template_reference>
+			</list>
+			<file name="map_image_path" value="missions\africa\el_alamein\el_alamein_hold_tm_handmade" />
+			<float name="playable_width" value="1024" />
+			<float name="playable_height" value="1024" />
+			<file name="narrative_collection" value="na_sitreps_narrative" />
+			<string name="narrative_event" value="el_alamein_sitrep" />
+			<int name="narrative_variant" value="0" />
+		</group>
+	</variant>
+</instance>

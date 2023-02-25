@@ -1,0 +1,122 @@
+<instance version="5" description="MG42 heavy machine gun used by the HMG squad" template="weapon">
+	<variant name="default">
+		<group name="weapon_bag">
+			<group name="anim_table">
+				<string name="track_horizontal" value="aim_horizontal" overrideParent="True" />
+				<string name="track_vertical" value="aim_vertical" overrideParent="True" />
+			</group>
+			<bool name="fx_always_visible" value="True" overrideParent="True" />
+			<string name="fx_tracer_name" value="fx_mg42_tracer" overrideParent="True" />
+			<group name="scatter">
+				<float name="distance_scatter_obj_hit_min" value="0.25" overrideParent="True" />
+			</group>
+			<group name="tracking" overrideParent="True">
+				<float name="fire_cone_angle" value="5" overrideParent="True" />
+				<group name="normal">
+					<float name="max_down" value="0" overrideParent="True" />
+					<float name="max_left" value="-47.5" overrideParent="True" />
+					<float name="max_right" value="47.5" overrideParent="True" />
+					<float name="max_up" value="0" overrideParent="True" />
+					<float name="speed_horizontal" value="25" overrideParent="True" />
+					<float name="speed_vertical" value="60" />
+				</group>
+				<float name="pivot_end_time" value="0" />
+				<bool name="pivot_only" value="False" />
+				<float name="pivot_start_time" value="0" />
+				<float name="fire_cone_angle_vert" value="90" overrideParent="True" />
+			</group>
+			<group name="height_bonuses">
+				<group name="height_advantage">
+					<float name="height_threshold" value="3.5" overrideParent="True" />
+				</group>
+			</group>
+			<group name="suppressed">
+				<float name="pinned_burst_multiplier" value="1" overrideParent="True" />
+				<float name="pinned_cooldown_multiplier" value="1" overrideParent="True" />
+				<float name="pinned_reload_multiplier" value="1" overrideParent="True" />
+				<float name="suppressed_burst_multiplier" value="1" overrideParent="True" />
+				<float name="suppressed_cooldown_multiplier" value="1" overrideParent="True" />
+				<float name="suppressed_reload_multiplier" value="1" overrideParent="True" />
+			</group>
+			<group name="suppression">
+				<group name="target_pinned_multipliers">
+					<float name="accuracy_multiplier" value="0.25" overrideParent="True" />
+					<float name="damage_multiplier" value="1" overrideParent="True" />
+					<float name="penetration_multiplier" value="1" overrideParent="True" />
+					<float name="suppression_multiplier" value="0.1" overrideParent="True" />
+				</group>
+				<group name="target_suppressed_multipliers">
+					<float name="accuracy_multiplier" value="0.5" overrideParent="True" />
+					<float name="damage_multiplier" value="1" overrideParent="True" />
+					<float name="penetration_multiplier" value="1" overrideParent="True" />
+					<float name="suppression_multiplier" value="0.5" overrideParent="True" />
+				</group>
+			</group>
+			<group name="priority">
+				<float name="window_bonus" value="10" overrideParent="True" />
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="205613" />
+		<instance_reference name="parent_pbg" value="weapon\german\small_arms\machine_gun\heavy_machine_gun\mg42_hmg_ger" />
+	</variant>
+	<variant name="sp">
+		<group name="weapon_bag">
+			<group name="anim_table">
+				<string name="track_horizontal" value="aim_horizontal" overrideParent="True" />
+				<string name="track_vertical" value="aim_vertical" overrideParent="True" />
+			</group>
+			<bool name="fx_always_visible" value="True" overrideParent="True" />
+			<string name="fx_tracer_name" value="fx_mg42_tracer" overrideParent="True" />
+			<group name="scatter">
+				<float name="distance_scatter_obj_hit_min" value="0.25" overrideParent="True" />
+			</group>
+			<group name="tracking" overrideParent="True">
+				<float name="fire_cone_angle" value="5" overrideParent="True" />
+				<group name="normal">
+					<float name="max_down" value="0" overrideParent="True" />
+					<float name="max_left" value="-47.5" overrideParent="True" />
+					<float name="max_right" value="47.5" overrideParent="True" />
+					<float name="max_up" value="0" overrideParent="True" />
+					<float name="speed_horizontal" value="25" overrideParent="True" />
+					<float name="speed_vertical" value="60" />
+				</group>
+				<float name="pivot_end_time" value="0" />
+				<bool name="pivot_only" value="False" />
+				<float name="pivot_start_time" value="0" />
+				<float name="fire_cone_angle_vert" value="90" overrideParent="True" />
+			</group>
+			<group name="height_bonuses">
+				<group name="height_advantage">
+					<float name="height_threshold" value="3.5" overrideParent="True" />
+				</group>
+			</group>
+			<group name="suppressed">
+				<float name="pinned_burst_multiplier" value="1" overrideParent="True" />
+				<float name="pinned_cooldown_multiplier" value="1" overrideParent="True" />
+				<float name="pinned_reload_multiplier" value="1" overrideParent="True" />
+				<float name="suppressed_burst_multiplier" value="1" overrideParent="True" />
+				<float name="suppressed_cooldown_multiplier" value="1" overrideParent="True" />
+				<float name="suppressed_reload_multiplier" value="1" overrideParent="True" />
+			</group>
+			<group name="suppression">
+				<group name="target_pinned_multipliers">
+					<float name="accuracy_multiplier" value="0.25" overrideParent="True" />
+					<float name="damage_multiplier" value="1" overrideParent="True" />
+					<float name="penetration_multiplier" value="1" overrideParent="True" />
+					<float name="suppression_multiplier" value="0.1" overrideParent="True" />
+				</group>
+				<group name="target_suppressed_multipliers">
+					<float name="accuracy_multiplier" value="0.5" overrideParent="True" />
+					<float name="damage_multiplier" value="1" overrideParent="True" />
+					<float name="penetration_multiplier" value="1" overrideParent="True" />
+					<float name="suppression_multiplier" value="0.5" overrideParent="True" />
+				</group>
+			</group>
+			<group name="priority">
+				<float name="window_bonus" value="10" overrideParent="True" />
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="205613" />
+		<instance_reference name="parent_pbg" value="weapon\german\small_arms\machine_gun\heavy_machine_gun\mg42_hmg_ger" />
+	</variant>
+</instance>

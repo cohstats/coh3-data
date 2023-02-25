@@ -1,0 +1,1496 @@
+<instance version="5" description="" template="army">
+	<variant name="default">
+		<group name="army_bag">
+			<group name="actions">
+				<string name="ability_ally_reinforcement_action_name" value="" />
+				<string name="ability_self_reinforcement_action_name" value="" />
+				<string name="ally_attack_here_action_name" value="" />
+				<string name="ally_capture_here_action_name" value="" />
+				<string name="ally_defend_here_action_name" value="" />
+				<string name="fx_rally_point_action_name" value="" />
+				<string name="self_attack_here_action_name" value="" />
+				<string name="self_capture_here_action_name" value="" />
+				<string name="self_defend_here_action_name" value="" />
+				<string name="self_question_here_action_name" value="" />
+				<string name="ally_question_here_action_name" value="" />
+				<colour name="fx_rally_point_line_color_move" value="16777215" />
+				<colour name="fx_rally_point_line_color_special" value="16777215" />
+				<string name="fx_rally_point_action_name_special" value="" />
+			</group>
+			<group name="casualties">
+				<float name="guaranteed_casualty_per_number_of_deaths" value="5" />
+				<int name="max_rescued_casualty_count" value="10" />
+			</group>
+			<enum_table name="resource_income_cap">
+				<float name="action" value="9999" />
+				<float name="command" value="32" />
+				<float name="popcap" value="9999" />
+				<float name="fuel" value="9999" />
+				<float name="munition" value="9999" />
+				<float name="manpower" value="9999" />
+				<float name="requisition" value="9999" />
+				<float name="ultimate" value="9999" />
+			</enum_table>
+			<group name="race_population_cap_table">
+				<float name="base_medic_cap" value="0" />
+				<float name="base_personnel_cap" value="100" />
+				<float name="base_vehicle_cap" value="0" />
+				<float name="max_medic_cap" value="0" />
+				<float name="max_personnel_cap" value="100" />
+				<float name="max_vehicle_cap" value="0" />
+			</group>
+			<list name="abilities">
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\indian_artillery\right\artillery_4_2_inch_heavy_mortar_uk" List.ItemID="683470004" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\indian_artillery\right\artillery_bl_5_5_heavy_artillery_uk" List.ItemID="-1638002536" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\indian_artillery\right\artillery_airburst_uk" List.ItemID="-342672880" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\indian_artillery\right\artillery_artillery_saturation_uk" List.ItemID="456552827" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\indian_artillery\left\artillery_gurkhas_uk" List.ItemID="-1581833750" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\indian_artillery\right\artillery_perimeter_monitor_uk" List.ItemID="-1611906718" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\indian_artillery\left\artillery_pillage_uk" List.ItemID="-574676498" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\indian_artillery\left\artillery_war_cry_uk" List.ItemID="109878341" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_armored\british_armored_left_1a_rigorous_vehicle_training_uk" List.ItemID="-1017293846" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_armored\british_armored_left_1b_radio_net_uk" List.ItemID="1851793400" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_armored\british_armored_left_2_churchill" List.ItemID="1028711804" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_armored\cut\british_armored_left_3a_churchill_75mm_upgrade_uk" List.ItemID="-1003038278" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_armored\british_armored_left_3b_churchill_black_prince_uk" List.ItemID="1429172491" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_armored\british_armored_right_1a_light_withdraw_and_refit_uk" List.ItemID="-394131608" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_armored\british_armored_right_1b_forward_repair_assembly_uk" List.ItemID="1568348055" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_armored\british_armored_right_2_crusader_aa_uk" List.ItemID="-717424697" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_armored\british_armored_right_3b_designate_targets_uk" List.ItemID="2051113632" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_armored\british_armored_right_3a_recon_artillery_uk" List.ItemID="-1464464022" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\right\c_artillery_heavy_mortar_core_uk" List.ItemID="1658347269" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\right\c_artillery_bl_5_5_heavy_artillery_core_uk" List.ItemID="-1684168625" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\left\c_artillery_valentine_core_uk" List.ItemID="-1804675371" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\left\c_artillery_gurkhas_core_uk" List.ItemID="526060617" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\right\c_artillery_airburst_core_uk" List.ItemID="348892244" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\left\c_artillery_war_cry_core_uk" List.ItemID="1548010006" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\passive\c_artillery_bravery_passive_uk" List.ItemID="-138742500" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\passive\c_artillery_creeping_smoke_passive_uk" List.ItemID="-25367370" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\passive\c_artillery_first_class_passive_uk" List.ItemID="1261202242" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\passive\c_artillery_forward_observers_passive_uk" List.ItemID="-177951316" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\passive\c_artillery_gurkha_bolster_passive_uk" List.ItemID="979252030" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\passive\c_artillery_pillage_passive_uk" List.ItemID="-916110558" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\passive\c_artillery_supremacy_reduced_cost_passive_uk" List.ItemID="1419818323" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\passive\c_artillery_saturation_passive_uk" List.ItemID="-1765069660" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\passive\c_artillery_fearless_assault_passive_uk" List.ItemID="1267071443" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\passive\c_artillery_zero_in_passive_uk" List.ItemID="1839916371" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\specialization\right\c_artillery_airburst_mixed_core_uk" List.ItemID="1414613741" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\specialization\right\c_artillery_airburst_smoke_core_uk" List.ItemID="2069842408" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\specialization\left\c_artillery_war_cry_artillery_flares_core_uk" List.ItemID="1955369437" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\specialization\left\c_artillery_war_cry_smoke_core_uk" List.ItemID="1110942093" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\specialization\left\c_artillery_gurkhas_battle_hardened_core_uk" List.ItemID="721701451" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\specialization\left\c_artillery_gurkhas_forward_observer_core_uk" List.ItemID="-1189566065" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\specialization\right\c_artillery_heavy_mortar_bolster_uk" List.ItemID="1798737339" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\specialization\right\c_artillery_heavy_mortar_incendiary_uk" List.ItemID="1952760886" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\specialization\right\c_artillery_bl_5_5_auto_fire_uk" List.ItemID="1815735979" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\specialization\right\c_artillery_bl_5_5_rapid_barrage_uk" List.ItemID="-1330964380" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\specialization\left\c_artillery_valentine_armoured_commander_uk" List.ItemID="374249497" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\specialization\left\c_artillery_valentine_veteran_commander_uk" List.ItemID="-1920051975" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\left\c_armored_fuel_drop_core_uk" List.ItemID="925080746" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\left\c_armored_recon_artillery_core_uk" List.ItemID="-353937296" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\left\c_armored_designate_targets_core_uk" List.ItemID="-1768458586" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\right\c_armored_churchill_core_uk" List.ItemID="2121289083" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\right\c_armored_crusader_aa_core_uk" List.ItemID="30205116" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\right\c_armored_black_prince_core_uk" List.ItemID="961988473" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\passive\c_armored_bolster_sappers_passive_uk" List.ItemID="-1963153795" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\passive\c_armored_cheaper_sappers_passive_uk" List.ItemID="-1382427181" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\passive\c_armored_critical_repair_passive_uk" List.ItemID="-1252257913" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\passive\c_armored_field_recovery_passive_uk" List.ItemID="588217901" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\passive\c_armored_forward_repair_passive_uk" List.ItemID="-169008249" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\passive\c_armored_combat_support_passive_uk" List.ItemID="-419453845" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\passive\c_armored_priority_fuel_passive_uk" List.ItemID="1679851677" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\passive\c_armored_air_support_passive_uk" List.ItemID="-1935480541" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\passive\c_armored_vehicle_logistics_passive_uk" List.ItemID="1779731765" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\passive\c_armored_vehicle_training_passive_uk" List.ItemID="348210587" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\specialization\left\c_armored_designate_targets_extended_duration_uk" List.ItemID="-651265633" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\specialization\left\c_armored_designate_targets_extended_sight_uk" List.ItemID="-1081703522" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\specialization\left\c_armored_fuel_drop_add_munitions_uk" List.ItemID="-1839145070" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\specialization\left\c_armored_fuel_drop_extra_crate_uk" List.ItemID="891568509" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\specialization\left\c_armored_recon_artillery_cost_reduction_uk" List.ItemID="-1801113357" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\specialization\left\c_armored_recon_artillery_incendiary_uk" List.ItemID="-107556211" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\specialization\right\c_armored_black_prince_cost_reduction_uk" List.ItemID="974328209" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\specialization\right\c_armored_black_prince_support_squad_uk" List.ItemID="83098955" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\specialization\right\c_armored_churchill_doubles_uk" List.ItemID="-2000186833" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\specialization\right\c_armored_churchill_command_tank_uk" List.ItemID="-518556560" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\specialization\right\c_armored_crusader_aa_cost_reduction_uk" List.ItemID="619511083" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\specialization\right\c_armored_crusader_aa_suppression_uk" List.ItemID="-1640080731" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\indian_artillery\left\artillery_valour_uk" List.ItemID="457567362" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\indian_artillery\left\artillery_volunteer_infantry_uk" List.ItemID="-1130154655" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_air_and_sea\cut\british_air_and_sea_left_1a_fuel_supply_chain_uk" List.ItemID="-1890932175" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_air_and_sea\cut\british_air_and_sea_left_1b_munitions_supply_chain_uk" List.ItemID="-1480984298" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_air_and_sea\british_air_and_sea_left_2a_centaur_cs_uk" List.ItemID="901204954" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_air_and_sea\british_air_and_sea_left_3a_assault_flares_uk" List.ItemID="1381059371" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_air_and_sea\british_air_and_sea_left_3b_naval_bombardment_uk" List.ItemID="973923771" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_air_and_sea\british_air_and_sea_right_1_commandos_uk" List.ItemID="415241441" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_air_and_sea\british_air_and_sea_right_2a_pack_howitzer_team_uk" List.ItemID="1005770760" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_air_and_sea\british_air_and_sea_right_2b_commando_lmg_team_uk" List.ItemID="-1232673654" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_air_and_sea\british_air_and_sea_right_3a_incendiary_bombing_run_uk" List.ItemID="454091803" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_air_and_sea\cut\british_air_and_sea_right_3b_rocket_loiter_uk" List.ItemID="-1305142737" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\australian_defense\left\australian_defense_2pdr_at_gun_uk" List.ItemID="-1055678933" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\australian_defense\left\australian_defense_base_howitzer_uk" List.ItemID="-1797274727" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\australian_defense\left\australian_defense_entrenchment_uk" List.ItemID="-1918081056" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\australian_defense\left\australian_defense_heavy_mortar_uk" List.ItemID="-425070" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\australian_defense\left\australian_defense_mine_surplus_uk" List.ItemID="-878237461" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\australian_defense\right\australian_defense_australian_light_infantry_uk" List.ItemID="725429266" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\australian_defense\right\australian_defense_marmon_herrington_uk" List.ItemID="1216196633" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\australian_defense\right\australian_defense_matilda_combat_group_uk" List.ItemID="-398877268" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\australian_defense\right\australian_defense_pillage_territory_uk" List.ItemID="-1413490750" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\australian_defense\right\australian_defense_raid_sabotage_uk" List.ItemID="276939044" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_canadian_vanguard\british_canadian_vanguard_left_1a_fast_capture_uk" List.ItemID="468034962" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_canadian_vanguard\british_canadian_vanguard_left_1b_spot_and_smoke_uk" List.ItemID="-2072516686" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_canadian_vanguard\british_canadian_vanguard_left_2a_light_infantry_uk" List.ItemID="879886013" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_canadian_vanguard\british_canadian_vanguard_left_2b_assault_enemy_sector_artillery_uk" List.ItemID="938614752" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_canadian_vanguard\british_canadian_vanguard_left_3a_into_the_breach_uk" List.ItemID="-1561254341" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_canadian_vanguard\british_canadian_vanguard_left_3b_priest_uk" List.ItemID="483114068" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_canadian_vanguard\british_canadian_vanguard_right_1_piats_uk" List.ItemID="1721980010" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_canadian_vanguard\british_canadian_vanguard_right_2a_cwt_and_atg_uk" List.ItemID="-817518635" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_canadian_vanguard\british_canadian_vanguard_right_2b_cwt_repair_and_resupply_uk" List.ItemID="-247960764" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_canadian_vanguard\british_canadian_vanguard_right_3_churchill_croc_uk" List.ItemID="1284139258" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\left\c_air_and_sea_centaur_core_uk" List.ItemID="288892335" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\right\c_air_and_sea_commandos_core_uk" List.ItemID="-747784042" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\left\c_air_and_sea_cwt_towing_truck_core_uk" List.ItemID="161919217" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\right\c_air_and_sea_strafing_run_core_uk" List.ItemID="-1370362070" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\right\c_air_and_sea_strafing_loiter_core_uk" List.ItemID="1928466827" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\right\c_air_and_sea_strafing_at_loiter" List.ItemID="1584156006" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\left\c_air_and_sea_naval_bombardment_core_uk" List.ItemID="497370501" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\passive\c_air_and_sea_veteran_crews_passive_uk" List.ItemID="-1829122112" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\passive\c_air_and_sea_naval_shipment_passive_uk" List.ItemID="-1473130420" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\passive\c_air_and_sea_rapid_deployment_passive_uk" List.ItemID="-1072817103" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\passive\c_air_and_sea_naval_defense_passive_uk" List.ItemID="-2136913920" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\passive\c_air_and_sea_open_coastal_lines_passive_uk" List.ItemID="-1020969286" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\passive\c_air_and_sea_special_ops_commandos_passive_uk" List.ItemID="1841460269" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\passive\c_air_and_sea_veteran_commandos_passive_uk" List.ItemID="-2031568300" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\passive\c_air_and_sea_paradropped_reinforcements_passive_uk" List.ItemID="1747875779" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\passive\c_air_and_sea_weapon_supplies_passive_uk" List.ItemID="1961794091" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\passive\c_air_and_sea_faster_refuel_passive_uk" List.ItemID="-567562955" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\right\c_air_and_sea_bombing_run_core_uk" List.ItemID="419065106" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\right\c_air_and_sea_bombing_run_bomb_core_uk" List.ItemID="28064874" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\right\c_air_and_sea_bombing_run_mine_core_uk" List.ItemID="-1678500830" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\mission\m_canadian_heavy_infantry_uk" List.ItemID="-1754319870" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_armored\british_armored_left_3a_churchill_crocodile_uk" List.ItemID="-601871550" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_air_and_sea\british_air_and_sea_left_1a_naval_blockade_uk" List.ItemID="-991981624" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_air_and_sea\british_air_and_sea_left_1b_supply_surplus_uk" List.ItemID="-1869161295" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_air_and_sea\british_air_and_sea_right_3b_anti_tank_loiter_uk" List.ItemID="-263593280" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\left\c_air_and_sea_centaur_sapper_core_uk" List.ItemID="-586034865" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\left\c_air_and_sea_centaur_tommy_core_uk" List.ItemID="-649150985" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\left\c_air_and_sea_cwt_towing_truck_17pdr_core_uk" List.ItemID="1546205899" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\left\c_air_and_sea_cwt_towing_truck_guards_core_uk" List.ItemID="706905737" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\left\c_air_and_sea_naval_bombardment_concentrated_barrage_core_uk" List.ItemID="-330427579" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\left\c_air_and_sea_naval_bombardment_more_shells_core_uk" List.ItemID="-1618425283" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\right\c_air_and_sea_commandos_howietzer_drop_core_uk" List.ItemID="-289112175" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\right\c_air_and_sea_commandos_munitions_drop_core_uk" List.ItemID="1893259021" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_armored\british_armored_right_on_hand_sappers" List.ItemID="1950323274" />
+			</list>
+			<enum_table name="resource_max_cap">
+				<float name="action" value="9999" />
+				<float name="command" value="32" />
+				<float name="popcap" value="9999" />
+				<float name="fuel" value="9999" />
+				<float name="munition" value="9999" />
+				<float name="manpower" value="9999" />
+				<float name="requisition" value="9999" />
+				<float name="ultimate" value="9999" />
+			</enum_table>
+			<string name="badge_path" value="" />
+			<list name="production_buildings">
+				<group name="production_building" List.ItemID="-268105503">
+					<group name="builder">
+						<instance_reference name="dispatch_ability" value="" />
+						<enum name="unit_class" value="" />
+						<group name="ui_info">
+							<locstring name="screen_name" value="0" />
+							<locstring name="help_text" value="0" />
+							<file name="icon_name" value="" />
+							<file name="symbol_icon_name" value="" />
+							<string name="hotkey_name" value="" />
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+					<group name="building">
+						<instance_reference name="self_destruct_ability" value="" />
+						<enum name="unit_class" value="hq" />
+						<group name="ui_info">
+							<locstring name="help_text" value="0" />
+							<string name="hotkey_name" value="" />
+							<file name="icon_name" value="hud\building_tabs\building_hq" />
+							<locstring name="screen_name" value="0" />
+							<file name="symbol_icon_name" value="" />
+							<group name="ui_position">
+								<int name="ui_position_column" value="1" />
+								<int name="ui_position_row" value="0" />
+								<int name="ui_position_column_span" value="1" />
+								<int name="ui_position_row_span" value="1" />
+							</group>
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+				</group>
+				<group name="production_building" List.ItemID="-490374550">
+					<group name="builder">
+						<instance_reference name="dispatch_ability" value="" />
+						<enum name="unit_class" value="" />
+						<group name="ui_info">
+							<locstring name="screen_name" value="0" />
+							<locstring name="help_text" value="0" />
+							<file name="icon_name" value="" />
+							<file name="symbol_icon_name" value="" />
+							<string name="hotkey_name" value="" />
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+					<group name="building">
+						<instance_reference name="self_destruct_ability" value="" />
+						<enum name="unit_class" value="barracks" />
+						<group name="ui_info">
+							<locstring name="help_text" value="0" />
+							<string name="hotkey_name" value="" />
+							<file name="icon_name" value="hud\building_tabs\building_barracks" />
+							<locstring name="screen_name" value="0" />
+							<file name="symbol_icon_name" value="" />
+							<group name="ui_position">
+								<int name="ui_position_column" value="2" />
+								<int name="ui_position_row" value="0" />
+								<int name="ui_position_column_span" value="1" />
+								<int name="ui_position_row_span" value="1" />
+							</group>
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+				</group>
+				<group name="production_building" List.ItemID="1534330047">
+					<group name="builder">
+						<instance_reference name="dispatch_ability" value="" />
+						<enum name="unit_class" value="" />
+						<group name="ui_info">
+							<locstring name="screen_name" value="0" />
+							<locstring name="help_text" value="0" />
+							<file name="icon_name" value="" />
+							<file name="symbol_icon_name" value="" />
+							<string name="hotkey_name" value="" />
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+					<group name="building">
+						<instance_reference name="self_destruct_ability" value="" />
+						<enum name="unit_class" value="motor_pool" />
+						<group name="ui_info">
+							<locstring name="help_text" value="0" />
+							<string name="hotkey_name" value="" />
+							<file name="icon_name" value="hud\building_tabs\building_motor_pool" />
+							<locstring name="screen_name" value="0" />
+							<file name="symbol_icon_name" value="" />
+							<group name="ui_position">
+								<int name="ui_position_column" value="3" />
+								<int name="ui_position_row" value="0" />
+								<int name="ui_position_column_span" value="1" />
+								<int name="ui_position_row_span" value="1" />
+							</group>
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+				</group>
+				<group name="production_building" List.ItemID="-1116045674">
+					<group name="builder">
+						<instance_reference name="dispatch_ability" value="" />
+						<enum name="unit_class" value="" />
+						<group name="ui_info">
+							<locstring name="screen_name" value="0" />
+							<locstring name="help_text" value="0" />
+							<file name="icon_name" value="" />
+							<file name="symbol_icon_name" value="" />
+							<string name="hotkey_name" value="" />
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+					<group name="building">
+						<instance_reference name="self_destruct_ability" value="" />
+						<enum name="unit_class" value="tank_depot" />
+						<group name="ui_info">
+							<locstring name="help_text" value="0" />
+							<string name="hotkey_name" value="" />
+							<file name="icon_name" value="hud\building_tabs\building_tank_depot" />
+							<locstring name="screen_name" value="0" />
+							<file name="symbol_icon_name" value="" />
+							<group name="ui_position">
+								<int name="ui_position_column" value="4" />
+								<int name="ui_position_row" value="0" />
+								<int name="ui_position_column_span" value="1" />
+								<int name="ui_position_row_span" value="1" />
+							</group>
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+				</group>
+			</list>
+			<group name="ai_production_info">
+				<list name="unlocking_upgrade_list">
+				</list>
+				<list name="loadouts">
+				</list>
+				<group name="available">
+					<list name="upgrades">
+						<instance_reference name="upgrade" value="army_upgrade\battlegroups\british\british_air_and_sea" List.ItemID="-2037487778" />
+						<instance_reference name="upgrade" value="army_upgrade\battlegroups\british\british_armored" List.ItemID="1449559873" />
+						<instance_reference name="upgrade" value="army_upgrade\battlegroups\british\indian_artillery" List.ItemID="437187553" />
+					</list>
+					<list name="abilities">
+					</list>
+					<list name="units">
+					</list>
+				</group>
+			</group>
+			<list name="team_size_point_resource_multiplier">
+			</list>
+			<list name="starting_buildings">
+				<group name="starting_building" List.ItemID="1211010274">
+					<string name="key" value="default" />
+					<instance_reference name="building" value="ebps\races\british\buildings\production\hq_uk" />
+					<list name="starting_squads">
+						<group name="starting_squad" List.ItemID="-131941098">
+							<instance_reference name="squad" value="sbps\races\british\infantry\sapper_uk" />
+							<bool name="check_requirements" value="False" />
+							<group name="position_offset">
+								<float name="x" value="0" />
+								<float name="y" value="15" />
+							</group>
+						</group>
+					</list>
+					<list name="player_upgrades">
+					</list>
+				</group>
+				<group name="starting_building" List.ItemID="-1694646651">
+					<string name="key" value="base_bunker" />
+					<instance_reference name="building" value="ebps\races\british\buildings\defensive\base_defense_uk" />
+					<list name="starting_squads">
+					</list>
+					<list name="player_upgrades">
+					</list>
+				</group>
+			</list>
+			<list name="field_support_production_styles">
+				<group name="field_support_production_style" List.ItemID="1993891717">
+					<string name="key" value="" />
+					<list name="spawn_items">
+						<group name="spawn_item" List.ItemID="-518771982">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\british\infantry\tommy_uk" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="2" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-1001030127">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\british\infantry\sapper_uk" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="1" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-1104440888">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\british\infantry\guards_uk" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="3" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="1275665769">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\british\team_weapons\hmg_vickers_uk" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="2" />
+								<int name="ui_position_column" value="1" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="1547661333">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\british\team_weapons\mortar_81mm_uk" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="2" />
+								<int name="ui_position_column" value="2" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+					</list>
+				</group>
+				<group name="field_support_production_style" List.ItemID="977879786">
+					<string name="key" value="nested_menu" />
+					<list name="spawn_items">
+						<group name="spawn_item" List.ItemID="-1907760877">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\british\infantry\tommy_uk" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="1" />
+							</group>
+							<instance_reference name="ui_menu" value="menu\forward_base_infantry" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-1797650352">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\british\infantry\sapper_uk" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="2" />
+							</group>
+							<instance_reference name="ui_menu" value="menu\forward_base_infantry" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-1320351709">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\british\infantry\guards_uk" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="3" />
+							</group>
+							<instance_reference name="ui_menu" value="menu\forward_base_infantry" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="1265451561">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\british\team_weapons\hmg_vickers_uk" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="2" />
+								<int name="ui_position_column" value="1" />
+							</group>
+							<instance_reference name="ui_menu" value="menu\forward_base_infantry" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-1624446906">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\british\team_weapons\mortar_81mm_uk" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="2" />
+								<int name="ui_position_column" value="2" />
+							</group>
+							<instance_reference name="ui_menu" value="menu\forward_base_infantry" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+					</list>
+				</group>
+				<group name="field_support_production_style" comment="Partisan Safe House" List.ItemID="1583223571">
+					<string name="key" value="partisan" />
+					<list name="spawn_items">
+						<group name="spawn_item" List.ItemID="-631577749">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\resistance_fighters_partisan" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="1" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-1998597930">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\saboteurs_partisan" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="2" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-305388924">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\marksman_team_partisan" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="3" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+					</list>
+				</group>
+			</list>
+			<enum_table name="resource_starting_amount">
+				<float name="action" value="0" />
+				<float name="command" value="0" />
+				<float name="popcap" value="0" />
+				<float name="fuel" value="15" />
+				<float name="munition" value="25" />
+				<float name="manpower" value="390" />
+				<float name="requisition" value="0" />
+				<float name="ultimate" value="0" />
+			</enum_table>
+			<state_tree_node name="start_actions_statetree" value="british" />
+			<list name="upgrades">
+			</list>
+			<group name="ui">
+				<list name="global_traits_summary">
+				</list>
+				<locstring name="subheader" value="0" />
+				<locstring name="one_liner" value="0" />
+				<file name="background_image" value="common\races\fe_factionselect_window_british" />
+				<int name="difficulty" value="0" />
+				<enum name="research_upgrade" value="" />
+			</group>
+			<bool name="check_pop_cap_when_queuing_production_item" value="True" />
+			<enum_table name="upkeep_per_pop_per_minute_override">
+				<float name="action" value="0" />
+				<float name="command" value="0" />
+				<float name="popcap" value="0" />
+				<float name="fuel" value="0" />
+				<float name="munition" value="0" />
+				<float name="manpower" value="0" />
+				<float name="requisition" value="0" />
+				<float name="ultimate" value="0" />
+			</enum_table>
+			<instance_reference name="generic_weapon_crew_blueprint" value="sbps\races\british\gameplay\crew_team_weapon_generic_uk" />
+		</group>
+		<uniqueid name="pbgid" value="197646" />
+	</variant>
+	<variant name="sp">
+		<group name="army_bag">
+			<group name="actions">
+				<string name="ability_ally_reinforcement_action_name" value="" />
+				<string name="ability_self_reinforcement_action_name" value="" />
+				<string name="ally_attack_here_action_name" value="" />
+				<string name="ally_capture_here_action_name" value="" />
+				<string name="ally_defend_here_action_name" value="" />
+				<string name="fx_rally_point_action_name" value="" />
+				<string name="self_attack_here_action_name" value="" />
+				<string name="self_capture_here_action_name" value="" />
+				<string name="self_defend_here_action_name" value="" />
+				<string name="self_question_here_action_name" value="" />
+				<string name="ally_question_here_action_name" value="" />
+				<colour name="fx_rally_point_line_color_move" value="16777215" />
+				<colour name="fx_rally_point_line_color_special" value="16777215" />
+				<string name="fx_rally_point_action_name_special" value="" />
+			</group>
+			<group name="casualties">
+				<float name="guaranteed_casualty_per_number_of_deaths" value="5" />
+				<int name="max_rescued_casualty_count" value="10" />
+			</group>
+			<enum_table name="resource_income_cap">
+				<float name="action" value="9999" />
+				<float name="command" value="32" />
+				<float name="popcap" value="9999" />
+				<float name="fuel" value="9999" />
+				<float name="munition" value="9999" />
+				<float name="manpower" value="9999" />
+				<float name="requisition" value="9999" />
+				<float name="ultimate" value="9999" />
+			</enum_table>
+			<group name="race_population_cap_table">
+				<float name="base_medic_cap" value="0" />
+				<float name="base_personnel_cap" value="100" />
+				<float name="base_vehicle_cap" value="0" />
+				<float name="max_medic_cap" value="0" />
+				<float name="max_personnel_cap" value="100" />
+				<float name="max_vehicle_cap" value="0" />
+			</group>
+			<list name="abilities">
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\indian_artillery\right\artillery_4_2_inch_heavy_mortar_uk" List.ItemID="683470004" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\indian_artillery\right\artillery_bl_5_5_heavy_artillery_uk" List.ItemID="-1638002536" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\indian_artillery\right\artillery_airburst_uk" List.ItemID="-342672880" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\indian_artillery\right\artillery_artillery_saturation_uk" List.ItemID="456552827" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\indian_artillery\left\artillery_gurkhas_uk" List.ItemID="-1581833750" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\indian_artillery\right\artillery_perimeter_monitor_uk" List.ItemID="-1611906718" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\indian_artillery\left\artillery_pillage_uk" List.ItemID="-574676498" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\indian_artillery\left\artillery_war_cry_uk" List.ItemID="109878341" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_armored\british_armored_left_1a_rigorous_vehicle_training_uk" List.ItemID="-1017293846" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_armored\british_armored_left_1b_radio_net_uk" List.ItemID="1851793400" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_armored\british_armored_left_2_churchill" List.ItemID="1028711804" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_armored\cut\british_armored_left_3a_churchill_75mm_upgrade_uk" List.ItemID="-1003038278" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_armored\british_armored_left_3b_churchill_black_prince_uk" List.ItemID="1429172491" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_armored\british_armored_right_1a_light_withdraw_and_refit_uk" List.ItemID="-394131608" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_armored\british_armored_right_1b_forward_repair_assembly_uk" List.ItemID="1568348055" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_armored\british_armored_right_2_crusader_aa_uk" List.ItemID="-717424697" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_armored\british_armored_right_3b_designate_targets_uk" List.ItemID="2051113632" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_armored\british_armored_right_3a_recon_artillery_uk" List.ItemID="-1464464022" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\right\c_artillery_heavy_mortar_core_uk" List.ItemID="1658347269" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\right\c_artillery_bl_5_5_heavy_artillery_core_uk" List.ItemID="-1684168625" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\left\c_artillery_valentine_core_uk" List.ItemID="-1804675371" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\left\c_artillery_gurkhas_core_uk" List.ItemID="526060617" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\right\c_artillery_airburst_core_uk" List.ItemID="348892244" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\left\c_artillery_war_cry_core_uk" List.ItemID="1548010006" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\passive\c_artillery_bravery_passive_uk" List.ItemID="-138742500" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\passive\c_artillery_creeping_smoke_passive_uk" List.ItemID="-25367370" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\passive\c_artillery_first_class_passive_uk" List.ItemID="1261202242" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\passive\c_artillery_forward_observers_passive_uk" List.ItemID="-177951316" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\passive\c_artillery_gurkha_bolster_passive_uk" List.ItemID="979252030" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\passive\c_artillery_pillage_passive_uk" List.ItemID="-916110558" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\passive\c_artillery_supremacy_reduced_cost_passive_uk" List.ItemID="1419818323" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\passive\c_artillery_saturation_passive_uk" List.ItemID="-1765069660" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\passive\c_artillery_fearless_assault_passive_uk" List.ItemID="1267071443" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\passive\c_artillery_zero_in_passive_uk" List.ItemID="1839916371" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\specialization\right\c_artillery_airburst_mixed_core_uk" List.ItemID="1414613741" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\specialization\right\c_artillery_airburst_smoke_core_uk" List.ItemID="2069842408" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\specialization\left\c_artillery_war_cry_artillery_flares_core_uk" List.ItemID="1955369437" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\specialization\left\c_artillery_war_cry_smoke_core_uk" List.ItemID="1110942093" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\specialization\left\c_artillery_gurkhas_battle_hardened_core_uk" List.ItemID="721701451" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\specialization\left\c_artillery_gurkhas_forward_observer_core_uk" List.ItemID="-1189566065" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\specialization\right\c_artillery_heavy_mortar_bolster_uk" List.ItemID="1798737339" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\specialization\right\c_artillery_heavy_mortar_incendiary_uk" List.ItemID="1952760886" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\specialization\right\c_artillery_bl_5_5_auto_fire_uk" List.ItemID="1815735979" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\specialization\right\c_artillery_bl_5_5_rapid_barrage_uk" List.ItemID="-1330964380" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\specialization\left\c_artillery_valentine_armoured_commander_uk" List.ItemID="374249497" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\indian_artillery\core\specialization\left\c_artillery_valentine_veteran_commander_uk" List.ItemID="-1920051975" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\left\c_armored_fuel_drop_core_uk" List.ItemID="925080746" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\left\c_armored_recon_artillery_core_uk" List.ItemID="-353937296" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\left\c_armored_designate_targets_core_uk" List.ItemID="-1768458586" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\right\c_armored_churchill_core_uk" List.ItemID="2121289083" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\right\c_armored_crusader_aa_core_uk" List.ItemID="30205116" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\right\c_armored_black_prince_core_uk" List.ItemID="961988473" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\passive\c_armored_bolster_sappers_passive_uk" List.ItemID="-1963153795" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\passive\c_armored_cheaper_sappers_passive_uk" List.ItemID="-1382427181" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\passive\c_armored_critical_repair_passive_uk" List.ItemID="-1252257913" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\passive\c_armored_field_recovery_passive_uk" List.ItemID="588217901" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\passive\c_armored_forward_repair_passive_uk" List.ItemID="-169008249" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\passive\c_armored_combat_support_passive_uk" List.ItemID="-419453845" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\passive\c_armored_priority_fuel_passive_uk" List.ItemID="1679851677" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\passive\c_armored_air_support_passive_uk" List.ItemID="-1935480541" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\passive\c_armored_vehicle_logistics_passive_uk" List.ItemID="1779731765" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\passive\c_armored_vehicle_training_passive_uk" List.ItemID="348210587" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\specialization\left\c_armored_designate_targets_extended_duration_uk" List.ItemID="-651265633" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\specialization\left\c_armored_designate_targets_extended_sight_uk" List.ItemID="-1081703522" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\specialization\left\c_armored_fuel_drop_add_munitions_uk" List.ItemID="-1839145070" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\specialization\left\c_armored_fuel_drop_extra_crate_uk" List.ItemID="891568509" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\specialization\left\c_armored_recon_artillery_cost_reduction_uk" List.ItemID="-1801113357" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\specialization\left\c_armored_recon_artillery_incendiary_uk" List.ItemID="-107556211" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\specialization\right\c_armored_black_prince_cost_reduction_uk" List.ItemID="974328209" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\specialization\right\c_armored_black_prince_support_squad_uk" List.ItemID="83098955" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\specialization\right\c_armored_churchill_doubles_uk" List.ItemID="-2000186833" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\specialization\right\c_armored_churchill_command_tank_uk" List.ItemID="-518556560" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\specialization\right\c_armored_crusader_aa_cost_reduction_uk" List.ItemID="619511083" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\armored\core\specialization\right\c_armored_crusader_aa_suppression_uk" List.ItemID="-1640080731" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\indian_artillery\left\artillery_valour_uk" List.ItemID="457567362" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\indian_artillery\left\artillery_volunteer_infantry_uk" List.ItemID="-1130154655" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_air_and_sea\cut\british_air_and_sea_left_1a_fuel_supply_chain_uk" List.ItemID="-1890932175" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_air_and_sea\cut\british_air_and_sea_left_1b_munitions_supply_chain_uk" List.ItemID="-1480984298" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_air_and_sea\british_air_and_sea_left_2a_centaur_cs_uk" List.ItemID="901204954" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_air_and_sea\british_air_and_sea_left_3a_assault_flares_uk" List.ItemID="1381059371" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_air_and_sea\british_air_and_sea_left_3b_naval_bombardment_uk" List.ItemID="973923771" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_air_and_sea\british_air_and_sea_right_1_commandos_uk" List.ItemID="415241441" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_air_and_sea\british_air_and_sea_right_2a_pack_howitzer_team_uk" List.ItemID="1005770760" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_air_and_sea\british_air_and_sea_right_2b_commando_lmg_team_uk" List.ItemID="-1232673654" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_air_and_sea\british_air_and_sea_right_3a_incendiary_bombing_run_uk" List.ItemID="454091803" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_air_and_sea\cut\british_air_and_sea_right_3b_rocket_loiter_uk" List.ItemID="-1305142737" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\australian_defense\left\australian_defense_2pdr_at_gun_uk" List.ItemID="-1055678933" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\australian_defense\left\australian_defense_base_howitzer_uk" List.ItemID="-1797274727" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\australian_defense\left\australian_defense_entrenchment_uk" List.ItemID="-1918081056" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\australian_defense\left\australian_defense_heavy_mortar_uk" List.ItemID="-425070" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\australian_defense\left\australian_defense_mine_surplus_uk" List.ItemID="-878237461" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\australian_defense\right\australian_defense_australian_light_infantry_uk" List.ItemID="725429266" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\australian_defense\right\australian_defense_marmon_herrington_uk" List.ItemID="1216196633" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\australian_defense\right\australian_defense_matilda_combat_group_uk" List.ItemID="-398877268" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\australian_defense\right\australian_defense_pillage_territory_uk" List.ItemID="-1413490750" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\australian_defense\right\australian_defense_raid_sabotage_uk" List.ItemID="276939044" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_canadian_vanguard\british_canadian_vanguard_left_1a_fast_capture_uk" List.ItemID="468034962" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_canadian_vanguard\british_canadian_vanguard_left_1b_spot_and_smoke_uk" List.ItemID="-2072516686" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_canadian_vanguard\british_canadian_vanguard_left_2a_light_infantry_uk" List.ItemID="879886013" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_canadian_vanguard\british_canadian_vanguard_left_2b_assault_enemy_sector_artillery_uk" List.ItemID="938614752" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_canadian_vanguard\british_canadian_vanguard_left_3a_into_the_breach_uk" List.ItemID="-1561254341" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_canadian_vanguard\british_canadian_vanguard_left_3b_priest_uk" List.ItemID="483114068" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_canadian_vanguard\british_canadian_vanguard_right_1_piats_uk" List.ItemID="1721980010" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_canadian_vanguard\british_canadian_vanguard_right_2a_cwt_and_atg_uk" List.ItemID="-817518635" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_canadian_vanguard\british_canadian_vanguard_right_2b_cwt_repair_and_resupply_uk" List.ItemID="-247960764" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_canadian_vanguard\british_canadian_vanguard_right_3_churchill_croc_uk" List.ItemID="1284139258" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\left\c_air_and_sea_centaur_core_uk" List.ItemID="288892335" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\right\c_air_and_sea_commandos_core_uk" List.ItemID="-747784042" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\left\c_air_and_sea_cwt_towing_truck_core_uk" List.ItemID="161919217" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\right\c_air_and_sea_strafing_run_core_uk" List.ItemID="-1370362070" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\right\c_air_and_sea_strafing_loiter_core_uk" List.ItemID="1928466827" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\right\c_air_and_sea_strafing_at_loiter" List.ItemID="1584156006" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\left\c_air_and_sea_naval_bombardment_core_uk" List.ItemID="497370501" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\passive\c_air_and_sea_veteran_crews_passive_uk" List.ItemID="-1829122112" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\passive\c_air_and_sea_naval_shipment_passive_uk" List.ItemID="-1473130420" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\passive\c_air_and_sea_rapid_deployment_passive_uk" List.ItemID="-1072817103" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\passive\c_air_and_sea_naval_defense_passive_uk" List.ItemID="-2136913920" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\passive\c_air_and_sea_open_coastal_lines_passive_uk" List.ItemID="-1020969286" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\passive\c_air_and_sea_special_ops_commandos_passive_uk" List.ItemID="1841460269" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\passive\c_air_and_sea_veteran_commandos_passive_uk" List.ItemID="-2031568300" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\passive\c_air_and_sea_paradropped_reinforcements_passive_uk" List.ItemID="1747875779" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\passive\c_air_and_sea_weapon_supplies_passive_uk" List.ItemID="1961794091" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\passive\c_air_and_sea_faster_refuel_passive_uk" List.ItemID="-567562955" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\right\c_air_and_sea_bombing_run_core_uk" List.ItemID="419065106" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\right\c_air_and_sea_bombing_run_bomb_core_uk" List.ItemID="28064874" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\right\c_air_and_sea_bombing_run_mine_core_uk" List.ItemID="-1678500830" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\mission\m_canadian_heavy_infantry_uk" List.ItemID="-1754319870" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_armored\british_armored_left_3a_churchill_crocodile_uk" List.ItemID="-601871550" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_air_and_sea\british_air_and_sea_left_1a_naval_blockade_uk" List.ItemID="-991981624" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_air_and_sea\british_air_and_sea_left_1b_supply_surplus_uk" List.ItemID="-1869161295" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_air_and_sea\british_air_and_sea_right_3b_anti_tank_loiter_uk" List.ItemID="-263593280" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\left\c_air_and_sea_centaur_sapper_core_uk" List.ItemID="-586034865" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\left\c_air_and_sea_centaur_tommy_core_uk" List.ItemID="-649150985" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\left\c_air_and_sea_cwt_towing_truck_17pdr_core_uk" List.ItemID="1546205899" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\left\c_air_and_sea_cwt_towing_truck_guards_core_uk" List.ItemID="706905737" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\left\c_air_and_sea_naval_bombardment_concentrated_barrage_core_uk" List.ItemID="-330427579" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\left\c_air_and_sea_naval_bombardment_more_shells_core_uk" List.ItemID="-1618425283" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\right\c_air_and_sea_commandos_howietzer_drop_core_uk" List.ItemID="-289112175" />
+				<instance_reference name="ability" value="abilities\races\british\campaign\company\air_and_sea\core\right\c_air_and_sea_commandos_munitions_drop_core_uk" List.ItemID="1893259021" />
+				<instance_reference name="ability" value="abilities\races\british\battlegroups\british_armored\british_armored_right_on_hand_sappers" List.ItemID="-1600448520" />
+			</list>
+			<enum_table name="resource_max_cap">
+				<float name="action" value="9999" />
+				<float name="command" value="32" />
+				<float name="popcap" value="9999" />
+				<float name="fuel" value="9999" />
+				<float name="munition" value="9999" />
+				<float name="manpower" value="9999" />
+				<float name="requisition" value="9999" />
+				<float name="ultimate" value="9999" />
+			</enum_table>
+			<string name="badge_path" value="" />
+			<list name="production_buildings">
+				<group name="production_building" List.ItemID="-268105503">
+					<group name="builder">
+						<instance_reference name="dispatch_ability" value="" />
+						<enum name="unit_class" value="" />
+						<group name="ui_info">
+							<locstring name="screen_name" value="0" />
+							<locstring name="help_text" value="0" />
+							<file name="icon_name" value="" />
+							<file name="symbol_icon_name" value="" />
+							<string name="hotkey_name" value="" />
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+					<group name="building">
+						<instance_reference name="self_destruct_ability" value="" />
+						<enum name="unit_class" value="hq" />
+						<group name="ui_info">
+							<locstring name="help_text" value="0" />
+							<string name="hotkey_name" value="" />
+							<file name="icon_name" value="hud\building_tabs\building_hq" />
+							<locstring name="screen_name" value="0" />
+							<file name="symbol_icon_name" value="" />
+							<group name="ui_position">
+								<int name="ui_position_column" value="1" />
+								<int name="ui_position_row" value="0" />
+								<int name="ui_position_column_span" value="1" />
+								<int name="ui_position_row_span" value="1" />
+							</group>
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+				</group>
+				<group name="production_building" List.ItemID="-490374550">
+					<group name="builder">
+						<instance_reference name="dispatch_ability" value="" />
+						<enum name="unit_class" value="" />
+						<group name="ui_info">
+							<locstring name="screen_name" value="0" />
+							<locstring name="help_text" value="0" />
+							<file name="icon_name" value="" />
+							<file name="symbol_icon_name" value="" />
+							<string name="hotkey_name" value="" />
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+					<group name="building">
+						<instance_reference name="self_destruct_ability" value="" />
+						<enum name="unit_class" value="barracks" />
+						<group name="ui_info">
+							<locstring name="help_text" value="0" />
+							<string name="hotkey_name" value="" />
+							<file name="icon_name" value="hud\building_tabs\building_barracks" />
+							<locstring name="screen_name" value="0" />
+							<file name="symbol_icon_name" value="" />
+							<group name="ui_position">
+								<int name="ui_position_column" value="2" />
+								<int name="ui_position_row" value="0" />
+								<int name="ui_position_column_span" value="1" />
+								<int name="ui_position_row_span" value="1" />
+							</group>
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+				</group>
+				<group name="production_building" List.ItemID="1534330047">
+					<group name="builder">
+						<instance_reference name="dispatch_ability" value="" />
+						<enum name="unit_class" value="" />
+						<group name="ui_info">
+							<locstring name="screen_name" value="0" />
+							<locstring name="help_text" value="0" />
+							<file name="icon_name" value="" />
+							<file name="symbol_icon_name" value="" />
+							<string name="hotkey_name" value="" />
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+					<group name="building">
+						<instance_reference name="self_destruct_ability" value="" />
+						<enum name="unit_class" value="motor_pool" />
+						<group name="ui_info">
+							<locstring name="help_text" value="0" />
+							<string name="hotkey_name" value="" />
+							<file name="icon_name" value="hud\building_tabs\building_motor_pool" />
+							<locstring name="screen_name" value="0" />
+							<file name="symbol_icon_name" value="" />
+							<group name="ui_position">
+								<int name="ui_position_column" value="3" />
+								<int name="ui_position_row" value="0" />
+								<int name="ui_position_column_span" value="1" />
+								<int name="ui_position_row_span" value="1" />
+							</group>
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+				</group>
+				<group name="production_building" List.ItemID="-1116045674">
+					<group name="builder">
+						<instance_reference name="dispatch_ability" value="" />
+						<enum name="unit_class" value="" />
+						<group name="ui_info">
+							<locstring name="screen_name" value="0" />
+							<locstring name="help_text" value="0" />
+							<file name="icon_name" value="" />
+							<file name="symbol_icon_name" value="" />
+							<string name="hotkey_name" value="" />
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+					<group name="building">
+						<instance_reference name="self_destruct_ability" value="" />
+						<enum name="unit_class" value="tank_depot" />
+						<group name="ui_info">
+							<locstring name="help_text" value="0" />
+							<string name="hotkey_name" value="" />
+							<file name="icon_name" value="hud\building_tabs\building_tank_depot" />
+							<locstring name="screen_name" value="0" />
+							<file name="symbol_icon_name" value="" />
+							<group name="ui_position">
+								<int name="ui_position_column" value="4" />
+								<int name="ui_position_row" value="0" />
+								<int name="ui_position_column_span" value="1" />
+								<int name="ui_position_row_span" value="1" />
+							</group>
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+				</group>
+			</list>
+			<group name="ai_production_info">
+				<list name="unlocking_upgrade_list">
+				</list>
+				<list name="loadouts">
+				</list>
+				<group name="available">
+					<list name="upgrades">
+						<instance_reference name="upgrade" value="army_upgrade\battlegroups\british\british_air_and_sea" List.ItemID="-2037487778" />
+						<instance_reference name="upgrade" value="army_upgrade\battlegroups\british\british_armored" List.ItemID="1449559873" />
+						<instance_reference name="upgrade" value="army_upgrade\battlegroups\british\indian_artillery" List.ItemID="437187553" />
+					</list>
+					<list name="abilities">
+					</list>
+					<list name="units">
+					</list>
+				</group>
+			</group>
+			<list name="team_size_point_resource_multiplier">
+			</list>
+			<list name="starting_buildings">
+				<group name="starting_building" List.ItemID="1211010274">
+					<string name="key" value="default" />
+					<instance_reference name="building" value="ebps\races\british\buildings\production\hq_uk" />
+					<list name="starting_squads">
+						<group name="starting_squad" List.ItemID="-131941098">
+							<instance_reference name="squad" value="sbps\races\british\infantry\sapper_uk" />
+							<bool name="check_requirements" value="False" />
+							<group name="position_offset">
+								<float name="x" value="0" />
+								<float name="y" value="15" />
+							</group>
+						</group>
+					</list>
+					<list name="player_upgrades">
+					</list>
+				</group>
+				<group name="starting_building" List.ItemID="-1694646651">
+					<string name="key" value="base_bunker" />
+					<instance_reference name="building" value="ebps\races\british\buildings\defensive\base_defense_uk" />
+					<list name="starting_squads">
+					</list>
+					<list name="player_upgrades">
+					</list>
+				</group>
+			</list>
+			<list name="field_support_production_styles">
+				<group name="field_support_production_style" List.ItemID="1993891717">
+					<string name="key" value="" />
+					<list name="spawn_items">
+						<group name="spawn_item" List.ItemID="-518771982">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\british\infantry\tommy_uk" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="2" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-1001030127">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\british\infantry\sapper_uk" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="1" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-1104440888">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\british\infantry\guards_uk" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="3" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="1275665769">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\british\team_weapons\hmg_vickers_uk" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="2" />
+								<int name="ui_position_column" value="1" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="1547661333">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\british\team_weapons\mortar_81mm_uk" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="2" />
+								<int name="ui_position_column" value="2" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+					</list>
+				</group>
+				<group name="field_support_production_style" List.ItemID="977879786">
+					<string name="key" value="nested_menu" />
+					<list name="spawn_items">
+						<group name="spawn_item" List.ItemID="-1907760877">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\british\infantry\tommy_uk" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="1" />
+							</group>
+							<instance_reference name="ui_menu" value="menu\forward_base_infantry" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-1797650352">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\british\infantry\sapper_uk" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="2" />
+							</group>
+							<instance_reference name="ui_menu" value="menu\forward_base_infantry" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-1320351709">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\british\infantry\guards_uk" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="3" />
+							</group>
+							<instance_reference name="ui_menu" value="menu\forward_base_infantry" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="1265451561">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\british\team_weapons\hmg_vickers_uk" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="2" />
+								<int name="ui_position_column" value="1" />
+							</group>
+							<instance_reference name="ui_menu" value="menu\forward_base_infantry" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-1624446906">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\british\team_weapons\mortar_81mm_uk" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="2" />
+								<int name="ui_position_column" value="2" />
+							</group>
+							<instance_reference name="ui_menu" value="menu\forward_base_infantry" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+					</list>
+				</group>
+				<group name="field_support_production_style" comment="Partisan Safe House" List.ItemID="1583223571">
+					<string name="key" value="partisan" />
+					<list name="spawn_items">
+						<group name="spawn_item" List.ItemID="-631577749">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\resistance_fighters_partisan" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="1" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-1998597930">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\saboteurs_partisan" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="2" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-305388924">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\marksman_team_partisan" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="3" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+					</list>
+				</group>
+			</list>
+			<enum_table name="resource_starting_amount">
+				<float name="action" value="0" />
+				<float name="command" value="0" />
+				<float name="popcap" value="0" />
+				<float name="fuel" value="15" />
+				<float name="munition" value="25" />
+				<float name="manpower" value="390" />
+				<float name="requisition" value="0" />
+				<float name="ultimate" value="0" />
+			</enum_table>
+			<state_tree_node name="start_actions_statetree" value="sp_british" />
+			<list name="upgrades">
+			</list>
+			<group name="ui">
+				<list name="global_traits_summary">
+				</list>
+				<locstring name="subheader" value="0" />
+				<locstring name="one_liner" value="0" />
+				<file name="background_image" value="common\races\fe_factionselect_window_british" />
+				<int name="difficulty" value="0" />
+				<enum name="research_upgrade" value="" />
+			</group>
+			<bool name="check_pop_cap_when_queuing_production_item" value="True" />
+			<enum_table name="upkeep_per_pop_per_minute_override">
+				<float name="action" value="0" />
+				<float name="command" value="0" />
+				<float name="popcap" value="0" />
+				<float name="fuel" value="0" />
+				<float name="munition" value="0" />
+				<float name="manpower" value="0" />
+				<float name="requisition" value="0" />
+				<float name="ultimate" value="0" />
+			</enum_table>
+			<instance_reference name="generic_weapon_crew_blueprint" value="sbps\races\british\gameplay\crew_team_weapon_generic_uk" />
+		</group>
+		<uniqueid name="pbgid" value="197646" />
+	</variant>
+</instance>

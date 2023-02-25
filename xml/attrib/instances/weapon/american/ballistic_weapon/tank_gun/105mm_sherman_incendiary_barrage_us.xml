@@ -1,0 +1,188 @@
+<instance version="5" description="High explosive rounds for the M4 105mm M4A1 Sherman Bulldozer" template="weapon">
+	<variant name="default">
+		<group name="weapon_bag">
+			<group name="accuracy">
+				<float name="near" value="1" overrideParent="True" />
+				<float name="far" value="1" overrideParent="True" />
+				<float name="mid" value="1" overrideParent="True" />
+			</group>
+			<group name="area_effect">
+				<template_reference name="area_info" value="options\area_info_options\circle_area_option">
+					<float name="outer_radius" value="6" overrideParent="True" />
+				</template_reference>
+				<group name="damage">
+					<float name="far" value="0.05" overrideParent="True" />
+					<float name="mid" value="0.15" overrideParent="True" />
+				</group>
+				<group name="distance">
+					<float name="far" value="3" overrideParent="True" />
+					<float name="near" value="1.5" overrideParent="True" />
+					<float name="mid" value="2.25" overrideParent="True" />
+				</group>
+				<template_reference name="aoe_penetration" value="tables\range_table">
+					<float name="far" value="1000" overrideParent="True" />
+					<float name="mid" value="1000" overrideParent="True" />
+					<float name="near" value="1000" overrideParent="True" />
+				</template_reference>
+				<int name="damage_max_members_per_squad" value="4" overrideParent="True" />
+			</group>
+			<group name="behaviour">
+				<bool name="ignore_shot_blocking" value="True" overrideParent="True" />
+				<bool name="enable_auto_target_search" value="False" overrideParent="True" />
+			</group>
+			<group name="damage">
+				<float name="max" value="100" overrideParent="True" />
+				<float name="min" value="100" overrideParent="True" />
+				<enum name="damage_type" value="explosive" overrideParent="True" />
+			</group>
+			<group name="deflection">
+				<bool name="has_deflection_damage" value="False" overrideParent="True" />
+			</group>
+			<float name="flinch_radius" value="5" overrideParent="True" />
+			<string name="fx_munition_name" value="\artillery\artillery_medium_incendiary" overrideParent="True" />
+			<group name="projectile">
+				<instance_reference name="projectile" value="ebps\gameplay\projectiles\common\artillery\p_artillery_medium_dot" overrideParent="True" />
+			</group>
+			<group name="reload">
+				<group name="duration">
+					<float name="max" value="2.5" overrideParent="True" />
+					<float name="min" value="2" overrideParent="True" />
+				</group>
+				<bool name="require_reload_after_switch" value="True" overrideParent="True" />
+			</group>
+			<group name="scatter">
+				<float name="angle_scatter" value="15" overrideParent="True" />
+				<float name="distance_scatter_max" value="6" overrideParent="True" />
+				<float name="distance_scatter_offset" value="0.25" overrideParent="True" />
+				<float name="movement_scatter_angle_multiplier" value="1.25" overrideParent="True" />
+				<float name="movement_scatter_distance_multiplier" value="1.25" overrideParent="True" />
+			</group>
+			<group name="penetration">
+				<float name="near" value="1" overrideParent="True" />
+				<float name="far" value="1" overrideParent="True" />
+				<float name="mid" value="1" overrideParent="True" />
+			</group>
+			<enum name="weapon_class" value="flame" overrideParent="True" />
+			<enum_table name="cover_table">
+				<template_reference name="tp_heavy_cover" value="weapon_cover_info">
+					<float name="accuracy_multiplier" value="1" overrideParent="True" />
+					<float name="damage_multiplier" value="1" overrideParent="True" />
+				</template_reference>
+				<template_reference name="tp_light_cover" value="weapon_cover_info">
+					<float name="accuracy_multiplier" value="1" overrideParent="True" />
+				</template_reference>
+				<template_reference name="tp_negative_cover" value="weapon_cover_info">
+					<float name="accuracy_multiplier" value="1" overrideParent="True" />
+				</template_reference>
+				<template_reference name="tp_garrison_cover" value="weapon_cover_info">
+					<float name="accuracy_multiplier" value="1" overrideParent="True" />
+					<float name="damage_multiplier" value="1" overrideParent="True" />
+				</template_reference>
+				<template_reference name="tp_smoke_cover" value="weapon_cover_info">
+					<float name="accuracy_multiplier" value="1" overrideParent="True" />
+				</template_reference>
+			</enum_table>
+			<enum name="default_attack_type" value="flame" overrideParent="True" />
+			<string name="fx_aoe_munition_name" value="flamethrower_aoe" overrideParent="True" />
+			<group name="range">
+				<float name="max" value="40" comment="Must be greater than ability range or ability breaks. Difference is the buffer zone for moving away from target before ability stops." overrideParent="True" />
+				<float name="min" value="15" overrideParent="True" />
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="2044857" />
+		<instance_reference name="parent_pbg" value="weapon\american\ballistic_weapon\tank_gun\105mm_sherman_bulldozer_us" />
+	</variant>
+	<variant name="sp">
+		<group name="weapon_bag">
+			<group name="accuracy">
+				<float name="near" value="1" overrideParent="True" />
+				<float name="far" value="1" overrideParent="True" />
+				<float name="mid" value="1" overrideParent="True" />
+			</group>
+			<group name="area_effect">
+				<template_reference name="area_info" value="options\area_info_options\circle_area_option">
+					<float name="outer_radius" value="6" overrideParent="True" />
+				</template_reference>
+				<group name="damage">
+					<float name="far" value="0.05" overrideParent="True" />
+					<float name="mid" value="0.15" overrideParent="True" />
+				</group>
+				<group name="distance">
+					<float name="far" value="3" overrideParent="True" />
+					<float name="near" value="1.5" overrideParent="True" />
+					<float name="mid" value="2.25" overrideParent="True" />
+				</group>
+				<template_reference name="aoe_penetration" value="tables\range_table">
+					<float name="far" value="1000" overrideParent="True" />
+					<float name="mid" value="1000" overrideParent="True" />
+					<float name="near" value="1000" overrideParent="True" />
+				</template_reference>
+				<int name="damage_max_members_per_squad" value="4" overrideParent="True" />
+			</group>
+			<group name="behaviour">
+				<bool name="ignore_shot_blocking" value="True" overrideParent="True" />
+				<bool name="enable_auto_target_search" value="False" overrideParent="True" />
+			</group>
+			<group name="damage">
+				<float name="max" value="100" overrideParent="True" />
+				<float name="min" value="100" overrideParent="True" />
+				<enum name="damage_type" value="explosive" overrideParent="True" />
+			</group>
+			<group name="deflection">
+				<bool name="has_deflection_damage" value="False" overrideParent="True" />
+			</group>
+			<float name="flinch_radius" value="5" overrideParent="True" />
+			<string name="fx_munition_name" value="\artillery\artillery_medium_incendiary" overrideParent="True" />
+			<group name="projectile">
+				<instance_reference name="projectile" value="ebps\gameplay\projectiles\common\artillery\p_artillery_medium_dot" overrideParent="True" />
+			</group>
+			<group name="reload">
+				<group name="duration">
+					<float name="max" value="2.5" overrideParent="True" />
+					<float name="min" value="2" overrideParent="True" />
+				</group>
+				<bool name="require_reload_after_switch" value="True" overrideParent="True" />
+			</group>
+			<group name="scatter">
+				<float name="angle_scatter" value="15" overrideParent="True" />
+				<float name="distance_scatter_max" value="6" overrideParent="True" />
+				<float name="distance_scatter_offset" value="0.25" overrideParent="True" />
+				<float name="movement_scatter_angle_multiplier" value="1.25" overrideParent="True" />
+				<float name="movement_scatter_distance_multiplier" value="1.25" overrideParent="True" />
+			</group>
+			<group name="penetration">
+				<float name="near" value="1" overrideParent="True" />
+				<float name="far" value="1" overrideParent="True" />
+				<float name="mid" value="1" overrideParent="True" />
+			</group>
+			<enum name="weapon_class" value="flame" overrideParent="True" />
+			<enum_table name="cover_table">
+				<template_reference name="tp_heavy_cover" value="weapon_cover_info">
+					<float name="accuracy_multiplier" value="1" overrideParent="True" />
+					<float name="damage_multiplier" value="1" overrideParent="True" />
+				</template_reference>
+				<template_reference name="tp_light_cover" value="weapon_cover_info">
+					<float name="accuracy_multiplier" value="1" overrideParent="True" />
+				</template_reference>
+				<template_reference name="tp_negative_cover" value="weapon_cover_info">
+					<float name="accuracy_multiplier" value="1" overrideParent="True" />
+				</template_reference>
+				<template_reference name="tp_garrison_cover" value="weapon_cover_info">
+					<float name="accuracy_multiplier" value="1" overrideParent="True" />
+					<float name="damage_multiplier" value="1" overrideParent="True" />
+				</template_reference>
+				<template_reference name="tp_smoke_cover" value="weapon_cover_info">
+					<float name="accuracy_multiplier" value="1" overrideParent="True" />
+				</template_reference>
+			</enum_table>
+			<enum name="default_attack_type" value="flame" overrideParent="True" />
+			<string name="fx_aoe_munition_name" value="flamethrower_aoe" overrideParent="True" />
+			<group name="range">
+				<float name="max" value="40" comment="Must be greater than ability range or ability breaks. Difference is the buffer zone for moving away from target before ability stops." overrideParent="True" />
+				<float name="min" value="15" overrideParent="True" />
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="2044857" />
+		<instance_reference name="parent_pbg" value="weapon\american\ballistic_weapon\tank_gun\105mm_sherman_bulldozer_us" />
+	</variant>
+</instance>

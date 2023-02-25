@@ -1,0 +1,196 @@
+<instance version="5" description="L6/40 light tank entity" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="2016925706" List.ParentItemID="2016925706">
+				<file name="alternate_sua" value="art\armies\italian\vehicles\l6_40\body\chassis\chassis" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-1350927259" List.ParentItemID="-1350927259">
+				<locstring name="screen_name_world" value="11220722" overrideParent="True" />
+				<locstring name="help_text" value="11153568" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\recrewable_ext" List.ItemID="114585056" List.ListAction="Append">
+				<list name="race_list" overrideParent="True">
+					<group name="race_data" List.ItemID="603347700">
+						<instance_reference name="ext_key" value="racebps\germans" overrideParent="True" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\vehicles\l6_40_recrewable_ger" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="3" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" overrideParent="True" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="1154979530">
+						<instance_reference name="ext_key" value="racebps\americans" overrideParent="True" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\vehicles\l6_40_recrewable_ger" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="3" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" overrideParent="True" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="601565388">
+						<instance_reference name="ext_key" value="racebps\british" overrideParent="True" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\vehicles\l6_40_recrewable_ger" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="3" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" overrideParent="True" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-1386366935">
+						<instance_reference name="ext_key" value="" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\vehicles\l6_40_recrewable_ger" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="3" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="655212304">
+						<instance_reference name="ext_key" value="racebps\partisan" overrideParent="True" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\vehicles\l6_40_recrewable_ger" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="3" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" overrideParent="True" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2062200" />
+		<instance_reference name="parent_pbg" value="ebps\races\german\vehicles\l6_40_ger" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="2016925706" List.ParentItemID="2016925706">
+				<file name="alternate_sua" value="art\armies\italian\vehicles\l6_40\body\chassis\chassis" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-1350927259" List.ParentItemID="-1350927259">
+				<locstring name="screen_name_world" value="11220722" overrideParent="True" />
+				<locstring name="help_text" value="11153568" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\recrewable_ext" List.ItemID="114585056" List.ListAction="Append">
+				<list name="race_list" overrideParent="True">
+					<group name="race_data" List.ItemID="603347700">
+						<instance_reference name="ext_key" value="racebps\germans" overrideParent="True" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\vehicles\l6_40_recrewable_ger" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="3" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" overrideParent="True" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="1154979530">
+						<instance_reference name="ext_key" value="racebps\americans" overrideParent="True" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\vehicles\l6_40_recrewable_ger" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="3" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" overrideParent="True" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="601565388">
+						<instance_reference name="ext_key" value="racebps\british" overrideParent="True" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\vehicles\l6_40_recrewable_ger" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="3" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" overrideParent="True" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-1386366935">
+						<instance_reference name="ext_key" value="" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\vehicles\l6_40_recrewable_ger" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="3" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="655212304">
+						<instance_reference name="ext_key" value="racebps\partisan" overrideParent="True" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\vehicles\l6_40_recrewable_ger" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="3" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" overrideParent="True" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2062200" />
+		<instance_reference name="parent_pbg" value="ebps\races\german\vehicles\l6_40_ger" />
+	</variant>
+</instance>

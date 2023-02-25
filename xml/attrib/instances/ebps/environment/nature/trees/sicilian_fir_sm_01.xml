@@ -1,0 +1,64 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1721059885" List.ParentItemID="1721059885">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\nature\trees\sicilian_fir_sm_01" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-1101301613" List.ParentItemID="-1101301613">
+				<float name="hitpoints" value="250" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="1586029497" List.ParentItemID="1586029497">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_vehicle_collide" value="True" overrideParent="True" />
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" List.ItemID="-374768869" List.ParentItemID="-374768869">
+				<list name="block_path" removedIds="1317492484">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\crushee_ext" List.ItemID="1244586256" List.ParentItemID="1244586256">
+				<enum name="min_crush_mode" value="crush_light" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-453528199" List.ParentItemID="-453528199">
+				<enum name="occlusion_state" value="occlude_others" overrideParent="True" />
+				<enum name="decorator_visibility" value="hidden" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="195889" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\tree_medium_crush" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1721059885" List.ParentItemID="1721059885">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\nature\trees\sicilian_fir_sm_01" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-1101301613" List.ParentItemID="-1101301613">
+				<float name="hitpoints" value="250" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="1586029497" List.ParentItemID="1586029497">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_vehicle_collide" value="True" overrideParent="True" />
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" List.ItemID="-374768869" List.ParentItemID="-374768869">
+				<list name="block_path" removedIds="1317492484">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\crushee_ext" List.ItemID="1244586256" List.ParentItemID="1244586256">
+				<enum name="min_crush_mode" value="crush_light" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-453528199" List.ParentItemID="-453528199">
+				<enum name="occlusion_state" value="occlude_others" overrideParent="True" />
+				<enum name="decorator_visibility" value="hidden" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="195889" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\tree_medium_crush" />
+	</variant>
+</instance>

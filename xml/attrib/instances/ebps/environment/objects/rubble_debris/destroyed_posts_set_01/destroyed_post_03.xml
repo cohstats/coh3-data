@@ -1,0 +1,76 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1455447066" List.ParentItemID="-1455447066">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\objects\rubble_debris\destroyed_posts_set_01\destroyed_post_03" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="-15452509" List.ParentItemID="-15452509">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\obj_cover_ext" List.ItemID="-1825158387" List.ParentItemID="-1825158387">
+				<enum name="cover_type" value="tp_light_cover" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-1067332149" List.ParentItemID="-1067332149">
+				<enum name="occlusion_state" value="occlude_others" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\action_apply_ext" List.ItemID="1029201500" List.ListAction="Append">
+				<list name="action_state_trees" overrideParent="True">
+				</list>
+				<bool name="reset_on_load" value="True" />
+				<list name="physical_state_trees">
+				</list>
+				<list name="deferred_action_state_trees">
+				</list>
+				<list name="action_state_trees_run_once">
+				</list>
+				<list name="deferred_action_state_trees_run_once">
+				</list>
+				<list name="physical_state_trees_run_once">
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2063366" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\object_heavy_cover" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1455447066" List.ParentItemID="-1455447066">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\objects\rubble_debris\destroyed_posts_set_01\destroyed_post_03" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="-15452509" List.ParentItemID="-15452509">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\obj_cover_ext" List.ItemID="-1825158387" List.ParentItemID="-1825158387">
+				<enum name="cover_type" value="tp_light_cover" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-1067332149" List.ParentItemID="-1067332149">
+				<enum name="occlusion_state" value="occlude_others" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\action_apply_ext" List.ItemID="1029201500" List.ListAction="Append">
+				<list name="action_state_trees" overrideParent="True">
+				</list>
+				<bool name="reset_on_load" value="True" />
+				<list name="physical_state_trees">
+				</list>
+				<list name="deferred_action_state_trees">
+				</list>
+				<list name="action_state_trees_run_once">
+				</list>
+				<list name="deferred_action_state_trees_run_once">
+				</list>
+				<list name="physical_state_trees_run_once">
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2063366" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\object_heavy_cover" />
+	</variant>
+</instance>

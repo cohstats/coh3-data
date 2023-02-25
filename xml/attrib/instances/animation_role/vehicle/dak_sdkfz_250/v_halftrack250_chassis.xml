@@ -1,0 +1,46 @@
+<instance version="5" description="" template="animation_role">
+	<variant name="default">
+		<uniqueid name="pbgid" value="2073074" />
+		<group name="animation_role_bag">
+			<file name="animator" value="armies\common\rigs\vehicles\dak_sd_kfz_250_halftrack\dak_sd_kfz_250_halftrack" overrideParent="True" />
+			<list name="animation_groups">
+				<group name="group" List.ItemID="-504809867" List.ParentItemID="-504809867">
+					<list name="set">
+						<group name="entry" List.ItemID="105171179" List.ParentItemID="105171179">
+							<template_reference name="animation" value="options\animation_role\animation_role_raw_hkxa">
+								<file name="file" value="armies\common\rigs\vehicles\dak_sd_kfz_250_halftrack\animations\vehicles\sdkfz250\chassis_vehicle_death_a" overrideParent="True" />
+							</template_reference>
+						</group>
+					</list>
+				</group>
+				<group name="group" List.ItemID="-2090466317" List.ParentItemID="-2090466317">
+					<list name="set">
+						<group name="entry" List.ItemID="1486636036" List.ParentItemID="1486636036">
+							<template_reference name="animation" value="options\animation_role\animation_role_empty" overrideParent="True">
+							</template_reference>
+						</group>
+						<group name="entry" List.ItemID="1350886592" List.ParentItemID="1350886592">
+							<template_reference name="animation" value="options\animation_role\animation_role_empty" overrideParent="True">
+							</template_reference>
+						</group>
+						<group name="entry" List.ItemID="-1521837806" List.ParentItemID="-1521837806">
+							<template_reference name="animation" value="options\animation_role\animation_role_empty" overrideParent="True">
+							</template_reference>
+						</group>
+						<group name="entry" List.ItemID="-1693430222" List.ParentItemID="-1693430222">
+							<template_reference name="animation" value="options\animation_role\animation_role_raw_matrix">
+								<string name="matrix" value="vehicles\sdkfz250\wheels_steering_matrix" overrideParent="True" />
+							</template_reference>
+						</group>
+						<group name="entry" List.ItemID="-440112501" List.ParentItemID="-440112501">
+							<template_reference name="animation" value="options\animation_role\animation_role_raw_hkxa" overrideParent="True">
+								<file name="file" value="armies\common\rigs\vehicles\dak_sd_kfz_250_halftrack\animations\vehicles\sdkfz250\chassis_engine_idle_a" overrideParent="True" />
+							</template_reference>
+						</group>
+					</list>
+				</group>
+			</list>
+		</group>
+		<instance_reference name="parent_pbg" value="animation_role\vehicle\v_chassis_wheeled" />
+	</variant>
+</instance>

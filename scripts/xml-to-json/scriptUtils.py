@@ -1,4 +1,5 @@
 import os
+import json
 import xml.etree.ElementTree as ET
 
 def get_nth_level_parent(current_dir: str, n: int) -> str:
@@ -188,6 +189,30 @@ def build_files_dictionary(directory, parse_func):
             current_dict[filename] = parse_func(default_variant)
     return files_dict
 
+
+def save_dict_to_json(dictionary, path, file_name, indent=4):
+    """
+    Saves a dictionary as JSON to a specified path with a specified file name.
+    
+    Args:
+        dictionary (dict): The dictionary to save as JSON.
+        path (str): The path where the JSON file will be saved.
+        file_name (str): The name of the JSON file.
+        indent (int): The number of spaces to use for indentation (default is 4).
+    
+    Returns:
+        None
+    """
+    # create directory if it does not exist
+    if not os.path.exists(path):
+        os.makedirs(path)
+        
+    # construct the full file path
+    file_path = os.path.join(path, file_name)
+    
+    # write the dictionary as formatted JSON to file
+    with open(file_path, 'w') as json_file:
+        json.dump(dictionary, json_file, indent=indent)
 
 
 

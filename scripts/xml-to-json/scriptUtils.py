@@ -111,6 +111,30 @@ def has_children(element: ET.Element) -> bool:
         return True
     return False
 
+def find_key_in_nested_dict(dictionary, key, default=None):
+    """
+    Recursively searches a dictionary (including nested dictionaries) for the first occurrence
+    of a key and returns its associated value.
+
+    Args:
+        dictionary: A dictionary (possibly with nested dictionaries) to search for the key.
+        key: The key (possibly a nested key) to search for in the dictionary.
+        default: The default value to return if the key is not found (defaults to None).
+
+    Returns:
+        The value associated with the first occurrence of the key in the dictionary (including
+        nested dictionaries), or the default value if the key does not exist in the dictionary.
+    """
+    if key in dictionary:
+        return dictionary[key]
+    else:
+        for value in dictionary.values():
+            if isinstance(value, dict):
+                result = find_key_in_nested_dict(value, key, default=default)
+                if result is not None:
+                    return result
+    return default
+
 
 
 

@@ -135,6 +135,59 @@ def find_key_in_nested_dict(dictionary, key, default=None):
                     return result
     return default
 
+def get_default_variant(file_path):
+    """
+    Parses an XML file at the given `file_path` and returns the `variant` element with a `name`
+    attribute of "default".
+
+    Args:
+        file_path (str): A string representing the path to the XML file to be parsed.
+
+    Returns:
+        xml.etree.ElementTree.Element: The `variant` element with a `name` attribute of "default".
+
+    Raises:
+        IndexError: If no `variant` element with a `name` attribute of "default" is found.
+    """
+    xml_tree = ET.parse(file_path)
+    xml_root = xml_tree.getroot()
+    default_variant = xml_root.findall("variant[@name='default']")[0]
+    return default_variant
+
+
+def build_files_dictionary(directory, parse_func):
+    """
+    Builds a nested dictionary from a directory containing files by recursively walking through the directory 
+    and parsing each file using the provided parse function.
+    
+    Args:
+        directory (str): The path to the directory to build the dictionary from.
+    
+        parse_func (function): A function to parse the current file with. Input is xml element tree. Outputs dictionary.
+    
+    Returns:
+        dict: A nested dictionary representing the files and folders in the directory. 
+        The keys of the dictionary are the names of files and folders, and the values are either sub-dictionaries 
+        for folders or the parsed representation of the file for files.
+    """
+
+    files_dict = {}
+    for root, dirs, files in os.walk(directory):
+        current_dict = files_dict
+        path = root.split(os.sep)
+        for i in range(len(path)):
+            folder = path[i]
+            if folder not in current_dict:
+                current_dict[folder] = {}
+            current_dict = current_dict[folder]
+        for file in files:
+            file_path = os.path.join(root, file)
+            filename = os.path.splitext(os.path.basename(file_path))[0]
+            # get the default variant(not the single player version!)
+            default_variant = get_default_variant(file_path)
+            current_dict[filename] = parse_func(default_variant)
+    return files_dict
+
 
 
 

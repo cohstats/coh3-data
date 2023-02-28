@@ -233,3 +233,39 @@ def save_dict_to_json(dictionary, path, file_name, indent=4):
 
 
 
+
+def resolve_dict_value_by_path(obj, path, separator="\\"):
+    """
+    Traverse a nested dictionary to get the value of a specific path.
+
+    Args:
+        obj (dict): The dictionary to traverse.
+        path (str): The path of the value to retrieve. The path should be
+            a string of property names separated by the separator.
+        separator (str, optional): The separator used to split the path.
+            Defaults to '\'.
+
+    Returns:
+        The value of the property at the specified path.
+    """
+    # Split the path into an array of property names
+    props = path.split(separator)
+
+    # Traverse the object to get the nested value
+    value = obj
+    for prop in props:
+        value = value[prop]
+
+    return value
+
+def get_path_as_string(path, separator='\\'):
+    """
+    Takes an os.path input and returns the path as a string with a specified separator.
+    Args:
+        path (str): The path to be formatted.
+        separator (str, optional): The separator to use in the returned path. Default is '\'.
+    Returns:
+        str: The formatted path with the specified separator.
+    """
+    return path.replace(os.path.sep, separator)
+

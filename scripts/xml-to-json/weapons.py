@@ -1,7 +1,7 @@
 import os
 import json
 import xml.etree.ElementTree as ET
-from scriptUtils import get_nth_level_parent, get_attribute, has_children
+from scriptUtils import get_nth_level_parent, get_attribute, has_children, string_num
 
 
 
@@ -40,7 +40,7 @@ def parse_weapon_xml_data(element: ET.Element) -> dict:
 
     else:
         # else xml element doesn't have any children, return the value.
-        result = get_attribute(element,"value")
+        result = string_num(get_attribute(element,"value"))
 
     return result
 

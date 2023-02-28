@@ -2,6 +2,22 @@ import os
 import json
 import xml.etree.ElementTree as ET
 
+def string_num(input_string: str):
+    """
+    Convert a string to a float if possible, otherwise return the original string.
+
+    Args:
+        input_string (str): A string to be converted to a float.
+
+    Returns:
+        Union[float, str]: If inputString can be converted to a float, returns the float value.
+        Otherwise, returns the original inputString.
+    """
+    try:
+        return float(input_string)
+    except ValueError:
+        return input_string
+
 def get_nth_level_parent(current_dir: str, n: int) -> str:
     """
     Get the absolute path of the n-th level parent directory of the given directory path.

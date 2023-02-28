@@ -21,6 +21,10 @@ def parse_weapon_xml_data(element: ET.Element) -> dict:
     """
     result = {}
 
+    # if element is a template_reference, add "template_reference" key + metadata to the result
+    if element.tag == 'template_reference':
+        result[element.tag] = {'name':get_attribute(element,"name"), 'value':get_attribute(element,"value")}
+
     if has_children(element):
         for child in element:
             if child.tag == "list":
@@ -41,7 +45,9 @@ def parse_weapon_xml_data(element: ET.Element) -> dict:
     else:
         # create marking key if the tag is instance_reference
         if element.tag == "instance_reference":
-            result[element.tag] = string_num(get_attribute(element,"value"))          
+            result[element.tag] = string_num(get_attribute(element,"value"))
+        elif element.tag == "template_reference":
+            pass # template_reference metadata already included in result!
         else:
             # else xml element doesn't have any children, return the value.
             result = string_num(get_attribute(element,"value"))

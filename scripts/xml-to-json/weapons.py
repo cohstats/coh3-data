@@ -39,8 +39,12 @@ def parse_weapon_xml_data(element: ET.Element) -> dict:
                     pass
 
     else:
-        # else xml element doesn't have any children, return the value.
-        result = string_num(get_attribute(element,"value"))
+        # create marking key if the tag is instance_reference
+        if element.tag == "instance_reference":
+            result[element.tag] = string_num(get_attribute(element,"value"))          
+        else:
+            # else xml element doesn't have any children, return the value.
+            result = string_num(get_attribute(element,"value"))
 
     return result
 

@@ -30,4 +30,24 @@ weapons = resolve_dict_value_by_path(result, get_path_as_string(weapons_src_dir)
 exported_weapons_dir = os.path.join(script_root_dir, f'{CONST_EXPORT_DIR}\weapon')
 save_dict_to_json(weapons, exported_weapons_dir, "weapon.json")
 
+
+
+# navigate to ebps XMLs and build a dictionary
+ebps_src_dir = os.path.abspath(os.path.join(xml_data_dir, 'attrib\instances\ebps'))
+result = build_files_dictionary(ebps_src_dir, parse_weapon_xml_data)
+ebps = resolve_dict_value_by_path(result, get_path_as_string(ebps_src_dir))
+# export to json
+exported_ebps_dir = os.path.join(script_root_dir, f'{CONST_EXPORT_DIR}\ebps')
+save_dict_to_json(ebps, exported_ebps_dir, "ebps.json")
+
+
+
+# navigate to sbps XMLs and build a dictionary
+sbps_src_dir = os.path.abspath(os.path.join(xml_data_dir, 'attrib\instances\sbps'))
+result = build_files_dictionary(sbps_src_dir, parse_weapon_xml_data)
+sbps = resolve_dict_value_by_path(result, get_path_as_string(sbps_src_dir))
+# export to json
+exported_sbps_dir = os.path.join(script_root_dir, f'{CONST_EXPORT_DIR}\sbps')
+save_dict_to_json(sbps, exported_sbps_dir, "sbps.json")
+
 print('Parsing done. View this folder for results: \n"'+ get_path_as_string(script_root_dir)+f'\{CONST_EXPORT_DIR}"')

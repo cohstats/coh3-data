@@ -269,3 +269,42 @@ def get_path_as_string(path, separator='\\'):
     """
     return path.replace(os.path.sep, separator)
 
+
+
+def create_locstring_dictionary(file_path, encode="utf-8"):
+    """
+    Reads a tab-separated file and returns a dictionary with the last field
+    as the value and the second-to-last field after the '$' symbol as the key.
+    If there are only four fields in a line, the value is None.
+    If there are more than five fields, the line is ignored.
+
+    Args:
+        file_path (str): The path to the file to be read.
+        encode (str): File encoding
+
+    Returns:
+        dict: A dictionary with the extracted values.
+
+    Raises:
+        FileNotFoundError: If the specified file does not exist.
+
+    """
+    dictionary = {}
+    with open(file_path, "r", encoding=encode) as file:
+        for line in file:
+                
+                fields = line.strip().split("\t")
+                if len(fields) == 5:
+                    number = fields[-2].split("$")[-1]
+                    value = fields[-1]
+                    dictionary[number] = value
+
+                elif len(fields) == 4:
+                    number = fields[-1].split("$")[-1]
+                    value = None
+                    dictionary[number] = value
+
+                else:
+                    print(f'Unable to parse:\n{line}')
+
+    return dictionary

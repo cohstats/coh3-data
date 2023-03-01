@@ -21,10 +21,12 @@ def parse_weapon_xml_data(element: ET.Element) -> dict:
     """
     result = {}
 
-    # if element is a template_reference, add "template_reference" key + metadata to the result
+    # add tag metadata for certain tag types
     if element.tag == 'template_reference':
         result[element.tag] = {'name':get_attribute(element,"name"), 'value':get_attribute(element,"value")}
-
+    elif element.tag == 'locstring':
+        result[element.tag] = {'name':get_attribute(element,"name"), 'value':get_attribute(element,"value")}
+        
     if has_children(element):
         for child in element:
             if child.tag == "list":
@@ -48,6 +50,8 @@ def parse_weapon_xml_data(element: ET.Element) -> dict:
             result[element.tag] = string_num(get_attribute(element,"value"))
         elif element.tag == "template_reference":
             pass # template_reference metadata already included in result!
+        elif element.tag == 'locstring':
+            pass # locstring metadata already included in result!
         else:
             # else xml element doesn't have any children, return the value.
             result = string_num(get_attribute(element,"value"))
@@ -70,8 +74,8 @@ if __name__ == "__main__":
     tommy_path_relative = "attrib/instances/weapon/american/small_arms/machine_gun/sub_machine_gun/thompson_ranger_us.xml";
     
     weapon_file = os.path.join(source_xml_dir, tommy_path_relative)
-    #weapon_file = "C:/GIT/coh3-data/xml/attrib/instances/weapon/american/small_arms/machine_gun/sub_machine_gun/thompson_ranger_us.xml"
-    #weapon_file = "C:/GIT/coh3-data/xml/attrib/instances/ebps/races/american/infantry/assault_engineer_us.xml"
+    #eapon_file = "C:/GIT/coh3-data/xml/attrib/instances/weapon/american/small_arms/machine_gun/sub_machine_gun/thompson_ranger_us.xml"
+    weapon_file = "C:/GIT/coh3-data/xml/attrib/instances/ebps/races/american/infantry/assault_engineer_us.xml"
     print(weapon_file)
     
     # load weapon_file xml

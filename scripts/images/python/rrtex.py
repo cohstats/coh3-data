@@ -32,6 +32,7 @@ with open(file_path, "rb") as f:
     
     # Read the entire file into a byte buffer
     buff = f.read()
+    print(f"RRTEX \t\t\t:{len(buff)} bytes")
     
     pos_datatman = get_data_positions(buff, b"DATATMAN") 
     pos_datatdat = get_data_positions(buff, b"DATATDAT")
@@ -43,17 +44,21 @@ with open(file_path, "rb") as f:
     _, width, height, _, _, textureCompression, mipCount, _, mipTextureCount , sizeUncompressed , sizeCompressed  = struct.unpack("<iiiiiiiiiii", slice_datatman[:44])
     
     
+    print(f"DATATDAT\t\t:{len(slice_datatdat)} bytes")
+    
 
     try:
         i = 0
         j = 16
+        
         decompressed_data = zlib.decompress(slice_datatdat[j:i+sizeCompressed])
         decompressed_data = decompressed_data[16:]
+        print(f"DECOMPRESSED\t:{len(decompressed_data)} bytes")
         
         decoded_data= texture2ddecoder.decode_bc7(decompressed_data, width, height)
         dec_img = Image.frombytes("RGBA", (width, height), decoded_data, 'raw', ("BGRA"))
-        dec_img.save("C:/coh-data/coh3/out/assault_engineer_us_python.tga")
-    except:
-        print("cannot decode")
+        dec_img.save("C:/coh-data/coh3/out/assault_engineer_us.tga")
+    except Exception as e:
+        print(e)
         pass
     

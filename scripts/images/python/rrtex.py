@@ -27,7 +27,7 @@ def get_data_positions(buffer, data):
     return Positions(found_pos, found_pos+len(data))
     
 
-file_path = "C:/coh-data/coh3/in/assault_engineer_us.rrtex"
+file_path = "C:/coh-data/coh3/in/assault_engineer_us_portrait.rrtex"
 with open(file_path, "rb") as f:
     
     # Read the entire file into a byte buffer
@@ -48,16 +48,34 @@ with open(file_path, "rb") as f:
     
 
     try:
-        i = 0
-        j = 16
+
+        Decompressor = zlib.decompressobj()
+        # get the first decompressed chunk
+        chunk = Decompressor.decompress(slice_datatdat[16:])
+        # unused compressed data
+        unused_data = Decompressor.unused_data;
+
+
+        decompressed_chunks = []                # all decompressed chunks
+        decompressed_chunks.append(chunk[16:])  # first chunk is shifted
         
-        decompressed_data = zlib.decompress(slice_datatdat[j:i+sizeCompressed])
-        decompressed_data = decompressed_data[16:]
+        # while there are still compressed data, try decompressing them
+        while len(unused_data) > 0:
+            NextDecompressor = zlib.decompressobj()
+            chunk = NextDecompressor.decompress(unused_data)
+            decompressed_chunks.append(chunk)
+            unused_data = NextDecompressor.unused_data;
+        
+        # assamble decompressed_data from decompressed_chunks
+        decompressed_data = b''
+        for chunk in decompressed_chunks:
+            decompressed_data += chunk
+        
         print(f"DECOMPRESSED\t:{len(decompressed_data)} bytes")
         
         decoded_data= texture2ddecoder.decode_bc7(decompressed_data, width, height)
         dec_img = Image.frombytes("RGBA", (width, height), decoded_data, 'raw', ("BGRA"))
-        dec_img.save("C:/coh-data/coh3/out/assault_engineer_us.tga")
+        dec_img.save("C:/coh-data/coh3/out/assault_engineer_us_portrait.tga")
     except Exception as e:
         print(e)
         pass

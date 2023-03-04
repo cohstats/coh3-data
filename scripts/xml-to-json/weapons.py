@@ -47,11 +47,15 @@ def parse_weapon_xml_data(element: ET.Element) -> dict:
     else:
         # create marking key if the tag is instance_reference
         if element.tag == "instance_reference":
-            result[element.tag] = string_num(get_attribute(element,"value"))
+            formated_path = get_attribute(element,"value").replace("""\\""", """/""")   # using forward slashes!
+            result[element.tag] = formated_path
         elif element.tag == "template_reference":
             pass # template_reference metadata already included in result!
         elif element.tag == 'locstring':
             pass # locstring metadata already included in result!
+        elif element.tag == 'file':
+            formated_path = get_attribute(element,"value").replace("""\\""", """/""")   # using forward slashes!
+            result = formated_path 
         else:
             # else xml element doesn't have any children, return the value.
             result = string_num(get_attribute(element,"value"))

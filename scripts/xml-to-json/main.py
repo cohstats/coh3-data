@@ -70,8 +70,20 @@ def exportBattlegroups():
     save_dict_to_json(battlegroup, exported_battlegroup_dir, "battlegroup.json")
     print('## Finished processing battlegroups....')
 
+def exportAbilities():
+    print('## Started processing abilities....')
+    # Navigate to tech_tree/battlegroup XMLs and build a dictionary. We do not need the campaign ones.
+    abilities_src_dir = os.path.abspath(os.path.join(xml_data_dir, 'attrib\instances\\abilities'))
+    result = build_files_dictionary(abilities_src_dir, parse_weapon_xml_data)
+    abilities = resolve_dict_value_by_path(result, get_path_as_string(abilities_src_dir))
+    # export to json
+    exported_abilities_dir = os.path.join(script_root_dir, f'{CONST_EXPORT_DIR}')
+    save_dict_to_json(abilities, exported_abilities_dir, "abilities.json")
+    print('## Finished processing abilities....')
+
 
 exportBattlegroups()
+exportAbilities()
 
 
 print('Parsing done. View this folder for results: \n"'+ get_path_as_string(script_root_dir)+f'\{CONST_EXPORT_DIR}"')

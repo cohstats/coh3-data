@@ -1,0 +1,27 @@
+<template description="" can_be_instantiated="True" virtual_category="" can_be_modded="True" export_for_client="True">
+	<uniqueid name="pbgid" description="internal id for pbgs" serverpath="/UniqueId/NextElement/pbgid" />
+	<group name="officer_bag" description="" start_expanded="False">
+		<locstring name="description" description="" />
+		<locstring name="name" description="" />
+		<file name="portrait" description="" file_ext="png;tga" file_root="ui\icons\" file_helper_path="" file_default="" />
+		<locstring name="specialization" description="" />
+		<int name="rating" description="" min="0" max="2" default="0" />
+		<group name="trait" description="" start_expanded="False">
+			<locstring name="trait_name" description="" />
+			<locstring name="trait_description" description="" />
+			<list name="trait_abilities" description="" ordered="False" allow_duplicates="False" can_be_empty="True" start_expanded="False" flat="False">
+				<instance_reference name="ability" description="" template_list="abilities" relative_path_list="" path_filter="" flat="False" can_be_null="False" />
+			</list>
+		</group>
+		<group name="flaw" description="" start_expanded="False">
+			<locstring name="flaw_description" description="" />
+			<locstring name="flaw_name" description="" />
+			<list name="flaw_abilities" description="" ordered="False" allow_duplicates="False" can_be_empty="True" start_expanded="False" flat="False">
+				<instance_reference name="ability" description="" template_list="abilities" relative_path_list="" path_filter="" flat="False" can_be_null="False" />
+			</list>
+		</group>
+		<bool name="returnable_on_death" description="Whether or not an officer will be returned to the pool of available officer choices if the company they are attached to is killed" default="False" />
+		<instance_reference name="race" description="" template_list="racebps" relative_path_list="" path_filter="" flat="False" can_be_null="False" />
+		<instance_reference name="associated_company" description="(Optional) The company type that this officer is associated with. If the officer has an associated type, they will appear only as an option for that company type upon leveling up. Officers with no associated company type will appear for all companies." template_list="sbps" relative_path_list="" path_filter="" flat="False" can_be_null="True" />
+	</group>
+</template>

@@ -1,0 +1,66 @@
+<instance version="5" description="" template="animation_role">
+	<variant name="default">
+		<uniqueid name="pbgid" value="2099736" />
+		<group name="animation_role_bag">
+			<list name="animation_groups">
+				<group name="group" List.ItemID="-504809867" List.ParentItemID="-504809867">
+					<list name="set">
+						<group name="entry" List.ItemID="105171179" List.ParentItemID="105171179">
+							<template_reference name="animation" value="options\animation_role\animation_role_raw_hkxa">
+								<file name="file" value="armies\common\rigs\weapons\dak_flak_36_mobile_base\animations\vehicles\dak_flak_36_mobile_base\chassis_vehicle_death_a" overrideParent="True" />
+							</template_reference>
+						</group>
+					</list>
+				</group>
+				<group name="group" List.ItemID="-2090466317" List.ParentItemID="-2090466317">
+					<list name="set">
+						<group name="entry" List.ItemID="-440112501" List.ParentItemID="-440112501">
+							<template_reference name="animation" value="options\animation_role\animation_role_raw_hkxa">
+								<file name="file" value="armies\common\rigs\weapons\dak_flak_36_mobile_base\animations\vehicles\dak_flak_36_mobile_base\chassis_calm_idle_a" overrideParent="True" />
+							</template_reference>
+						</group>
+					</list>
+				</group>
+				<group name="group" List.ItemID="-957148990" List.ParentItemID="-957148990">
+					<list name="set">
+						<group name="entry" List.ItemID="-653034503" List.ParentItemID="-653034503">
+							<template_reference name="animation" value="options\animation_role\animation_role_raw_hkxa" overrideParent="True">
+								<file name="file" value="armies\common\rigs\weapons\dak_flak_36_mobile_base\animations\vehicles\dak_flak_36_mobile_base\chassis_calm_idle_a" overrideParent="True" />
+							</template_reference>
+						</group>
+						<group name="entry" List.ItemID="-451678691" List.ParentItemID="-451678691">
+							<template_reference name="animation" value="options\animation_role\animation_role_raw_hkxa" overrideParent="True">
+								<file name="file" value="armies\common\rigs\weapons\dak_flak_36_mobile_base\animations\vehicles\dak_flak_36_mobile_base\chassis_tense_idle_a" overrideParent="True" />
+							</template_reference>
+						</group>
+					</list>
+				</group>
+				<group name="group" List.ItemID="1882013074" List.ListAction="Append">
+					<string name="name" value="team_weapon" overrideParent="True" />
+					<list name="set" overrideParent="True">
+						<group name="entry" List.ItemID="-810522272">
+							<template_reference name="animation" value="options\animation_role\animation_role_raw_hkxa">
+								<file name="file" value="armies\common\rigs\weapons\dak_flak_36_mobile_base\animations\vehicles\dak_flak_36_mobile_base\chassis_setup_a" overrideParent="True" />
+							</template_reference>
+							<enum name="slot" value="teamweapon_setup_a" />
+						</group>
+						<group name="entry" List.ItemID="-1764473795">
+							<template_reference name="animation" value="options\animation_role\animation_role_raw_hkxa">
+								<file name="file" value="armies\common\rigs\weapons\dak_flak_36_mobile_base\animations\vehicles\dak_flak_36_mobile_base\chassis_teardown_a" overrideParent="True" />
+							</template_reference>
+							<enum name="slot" value="teamweapon_teardown_a" />
+						</group>
+						<group name="entry" List.ItemID="2097435063">
+							<template_reference name="animation" value="options\animation_role\animation_role_raw_hkxa" overrideParent="True">
+								<file name="file" value="armies\common\rigs\weapons\dak_flak_36_mobile_base\animations\vehicles\dak_flak_36_mobile_base\chassis_towed_a" overrideParent="True" />
+							</template_reference>
+							<enum name="slot" value="towing_towed" />
+						</group>
+					</list>
+				</group>
+			</list>
+			<file name="animator" value="armies\common\rigs\weapons\dak_flak_36_mobile_base\dak_flak_36_mobile_base" overrideParent="True" />
+		</group>
+		<instance_reference name="parent_pbg" value="animation_role\vehicle\v_base" />
+	</variant>
+</instance>

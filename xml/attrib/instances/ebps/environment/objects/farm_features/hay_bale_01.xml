@@ -1,0 +1,48 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1457096239" List.ParentItemID="1457096239">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\objects\farm_features\hay_bale_01" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="648975457" List.ParentItemID="648975457">
+				<float name="death_seconds" value="0" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="-660714672" List.ParentItemID="-660714672">
+				<instance_reference name="hit_material" value="hit_material\foliage" overrideParent="True" />
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\crushee_ext" List.ItemID="600981505" List.ParentItemID="600981505">
+				<bool name="can_be_crushed_by_allies" value="False" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2121107" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\object_light_cover" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1457096239" List.ParentItemID="1457096239">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\objects\farm_features\hay_bale_01" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="648975457" List.ParentItemID="648975457">
+				<float name="death_seconds" value="0" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="-660714672" List.ParentItemID="-660714672">
+				<instance_reference name="hit_material" value="hit_material\foliage" overrideParent="True" />
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\crushee_ext" List.ItemID="600981505" List.ParentItemID="600981505">
+				<bool name="can_be_crushed_by_allies" value="False" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2121107" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\object_light_cover" />
+	</variant>
+</instance>

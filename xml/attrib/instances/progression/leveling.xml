@@ -1,0 +1,38 @@
+<instance version="5" description="" template="progression">
+	<variant name="default">
+		<group name="progression">
+			<template_reference name="level_table" value="level_table">
+				<enum name="level_table_category" value="avatar" />
+				<list name="levels">
+					<template_reference name="level" value="level" List.ItemID="1616023498">
+						<int name="xp_required" value="1" />
+						<template_reference name="modifiers" value="inventroy_item_modifiers\modifier_none">
+						</template_reference>
+						<instance_reference name="rewards" value="" />
+					</template_reference>
+				</list>
+				<uniqueid name="level_table_subcategory" value="126" />
+			</template_reference>
+			<template_reference name="continuous_leveling_data" value="level">
+				<int name="xp_required" value="1" />
+				<template_reference name="modifiers" value="inventroy_item_modifiers\modifier_none">
+				</template_reference>
+				<instance_reference name="rewards" value="" />
+			</template_reference>
+			<list name="tiers">
+				<group name="tier" List.ItemID="-1902345676">
+					<list name="prestige_images">
+						<file name="image" value="lobby\u12012" List.ItemID="1438292340" />
+					</list>
+					<list name="border_images">
+						<file name="image" value="lobby\u12012" List.ItemID="144887002" />
+					</list>
+				</group>
+			</list>
+			<int name="levels_per_tier" value="1" />
+			<int name="levels_per_prestige" value="1" />
+			<int name="levels_per_border" value="1" />
+		</group>
+		<uniqueid name="pbgid" value="199653" />
+	</variant>
+</instance>

@@ -1,0 +1,46 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="892757990" List.ParentItemID="892757990">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\projectile\p_20mm_tungsten" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\projectile_ext" List.ItemID="-238641361" List.ParentItemID="-238641361">
+				<float name="speed" value="200" overrideParent="True" />
+				<group name="barrels_info">
+					<list name="markers">
+						<string name="marker" value="fx_muzzle_01" List.ItemID="186078169" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_02" List.ItemID="-1587485343" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_03" List.ItemID="-735797505" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_04" List.ItemID="576643145" List.ListAction="Append" />
+					</list>
+				</group>
+				<float name="acceleration" value="0" comment="Having the projectile accelerate doesn't feel right.. the shell would decelerate if anything.  I increased the speed instead.  The original accelerate was set to 20, incase you really need it. - moose." overrideParent="True" />
+				<bool name="collision_land_ignore" value="True" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2104879" />
+		<instance_reference name="parent_pbg" value="ebps\gameplay\projectiles\parent\p_straight_shot_parent" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="892757990" List.ParentItemID="892757990">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\projectile\p_20mm_tungsten" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\projectile_ext" List.ItemID="-238641361" List.ParentItemID="-238641361">
+				<float name="speed" value="200" overrideParent="True" />
+				<group name="barrels_info">
+					<list name="markers">
+						<string name="marker" value="fx_muzzle_01" List.ItemID="186078169" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_02" List.ItemID="-1587485343" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_03" List.ItemID="-735797505" List.ListAction="Append" />
+						<string name="marker" value="fx_muzzle_04" List.ItemID="576643145" List.ListAction="Append" />
+					</list>
+				</group>
+				<float name="acceleration" value="0" comment="Having the projectile accelerate doesn't feel right.. the shell would decelerate if anything.  I increased the speed instead.  The original accelerate was set to 20, incase you really need it. - moose." overrideParent="True" />
+				<bool name="collision_land_ignore" value="True" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2104879" />
+		<instance_reference name="parent_pbg" value="ebps\gameplay\projectiles\parent\p_straight_shot_parent" />
+	</variant>
+</instance>

@@ -1,0 +1,38 @@
+<instance version="5" description="" template="abilities">
+	<variant name="default">
+		<group name="ability_bag">
+			<enum_table name="cost_to_player">
+				<float name="munition" value="35" overrideParent="True" />
+			</enum_table>
+			<group name="ui_info">
+				<locstring name="screen_name" value="11186431" overrideParent="True" />
+				<locstring name="brief_text" value="11240729" overrideParent="True" />
+				<file name="icon_name" value="legacy\abilities\ability_british_gammon_bomb" overrideParent="True" />
+			</group>
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_entity_tree" value="gammon_bomb_guards_africa_uk" overrideParent="True" />
+			</group>
+			<instance_reference name="projectile_for_preview" value="ebps\gameplay\projectiles\races\american\p_throw_grenade_pineapple" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2071762" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\infantry\grenade_parent" />
+	</variant>
+	<variant name="sp">
+		<group name="ability_bag">
+			<enum_table name="cost_to_player">
+				<float name="munition" value="35" overrideParent="True" />
+			</enum_table>
+			<group name="ui_info">
+				<locstring name="screen_name" value="11186431" overrideParent="True" />
+				<locstring name="brief_text" value="11240729" overrideParent="True" />
+				<file name="icon_name" value="legacy\abilities\ability_british_gammon_bomb" overrideParent="True" />
+			</group>
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_entity_tree" value="sp_gammon_bomb_guards_africa_uk" overrideParent="True" />
+			</group>
+			<instance_reference name="projectile_for_preview" value="ebps\gameplay\projectiles\races\american\p_throw_grenade_pineapple" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2071762" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\infantry\grenade_parent" />
+	</variant>
+</instance>

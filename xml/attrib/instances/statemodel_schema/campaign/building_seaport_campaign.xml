@@ -1,0 +1,38 @@
+<instance version="5" description="" template="statemodel_schema">
+	<variant name="default">
+		<uniqueid name="pbgid" value="2059689" />
+		<group name="schema_bag">
+			<list name="list_properties" overrideParent="True">
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="1217263051">
+					<int name="max_list_size" value="10" overrideParent="True" />
+					<enum name="data_type" value="target" />
+					<enum name="list_property_id" value="owned_vessels" overrideParent="True" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="1128283589">
+					<int name="max_list_size" value="10" overrideParent="True" />
+					<enum name="data_type" value="target" />
+					<enum name="list_property_id" value="reserved_vessels" overrideParent="True" />
+				</template_reference>
+			</list>
+		</group>
+		<instance_reference name="parent_pbg" value="statemodel_schema\campaign\building_campaign" />
+	</variant>
+	<variant name="sp">
+		<uniqueid name="pbgid" value="2059689" />
+		<group name="schema_bag">
+			<list name="list_properties" overrideParent="True">
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="1217263051">
+					<int name="max_list_size" value="10" overrideParent="True" />
+					<enum name="data_type" value="target" />
+					<enum name="list_property_id" value="owned_vessels" overrideParent="True" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="1128283589">
+					<int name="max_list_size" value="10" overrideParent="True" />
+					<enum name="data_type" value="target" />
+					<enum name="list_property_id" value="reserved_vessels" overrideParent="True" />
+				</template_reference>
+			</list>
+		</group>
+		<instance_reference name="parent_pbg" value="statemodel_schema\campaign\building_campaign" />
+	</variant>
+</instance>

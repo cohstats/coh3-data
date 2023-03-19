@@ -1,0 +1,29 @@
+<instance version="5" description="" template="attachments\attachment_list">
+	<variant name="default">
+		<group name="attachment_list_group">
+			<list name="attachment_list" overrideParent="True">
+				<template_reference name="attachment" value="options\attachment_types\animator_skin_attachment" List.ItemID="1841401190">
+					<file name="animator" value="art\armies\american\weapons\rifle_m1903a1_springfield\rifle_m1903a1_springfield" />
+					<enum name="inventory_item_category" value="" />
+					<bool name="is_selectable" value="True" />
+					<string name="marker_name" value="" />
+					<file name="material_override" value="" />
+					<list name="customizations" overrideParent="True">
+					</list>
+				</template_reference>
+				<template_reference name="attachment" value="options\attachment_types\animator_skin_attachment" List.ItemID="1206726281">
+					<file name="animator" value="art\cosmetics\american\devils_brigade\weapons\springfield_m1903a1_wrap\springfield_m1903a1_wrap" overrideParent="True" />
+					<enum name="inventory_item_category" value="" />
+					<bool name="is_selectable" value="True" />
+					<string name="marker_name" value="" />
+					<file name="material_override" value="" />
+					<list name="customizations" overrideParent="True">
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_tint\cosmetics\american\characters\devils_brigade\sniper_tritone" List.ItemID="-340182926" />
+					</list>
+				</template_reference>
+			</list>
+		</group>
+		<uniqueid name="pbgid" value="1517291" />
+		<instance_reference name="parent_pbg" value="attachments\attachment_list\races\american\weapons\rifle_m1903a1_springfield\default_rifle_m1903a1_springfield" />
+	</variant>
+</instance>

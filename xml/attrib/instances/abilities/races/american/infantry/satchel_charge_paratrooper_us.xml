@@ -1,0 +1,30 @@
+<instance version="5" description="" template="abilities">
+	<variant name="default">
+		<uniqueid name="pbgid" value="182838" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\infantry\satchel_charge_parent" />
+		<group name="ability_bag">
+			<group name="ui_info">
+				<locstring name="extra_text" value="11239328" overrideParent="True" />
+				<locstring name="help_text" value="11240995" overrideParent="True" />
+				<locstring name="brief_text" value="11240085" overrideParent="True" />
+			</group>
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_squad_tree" value="ability_throw_grenade_squad" overrideParent="True" />
+			</group>
+		</group>
+	</variant>
+	<variant name="sp">
+		<uniqueid name="pbgid" value="182838" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\infantry\satchel_charge_parent" />
+		<group name="ability_bag">
+			<group name="ui_info">
+				<locstring name="extra_text" value="11239328" overrideParent="True" />
+				<locstring name="help_text" value="11240995" overrideParent="True" />
+				<locstring name="brief_text" value="11240085" overrideParent="True" />
+			</group>
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_squad_tree" value="sp_ability_throw_grenade_squad" overrideParent="True" />
+			</group>
+		</group>
+	</variant>
+</instance>

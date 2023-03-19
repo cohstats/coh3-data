@@ -1,0 +1,104 @@
+<instance version="5" description="" template="abilities">
+	<variant name="default">
+		<group name="ability_bag">
+			<bool name="can_target_in_fow" value="True" overrideParent="True" />
+			<bool name="facing_ignore" value="True" overrideParent="True" />
+			<bool name="range_ignore" value="True" overrideParent="True" />
+			<enum name="squad_caster" value="one_entity" overrideParent="True" />
+			<enum name="target" value="tp_position" overrideParent="True" />
+			<group name="ui_cursor">
+				<string name="cursor_bad" value="modal_ability_cancel" overrideParent="True" />
+				<string name="cursor_good" value="modal_ability" overrideParent="True" />
+			</group>
+			<group name="ui_info">
+				<string name="hotkey_name" value="W" overrideParent="True" />
+				<file name="icon_name" value="common\battlegroups\infantry_right_1_riflemen_sandbags_us" overrideParent="True" />
+				<locstring name="screen_name" value="11159288" overrideParent="True" />
+			</group>
+			<group name="ui_position">
+				<int name="ui_position_row" value="1" overrideParent="True" />
+				<int name="ui_position_column" value="1" overrideParent="True" />
+			</group>
+			<bool name="ui_mini_map_capture" value="True" overrideParent="True" />
+			<float name="ui_reticule_radius_min" value="6" overrideParent="True" />
+			<float name="ui_reticule_radius_max" value="6" overrideParent="True" />
+			<enum name="ui_ability_group" value="group_global" overrideParent="True" />
+			<enum name="ui_progress_bar_type" value="no_bar" overrideParent="True" />
+			<string name="speech_code" value="italian_infantry_fortifications_ak" overrideParent="True" />
+			<state_tree_node name="entity_tree" value="" overrideParent="True" />
+			<state_tree_node name="squad_tree" value="" overrideParent="True" />
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_squad_tree" value="" overrideParent="True" />
+				<state_tree_node name="ability_activate_entity_tree" value="" overrideParent="True" />
+				<state_tree_node name="ability_activate_deferred_tree" value="" overrideParent="True" />
+			</group>
+			<state_tree_node name="statetree_node_prereq_self_requirement" value="" overrideParent="True" />
+			<state_tree_node name="statetree_node_prereq_target_requirement" value="" overrideParent="True" />
+			<state_tree_node name="statetree_node_prereq_self_recharge_requirement" value="" overrideParent="True" />
+			<state_tree_node name="global_tree" value="" overrideParent="True" />
+			<bool name="ui_visibility_ignore_prerequisite" value="True" overrideParent="True" />
+			<state_tree_node name="squad_caster_entity_filter_condition" value="" overrideParent="True" />
+			<bool name="ui_range_reticule_first_caster_only" value="False" overrideParent="True" />
+			<state_tree_node name="statetree_node_prereq_highlight_requirement" value="" overrideParent="True" />
+			<group name="statetree_node_prereq_default_command_prioritize_as_success">
+				<state_tree_node name="statetree_node_self" value="" overrideParent="True" />
+				<state_tree_node name="statetree_node_target" value="" overrideParent="True" />
+			</group>
+			<state_tree_node name="statetree_node_prereq_entity_target_filter" value="" overrideParent="True" />
+			<state_tree_node name="statetree_node_prereq_entity_target_default_command_filter" value="" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2072381" />
+		<instance_reference name="parent_pbg" value="abilities\races\afrika_korps\battlegroups\italian_infantry\afrika_korps_italian_infantry_bg_ability_parent_ak" />
+	</variant>
+	<variant name="sp">
+		<group name="ability_bag">
+			<bool name="can_target_in_fow" value="True" overrideParent="True" />
+			<bool name="facing_ignore" value="True" overrideParent="True" />
+			<bool name="range_ignore" value="True" overrideParent="True" />
+			<enum name="squad_caster" value="one_entity" overrideParent="True" />
+			<enum name="target" value="tp_position" overrideParent="True" />
+			<group name="ui_cursor">
+				<string name="cursor_bad" value="modal_ability_cancel" overrideParent="True" />
+				<string name="cursor_good" value="modal_ability" overrideParent="True" />
+			</group>
+			<group name="ui_info">
+				<string name="hotkey_name" value="W" overrideParent="True" />
+				<file name="icon_name" value="common\battlegroups\infantry_right_1_riflemen_sandbags_us" overrideParent="True" />
+				<locstring name="screen_name" value="11159288" overrideParent="True" />
+			</group>
+			<group name="ui_position">
+				<int name="ui_position_row" value="1" overrideParent="True" />
+				<int name="ui_position_column" value="1" overrideParent="True" />
+			</group>
+			<bool name="ui_mini_map_capture" value="True" overrideParent="True" />
+			<float name="ui_reticule_radius_min" value="6" overrideParent="True" />
+			<float name="ui_reticule_radius_max" value="6" overrideParent="True" />
+			<enum name="ui_ability_group" value="group_global" overrideParent="True" />
+			<enum name="ui_progress_bar_type" value="no_bar" overrideParent="True" />
+			<string name="speech_code" value="italian_infantry_fortifications_ak" overrideParent="True" />
+			<state_tree_node name="entity_tree" value="" overrideParent="True" />
+			<state_tree_node name="squad_tree" value="" overrideParent="True" />
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_squad_tree" value="" overrideParent="True" />
+				<state_tree_node name="ability_activate_entity_tree" value="" overrideParent="True" />
+				<state_tree_node name="ability_activate_deferred_tree" value="" overrideParent="True" />
+			</group>
+			<state_tree_node name="statetree_node_prereq_self_requirement" value="" overrideParent="True" />
+			<state_tree_node name="statetree_node_prereq_target_requirement" value="" overrideParent="True" />
+			<state_tree_node name="statetree_node_prereq_self_recharge_requirement" value="" overrideParent="True" />
+			<state_tree_node name="global_tree" value="" overrideParent="True" />
+			<bool name="ui_visibility_ignore_prerequisite" value="True" overrideParent="True" />
+			<state_tree_node name="squad_caster_entity_filter_condition" value="" overrideParent="True" />
+			<bool name="ui_range_reticule_first_caster_only" value="False" overrideParent="True" />
+			<state_tree_node name="statetree_node_prereq_highlight_requirement" value="" overrideParent="True" />
+			<group name="statetree_node_prereq_default_command_prioritize_as_success">
+				<state_tree_node name="statetree_node_self" value="" overrideParent="True" />
+				<state_tree_node name="statetree_node_target" value="" overrideParent="True" />
+			</group>
+			<state_tree_node name="statetree_node_prereq_entity_target_filter" value="" overrideParent="True" />
+			<state_tree_node name="statetree_node_prereq_entity_target_default_command_filter" value="" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2072381" />
+		<instance_reference name="parent_pbg" value="abilities\races\afrika_korps\battlegroups\italian_infantry\afrika_korps_italian_infantry_bg_ability_parent_ak" />
+	</variant>
+</instance>

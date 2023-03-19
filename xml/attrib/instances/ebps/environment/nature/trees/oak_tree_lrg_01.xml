@@ -1,0 +1,82 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-984147324" List.ParentItemID="-984147324">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\nature\trees\oak_tree_lrg_01" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_entity_ext" List.ItemID="1839642818" List.ParentItemID="1839642818">
+				<bool name="kill_paradrop" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="1249608613" List.ParentItemID="1249608613">
+				<bool name="delete_when_dead" value="False" overrideParent="True" />
+				<float name="hitpoints" value="700" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="-244116308" List.ParentItemID="-244116308">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_vehicle_collide" value="True" overrideParent="True" />
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" List.ItemID="1401584184" List.ParentItemID="1401584184">
+				<list name="block_path">
+					<instance_reference name="path_type" value="pass_types\vehicle_heavy" List.ItemID="297871295" List.ListAction="Append" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_medium" List.ItemID="461958400" List.ListAction="Append" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_light" List.ItemID="1747828871" List.ListAction="Append" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_heavy" List.ItemID="-785351654" List.ListAction="Append" />
+				</list>
+				<enum name="blocker_lifetime_type" value="remain_after_entity_death" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\crushee_ext" List.ItemID="-550563009" List.ParentItemID="-550563009">
+				<enum name="min_crush_mode" value="crush_off" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-1957296965" List.ParentItemID="-1957296965">
+				<enum name="occlusion_state" value="occlude_others" overrideParent="True" />
+				<enum name="decorator_visibility" value="hidden" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="186755" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\tree_heavy_crush" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-984147324" List.ParentItemID="-984147324">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\nature\trees\oak_tree_lrg_01" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_entity_ext" List.ItemID="1839642818" List.ParentItemID="1839642818">
+				<bool name="kill_paradrop" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="1249608613" List.ParentItemID="1249608613">
+				<bool name="delete_when_dead" value="False" overrideParent="True" />
+				<float name="hitpoints" value="700" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="-244116308" List.ParentItemID="-244116308">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_vehicle_collide" value="True" overrideParent="True" />
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" List.ItemID="1401584184" List.ParentItemID="1401584184">
+				<list name="block_path">
+					<instance_reference name="path_type" value="pass_types\vehicle_heavy" List.ItemID="297871295" List.ListAction="Append" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_medium" List.ItemID="461958400" List.ListAction="Append" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_light" List.ItemID="1747828871" List.ListAction="Append" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_heavy" List.ItemID="-785351654" List.ListAction="Append" />
+				</list>
+				<enum name="blocker_lifetime_type" value="remain_after_entity_death" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\crushee_ext" List.ItemID="-550563009" List.ParentItemID="-550563009">
+				<enum name="min_crush_mode" value="crush_off" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-1957296965" List.ParentItemID="-1957296965">
+				<enum name="occlusion_state" value="occlude_others" overrideParent="True" />
+				<enum name="decorator_visibility" value="hidden" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="186755" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\tree_heavy_crush" />
+	</variant>
+</instance>

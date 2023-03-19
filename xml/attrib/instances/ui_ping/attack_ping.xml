@@ -1,0 +1,54 @@
+<instance version="5" description="" template="ui_ping">
+	<variant name="default">
+		<uniqueid name="pbgid" value="1505753" />
+		<group name="ui_ping_bag">
+			<template_reference name="ui_info" value="tables\ui_game_item_info">
+				<locstring name="extra_text" value="0" />
+				<locstring name="help_text" value="11217519" />
+				<locstring name="help_text_alternate" value="0" />
+				<template_reference name="help_text_alternate_formatter" value="">
+				</template_reference>
+				<string name="hotkey_name" value="ping_attack" />
+				<file name="icon_alternate_name" value="" />
+				<file name="icon_name" value="common\ping\ping_attack" />
+				<bool name="reveal_for_decryption" value="False" />
+				<locstring name="screen_name" value="11217520" />
+				<locstring name="screen_name_alternate" value="0" />
+				<template_reference name="screen_name_alternate_formatter" value="">
+				</template_reference>
+				<group name="ui_position">
+					<int name="ui_position_row" value="1" />
+					<int name="ui_position_column" value="1" />
+				</group>
+				<string name="tooltip_data_template" value="AttackPingTooltipDataTemplate" />
+				<locstring name="brief_text" value="0" />
+				<locstring name="screen_name_short" value="0" />
+				<template_reference name="brief_text_formatter" value="">
+				</template_reference>
+				<template_reference name="extra_text_formatter" value="">
+				</template_reference>
+				<template_reference name="help_text_formatter" value="">
+				</template_reference>
+				<template_reference name="screen_name_formatter" value="">
+				</template_reference>
+				<string name="sound" value="sfx_ui_frontend_select_play" />
+				<string name="sound_alternative" value="" />
+				<enum name="screen_name_visibility" value="visible" />
+			</template_reference>
+			<instance_reference name="ui_reticule" value="" />
+			<float name="radius" value="1" />
+			<enum name="ai_ping_type" value="attack" />
+			<group name="blip">
+				<string name="audio_event" value="" />
+				<enum name="blip_data_template" value="attack_here" />
+				<float name="duration" value="0" />
+				<file name="self_action" value="ui\command\map_ping_attack" />
+				<file name="ally_action" value="ui\command\attack_move_order_arrow" />
+			</group>
+			<group name="cursors">
+				<string name="success" value="attack" />
+				<string name="failure" value="attack" />
+			</group>
+		</group>
+	</variant>
+</instance>

@@ -1,0 +1,42 @@
+<instance version="5" description="" template="flight_plan">
+	<variant name="default">
+		<uniqueid name="pbgid" value="2030175" />
+		<group name="flight_plan_bag">
+			<list name="flight_maneuvers">
+				<template_reference name="maneuver" value="options\flight_maneuver\payload_at_target" List.ItemID="395107896">
+					<state_tree_node name="payload_tree" value="british_air_and_sea_pack_howitzer_team_uk\library\game_mode" />
+					<enum name="payload_target" value="flight_plan_target_01" />
+					<float name="default_height_multiplier" value="1.5" />
+					<float name="dive_length" value="45" />
+					<float name="dive_height_multiplier" value="1.5" />
+					<float name="default_speed_multiplier" value="1" />
+					<float name="arrival_time_seconds" value="7" />
+					<float name="dive_duration_seconds" value="0" />
+					<float name="payload_offset" value="0" />
+					<float name="cruise_length" value="40" />
+					<state_tree_node name="dive_complete_tree" value="" />
+				</template_reference>
+			</list>
+		</group>
+	</variant>
+	<variant name="sp">
+		<uniqueid name="pbgid" value="2030175" />
+		<group name="flight_plan_bag">
+			<list name="flight_maneuvers">
+				<template_reference name="maneuver" value="options\flight_maneuver\payload_at_target" List.ItemID="395107896">
+					<state_tree_node name="payload_tree" value="sp_british_air_and_sea_pack_howitzer_team_uk\library\game_mode" />
+					<enum name="payload_target" value="flight_plan_target_01" />
+					<float name="default_height_multiplier" value="1.5" />
+					<float name="dive_length" value="45" />
+					<float name="dive_height_multiplier" value="1.5" />
+					<float name="default_speed_multiplier" value="1" />
+					<float name="arrival_time_seconds" value="7" />
+					<float name="dive_duration_seconds" value="0" />
+					<float name="payload_offset" value="0" />
+					<float name="cruise_length" value="40" />
+					<state_tree_node name="dive_complete_tree" value="" />
+				</template_reference>
+			</list>
+		</group>
+	</variant>
+</instance>

@@ -1,0 +1,38 @@
+<instance version="5" description="" template="abilities">
+	<variant name="default">
+		<group name="ability_bag">
+			<enum_table name="cost_to_player">
+				<float name="munition" value="25" overrideParent="True" />
+			</enum_table>
+			<group name="ui_info">
+				<string name="hotkey_name" value="z" overrideParent="True" />
+				<file name="icon_name" value="common\abilities\ability_rpg_43_at_grenade" overrideParent="True" />
+				<locstring name="screen_name" value="11238992" overrideParent="True" />
+				<locstring name="brief_text" value="11240313" overrideParent="True" />
+			</group>
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_entity_tree" value="grenade_type_l_resistance_fighters_partisan" overrideParent="True" />
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="2026646" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\infantry\single_target_anti_tank_subtypes\single_target_anti_tank_grenade_parent" />
+	</variant>
+	<variant name="sp">
+		<group name="ability_bag">
+			<enum_table name="cost_to_player">
+				<float name="munition" value="25" overrideParent="True" />
+			</enum_table>
+			<group name="ui_info">
+				<string name="hotkey_name" value="z" overrideParent="True" />
+				<file name="icon_name" value="common\abilities\ability_rpg_43_at_grenade" overrideParent="True" />
+				<locstring name="screen_name" value="11238992" overrideParent="True" />
+				<locstring name="brief_text" value="11240313" overrideParent="True" />
+			</group>
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_entity_tree" value="sp_grenade_type_l_resistance_fighters_partisan" overrideParent="True" />
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="2026646" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\infantry\single_target_anti_tank_subtypes\single_target_anti_tank_grenade_parent" />
+	</variant>
+</instance>

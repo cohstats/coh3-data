@@ -1,0 +1,284 @@
+<instance version="5" description="" template="sbps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="squadexts" value="sbpextensions\squad_ability_ext" List.ItemID="-282815056" List.ParentItemID="-282815056">
+				<list name="abilities">
+					<instance_reference name="ability" value="abilities\prioritize_vehicles" List.ItemID="-1681034637" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\british\vehicles\matilda_smoke_uk" List.ItemID="-1183677922" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\common\hold_fire" List.ItemID="-2120845491" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\british\vehicles\veterancy_abilities\emergency_repairs_matilda_uk" List.ItemID="698529073" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_loadout_ext" List.ItemID="-1664135055" List.ParentItemID="-1664135055">
+				<list name="unit_list">
+					<group name="loadout_data" List.ItemID="-226045775" List.ParentItemID="-226045775">
+						<instance_reference name="type" value="ebps\races\british_africa\vehicles\matilda_africa_uk" overrideParent="True" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_requirement_ext" List.ItemID="1025783431" List.ParentItemID="1025783431">
+				<list name="requirement_table">
+					<template_reference name="required" value="requirements\required_player_upgrade" List.ItemID="2142630374" List.ListAction="Append">
+						<enum name="reason" value="usage_and_display" />
+						<locstring name="ui_name" value="0" />
+						<bool name="is_present" value="False" />
+						<int name="max_completed" value="100" />
+						<int name="min_completed" value="1" />
+						<instance_reference name="upgrade_name" value="upgrade\british\campaign\company\armored\c_armored_company_uk" />
+						<bool name="include_completed" value="True" />
+						<bool name="include_queued" value="False" />
+						<group name="include_pbg_parenting">
+							<bool name="include_child_pbgs" value="False" />
+							<bool name="include_parent_pbgs" value="False" />
+						</group>
+					</template_reference>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_ui_ext" List.ItemID="538184085" List.ParentItemID="538184085">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-660682231" List.ParentItemID="-660682231">
+						<group name="info">
+							<locstring name="extra_text" value="0" overrideParent="True" />
+							<locstring name="help_text" value="11241849" overrideParent="True" />
+							<file name="icon_name" value="races\british\vehicles\matilda_africa_uk" overrideParent="True" />
+							<file name="minimap_texture" value="common\units\symbols\vehicle_heavy_symbol" overrideParent="True" />
+							<locstring name="screen_name" value="11180070" overrideParent="True" />
+							<string name="selection_group" value="sherman_bulldozer_us" overrideParent="True" />
+							<file name="portrait_name" value="races\british\vehicles\matilda_africa_uk_portrait" overrideParent="True" />
+							<locstring name="brief_text" value="11242204" overrideParent="True" />
+							<file name="symbol_icon_name" value="races\british\symbols\matilda_uk" overrideParent="True" />
+							<group name="ui_armor_info">
+								<file name="armor_icon" value="common\units\vehicle_armor\heavy_tank" overrideParent="True" />
+								<list name="armor_critical_damage">
+									<group name="critical_damage_coordinate_bag" List.ItemID="-444383023" List.ParentItemID="-444383023">
+										<float name="x" value="16" overrideParent="True" />
+										<file name="armor_section_highlight_icon" value="common\units\vehicle_armor\heavy_tank_engine_damaged" overrideParent="True" />
+									</group>
+									<group name="critical_damage_coordinate_bag" List.ItemID="140851124" List.ParentItemID="140851124">
+										<float name="x" value="16" overrideParent="True" />
+										<float name="y" value="33" overrideParent="True" />
+										<file name="armor_section_highlight_icon" value="common\units\vehicle_armor\heavy_tank_engine_critical" overrideParent="True" />
+									</group>
+									<group name="critical_damage_coordinate_bag" List.ItemID="-1700889201" List.ParentItemID="-1700889201">
+										<float name="x" value="50" overrideParent="True" />
+										<float name="y" value="11" overrideParent="True" />
+										<file name="armor_section_highlight_icon" value="common\units\vehicle_armor\heavy_tank_left_tread_damaged" overrideParent="True" />
+									</group>
+									<group name="critical_damage_coordinate_bag" List.ItemID="435372287" List.ParentItemID="435372287">
+										<instance_reference name="squad_status" value="squad_status\indicators\vehicle_immobilized" overrideParent="True" />
+										<float name="x" value="50" overrideParent="True" />
+										<float name="y" value="54" overrideParent="True" />
+										<file name="armor_section_highlight_icon" value="common\units\vehicle_armor\heavy_tank_right_tread_damaged" overrideParent="True" />
+									</group>
+								</list>
+							</group>
+							<locstring name="extra_help_text" value="11247757" overrideParent="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_veterancy_ext" List.ItemID="2097749377" List.ParentItemID="2097749377">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="875582807" List.ParentItemID="875582807">
+						<group name="info">
+							<list name="veterancy_rank_info">
+								<group name="veterancy_rank" List.ItemID="-27007290" List.ParentItemID="-27007290">
+									<float name="veterancy_value" value="1950" overrideParent="True" />
+									<group name="state_tree_references">
+										<template_reference name="squad_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="veterancy_level_up\level_up" overrideParent="True" />
+										</template_reference>
+									</group>
+									<locstring name="screen_name" value="11153313" overrideParent="True" />
+									<locstring name="brief_text" value="11243490" overrideParent="True" />
+								</group>
+								<group name="veterancy_rank" List.ItemID="1804371674" List.ParentItemID="1804371674">
+									<float name="veterancy_value" value="5850" overrideParent="True" />
+									<group name="state_tree_references">
+										<template_reference name="squad_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="veterancy_level_up\level_up" overrideParent="True" />
+										</template_reference>
+									</group>
+									<locstring name="screen_name" value="11153314" overrideParent="True" />
+									<locstring name="brief_text" value="11243633" overrideParent="True" />
+								</group>
+								<group name="veterancy_rank" List.ItemID="724926371" List.ParentItemID="724926371">
+									<float name="veterancy_value" value="13650" overrideParent="True" />
+									<group name="state_tree_references">
+										<template_reference name="squad_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="veterancy_level_up\level_up" overrideParent="True" />
+										</template_reference>
+									</group>
+									<locstring name="screen_name" value="11153315" overrideParent="True" />
+									<locstring name="brief_text" value="11243629" overrideParent="True" />
+								</group>
+							</list>
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_type_ext" List.ItemID="29649503" List.ParentItemID="29649503">
+				<list name="squad_type_list" removedIds="1246486437">
+					<enum name="squad_type" value="vehicle_turret" overrideParent="True" List.ItemID="-1069887652" List.ParentItemID="-1069887652" />
+					<enum name="squad_type" value="heavy_armor" List.ItemID="-1979234968" List.ListAction="Append" />
+				</list>
+				<list name="squad_race_type_list" removedIds="1428119654">
+					<instance_reference name="squad_race_type" value="racebps\british_africa" List.ItemID="2022512493" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_speech_ext" List.ItemID="1947268137" List.ParentItemID="1947268137">
+				<string name="squad_speaker_code" value="british_heavy_armor" overrideParent="True" />
+				<group name="squad_speech_parameters">
+					<string name="squad_unit_code" value="matilda_africa_uk" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_audio_ext" List.ItemID="40543565" List.ParentItemID="40543565">
+				<enum name="unit_type" value="" overrideParent="True" />
+				<int name="importance" value="0" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="203790" />
+		<instance_reference name="parent_pbg" value="sbps\races\common\parent\vehicle_parent" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="squadexts" value="sbpextensions\squad_ability_ext" List.ItemID="-282815056" List.ParentItemID="-282815056">
+				<list name="abilities">
+					<instance_reference name="ability" value="abilities\prioritize_vehicles" List.ItemID="-1681034637" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\british\vehicles\matilda_smoke_uk" List.ItemID="-1183677922" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\common\hold_fire" List.ItemID="-2120845491" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\british\vehicles\veterancy_abilities\emergency_repairs_matilda_uk" List.ItemID="698529073" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_loadout_ext" List.ItemID="-1664135055" List.ParentItemID="-1664135055">
+				<list name="unit_list">
+					<group name="loadout_data" List.ItemID="-226045775" List.ParentItemID="-226045775">
+						<instance_reference name="type" value="ebps\races\british_africa\vehicles\matilda_africa_uk" overrideParent="True" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_requirement_ext" List.ItemID="1025783431" List.ParentItemID="1025783431">
+				<list name="requirement_table">
+					<template_reference name="required" value="requirements\required_player_upgrade" List.ItemID="2142630374" List.ListAction="Append">
+						<enum name="reason" value="usage_and_display" />
+						<locstring name="ui_name" value="0" />
+						<bool name="is_present" value="False" />
+						<int name="max_completed" value="100" />
+						<int name="min_completed" value="1" />
+						<instance_reference name="upgrade_name" value="upgrade\british\campaign\company\armored\c_armored_company_uk" />
+						<bool name="include_completed" value="True" />
+						<bool name="include_queued" value="False" />
+						<group name="include_pbg_parenting">
+							<bool name="include_child_pbgs" value="False" />
+							<bool name="include_parent_pbgs" value="False" />
+						</group>
+					</template_reference>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_ui_ext" List.ItemID="538184085" List.ParentItemID="538184085">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-660682231" List.ParentItemID="-660682231">
+						<group name="info">
+							<locstring name="extra_text" value="0" overrideParent="True" />
+							<locstring name="help_text" value="11241849" overrideParent="True" />
+							<file name="icon_name" value="races\british\vehicles\matilda_africa_uk" overrideParent="True" />
+							<file name="minimap_texture" value="common\units\symbols\vehicle_heavy_symbol" overrideParent="True" />
+							<locstring name="screen_name" value="11180070" overrideParent="True" />
+							<string name="selection_group" value="sherman_bulldozer_us" overrideParent="True" />
+							<file name="portrait_name" value="races\british\vehicles\matilda_africa_uk_portrait" overrideParent="True" />
+							<locstring name="brief_text" value="11242204" overrideParent="True" />
+							<file name="symbol_icon_name" value="races\british\symbols\matilda_uk" overrideParent="True" />
+							<group name="ui_armor_info">
+								<file name="armor_icon" value="common\units\vehicle_armor\heavy_tank" overrideParent="True" />
+								<list name="armor_critical_damage">
+									<group name="critical_damage_coordinate_bag" List.ItemID="-444383023" List.ParentItemID="-444383023">
+										<float name="x" value="16" overrideParent="True" />
+										<file name="armor_section_highlight_icon" value="common\units\vehicle_armor\heavy_tank_engine_damaged" overrideParent="True" />
+									</group>
+									<group name="critical_damage_coordinate_bag" List.ItemID="140851124" List.ParentItemID="140851124">
+										<float name="x" value="16" overrideParent="True" />
+										<float name="y" value="33" overrideParent="True" />
+										<file name="armor_section_highlight_icon" value="common\units\vehicle_armor\heavy_tank_engine_critical" overrideParent="True" />
+									</group>
+									<group name="critical_damage_coordinate_bag" List.ItemID="-1700889201" List.ParentItemID="-1700889201">
+										<float name="x" value="50" overrideParent="True" />
+										<float name="y" value="11" overrideParent="True" />
+										<file name="armor_section_highlight_icon" value="common\units\vehicle_armor\heavy_tank_left_tread_damaged" overrideParent="True" />
+									</group>
+									<group name="critical_damage_coordinate_bag" List.ItemID="435372287" List.ParentItemID="435372287">
+										<instance_reference name="squad_status" value="squad_status\indicators\vehicle_immobilized" overrideParent="True" />
+										<float name="x" value="50" overrideParent="True" />
+										<float name="y" value="54" overrideParent="True" />
+										<file name="armor_section_highlight_icon" value="common\units\vehicle_armor\heavy_tank_right_tread_damaged" overrideParent="True" />
+									</group>
+								</list>
+							</group>
+							<locstring name="extra_help_text" value="11247757" overrideParent="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_veterancy_ext" List.ItemID="2097749377" List.ParentItemID="2097749377">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="875582807" List.ParentItemID="875582807">
+						<group name="info">
+							<list name="veterancy_rank_info">
+								<group name="veterancy_rank" List.ItemID="-27007290" List.ParentItemID="-27007290">
+									<float name="veterancy_value" value="1950" overrideParent="True" />
+									<group name="state_tree_references">
+										<template_reference name="squad_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="sp_veterancy_level_up\level_up" overrideParent="True" />
+										</template_reference>
+									</group>
+									<locstring name="screen_name" value="11153313" overrideParent="True" />
+									<locstring name="brief_text" value="11243490" overrideParent="True" />
+								</group>
+								<group name="veterancy_rank" List.ItemID="1804371674" List.ParentItemID="1804371674">
+									<float name="veterancy_value" value="5850" overrideParent="True" />
+									<group name="state_tree_references">
+										<template_reference name="squad_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="sp_veterancy_level_up\level_up" overrideParent="True" />
+										</template_reference>
+									</group>
+									<locstring name="screen_name" value="11153314" overrideParent="True" />
+									<locstring name="brief_text" value="11243633" overrideParent="True" />
+								</group>
+								<group name="veterancy_rank" List.ItemID="724926371" List.ParentItemID="724926371">
+									<float name="veterancy_value" value="13650" overrideParent="True" />
+									<group name="state_tree_references">
+										<template_reference name="squad_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="sp_veterancy_level_up\level_up" overrideParent="True" />
+										</template_reference>
+									</group>
+									<locstring name="screen_name" value="11153315" overrideParent="True" />
+									<locstring name="brief_text" value="11243629" overrideParent="True" />
+								</group>
+							</list>
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_type_ext" List.ItemID="29649503" List.ParentItemID="29649503">
+				<list name="squad_type_list" removedIds="1246486437">
+					<enum name="squad_type" value="vehicle_turret" overrideParent="True" List.ItemID="-1069887652" List.ParentItemID="-1069887652" />
+					<enum name="squad_type" value="heavy_armor" List.ItemID="-1979234968" List.ListAction="Append" />
+				</list>
+				<list name="squad_race_type_list" removedIds="1428119654">
+					<instance_reference name="squad_race_type" value="racebps\british_africa" List.ItemID="2022512493" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_speech_ext" List.ItemID="1947268137" List.ParentItemID="1947268137">
+				<string name="squad_speaker_code" value="british_heavy_armor" overrideParent="True" />
+				<group name="squad_speech_parameters">
+					<string name="squad_unit_code" value="matilda_africa_uk" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_audio_ext" List.ItemID="40543565" List.ParentItemID="40543565">
+				<enum name="unit_type" value="" overrideParent="True" />
+				<int name="importance" value="0" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="203790" />
+		<instance_reference name="parent_pbg" value="sbps\races\common\parent\vehicle_parent" />
+	</variant>
+</instance>

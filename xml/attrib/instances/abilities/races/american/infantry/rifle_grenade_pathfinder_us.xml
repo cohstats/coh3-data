@@ -1,0 +1,234 @@
+<instance version="5" description="" template="abilities">
+	<variant name="default">
+		<group name="ability_bag">
+			<enum_table name="cost_to_player">
+				<float name="munition" value="35" overrideParent="True" />
+			</enum_table>
+			<group name="ui_info">
+				<file name="icon_name" value="common\abilities\rifle_grenade_jaeger_ger" overrideParent="True" />
+				<locstring name="screen_name" value="11186231" overrideParent="True" />
+				<locstring name="brief_text" value="11240323" overrideParent="True" />
+			</group>
+			<list name="requirements">
+				<template_reference name="required" value="requirements\required_any_in_list" List.ItemID="1014786290" List.ListAction="Append">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="0" />
+					<list name="requirements">
+						<template_reference name="requirement" value="requirements\required_all_in_list" List.ItemID="1549292647">
+							<enum name="reason" value="usage" />
+							<locstring name="ui_name" value="0" />
+							<list name="requirements">
+								<template_reference name="requirement" value="requirements\required_player_upgrade" List.ItemID="-336876294">
+									<enum name="reason" value="usage" />
+									<locstring name="ui_name" value="11233752" />
+									<bool name="is_present" value="True" />
+									<int name="max_completed" value="100" />
+									<int name="min_completed" value="1" />
+									<instance_reference name="upgrade_name" value="upgrade\american\battlegroups\airborne\airborne_right_1a_pathfinders_us" />
+									<bool name="include_completed" value="True" />
+									<bool name="include_queued" value="False" />
+									<group name="include_pbg_parenting">
+										<bool name="include_child_pbgs" value="False" />
+										<bool name="include_parent_pbgs" value="False" />
+									</group>
+								</template_reference>
+								<template_reference name="requirement" value="requirements\required_player_upgrade" List.ItemID="1114029758">
+									<enum name="reason" value="usage_and_display" />
+									<locstring name="ui_name" value="0" />
+									<bool name="is_present" value="False" />
+									<int name="max_completed" value="100" />
+									<int name="min_completed" value="1" />
+									<instance_reference name="upgrade_name" value="upgrade\american\battlegroups\airborne\airborne_right_1b_paradrop_hmg_us" />
+									<bool name="include_completed" value="True" />
+									<bool name="include_queued" value="False" />
+									<group name="include_pbg_parenting">
+										<bool name="include_child_pbgs" value="False" />
+										<bool name="include_parent_pbgs" value="False" />
+									</group>
+								</template_reference>
+							</list>
+						</template_reference>
+						<template_reference name="requirement" value="requirements\required_player_upgrade" List.ItemID="-1371514538">
+							<enum name="reason" value="usage_and_display" />
+							<locstring name="ui_name" value="0" />
+							<bool name="is_present" value="True" />
+							<int name="max_completed" value="100" />
+							<int name="min_completed" value="1" />
+							<instance_reference name="upgrade_name" value="upgrade\campaign\missions\sp_generic_squad_ability_unlock" />
+							<bool name="include_completed" value="True" />
+							<bool name="include_queued" value="False" />
+							<group name="include_pbg_parenting">
+								<bool name="include_child_pbgs" value="False" />
+								<bool name="include_parent_pbgs" value="False" />
+							</group>
+						</template_reference>
+					</list>
+				</template_reference>
+				<template_reference name="required" value="requirements\required_ability_state" List.ItemID="2125239601" List.ListAction="Append">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="0" />
+					<bool name="is_active" value="False" />
+					<instance_reference name="ability_name" value="abilities\races\american\veterancy\infantry\scout\veterancy_1b_recon_mode_scout_us" />
+					<enum name="ability_active_prereq_owner_type" value="squad" />
+				</template_reference>
+				<template_reference name="required" value="requirements\required_any_in_list" List.ItemID="1646403367" List.ListAction="Append">
+					<enum name="reason" value="usage_and_display" overrideParent="True" />
+					<locstring name="ui_name" value="0" />
+					<list name="requirements">
+						<template_reference name="requirement" value="requirements\required_player_upgrade" List.ItemID="-340349907">
+							<enum name="reason" value="usage_and_display" overrideParent="True" />
+							<locstring name="ui_name" value="0" />
+							<bool name="is_present" value="True" />
+							<int name="max_completed" value="100" />
+							<int name="min_completed" value="1" />
+							<instance_reference name="upgrade_name" value="upgrade\american\battlegroups\airborne\airborne" overrideParent="True" />
+							<bool name="include_completed" value="True" />
+							<bool name="include_queued" value="False" />
+							<group name="include_pbg_parenting">
+								<bool name="include_child_pbgs" value="False" />
+								<bool name="include_parent_pbgs" value="False" />
+							</group>
+						</template_reference>
+						<template_reference name="requirement" value="requirements\required_player_upgrade" List.ItemID="1121913084">
+							<enum name="reason" value="usage_and_display" />
+							<locstring name="ui_name" value="0" />
+							<bool name="is_present" value="True" />
+							<int name="max_completed" value="100" />
+							<int name="min_completed" value="1" />
+							<instance_reference name="upgrade_name" value="upgrade\campaign\missions\sp_generic_squad_ability_unlock" />
+							<bool name="include_completed" value="True" />
+							<bool name="include_queued" value="False" />
+							<group name="include_pbg_parenting">
+								<bool name="include_child_pbgs" value="False" />
+								<bool name="include_parent_pbgs" value="False" />
+							</group>
+						</template_reference>
+					</list>
+				</template_reference>
+			</list>
+			<float name="ui_reticule_radius_min" value="5" overrideParent="True" />
+			<float name="ui_reticule_radius_max" value="5" overrideParent="True" />
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_entity_tree" value="rifle_grenade_pathfinders_us" overrideParent="True" />
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="2063133" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\infantry\grenade_subtypes\rifle_grenade_parent" />
+	</variant>
+	<variant name="sp">
+		<group name="ability_bag">
+			<enum_table name="cost_to_player">
+				<float name="munition" value="35" overrideParent="True" />
+			</enum_table>
+			<group name="ui_info">
+				<file name="icon_name" value="common\abilities\rifle_grenade_jaeger_ger" overrideParent="True" />
+				<locstring name="screen_name" value="11186231" overrideParent="True" />
+				<locstring name="brief_text" value="11240323" overrideParent="True" />
+			</group>
+			<list name="requirements">
+				<template_reference name="required" value="requirements\required_any_in_list" List.ItemID="1014786290" List.ListAction="Append">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="0" />
+					<list name="requirements">
+						<template_reference name="requirement" value="requirements\required_all_in_list" List.ItemID="1549292647">
+							<enum name="reason" value="usage" />
+							<locstring name="ui_name" value="0" />
+							<list name="requirements">
+								<template_reference name="requirement" value="requirements\required_player_upgrade" List.ItemID="-336876294">
+									<enum name="reason" value="usage" />
+									<locstring name="ui_name" value="11233752" />
+									<bool name="is_present" value="True" />
+									<int name="max_completed" value="100" />
+									<int name="min_completed" value="1" />
+									<instance_reference name="upgrade_name" value="upgrade\american\battlegroups\airborne\airborne_right_1a_pathfinders_us" />
+									<bool name="include_completed" value="True" />
+									<bool name="include_queued" value="False" />
+									<group name="include_pbg_parenting">
+										<bool name="include_child_pbgs" value="False" />
+										<bool name="include_parent_pbgs" value="False" />
+									</group>
+								</template_reference>
+								<template_reference name="requirement" value="requirements\required_player_upgrade" List.ItemID="1114029758">
+									<enum name="reason" value="usage_and_display" />
+									<locstring name="ui_name" value="0" />
+									<bool name="is_present" value="False" />
+									<int name="max_completed" value="100" />
+									<int name="min_completed" value="1" />
+									<instance_reference name="upgrade_name" value="upgrade\american\battlegroups\airborne\airborne_right_1b_paradrop_hmg_us" />
+									<bool name="include_completed" value="True" />
+									<bool name="include_queued" value="False" />
+									<group name="include_pbg_parenting">
+										<bool name="include_child_pbgs" value="False" />
+										<bool name="include_parent_pbgs" value="False" />
+									</group>
+								</template_reference>
+							</list>
+						</template_reference>
+						<template_reference name="requirement" value="requirements\required_player_upgrade" List.ItemID="-1371514538">
+							<enum name="reason" value="usage_and_display" />
+							<locstring name="ui_name" value="0" />
+							<bool name="is_present" value="True" />
+							<int name="max_completed" value="100" />
+							<int name="min_completed" value="1" />
+							<instance_reference name="upgrade_name" value="upgrade\campaign\missions\sp_generic_squad_ability_unlock" />
+							<bool name="include_completed" value="True" />
+							<bool name="include_queued" value="False" />
+							<group name="include_pbg_parenting">
+								<bool name="include_child_pbgs" value="False" />
+								<bool name="include_parent_pbgs" value="False" />
+							</group>
+						</template_reference>
+					</list>
+				</template_reference>
+				<template_reference name="required" value="requirements\required_ability_state" List.ItemID="2125239601" List.ListAction="Append">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="0" />
+					<bool name="is_active" value="False" />
+					<instance_reference name="ability_name" value="abilities\races\american\veterancy\infantry\scout\veterancy_1b_recon_mode_scout_us" />
+					<enum name="ability_active_prereq_owner_type" value="squad" />
+				</template_reference>
+				<template_reference name="required" value="requirements\required_any_in_list" List.ItemID="1646403367" List.ListAction="Append">
+					<enum name="reason" value="usage_and_display" overrideParent="True" />
+					<locstring name="ui_name" value="0" />
+					<list name="requirements">
+						<template_reference name="requirement" value="requirements\required_player_upgrade" List.ItemID="-340349907">
+							<enum name="reason" value="usage_and_display" overrideParent="True" />
+							<locstring name="ui_name" value="0" />
+							<bool name="is_present" value="True" />
+							<int name="max_completed" value="100" />
+							<int name="min_completed" value="1" />
+							<instance_reference name="upgrade_name" value="upgrade\american\battlegroups\airborne\airborne" overrideParent="True" />
+							<bool name="include_completed" value="True" />
+							<bool name="include_queued" value="False" />
+							<group name="include_pbg_parenting">
+								<bool name="include_child_pbgs" value="False" />
+								<bool name="include_parent_pbgs" value="False" />
+							</group>
+						</template_reference>
+						<template_reference name="requirement" value="requirements\required_player_upgrade" List.ItemID="1121913084">
+							<enum name="reason" value="usage_and_display" />
+							<locstring name="ui_name" value="0" />
+							<bool name="is_present" value="True" />
+							<int name="max_completed" value="100" />
+							<int name="min_completed" value="1" />
+							<instance_reference name="upgrade_name" value="upgrade\campaign\missions\sp_generic_squad_ability_unlock" />
+							<bool name="include_completed" value="True" />
+							<bool name="include_queued" value="False" />
+							<group name="include_pbg_parenting">
+								<bool name="include_child_pbgs" value="False" />
+								<bool name="include_parent_pbgs" value="False" />
+							</group>
+						</template_reference>
+					</list>
+				</template_reference>
+			</list>
+			<float name="ui_reticule_radius_min" value="5" overrideParent="True" />
+			<float name="ui_reticule_radius_max" value="5" overrideParent="True" />
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_entity_tree" value="sp_rifle_grenade_pathfinders_us" overrideParent="True" />
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="2063133" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\infantry\grenade_subtypes\rifle_grenade_parent" />
+	</variant>
+</instance>

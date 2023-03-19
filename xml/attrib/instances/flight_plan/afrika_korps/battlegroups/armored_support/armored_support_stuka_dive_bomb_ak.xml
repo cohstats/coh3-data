@@ -1,0 +1,42 @@
+<instance version="5" description="" template="flight_plan">
+	<variant name="default">
+		<uniqueid name="pbgid" value="2082020" />
+		<group name="flight_plan_bag">
+			<list name="flight_maneuvers">
+				<template_reference name="maneuver" value="options\flight_maneuver\payload_at_target" List.ItemID="697979070">
+					<state_tree_node name="payload_tree" value="" />
+					<enum name="payload_target" value="flight_plan_target_01" />
+					<float name="default_height_multiplier" value="3" />
+					<float name="dive_length" value="90" />
+					<float name="dive_height_multiplier" value="1" />
+					<float name="default_speed_multiplier" value="0.75" />
+					<float name="arrival_time_seconds" value="7" />
+					<float name="dive_duration_seconds" value="2" />
+					<float name="payload_offset" value="0" />
+					<float name="cruise_length" value="40" />
+					<state_tree_node name="dive_complete_tree" value="armored_support_stuka_dive_bomb_ak\library\deliver_payload" />
+				</template_reference>
+			</list>
+		</group>
+	</variant>
+	<variant name="sp">
+		<uniqueid name="pbgid" value="2082020" />
+		<group name="flight_plan_bag">
+			<list name="flight_maneuvers">
+				<template_reference name="maneuver" value="options\flight_maneuver\payload_at_target" List.ItemID="697979070">
+					<state_tree_node name="payload_tree" value="" />
+					<enum name="payload_target" value="flight_plan_target_01" />
+					<float name="default_height_multiplier" value="3" />
+					<float name="dive_length" value="90" />
+					<float name="dive_height_multiplier" value="1" />
+					<float name="default_speed_multiplier" value="0.75" />
+					<float name="arrival_time_seconds" value="3.5" />
+					<float name="dive_duration_seconds" value="2" />
+					<float name="payload_offset" value="0" />
+					<float name="cruise_length" value="40" />
+					<state_tree_node name="dive_complete_tree" value="sp_armored_support_stuka_dive_bomb_ak\library\deliver_payload" />
+				</template_reference>
+			</list>
+		</group>
+	</variant>
+</instance>

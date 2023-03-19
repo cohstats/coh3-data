@@ -1,0 +1,530 @@
+<instance version="5" description="M1 81mm Mortar weapon" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\animation_action_tree_ext" List.ItemID="879232435">
+				<state_tree_node name="ActionTree_OpeningBranch" value="physical_weapon_ranged" />
+				<bool name="use_root_motion" value="True" />
+				<enum name="entity_statetree_sort_tag" value="weapon_default" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1028551791">
+				<file name="alternate_sua" value="art\armies\american\weapons\hmg_browning_m1919a4\hmg_browning_m1919a4" />
+				<bool name="always_revealed_in_fow" value="False" />
+				<bool name="is_visible_in_game" value="True" />
+				<int name="precise_size" value="-1" />
+				<enum name="default_spawn_type" value="" />
+				<instance_reference name="unit_badge" value="" />
+				<bool name="is_spawned_when_not_in_interactive_area" value="True" />
+				<bool name="is_wreck" value="False" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\german\weapons\mortar_80mm" />
+				<float name="animator_scale" value="100" />
+				<bool name="browsable_in_editor" value="True" />
+				<float name="entity_scale" value="100" />
+				<enum name="subclass_type" value="Generic" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_targeting_ext" List.ItemID="-770014278">
+				<bool name="allow_weapon_target_scanning" value="False" />
+				<int name="history_size" value="2" />
+				<bool name="allow_entity_scan_close_enemies" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\weapon_ext" List.ItemID="818786857">
+				<instance_reference name="weapon" value="weapon\german\explosive_weapon\mortar\81mm_mortar_bunker_smoke_barrage_ger" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_inventory_item_ext" List.ItemID="-2000882904">
+				<template_reference name="simulation_item" value="sim_inventory_item\sim_inventory_item">
+					<int name="capacity_required" value="0" />
+					<group name="ownership_attributes">
+						<enum name="compatible_owner_type" value="entity" />
+						<enum name="ownership_sharing_type" value="single" />
+						<float name="drop_on_death_chance" value="0" />
+						<bool name="auto_equip" value="False" />
+					</group>
+					<template_reference name="item_data" value="sim_inventory_item\sim_item_data\attachment_inventory_data">
+						<template_reference name="attachment_data" value="options\attachment_types\entity_attachment">
+							<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+								<template_reference name="attach_data" value="attachments\attach_data">
+									<string name="marker_name_parent" value="" />
+									<string name="parent_rigidbody_target_name" value="" />
+									<enum name="game_object_attachment_type" value="scenegraph" />
+								</template_reference>
+								<instance_reference name="ebp" value="ebps\races\german\weapons\explosive_weapons\mortar\w_81mm_mortar_bunker_smoke_barrage_ger" />
+								<group name="attachment_flags">
+									<bool name="sim_only" value="False" />
+									<bool name="no_pathfinding" value="True" />
+									<bool name="not_snappable" value="False" />
+									<bool name="restore_snap_to_ground_on_detach" value="True" />
+									<bool name="no_sim_update" value="False" />
+									<bool name="join_parent_squad" value="False" />
+									<bool name="redirect_damage_to_parent_entity" value="True" />
+									<bool name="receive_parent_animations" value="True" />
+									<bool name="receive_parent_death" value="False" />
+								</group>
+							</template_reference>
+						</template_reference>
+					</template_reference>
+					<string name="default_slot" value="" />
+					<enum name="category" value="default" />
+				</template_reference>
+				<group name="requirement">
+					<state_tree_node name="statetree_condition_node" value="" />
+					<instance_reference name="requirement_param" value="" />
+					<state_tree_node name="statetree_condition_default_command_prioritize_as_success" value="" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_entity_ext" List.ItemID="-1183971032">
+				<float name="rotate_snap" value="90" />
+				<bool name="kill_paradrop" value="False" />
+				<enum name="transferable" value="None" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="-847437465">
+				<string name="speaker_code" value="" />
+				<group name="speech_parameters">
+					<string name="class_code" value="weapons" />
+					<string name="name_code" value="mortar" />
+					<string name="unit_code" value="mortar" />
+				</group>
+				<int name="importance" value="1" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\marker_ext" List.ItemID="-1612781896">
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\animation_role_ext" List.ItemID="-929922443">
+				<instance_reference name="default_role" value="animation_role\soldier\mortar_variants\us_mortar_gun" />
+				<enum name="flavour_key" value="american" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\team_weapon_ext" List.ItemID="-247787725">
+				<bool name="can_manual_abandon" value="False" />
+				<bool name="disable_garrison" value="True" />
+				<enum name="team_weapon_type" value="tp_carried" />
+				<list name="role_list">
+					<group name="role" List.ItemID="950555061">
+						<string name="join_sync_marker" value="loc_gunner" />
+						<bool name="required" value="True" />
+						<string name="role_name" value="gunner" />
+						<instance_reference name="animation_role_override" value="animation_role\soldier\mortar_variants\us_mortar_gunner" />
+						<string name="setup_join_sync_marker_override" value="loc_gunner_setup" />
+						<bool name="apply_role_overrides_only_when_synced" value="False" />
+						<string name="parent_inventory_slot" value="" />
+						<template_reference name="weapon_override" value="">
+						</template_reference>
+						<string name="setup_position_marker" value="" />
+						<string name="teardown_position_marker" value="" />
+					</group>
+					<group name="role" List.ItemID="1751300295">
+						<string name="join_sync_marker" value="loc_loader" />
+						<bool name="required" value="True" />
+						<string name="role_name" value="loader" />
+						<instance_reference name="animation_role_override" value="animation_role\soldier\mortar_variants\us_mortar_loader" />
+						<string name="setup_join_sync_marker_override" value="loc_loader_setup" />
+						<bool name="apply_role_overrides_only_when_synced" value="False" />
+						<string name="parent_inventory_slot" value="" />
+						<template_reference name="weapon_override" value="">
+						</template_reference>
+						<string name="setup_position_marker" value="" />
+						<string name="teardown_position_marker" value="" />
+					</group>
+				</list>
+				<float name="destroy_on_abandon_health_threshold" value="-1" />
+				<template_reference name="on_abandon_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="on_abandon_weapon_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<bool name="is_crew_crushable" value="False" />
+				<bool name="is_crew_targetable" value="False" />
+				<float name="destroy_on_abandon_chance" value="0" />
+				<bool name="compute_aim_sector" value="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\statemodel_ext" List.ItemID="-291406456">
+				<instance_reference name="schema" value="statemodel_schema\team_weapon" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\recrewable_ext" List.ItemID="650111470">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-1427819375">
+						<instance_reference name="ext_key" value="racebps\americans" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\american\team_weapons\mortar_81mm_us" />
+							<float name="max_capture_crew_size" value="2" />
+							<float name="min_capture_crew_size" value="2" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="4" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="ebps\races\american\infantry\crew_mortar_us" />
+							<bool name="is_abandoned_on_spawn" value="False" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-1542623178">
+						<instance_reference name="ext_key" value="racebps\germans" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\team_weapons\mortar_81mm_ger" />
+							<float name="max_capture_crew_size" value="2" />
+							<float name="min_capture_crew_size" value="2" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="4" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="ebps\races\german\infantry\crew_mortar_ger" />
+							<bool name="is_abandoned_on_spawn" value="False" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="1306038146">
+						<instance_reference name="ext_key" value="racebps\british" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british\team_weapons\mortar_81mm_uk" />
+							<float name="max_capture_crew_size" value="2" />
+							<float name="min_capture_crew_size" value="2" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="4" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="ebps\races\british\infantry\crew_mortar_uk" />
+							<bool name="is_abandoned_on_spawn" value="False" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-1023638863">
+						<instance_reference name="ext_key" value="racebps\british_africa" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british_africa\team_weapons\mortar_81mm_africa_uk" />
+							<float name="max_capture_crew_size" value="2" />
+							<float name="min_capture_crew_size" value="2" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="4" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="ebps\races\british_africa\infantry\crew_mortar_africa_uk" />
+							<bool name="is_abandoned_on_spawn" value="False" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-407058251">
+						<instance_reference name="ext_key" value="racebps\afrika_korps" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\afrika_korps\team_weapons\leig_75mm_ak" />
+							<float name="max_capture_crew_size" value="2" />
+							<float name="min_capture_crew_size" value="2" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="4" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="ebps\races\afrika_korps\infantry\crew_mortar_ak" />
+							<bool name="is_abandoned_on_spawn" value="False" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\presentation_override_ext" List.ItemID="-436985299">
+				<bool name="only_after_repossession" value="True" />
+				<list name="race_mapping_list">
+					<group name="race_mapping" List.ItemID="1628370937">
+						<instance_reference name="race_key" value="racebps\americans" />
+						<instance_reference name="presentation_entity_override" value="ebps\races\american\weapons\explosive_weapons\mortar\w_81mm_mortar_us" />
+						<instance_reference name="presentation_squad_override" value="sbps\races\american\team_weapons\mortar_81mm_us" />
+					</group>
+					<group name="race_mapping" List.ItemID="1142832156">
+						<instance_reference name="race_key" value="racebps\british" />
+						<instance_reference name="presentation_entity_override" value="ebps\races\british\weapons\explosive_weapons\mortar\w_81mm_mortar_uk" />
+						<instance_reference name="presentation_squad_override" value="sbps\races\british\team_weapons\mortar_81mm_uk" />
+					</group>
+					<group name="race_mapping" List.ItemID="418332915">
+						<instance_reference name="race_key" value="racebps\british_africa" />
+						<instance_reference name="presentation_entity_override" value="ebps\races\british_africa\team_weapons\tw_4_2_heavy_mortar_africa_uk" />
+						<instance_reference name="presentation_squad_override" value="sbps\races\british_africa\team_weapons\mortar_heavy_4_2_africa_uk" />
+					</group>
+					<group name="race_mapping" List.ItemID="1971709800">
+						<instance_reference name="race_key" value="racebps\afrika_korps" />
+						<instance_reference name="presentation_entity_override" value="ebps\races\afrika_korps\weapons\explosive_weapons\mortar\w_25mm_tank_mortar_smoke_ak" />
+						<instance_reference name="presentation_squad_override" value="sbps\races\afrika_korps\team_weapons\mortar_team_ak" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\interactive_object_ext" List.ItemID="444818852">
+				<list name="type_list">
+					<group name="type" List.ItemID="588143218">
+						<enum name="interaction_type" value="repair" />
+						<int name="prefer_number" value="-1" />
+						<int name="max_number" value="-1" />
+						<enum name="interaction_target_type" value="entity" />
+						<template_reference name="node_list_option" value="options\none">
+						</template_reference>
+						<bool name="block_pathing_when_interacted" value="False" />
+					</group>
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2062552" />
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\animation_action_tree_ext" List.ItemID="879232435">
+				<state_tree_node name="ActionTree_OpeningBranch" value="physical_weapon_ranged" />
+				<bool name="use_root_motion" value="True" />
+				<enum name="entity_statetree_sort_tag" value="weapon_default" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1028551791">
+				<file name="alternate_sua" value="art\armies\american\weapons\hmg_browning_m1919a4\hmg_browning_m1919a4" />
+				<bool name="always_revealed_in_fow" value="False" />
+				<bool name="is_visible_in_game" value="True" />
+				<int name="precise_size" value="-1" />
+				<enum name="default_spawn_type" value="" />
+				<instance_reference name="unit_badge" value="" />
+				<bool name="is_spawned_when_not_in_interactive_area" value="True" />
+				<bool name="is_wreck" value="False" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\german\weapons\mortar_80mm" />
+				<float name="animator_scale" value="100" />
+				<bool name="browsable_in_editor" value="True" />
+				<float name="entity_scale" value="100" />
+				<enum name="subclass_type" value="Generic" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_targeting_ext" List.ItemID="-770014278">
+				<bool name="allow_weapon_target_scanning" value="False" />
+				<int name="history_size" value="2" />
+				<bool name="allow_entity_scan_close_enemies" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\weapon_ext" List.ItemID="818786857">
+				<instance_reference name="weapon" value="weapon\german\explosive_weapon\mortar\81mm_mortar_bunker_smoke_barrage_ger" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_inventory_item_ext" List.ItemID="-2000882904">
+				<template_reference name="simulation_item" value="sim_inventory_item\sim_inventory_item">
+					<int name="capacity_required" value="0" />
+					<group name="ownership_attributes">
+						<enum name="compatible_owner_type" value="entity" />
+						<enum name="ownership_sharing_type" value="single" />
+						<float name="drop_on_death_chance" value="0" />
+						<bool name="auto_equip" value="False" />
+					</group>
+					<template_reference name="item_data" value="sim_inventory_item\sim_item_data\attachment_inventory_data">
+						<template_reference name="attachment_data" value="options\attachment_types\entity_attachment">
+							<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+								<template_reference name="attach_data" value="attachments\attach_data">
+									<string name="marker_name_parent" value="" />
+									<string name="parent_rigidbody_target_name" value="" />
+									<enum name="game_object_attachment_type" value="scenegraph" />
+								</template_reference>
+								<instance_reference name="ebp" value="ebps\races\german\weapons\explosive_weapons\mortar\w_81mm_mortar_bunker_smoke_barrage_ger" />
+								<group name="attachment_flags">
+									<bool name="sim_only" value="False" />
+									<bool name="no_pathfinding" value="True" />
+									<bool name="not_snappable" value="False" />
+									<bool name="restore_snap_to_ground_on_detach" value="True" />
+									<bool name="no_sim_update" value="False" />
+									<bool name="join_parent_squad" value="False" />
+									<bool name="redirect_damage_to_parent_entity" value="True" />
+									<bool name="receive_parent_animations" value="True" />
+									<bool name="receive_parent_death" value="False" />
+								</group>
+							</template_reference>
+						</template_reference>
+					</template_reference>
+					<string name="default_slot" value="" />
+					<enum name="category" value="default" />
+				</template_reference>
+				<group name="requirement">
+					<state_tree_node name="statetree_condition_node" value="" />
+					<instance_reference name="requirement_param" value="" />
+					<state_tree_node name="statetree_condition_default_command_prioritize_as_success" value="" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_entity_ext" List.ItemID="-1183971032">
+				<float name="rotate_snap" value="90" />
+				<bool name="kill_paradrop" value="False" />
+				<enum name="transferable" value="None" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="-847437465">
+				<string name="speaker_code" value="" />
+				<group name="speech_parameters">
+					<string name="class_code" value="weapons" />
+					<string name="name_code" value="mortar" />
+					<string name="unit_code" value="mortar" />
+				</group>
+				<int name="importance" value="1" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\marker_ext" List.ItemID="-1612781896">
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\animation_role_ext" List.ItemID="-929922443">
+				<instance_reference name="default_role" value="animation_role\soldier\mortar_variants\us_mortar_gun" />
+				<enum name="flavour_key" value="american" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\team_weapon_ext" List.ItemID="-247787725">
+				<bool name="can_manual_abandon" value="False" />
+				<bool name="disable_garrison" value="True" />
+				<enum name="team_weapon_type" value="tp_carried" />
+				<list name="role_list">
+					<group name="role" List.ItemID="950555061">
+						<string name="join_sync_marker" value="loc_gunner" />
+						<bool name="required" value="True" />
+						<string name="role_name" value="gunner" />
+						<instance_reference name="animation_role_override" value="animation_role\soldier\mortar_variants\us_mortar_gunner" />
+						<string name="setup_join_sync_marker_override" value="loc_gunner_setup" />
+						<bool name="apply_role_overrides_only_when_synced" value="False" />
+						<string name="parent_inventory_slot" value="" />
+						<template_reference name="weapon_override" value="">
+						</template_reference>
+						<string name="setup_position_marker" value="" />
+						<string name="teardown_position_marker" value="" />
+					</group>
+					<group name="role" List.ItemID="1751300295">
+						<string name="join_sync_marker" value="loc_loader" />
+						<bool name="required" value="True" />
+						<string name="role_name" value="loader" />
+						<instance_reference name="animation_role_override" value="animation_role\soldier\mortar_variants\us_mortar_loader" />
+						<string name="setup_join_sync_marker_override" value="loc_loader_setup" />
+						<bool name="apply_role_overrides_only_when_synced" value="False" />
+						<string name="parent_inventory_slot" value="" />
+						<template_reference name="weapon_override" value="">
+						</template_reference>
+						<string name="setup_position_marker" value="" />
+						<string name="teardown_position_marker" value="" />
+					</group>
+				</list>
+				<float name="destroy_on_abandon_health_threshold" value="-1" />
+				<template_reference name="on_abandon_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="on_abandon_weapon_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<bool name="is_crew_crushable" value="False" />
+				<bool name="is_crew_targetable" value="False" />
+				<float name="destroy_on_abandon_chance" value="0" />
+				<bool name="compute_aim_sector" value="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\statemodel_ext" List.ItemID="-291406456">
+				<instance_reference name="schema" value="statemodel_schema\team_weapon" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\recrewable_ext" List.ItemID="650111470">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-1427819375">
+						<instance_reference name="ext_key" value="racebps\americans" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\american\team_weapons\mortar_81mm_us" />
+							<float name="max_capture_crew_size" value="2" />
+							<float name="min_capture_crew_size" value="2" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="4" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="ebps\races\american\infantry\crew_mortar_us" />
+							<bool name="is_abandoned_on_spawn" value="False" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-1542623178">
+						<instance_reference name="ext_key" value="racebps\germans" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\team_weapons\mortar_81mm_ger" />
+							<float name="max_capture_crew_size" value="2" />
+							<float name="min_capture_crew_size" value="2" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="4" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="ebps\races\german\infantry\crew_mortar_ger" />
+							<bool name="is_abandoned_on_spawn" value="False" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="1306038146">
+						<instance_reference name="ext_key" value="racebps\british" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british\team_weapons\mortar_81mm_uk" />
+							<float name="max_capture_crew_size" value="2" />
+							<float name="min_capture_crew_size" value="2" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="4" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="ebps\races\british\infantry\crew_mortar_uk" />
+							<bool name="is_abandoned_on_spawn" value="False" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-1023638863">
+						<instance_reference name="ext_key" value="racebps\british_africa" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\british_africa\team_weapons\mortar_81mm_africa_uk" />
+							<float name="max_capture_crew_size" value="2" />
+							<float name="min_capture_crew_size" value="2" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="4" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="ebps\races\british_africa\infantry\crew_mortar_africa_uk" />
+							<bool name="is_abandoned_on_spawn" value="False" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-407058251">
+						<instance_reference name="ext_key" value="racebps\afrika_korps" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\afrika_korps\team_weapons\leig_75mm_ak" />
+							<float name="max_capture_crew_size" value="2" />
+							<float name="min_capture_crew_size" value="2" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="4" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="ebps\races\afrika_korps\infantry\crew_mortar_ak" />
+							<bool name="is_abandoned_on_spawn" value="False" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\presentation_override_ext" List.ItemID="-436985299">
+				<bool name="only_after_repossession" value="True" />
+				<list name="race_mapping_list">
+					<group name="race_mapping" List.ItemID="1628370937">
+						<instance_reference name="race_key" value="racebps\americans" />
+						<instance_reference name="presentation_entity_override" value="ebps\races\american\weapons\explosive_weapons\mortar\w_81mm_mortar_us" />
+						<instance_reference name="presentation_squad_override" value="sbps\races\american\team_weapons\mortar_81mm_us" />
+					</group>
+					<group name="race_mapping" List.ItemID="1142832156">
+						<instance_reference name="race_key" value="racebps\british" />
+						<instance_reference name="presentation_entity_override" value="ebps\races\british\weapons\explosive_weapons\mortar\w_81mm_mortar_uk" />
+						<instance_reference name="presentation_squad_override" value="sbps\races\british\team_weapons\mortar_81mm_uk" />
+					</group>
+					<group name="race_mapping" List.ItemID="418332915">
+						<instance_reference name="race_key" value="racebps\british_africa" />
+						<instance_reference name="presentation_entity_override" value="ebps\races\british_africa\team_weapons\tw_4_2_heavy_mortar_africa_uk" />
+						<instance_reference name="presentation_squad_override" value="sbps\races\british_africa\team_weapons\mortar_heavy_4_2_africa_uk" />
+					</group>
+					<group name="race_mapping" List.ItemID="1971709800">
+						<instance_reference name="race_key" value="racebps\afrika_korps" />
+						<instance_reference name="presentation_entity_override" value="ebps\races\afrika_korps\weapons\explosive_weapons\mortar\w_25mm_tank_mortar_smoke_ak" />
+						<instance_reference name="presentation_squad_override" value="sbps\races\afrika_korps\team_weapons\mortar_team_ak" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\interactive_object_ext" List.ItemID="444818852">
+				<list name="type_list">
+					<group name="type" List.ItemID="588143218">
+						<enum name="interaction_type" value="repair" />
+						<int name="prefer_number" value="-1" />
+						<int name="max_number" value="-1" />
+						<enum name="interaction_target_type" value="entity" />
+						<template_reference name="node_list_option" value="options\none">
+						</template_reference>
+						<bool name="block_pathing_when_interacted" value="False" />
+					</group>
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2062552" />
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+</instance>

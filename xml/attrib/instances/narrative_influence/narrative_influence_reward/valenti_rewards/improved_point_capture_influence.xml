@@ -1,0 +1,9 @@
+<instance version="5" description="Grants a chance for the Capture action to subtract two capture pips due to &quot;partisan assistance&quot;." template="narrative_influence\narrative_influence_reward">
+	<variant name="default">
+		<group name="narrative_influence_reward_bag" comment="Grants a chance for the capture action to subtract two capture pips">
+			<float name="cost" value="20" comment="The influence hud page has a progress bar with a hardcoded range of 0-100 points with notches every 20 points. So, right now the maximum points is 100 and you can only get rewards every 20 points. If we want to rebalance that, we need to update the influence hud page." />
+			<instance_reference name="upgrade" value="upgrade\campaign\influence\valenti\improved_point_capture_influence" />
+		</group>
+		<uniqueid name="pbgid" value="2072598" />
+	</variant>
+</instance>

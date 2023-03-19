@@ -1,0 +1,188 @@
+<instance version="5" description="M3 75mm used by the M4A1 Sherman" template="weapon">
+	<variant name="default">
+		<group name="weapon_bag">
+			<group name="aim">
+				<group name="ready_aim_time">
+					<float name="max" value="0.125" overrideParent="True" />
+					<float name="min" value="0.125" overrideParent="True" />
+				</group>
+				<group name="aim_time_multiplier">
+					<float name="far" value="1" overrideParent="True" />
+					<float name="mid" value="1" overrideParent="True" />
+				</group>
+			</group>
+			<group name="area_effect" overrideParent="True">
+				<template_reference name="area_info" value="options\area_info_options\circle_area_option">
+					<float name="outer_radius" value="6" overrideParent="True" />
+					<float name="inner_radius" value="0" />
+					<bool name="is_two_dimensional" value="True" />
+					<enum name="dynamic_radius_type" value="fixed" />
+				</template_reference>
+				<group name="distance">
+					<float name="far" value="6" overrideParent="True" />
+					<float name="mid" value="2" overrideParent="True" />
+					<float name="near" value="0.5" overrideParent="True" />
+				</group>
+				<template_reference name="aoe_penetration" value="tables\range_table">
+					<float name="far" value="30" overrideParent="True" />
+					<float name="mid" value="30" overrideParent="True" />
+					<float name="near" value="30" overrideParent="True" />
+				</template_reference>
+				<int name="damage_max_members_per_squad" value="5" overrideParent="True" />
+				<group name="accuracy">
+					<float name="far" value="5" />
+					<float name="near" value="5" />
+					<float name="mid" value="5" />
+				</group>
+				<group name="damage">
+					<float name="far" value="0.2" />
+					<float name="near" value="0.35" />
+					<float name="mid" value="0.25" />
+				</group>
+				<group name="damage_friendly">
+					<float name="far" value="0.025" />
+					<float name="near" value="0.5" />
+					<float name="mid" value="0.075" />
+				</group>
+				<bool name="has_friendly_fire" value="True" />
+				<bool name="can_harm_shooter" value="False" />
+				<group name="suppression">
+					<float name="far" value="0" />
+					<float name="near" value="0" />
+					<float name="mid" value="0" />
+				</group>
+				<group name="suppression_friendly">
+					<float name="far" value="0" />
+					<float name="near" value="0" />
+					<float name="mid" value="0" />
+				</group>
+				<bool name="damage_all_in_hold" value="True" />
+				<enum name="aoe_origin_and_direction" value="hit_position_and_direction" />
+				<group name="fx">
+					<float name="exponential_distribution_lambda" value="0" />
+					<int name="num_randomized_ground_hit_fx" value="0" />
+				</group>
+				<template_reference name="area_over_time_option" value="">
+				</template_reference>
+			</group>
+			<string name="fx_munition_name" value="\cannon\shell_medium_he" overrideParent="True" />
+			<group name="reload">
+				<group name="duration">
+					<float name="max" value="3.5" overrideParent="True" />
+					<float name="min" value="3" overrideParent="True" />
+				</group>
+			</group>
+			<group name="scatter">
+				<float name="distance_scatter_max" value="6" overrideParent="True" />
+				<float name="angle_scatter" value="10" overrideParent="True" />
+				<float name="distance_scatter_offset" value="0.25" overrideParent="True" />
+				<float name="distance_scatter_ratio" value="1" overrideParent="True" />
+				<float name="fow_angle_multiplier" value="1.25" overrideParent="True" />
+				<float name="fow_distance_multiplier" value="1.25" overrideParent="True" />
+			</group>
+			<group name="penetration">
+				<float name="near" value="60" overrideParent="True" />
+				<float name="far" value="30" overrideParent="True" />
+				<float name="mid" value="40" overrideParent="True" />
+			</group>
+			<group name="deflection">
+				<bool name="has_deflection_damage" value="True" overrideParent="True" />
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="1562817" />
+		<instance_reference name="parent_pbg" value="weapon\american\ballistic_weapon\tank_gun\75mm_sherman_us" />
+	</variant>
+	<variant name="sp">
+		<group name="weapon_bag">
+			<group name="aim">
+				<group name="ready_aim_time">
+					<float name="max" value="0.125" overrideParent="True" />
+					<float name="min" value="0.125" overrideParent="True" />
+				</group>
+				<group name="aim_time_multiplier">
+					<float name="far" value="1" overrideParent="True" />
+					<float name="mid" value="1" overrideParent="True" />
+				</group>
+			</group>
+			<group name="area_effect" overrideParent="True">
+				<template_reference name="area_info" value="options\area_info_options\circle_area_option">
+					<float name="outer_radius" value="6" overrideParent="True" />
+					<float name="inner_radius" value="0" />
+					<bool name="is_two_dimensional" value="True" />
+					<enum name="dynamic_radius_type" value="fixed" />
+				</template_reference>
+				<group name="distance">
+					<float name="far" value="6" overrideParent="True" />
+					<float name="mid" value="2" overrideParent="True" />
+					<float name="near" value="0.5" overrideParent="True" />
+				</group>
+				<template_reference name="aoe_penetration" value="tables\range_table">
+					<float name="far" value="30" overrideParent="True" />
+					<float name="mid" value="30" overrideParent="True" />
+					<float name="near" value="30" overrideParent="True" />
+				</template_reference>
+				<int name="damage_max_members_per_squad" value="5" overrideParent="True" />
+				<group name="accuracy">
+					<float name="far" value="5" />
+					<float name="near" value="5" />
+					<float name="mid" value="5" />
+				</group>
+				<group name="damage">
+					<float name="far" value="0.2" />
+					<float name="near" value="0.35" />
+					<float name="mid" value="0.25" />
+				</group>
+				<group name="damage_friendly">
+					<float name="far" value="0.025" />
+					<float name="near" value="0.5" />
+					<float name="mid" value="0.075" />
+				</group>
+				<bool name="has_friendly_fire" value="True" />
+				<bool name="can_harm_shooter" value="False" />
+				<group name="suppression">
+					<float name="far" value="0" />
+					<float name="near" value="0" />
+					<float name="mid" value="0" />
+				</group>
+				<group name="suppression_friendly">
+					<float name="far" value="0" />
+					<float name="near" value="0" />
+					<float name="mid" value="0" />
+				</group>
+				<bool name="damage_all_in_hold" value="True" />
+				<enum name="aoe_origin_and_direction" value="hit_position_and_direction" />
+				<group name="fx">
+					<float name="exponential_distribution_lambda" value="0" />
+					<int name="num_randomized_ground_hit_fx" value="0" />
+				</group>
+				<template_reference name="area_over_time_option" value="">
+				</template_reference>
+			</group>
+			<string name="fx_munition_name" value="\cannon\shell_medium_he" overrideParent="True" />
+			<group name="reload">
+				<group name="duration">
+					<float name="max" value="3.5" overrideParent="True" />
+					<float name="min" value="3" overrideParent="True" />
+				</group>
+			</group>
+			<group name="scatter">
+				<float name="distance_scatter_max" value="6" overrideParent="True" />
+				<float name="angle_scatter" value="10" overrideParent="True" />
+				<float name="distance_scatter_offset" value="0.25" overrideParent="True" />
+				<float name="distance_scatter_ratio" value="1" overrideParent="True" />
+				<float name="fow_angle_multiplier" value="1.25" overrideParent="True" />
+				<float name="fow_distance_multiplier" value="1.25" overrideParent="True" />
+			</group>
+			<group name="penetration">
+				<float name="near" value="60" overrideParent="True" />
+				<float name="far" value="30" overrideParent="True" />
+				<float name="mid" value="40" overrideParent="True" />
+			</group>
+			<group name="deflection">
+				<bool name="has_deflection_damage" value="True" overrideParent="True" />
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="1562817" />
+		<instance_reference name="parent_pbg" value="weapon\american\ballistic_weapon\tank_gun\75mm_sherman_us" />
+	</variant>
+</instance>

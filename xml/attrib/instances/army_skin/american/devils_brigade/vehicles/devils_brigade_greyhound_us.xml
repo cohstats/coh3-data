@@ -1,0 +1,35 @@
+<instance version="5" description="" template="army_skin">
+	<variant name="default">
+		<group name="army_skin_bag">
+			<file name="icon" value="races\american\cosmetics\devils_brigade\vehicles\us_greyhound_devilsbrigade" overrideParent="True" />
+			<locstring name="description" value="11183740" overrideParent="True" />
+			<template_reference name="inventory_item" value="inventory_item">
+				<uniqueid name="server_id" value="453392" />
+				<list name="races" overrideParent="True">
+					<instance_reference name="race" value="racebps\americans" List.ItemID="-841821509" />
+				</list>
+				<list name="inventory_item_categories" overrideParent="True">
+					<instance_reference name="inventory_item_category" value="inventory_item_category\cosmetics\american\vehicles\greyhound_us_cosmetic" List.ItemID="-1524250693" />
+				</list>
+				<instance_reference name="rarity" value="loot_tier\legendary" overrideParent="True" />
+			</template_reference>
+			<locstring name="name" value="11222454" overrideParent="True" />
+			<list name="remapped_pbgs" overrideParent="True">
+				<template_reference name="remapped_attachment_list" value="pbg_remapping\attachment_list_remapping" List.ItemID="961177625">
+					<instance_reference name="original_pbg" value="attachments\attachment_list\races\american\vehicles\greyhound_m8\common\default_greyhound_m8" />
+					<instance_reference name="replacement_pbg" value="attachments\attachment_list\cosmetics\american\devils_brigade\heavy_vehicles\devils_brigade_greyhound_m8" />
+				</template_reference>
+				<template_reference name="remapped_attachment_list" value="pbg_remapping\attachment_list_remapping" List.ItemID="-331069607">
+					<instance_reference name="original_pbg" value="attachments\attachment_list\races\american\weapons\cannon_37mm_greyhound\default_cannon_37mm_greyhound" />
+					<instance_reference name="replacement_pbg" value="attachments\attachment_list\cosmetics\american\devils_brigade\weapons\devils_brigade_cannon_37mm_greyhound" />
+				</template_reference>
+			</list>
+			<list name="unit_references" overrideParent="True">
+				<instance_reference name="squad" value="sbps\races\american\vehicles\greyhound_us" List.ItemID="668195147" />
+			</list>
+			<file name="icon_secondary_small" value="common\loadout\vehicles_icn" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2074246" />
+		<instance_reference name="parent_pbg" value="army_skin\army_skin_root" />
+	</variant>
+</instance>

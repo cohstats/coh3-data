@@ -1,0 +1,152 @@
+<instance version="5" description="" template="statemodel_schema">
+	<variant name="default">
+		<uniqueid name="pbgid" value="203620" />
+		<group name="schema_bag">
+			<list name="bool_properties">
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="-667622559">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="campaign_updating" />
+				</template_reference>
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="-885116325">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="ai_campaign_waiting" />
+				</template_reference>
+			</list>
+			<list name="float_properties">
+			</list>
+			<list name="int_properties">
+			</list>
+			<list name="vector3f_properties">
+			</list>
+			<list name="enum_table_properties">
+			</list>
+			<list name="target_properties">
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-215548040">
+					<enum name="target_property_id" value="ai_ability_target" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-1808478327">
+					<enum name="target_property_id" value="ai_scratch_ally_target" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="2011914075">
+					<enum name="target_property_id" value="ai_ability_direction_target" />
+				</template_reference>
+			</list>
+			<list name="list_properties">
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-1389448470">
+					<int name="max_list_size" value="2" />
+					<enum name="data_type" value="pbgid" />
+					<enum name="list_property_id" value="ai_convert_target_ability_pbgs" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="260465614">
+					<int name="max_list_size" value="8" />
+					<enum name="data_type" value="pbgid" />
+					<enum name="list_property_id" value="ai_damage_ability_pbgs" />
+				</template_reference>
+			</list>
+			<list name="pbgid_properties">
+				<template_reference name="pbgid" value="statemodel_pbgid_property" List.ItemID="2114654867">
+					<enum name="pbgid_property_id" value="ai_production_pbg" />
+					<instance_reference name="default" value="" />
+				</template_reference>
+				<template_reference name="pbgid" value="statemodel_pbgid_property" List.ItemID="1451606597">
+					<enum name="pbgid_property_id" value="ai_scratch_pbg" />
+					<instance_reference name="default" value="" />
+				</template_reference>
+				<template_reference name="pbgid" value="statemodel_pbgid_property" List.ItemID="472891">
+					<enum name="pbgid_property_id" value="ai_construct_pbg" />
+					<instance_reference name="default" value="" />
+				</template_reference>
+				<template_reference name="pbgid" value="statemodel_pbgid_property" List.ItemID="-689368665">
+					<enum name="pbgid_property_id" value="ai_company_personality" />
+					<instance_reference name="default" value="" />
+				</template_reference>
+				<template_reference name="pbgid" value="statemodel_pbgid_property" List.ItemID="586804561">
+					<enum name="pbgid_property_id" value="ai_ability_pbg" />
+					<instance_reference name="default" value="" />
+				</template_reference>
+			</list>
+			<list name="sub_schemas">
+			</list>
+			<list name="attribute_enum_properties">
+			</list>
+			<list name="generic_handle_properties">
+			</list>
+		</group>
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+	<variant name="sp">
+		<uniqueid name="pbgid" value="203620" />
+		<group name="schema_bag">
+			<list name="bool_properties">
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="-667622559">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="campaign_updating" />
+				</template_reference>
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="-885116325">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="ai_campaign_waiting" />
+				</template_reference>
+			</list>
+			<list name="float_properties">
+			</list>
+			<list name="int_properties">
+			</list>
+			<list name="vector3f_properties">
+			</list>
+			<list name="enum_table_properties">
+			</list>
+			<list name="target_properties">
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-215548040">
+					<enum name="target_property_id" value="ai_ability_target" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-1808478327">
+					<enum name="target_property_id" value="ai_scratch_ally_target" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="2011914075">
+					<enum name="target_property_id" value="ai_ability_direction_target" />
+				</template_reference>
+			</list>
+			<list name="list_properties">
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-1389448470">
+					<int name="max_list_size" value="2" />
+					<enum name="data_type" value="pbgid" />
+					<enum name="list_property_id" value="ai_convert_target_ability_pbgs" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="260465614">
+					<int name="max_list_size" value="8" />
+					<enum name="data_type" value="pbgid" />
+					<enum name="list_property_id" value="ai_damage_ability_pbgs" />
+				</template_reference>
+			</list>
+			<list name="pbgid_properties">
+				<template_reference name="pbgid" value="statemodel_pbgid_property" List.ItemID="2114654867">
+					<enum name="pbgid_property_id" value="ai_production_pbg" />
+					<instance_reference name="default" value="" />
+				</template_reference>
+				<template_reference name="pbgid" value="statemodel_pbgid_property" List.ItemID="1451606597">
+					<enum name="pbgid_property_id" value="ai_scratch_pbg" />
+					<instance_reference name="default" value="" />
+				</template_reference>
+				<template_reference name="pbgid" value="statemodel_pbgid_property" List.ItemID="472891">
+					<enum name="pbgid_property_id" value="ai_construct_pbg" />
+					<instance_reference name="default" value="" />
+				</template_reference>
+				<template_reference name="pbgid" value="statemodel_pbgid_property" List.ItemID="-689368665">
+					<enum name="pbgid_property_id" value="ai_company_personality" />
+					<instance_reference name="default" value="" />
+				</template_reference>
+				<template_reference name="pbgid" value="statemodel_pbgid_property" List.ItemID="586804561">
+					<enum name="pbgid_property_id" value="ai_ability_pbg" />
+					<instance_reference name="default" value="" />
+				</template_reference>
+			</list>
+			<list name="sub_schemas">
+			</list>
+			<list name="attribute_enum_properties">
+			</list>
+			<list name="generic_handle_properties">
+			</list>
+		</group>
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+</instance>

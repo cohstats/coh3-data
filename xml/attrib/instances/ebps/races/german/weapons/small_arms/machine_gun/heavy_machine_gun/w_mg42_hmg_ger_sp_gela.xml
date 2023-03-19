@@ -1,0 +1,228 @@
+<instance version="5" description="MG42 heavy machine gun used by the HMG squad" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\weapon_ext" overrideParent="True" List.ItemID="-1556843020" List.ParentItemID="-1556843020">
+				<instance_reference name="weapon" value="weapon\german\small_arms\machine_gun\heavy_machine_gun\mg42_hmg_ger_sp_gela" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\team_weapon_ext" List.ItemID="-533044593" List.ParentItemID="-533044593">
+				<list name="role_list">
+					<group name="role" List.ItemID="2001175641" List.ParentItemID="2001175641">
+						<string name="setup_join_sync_marker_override" value="loc_loader_takeover" overrideParent="True" />
+						<string name="setup_position_marker" value="loc_loader_takeover" overrideParent="True" />
+						<string name="teardown_position_marker" value="loc_loader" overrideParent="True" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_inventory_item_ext" overrideParent="True" List.ItemID="1488624709" List.ParentItemID="1488624709">
+				<template_reference name="simulation_item" value="sim_inventory_item\sim_inventory_item">
+					<int name="capacity_required" value="0" />
+					<group name="ownership_attributes">
+						<enum name="compatible_owner_type" value="entity" />
+						<enum name="ownership_sharing_type" value="single" />
+						<float name="drop_on_death_chance" value="1" />
+						<bool name="auto_equip" value="False" />
+					</group>
+					<template_reference name="item_data" value="sim_inventory_item\sim_item_data\attachment_inventory_data">
+						<template_reference name="attachment_data" value="options\attachment_types\entity_attachment">
+							<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+								<template_reference name="attach_data" value="attachments\attach_data">
+									<string name="marker_name_parent" value="motionextraction_m" />
+									<string name="parent_rigidbody_target_name" value="" />
+									<enum name="game_object_attachment_type" value="scenegraph" />
+								</template_reference>
+								<instance_reference name="ebp" value="ebps\races\german\weapons\small_arms\machine_gun\heavy_machine_gun\w_mg42_hmg_ger_sp" overrideParent="True" />
+								<group name="attachment_flags">
+									<bool name="sim_only" value="False" />
+									<bool name="no_pathfinding" value="True" />
+									<bool name="not_snappable" value="True" />
+									<bool name="restore_snap_to_ground_on_detach" value="True" />
+									<bool name="no_sim_update" value="False" />
+									<bool name="join_parent_squad" value="False" />
+									<bool name="redirect_damage_to_parent_entity" value="True" />
+									<bool name="receive_parent_animations" value="True" overrideParent="True" />
+									<bool name="receive_parent_death" value="False" />
+								</group>
+							</template_reference>
+						</template_reference>
+					</template_reference>
+					<string name="default_slot" value="" />
+					<enum name="category" value="special" overrideParent="True" />
+				</template_reference>
+				<group name="requirement">
+					<state_tree_node name="statetree_condition_node" value="" />
+					<instance_reference name="requirement_param" value="" />
+					<state_tree_node name="statetree_condition_default_command_prioritize_as_success" value="" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\recrewable_ext" List.ItemID="-1403996397" List.ParentItemID="-1403996397">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-766068749" List.ParentItemID="-766068749">
+						<group name="info">
+							<instance_reference name="reinforce_entity_blueprint" value="ebps\races\american\infantry\crew_hmg_us" overrideParent="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-1159727804" List.ParentItemID="-1159727804">
+				<bool name="can_repair" value="True" overrideParent="True" />
+				<bool name="regeneration_disabled" value="False" overrideParent="True" />
+				<float name="target_size" value="0.5" overrideParent="True" />
+				<template_reference name="armor_layout_option" value="options\ebpextensions\healthext\armor_layouts\armor_layout_uniform">
+					<float name="armor" value="60" overrideParent="True" />
+				</template_reference>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="1451363983" List.ParentItemID="1451363983">
+				<group name="speech_parameters">
+					<string name="unit_code" value="hmg" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\presentation_override_ext" List.ItemID="1391098797" List.ParentItemID="1391098797">
+				<list name="race_mapping_list" overrideParent="True">
+					<group name="race_mapping" overrideParent="True" List.ItemID="-1642767130" List.ParentItemID="-1882622971">
+						<instance_reference name="race_key" value="racebps\americans" />
+						<instance_reference name="presentation_entity_override" value="ebps\races\american\weapons\small_arms\machine_guns\heavy_machine_gun\w_30cal_hmg_us" />
+						<instance_reference name="presentation_squad_override" value="sbps\races\american\team_weapons\hmg_30cal_us" />
+					</group>
+					<group name="race_mapping" List.ItemID="86981311" List.ParentItemID="1217009166">
+						<instance_reference name="race_key" value="racebps\british" />
+						<instance_reference name="presentation_entity_override" value="ebps\races\british\weapons\small_arms\machine_guns\heavy_machine_gun\w_vickers_hmg_uk" />
+						<instance_reference name="presentation_squad_override" value="sbps\races\british\team_weapons\hmg_vickers_uk" />
+					</group>
+					<group name="race_mapping" List.ItemID="-617625559" List.ParentItemID="466232177">
+						<instance_reference name="race_key" value="racebps\british_africa" />
+						<instance_reference name="presentation_entity_override" value="ebps\races\british_africa\weapons\small_arms\machine_guns\heavy_machine_gun\w_vickers_hmg_africa_uk" />
+						<instance_reference name="presentation_squad_override" value="sbps\races\british_africa\team_weapons\hmg_vickers_africa_uk" />
+					</group>
+					<group name="race_mapping" List.ItemID="-1340883893" List.ParentItemID="1078823745">
+						<instance_reference name="race_key" value="racebps\afrika_korps" />
+						<instance_reference name="presentation_entity_override" value="ebps\races\afrika_korps\weapons\small_arms\machine_gun\heavy_machine_gun\w_mg34_hmg_ak" />
+						<instance_reference name="presentation_squad_override" value="sbps\races\afrika_korps\team_weapons\hmg_mg34_ak" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\interactive_object_ext" List.ItemID="-1526765542" List.ParentItemID="-1526765542">
+				<list name="type_list">
+					<group name="type" List.ItemID="2073484399" List.ParentItemID="2073484399">
+						<enum name="interaction_type" value="repair" overrideParent="True" />
+						<int name="prefer_number" value="-1" overrideParent="True" />
+					</group>
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2126326" />
+		<instance_reference name="parent_pbg" value="ebps\races\german\weapons\small_arms\machine_gun\heavy_machine_gun\w_mg42_hmg_ger" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\weapon_ext" overrideParent="True" List.ItemID="-1556843020" List.ParentItemID="-1556843020">
+				<instance_reference name="weapon" value="weapon\german\small_arms\machine_gun\heavy_machine_gun\mg42_hmg_ger_sp_gela" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\team_weapon_ext" List.ItemID="-533044593" List.ParentItemID="-533044593">
+				<list name="role_list">
+					<group name="role" List.ItemID="2001175641" List.ParentItemID="2001175641">
+						<string name="setup_join_sync_marker_override" value="loc_loader_takeover" overrideParent="True" />
+						<string name="setup_position_marker" value="loc_loader_takeover" overrideParent="True" />
+						<string name="teardown_position_marker" value="loc_loader" overrideParent="True" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_inventory_item_ext" overrideParent="True" List.ItemID="1488624709" List.ParentItemID="1488624709">
+				<template_reference name="simulation_item" value="sim_inventory_item\sim_inventory_item">
+					<int name="capacity_required" value="0" />
+					<group name="ownership_attributes">
+						<enum name="compatible_owner_type" value="entity" />
+						<enum name="ownership_sharing_type" value="single" />
+						<float name="drop_on_death_chance" value="1" />
+						<bool name="auto_equip" value="False" />
+					</group>
+					<template_reference name="item_data" value="sim_inventory_item\sim_item_data\attachment_inventory_data">
+						<template_reference name="attachment_data" value="options\attachment_types\entity_attachment">
+							<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+								<template_reference name="attach_data" value="attachments\attach_data">
+									<string name="marker_name_parent" value="motionextraction_m" />
+									<string name="parent_rigidbody_target_name" value="" />
+									<enum name="game_object_attachment_type" value="scenegraph" />
+								</template_reference>
+								<instance_reference name="ebp" value="ebps\races\german\weapons\small_arms\machine_gun\heavy_machine_gun\w_mg42_hmg_ger_sp" overrideParent="True" />
+								<group name="attachment_flags">
+									<bool name="sim_only" value="False" />
+									<bool name="no_pathfinding" value="True" />
+									<bool name="not_snappable" value="True" />
+									<bool name="restore_snap_to_ground_on_detach" value="True" />
+									<bool name="no_sim_update" value="False" />
+									<bool name="join_parent_squad" value="False" />
+									<bool name="redirect_damage_to_parent_entity" value="True" />
+									<bool name="receive_parent_animations" value="True" overrideParent="True" />
+									<bool name="receive_parent_death" value="False" />
+								</group>
+							</template_reference>
+						</template_reference>
+					</template_reference>
+					<string name="default_slot" value="" />
+					<enum name="category" value="special" overrideParent="True" />
+				</template_reference>
+				<group name="requirement">
+					<state_tree_node name="statetree_condition_node" value="" />
+					<instance_reference name="requirement_param" value="" />
+					<state_tree_node name="statetree_condition_default_command_prioritize_as_success" value="" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\recrewable_ext" List.ItemID="-1403996397" List.ParentItemID="-1403996397">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-766068749" List.ParentItemID="-766068749">
+						<group name="info">
+							<instance_reference name="reinforce_entity_blueprint" value="ebps\races\american\infantry\crew_hmg_us" overrideParent="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-1159727804" List.ParentItemID="-1159727804">
+				<bool name="can_repair" value="True" overrideParent="True" />
+				<bool name="regeneration_disabled" value="False" overrideParent="True" />
+				<float name="target_size" value="0.5" overrideParent="True" />
+				<template_reference name="armor_layout_option" value="options\ebpextensions\healthext\armor_layouts\armor_layout_uniform">
+					<float name="armor" value="60" overrideParent="True" />
+				</template_reference>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="1451363983" List.ParentItemID="1451363983">
+				<group name="speech_parameters">
+					<string name="unit_code" value="hmg" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\presentation_override_ext" List.ItemID="1391098797" List.ParentItemID="1391098797">
+				<list name="race_mapping_list" overrideParent="True">
+					<group name="race_mapping" overrideParent="True" List.ItemID="1880214732" List.ParentItemID="-1882622971">
+						<instance_reference name="race_key" value="racebps\americans" />
+						<instance_reference name="presentation_entity_override" value="ebps\races\american\weapons\small_arms\machine_guns\heavy_machine_gun\w_30cal_hmg_us" />
+						<instance_reference name="presentation_squad_override" value="sbps\races\american\team_weapons\hmg_30cal_us" />
+					</group>
+					<group name="race_mapping" List.ItemID="913946488" List.ParentItemID="1217009166">
+						<instance_reference name="race_key" value="racebps\british" />
+						<instance_reference name="presentation_entity_override" value="ebps\races\british\weapons\small_arms\machine_guns\heavy_machine_gun\w_vickers_hmg_uk" />
+						<instance_reference name="presentation_squad_override" value="sbps\races\british\team_weapons\hmg_vickers_uk" />
+					</group>
+					<group name="race_mapping" List.ItemID="-1033184008" List.ParentItemID="466232177">
+						<instance_reference name="race_key" value="racebps\british_africa" />
+						<instance_reference name="presentation_entity_override" value="ebps\races\british_africa\weapons\small_arms\machine_guns\heavy_machine_gun\w_vickers_hmg_africa_uk" />
+						<instance_reference name="presentation_squad_override" value="sbps\races\british_africa\team_weapons\hmg_vickers_africa_uk" />
+					</group>
+					<group name="race_mapping" List.ItemID="-354406519" List.ParentItemID="1078823745">
+						<instance_reference name="race_key" value="racebps\afrika_korps" />
+						<instance_reference name="presentation_entity_override" value="ebps\races\afrika_korps\weapons\small_arms\machine_gun\heavy_machine_gun\w_mg34_hmg_ak" />
+						<instance_reference name="presentation_squad_override" value="sbps\races\afrika_korps\team_weapons\hmg_mg34_ak" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\interactive_object_ext" List.ItemID="-1526765542" List.ParentItemID="-1526765542">
+				<list name="type_list">
+					<group name="type" List.ItemID="2073484399" List.ParentItemID="2073484399">
+						<enum name="interaction_type" value="repair" overrideParent="True" />
+						<int name="prefer_number" value="-1" overrideParent="True" />
+					</group>
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2126326" />
+		<instance_reference name="parent_pbg" value="ebps\races\german\weapons\small_arms\machine_gun\heavy_machine_gun\w_mg42_hmg_ger" />
+	</variant>
+</instance>

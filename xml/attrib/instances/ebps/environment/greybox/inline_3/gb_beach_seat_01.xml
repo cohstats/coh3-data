@@ -1,0 +1,52 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1588943975" List.ParentItemID="-1588943975">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\greybox\inline_3\il3_beach_seat_01" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="1239090663" List.ParentItemID="1239090663">
+				<instance_reference name="hit_material" value="hit_material\wood" overrideParent="True" />
+				<float name="hit_chance" value="1" overrideParent="True" />
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\burn_ext" List.ItemID="1447662002" List.ListAction="Append">
+				<float name="on_fire_damage_per_sec" value="2" />
+				<float name="on_fire_decay_amount_per_sec" value="-1" />
+				<float name="on_fire_threshold" value="2" />
+				<float name="max_fire_damage_per_second" value="10000" />
+				<float name="on_fire_health_percentage" value="-1" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="183878" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\object_path_blocker" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1588943975" List.ParentItemID="-1588943975">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\greybox\inline_3\il3_beach_seat_01" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="1239090663" List.ParentItemID="1239090663">
+				<instance_reference name="hit_material" value="hit_material\wood" overrideParent="True" />
+				<float name="hit_chance" value="1" overrideParent="True" />
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\burn_ext" List.ItemID="1447662002" List.ListAction="Append">
+				<float name="on_fire_damage_per_sec" value="2" />
+				<float name="on_fire_decay_amount_per_sec" value="-1" />
+				<float name="on_fire_threshold" value="2" />
+				<float name="max_fire_damage_per_second" value="10000" />
+				<float name="on_fire_health_percentage" value="-1" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="183878" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\object_path_blocker" />
+	</variant>
+</instance>

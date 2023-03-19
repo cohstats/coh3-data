@@ -1,0 +1,30 @@
+<instance version="5" description="" template="army_skin">
+	<variant name="default">
+		<group name="army_skin_bag">
+			<locstring name="description" value="11226933" overrideParent="True" />
+			<template_reference name="inventory_item" value="inventory_item">
+				<uniqueid name="server_id" value="454533" />
+				<list name="races">
+					<instance_reference name="race" value="racebps\germans" List.ItemID="-1679959928" List.ListAction="Append" />
+				</list>
+				<list name="inventory_item_categories">
+					<instance_reference name="inventory_item_category" value="inventory_item_category\cosmetics\german\vehicles\armored_car_ger" List.ItemID="-156948364" List.ListAction="Append" />
+				</list>
+				<list name="inventory_item_attributes" removedIds="-1654155119, 1047926885">
+					<instance_reference name="inventory_item_attribute" value="inventory_item_attribute\tag" List.ItemID="-846765176" List.ListAction="Append" />
+				</list>
+				<bool name="droppable" value="False" overrideParent="True" />
+				<int name="ui_priority" value="0" overrideParent="True" />
+				<instance_reference name="rarity" value="loot_tier\common" overrideParent="True" />
+			</template_reference>
+			<locstring name="name" value="11227160" overrideParent="True" />
+			<list name="unit_references">
+				<instance_reference name="squad" value="sbps\races\german\vehicles\armored_car_ger" List.ItemID="-1919033809" List.ListAction="Append" />
+			</list>
+			<file name="icon" value="races\german\vehicles\armored_car_german" overrideParent="True" />
+			<file name="icon_secondary_small" value="common\loadout\vehicles_icn" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2103612" />
+		<instance_reference name="parent_pbg" value="army_skin\army_skin_root" />
+	</variant>
+</instance>

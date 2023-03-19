@@ -1,0 +1,108 @@
+<instance version="5" description="Dummy crew that mans an HMG without health/popcap" template="ebps">
+	<variant name="default">
+		<list name="extensions" removedIds="-390229324">
+			<template_reference name="exts" value="ebpextensions\interactive_object_ext" List.ItemID="-1279485220" List.ParentItemID="-1279485220">
+				<list name="type_list">
+					<group name="type" List.ItemID="-243215887" List.ParentItemID="-243215887">
+						<enum name="interaction_type" value="repair" overrideParent="True" />
+						<int name="prefer_number" value="1" overrideParent="True" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="1633401127" List.ParentItemID="1633401127">
+				<float name="hitpoints" value="1" comment="Crew have lower health values" overrideParent="True" />
+				<bool name="regeneration_disabled" value="False" overrideParent="True" />
+				<float name="target_size" value="1.33" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="1172397610" List.ParentItemID="1172397610">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\moving_ext" List.ItemID="331328646" List.ParentItemID="331328646">
+				<enum_table name="speed_scaling_table">
+					<float name="reverse_max_speed" value="0" overrideParent="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sight_ext" List.ItemID="-1857005710" List.ParentItemID="-1857005710">
+				<group name="vertical_truesight">
+					<float name="eye_height" value="1.75" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="798101727" List.ParentItemID="798101727">
+				<enum name="weapon_targeting" value="no_targeting" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\population_ext" List.ItemID="462745794" List.ParentItemID="462745794">
+				<float name="personnel_pop" value="0" overrideParent="True" />
+				<enum_table name="upkeep_per_pop_per_minute_override">
+					<float name="manpower" value="0" overrideParent="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="-427855829" List.ParentItemID="-427855829">
+				<string name="speaker_code" value="" overrideParent="True" />
+				<group name="speech_parameters">
+					<string name="class_code" value="" overrideParent="True" />
+					<string name="name_code" value="" overrideParent="True" />
+					<string name="unit_code" value="" overrideParent="True" />
+				</group>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2033729" />
+		<instance_reference name="parent_pbg" value="ebps\races\british\infantry\crew_hmg_uk" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions" removedIds="-390229324">
+			<template_reference name="exts" value="ebpextensions\interactive_object_ext" List.ItemID="-1279485220" List.ParentItemID="-1279485220">
+				<list name="type_list">
+					<group name="type" List.ItemID="-243215887" List.ParentItemID="-243215887">
+						<enum name="interaction_type" value="repair" overrideParent="True" />
+						<int name="prefer_number" value="1" overrideParent="True" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="1633401127" List.ParentItemID="1633401127">
+				<float name="hitpoints" value="1" comment="Crew have lower health values" overrideParent="True" />
+				<bool name="regeneration_disabled" value="False" overrideParent="True" />
+				<float name="target_size" value="1.33" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="1172397610" List.ParentItemID="1172397610">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\moving_ext" List.ItemID="331328646" List.ParentItemID="331328646">
+				<enum_table name="speed_scaling_table">
+					<float name="reverse_max_speed" value="0" overrideParent="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sight_ext" List.ItemID="-1857005710" List.ParentItemID="-1857005710">
+				<group name="vertical_truesight">
+					<float name="eye_height" value="1.75" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="798101727" List.ParentItemID="798101727">
+				<enum name="weapon_targeting" value="no_targeting" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\population_ext" List.ItemID="462745794" List.ParentItemID="462745794">
+				<float name="personnel_pop" value="0" overrideParent="True" />
+				<enum_table name="upkeep_per_pop_per_minute_override">
+					<float name="manpower" value="0" overrideParent="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="-427855829" List.ParentItemID="-427855829">
+				<string name="speaker_code" value="" overrideParent="True" />
+				<group name="speech_parameters">
+					<string name="class_code" value="" overrideParent="True" />
+					<string name="name_code" value="" overrideParent="True" />
+					<string name="unit_code" value="" overrideParent="True" />
+				</group>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2033729" />
+		<instance_reference name="parent_pbg" value="ebps\races\british\infantry\crew_hmg_uk" />
+	</variant>
+</instance>

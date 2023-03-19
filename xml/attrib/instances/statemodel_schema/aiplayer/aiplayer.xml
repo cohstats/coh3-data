@@ -1,0 +1,552 @@
+<instance version="5" description="Schema for the AIPlayer" template="statemodel_schema">
+	<variant name="default">
+		<uniqueid name="pbgid" value="186847" />
+		<group name="schema_bag">
+			<list name="bool_properties">
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="116813072">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="ai_global_ability_cooldown_bool" />
+				</template_reference>
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="1645650664">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="ai_production_on_cooldown" />
+				</template_reference>
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="1736942125">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="ai_production_window_active" />
+				</template_reference>
+			</list>
+			<list name="float_properties">
+				<template_reference name="float" value="statemodel_float_property" comment="KEEP THE FOLLOWING AVOIDANCE VALUES IN SYNC WITH &quot;NORMAL&quot; ai_strategizer_tuning_normal values!!!" List.ItemID="1174828942">
+					<float name="default" value="0" />
+					<enum name="float_property_id" value="ai_avoidance_min_delay" comment="Minimum time the AI must wait before noticing an avoidance object (grenade, mortor)" />
+				</template_reference>
+				<template_reference name="float" value="statemodel_float_property" List.ItemID="595089998">
+					<float name="default" value="2" />
+					<enum name="float_property_id" value="ai_avoidance_max_delay" comment="Maximum time the AI must wait before noticing an avoidance object (grenade, mortor). Random value inbetween two ranges will be returned" />
+				</template_reference>
+				<template_reference name="float" value="statemodel_float_property" List.ItemID="540579373">
+					<float name="default" value="1" />
+					<enum name="float_property_id" value="ai_avoidance_min_duration" comment="Minimum amount of time the avoidance object must be &quot;active&quot; for. If avoidance object goes off faster then this, we wont delay our reaction." />
+				</template_reference>
+				<template_reference name="float" value="statemodel_float_property" List.ItemID="1704128104">
+					<float name="default" value="2" />
+					<enum name="float_property_id" value="ai_avoidance_max_duration" comment="Maximum amount of time the avoidance object must be &quot;active&quot; for. If avoidance object goes off faster then this, we wont delay our reaction. A random value in this range will be returned and used to determine duration time" />
+				</template_reference>
+				<template_reference name="float" value="statemodel_float_property" List.ItemID="1113970668">
+					<float name="default" value="1" />
+					<enum name="float_property_id" value="ai_avoidance_outside_vision_box_delay" />
+				</template_reference>
+				<template_reference name="float" value="statemodel_float_property" List.ItemID="-359222921">
+					<float name="default" value="0" />
+					<enum name="float_property_id" value="ai_scratch_avoidance_delay" />
+				</template_reference>
+				<template_reference name="float" value="statemodel_float_property" List.ItemID="-150203924">
+					<float name="default" value="0" />
+					<enum name="float_property_id" value="ai_scratch_avoidance_duration" />
+				</template_reference>
+				<template_reference name="float" value="statemodel_float_property" List.ItemID="-745025427">
+					<float name="default" value="0" />
+					<enum name="float_property_id" value="ai_si_offense_delta_per_minute" comment="Strategizer Tuning: Controls how quickly we adjust the offense intention value." />
+				</template_reference>
+				<template_reference name="float" value="statemodel_float_property" List.ItemID="383009376">
+					<float name="default" value="0" />
+					<enum name="float_property_id" value="ai_si_fuel_update_interval_seconds" comment="Strategizer Tuning: Controls how frequently we check the fuel level." />
+				</template_reference>
+				<template_reference name="float" value="statemodel_float_property" List.ItemID="-1514334755">
+					<float name="default" value="0" />
+					<enum name="float_property_id" value="ai_si_munition_update_interval_seconds" comment="Strategizer Tuning: Controls how frequently we check the munition level." />
+				</template_reference>
+				<template_reference name="float" value="statemodel_float_property" comment="CONTROLLED BY STRATEGIZER" List.ItemID="-451215538">
+					<float name="default" value="0" />
+					<enum name="float_property_id" value="ai_global_ability_cooldown" />
+				</template_reference>
+				<template_reference name="float" value="statemodel_float_property" comment="Strategizer Tuning: Controls the weight for threats when pathfinding." List.ItemID="-1921513454">
+					<float name="default" value="1" />
+					<enum name="float_property_id" value="ai_pathfinding_offense_SI_weight" comment="Strategizer Tuning: Controls the weight for threats when pathfinding." />
+				</template_reference>
+				<template_reference name="float" value="statemodel_float_property" List.ItemID="-889694007">
+					<float name="default" value="30" />
+					<enum name="float_property_id" value="ai_production_batch_cooldown_seconds" />
+				</template_reference>
+				<template_reference name="float" value="statemodel_float_property" comment="Strategizer Tuning: Controls the weight for falling back squad queries." List.ItemID="-1183741450">
+					<float name="default" value="1" />
+					<enum name="float_property_id" value="ai_fallback_SI_weight" />
+				</template_reference>
+			</list>
+			<list name="int_properties">
+				<template_reference name="int" value="statemodel_int_property" List.ItemID="-1773848247">
+					<int name="default" value="0" />
+					<enum name="int_property_id" value="ai_encounters_collecting_squads" />
+				</template_reference>
+				<template_reference name="int" value="statemodel_int_property" List.ItemID="-606184737">
+					<int name="default" value="0" />
+					<enum name="int_property_id" value="ai_si_victory_point_behind_threshold" comment="Strategizer Tuning: Controls the tolarence threshold on victory point captured." />
+				</template_reference>
+				<template_reference name="int" value="statemodel_int_property" List.ItemID="14383949">
+					<int name="default" value="0" />
+					<enum name="int_property_id" value="ai_si_tech_focus_max" comment="Strategizer Tuning: Controls the max tech tier we can focus on." />
+				</template_reference>
+				<template_reference name="int" value="statemodel_int_property" List.ItemID="-1788908954">
+					<int name="default" value="0" />
+					<enum name="int_property_id" value="ai_si_infantry_focus_threshold" />
+				</template_reference>
+				<template_reference name="int" value="statemodel_int_property" comment="Set from statemodel tuning" List.ItemID="-1578597939">
+					<int name="default" value="0" />
+					<enum name="int_property_id" value="ai_max_capture_encounters" />
+				</template_reference>
+			</list>
+			<list name="vector3f_properties">
+			</list>
+			<list name="enum_table_properties">
+			</list>
+			<list name="target_properties">
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-1601822186">
+					<enum name="target_property_id" value="ai_scratch_enemy_target" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="2065574181">
+					<enum name="target_property_id" value="ai_scratch_ally_target" />
+				</template_reference>
+			</list>
+			<list name="list_properties">
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-1342353550">
+					<int name="max_list_size" value="1" />
+					<enum name="data_type" value="generic_handle" />
+					<enum name="list_property_id" value="ai_current_updating_squad" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="1034793586">
+					<int name="max_list_size" value="32" />
+					<enum name="data_type" value="pbgid" />
+					<enum name="list_property_id" value="ai_inprogress_production_pbgs" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="1827506526">
+					<int name="max_list_size" value="32" />
+					<enum name="data_type" value="target" />
+					<enum name="list_property_id" value="ai_suspected_threat_targets" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="1433918247">
+					<int name="max_list_size" value="64" />
+					<enum name="data_type" value="generic_handle" />
+					<enum name="list_property_id" value="ai_suspected_threat_squads" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="100471348">
+					<int name="max_list_size" value="64" />
+					<enum name="data_type" value="generic_handle" />
+					<enum name="list_property_id" value="ai_high_score_military_targets" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-249767755">
+					<int name="max_list_size" value="32" />
+					<enum name="data_type" value="generic_handle" />
+					<enum name="list_property_id" value="ai_airplanes" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-1529689291">
+					<int name="max_list_size" value="32" />
+					<enum name="data_type" value="generic_handle" />
+					<enum name="list_property_id" value="ai_bombers" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="679858811">
+					<int name="max_list_size" value="32" />
+					<enum name="data_type" value="generic_handle" />
+					<enum name="list_property_id" value="ai_airplanes_recon" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-1090178904">
+					<int name="max_list_size" value="32" />
+					<enum name="data_type" value="generic_handle" />
+					<enum name="list_property_id" value="ai_airplanes_supply" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-577915867">
+					<int name="max_list_size" value="32" />
+					<enum name="data_type" value="generic_handle" />
+					<enum name="list_property_id" value="ai_bombable_enemies" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-2035503910">
+					<int name="max_list_size" value="8" />
+					<enum name="data_type" value="generic_handle" />
+					<enum name="list_property_id" value="ai_out_of_supply_squads" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-1455848998">
+					<int name="max_list_size" value="8" />
+					<enum name="data_type" value="generic_handle" />
+					<enum name="list_property_id" value="ai_killable_enemy_military_targets" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="1200294683">
+					<int name="max_list_size" value="8" />
+					<enum name="data_type" value="generic_handle" />
+					<enum name="list_property_id" value="ai_multi_squad_clump_military_targets" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="823893238">
+					<int name="max_list_size" value="32" />
+					<enum name="data_type" value="generic_handle" />
+					<enum name="list_property_id" value="ai_ships" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="889529465">
+					<int name="max_list_size" value="32" />
+					<enum name="data_type" value="generic_handle" />
+					<enum name="list_property_id" value="ai_support_units" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="1419741273">
+					<int name="max_list_size" value="32" />
+					<enum name="data_type" value="pbgid" />
+					<enum name="list_property_id" value="ai_damage_ability_pbgs" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-1085252682">
+					<int name="max_list_size" value="64" />
+					<enum name="data_type" value="pbgid" />
+					<enum name="list_property_id" value="ai_damage_point_ability_pbgs" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="2068069289">
+					<int name="max_list_size" value="64" />
+					<enum name="data_type" value="pbgid" />
+					<enum name="list_property_id" value="ai_nodamage_point_ability_pbgs" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="1262796121">
+					<int name="max_list_size" value="64" />
+					<enum name="data_type" value="pbgid" />
+					<enum name="list_property_id" value="ai_vision_ability_pbgs" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-23595125">
+					<int name="max_list_size" value="128" />
+					<enum name="data_type" value="pbgid" />
+					<enum name="list_property_id" value="ai_spawn_ability_pbgs" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-277772033">
+					<int name="max_list_size" value="128" />
+					<enum name="data_type" value="pbgid" />
+					<enum name="list_property_id" value="ai_self_target_ability_pbgs" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-1283164154">
+					<int name="max_list_size" value="64" />
+					<enum name="data_type" value="pbgid" />
+					<enum name="list_property_id" value="ai_unknown_ability_pbgs" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-1857416710">
+					<int name="max_list_size" value="32" />
+					<enum name="data_type" value="pbgid" />
+					<enum name="list_property_id" value="ai_battlegroup_upgrade_pbgs" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-1034385080">
+					<int name="max_list_size" value="8" />
+					<enum name="data_type" value="pbgid" />
+					<enum name="list_property_id" value="ai_frontline_emplacement_pbgs" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-681795850">
+					<int name="max_list_size" value="8" />
+					<enum name="data_type" value="pbgid" />
+					<enum name="list_property_id" value="ai_backline_emplacement_pbgs" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="459647422">
+					<int name="max_list_size" value="8" />
+					<enum name="data_type" value="pbgid" />
+					<enum name="list_property_id" value="ai_support_emplacement_pbgs" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="591584171">
+					<int name="max_list_size" value="32" />
+					<enum name="data_type" value="generic_handle" />
+					<enum name="list_property_id" value="ai_howitzer_emplacements" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-902052648">
+					<int name="max_list_size" value="64" />
+					<enum name="data_type" value="target" />
+					<enum name="list_property_id" value="ai_active_ability_casters" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-1030107279">
+					<int name="max_list_size" value="16" />
+					<enum name="data_type" value="generic_handle" />
+					<enum name="list_property_id" value="ai_heal_squads" />
+				</template_reference>
+			</list>
+			<list name="pbgid_properties">
+				<template_reference name="pbgid" value="statemodel_pbgid_property" List.ItemID="-451863864">
+					<enum name="pbgid_property_id" value="ai_scratch_pbg" />
+					<instance_reference name="default" value="" />
+				</template_reference>
+				<template_reference name="pbgid" value="statemodel_pbgid_property" List.ItemID="-1436528459">
+					<enum name="pbgid_property_id" value="ai_scratch_pbg_again" />
+					<instance_reference name="default" value="" />
+				</template_reference>
+			</list>
+			<list name="sub_schemas">
+			</list>
+			<list name="attribute_enum_properties">
+			</list>
+			<list name="generic_handle_properties">
+			</list>
+		</group>
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+	<variant name="sp">
+		<uniqueid name="pbgid" value="186847" />
+		<group name="schema_bag">
+			<list name="bool_properties">
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="116813072">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="ai_global_ability_cooldown_bool" />
+				</template_reference>
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="1645650664">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="ai_production_on_cooldown" />
+				</template_reference>
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="1736942125">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="ai_production_window_active" />
+				</template_reference>
+			</list>
+			<list name="float_properties">
+				<template_reference name="float" value="statemodel_float_property" comment="KEEP THE FOLLOWING AVOIDANCE VALUES IN SYNC WITH &quot;NORMAL&quot; ai_strategizer_tuning_normal values!!!" List.ItemID="1174828942">
+					<float name="default" value="0" />
+					<enum name="float_property_id" value="ai_avoidance_min_delay" comment="Minimum time the AI must wait before noticing an avoidance object (grenade, mortor)" />
+				</template_reference>
+				<template_reference name="float" value="statemodel_float_property" List.ItemID="595089998">
+					<float name="default" value="2" />
+					<enum name="float_property_id" value="ai_avoidance_max_delay" comment="Maximum time the AI must wait before noticing an avoidance object (grenade, mortor). Random value inbetween two ranges will be returned" />
+				</template_reference>
+				<template_reference name="float" value="statemodel_float_property" List.ItemID="540579373">
+					<float name="default" value="1" />
+					<enum name="float_property_id" value="ai_avoidance_min_duration" comment="Minimum amount of time the avoidance object must be &quot;active&quot; for. If avoidance object goes off faster then this, we wont delay our reaction." />
+				</template_reference>
+				<template_reference name="float" value="statemodel_float_property" List.ItemID="1704128104">
+					<float name="default" value="2" />
+					<enum name="float_property_id" value="ai_avoidance_max_duration" comment="Maximum amount of time the avoidance object must be &quot;active&quot; for. If avoidance object goes off faster then this, we wont delay our reaction. A random value in this range will be returned and used to determine duration time" />
+				</template_reference>
+				<template_reference name="float" value="statemodel_float_property" List.ItemID="1113970668">
+					<float name="default" value="1" />
+					<enum name="float_property_id" value="ai_avoidance_outside_vision_box_delay" />
+				</template_reference>
+				<template_reference name="float" value="statemodel_float_property" List.ItemID="-359222921">
+					<float name="default" value="0" />
+					<enum name="float_property_id" value="ai_scratch_avoidance_delay" />
+				</template_reference>
+				<template_reference name="float" value="statemodel_float_property" List.ItemID="-150203924">
+					<float name="default" value="0" />
+					<enum name="float_property_id" value="ai_scratch_avoidance_duration" />
+				</template_reference>
+				<template_reference name="float" value="statemodel_float_property" List.ItemID="-745025427">
+					<float name="default" value="0" />
+					<enum name="float_property_id" value="ai_si_offense_delta_per_minute" comment="Strategizer Tuning: Controls how quickly we adjust the offense intention value." />
+				</template_reference>
+				<template_reference name="float" value="statemodel_float_property" List.ItemID="383009376">
+					<float name="default" value="0" />
+					<enum name="float_property_id" value="ai_si_fuel_update_interval_seconds" comment="Strategizer Tuning: Controls how frequently we check the fuel level." />
+				</template_reference>
+				<template_reference name="float" value="statemodel_float_property" List.ItemID="-1514334755">
+					<float name="default" value="0" />
+					<enum name="float_property_id" value="ai_si_munition_update_interval_seconds" comment="Strategizer Tuning: Controls how frequently we check the munition level." />
+				</template_reference>
+				<template_reference name="float" value="statemodel_float_property" comment="CONTROLLED BY STRATEGIZER" List.ItemID="-451215538">
+					<float name="default" value="0" />
+					<enum name="float_property_id" value="ai_global_ability_cooldown" />
+				</template_reference>
+				<template_reference name="float" value="statemodel_float_property" comment="Strategizer Tuning: Controls the weight for threats when pathfinding." List.ItemID="-1921513454">
+					<float name="default" value="1" />
+					<enum name="float_property_id" value="ai_pathfinding_offense_SI_weight" comment="Strategizer Tuning: Controls the weight for threats when pathfinding." />
+				</template_reference>
+				<template_reference name="float" value="statemodel_float_property" List.ItemID="-889694007">
+					<float name="default" value="30" />
+					<enum name="float_property_id" value="ai_production_batch_cooldown_seconds" />
+				</template_reference>
+				<template_reference name="float" value="statemodel_float_property" comment="Strategizer Tuning: Controls the weight for falling back squad queries." List.ItemID="-1183741450">
+					<float name="default" value="1" />
+					<enum name="float_property_id" value="ai_fallback_SI_weight" />
+				</template_reference>
+			</list>
+			<list name="int_properties">
+				<template_reference name="int" value="statemodel_int_property" List.ItemID="-1773848247">
+					<int name="default" value="0" />
+					<enum name="int_property_id" value="ai_encounters_collecting_squads" />
+				</template_reference>
+				<template_reference name="int" value="statemodel_int_property" List.ItemID="-606184737">
+					<int name="default" value="0" />
+					<enum name="int_property_id" value="ai_si_victory_point_behind_threshold" comment="Strategizer Tuning: Controls the tolarence threshold on victory point captured." />
+				</template_reference>
+				<template_reference name="int" value="statemodel_int_property" List.ItemID="14383949">
+					<int name="default" value="0" />
+					<enum name="int_property_id" value="ai_si_tech_focus_max" comment="Strategizer Tuning: Controls the max tech tier we can focus on." />
+				</template_reference>
+				<template_reference name="int" value="statemodel_int_property" List.ItemID="-1788908954">
+					<int name="default" value="0" />
+					<enum name="int_property_id" value="ai_si_infantry_focus_threshold" />
+				</template_reference>
+				<template_reference name="int" value="statemodel_int_property" comment="Set from statemodel tuning" List.ItemID="-1578597939">
+					<int name="default" value="0" />
+					<enum name="int_property_id" value="ai_max_capture_encounters" />
+				</template_reference>
+			</list>
+			<list name="vector3f_properties">
+			</list>
+			<list name="enum_table_properties">
+			</list>
+			<list name="target_properties">
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-1601822186">
+					<enum name="target_property_id" value="ai_scratch_enemy_target" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="2065574181">
+					<enum name="target_property_id" value="ai_scratch_ally_target" />
+				</template_reference>
+			</list>
+			<list name="list_properties">
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-1342353550">
+					<int name="max_list_size" value="1" />
+					<enum name="data_type" value="generic_handle" />
+					<enum name="list_property_id" value="ai_current_updating_squad" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="1034793586">
+					<int name="max_list_size" value="32" />
+					<enum name="data_type" value="pbgid" />
+					<enum name="list_property_id" value="ai_inprogress_production_pbgs" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="1827506526">
+					<int name="max_list_size" value="32" />
+					<enum name="data_type" value="target" />
+					<enum name="list_property_id" value="ai_suspected_threat_targets" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="1433918247">
+					<int name="max_list_size" value="64" />
+					<enum name="data_type" value="generic_handle" />
+					<enum name="list_property_id" value="ai_suspected_threat_squads" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="100471348">
+					<int name="max_list_size" value="64" />
+					<enum name="data_type" value="generic_handle" />
+					<enum name="list_property_id" value="ai_high_score_military_targets" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-249767755">
+					<int name="max_list_size" value="32" />
+					<enum name="data_type" value="generic_handle" />
+					<enum name="list_property_id" value="ai_airplanes" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-1529689291">
+					<int name="max_list_size" value="32" />
+					<enum name="data_type" value="generic_handle" />
+					<enum name="list_property_id" value="ai_bombers" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="679858811">
+					<int name="max_list_size" value="32" />
+					<enum name="data_type" value="generic_handle" />
+					<enum name="list_property_id" value="ai_airplanes_recon" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-1090178904">
+					<int name="max_list_size" value="32" />
+					<enum name="data_type" value="generic_handle" />
+					<enum name="list_property_id" value="ai_airplanes_supply" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-577915867">
+					<int name="max_list_size" value="32" />
+					<enum name="data_type" value="generic_handle" />
+					<enum name="list_property_id" value="ai_bombable_enemies" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-2035503910">
+					<int name="max_list_size" value="8" />
+					<enum name="data_type" value="generic_handle" />
+					<enum name="list_property_id" value="ai_out_of_supply_squads" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-1455848998">
+					<int name="max_list_size" value="8" />
+					<enum name="data_type" value="generic_handle" />
+					<enum name="list_property_id" value="ai_killable_enemy_military_targets" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="1200294683">
+					<int name="max_list_size" value="8" />
+					<enum name="data_type" value="generic_handle" />
+					<enum name="list_property_id" value="ai_multi_squad_clump_military_targets" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="823893238">
+					<int name="max_list_size" value="32" />
+					<enum name="data_type" value="generic_handle" />
+					<enum name="list_property_id" value="ai_ships" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="889529465">
+					<int name="max_list_size" value="32" />
+					<enum name="data_type" value="generic_handle" />
+					<enum name="list_property_id" value="ai_support_units" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="1419741273">
+					<int name="max_list_size" value="32" />
+					<enum name="data_type" value="pbgid" />
+					<enum name="list_property_id" value="ai_damage_ability_pbgs" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-1085252682">
+					<int name="max_list_size" value="64" />
+					<enum name="data_type" value="pbgid" />
+					<enum name="list_property_id" value="ai_damage_point_ability_pbgs" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="2068069289">
+					<int name="max_list_size" value="64" />
+					<enum name="data_type" value="pbgid" />
+					<enum name="list_property_id" value="ai_nodamage_point_ability_pbgs" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="1262796121">
+					<int name="max_list_size" value="64" />
+					<enum name="data_type" value="pbgid" />
+					<enum name="list_property_id" value="ai_vision_ability_pbgs" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-23595125">
+					<int name="max_list_size" value="128" />
+					<enum name="data_type" value="pbgid" />
+					<enum name="list_property_id" value="ai_spawn_ability_pbgs" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-277772033">
+					<int name="max_list_size" value="128" />
+					<enum name="data_type" value="pbgid" />
+					<enum name="list_property_id" value="ai_self_target_ability_pbgs" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-1283164154">
+					<int name="max_list_size" value="64" />
+					<enum name="data_type" value="pbgid" />
+					<enum name="list_property_id" value="ai_unknown_ability_pbgs" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-1857416710">
+					<int name="max_list_size" value="32" />
+					<enum name="data_type" value="pbgid" />
+					<enum name="list_property_id" value="ai_battlegroup_upgrade_pbgs" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-1034385080">
+					<int name="max_list_size" value="8" />
+					<enum name="data_type" value="pbgid" />
+					<enum name="list_property_id" value="ai_frontline_emplacement_pbgs" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-681795850">
+					<int name="max_list_size" value="8" />
+					<enum name="data_type" value="pbgid" />
+					<enum name="list_property_id" value="ai_backline_emplacement_pbgs" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="459647422">
+					<int name="max_list_size" value="8" />
+					<enum name="data_type" value="pbgid" />
+					<enum name="list_property_id" value="ai_support_emplacement_pbgs" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="591584171">
+					<int name="max_list_size" value="32" />
+					<enum name="data_type" value="generic_handle" />
+					<enum name="list_property_id" value="ai_howitzer_emplacements" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-902052648">
+					<int name="max_list_size" value="64" />
+					<enum name="data_type" value="target" />
+					<enum name="list_property_id" value="ai_active_ability_casters" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-1030107279">
+					<int name="max_list_size" value="16" />
+					<enum name="data_type" value="generic_handle" />
+					<enum name="list_property_id" value="ai_heal_squads" />
+				</template_reference>
+			</list>
+			<list name="pbgid_properties">
+				<template_reference name="pbgid" value="statemodel_pbgid_property" List.ItemID="-451863864">
+					<enum name="pbgid_property_id" value="ai_scratch_pbg" />
+					<instance_reference name="default" value="" />
+				</template_reference>
+				<template_reference name="pbgid" value="statemodel_pbgid_property" List.ItemID="-1436528459">
+					<enum name="pbgid_property_id" value="ai_scratch_pbg_again" />
+					<instance_reference name="default" value="" />
+				</template_reference>
+			</list>
+			<list name="sub_schemas">
+			</list>
+			<list name="attribute_enum_properties">
+			</list>
+			<list name="generic_handle_properties">
+			</list>
+		</group>
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+</instance>

@@ -1,0 +1,154 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1588943975" List.ParentItemID="-1588943975">
+				<bool name="always_revealed_in_fow" value="False" overrideParent="True" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\objects\defenses\sandbags\sandbag_emplacement_02" overrideParent="True" />
+				<float name="animator_scale" value="50" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-844435906" List.ParentItemID="-844435906">
+				<bool name="is_invincible" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="1239090663" List.ParentItemID="1239090663">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\wall_ext" List.ItemID="1647175722" List.ListAction="Append">
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\burn_ext" List.ItemID="1890777408" List.ListAction="Append">
+				<float name="on_fire_damage_per_sec" value="2" />
+				<float name="on_fire_decay_amount_per_sec" value="-1" />
+				<float name="on_fire_threshold" value="2" />
+				<float name="max_fire_damage_per_second" value="10000" />
+				<float name="on_fire_health_percentage" value="-1" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\walkable_surface_ext" comment="NOTE: For walkable surfaces to function, you'll have to input their &quot;animator_dgm_name&quot;" List.ItemID="2044991493" List.ListAction="Append">
+				<enum name="cover_type" value="" />
+				<float name="seconds_after_death" value="0" />
+				<file name="animator_dgm_name" value="art\environment\greybox\bridges\gb_bridge_set\gb_bridge_4x4" overrideParent="True" />
+				<bool name="remove_on_death" value="True" />
+				<bool name="start_active" value="True" />
+				<template_reference name="impass_override" value="options\ebpextensions\walkablesurfaceext\impass_override">
+					<list name="block_path">
+					</list>
+					<bool name="cant_build" value="True" />
+				</template_reference>
+				<bool name="should_rasterize_partial_cells" value="True" />
+				<bool name="stackable" value="True" />
+				<enum name="walkable_surface_on_remove_action" value="move_entities" />
+				<enum name="walkable_surface_terrain_type" value="Town" overrideParent="True" />
+				<list name="remove_on_death_meshes">
+				</list>
+				<bool name="only_override_above_terrain" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\mission_entry_point_ext" List.ItemID="-264039737" List.ListAction="Append">
+				<bool name="is_popup_mission" value="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\movement_node_placeable_ext" List.ItemID="1533299698" List.ListAction="Append">
+				<bool name="snap_to_node" value="False" />
+				<bool name="is_notch_placeable" value="False" />
+				<bool name="is_node_blocker" value="False" />
+				<bool name="supply_block_adjacent_nodes" value="False" />
+				<bool name="is_buoy" value="False" />
+				<float name="buoy_connection_radius" value="30" />
+				<bool name="occupy_outline" value="True" />
+				<bool name="is_supply_blocker" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\statemodel_ext" List.ItemID="-1863463405" List.ListAction="Append">
+				<instance_reference name="schema" value="statemodel_schema\campaign\movement_nodes" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\audio_ext" List.ItemID="-704329517" List.ListAction="Append">
+				<list name="rtpc_events">
+				</list>
+				<string name="single_select_event" value="" />
+				<int name="music_importance" value="0" />
+				<int name="combat_importance" value="0" />
+				<list name="select_audible_to_relation_list">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\board_turn_ext" List.ItemID="-978449209" List.ListAction="Append">
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2059202" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\object_path_blocker" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1588943975" List.ParentItemID="-1588943975">
+				<bool name="always_revealed_in_fow" value="False" overrideParent="True" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\objects\defenses\sandbags\sandbag_emplacement_02" overrideParent="True" />
+				<float name="animator_scale" value="50" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-844435906" List.ParentItemID="-844435906">
+				<bool name="is_invincible" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="1239090663" List.ParentItemID="1239090663">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\wall_ext" List.ItemID="1647175722" List.ListAction="Append">
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\burn_ext" List.ItemID="1890777408" List.ListAction="Append">
+				<float name="on_fire_damage_per_sec" value="2" />
+				<float name="on_fire_decay_amount_per_sec" value="-1" />
+				<float name="on_fire_threshold" value="2" />
+				<float name="max_fire_damage_per_second" value="10000" />
+				<float name="on_fire_health_percentage" value="-1" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\walkable_surface_ext" comment="NOTE: For walkable surfaces to function, you'll have to input their &quot;animator_dgm_name&quot;" List.ItemID="2044991493" List.ListAction="Append">
+				<enum name="cover_type" value="" />
+				<float name="seconds_after_death" value="0" />
+				<file name="animator_dgm_name" value="art\environment\greybox\bridges\gb_bridge_set\gb_bridge_4x4" overrideParent="True" />
+				<bool name="remove_on_death" value="True" />
+				<bool name="start_active" value="True" />
+				<template_reference name="impass_override" value="options\ebpextensions\walkablesurfaceext\impass_override">
+					<list name="block_path">
+					</list>
+					<bool name="cant_build" value="True" />
+				</template_reference>
+				<bool name="should_rasterize_partial_cells" value="True" />
+				<bool name="stackable" value="True" />
+				<enum name="walkable_surface_on_remove_action" value="move_entities" />
+				<enum name="walkable_surface_terrain_type" value="Town" overrideParent="True" />
+				<list name="remove_on_death_meshes">
+				</list>
+				<bool name="only_override_above_terrain" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\mission_entry_point_ext" List.ItemID="-264039737" List.ListAction="Append">
+				<bool name="is_popup_mission" value="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\movement_node_placeable_ext" List.ItemID="1533299698" List.ListAction="Append">
+				<bool name="snap_to_node" value="False" />
+				<bool name="is_notch_placeable" value="False" />
+				<bool name="is_node_blocker" value="False" />
+				<bool name="supply_block_adjacent_nodes" value="False" />
+				<bool name="is_buoy" value="False" />
+				<float name="buoy_connection_radius" value="30" />
+				<bool name="occupy_outline" value="True" />
+				<bool name="is_supply_blocker" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\statemodel_ext" List.ItemID="-1863463405" List.ListAction="Append">
+				<instance_reference name="schema" value="statemodel_schema\campaign\movement_nodes" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\audio_ext" List.ItemID="-704329517" List.ListAction="Append">
+				<list name="rtpc_events">
+				</list>
+				<string name="single_select_event" value="" />
+				<int name="music_importance" value="0" />
+				<int name="combat_importance" value="0" />
+				<list name="select_audible_to_relation_list">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\board_turn_ext" List.ItemID="-978449209" List.ListAction="Append">
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2059202" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\object_path_blocker" />
+	</variant>
+</instance>

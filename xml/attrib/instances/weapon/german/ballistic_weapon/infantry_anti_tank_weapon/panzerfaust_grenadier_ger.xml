@@ -1,0 +1,418 @@
+<instance version="5" description="Panzerfaust weapon used by the Grenadier" template="weapon">
+	<variant name="default">
+		<group name="weapon_bag">
+			<group name="accuracy">
+				<float name="near" value="11" overrideParent="True" />
+				<float name="far" value="11" overrideParent="True" />
+				<float name="mid" value="11" overrideParent="True" />
+			</group>
+			<group name="aim">
+				<group name="fire_aim_time">
+					<float name="max" value="1" overrideParent="True" />
+					<float name="min" value="0.75" overrideParent="True" />
+				</group>
+				<group name="ready_aim_time">
+					<float name="max" value="1" overrideParent="True" />
+					<float name="min" value="1" overrideParent="True" />
+				</group>
+			</group>
+			<group name="anim_table">
+				<string name="state_name" value="ranged_weapon_state" overrideParent="True" />
+				<string name="track_horizontal" value="aim_horizontal" overrideParent="True" />
+				<string name="track_vertical" value="aim_vertical" overrideParent="True" />
+			</group>
+			<group name="area_effect">
+				<group name="accuracy">
+					<float name="far" value="5" overrideParent="True" />
+					<float name="near" value="5" overrideParent="True" />
+					<float name="mid" value="5" overrideParent="True" />
+				</group>
+				<group name="damage">
+					<float name="far" value="0.05" overrideParent="True" />
+					<float name="mid" value="0.15" overrideParent="True" />
+				</group>
+				<group name="damage_friendly">
+					<float name="far" value="0.025" overrideParent="True" />
+					<float name="near" value="0.5" overrideParent="True" />
+					<float name="mid" value="0.075" overrideParent="True" />
+				</group>
+				<group name="distance">
+					<float name="far" value="0.25" overrideParent="True" />
+					<float name="near" value="0.15" overrideParent="True" />
+					<float name="mid" value="0.2" overrideParent="True" />
+				</group>
+				<bool name="has_friendly_fire" value="False" overrideParent="True" />
+				<template_reference name="aoe_penetration" value="tables\range_table">
+					<float name="far" value="65" overrideParent="True" />
+					<float name="mid" value="70" overrideParent="True" />
+					<float name="near" value="75" overrideParent="True" />
+				</template_reference>
+			</group>
+			<group name="behaviour">
+				<float name="combat_slot_offset" value="0" overrideParent="True" />
+				<bool name="enable_auto_target_search" value="True" overrideParent="True" />
+				<float name="ground_hit_rate" value="1" overrideParent="True" />
+				<bool name="prevents_prone" value="True" overrideParent="True" />
+				<bool name="substitute_weapon" value="True" overrideParent="True" />
+				<float name="reaction_radius" value="3" overrideParent="True" />
+				<enum name="attack_ground_type" value="anywhere" overrideParent="True" />
+				<bool name="hit_everything_on_miss" value="True" overrideParent="True" />
+				<bool name="can_damage_allies" value="True" overrideParent="True" />
+			</group>
+			<group name="damage">
+				<float name="max" value="120" overrideParent="True" />
+				<float name="min" value="120" overrideParent="True" />
+				<enum name="damage_type" value="ballistic" overrideParent="True" />
+				<list name="on_penetrated_state_trees">
+					<group name="container" List.ItemID="-378842038" List.ListAction="Append">
+						<state_tree_node name="state_tree" value="trigger_critical\vehicle\conditional_engine_damage" />
+					</group>
+				</list>
+			</group>
+			<group name="fire">
+				<float name="wind_down" value="1" overrideParent="True" />
+			</group>
+			<float name="flinch_radius" value="10" overrideParent="True" />
+			<bool name="fx_always_visible" value="True" overrideParent="True" />
+			<string name="fx_munition_name" value="\cannon\shell_small" overrideParent="True" />
+			<bool name="fx_use_building_panel_normal" value="True" overrideParent="True" />
+			<group name="moving">
+				<float name="accuracy_multiplier" value="0.5" overrideParent="True" />
+			</group>
+			<group name="priority">
+				<float name="current_target" value="3" overrideParent="True" />
+				<group name="distance">
+					<float name="far" value="-10" overrideParent="True" />
+					<float name="near" value="60" overrideParent="True" />
+					<float name="mid" value="25" overrideParent="True" />
+				</group>
+				<float name="rotation" value="-0.05" overrideParent="True" />
+				<float name="penetration" value="40" overrideParent="True" />
+				<float name="suggested_target" value="1000" overrideParent="True" />
+				<float name="vs_armor_type" value="1" overrideParent="True" />
+			</group>
+			<group name="projectile">
+				<instance_reference name="projectile" value="ebps\gameplay\projectiles\races\german\p_gun_rocket_panzerfaust" overrideParent="True" />
+			</group>
+			<group name="range">
+				<float name="max" value="28" overrideParent="True" />
+			</group>
+			<group name="scatter">
+				<float name="angle_scatter" value="7.5" overrideParent="True" />
+				<float name="distance_scatter_max" value="10" overrideParent="True" />
+				<float name="distance_scatter_offset" value="0.2" overrideParent="True" />
+				<float name="distance_scatter_ratio" value="1" overrideParent="True" />
+				<float name="fow_angle_multiplier" value="1.25" overrideParent="True" />
+				<float name="fow_distance_multiplier" value="1.25" overrideParent="True" />
+			</group>
+			<group name="suppressed">
+				<float name="pinned_burst_multiplier" value="1" overrideParent="True" />
+				<float name="pinned_cooldown_multiplier" value="1" overrideParent="True" />
+				<float name="pinned_reload_multiplier" value="1" overrideParent="True" />
+				<float name="suppressed_burst_multiplier" value="1" overrideParent="True" />
+				<float name="suppressed_cooldown_multiplier" value="1" overrideParent="True" />
+				<float name="suppressed_reload_multiplier" value="1" overrideParent="True" />
+			</group>
+			<group name="suppression">
+				<group name="target_pinned_multipliers">
+					<float name="accuracy_multiplier" value="0.25" overrideParent="True" />
+					<float name="damage_multiplier" value="1" overrideParent="True" />
+					<float name="penetration_multiplier" value="1" overrideParent="True" />
+					<float name="suppression_multiplier" value="0.1" overrideParent="True" />
+				</group>
+				<group name="target_suppressed_multipliers">
+					<float name="accuracy_multiplier" value="0.5" overrideParent="True" />
+					<float name="damage_multiplier" value="1" overrideParent="True" />
+					<float name="penetration_multiplier" value="1" overrideParent="True" />
+					<float name="suppression_multiplier" value="0.5" overrideParent="True" />
+				</group>
+			</group>
+			<group name="tracking">
+				<float name="fire_cone_angle" value="5" overrideParent="True" />
+				<group name="normal">
+					<float name="max_down" value="-45" overrideParent="True" />
+					<float name="max_left" value="-45" overrideParent="True" />
+					<float name="max_right" value="45" overrideParent="True" />
+					<float name="max_up" value="45" overrideParent="True" />
+					<float name="speed_horizontal" value="90" overrideParent="True" />
+					<float name="speed_vertical" value="90" overrideParent="True" />
+				</group>
+			</group>
+			<group name="penetration">
+				<float name="near" value="1000" overrideParent="True" />
+				<float name="far" value="1000" overrideParent="True" />
+				<float name="mid" value="1000" overrideParent="True" />
+			</group>
+			<enum name="weapon_class" value="bazooka" overrideParent="True" />
+			<list name="target_type_table">
+				<group name="target_unit_type_multipliers" List.ItemID="-1082242888" List.ListAction="Append">
+					<enum name="unit_type" value="truck_4x4" />
+					<group name="weapon_multipliers">
+						<float name="accuracy_multiplier" value="1" />
+						<float name="damage_multiplier" value="0.8" />
+						<float name="penetration_multiplier" value="1" />
+						<float name="suppression_multiplier" value="1" />
+					</group>
+					<float name="base_damage_modifier" value="0" />
+				</group>
+			</list>
+			<enum_table name="cover_table">
+				<template_reference name="tp_heavy_cover" value="weapon_cover_info">
+					<float name="accuracy_multiplier" value="0.5" overrideParent="True" />
+					<float name="damage_multiplier" value="0.5" overrideParent="True" />
+					<float name="suppression_multiplier" value="0.1" overrideParent="True" />
+				</template_reference>
+				<template_reference name="tp_light_cover" value="weapon_cover_info">
+					<float name="accuracy_multiplier" value="0.5" overrideParent="True" />
+					<float name="suppression_multiplier" value="0.5" overrideParent="True" />
+				</template_reference>
+				<template_reference name="tp_negative_cover" value="weapon_cover_info">
+					<float name="accuracy_multiplier" value="1.25" overrideParent="True" />
+					<float name="damage_multiplier" value="1.25" overrideParent="True" />
+					<float name="suppression_multiplier" value="1.5" overrideParent="True" />
+				</template_reference>
+				<template_reference name="tp_smoke_cover" value="weapon_cover_info">
+					<float name="accuracy_multiplier" value="0.25" overrideParent="True" />
+				</template_reference>
+				<template_reference name="tp_garrison_cover" value="weapon_cover_info">
+					<float name="accuracy_multiplier" value="0.4" overrideParent="True" />
+					<float name="damage_multiplier" value="0.25" overrideParent="True" />
+					<float name="suppression_multiplier" value="0" overrideParent="True" />
+				</template_reference>
+			</enum_table>
+			<enum name="default_attack_type" value="ballistic" overrideParent="True" />
+			<template_reference name="animation_role_option" value="options\animation_role\animation_role_flavour_option" overrideParent="True">
+				<list name="squad_animation_roles">
+					<group name="flavour" List.ItemID="1775922406">
+						<list name="squad_contents">
+							<group name="squad_member" List.ItemID="-194013296">
+								<list name="animation_variants">
+									<instance_reference name="animation_role" value="animation_role\soldier\abilities\s_panzerfaust" List.ItemID="1187134694" />
+								</list>
+							</group>
+						</list>
+						<enum name="key" value="wehrmacht" />
+					</group>
+				</list>
+			</template_reference>
+			<group name="height_bonuses">
+				<group name="height_advantage">
+					<float name="height_threshold" value="3.5" overrideParent="True" />
+				</group>
+			</group>
+			<group name="deflection">
+				<bool name="has_deflection_damage" value="False" overrideParent="True" />
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="173667" />
+		<instance_reference name="parent_pbg" value="weapon\common\parent\ballistic_parent" />
+	</variant>
+	<variant name="sp">
+		<group name="weapon_bag">
+			<group name="accuracy">
+				<float name="near" value="11" overrideParent="True" />
+				<float name="far" value="11" overrideParent="True" />
+				<float name="mid" value="11" overrideParent="True" />
+			</group>
+			<group name="aim">
+				<group name="fire_aim_time">
+					<float name="max" value="1" overrideParent="True" />
+					<float name="min" value="0.75" overrideParent="True" />
+				</group>
+				<group name="ready_aim_time">
+					<float name="max" value="1" overrideParent="True" />
+					<float name="min" value="1" overrideParent="True" />
+				</group>
+			</group>
+			<group name="anim_table">
+				<string name="state_name" value="ranged_weapon_state" overrideParent="True" />
+				<string name="track_horizontal" value="aim_horizontal" overrideParent="True" />
+				<string name="track_vertical" value="aim_vertical" overrideParent="True" />
+			</group>
+			<group name="area_effect">
+				<group name="accuracy">
+					<float name="far" value="5" overrideParent="True" />
+					<float name="near" value="5" overrideParent="True" />
+					<float name="mid" value="5" overrideParent="True" />
+				</group>
+				<group name="damage">
+					<float name="far" value="0.05" overrideParent="True" />
+					<float name="mid" value="0.15" overrideParent="True" />
+				</group>
+				<group name="damage_friendly">
+					<float name="far" value="0.025" overrideParent="True" />
+					<float name="near" value="0.5" overrideParent="True" />
+					<float name="mid" value="0.075" overrideParent="True" />
+				</group>
+				<group name="distance">
+					<float name="far" value="0.25" overrideParent="True" />
+					<float name="near" value="0.15" overrideParent="True" />
+					<float name="mid" value="0.2" overrideParent="True" />
+				</group>
+				<bool name="has_friendly_fire" value="False" overrideParent="True" />
+				<template_reference name="aoe_penetration" value="tables\range_table">
+					<float name="far" value="65" overrideParent="True" />
+					<float name="mid" value="70" overrideParent="True" />
+					<float name="near" value="75" overrideParent="True" />
+				</template_reference>
+			</group>
+			<group name="behaviour">
+				<float name="combat_slot_offset" value="0" overrideParent="True" />
+				<bool name="enable_auto_target_search" value="True" overrideParent="True" />
+				<float name="ground_hit_rate" value="1" overrideParent="True" />
+				<bool name="prevents_prone" value="True" overrideParent="True" />
+				<bool name="substitute_weapon" value="True" overrideParent="True" />
+				<float name="reaction_radius" value="3" overrideParent="True" />
+				<enum name="attack_ground_type" value="anywhere" overrideParent="True" />
+				<bool name="hit_everything_on_miss" value="True" overrideParent="True" />
+				<bool name="can_damage_allies" value="True" overrideParent="True" />
+			</group>
+			<group name="damage">
+				<float name="max" value="120" overrideParent="True" />
+				<float name="min" value="120" overrideParent="True" />
+				<enum name="damage_type" value="ballistic" overrideParent="True" />
+				<list name="on_penetrated_state_trees">
+					<group name="container" List.ItemID="-378842038" List.ListAction="Append">
+						<state_tree_node name="state_tree" value="sp_trigger_critical\vehicle\conditional_engine_damage" />
+					</group>
+				</list>
+			</group>
+			<group name="fire">
+				<float name="wind_down" value="1" overrideParent="True" />
+			</group>
+			<float name="flinch_radius" value="10" overrideParent="True" />
+			<bool name="fx_always_visible" value="True" overrideParent="True" />
+			<string name="fx_munition_name" value="\cannon\shell_small" overrideParent="True" />
+			<bool name="fx_use_building_panel_normal" value="True" overrideParent="True" />
+			<group name="moving">
+				<float name="accuracy_multiplier" value="0.5" overrideParent="True" />
+			</group>
+			<group name="priority">
+				<float name="current_target" value="3" overrideParent="True" />
+				<group name="distance">
+					<float name="far" value="-10" overrideParent="True" />
+					<float name="near" value="60" overrideParent="True" />
+					<float name="mid" value="25" overrideParent="True" />
+				</group>
+				<float name="rotation" value="-0.05" overrideParent="True" />
+				<float name="penetration" value="40" overrideParent="True" />
+				<float name="suggested_target" value="1000" overrideParent="True" />
+				<float name="vs_armor_type" value="1" overrideParent="True" />
+			</group>
+			<group name="projectile">
+				<instance_reference name="projectile" value="ebps\gameplay\projectiles\races\german\p_gun_rocket_panzerfaust" overrideParent="True" />
+			</group>
+			<group name="range">
+				<float name="max" value="28" overrideParent="True" />
+			</group>
+			<group name="scatter">
+				<float name="angle_scatter" value="7.5" overrideParent="True" />
+				<float name="distance_scatter_max" value="10" overrideParent="True" />
+				<float name="distance_scatter_offset" value="0.2" overrideParent="True" />
+				<float name="distance_scatter_ratio" value="1" overrideParent="True" />
+				<float name="fow_angle_multiplier" value="1.25" overrideParent="True" />
+				<float name="fow_distance_multiplier" value="1.25" overrideParent="True" />
+			</group>
+			<group name="suppressed">
+				<float name="pinned_burst_multiplier" value="1" overrideParent="True" />
+				<float name="pinned_cooldown_multiplier" value="1" overrideParent="True" />
+				<float name="pinned_reload_multiplier" value="1" overrideParent="True" />
+				<float name="suppressed_burst_multiplier" value="1" overrideParent="True" />
+				<float name="suppressed_cooldown_multiplier" value="1" overrideParent="True" />
+				<float name="suppressed_reload_multiplier" value="1" overrideParent="True" />
+			</group>
+			<group name="suppression">
+				<group name="target_pinned_multipliers">
+					<float name="accuracy_multiplier" value="0.25" overrideParent="True" />
+					<float name="damage_multiplier" value="1" overrideParent="True" />
+					<float name="penetration_multiplier" value="1" overrideParent="True" />
+					<float name="suppression_multiplier" value="0.1" overrideParent="True" />
+				</group>
+				<group name="target_suppressed_multipliers">
+					<float name="accuracy_multiplier" value="0.5" overrideParent="True" />
+					<float name="damage_multiplier" value="1" overrideParent="True" />
+					<float name="penetration_multiplier" value="1" overrideParent="True" />
+					<float name="suppression_multiplier" value="0.5" overrideParent="True" />
+				</group>
+			</group>
+			<group name="tracking">
+				<float name="fire_cone_angle" value="5" overrideParent="True" />
+				<group name="normal">
+					<float name="max_down" value="-45" overrideParent="True" />
+					<float name="max_left" value="-45" overrideParent="True" />
+					<float name="max_right" value="45" overrideParent="True" />
+					<float name="max_up" value="45" overrideParent="True" />
+					<float name="speed_horizontal" value="90" overrideParent="True" />
+					<float name="speed_vertical" value="90" overrideParent="True" />
+				</group>
+			</group>
+			<group name="penetration">
+				<float name="near" value="1000" overrideParent="True" />
+				<float name="far" value="1000" overrideParent="True" />
+				<float name="mid" value="1000" overrideParent="True" />
+			</group>
+			<enum name="weapon_class" value="bazooka" overrideParent="True" />
+			<list name="target_type_table">
+				<group name="target_unit_type_multipliers" List.ItemID="-1082242888" List.ListAction="Append">
+					<enum name="unit_type" value="truck_4x4" />
+					<group name="weapon_multipliers">
+						<float name="accuracy_multiplier" value="1" />
+						<float name="damage_multiplier" value="0.8" />
+						<float name="penetration_multiplier" value="1" />
+						<float name="suppression_multiplier" value="1" />
+					</group>
+					<float name="base_damage_modifier" value="0" />
+				</group>
+			</list>
+			<enum_table name="cover_table">
+				<template_reference name="tp_heavy_cover" value="weapon_cover_info">
+					<float name="accuracy_multiplier" value="0.5" overrideParent="True" />
+					<float name="damage_multiplier" value="0.5" overrideParent="True" />
+					<float name="suppression_multiplier" value="0.1" overrideParent="True" />
+				</template_reference>
+				<template_reference name="tp_light_cover" value="weapon_cover_info">
+					<float name="accuracy_multiplier" value="0.5" overrideParent="True" />
+					<float name="suppression_multiplier" value="0.5" overrideParent="True" />
+				</template_reference>
+				<template_reference name="tp_negative_cover" value="weapon_cover_info">
+					<float name="accuracy_multiplier" value="1.25" overrideParent="True" />
+					<float name="damage_multiplier" value="1.25" overrideParent="True" />
+					<float name="suppression_multiplier" value="1.5" overrideParent="True" />
+				</template_reference>
+				<template_reference name="tp_smoke_cover" value="weapon_cover_info">
+					<float name="accuracy_multiplier" value="0.25" overrideParent="True" />
+				</template_reference>
+				<template_reference name="tp_garrison_cover" value="weapon_cover_info">
+					<float name="accuracy_multiplier" value="0.4" overrideParent="True" />
+					<float name="damage_multiplier" value="0.25" overrideParent="True" />
+					<float name="suppression_multiplier" value="0" overrideParent="True" />
+				</template_reference>
+			</enum_table>
+			<enum name="default_attack_type" value="ballistic" overrideParent="True" />
+			<template_reference name="animation_role_option" value="options\animation_role\animation_role_flavour_option" overrideParent="True">
+				<list name="squad_animation_roles">
+					<group name="flavour" List.ItemID="1775922406">
+						<list name="squad_contents">
+							<group name="squad_member" List.ItemID="-194013296">
+								<list name="animation_variants">
+									<instance_reference name="animation_role" value="animation_role\soldier\abilities\s_panzerfaust" List.ItemID="1187134694" />
+								</list>
+							</group>
+						</list>
+						<enum name="key" value="wehrmacht" />
+					</group>
+				</list>
+			</template_reference>
+			<group name="height_bonuses">
+				<group name="height_advantage">
+					<float name="height_threshold" value="3.5" overrideParent="True" />
+				</group>
+			</group>
+			<group name="deflection">
+				<bool name="has_deflection_damage" value="False" overrideParent="True" />
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="173667" />
+		<instance_reference name="parent_pbg" value="weapon\common\parent\ballistic_parent" />
+	</variant>
+</instance>

@@ -1,0 +1,153 @@
+<instance version="5" description="" template="ai\ai_economy">
+	<variant name="default">
+		<group name="ai_economy_bag">
+			<list name="build_settings">
+			</list>
+			<enum_table name="offensive_ability_to_production_spending_ratios">
+				<float name="action" value="-1" />
+				<float name="command" value="-1" />
+				<float name="popcap" value="-1" />
+				<float name="fuel" value="-1" />
+				<float name="munition" value="-1" />
+				<float name="manpower" value="-1" />
+				<float name="requisition" value="-1" />
+				<float name="ultimate" value="-1" />
+			</enum_table>
+			<bool name="always_reinforce_squads" value="True" />
+			<bool name="only_consider_current_and_next_tech_tier" value="False" />
+			<list name="next_tier_unit_type_exclusion_list">
+			</list>
+			<enum_table name="usable_popcap_to_maintain">
+				<float name="personnel_pop" value="0" />
+				<float name="vehicle_pop" value="0" />
+				<float name="medic_pop" value="0" />
+			</enum_table>
+			<list name="race_resource_filters">
+			</list>
+			<enum_table name="usable_popcap_extra_percentage_to_maintain">
+				<float name="personnel_pop" value="0" />
+				<float name="vehicle_pop" value="0" />
+				<float name="medic_pop" value="0" />
+			</enum_table>
+			<list name="production_groups">
+				<template_reference name="production_group" value="ai\economy\production_group" comment="Bread and Butter Infantry" List.ItemID="119105337">
+					<list name="members">
+						<instance_reference name="member" value="sbps\races\american\infantry\riflemen_us" List.ItemID="-772123599" />
+						<instance_reference name="member" value="sbps\races\german\infantry\grenadier_ger" List.ItemID="-941218506" />
+						<instance_reference name="member" value="sbps\races\british\infantry\tommy_uk" List.ItemID="1978435648" />
+						<instance_reference name="member" value="sbps\races\british_africa\infantry\tommy_africa_uk" List.ItemID="79716231" />
+					</list>
+					<float name="base_scale" value="250" />
+					<float name="minimum_score_to_produce" value="0" />
+					<string name="lua_binding" value="ScoringFunctions_BreadAndButter" />
+					<int name="max_current" value="3" />
+					<int name="max_produced_ever" value="-1" />
+				</template_reference>
+				<template_reference name="production_group" value="ai\economy\production_group" comment="Power Units" List.ItemID="-2145089743">
+					<list name="members">
+						<instance_reference name="member" value="sbps\races\american\vehicles\sherman_us" List.ItemID="-1634821980" />
+						<instance_reference name="member" value="sbps\races\german\vehicles\panzer_iv_ger" List.ItemID="-560517771" />
+						<instance_reference name="member" value="sbps\races\american\vehicles\scott_us" List.ItemID="1125701925" />
+						<instance_reference name="member" value="sbps\races\german\vehicles\brummbar_ger" List.ItemID="889659552" />
+						<instance_reference name="member" value="sbps\races\british\vehicles\matilda_uk" List.ItemID="1037485850" />
+						<instance_reference name="member" value="sbps\races\british_africa\vehicles\matilda_africa_uk" List.ItemID="-927028326" />
+						<instance_reference name="member" value="sbps\races\british\vehicles\valentine_uk" List.ItemID="-1224670304" />
+						<instance_reference name="member" value="sbps\races\german\vehicles\panther_ger" List.ItemID="790508965" />
+					</list>
+					<float name="base_scale" value="350" />
+					<float name="minimum_score_to_produce" value="0" />
+					<string name="lua_binding" value="ScoringFunctions_PowerUnits" />
+					<int name="max_current" value="4" />
+					<int name="max_produced_ever" value="-1" />
+				</template_reference>
+				<template_reference name="production_group" value="ai\economy\production_group" comment="Builders Utility" List.ItemID="-391097484">
+					<list name="members">
+						<instance_reference name="member" value="sbps\races\american\infantry\engineer_us" List.ItemID="708252075" />
+						<instance_reference name="member" value="sbps\races\german\infantry\pioneer_ger" List.ItemID="1121055684" />
+						<instance_reference name="member" value="sbps\races\british\infantry\sapper_uk" List.ItemID="-145488733" />
+						<instance_reference name="member" value="sbps\races\british_africa\infantry\sapper_africa_uk" List.ItemID="2088392498" />
+					</list>
+					<float name="base_scale" value="25" />
+					<float name="minimum_score_to_produce" value="0" />
+					<string name="lua_binding" value="ScoringFunctions_BuildersUtility" />
+					<int name="max_current" value="2" />
+					<int name="max_produced_ever" value="-1" />
+				</template_reference>
+				<template_reference name="production_group" value="ai\economy\production_group" comment="Light Vehicles" List.ItemID="57348813">
+					<list name="members">
+						<instance_reference name="member" value="sbps\races\american\vehicles\chaffee_us" List.ItemID="-469913857" />
+						<instance_reference name="member" value="sbps\races\british\vehicles\humber_uk" List.ItemID="-349191836" />
+						<instance_reference name="member" value="sbps\races\british_africa\vehicles\humber_africa_uk" List.ItemID="1593972266" />
+						<instance_reference name="member" value="sbps\races\british\vehicles\stuart_uk" List.ItemID="1070593967" />
+						<instance_reference name="member" value="sbps\races\british_africa\vehicles\stuart_africa_uk" List.ItemID="1133960520" />
+						<instance_reference name="member" value="sbps\races\american\vehicles\greyhound_us" List.ItemID="-406489613" />
+					</list>
+					<float name="base_scale" value="50" />
+					<float name="minimum_score_to_produce" value="0" />
+					<string name="lua_binding" value="ScoringFunctions_MidGamePower" />
+					<int name="max_current" value="2" />
+					<int name="max_produced_ever" value="-1" />
+				</template_reference>
+				<template_reference name="production_group" value="ai\economy\production_group" comment="Anti-Tank" List.ItemID="-1947375825">
+					<list name="members">
+						<instance_reference name="member" value="sbps\races\german\vehicles\stug_iii_ger" List.ItemID="1876868964" />
+						<instance_reference name="member" value="sbps\races\german\vehicles\marder_iii_ger" List.ItemID="-908181040" />
+					</list>
+					<float name="base_scale" value="75" />
+					<float name="minimum_score_to_produce" value="0" />
+					<string name="lua_binding" value="ScoringFunctions_AntiTank" />
+					<int name="max_current" value="2" />
+					<int name="max_produced_ever" value="-1" />
+				</template_reference>
+				<template_reference name="production_group" value="ai\economy\production_group" comment="Basic Player Tech" List.ItemID="1464772128">
+					<list name="members">
+						<instance_reference name="member" value="upgrade\british\research\barracks\rifle_grenade_tommy_uk" List.ItemID="-708759022" />
+						<instance_reference name="member" value="upgrade\american\research\barracks\bar_riflemen_global_us" List.ItemID="-999258714" />
+						<instance_reference name="member" value="upgrade\american\research\barracks\grenade_riflemen_us" List.ItemID="-1240998334" />
+						<instance_reference name="member" value="upgrade\american\research\barracks\sticky_bomb_riflemen_us" List.ItemID="-1926742859" />
+					</list>
+					<float name="base_scale" value="150" />
+					<float name="minimum_score_to_produce" value="0" />
+					<string name="lua_binding" value="ScoringFunctions_PlayerUpgrades" />
+					<int name="max_current" value="-1" />
+					<int name="max_produced_ever" value="-1" />
+				</template_reference>
+				<template_reference name="production_group" value="ai\economy\production_group" comment="American Tech" List.ItemID="-663592116">
+					<list name="members">
+						<instance_reference name="member" value="upgrade\german\vehicle\mg42_stug_ger" List.ItemID="-1138073351" />
+						<instance_reference name="member" value="upgrade\german\vehicle\mg42_panzer_ger" List.ItemID="639576906" />
+						<instance_reference name="member" value="upgrade\german\vehicle\mg42_brummbar_ger" List.ItemID="-1477749299" />
+					</list>
+					<float name="base_scale" value="200" />
+					<float name="minimum_score_to_produce" value="0" />
+					<string name="lua_binding" value="ScoringFunctions_SquadUpgrades" />
+					<int name="max_current" value="-1" />
+					<int name="max_produced_ever" value="-1" />
+				</template_reference>
+				<template_reference name="production_group" value="ai\economy\production_group" comment="Mobile AA" List.ItemID="953314645">
+					<list name="members">
+						<instance_reference name="member" value="sbps\races\german\vehicles\wirbelwind_ger" List.ItemID="-133421972" />
+					</list>
+					<float name="base_scale" value="125" />
+					<float name="minimum_score_to_produce" value="0" />
+					<string name="lua_binding" value="ScoringFunctions_PowerUnits" />
+					<int name="max_current" value="1" />
+					<int name="max_produced_ever" value="1" />
+				</template_reference>
+				<template_reference name="production_group" value="ai\economy\production_group" comment="Light Vehicles" List.ItemID="229641794">
+					<list name="members">
+						<instance_reference name="member" value="sbps\races\german\infantry\jaeger_ger" List.ItemID="-1994457291" />
+						<instance_reference name="member" value="sbps\races\german\infantry\panzergrenadier_ger" List.ItemID="1191788064" />
+					</list>
+					<float name="base_scale" value="100" />
+					<float name="minimum_score_to_produce" value="0" />
+					<string name="lua_binding" value="ScoringFunctions_MidGamePower" />
+					<int name="max_current" value="2" />
+					<int name="max_produced_ever" value="-1" />
+				</template_reference>
+			</list>
+			<float name="requested_utility_score" value="1000" />
+		</group>
+		<uniqueid name="pbgid" value="2053867" />
+	</variant>
+</instance>

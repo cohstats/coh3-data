@@ -1,0 +1,50 @@
+<instance version="5" description="" template="abilities">
+	<variant name="default">
+		<group name="ability_bag">
+			<group name="ui_info">
+				<locstring name="screen_name" value="11229072" overrideParent="True" />
+				<string name="hotkey_name" value="W" overrideParent="True" />
+				<locstring name="brief_text" value="11240551" overrideParent="True" />
+			</group>
+			<list name="requirements" removedIds="1817503871">
+				<template_reference name="required" value="requirements\required_player_upgrade" List.ItemID="1627558" List.ParentItemID="1627558">
+					<bool name="is_present" value="True" overrideParent="True" />
+				</template_reference>
+				<template_reference name="required" value="requirements\required_population" List.ItemID="-472865268" List.ParentItemID="-472865268">
+					<group name="free_pop">
+						<float name="personnel" value="36" overrideParent="True" />
+					</group>
+				</template_reference>
+			</list>
+			<enum name="ui_progress_bar_type" value="no_bar" overrideParent="True" />
+			<bool name="facing_ignore" value="True" overrideParent="True" />
+			<state_tree_node name="global_tree" value="c_armored_churchill_uk" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2089203" />
+		<instance_reference name="parent_pbg" value="abilities\races\british\campaign\company\armored\core\right\c_armored_churchill_core_uk" />
+	</variant>
+	<variant name="sp">
+		<group name="ability_bag">
+			<group name="ui_info">
+				<locstring name="screen_name" value="11229072" overrideParent="True" />
+				<string name="hotkey_name" value="W" overrideParent="True" />
+				<locstring name="brief_text" value="11240551" overrideParent="True" />
+			</group>
+			<list name="requirements" removedIds="1817503871">
+				<template_reference name="required" value="requirements\required_player_upgrade" List.ItemID="1627558" List.ParentItemID="1627558">
+					<bool name="is_present" value="True" overrideParent="True" />
+				</template_reference>
+				<template_reference name="required" value="requirements\required_population" List.ItemID="-472865268" List.ParentItemID="-472865268">
+					<group name="free_pop">
+						<float name="personnel" value="36" overrideParent="True" />
+					</group>
+				</template_reference>
+			</list>
+			<enum name="ui_progress_bar_type" value="no_bar" overrideParent="True" />
+			<bool name="facing_ignore" value="True" overrideParent="True" />
+			<state_tree_node name="global_tree" value="c_armored_churchill_uk" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2089203" />
+		<instance_reference name="parent_pbg" value="abilities\races\british\campaign\company\armored\core\right\c_armored_churchill_core_uk" />
+	</variant>
+</instance>

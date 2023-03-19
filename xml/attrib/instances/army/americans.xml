@@ -1,0 +1,2214 @@
+<instance version="5" description="" template="army">
+	<variant name="default">
+		<group name="army_bag">
+			<group name="actions">
+				<string name="ability_ally_reinforcement_action_name" value="" />
+				<string name="ability_self_reinforcement_action_name" value="" />
+				<string name="ally_attack_here_action_name" value="" />
+				<string name="ally_capture_here_action_name" value="" />
+				<string name="ally_defend_here_action_name" value="" />
+				<string name="fx_rally_point_action_name" value="" />
+				<string name="self_attack_here_action_name" value="" />
+				<string name="self_capture_here_action_name" value="" />
+				<string name="self_defend_here_action_name" value="" />
+				<string name="self_question_here_action_name" value="" />
+				<string name="ally_question_here_action_name" value="" />
+				<colour name="fx_rally_point_line_color_move" value="16777215" />
+				<colour name="fx_rally_point_line_color_special" value="16777215" />
+				<string name="fx_rally_point_action_name_special" value="" />
+			</group>
+			<enum_table name="resource_income_cap">
+				<float name="action" value="9999" />
+				<float name="command" value="32" />
+				<float name="popcap" value="9999" />
+				<float name="fuel" value="9999" />
+				<float name="munition" value="9999" />
+				<float name="manpower" value="9999" />
+				<float name="requisition" value="9999" />
+				<float name="ultimate" value="9999" />
+			</enum_table>
+			<group name="race_population_cap_table">
+				<float name="base_medic_cap" value="0" />
+				<float name="base_personnel_cap" value="100" />
+				<float name="base_vehicle_cap" value="0" />
+				<float name="max_medic_cap" value="0" />
+				<float name="max_personnel_cap" value="100" />
+				<float name="max_vehicle_cap" value="0" />
+			</group>
+			<list name="abilities">
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\infantry\infantry_left_1a_rapid_training_us" List.ItemID="-31613958" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\infantry\infantry_left_1b_rapid_response_us" List.ItemID="2091637513" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\infantry\infantry_left_2_rangers_us" List.ItemID="1491784497" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\infantry\infantry_left_3a_manpower_us" List.ItemID="444493749" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\infantry\infantry_left_3b_emergency_combat_group_us" List.ItemID="-24288568" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\infantry\infantry_right_1a_defensive_operations_us" List.ItemID="-1058130527" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\infantry\infantry_right_1b_m1919a6_us" List.ItemID="-400371942" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\infantry\infantry_right_2a_off_map_artillery_us" List.ItemID="-302887140" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\infantry\infantry_right_2b_240mm_off_map_artillery_us" List.ItemID="1251197470" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\infantry\infantry_right_3_105mm_howitzer_us" List.ItemID="-1679447459" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\airborne\airborne_right_1b_paradrop_hmg_us" List.ItemID="-2062405941" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\airborne\airborne_right_1a_pathfinders_us" List.ItemID="-218363357" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\airborne\airborne_right_3_paradrop_at_gun_us" List.ItemID="-1225260475" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\airborne\airborne_left_2b_supply_drop_us" List.ItemID="1580098667" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\airborne\airborne_left_3a_rocket_strike_us" List.ItemID="-262493567" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\airborne\airborne_left_1b_recon_loiter_us" List.ItemID="168290861" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\airborne\airborne_left_1a_smoke_us" List.ItemID="-1880580616" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\airborne\airborne_right_2_paratrooper_us" List.ItemID="-532804985" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\airborne\airborne_left_2b_air_dropped_reinforcement_us" List.ItemID="2040054266" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\airborne\airborne_left_3b_carpet_bombing_us" List.ItemID="215517131" />
+				<instance_reference name="ability" value="abilities\dev\templates\toggle_affect_army" comment="Sample Toggle ability that affects an entire army. Its added by default " List.ItemID="-2059366621" />
+				<instance_reference name="ability" value="abilities\dev\templates\target_directional_custom_reticule" comment="Sample Directional ability. Its added by default " List.ItemID="404728041" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\armored\armored_left_1a_assault_engineers_us" List.ItemID="-283049523" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\armored\armored_left_1b_veteran_crews_us" List.ItemID="-1028157998" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\armored\armored_left_2a_field_repairs_us" List.ItemID="2122740006" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\armored\armored_left_2b_recovery_vehicle_us" List.ItemID="-1916968851" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\armored\armored_left_3_war_machine_us" List.ItemID="-1853319664" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\armored\armored_right_1b_strength_in_steel_us" List.ItemID="-1819885269" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\armored\armored_right_1a_fast_deploy_us" List.ItemID="-1550330479" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\armored\armored_right_2a_scott_us" List.ItemID="1063690052" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\armored\armored_right_2b_seek_and_destroy_us" List.ItemID="1737676148" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\armored\armored_right_3_easy_8_task_force_us" List.ItemID="1676706504" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\special_operations\special_operations_left_1a_m29_weasal_us" List.ItemID="276272354" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\special_operations\special_operations_left_1b_m29_weasal_with_pack_howitzer" List.ItemID="-116954448" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\special_operations\special_operations_left_2a_mark_target_vehicle_us" List.ItemID="92602426" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\special_operations\special_operations_left_2b_strafing_support_us" List.ItemID="-214302931" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\special_operations\special_operations_left_3_whizbang_us" List.ItemID="-2041145590" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\special_operations\special_operations_right_1a_raiding_flares_us" List.ItemID="245839463" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\special_operations\special_operations_right_1b_smoke_screen_us" List.ItemID="-873721648" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\special_operations\special_operations_right_2_devils_brigade_us" List.ItemID="931691493" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\special_operations\special_operations_right_3a_assault_operation_us" List.ItemID="480257320" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\special_operations\special_operations_right_3b_air_resupply_operation_us" List.ItemID="-1851283225" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\c_airborne_paratroopers_core_us" List.ItemID="970173241" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\c_airborne_p47_rocket_strike_core_us" List.ItemID="1081835121" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\c_airborne_smoke_run_core_us" List.ItemID="-1335512882" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\passive\c_airborne_take_and_hold_passive_us" List.ItemID="-2001321259" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\passive\c_airborne_frontline_medics_passive_us" List.ItemID="445785581" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\passive\c_airborne_starting_cache_passive_us" List.ItemID="1310154026" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\passive\c_airborne_efficient_airpower_passive_us" List.ItemID="292696663" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\passive\c_airborne_behind_enemy_lines_passive_us" List.ItemID="-271689298" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\c_airborne_smoke_run_cost_reduction_us" List.ItemID="-2092422882" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\c_airborne_smoke_run_damage_us" List.ItemID="-1148672722" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\c_airborne_weapon_paradrop_core_us" List.ItemID="615935515" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\c_airborne_supply_crates_core_us" List.ItemID="73617028" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\c_airborne_carpet_bomb_core_us" List.ItemID="-2016998442" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\c_airborne_paratroopers_vet1_us" List.ItemID="1992200167" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\c_special_operations_devils_brigade_core_us" List.ItemID="-166786291" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\c_special_operations_mark_target_vehicle_core_us" List.ItemID="1285990683" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\c_special_operations_raiding_flares_core_us" List.ItemID="278620888" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\c_special_operations_white_phosphorus_barrage_core_us" List.ItemID="-904385612" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\c_special_operations_whizbang_core_us" List.ItemID="-323829174" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\c_special_operations_strafing_support_core_us" List.ItemID="1368822116" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\passive\c_special_operations_m29_weasel_with_howitzer_passive_us" List.ItemID="-256969875" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\passive\top\c_special_operations_marksmen_passive_us" List.ItemID="-1625362925" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\passive\middle\c_special_operations_rigorous_training_passive_us" List.ItemID="-522006882" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\passive\top\c_special_operations_self_heal_passive_us" List.ItemID="-1407606085" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\passive\c_special_operations_special_arms_passive_us" List.ItemID="840866563" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\passive\c_special_operations_stolen_schrecks_passive_us" List.ItemID="-1915968217" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\passive\top\c_special_operations_supply_raid_passive_us" List.ItemID="-2128689633" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\passive\c_special_operations_surprise_strike_passive_us" List.ItemID="-1209168792" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\passive\middle\c_special_operations_the_best_offense_passive_us" List.ItemID="-1038908879" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\passive\middle\c_special_operations_well_researched_passive_us" List.ItemID="-1001126909" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\c_airborne_supply_crates_guns_medical_us" List.ItemID="2055505495" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\c_airborne_supply_crates_more_muni_fuel_us" List.ItemID="-1739610429" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\specialization\c_special_operations_mark_target_vehicle_paradrop_bazooka_us" List.ItemID="-665371360" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\specialization\c_special_operations_mark_target_vehicle_pin_us" List.ItemID="-390191040" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\specialization\c_special_operations_raiding_flares_extended_barrage_us" List.ItemID="-2077000064" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\specialization\c_special_operations_raiding_flares_rocket_barrage_us" List.ItemID="1790830553" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\specialization\c_special_operations_strafing_support_bombs_us" List.ItemID="-568831800" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\specialization\c_special_operations_strafing_support_rockets_us" List.ItemID="366666695" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\specialization\c_special_operations_whizbang_flares_us" List.ItemID="270093035" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\specialization\c_special_operations_whizbang_smoke_canisters_us" List.ItemID="1293285847" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\specialization\c_special_operations_white_phosphorus_barrage_wall_us" List.ItemID="1591151507" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\c_airborne_weapon_paradrop_at_us" List.ItemID="1916722892" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\c_airborne_weapon_paradrop_recon_us" List.ItemID="-1957364176" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\c_airborne_paratroopers_loiter_support_us" List.ItemID="290060154" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\c_airborne_paratroopers_vet1_us" List.ItemID="756119327" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\light_mechanized\light_mechanized_left_1a_truck_4x4_skirts_us" List.ItemID="1461633438" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\light_mechanized\light_mechanized_left_1b_raid_us" List.ItemID="1538053772" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\light_mechanized\light_mechanized_left_2a_refit_us" List.ItemID="-1699190133" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\light_mechanized\light_mechanized_left_2b_free_mech_center_us" List.ItemID="-2117927833" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\light_mechanized\light_mechanized_left_3b_priority_fuel_us" List.ItemID="-2103248277" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\light_mechanized\light_mechanized_right_1a_command_halftrack_us" List.ItemID="-700185472" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\light_mechanized\light_mechanized_right_1b_m20_ultility_car_us" List.ItemID="-1025423630" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\light_mechanized\light_mechanized_right_2_chaffee_us" List.ItemID="171582201" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\light_mechanized\light_mechanized_right_3_priest_us" List.ItemID="-7360793" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\c_airborne_p47_rocket_strike_more_missiles_us" List.ItemID="313303375" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\c_airborne_p47_rocket_strike_loiter_us" List.ItemID="-979479837" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\right\c_airborne_carpet_bomb_more_planes_us" List.ItemID="-1191891125" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\c_airborne_weapon_paradrop_reinforce_us" List.ItemID="911170839" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\passive\c_airborne_expert_foundation_passive_us" List.ItemID="949418376" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\c_infantry_105mm_howitzer_core_us" List.ItemID="-1342987738" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\c_infantry_155mm_artillery_core_us" List.ItemID="-890285046" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\c_infantry_240mm_artillery_core_us" List.ItemID="2034043829" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\c_infantry_deploy_combat_group_core_us" List.ItemID="-249429988" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\c_infantry_rangers_core_us" List.ItemID="909239689" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_105mm_howitzer_cost_reduction_us" List.ItemID="-286511946" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_105mm_howitzer_zero_in_us" List.ItemID="1430626589" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_155mm_artillery_increased_radius_us" List.ItemID="-1691095041" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_155mm_artillery_quick_response_us" List.ItemID="1721184858" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_smoke_barrage_hail_of_smoke_us" List.ItemID="2059823500" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_smoke_assault_us" List.ItemID="-1187843371" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_rangers_assault_team_us" List.ItemID="139482175" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_rangers_bolstered_us" List.ItemID="-1875695982" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_m20_mechanized_support_us" List.ItemID="-1634827723" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\passive\c_infantry_captain_on_deck_passive_us" List.ItemID="429151407" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\passive\c_infantry_extra_rounds_passive_us" List.ItemID="1157026074" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\passive\c_infantry_increased_penetration_passive_us" List.ItemID="1460024021" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\passive\c_infantry_infantry_cost_reduction_us" List.ItemID="-1582900909" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\passive\c_infantry_mortar_pit_passive_us" List.ItemID="-618729671" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\passive\c_infantry_off_map_cost_reduction_passive_us" List.ItemID="1290357384" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\passive\c_infantry_pin_point_artillery_passive_us" List.ItemID="1860407207" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\passive\c_infantry_rapid_vet_passive_us" List.ItemID="1186333238" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\passive\c_infantry_scout_squad_size_passive_us" List.ItemID="1892631799" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\passive\c_infantry_starting_bars_passive_us" List.ItemID="1203324068" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_deploy_combat_group_heavy_us" List.ItemID="1318203412" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_deploy_combat_group_charge_us" List.ItemID="-722981910" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\light_mechanized\light_mechanized_right_2_m3lee_us" List.ItemID="-370156662" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\light_mechanized\light_mechanized_left_3a_priority_munitions_us" List.ItemID="-782664152" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\c_special_operations_weasel_core_us" List.ItemID="627596138" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\specialization\c_special_operations_weasel_at_gun_us" List.ItemID="-326862769" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\specialization\c_special_operations_devils_brigade_hidden_devils_us" List.ItemID="-1710920876" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\specialization\c_special_operations_devils_brigade_cost_reduction_us" List.ItemID="924230536" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\passive\c_airborne_tools_of_the_trade_passive_us" List.ItemID="969705976" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\supplemental\c_airborne_paratroopers_vet1_vet_up_us" List.ItemID="1013106051" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\supplemental\c_airborne_paratroopers_vet1_weapon_costs_us" List.ItemID="-1355275062" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\specialization\c_special_operations_weasel_pcg_flamer_us" List.ItemID="-2070212428" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\c_infantry_m20_core_us" List.ItemID="-97418409" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\c_infantry_covering_smoke_core_us" List.ItemID="1785987961" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_m20_mechanized_support_us" List.ItemID="1224386324" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_m20_forward_observers_us" List.ItemID="-497391798" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_m20_mechanized_support_c_us" List.ItemID="1012571808" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_deploy_combat_group_tank_destroyers_us" List.ItemID="-1800499957" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_deploy_combat_group_adhoc_us" List.ItemID="1426229402" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_155mm_artillery_240mm_barrage_us" List.ItemID="1198142842" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\right\c_armoured_240mm_artillery_core_us" List.ItemID="-901977841" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\right\c_armoured_easy_8_core_us" List.ItemID="-56975128" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\left\c_armoured_recovery_vehicle_core_us" List.ItemID="1661817448" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\left\c_armoured_scott_core_us" List.ItemID="42192542" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\right\c_armoured_seek_and_destroy_core_us" List.ItemID="-1044662133" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\left\c_armoured_stuart_core_us" List.ItemID="530994069" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\specializations\left\c_armoured_stuart_command_us" List.ItemID="1598510117" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\specializations\left\c_armoured_scott_recon_group_us" List.ItemID="-84813667" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\specializations\left\c_armoured_recovery_vehicle_cost_reduction_us" List.ItemID="1511460108" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\specializations\left\c_armoured_recovery_vehicle_self_repair_us" List.ItemID="-296419917" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\specializations\right\c_armoured_240mm_artillery_extra_us" List.ItemID="-388348394" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\specializations\right\c_armoured_240mm_artillery_precision_us" List.ItemID="-149551066" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\specializations\right\c_armoured_easy_8_doubles_us" List.ItemID="35193545" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\specializations\right\c_armoured_easy_8_ace_us" List.ItemID="-2104526312" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\specializations\right\c_armoured_seek_and_destroy_protection_us" List.ItemID="-1816938293" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\specializations\right\c_armoured_seek_and_destroy_recon_us" List.ItemID="1756759097" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\c_airborne_weapon_paradrop_supplies_us" List.ItemID="-182875995" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\c_airborne_carpet_bomb_cost_reduction_us" List.ItemID="-1900099405" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\passive\c_airborne_asc_1_passive_us" List.ItemID="1250646515" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\passive\c_airborne_asc_2_passive_us" List.ItemID="-907978096" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\c_airborne_air_dropped_reinforcements_cost_reduction_us" List.ItemID="-2144844705" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\c_airborne_air_dropped_reinforcements_loiter_us" List.ItemID="772214663" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\passive\c_airborne_rally_passive_us" List.ItemID="-2081426496" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\c_special_operations_quad_halftrack_core_us" List.ItemID="-367011983" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\specialization\c_special_operations_quad_halftrack_105mm_sherman_us" List.ItemID="-455439362" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\specialization\c_special_operations_quad_halftrack_x2_us" List.ItemID="989301376" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\specializations\left\c_armoured_stuart_vet_1_us" List.ItemID="-1477503477" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\specializations\left\c_armoured_stuart_cost_reduction_us" List.ItemID="-30530676" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\passive\c_airborne_munitions_flow_passive_us" List.ItemID="-573566075" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\passive\middle\c_armoured_improved_radio_net_passive_us" List.ItemID="130759176" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\passive\middle\c_armoured_light_vehicle_resiliency_passive_us" List.ItemID="-854086367" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\passive\middle\c_armoured_penetration_rounds_passive_us" List.ItemID="-1633478203" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\passive\middle\c_armoured_rudimentary_repairs_passive_us" List.ItemID="-1479455571" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\passive\middle\c_armoured_skilled_gunners_passive_us" List.ItemID="1714112582" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\passive\top\c_armoured_american_war_machine_passive_us" List.ItemID="-652043478" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\passive\top\c_armoured_bonus_supplies_passive_us" List.ItemID="1250396364" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\passive\top\c_armoured_flamethrower_requisition_passive_us" List.ItemID="2068990278" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\passive\top\c_armoured_improved_assault_package_passive_us" List.ItemID="-579101677" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\passive\top\c_armoured_increased_fuel_rate_passive_us" List.ItemID="-2054419837" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\passive\top\c_special_operations_munitions_boost_passive_us" List.ItemID="372558958" />
+				<instance_reference name="ability" value="abilities\races\american\aircraft\strafing_run_p47_us" List.ItemID="-1809649719" />
+				<instance_reference name="ability" value="abilities\races\american\aircraft\dive_bombing_run_p47_us" List.ItemID="-1172051044" />
+				<instance_reference name="ability" value="abilities\races\american\aircraft\recon_l2_grasshopper_reveal_fow_us" List.ItemID="689926884" />
+				<instance_reference name="ability" value="abilities\races\american\aircraft\recon_l2_grasshopper_reveal_los_us" List.ItemID="-1599127430" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\passive\c_airborne_paratroopers_pathfinders_pillage_passive_us" List.ItemID="-1288727027" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\specializations\left\c_armoured_scott_heat_rounds_us" List.ItemID="-1685533955" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\c_airborne_air_dropped_reinforcements_core_us" List.ItemID="-623647774" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\specialization\c_special_operations_white_phosphorus_barrage_cost_reduction_us" List.ItemID="-1220750445" />
+			</list>
+			<enum_table name="resource_max_cap">
+				<float name="action" value="9999" />
+				<float name="command" value="32" />
+				<float name="popcap" value="9999" />
+				<float name="fuel" value="9999" />
+				<float name="munition" value="9999" />
+				<float name="manpower" value="9999" />
+				<float name="requisition" value="9999" />
+				<float name="ultimate" value="9999" />
+			</enum_table>
+			<string name="badge_path" value="" />
+			<list name="production_buildings" comment="There is a hack for the Vertical slice to allow the forward barracks to occupy the HOME icon / tab.">
+				<group name="production_building" List.ItemID="765184208">
+					<group name="builder">
+						<instance_reference name="dispatch_ability" value="" />
+						<enum name="unit_class" value="" />
+						<group name="ui_info">
+							<locstring name="screen_name" value="0" />
+							<locstring name="help_text" value="0" />
+							<file name="icon_name" value="" />
+							<file name="symbol_icon_name" value="" />
+							<string name="hotkey_name" value="" />
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+					<group name="building">
+						<instance_reference name="self_destruct_ability" value="" />
+						<enum name="unit_class" value="support_center" />
+						<group name="ui_info">
+							<locstring name="help_text" value="0" />
+							<string name="hotkey_name" value="" />
+							<file name="icon_name" value="hud\building_tabs\building_support_center" />
+							<locstring name="screen_name" value="0" />
+							<file name="symbol_icon_name" value="" />
+							<group name="ui_position">
+								<int name="ui_position_column" value="0" />
+								<int name="ui_position_row" value="0" />
+								<int name="ui_position_column_span" value="1" />
+								<int name="ui_position_row_span" value="1" />
+							</group>
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+				</group>
+				<group name="production_building" comment="There is a hack for the Vertical slice to allow the forward barracks to occupy the HOME icon / tab." List.ItemID="575918839">
+					<group name="builder">
+						<instance_reference name="dispatch_ability" value="" />
+						<enum name="unit_class" value="" />
+						<group name="ui_info">
+							<locstring name="screen_name" value="0" />
+							<locstring name="help_text" value="0" />
+							<file name="icon_name" value="" />
+							<file name="symbol_icon_name" value="" />
+							<string name="hotkey_name" value="" />
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+					<group name="building">
+						<instance_reference name="self_destruct_ability" value="" />
+						<enum name="unit_class" value="forward_barracks" />
+						<group name="ui_info">
+							<locstring name="help_text" value="0" />
+							<string name="hotkey_name" value="" />
+							<file name="icon_name" value="hud\building_tabs\building_hq" />
+							<locstring name="screen_name" value="11158143" />
+							<file name="symbol_icon_name" value="common\buildings\symbols\hq_us" />
+							<group name="ui_position">
+								<int name="ui_position_column" value="1" />
+								<int name="ui_position_row" value="0" />
+								<int name="ui_position_column_span" value="1" />
+								<int name="ui_position_row_span" value="1" />
+							</group>
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+				</group>
+				<group name="production_building" List.ItemID="1461497614">
+					<group name="builder">
+						<instance_reference name="dispatch_ability" value="" />
+						<enum name="unit_class" value="" />
+						<group name="ui_info">
+							<locstring name="screen_name" value="0" />
+							<locstring name="help_text" value="0" />
+							<file name="icon_name" value="" />
+							<file name="symbol_icon_name" value="" />
+							<string name="hotkey_name" value="" />
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+					<group name="building">
+						<instance_reference name="self_destruct_ability" value="" />
+						<enum name="unit_class" value="barracks" />
+						<group name="ui_info">
+							<locstring name="help_text" value="0" />
+							<string name="hotkey_name" value="" />
+							<file name="icon_name" value="hud\building_tabs\building_barracks" />
+							<locstring name="screen_name" value="0" />
+							<file name="symbol_icon_name" value="" />
+							<group name="ui_position">
+								<int name="ui_position_column" value="2" />
+								<int name="ui_position_row" value="0" />
+								<int name="ui_position_column_span" value="1" />
+								<int name="ui_position_row_span" value="1" />
+							</group>
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+				</group>
+				<group name="production_building" List.ItemID="-1002298727">
+					<group name="builder">
+						<instance_reference name="dispatch_ability" value="" />
+						<enum name="unit_class" value="" />
+						<group name="ui_info">
+							<locstring name="screen_name" value="0" />
+							<locstring name="help_text" value="0" />
+							<file name="icon_name" value="" />
+							<file name="symbol_icon_name" value="" />
+							<string name="hotkey_name" value="" />
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+					<group name="building">
+						<instance_reference name="self_destruct_ability" value="" />
+						<enum name="unit_class" value="weapon_support_center" />
+						<group name="ui_info">
+							<locstring name="help_text" value="0" />
+							<string name="hotkey_name" value="" />
+							<file name="icon_name" value="hud\building_tabs\building_weapon_support" />
+							<locstring name="screen_name" value="0" />
+							<file name="symbol_icon_name" value="" />
+							<group name="ui_position">
+								<int name="ui_position_column" value="3" />
+								<int name="ui_position_row" value="0" />
+								<int name="ui_position_column_span" value="1" />
+								<int name="ui_position_row_span" value="1" />
+							</group>
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+				</group>
+				<group name="production_building" List.ItemID="250223115">
+					<group name="builder">
+						<instance_reference name="dispatch_ability" value="" />
+						<enum name="unit_class" value="" />
+						<group name="ui_info">
+							<locstring name="screen_name" value="0" />
+							<locstring name="help_text" value="0" />
+							<file name="icon_name" value="" />
+							<file name="symbol_icon_name" value="" />
+							<string name="hotkey_name" value="" />
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+					<group name="building">
+						<instance_reference name="self_destruct_ability" value="" />
+						<enum name="unit_class" value="motor_pool" />
+						<group name="ui_info">
+							<locstring name="help_text" value="0" />
+							<string name="hotkey_name" value="" />
+							<file name="icon_name" value="hud\building_tabs\building_motor_pool" />
+							<locstring name="screen_name" value="0" />
+							<file name="symbol_icon_name" value="" />
+							<group name="ui_position">
+								<int name="ui_position_column" value="4" />
+								<int name="ui_position_row" value="0" />
+								<int name="ui_position_column_span" value="1" />
+								<int name="ui_position_row_span" value="1" />
+							</group>
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+				</group>
+				<group name="production_building" List.ItemID="-996539872">
+					<group name="builder">
+						<instance_reference name="dispatch_ability" value="" />
+						<enum name="unit_class" value="" />
+						<group name="ui_info">
+							<locstring name="screen_name" value="0" />
+							<locstring name="help_text" value="0" />
+							<file name="icon_name" value="" />
+							<file name="symbol_icon_name" value="" />
+							<string name="hotkey_name" value="" />
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+					<group name="building">
+						<instance_reference name="self_destruct_ability" value="" />
+						<enum name="unit_class" value="tank_depot" />
+						<group name="ui_info">
+							<locstring name="help_text" value="0" />
+							<string name="hotkey_name" value="" />
+							<file name="icon_name" value="hud\building_tabs\building_tank_depot" />
+							<locstring name="screen_name" value="0" />
+							<file name="symbol_icon_name" value="" />
+							<group name="ui_position">
+								<int name="ui_position_column" value="5" />
+								<int name="ui_position_row" value="0" />
+								<int name="ui_position_column_span" value="1" />
+								<int name="ui_position_row_span" value="1" />
+							</group>
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+				</group>
+			</list>
+			<group name="ai_production_info">
+				<list name="unlocking_upgrade_list">
+				</list>
+				<list name="loadouts">
+					<instance_reference name="loadout" value="ai\ai_loadout\americans" List.ItemID="-138070284" />
+				</list>
+				<group name="available">
+					<list name="upgrades">
+						<instance_reference name="upgrade" value="army_upgrade\battlegroups\american\airborne" List.ItemID="-44480311" />
+						<instance_reference name="upgrade" value="army_upgrade\battlegroups\american\armored" List.ItemID="-1761714192" />
+						<instance_reference name="upgrade" value="army_upgrade\battlegroups\american\special_operations" List.ItemID="-1536176867" />
+					</list>
+					<list name="abilities">
+					</list>
+					<list name="units">
+					</list>
+				</group>
+			</group>
+			<list name="team_size_point_resource_multiplier">
+			</list>
+			<list name="starting_buildings">
+				<group name="starting_building" List.ItemID="257591921">
+					<string name="key" value="default" />
+					<instance_reference name="building" value="ebps\races\american\buildings\production\hq_us" />
+					<list name="starting_squads">
+						<group name="starting_squad" List.ItemID="1571221030">
+							<instance_reference name="squad" value="sbps\races\american\infantry\scout_us" />
+							<bool name="check_requirements" value="True" />
+							<group name="position_offset">
+								<float name="x" value="0" />
+								<float name="y" value="15" />
+							</group>
+						</group>
+						<group name="starting_squad" List.ItemID="-1871577194">
+							<instance_reference name="squad" value="sbps\races\american\infantry\assault_engineer_us" />
+							<bool name="check_requirements" value="True" />
+							<group name="position_offset">
+								<float name="x" value="-15" />
+								<float name="y" value="0" />
+							</group>
+						</group>
+						<group name="starting_squad" List.ItemID="-341845086">
+							<instance_reference name="squad" value="sbps\races\american\infantry\pathfinder_us" />
+							<bool name="check_requirements" value="True" />
+							<group name="position_offset">
+								<float name="x" value="-15" />
+								<float name="y" value="0" />
+							</group>
+						</group>
+					</list>
+					<list name="player_upgrades">
+					</list>
+				</group>
+				<group name="starting_building" List.ItemID="1809509667">
+					<string name="key" value="base_bunker" />
+					<instance_reference name="building" value="ebps\races\american\buildings\defensive\base_defense_us" />
+					<list name="starting_squads">
+					</list>
+					<list name="player_upgrades">
+					</list>
+				</group>
+			</list>
+			<list name="field_support_production_styles">
+				<group name="field_support_production_style" List.ItemID="15724223">
+					<string name="key" value="" />
+					<list name="spawn_items">
+						<group name="spawn_item" List.ItemID="1870033250">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\team_weapons\hmg_30cal_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="3" />
+								<int name="ui_position_column" value="1" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-1776161450">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\engineer_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="1" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-1322078102">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\scout_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="2" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-856832331">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\bazooka_team_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="2" />
+								<int name="ui_position_column" value="3" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-1708609737">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\sniper_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="2" />
+								<int name="ui_position_column" value="2" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="537456771">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\team_weapons\mortar_81mm_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="3" />
+								<int name="ui_position_column" value="2" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="1160535644">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\riflemen_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="3" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-244671526">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\assault_engineer_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="1" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-1515035797">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\pathfinder_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="2" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-1520905537">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\team_weapons\hmg_30cal_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="3" />
+								<int name="ui_position_column" value="1" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+					</list>
+				</group>
+				<group name="field_support_production_style" List.ItemID="-867646254">
+					<string name="key" value="nested_menu" />
+					<list name="spawn_items">
+						<group name="spawn_item" List.ItemID="36848431">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\team_weapons\hmg_30cal_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="3" />
+								<int name="ui_position_column" value="1" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="64238942">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\engineer_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="1" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-2069745739">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\scout_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="2" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-1071327569">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\bazooka_team_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="2" />
+								<int name="ui_position_column" value="3" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="1621624380">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\sniper_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="2" />
+								<int name="ui_position_column" value="2" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-539130440">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\team_weapons\mortar_81mm_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="3" />
+								<int name="ui_position_column" value="2" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-1640007237">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\riflemen_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="3" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-741159891">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\assault_engineer_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="1" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="1299586446">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\pathfinder_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="2" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+					</list>
+				</group>
+				<group name="field_support_production_style" comment="Partisan Safe House" List.ItemID="468166571">
+					<string name="key" value="partisan" />
+					<list name="spawn_items">
+						<group name="spawn_item" List.ItemID="-1766799413">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\resistance_fighters_partisan" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="1" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="1560961816">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\saboteurs_partisan" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="2" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="54409009">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\marksman_team_partisan" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="3" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+					</list>
+				</group>
+			</list>
+			<enum_table name="resource_starting_amount">
+				<float name="action" value="0" />
+				<float name="command" value="0" />
+				<float name="popcap" value="0" />
+				<float name="fuel" value="15" />
+				<float name="munition" value="25" />
+				<float name="manpower" value="390" />
+				<float name="requisition" value="0" />
+				<float name="ultimate" value="0" />
+			</enum_table>
+			<state_tree_node name="start_actions_statetree" value="american" />
+			<list name="upgrades">
+			</list>
+			<group name="ui">
+				<list name="global_traits_summary">
+				</list>
+				<locstring name="subheader" value="0" />
+				<locstring name="one_liner" value="0" />
+				<file name="background_image" value="common\races\fe_factionselect_window_usforces" />
+				<int name="difficulty" value="0" />
+				<enum name="research_upgrade" value="" />
+			</group>
+			<bool name="check_pop_cap_when_queuing_production_item" value="True" />
+			<group name="casualties">
+				<float name="guaranteed_casualty_per_number_of_deaths" value="5" />
+				<int name="max_rescued_casualty_count" value="10" />
+			</group>
+			<enum_table name="upkeep_per_pop_per_minute_override">
+				<float name="action" value="0" />
+				<float name="command" value="0" />
+				<float name="popcap" value="0" />
+				<float name="fuel" value="0" />
+				<float name="munition" value="0" />
+				<float name="manpower" value="0" />
+				<float name="requisition" value="0" />
+				<float name="ultimate" value="0" />
+			</enum_table>
+			<instance_reference name="generic_weapon_crew_blueprint" value="sbps\races\american\gameplay\crew_team_weapon_generic_us" />
+		</group>
+		<uniqueid name="pbgid" value="129946" />
+	</variant>
+	<variant name="sp">
+		<group name="army_bag">
+			<group name="actions">
+				<string name="ability_ally_reinforcement_action_name" value="" />
+				<string name="ability_self_reinforcement_action_name" value="" />
+				<string name="ally_attack_here_action_name" value="" />
+				<string name="ally_capture_here_action_name" value="" />
+				<string name="ally_defend_here_action_name" value="" />
+				<string name="fx_rally_point_action_name" value="" />
+				<string name="self_attack_here_action_name" value="" />
+				<string name="self_capture_here_action_name" value="" />
+				<string name="self_defend_here_action_name" value="" />
+				<string name="self_question_here_action_name" value="" />
+				<string name="ally_question_here_action_name" value="" />
+				<colour name="fx_rally_point_line_color_move" value="16777215" />
+				<colour name="fx_rally_point_line_color_special" value="16777215" />
+				<string name="fx_rally_point_action_name_special" value="" />
+			</group>
+			<enum_table name="resource_income_cap">
+				<float name="action" value="9999" />
+				<float name="command" value="32" />
+				<float name="popcap" value="9999" />
+				<float name="fuel" value="9999" />
+				<float name="munition" value="9999" />
+				<float name="manpower" value="9999" />
+				<float name="requisition" value="9999" />
+				<float name="ultimate" value="9999" />
+			</enum_table>
+			<group name="race_population_cap_table">
+				<float name="base_medic_cap" value="0" />
+				<float name="base_personnel_cap" value="100" />
+				<float name="base_vehicle_cap" value="0" />
+				<float name="max_medic_cap" value="0" />
+				<float name="max_personnel_cap" value="100" />
+				<float name="max_vehicle_cap" value="0" />
+			</group>
+			<list name="abilities">
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\infantry\infantry_left_1a_rapid_training_us" List.ItemID="-31613958" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\infantry\infantry_left_1b_rapid_response_us" List.ItemID="2091637513" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\infantry\infantry_left_2_rangers_us" List.ItemID="1491784497" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\infantry\infantry_left_3a_manpower_us" List.ItemID="444493749" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\infantry\infantry_left_3b_emergency_combat_group_us" List.ItemID="-24288568" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\infantry\infantry_right_1a_defensive_operations_us" List.ItemID="-1058130527" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\infantry\infantry_right_1b_m1919a6_us" List.ItemID="-400371942" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\infantry\infantry_right_2a_off_map_artillery_us" List.ItemID="-302887140" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\infantry\infantry_right_2b_240mm_off_map_artillery_us" List.ItemID="1251197470" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\infantry\infantry_right_3_105mm_howitzer_us" List.ItemID="-1679447459" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\airborne\airborne_right_1b_paradrop_hmg_us" List.ItemID="-2062405941" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\airborne\airborne_right_1a_pathfinders_us" List.ItemID="-218363357" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\airborne\airborne_right_3_paradrop_at_gun_us" List.ItemID="-1225260475" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\airborne\airborne_left_2b_supply_drop_us" List.ItemID="1580098667" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\airborne\airborne_left_3a_rocket_strike_us" List.ItemID="-262493567" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\airborne\airborne_left_1b_recon_loiter_us" List.ItemID="168290861" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\airborne\airborne_left_1a_smoke_us" List.ItemID="-1880580616" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\airborne\airborne_right_2_paratrooper_us" List.ItemID="-532804985" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\airborne\airborne_left_2b_air_dropped_reinforcement_us" List.ItemID="2040054266" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\airborne\airborne_left_3b_carpet_bombing_us" List.ItemID="215517131" />
+				<instance_reference name="ability" value="abilities\dev\templates\toggle_affect_army" comment="Sample Toggle ability that affects an entire army. Its added by default " List.ItemID="-2059366621" />
+				<instance_reference name="ability" value="abilities\dev\templates\target_directional_custom_reticule" comment="Sample Directional ability. Its added by default " List.ItemID="404728041" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\armored\armored_left_1a_assault_engineers_us" List.ItemID="-283049523" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\armored\armored_left_1b_veteran_crews_us" List.ItemID="-1028157998" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\armored\armored_left_2a_field_repairs_us" List.ItemID="2122740006" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\armored\armored_left_2b_recovery_vehicle_us" List.ItemID="-1916968851" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\armored\armored_left_3_war_machine_us" List.ItemID="-1853319664" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\armored\armored_right_1b_strength_in_steel_us" List.ItemID="-1819885269" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\armored\armored_right_1a_fast_deploy_us" List.ItemID="-1550330479" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\armored\armored_right_2a_scott_us" List.ItemID="1063690052" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\armored\armored_right_2b_seek_and_destroy_us" List.ItemID="1737676148" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\armored\armored_right_3_easy_8_task_force_us" List.ItemID="1676706504" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\special_operations\special_operations_left_1a_m29_weasal_us" List.ItemID="276272354" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\special_operations\special_operations_left_1b_m29_weasal_with_pack_howitzer" List.ItemID="-116954448" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\special_operations\special_operations_left_2a_mark_target_vehicle_us" List.ItemID="92602426" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\special_operations\special_operations_left_2b_strafing_support_us" List.ItemID="-214302931" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\special_operations\special_operations_left_3_whizbang_us" List.ItemID="-2041145590" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\special_operations\special_operations_right_1a_raiding_flares_us" List.ItemID="245839463" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\special_operations\special_operations_right_1b_smoke_screen_us" List.ItemID="-873721648" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\special_operations\special_operations_right_2_devils_brigade_us" List.ItemID="931691493" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\special_operations\special_operations_right_3a_assault_operation_us" List.ItemID="480257320" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\special_operations\special_operations_right_3b_air_resupply_operation_us" List.ItemID="-1851283225" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\c_airborne_paratroopers_core_us" List.ItemID="970173241" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\c_airborne_p47_rocket_strike_core_us" List.ItemID="1081835121" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\c_airborne_smoke_run_core_us" List.ItemID="-1335512882" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\passive\c_airborne_take_and_hold_passive_us" List.ItemID="-2001321259" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\passive\c_airborne_frontline_medics_passive_us" List.ItemID="445785581" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\passive\c_airborne_starting_cache_passive_us" List.ItemID="1310154026" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\passive\c_airborne_efficient_airpower_passive_us" List.ItemID="292696663" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\passive\c_airborne_behind_enemy_lines_passive_us" List.ItemID="-271689298" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\c_airborne_smoke_run_cost_reduction_us" List.ItemID="-2092422882" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\c_airborne_smoke_run_damage_us" List.ItemID="-1148672722" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\c_airborne_weapon_paradrop_core_us" List.ItemID="615935515" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\c_airborne_supply_crates_core_us" List.ItemID="73617028" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\c_airborne_carpet_bomb_core_us" List.ItemID="-2016998442" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\c_airborne_paratroopers_vet1_us" List.ItemID="1992200167" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\c_special_operations_devils_brigade_core_us" List.ItemID="-166786291" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\c_special_operations_mark_target_vehicle_core_us" List.ItemID="1285990683" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\c_special_operations_raiding_flares_core_us" List.ItemID="278620888" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\c_special_operations_white_phosphorus_barrage_core_us" List.ItemID="-904385612" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\c_special_operations_whizbang_core_us" List.ItemID="-323829174" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\c_special_operations_strafing_support_core_us" List.ItemID="1368822116" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\passive\c_special_operations_m29_weasel_with_howitzer_passive_us" List.ItemID="-256969875" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\passive\top\c_special_operations_marksmen_passive_us" List.ItemID="-1625362925" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\passive\middle\c_special_operations_rigorous_training_passive_us" List.ItemID="-522006882" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\passive\top\c_special_operations_self_heal_passive_us" List.ItemID="-1407606085" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\passive\c_special_operations_special_arms_passive_us" List.ItemID="840866563" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\passive\c_special_operations_stolen_schrecks_passive_us" List.ItemID="-1915968217" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\passive\top\c_special_operations_supply_raid_passive_us" List.ItemID="-2128689633" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\passive\c_special_operations_surprise_strike_passive_us" List.ItemID="-1209168792" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\passive\middle\c_special_operations_the_best_offense_passive_us" List.ItemID="-1038908879" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\passive\middle\c_special_operations_well_researched_passive_us" List.ItemID="-1001126909" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\c_airborne_supply_crates_guns_medical_us" List.ItemID="2055505495" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\c_airborne_supply_crates_more_muni_fuel_us" List.ItemID="-1739610429" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\specialization\c_special_operations_mark_target_vehicle_paradrop_bazooka_us" List.ItemID="-665371360" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\specialization\c_special_operations_mark_target_vehicle_pin_us" List.ItemID="-390191040" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\specialization\c_special_operations_raiding_flares_extended_barrage_us" List.ItemID="-2077000064" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\specialization\c_special_operations_raiding_flares_rocket_barrage_us" List.ItemID="1790830553" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\specialization\c_special_operations_strafing_support_bombs_us" List.ItemID="-568831800" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\specialization\c_special_operations_strafing_support_rockets_us" List.ItemID="366666695" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\specialization\c_special_operations_whizbang_flares_us" List.ItemID="270093035" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\specialization\c_special_operations_whizbang_smoke_canisters_us" List.ItemID="1293285847" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\specialization\c_special_operations_white_phosphorus_barrage_wall_us" List.ItemID="1591151507" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\c_airborne_weapon_paradrop_at_us" List.ItemID="1916722892" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\c_airborne_weapon_paradrop_recon_us" List.ItemID="-1957364176" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\c_airborne_paratroopers_loiter_support_us" List.ItemID="290060154" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\c_airborne_paratroopers_vet1_us" List.ItemID="756119327" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\light_mechanized\light_mechanized_left_1a_truck_4x4_skirts_us" List.ItemID="1461633438" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\light_mechanized\light_mechanized_left_1b_raid_us" List.ItemID="1538053772" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\light_mechanized\light_mechanized_left_2a_refit_us" List.ItemID="-1699190133" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\light_mechanized\light_mechanized_left_2b_free_mech_center_us" List.ItemID="-2117927833" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\light_mechanized\light_mechanized_left_3b_priority_fuel_us" List.ItemID="-2103248277" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\light_mechanized\light_mechanized_right_1a_command_halftrack_us" List.ItemID="-700185472" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\light_mechanized\light_mechanized_right_1b_m20_ultility_car_us" List.ItemID="-1025423630" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\light_mechanized\light_mechanized_right_2_chaffee_us" List.ItemID="171582201" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\light_mechanized\light_mechanized_right_3_priest_us" List.ItemID="-7360793" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\c_airborne_p47_rocket_strike_more_missiles_us" List.ItemID="313303375" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\c_airborne_p47_rocket_strike_loiter_us" List.ItemID="-979479837" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\right\c_airborne_carpet_bomb_more_planes_us" List.ItemID="-1191891125" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\c_airborne_weapon_paradrop_reinforce_us" List.ItemID="911170839" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\passive\c_airborne_expert_foundation_passive_us" List.ItemID="949418376" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\c_infantry_105mm_howitzer_core_us" List.ItemID="-1342987738" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\c_infantry_155mm_artillery_core_us" List.ItemID="-890285046" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\c_infantry_240mm_artillery_core_us" List.ItemID="2034043829" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\c_infantry_deploy_combat_group_core_us" List.ItemID="-249429988" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\c_infantry_rangers_core_us" List.ItemID="909239689" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_105mm_howitzer_cost_reduction_us" List.ItemID="-286511946" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_105mm_howitzer_zero_in_us" List.ItemID="1430626589" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_155mm_artillery_increased_radius_us" List.ItemID="-1691095041" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_155mm_artillery_quick_response_us" List.ItemID="1721184858" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_smoke_barrage_hail_of_smoke_us" List.ItemID="2059823500" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_smoke_assault_us" List.ItemID="-1187843371" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_rangers_assault_team_us" List.ItemID="139482175" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_rangers_bolstered_us" List.ItemID="-1875695982" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_m20_mechanized_support_us" List.ItemID="-1634827723" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\passive\c_infantry_captain_on_deck_passive_us" List.ItemID="429151407" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\passive\c_infantry_extra_rounds_passive_us" List.ItemID="1157026074" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\passive\c_infantry_increased_penetration_passive_us" List.ItemID="1460024021" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\passive\c_infantry_infantry_cost_reduction_us" List.ItemID="-1582900909" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\passive\c_infantry_mortar_pit_passive_us" List.ItemID="-618729671" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\passive\c_infantry_off_map_cost_reduction_passive_us" List.ItemID="1290357384" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\passive\c_infantry_pin_point_artillery_passive_us" List.ItemID="1860407207" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\passive\c_infantry_rapid_vet_passive_us" List.ItemID="1186333238" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\passive\c_infantry_scout_squad_size_passive_us" List.ItemID="1892631799" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\passive\c_infantry_starting_bars_passive_us" List.ItemID="1203324068" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_deploy_combat_group_heavy_us" List.ItemID="1318203412" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_deploy_combat_group_charge_us" List.ItemID="-722981910" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\light_mechanized\light_mechanized_right_2_m3lee_us" List.ItemID="-370156662" />
+				<instance_reference name="ability" value="abilities\races\american\battlegroups\light_mechanized\light_mechanized_left_3a_priority_munitions_us" List.ItemID="-782664152" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\c_special_operations_weasel_core_us" List.ItemID="627596138" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\specialization\c_special_operations_weasel_at_gun_us" List.ItemID="-326862769" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\specialization\c_special_operations_devils_brigade_hidden_devils_us" List.ItemID="-1710920876" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\specialization\c_special_operations_devils_brigade_cost_reduction_us" List.ItemID="924230536" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\passive\c_airborne_tools_of_the_trade_passive_us" List.ItemID="969705976" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\supplemental\c_airborne_paratroopers_vet1_vet_up_us" List.ItemID="1013106051" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\supplemental\c_airborne_paratroopers_vet1_weapon_costs_us" List.ItemID="-1355275062" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\specialization\c_special_operations_weasel_pcg_flamer_us" List.ItemID="-2070212428" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\c_infantry_m20_core_us" List.ItemID="-97418409" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\c_infantry_covering_smoke_core_us" List.ItemID="1785987961" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_m20_mechanized_support_us" List.ItemID="1224386324" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_m20_forward_observers_us" List.ItemID="-497391798" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_m20_mechanized_support_c_us" List.ItemID="1012571808" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_deploy_combat_group_tank_destroyers_us" List.ItemID="-1800499957" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_deploy_combat_group_adhoc_us" List.ItemID="1426229402" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\infantry\active\specializations\c_infantry_155mm_artillery_240mm_barrage_us" List.ItemID="1198142842" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\right\c_armoured_240mm_artillery_core_us" List.ItemID="-901977841" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\right\c_armoured_easy_8_core_us" List.ItemID="-56975128" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\left\c_armoured_recovery_vehicle_core_us" List.ItemID="1661817448" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\left\c_armoured_scott_core_us" List.ItemID="42192542" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\right\c_armoured_seek_and_destroy_core_us" List.ItemID="-1044662133" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\left\c_armoured_stuart_core_us" List.ItemID="530994069" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\specializations\left\c_armoured_stuart_command_us" List.ItemID="1598510117" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\specializations\left\c_armoured_scott_recon_group_us" List.ItemID="-84813667" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\specializations\left\c_armoured_recovery_vehicle_cost_reduction_us" List.ItemID="1511460108" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\specializations\left\c_armoured_recovery_vehicle_self_repair_us" List.ItemID="-296419917" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\specializations\right\c_armoured_240mm_artillery_extra_us" List.ItemID="-388348394" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\specializations\right\c_armoured_240mm_artillery_precision_us" List.ItemID="-149551066" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\specializations\right\c_armoured_easy_8_doubles_us" List.ItemID="35193545" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\specializations\right\c_armoured_easy_8_ace_us" List.ItemID="-2104526312" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\specializations\right\c_armoured_seek_and_destroy_protection_us" List.ItemID="-1816938293" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\specializations\right\c_armoured_seek_and_destroy_recon_us" List.ItemID="1756759097" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\c_airborne_weapon_paradrop_supplies_us" List.ItemID="-182875995" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\c_airborne_carpet_bomb_cost_reduction_us" List.ItemID="-1900099405" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\passive\c_airborne_asc_1_passive_us" List.ItemID="1250646515" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\passive\c_airborne_asc_2_passive_us" List.ItemID="-907978096" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\c_airborne_air_dropped_reinforcements_cost_reduction_us" List.ItemID="-2144844705" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\specialization\c_airborne_air_dropped_reinforcements_loiter_us" List.ItemID="772214663" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\passive\c_airborne_rally_passive_us" List.ItemID="-2081426496" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\c_special_operations_quad_halftrack_core_us" List.ItemID="-367011983" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\specialization\c_special_operations_quad_halftrack_105mm_sherman_us" List.ItemID="-455439362" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\specialization\c_special_operations_quad_halftrack_x2_us" List.ItemID="989301376" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\specializations\left\c_armoured_stuart_vet_1_us" List.ItemID="-1477503477" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\specializations\left\c_armoured_stuart_cost_reduction_us" List.ItemID="-30530676" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\passive\c_airborne_munitions_flow_passive_us" List.ItemID="-573566075" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\passive\middle\c_armoured_improved_radio_net_passive_us" List.ItemID="130759176" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\passive\middle\c_armoured_light_vehicle_resiliency_passive_us" List.ItemID="-854086367" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\passive\middle\c_armoured_penetration_rounds_passive_us" List.ItemID="-1633478203" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\passive\middle\c_armoured_rudimentary_repairs_passive_us" List.ItemID="-1479455571" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\passive\middle\c_armoured_skilled_gunners_passive_us" List.ItemID="1714112582" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\passive\top\c_armoured_american_war_machine_passive_us" List.ItemID="-652043478" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\passive\top\c_armoured_bonus_supplies_passive_us" List.ItemID="1250396364" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\passive\top\c_armoured_flamethrower_requisition_passive_us" List.ItemID="2068990278" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\passive\top\c_armoured_improved_assault_package_passive_us" List.ItemID="-579101677" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\passive\top\c_armoured_increased_fuel_rate_passive_us" List.ItemID="-2054419837" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\passive\top\c_special_operations_munitions_boost_passive_us" List.ItemID="372558958" />
+				<instance_reference name="ability" value="abilities\races\american\aircraft\strafing_run_p47_us" List.ItemID="-1809649719" />
+				<instance_reference name="ability" value="abilities\races\american\aircraft\dive_bombing_run_p47_us" List.ItemID="-1172051044" />
+				<instance_reference name="ability" value="abilities\races\american\aircraft\recon_l2_grasshopper_reveal_fow_us" List.ItemID="689926884" />
+				<instance_reference name="ability" value="abilities\races\american\aircraft\recon_l2_grasshopper_reveal_los_us" List.ItemID="-1599127430" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\passive\c_airborne_paratroopers_pathfinders_pillage_passive_us" List.ItemID="-1288727027" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\armoured\active\core\specializations\left\c_armoured_scott_heat_rounds_us" List.ItemID="-1685533955" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\airborne\active\c_airborne_air_dropped_reinforcements_core_us" List.ItemID="-623647774" />
+				<instance_reference name="ability" value="abilities\races\american\campaign\company\special_operations\core\specialization\c_special_operations_white_phosphorus_barrage_cost_reduction_us" List.ItemID="-1220750445" />
+			</list>
+			<enum_table name="resource_max_cap">
+				<float name="action" value="9999" />
+				<float name="command" value="32" />
+				<float name="popcap" value="9999" />
+				<float name="fuel" value="9999" />
+				<float name="munition" value="9999" />
+				<float name="manpower" value="9999" />
+				<float name="requisition" value="9999" />
+				<float name="ultimate" value="9999" />
+			</enum_table>
+			<string name="badge_path" value="" />
+			<list name="production_buildings" comment="There is a hack for the Vertical slice to allow the forward barracks to occupy the HOME icon / tab.">
+				<group name="production_building" List.ItemID="765184208">
+					<group name="builder">
+						<instance_reference name="dispatch_ability" value="" />
+						<enum name="unit_class" value="" />
+						<group name="ui_info">
+							<locstring name="screen_name" value="0" />
+							<locstring name="help_text" value="0" />
+							<file name="icon_name" value="" />
+							<file name="symbol_icon_name" value="" />
+							<string name="hotkey_name" value="" />
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+					<group name="building">
+						<instance_reference name="self_destruct_ability" value="" />
+						<enum name="unit_class" value="support_center" />
+						<group name="ui_info">
+							<locstring name="help_text" value="0" />
+							<string name="hotkey_name" value="" />
+							<file name="icon_name" value="hud\building_tabs\building_support_center" />
+							<locstring name="screen_name" value="0" />
+							<file name="symbol_icon_name" value="" />
+							<group name="ui_position">
+								<int name="ui_position_column" value="0" />
+								<int name="ui_position_row" value="0" />
+								<int name="ui_position_column_span" value="1" />
+								<int name="ui_position_row_span" value="1" />
+							</group>
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+				</group>
+				<group name="production_building" comment="There is a hack for the Vertical slice to allow the forward barracks to occupy the HOME icon / tab." List.ItemID="575918839">
+					<group name="builder">
+						<instance_reference name="dispatch_ability" value="" />
+						<enum name="unit_class" value="" />
+						<group name="ui_info">
+							<locstring name="screen_name" value="0" />
+							<locstring name="help_text" value="0" />
+							<file name="icon_name" value="" />
+							<file name="symbol_icon_name" value="" />
+							<string name="hotkey_name" value="" />
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+					<group name="building">
+						<instance_reference name="self_destruct_ability" value="" />
+						<enum name="unit_class" value="forward_barracks" />
+						<group name="ui_info">
+							<locstring name="help_text" value="0" />
+							<string name="hotkey_name" value="" />
+							<file name="icon_name" value="hud\building_tabs\building_hq" />
+							<locstring name="screen_name" value="11158143" />
+							<file name="symbol_icon_name" value="common\buildings\symbols\hq_us" />
+							<group name="ui_position">
+								<int name="ui_position_column" value="1" />
+								<int name="ui_position_row" value="0" />
+								<int name="ui_position_column_span" value="1" />
+								<int name="ui_position_row_span" value="1" />
+							</group>
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+				</group>
+				<group name="production_building" List.ItemID="1461497614">
+					<group name="builder">
+						<instance_reference name="dispatch_ability" value="" />
+						<enum name="unit_class" value="" />
+						<group name="ui_info">
+							<locstring name="screen_name" value="0" />
+							<locstring name="help_text" value="0" />
+							<file name="icon_name" value="" />
+							<file name="symbol_icon_name" value="" />
+							<string name="hotkey_name" value="" />
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+					<group name="building">
+						<instance_reference name="self_destruct_ability" value="" />
+						<enum name="unit_class" value="barracks" />
+						<group name="ui_info">
+							<locstring name="help_text" value="0" />
+							<string name="hotkey_name" value="" />
+							<file name="icon_name" value="hud\building_tabs\building_barracks" />
+							<locstring name="screen_name" value="0" />
+							<file name="symbol_icon_name" value="" />
+							<group name="ui_position">
+								<int name="ui_position_column" value="2" />
+								<int name="ui_position_row" value="0" />
+								<int name="ui_position_column_span" value="1" />
+								<int name="ui_position_row_span" value="1" />
+							</group>
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+				</group>
+				<group name="production_building" List.ItemID="-1002298727">
+					<group name="builder">
+						<instance_reference name="dispatch_ability" value="" />
+						<enum name="unit_class" value="" />
+						<group name="ui_info">
+							<locstring name="screen_name" value="0" />
+							<locstring name="help_text" value="0" />
+							<file name="icon_name" value="" />
+							<file name="symbol_icon_name" value="" />
+							<string name="hotkey_name" value="" />
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+					<group name="building">
+						<instance_reference name="self_destruct_ability" value="" />
+						<enum name="unit_class" value="weapon_support_center" />
+						<group name="ui_info">
+							<locstring name="help_text" value="0" />
+							<string name="hotkey_name" value="" />
+							<file name="icon_name" value="hud\building_tabs\building_weapon_support" />
+							<locstring name="screen_name" value="0" />
+							<file name="symbol_icon_name" value="" />
+							<group name="ui_position">
+								<int name="ui_position_column" value="3" />
+								<int name="ui_position_row" value="0" />
+								<int name="ui_position_column_span" value="1" />
+								<int name="ui_position_row_span" value="1" />
+							</group>
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+				</group>
+				<group name="production_building" List.ItemID="250223115">
+					<group name="builder">
+						<instance_reference name="dispatch_ability" value="" />
+						<enum name="unit_class" value="" />
+						<group name="ui_info">
+							<locstring name="screen_name" value="0" />
+							<locstring name="help_text" value="0" />
+							<file name="icon_name" value="" />
+							<file name="symbol_icon_name" value="" />
+							<string name="hotkey_name" value="" />
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+					<group name="building">
+						<instance_reference name="self_destruct_ability" value="" />
+						<enum name="unit_class" value="motor_pool" />
+						<group name="ui_info">
+							<locstring name="help_text" value="0" />
+							<string name="hotkey_name" value="" />
+							<file name="icon_name" value="hud\building_tabs\building_motor_pool" />
+							<locstring name="screen_name" value="0" />
+							<file name="symbol_icon_name" value="" />
+							<group name="ui_position">
+								<int name="ui_position_column" value="4" />
+								<int name="ui_position_row" value="0" />
+								<int name="ui_position_column_span" value="1" />
+								<int name="ui_position_row_span" value="1" />
+							</group>
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+				</group>
+				<group name="production_building" List.ItemID="-996539872">
+					<group name="builder">
+						<instance_reference name="dispatch_ability" value="" />
+						<enum name="unit_class" value="" />
+						<group name="ui_info">
+							<locstring name="screen_name" value="0" />
+							<locstring name="help_text" value="0" />
+							<file name="icon_name" value="" />
+							<file name="symbol_icon_name" value="" />
+							<string name="hotkey_name" value="" />
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+					<group name="building">
+						<instance_reference name="self_destruct_ability" value="" />
+						<enum name="unit_class" value="tank_depot" />
+						<group name="ui_info">
+							<locstring name="help_text" value="0" />
+							<string name="hotkey_name" value="" />
+							<file name="icon_name" value="hud\building_tabs\building_tank_depot" />
+							<locstring name="screen_name" value="0" />
+							<file name="symbol_icon_name" value="" />
+							<group name="ui_position">
+								<int name="ui_position_column" value="5" />
+								<int name="ui_position_row" value="0" />
+								<int name="ui_position_column_span" value="1" />
+								<int name="ui_position_row_span" value="1" />
+							</group>
+							<enum name="screen_name_visibility" value="visible" />
+						</group>
+					</group>
+				</group>
+			</list>
+			<group name="ai_production_info">
+				<list name="unlocking_upgrade_list">
+				</list>
+				<list name="loadouts">
+					<instance_reference name="loadout" value="ai\ai_loadout\americans" List.ItemID="-138070284" />
+				</list>
+				<group name="available">
+					<list name="upgrades">
+						<instance_reference name="upgrade" value="army_upgrade\battlegroups\american\airborne" List.ItemID="-44480311" />
+						<instance_reference name="upgrade" value="army_upgrade\battlegroups\american\armored" List.ItemID="-1761714192" />
+						<instance_reference name="upgrade" value="army_upgrade\battlegroups\american\special_operations" List.ItemID="-1536176867" />
+					</list>
+					<list name="abilities">
+					</list>
+					<list name="units">
+					</list>
+				</group>
+			</group>
+			<list name="team_size_point_resource_multiplier">
+			</list>
+			<list name="starting_buildings">
+				<group name="starting_building" List.ItemID="257591921">
+					<string name="key" value="default" />
+					<instance_reference name="building" value="ebps\races\american\buildings\production\hq_us" />
+					<list name="starting_squads">
+						<group name="starting_squad" List.ItemID="1571221030">
+							<instance_reference name="squad" value="sbps\races\american\infantry\scout_us" />
+							<bool name="check_requirements" value="True" />
+							<group name="position_offset">
+								<float name="x" value="0" />
+								<float name="y" value="15" />
+							</group>
+						</group>
+						<group name="starting_squad" List.ItemID="-1871577194">
+							<instance_reference name="squad" value="sbps\races\american\infantry\assault_engineer_us" />
+							<bool name="check_requirements" value="True" />
+							<group name="position_offset">
+								<float name="x" value="-15" />
+								<float name="y" value="0" />
+							</group>
+						</group>
+						<group name="starting_squad" List.ItemID="-341845086">
+							<instance_reference name="squad" value="sbps\races\american\infantry\pathfinder_us" />
+							<bool name="check_requirements" value="True" />
+							<group name="position_offset">
+								<float name="x" value="-15" />
+								<float name="y" value="0" />
+							</group>
+						</group>
+					</list>
+					<list name="player_upgrades">
+					</list>
+				</group>
+				<group name="starting_building" List.ItemID="1809509667">
+					<string name="key" value="base_bunker" />
+					<instance_reference name="building" value="ebps\races\american\buildings\defensive\base_defense_us" />
+					<list name="starting_squads">
+					</list>
+					<list name="player_upgrades">
+					</list>
+				</group>
+			</list>
+			<list name="field_support_production_styles">
+				<group name="field_support_production_style" List.ItemID="15724223">
+					<string name="key" value="" />
+					<list name="spawn_items">
+						<group name="spawn_item" List.ItemID="1870033250">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\team_weapons\hmg_30cal_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="3" />
+								<int name="ui_position_column" value="1" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-1776161450">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\engineer_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="1" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-1322078102">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\scout_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="2" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-856832331">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\bazooka_team_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="2" />
+								<int name="ui_position_column" value="3" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-1708609737">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\sniper_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="2" />
+								<int name="ui_position_column" value="2" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="537456771">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\team_weapons\mortar_81mm_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="3" />
+								<int name="ui_position_column" value="2" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="1160535644">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\riflemen_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="3" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-244671526">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\assault_engineer_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="1" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-1515035797">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\pathfinder_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="2" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-1520905537">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\team_weapons\hmg_30cal_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="3" />
+								<int name="ui_position_column" value="1" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+					</list>
+				</group>
+				<group name="field_support_production_style" List.ItemID="-867646254">
+					<string name="key" value="nested_menu" />
+					<list name="spawn_items">
+						<group name="spawn_item" List.ItemID="36848431">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\team_weapons\hmg_30cal_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="3" />
+								<int name="ui_position_column" value="1" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="64238942">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\engineer_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="1" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-2069745739">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\scout_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="2" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-1071327569">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\bazooka_team_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="2" />
+								<int name="ui_position_column" value="3" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="1621624380">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\sniper_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="2" />
+								<int name="ui_position_column" value="2" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-539130440">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\team_weapons\mortar_81mm_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="3" />
+								<int name="ui_position_column" value="2" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-1640007237">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\riflemen_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="3" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="-741159891">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\assault_engineer_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="1" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="1299586446">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\pathfinder_us" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="2" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+					</list>
+				</group>
+				<group name="field_support_production_style" comment="Partisan Safe House" List.ItemID="468166571">
+					<string name="key" value="partisan" />
+					<list name="spawn_items">
+						<group name="spawn_item" List.ItemID="-1766799413">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\resistance_fighters_partisan" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="1" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="1560961816">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\saboteurs_partisan" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="2" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+						<group name="spawn_item" List.ItemID="54409009">
+							<instance_reference name="entity" value="" />
+							<instance_reference name="squad" value="sbps\races\american\infantry\marksman_team_partisan" />
+							<bool name="spawn_at_map_entry_point" value="False" />
+							<group name="ui_position">
+								<int name="ui_position_row" value="1" />
+								<int name="ui_position_column" value="3" />
+							</group>
+							<instance_reference name="ui_menu" value="" />
+							<int name="number_to_spawn" value="1" />
+							<enum_table name="item_cost_adjustment">
+								<float name="action" value="0" />
+								<float name="command" value="0" />
+								<float name="popcap" value="0" />
+								<float name="fuel" value="0" />
+								<float name="munition" value="0" />
+								<float name="manpower" value="0" />
+								<float name="requisition" value="0" />
+								<float name="ultimate" value="0" />
+							</enum_table>
+							<locstring name="ui_screen_name" value="0" />
+							<locstring name="ui_help_text" value="0" />
+							<bool name="can_be_cancelled" value="True" />
+							<int name="number_to_queue_up_to _when_modified" value="0" />
+						</group>
+					</list>
+				</group>
+			</list>
+			<enum_table name="resource_starting_amount">
+				<float name="action" value="0" />
+				<float name="command" value="0" />
+				<float name="popcap" value="0" />
+				<float name="fuel" value="15" />
+				<float name="munition" value="25" />
+				<float name="manpower" value="390" />
+				<float name="requisition" value="0" />
+				<float name="ultimate" value="0" />
+			</enum_table>
+			<state_tree_node name="start_actions_statetree" value="sp_american" />
+			<list name="upgrades">
+			</list>
+			<group name="ui">
+				<list name="global_traits_summary">
+				</list>
+				<locstring name="subheader" value="0" />
+				<locstring name="one_liner" value="0" />
+				<file name="background_image" value="common\races\fe_factionselect_window_usforces" />
+				<int name="difficulty" value="0" />
+				<enum name="research_upgrade" value="" />
+			</group>
+			<bool name="check_pop_cap_when_queuing_production_item" value="True" />
+			<group name="casualties">
+				<float name="guaranteed_casualty_per_number_of_deaths" value="5" />
+				<int name="max_rescued_casualty_count" value="10" />
+			</group>
+			<enum_table name="upkeep_per_pop_per_minute_override">
+				<float name="action" value="0" />
+				<float name="command" value="0" />
+				<float name="popcap" value="0" />
+				<float name="fuel" value="0" />
+				<float name="munition" value="0" />
+				<float name="manpower" value="0" />
+				<float name="requisition" value="0" />
+				<float name="ultimate" value="0" />
+			</enum_table>
+			<instance_reference name="generic_weapon_crew_blueprint" value="sbps\races\american\gameplay\crew_team_weapon_generic_us" />
+		</group>
+		<uniqueid name="pbgid" value="129946" />
+	</variant>
+</instance>

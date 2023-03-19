@@ -1,0 +1,43 @@
+<instance version="5" description="" template="attachments\attachment_list">
+	<variant name="default">
+		<group name="attachment_list_group">
+			<list name="attachment_list">
+				<template_reference name="attachment" value="options\attachment_types\animator_skin_attachment" List.ItemID="-110080301">
+					<file name="animator" value="art\armies\dak\structures\tier2\tier2" />
+					<enum name="inventory_item_category" value="" />
+					<bool name="is_selectable" value="True" />
+					<string name="marker_name" value="" />
+					<file name="material_override" value="" />
+					<list name="customizations">
+					</list>
+				</template_reference>
+				<template_reference name="attachment" value="options\attachment_types\entity_create_attachment" List.ItemID="-538332354">
+					<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+						<template_reference name="attach_data" value="attachments\attach_data">
+							<string name="marker_name_parent" value="loc_acc_vehicle" />
+							<string name="parent_rigidbody_target_name" value="" />
+							<enum name="game_object_attachment_type" value="scenegraph" />
+						</template_reference>
+						<instance_reference name="ebp" value="ebps\races\afrika_korps\vehicles\truck_2_5_prop_ak" />
+						<group name="attachment_flags">
+							<bool name="sim_only" value="False" />
+							<bool name="no_pathfinding" value="True" />
+							<bool name="not_snappable" value="False" />
+							<bool name="restore_snap_to_ground_on_detach" value="False" />
+							<bool name="no_sim_update" value="False" />
+							<bool name="join_parent_squad" value="False" />
+							<bool name="redirect_damage_to_parent_entity" value="True" />
+							<bool name="receive_parent_animations" value="False" />
+							<bool name="receive_parent_death" value="True" />
+						</group>
+					</template_reference>
+				</template_reference>
+			</list>
+			<string name="attachment_category" value="default" />
+			<string name="attachment_speaker_code" value="" />
+			<string name="inventory_category" value="default" />
+		</group>
+		<uniqueid name="pbgid" value="1516125" />
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+</instance>

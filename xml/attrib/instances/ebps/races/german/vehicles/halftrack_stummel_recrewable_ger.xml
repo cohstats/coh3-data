@@ -1,0 +1,396 @@
+<instance version="5" description="Halftrack Sdkfz 251 Stummel entity.&#xD;&#xA;&#xD;&#xA;RECREWABLE Half-track with a gun!" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-1350927259" List.ParentItemID="-1350927259">
+				<locstring name="screen_name" value="11241740" overrideParent="True" />
+				<locstring name="help_text" value="11153568" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\population_ext" List.ItemID="1973119980" List.ParentItemID="1973119980">
+				<float name="personnel_pop" value="6" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\crew_ext" List.ItemID="2123400154" List.ParentItemID="2123400154">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-1416451475" List.ParentItemID="-1416451475">
+						<group name="info">
+							<list name="role_list">
+								<group name="role" List.ItemID="2082125139" List.ParentItemID="2082125139">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+								<group name="role" List.ItemID="-1194318490" List.ParentItemID="-1194318490">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+							</list>
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="74693805" List.ParentItemID="74693805">
+						<group name="info">
+							<list name="role_list">
+								<group name="role" List.ItemID="2082125139" List.ParentItemID="2082125139">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+								<group name="role" List.ItemID="-1194318490" List.ParentItemID="-1194318490">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+							</list>
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-637544187" List.ParentItemID="-637544187">
+						<group name="info">
+							<list name="role_list">
+								<group name="role" List.ItemID="2082125139" List.ParentItemID="2082125139">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+								<group name="role" List.ItemID="-1194318490" List.ParentItemID="-1194318490">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+							</list>
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-2031088483" List.ParentItemID="-2031088483">
+						<group name="info">
+							<list name="role_list">
+								<group name="role" List.ItemID="2082125139" List.ParentItemID="2082125139">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+								<group name="role" List.ItemID="-1194318490" List.ParentItemID="-1194318490">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+							</list>
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\recrewable_ext" List.ItemID="2062162505" List.ListAction="Append">
+				<list name="race_list" overrideParent="True">
+					<group name="race_data" List.ItemID="-2047495815">
+						<instance_reference name="ext_key" value="racebps\afrika_korps" overrideParent="True" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\vehicles\halftrack_stummel_recrewable_ger" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="2" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="2054457811">
+						<instance_reference name="ext_key" value="racebps\americans" overrideParent="True" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\vehicles\halftrack_stummel_recrewable_ger" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="2" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="880869509">
+						<instance_reference name="ext_key" value="racebps\british" overrideParent="True" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\vehicles\halftrack_stummel_recrewable_ger" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="2" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="549561042">
+						<instance_reference name="ext_key" value="racebps\germans" overrideParent="True" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\vehicles\halftrack_stummel_recrewable_ger" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="2" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="721831245">
+						<instance_reference name="ext_key" value="" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\vehicles\halftrack_stummel_recrewable_ger" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="2" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="1439221943">
+						<instance_reference name="ext_key" value="racebps\partisan" overrideParent="True" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\vehicles\halftrack_stummel_recrewable_ger" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="2" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2072018" />
+		<instance_reference name="parent_pbg" value="ebps\races\german\vehicles\halftrack_stummel_ger" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-1350927259" List.ParentItemID="-1350927259">
+				<locstring name="screen_name" value="11241740" overrideParent="True" />
+				<locstring name="help_text" value="11153568" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\population_ext" List.ItemID="1973119980" List.ParentItemID="1973119980">
+				<float name="personnel_pop" value="6" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\crew_ext" List.ItemID="2123400154" List.ParentItemID="2123400154">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-1416451475" List.ParentItemID="-1416451475">
+						<group name="info">
+							<list name="role_list">
+								<group name="role" List.ItemID="2082125139" List.ParentItemID="2082125139">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+								<group name="role" List.ItemID="-1194318490" List.ParentItemID="-1194318490">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+							</list>
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="74693805" List.ParentItemID="74693805">
+						<group name="info">
+							<list name="role_list">
+								<group name="role" List.ItemID="2082125139" List.ParentItemID="2082125139">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+								<group name="role" List.ItemID="-1194318490" List.ParentItemID="-1194318490">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+							</list>
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-637544187" List.ParentItemID="-637544187">
+						<group name="info">
+							<list name="role_list">
+								<group name="role" List.ItemID="2082125139" List.ParentItemID="2082125139">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+								<group name="role" List.ItemID="-1194318490" List.ParentItemID="-1194318490">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+							</list>
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-2031088483" List.ParentItemID="-2031088483">
+						<group name="info">
+							<list name="role_list">
+								<group name="role" List.ItemID="2082125139" List.ParentItemID="2082125139">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+								<group name="role" List.ItemID="-1194318490" List.ParentItemID="-1194318490">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<group name="attachment_flags">
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+								</group>
+							</list>
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\recrewable_ext" List.ItemID="2062162505" List.ListAction="Append">
+				<list name="race_list" overrideParent="True">
+					<group name="race_data" List.ItemID="-2047495815">
+						<instance_reference name="ext_key" value="racebps\afrika_korps" overrideParent="True" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\vehicles\halftrack_stummel_recrewable_ger" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="2" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="2054457811">
+						<instance_reference name="ext_key" value="racebps\americans" overrideParent="True" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\vehicles\halftrack_stummel_recrewable_ger" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="2" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="880869509">
+						<instance_reference name="ext_key" value="racebps\british" overrideParent="True" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\vehicles\halftrack_stummel_recrewable_ger" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="2" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="549561042">
+						<instance_reference name="ext_key" value="racebps\germans" overrideParent="True" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\vehicles\halftrack_stummel_recrewable_ger" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="2" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="721831245">
+						<instance_reference name="ext_key" value="" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\vehicles\halftrack_stummel_recrewable_ger" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="2" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="1439221943">
+						<instance_reference name="ext_key" value="racebps\partisan" overrideParent="True" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\german\vehicles\halftrack_stummel_recrewable_ger" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="2" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2072018" />
+		<instance_reference name="parent_pbg" value="ebps\races\german\vehicles\halftrack_stummel_ger" />
+	</variant>
+</instance>

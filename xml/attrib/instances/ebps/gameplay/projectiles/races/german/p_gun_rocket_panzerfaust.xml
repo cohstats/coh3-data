@@ -1,0 +1,36 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="892757990" List.ParentItemID="892757990">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\projectile\p_rocket_panzerfaust" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\projectile_ext" List.ItemID="-238641361" List.ParentItemID="-238641361">
+				<bool name="force_3d_collision" value="True" overrideParent="True" />
+				<template_reference name="projectile_piercing_damage_option" value="options\none" overrideParent="True">
+				</template_reference>
+				<float name="acceleration" value="80" comment="Having the projectile accelerate doesn't feel right.. the shell would decelerate if anything.  I increased the speed instead.  The original accelerate was set to 20, incase you really need it. - moose." overrideParent="True" />
+				<float name="speed" value="60" comment="I removed the acceleration above and increased the speed from 80 to 120.  It feels better. - MOose" overrideParent="True" />
+				<bool name="collision_land_ignore" value="True" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2102015" />
+		<instance_reference name="parent_pbg" value="ebps\gameplay\projectiles\parent\p_straight_shot_parent" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="892757990" List.ParentItemID="892757990">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\projectile\p_rocket_panzerfaust" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\projectile_ext" List.ItemID="-238641361" List.ParentItemID="-238641361">
+				<bool name="force_3d_collision" value="True" overrideParent="True" />
+				<template_reference name="projectile_piercing_damage_option" value="options\none" overrideParent="True">
+				</template_reference>
+				<float name="acceleration" value="80" comment="Having the projectile accelerate doesn't feel right.. the shell would decelerate if anything.  I increased the speed instead.  The original accelerate was set to 20, incase you really need it. - moose." overrideParent="True" />
+				<float name="speed" value="60" comment="I removed the acceleration above and increased the speed from 80 to 120.  It feels better. - MOose" overrideParent="True" />
+				<bool name="collision_land_ignore" value="True" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2102015" />
+		<instance_reference name="parent_pbg" value="ebps\gameplay\projectiles\parent\p_straight_shot_parent" />
+	</variant>
+</instance>

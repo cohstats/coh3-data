@@ -1,0 +1,42 @@
+<instance version="5" description="" template="flight_plan">
+	<variant name="default">
+		<uniqueid name="pbgid" value="2016837" />
+		<group name="flight_plan_bag">
+			<list name="flight_maneuvers">
+				<template_reference name="maneuver" value="options\flight_maneuver\payload_at_target" List.ItemID="-851396032">
+					<state_tree_node name="payload_tree" value="ability_aircraft_transfer_payload\land_on_airfield" />
+					<enum name="payload_target" value="flight_plan_target_01" />
+					<float name="default_height_multiplier" value="0.5" />
+					<float name="dive_length" value="3" />
+					<float name="dive_height_multiplier" value="0.5" />
+					<float name="default_speed_multiplier" value="1" />
+					<float name="arrival_time_seconds" value="0" />
+					<float name="dive_duration_seconds" value="0" />
+					<float name="payload_offset" value="0" />
+					<float name="cruise_length" value="40" />
+					<state_tree_node name="dive_complete_tree" value="" />
+				</template_reference>
+			</list>
+		</group>
+	</variant>
+	<variant name="sp">
+		<uniqueid name="pbgid" value="2016837" />
+		<group name="flight_plan_bag">
+			<list name="flight_maneuvers">
+				<template_reference name="maneuver" value="options\flight_maneuver\payload_at_target" List.ItemID="-851396032">
+					<state_tree_node name="payload_tree" value="ability_aircraft_transfer_payload\land_on_airfield" />
+					<enum name="payload_target" value="flight_plan_target_01" />
+					<float name="default_height_multiplier" value="0.5" />
+					<float name="dive_length" value="3" />
+					<float name="dive_height_multiplier" value="0.5" />
+					<float name="default_speed_multiplier" value="1" />
+					<float name="arrival_time_seconds" value="0" />
+					<float name="dive_duration_seconds" value="0" />
+					<float name="payload_offset" value="0" />
+					<float name="cruise_length" value="40" />
+					<state_tree_node name="dive_complete_tree" value="" />
+				</template_reference>
+			</list>
+		</group>
+	</variant>
+</instance>

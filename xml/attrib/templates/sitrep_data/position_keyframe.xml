@@ -1,0 +1,8 @@
+<template description="" can_be_instantiated="False" virtual_category="" can_be_modded="False" export_for_client="True">
+	<float name="key_time" description="Time of the keyframe in seconds." min="0" max="3.402823E+38" default="0" />
+	<group name="value" description="Value of the keyframe to animate toward." start_expanded="False">
+		<template_reference name="world_position" description="3D position, only the X and Z is used right now." template_list="basic_data_types\vector3" relative_path_list="" default="basic_data_types\vector3" can_be_null="False" export_flat="False" />
+		<enum name="type" description="Type of position." enum="sitrep_position_type" default="WorldPosition" can_be_null="False" />
+	</group>
+	<enum name="interpolation_type" description="Behaviour the initial value or the previous keyframe value and this keyframe's value." enum="sitrep_keyframe_interpolation_type" default="Discrete" can_be_null="False" />
+</template>

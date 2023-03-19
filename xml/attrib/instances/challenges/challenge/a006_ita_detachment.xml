@@ -1,0 +1,75 @@
+<instance version="5" description="" template="challenges\challenge">
+	<variant name="default">
+		<group name="challenge_bag">
+			<uniqueid name="id" value="1526575" />
+			<locstring name="name" value="11244840" />
+			<locstring name="description" value="11244841" />
+			<locstring name="tip" value="0" />
+			<group name="requirement">
+				<list name="requirements">
+				</list>
+				<enum name="operator" value="none" />
+			</group>
+			<group name="update_rule">
+				<template_reference name="value_requirement" value="challenges\requirement_values\constant\generic">
+					<int name="value" value="1" />
+				</template_reference>
+			</group>
+			<int name="completion_count" value="1" />
+			<group name="reward">
+				<instance_reference name="item_bundle" value="" />
+				<instance_reference name="challenge" value="" />
+				<instance_reference name="achievement" value="achievement\a006_ita_detachment" />
+				<int name="xp" value="0" />
+			</group>
+			<bool name="enable" value="True" />
+			<list name="counters">
+				<template_reference name="counter" value="challenges\counters\counter" List.ItemID="-1110584483">
+					<string name="name" value="purchase_detachment" />
+					<bool name="enabled" value="True" />
+					<enum name="tracking_event" value="CustomEvent" />
+					<list name="trigger_rules">
+						<template_reference name="rule" value="challenges\counters\counter_rule" List.ItemID="-74975499">
+							<template_reference name="requirement" value="challenges\requirement">
+								<enum name="operator" value="equal" />
+								<list name="values">
+									<template_reference name="value_requirement" value="challenges\requirement_values\dynamic\customevent" List.ItemID="1165610286">
+									</template_reference>
+									<template_reference name="value_requirement" value="challenges\requirement_values\constant\customevent" List.ItemID="-877821613">
+										<enum name="value" value="AchievPurchaseDetachment" />
+									</template_reference>
+								</list>
+								<list name="requirements">
+								</list>
+							</template_reference>
+							<list name="actions">
+							</list>
+						</template_reference>
+					</list>
+					<template_reference name="complete_rule" value="challenges\counters\counter_rule">
+						<template_reference name="requirement" value="challenges\requirement">
+							<enum name="operator" value="none" />
+							<list name="values">
+							</list>
+							<list name="requirements">
+							</list>
+						</template_reference>
+						<list name="actions">
+							<template_reference name="action" value="challenges\counter_actions\complete_challenge" List.ItemID="-720994493">
+							</template_reference>
+						</list>
+					</template_reference>
+				</template_reference>
+			</list>
+			<file name="icon" value="" />
+			<int name="fe_priority" value="0" />
+			<instance_reference name="group" value="challenges\challenge_group\achievements" />
+			<enum name="award_source" value="Client" />
+			<string name="platform_stat_key" value="" />
+			<list name="tags">
+			</list>
+			<string name="xbox_title_achievement_id" value="" />
+		</group>
+		<uniqueid name="pbgid" value="1526576" />
+	</variant>
+</instance>

@@ -1,0 +1,1670 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="-511867459" List.ParentItemID="-511867459">
+				<list name="unit_type_list" overrideParent="True">
+					<enum name="unit_type" value="building" List.ItemID="-1818888825" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="848206026" List.ParentItemID="848206026">
+				<float name="decorator_height" value="9" overrideParent="True" />
+				<enum name="selection_type" value="single_entity_select" overrideParent="True" />
+				<locstring name="brief_text" value="11206314" overrideParent="True" />
+				<string name="debug_text" value="" overrideParent="True" />
+				<locstring name="screen_name" value="11236051" overrideParent="True" />
+				<locstring name="help_text" value="0" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="45344089" List.ParentItemID="45344089">
+				<float name="death_seconds" value="0" overrideParent="True" />
+				<bool name="delete_when_dead" value="True" overrideParent="True" />
+				<bool name="remove_from_pathfinding_on_death" value="False" overrideParent="True" />
+				<template_reference name="wreck_entity_option" value="options\ebpextensions\healthext\wreck_table">
+					<enum_table name="wreck_entities">
+						<instance_reference name="default" value="ebps\environment\buildings\north_africa\wrecks\na_2x2x2_wreck" overrideParent="True" />
+					</enum_table>
+				</template_reference>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-195156410" List.ParentItemID="-195156410">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\buildings\north_africa\na_2x2x2_01" overrideParent="True" />
+				<file name="alternate_sua" value="art\environment\buildings\north_africa\na_2x2x2_01\na_2x2x2_01" comment="this should be pointing to the custom simbox created for th building" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" List.ItemID="-105962779" List.ParentItemID="-105962779">
+				<list name="block_path" overrideParent="True">
+					<instance_reference name="path_type" value="pass_types\infantry" List.ItemID="311189168" />
+					<instance_reference name="path_type" value="pass_types\vehicle_medium" List.ItemID="-474965668" />
+					<instance_reference name="path_type" value="pass_types\vehicle_heavy" List.ItemID="-1821228972" />
+					<instance_reference name="path_type" value="pass_types\vehicle_light" List.ItemID="771479392" />
+					<instance_reference name="path_type" value="pass_types\vaulting_infantry" List.ItemID="1988418711" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_light" List.ItemID="-1852245973" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_medium" List.ItemID="-462269674" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_heavy" List.ItemID="231194795" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hold_ext" List.ItemID="49689098" List.ParentItemID="49689098">
+				<float name="load_seconds" value="0" overrideParent="True" />
+				<float name="max_load_seconds" value="6" overrideParent="True" />
+				<float name="min_hold_seconds" value="0" overrideParent="True" />
+				<bool name="ensure_pathability_to_hold_for_unload" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sight_ext" List.ItemID="-1603085268" List.ParentItemID="-1603085268">
+				<group name="vertical_truesight">
+					<float name="eye_height" value="6" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="1943101274" List.ParentItemID="1943101274">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_vehicle_collide" value="False" overrideParent="True" />
+						<bool name="tp_piercing_blockers_only" value="False" overrideParent="True" />
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="-1084547450" List.ParentItemID="-1084547450">
+				<group name="speech_parameters">
+					<string name="unit_code" value="building" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\destructible_cell_ext" List.ItemID="684110929" List.ParentItemID="684110929">
+				<list name="cells" overrideParent="True">
+					<list name="main_cells_1f" overrideParent="True" List.ItemID="1268264336">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1189993744">
+							<float name="max_health" value="200" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\na_2x2x2_01\cell_01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_01" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-1525828679">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\na_2x2x2_01\cell_02" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_02" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-1312572890">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\na_2x2x2_01\cell_03" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_03" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-783433076">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\na_2x2x2_01\cell_04" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_04" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+					</list>
+					<list name="main_cells_2f" overrideParent="True" List.ItemID="-1660929438">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-445345399">
+							<float name="max_health" value="200" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\na_2x2x2_01\cell_05" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_05" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-1612425934">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\na_2x2x2_01\cell_06" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_06" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-74036074">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\na_2x2x2_01\cell_07" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_07" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="1971214051">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\na_2x2x2_01\cell_08" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_08" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+					</list>
+					<list name="main_cells_roof" overrideParent="True" List.ItemID="897443942">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="620989197">
+							<float name="max_health" value="200" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\na_2x2x2_01\cell_09" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_09" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-34091545">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\na_2x2x2_01\cell_10" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_10" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-999000210">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\na_2x2x2_01\cell_11" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_11" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-1888676750">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\na_2x2x2_01\cell_12" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_12" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+					</list>
+					<list name="accessories_1f" overrideParent="True" List.ItemID="-868943678">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-2135969327">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_canopy01\na_canopy01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_01\loc_acc_cell01_canopy01" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-676115299">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_canopy02\na_canopy02" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_02\loc_acc_cell02_canopy02" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="484212920">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_shutters_medium01\na_shutters_medium01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_04\loc_acc_cell04_shutters_medium01_04" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1836558706">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_shutters_small01\na_shutters_small01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_04\loc_acc_cell04_shutter_small01_02" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-924508738">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_shutters_small01\na_shutters_small01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_01\loc_acc_cell01_shutter_small01_01" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-350279422">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_door_exterior01\na_door_exterior01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_02\loc_acc_cell02_door_exterior01_01" overrideParent="True" />
+							<string name="combat_slot_marker" value="loc_cell_02\mkr_combat_doorway_02" overrideParent="True" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1716167372">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_door_exterior01\na_door_exterior01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_04\loc_acc_cell04_door_exterior01_02" overrideParent="True" />
+							<string name="combat_slot_marker" value="loc_cell_04\mkr_combat_doorway_01" overrideParent="True" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1990767209">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_windows\na_window_small01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_01\loc_acc_cell01_window_small01_01" overrideParent="True" />
+							<string name="combat_slot_marker" value="loc_cell_01\mkr_combat_slot_05" overrideParent="True" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="2057288367">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_windows\na_window_small01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_04\loc_acc_cell04_window_small01_02" overrideParent="True" />
+							<string name="combat_slot_marker" value="loc_cell_04\mkr_combat_slot_07" overrideParent="True" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-479352761">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_windows\na_window_medium01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_04\loc_acc_cell04_window_medium01_03" overrideParent="True" />
+							<string name="combat_slot_marker" value="loc_cell_04\mkr_combat_slot_06" overrideParent="True" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+					</list>
+					<list name="accessories_2f" overrideParent="True" List.ItemID="1374088560">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1279506999">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_shutters_medium01\na_shutters_medium01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_08\loc_acc_cell08_shutters_medium01_02" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-585355498">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_shutters_medium01\na_shutters_medium01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_05\loc_acc_cell05_shutters_medium01_03" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1617985810">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_shutters_medium01\na_shutters_medium01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_06\loc_acc_cell06_shutters_medium01_05" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="43177324">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_shutters_medium01\na_shutters_medium01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_06\loc_acc_cell06_shutters_medium01_06" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-1141447991">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_windows\na_window_medium01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_08\loc_acc_cell08_window_medium01_01" overrideParent="True" />
+							<string name="combat_slot_marker" value="loc_cell_08\mkr_combat_slot_08" overrideParent="True" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="68827182">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_windows\na_window_medium01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_05\loc_acc_cell05_window_medium01_02" overrideParent="True" />
+							<string name="combat_slot_marker" value="loc_cell_05\mkr_combat_slot_09" overrideParent="True" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-1825125697">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_windows\na_window_medium01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_06\loc_acc_cell06_window_medium01_04" overrideParent="True" />
+							<string name="combat_slot_marker" value="loc_cell_06\mkr_combat_slot_011" overrideParent="True" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1429010332">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_windows\na_window_medium01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_06\loc_acc_cell06_window_medium01_05" overrideParent="True" />
+							<string name="combat_slot_marker" value="loc_cell_06\mkr_combat_slot_010" overrideParent="True" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+					</list>
+					<list name="accessories_roof" overrideParent="True" List.ItemID="-997975654">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1306870482">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_bowl01\na_bowl01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_10\loc_acc_cell10_bowl01" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1777412789">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_canopy_roof01\na_canopy_roof01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_09\loc_acc_cell09_canopy_roof01" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="238506667">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_carpet01\na_carpet01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_10\loc_acc_cell10_carpet01" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-428672335">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_vase01\na_vase01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_09\loc_acc_cell09_vase01_01" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-1963493187">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_vase01\na_vase01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_10\loc_acc_cell10_vase01_02" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1745722805">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_vase01\na_vase01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_10\loc_acc_cell10_vase01_03" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="981771567">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_vase02\na_vase02" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_10\loc_acc_cell10_vase02_01" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-1490738467">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_woodpile01\na_woodpile01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_11\loc_acc_cell11_woodpile01" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-1257536490">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_cloth_hanging_roof01\na_cloth_hanging_roof01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_12\loc_acc_cell12_cloth_hanging_roof01_01" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="427661503">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_cloth_hanging_roof01\na_cloth_hanging_roof01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_10\loc_acc_cell10_cloth_hanging_roof01_02" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1593241157">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_cloth_hanging_roof02\na_cloth_hanging_roof02" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_09\loc_acc_cell09_cloth_hanging_roof02_01" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+					</list>
+				</list>
+				<list name="cell_presets" overrideParent="True">
+					<template_reference name="cell_preset" value="options\ebpextensions\destructible_cell_ext\cell_preset" List.ItemID="-763500247">
+						<instance_reference name="hit_material" value="" />
+						<float name="max_health" value="200" />
+						<string name="name" value="cell_default" overrideParent="True" />
+						<bool name="use_as_impass_blocker" value="False" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+					</template_reference>
+					<template_reference name="cell_preset" value="options\ebpextensions\destructible_cell_ext\cell_preset" List.ItemID="-922979533">
+						<instance_reference name="hit_material" value="" />
+						<float name="max_health" value="150" />
+						<string name="name" value="cell_roof" />
+						<bool name="use_as_impass_blocker" value="False" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+					</template_reference>
+					<template_reference name="cell_preset" value="options\ebpextensions\destructible_cell_ext\cell_preset" List.ItemID="-1764757974">
+						<instance_reference name="hit_material" value="" />
+						<float name="max_health" value="5" />
+						<string name="name" value="accessory_default" overrideParent="True" />
+						<bool name="use_as_impass_blocker" value="False" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+					</template_reference>
+					<template_reference name="cell_preset" value="options\ebpextensions\destructible_cell_ext\cell_preset" List.ItemID="553794794">
+						<instance_reference name="hit_material" value="" />
+						<float name="max_health" value="20" />
+						<string name="name" value="accessory_door" overrideParent="True" />
+						<bool name="use_as_impass_blocker" value="False" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+					</template_reference>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\field_support_ext" List.ItemID="-21620763" List.ListAction="Append">
+				<bool name="convert_when_damaged" value="True" />
+				<bool name="occupied_building" value="True" />
+				<float name="occupied_revert_seconds" value="20" overrideParent="True" />
+				<bool name="revert_on_transfer" value="True" />
+				<bool name="spawner_ext" value="True" />
+				<string name="production_style_key" value="" />
+				<float name="revert_radius" value="5" />
+				<float name="convert_seconds" value="30" overrideParent="True" />
+				<list name="added_abilities_on_convert" overrideParent="True">
+					<instance_reference name="ability" value="abilities\races\common\buildings\forward_base\forward_base_healing_aura" overrideParent="True" List.ItemID="-1471704768" />
+					<instance_reference name="ability" value="abilities\races\common\buildings\withdraw_infantry" overrideParent="True" List.ItemID="-256263985" />
+					<instance_reference name="ability" value="abilities\races\common\buildings\retreat_point_mobile_toggle_sp" overrideParent="True" List.ItemID="2027910528" />
+					<instance_reference name="ability" value="abilities\races\common\buildings\auto_reinforce" List.ItemID="-1483528817" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\spawner_ext" overrideParent="True" List.ItemID="1983225393" List.ListAction="Append">
+				<bool name="must_be_in_supply" value="True" overrideParent="True" />
+				<float name="reinforce_radius" value="30" />
+				<list name="spawn_items">
+				</list>
+				<list name="bonus_xp_from_hold_list">
+				</list>
+				<list name="reinforce_requirements">
+				</list>
+				<bool name="spawn_to_hold_try_first" value="False" />
+				<list name="queue_requirements">
+				</list>
+				<bool name="can_rally" value="True" />
+				<template_reference name="animated_spawn_option" value="options\none">
+				</template_reference>
+				<int name="max_queue_size_override" value="-1" />
+				<state_tree_node name="queue_requirements_openingbranch" value="convert_to_forward_base\ability_prerequisites\spawner_reinforce_prerequisites" overrideParent="True" />
+				<state_tree_node name="reinforce_requirements_openingbranch" value="convert_to_forward_base\ability_prerequisites\spawner_reinforce_prerequisites" overrideParent="True" />
+				<state_tree_node name="production_item_completed_openingbranch" value="" />
+				<bool name="enforce_minimum_clearance_at_spawn_positions" value="False" />
+				<bool name="enforce_minimum_clearance_if_entities_blocking" value="True" />
+				<float name="enforce_minimum_clearance_at_spawn_positions_search_range" value="0" />
+				<instance_reference name="rally_pass_type" value="" />
+				<int name="parallel_production_count" value="1" />
+				<template_reference name="default_rally_point_offset" value="">
+				</template_reference>
+				<bool name="always_paradrop_spawn" value="False" />
+				<bool name="shared_team_production" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ability_ext" List.ItemID="1485705504" List.ListAction="Append">
+				<list name="abilities" overrideParent="True">
+					<instance_reference name="ability" value="abilities\races\common\buildings\forward_base\convert_to_forward_base" List.ItemID="-687752732" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\animation_role_ext" List.ItemID="-1289187507" List.ListAction="Append">
+				<instance_reference name="default_role" value="animation_role\buildings\italian_rural\2x2_tall" />
+				<enum name="flavour_key" value="" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="1579917" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\destructible_building_template" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="-511867459" List.ParentItemID="-511867459">
+				<list name="unit_type_list" overrideParent="True">
+					<enum name="unit_type" value="building" List.ItemID="-1818888825" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="848206026" List.ParentItemID="848206026">
+				<float name="decorator_height" value="9" overrideParent="True" />
+				<enum name="selection_type" value="single_entity_select" overrideParent="True" />
+				<locstring name="brief_text" value="11206314" overrideParent="True" />
+				<string name="debug_text" value="" overrideParent="True" />
+				<locstring name="screen_name" value="11236051" overrideParent="True" />
+				<locstring name="help_text" value="0" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="45344089" List.ParentItemID="45344089">
+				<float name="death_seconds" value="0" overrideParent="True" />
+				<bool name="delete_when_dead" value="True" overrideParent="True" />
+				<bool name="remove_from_pathfinding_on_death" value="False" overrideParent="True" />
+				<template_reference name="wreck_entity_option" value="options\ebpextensions\healthext\wreck_table">
+					<enum_table name="wreck_entities">
+						<instance_reference name="default" value="ebps\environment\buildings\north_africa\wrecks\na_2x2x2_wreck" overrideParent="True" />
+					</enum_table>
+				</template_reference>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-195156410" List.ParentItemID="-195156410">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\buildings\north_africa\na_2x2x2_01" overrideParent="True" />
+				<file name="alternate_sua" value="art\environment\buildings\north_africa\na_2x2x2_01\na_2x2x2_01" comment="this should be pointing to the custom simbox created for th building" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" List.ItemID="-105962779" List.ParentItemID="-105962779">
+				<list name="block_path" overrideParent="True">
+					<instance_reference name="path_type" value="pass_types\infantry" List.ItemID="311189168" />
+					<instance_reference name="path_type" value="pass_types\vehicle_medium" List.ItemID="-474965668" />
+					<instance_reference name="path_type" value="pass_types\vehicle_heavy" List.ItemID="-1821228972" />
+					<instance_reference name="path_type" value="pass_types\vehicle_light" List.ItemID="771479392" />
+					<instance_reference name="path_type" value="pass_types\vaulting_infantry" List.ItemID="1988418711" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_light" List.ItemID="-1852245973" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_medium" List.ItemID="-462269674" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_heavy" List.ItemID="231194795" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hold_ext" List.ItemID="49689098" List.ParentItemID="49689098">
+				<float name="load_seconds" value="0" overrideParent="True" />
+				<float name="max_load_seconds" value="6" overrideParent="True" />
+				<float name="min_hold_seconds" value="0" overrideParent="True" />
+				<bool name="ensure_pathability_to_hold_for_unload" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sight_ext" List.ItemID="-1603085268" List.ParentItemID="-1603085268">
+				<group name="vertical_truesight">
+					<float name="eye_height" value="6" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="1943101274" List.ParentItemID="1943101274">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_vehicle_collide" value="False" overrideParent="True" />
+						<bool name="tp_piercing_blockers_only" value="False" overrideParent="True" />
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="-1084547450" List.ParentItemID="-1084547450">
+				<group name="speech_parameters">
+					<string name="unit_code" value="building" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\destructible_cell_ext" List.ItemID="684110929" List.ParentItemID="684110929">
+				<list name="cells" overrideParent="True">
+					<list name="main_cells_1f" overrideParent="True" List.ItemID="1268264336">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1189993744">
+							<float name="max_health" value="200" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\na_2x2x2_01\cell_01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_01" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-1525828679">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\na_2x2x2_01\cell_02" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_02" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-1312572890">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\na_2x2x2_01\cell_03" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_03" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-783433076">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\na_2x2x2_01\cell_04" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_04" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+					</list>
+					<list name="main_cells_2f" overrideParent="True" List.ItemID="-1660929438">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-445345399">
+							<float name="max_health" value="200" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\na_2x2x2_01\cell_05" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_05" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-1612425934">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\na_2x2x2_01\cell_06" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_06" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-74036074">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\na_2x2x2_01\cell_07" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_07" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="1971214051">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\na_2x2x2_01\cell_08" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_08" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+					</list>
+					<list name="main_cells_roof" overrideParent="True" List.ItemID="897443942">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="620989197">
+							<float name="max_health" value="200" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\na_2x2x2_01\cell_09" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_09" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-34091545">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\na_2x2x2_01\cell_10" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_10" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-999000210">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\na_2x2x2_01\cell_11" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_11" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-1888676750">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\na_2x2x2_01\cell_12" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_12" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+					</list>
+					<list name="accessories_1f" overrideParent="True" List.ItemID="-868943678">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-2135969327">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_canopy01\na_canopy01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_01\loc_acc_cell01_canopy01" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-676115299">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_canopy02\na_canopy02" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_02\loc_acc_cell02_canopy02" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="484212920">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_shutters_medium01\na_shutters_medium01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_04\loc_acc_cell04_shutters_medium01_04" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1836558706">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_shutters_small01\na_shutters_small01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_04\loc_acc_cell04_shutter_small01_02" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-924508738">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_shutters_small01\na_shutters_small01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_01\loc_acc_cell01_shutter_small01_01" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-350279422">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_door_exterior01\na_door_exterior01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_02\loc_acc_cell02_door_exterior01_01" overrideParent="True" />
+							<string name="combat_slot_marker" value="loc_cell_02\mkr_combat_doorway_02" overrideParent="True" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1716167372">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_door_exterior01\na_door_exterior01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_04\loc_acc_cell04_door_exterior01_02" overrideParent="True" />
+							<string name="combat_slot_marker" value="loc_cell_04\mkr_combat_doorway_01" overrideParent="True" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1990767209">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_windows\na_window_small01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_01\loc_acc_cell01_window_small01_01" overrideParent="True" />
+							<string name="combat_slot_marker" value="loc_cell_01\mkr_combat_slot_05" overrideParent="True" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="2057288367">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_windows\na_window_small01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_04\loc_acc_cell04_window_small01_02" overrideParent="True" />
+							<string name="combat_slot_marker" value="loc_cell_04\mkr_combat_slot_07" overrideParent="True" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-479352761">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_windows\na_window_medium01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_04\loc_acc_cell04_window_medium01_03" overrideParent="True" />
+							<string name="combat_slot_marker" value="loc_cell_04\mkr_combat_slot_06" overrideParent="True" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+					</list>
+					<list name="accessories_2f" overrideParent="True" List.ItemID="1374088560">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1279506999">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_shutters_medium01\na_shutters_medium01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_08\loc_acc_cell08_shutters_medium01_02" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-585355498">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_shutters_medium01\na_shutters_medium01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_05\loc_acc_cell05_shutters_medium01_03" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1617985810">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_shutters_medium01\na_shutters_medium01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_06\loc_acc_cell06_shutters_medium01_05" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="43177324">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_shutters_medium01\na_shutters_medium01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_06\loc_acc_cell06_shutters_medium01_06" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-1141447991">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_windows\na_window_medium01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_08\loc_acc_cell08_window_medium01_01" overrideParent="True" />
+							<string name="combat_slot_marker" value="loc_cell_08\mkr_combat_slot_08" overrideParent="True" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="68827182">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_windows\na_window_medium01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_05\loc_acc_cell05_window_medium01_02" overrideParent="True" />
+							<string name="combat_slot_marker" value="loc_cell_05\mkr_combat_slot_09" overrideParent="True" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-1825125697">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_windows\na_window_medium01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_06\loc_acc_cell06_window_medium01_04" overrideParent="True" />
+							<string name="combat_slot_marker" value="loc_cell_06\mkr_combat_slot_011" overrideParent="True" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1429010332">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_windows\na_window_medium01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_06\loc_acc_cell06_window_medium01_05" overrideParent="True" />
+							<string name="combat_slot_marker" value="loc_cell_06\mkr_combat_slot_010" overrideParent="True" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+					</list>
+					<list name="accessories_roof" overrideParent="True" List.ItemID="-997975654">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1306870482">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_bowl01\na_bowl01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_10\loc_acc_cell10_bowl01" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1777412789">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_canopy_roof01\na_canopy_roof01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_09\loc_acc_cell09_canopy_roof01" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="238506667">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_carpet01\na_carpet01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_10\loc_acc_cell10_carpet01" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-428672335">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_vase01\na_vase01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_09\loc_acc_cell09_vase01_01" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-1963493187">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_vase01\na_vase01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_10\loc_acc_cell10_vase01_02" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1745722805">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_vase01\na_vase01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_10\loc_acc_cell10_vase01_03" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="981771567">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_vase02\na_vase02" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_10\loc_acc_cell10_vase02_01" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-1490738467">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_woodpile01\na_woodpile01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_11\loc_acc_cell11_woodpile01" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-1257536490">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_cloth_hanging_roof01\na_cloth_hanging_roof01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_12\loc_acc_cell12_cloth_hanging_roof01_01" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="427661503">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_cloth_hanging_roof01\na_cloth_hanging_roof01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_10\loc_acc_cell10_cloth_hanging_roof01_02" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1593241157">
+							<float name="max_health" value="50" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_cloth_hanging_roof02\na_cloth_hanging_roof02" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_09\loc_acc_cell09_cloth_hanging_roof02_01" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+					</list>
+				</list>
+				<list name="cell_presets" overrideParent="True">
+					<template_reference name="cell_preset" value="options\ebpextensions\destructible_cell_ext\cell_preset" List.ItemID="-763500247">
+						<instance_reference name="hit_material" value="" />
+						<float name="max_health" value="200" />
+						<string name="name" value="cell_default" overrideParent="True" />
+						<bool name="use_as_impass_blocker" value="False" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+					</template_reference>
+					<template_reference name="cell_preset" value="options\ebpextensions\destructible_cell_ext\cell_preset" List.ItemID="-922979533">
+						<instance_reference name="hit_material" value="" />
+						<float name="max_health" value="150" />
+						<string name="name" value="cell_roof" />
+						<bool name="use_as_impass_blocker" value="False" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+					</template_reference>
+					<template_reference name="cell_preset" value="options\ebpextensions\destructible_cell_ext\cell_preset" List.ItemID="-1764757974">
+						<instance_reference name="hit_material" value="" />
+						<float name="max_health" value="5" />
+						<string name="name" value="accessory_default" overrideParent="True" />
+						<bool name="use_as_impass_blocker" value="False" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+					</template_reference>
+					<template_reference name="cell_preset" value="options\ebpextensions\destructible_cell_ext\cell_preset" List.ItemID="553794794">
+						<instance_reference name="hit_material" value="" />
+						<float name="max_health" value="20" />
+						<string name="name" value="accessory_door" overrideParent="True" />
+						<bool name="use_as_impass_blocker" value="False" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+					</template_reference>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\field_support_ext" List.ItemID="-21620763" List.ListAction="Append">
+				<bool name="convert_when_damaged" value="True" />
+				<bool name="occupied_building" value="True" />
+				<float name="occupied_revert_seconds" value="20" overrideParent="True" />
+				<bool name="revert_on_transfer" value="True" />
+				<bool name="spawner_ext" value="True" />
+				<string name="production_style_key" value="" />
+				<float name="revert_radius" value="5" />
+				<float name="convert_seconds" value="30" overrideParent="True" />
+				<list name="added_abilities_on_convert" overrideParent="True">
+					<instance_reference name="ability" value="abilities\races\common\buildings\forward_base\forward_base_healing_aura" overrideParent="True" List.ItemID="-1471704768" />
+					<instance_reference name="ability" value="abilities\races\common\buildings\withdraw_infantry" overrideParent="True" List.ItemID="-256263985" />
+					<instance_reference name="ability" value="abilities\races\common\buildings\retreat_point_mobile_toggle_sp" overrideParent="True" List.ItemID="2027910528" />
+					<instance_reference name="ability" value="abilities\races\common\buildings\auto_reinforce" List.ItemID="-1483528817" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\spawner_ext" overrideParent="True" List.ItemID="1983225393" List.ListAction="Append">
+				<bool name="must_be_in_supply" value="True" overrideParent="True" />
+				<float name="reinforce_radius" value="30" />
+				<list name="spawn_items">
+				</list>
+				<list name="bonus_xp_from_hold_list">
+				</list>
+				<list name="reinforce_requirements">
+				</list>
+				<bool name="spawn_to_hold_try_first" value="False" />
+				<list name="queue_requirements">
+				</list>
+				<bool name="can_rally" value="True" />
+				<template_reference name="animated_spawn_option" value="options\none">
+				</template_reference>
+				<int name="max_queue_size_override" value="-1" />
+				<state_tree_node name="queue_requirements_openingbranch" value="sp_convert_to_forward_base\ability_prerequisites\spawner_reinforce_prerequisites" overrideParent="True" />
+				<state_tree_node name="reinforce_requirements_openingbranch" value="sp_convert_to_forward_base\ability_prerequisites\spawner_reinforce_prerequisites" overrideParent="True" />
+				<state_tree_node name="production_item_completed_openingbranch" value="" />
+				<bool name="enforce_minimum_clearance_at_spawn_positions" value="False" />
+				<bool name="enforce_minimum_clearance_if_entities_blocking" value="True" />
+				<float name="enforce_minimum_clearance_at_spawn_positions_search_range" value="0" />
+				<instance_reference name="rally_pass_type" value="" />
+				<int name="parallel_production_count" value="1" />
+				<template_reference name="default_rally_point_offset" value="">
+				</template_reference>
+				<bool name="always_paradrop_spawn" value="False" />
+				<bool name="shared_team_production" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ability_ext" List.ItemID="1485705504" List.ListAction="Append">
+				<list name="abilities" overrideParent="True">
+					<instance_reference name="ability" value="abilities\races\common\buildings\forward_base\convert_to_forward_base" List.ItemID="-687752732" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\animation_role_ext" List.ItemID="-1289187507" List.ListAction="Append">
+				<instance_reference name="default_role" value="animation_role\buildings\italian_rural\2x2_tall" />
+				<enum name="flavour_key" value="" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="1579917" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\destructible_building_template" />
+	</variant>
+</instance>

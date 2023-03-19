@@ -1,0 +1,72 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-835837275" List.ParentItemID="-835837275">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\objects\walls\low_walls\stone_wall_03" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-885140067" List.ParentItemID="-885140067">
+				<bool name="delete_when_dead" value="True" overrideParent="True" />
+				<float name="hitpoints" value="350" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="-1844521268" List.ParentItemID="-1844521268">
+				<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" List.ItemID="1893253521" List.ParentItemID="1893253521">
+				<list name="block_path" overrideParent="True">
+					<instance_reference name="path_type" value="pass_types\infantry" List.ItemID="-64918562" />
+					<instance_reference name="path_type" value="pass_types\vehicle_light" List.ItemID="-2084881552" />
+					<instance_reference name="path_type" value="pass_types\vaulting_infantry" List.ItemID="-830152308" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\obj_cover_ext" List.ItemID="-848630571" List.ParentItemID="-848630571">
+				<bool name="is_solid_cover_object" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="1526945053" List.ParentItemID="1526945053">
+				<enum name="occlusion_state" value="occlude_others" overrideParent="True" />
+				<enum name="decorator_visibility" value="hidden" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2063218" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\wall_heavy_cover" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-835837275" List.ParentItemID="-835837275">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\objects\walls\low_walls\stone_wall_03" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-885140067" List.ParentItemID="-885140067">
+				<bool name="delete_when_dead" value="True" overrideParent="True" />
+				<float name="hitpoints" value="350" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="-1844521268" List.ParentItemID="-1844521268">
+				<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" List.ItemID="1893253521" List.ParentItemID="1893253521">
+				<list name="block_path" overrideParent="True">
+					<instance_reference name="path_type" value="pass_types\infantry" List.ItemID="-64918562" />
+					<instance_reference name="path_type" value="pass_types\vehicle_light" List.ItemID="-2084881552" />
+					<instance_reference name="path_type" value="pass_types\vaulting_infantry" List.ItemID="-830152308" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\obj_cover_ext" List.ItemID="-848630571" List.ParentItemID="-848630571">
+				<bool name="is_solid_cover_object" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="1526945053" List.ParentItemID="1526945053">
+				<enum name="occlusion_state" value="occlude_others" overrideParent="True" />
+				<enum name="decorator_visibility" value="hidden" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2063218" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\wall_heavy_cover" />
+	</variant>
+</instance>

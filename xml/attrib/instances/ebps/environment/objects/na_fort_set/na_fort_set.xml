@@ -1,0 +1,1182 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="848206026" List.ParentItemID="848206026">
+				<enum name="selection_type" value="single_entity_select" overrideParent="True" />
+				<enum name="decorator_visibility" value="hidden" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-195156410" List.ParentItemID="-195156410">
+				<file name="alternate_sua" value="art\environment\objects\na_fort_set\na_fort_set" comment="this should be pointing to the custom simbox created for th building" overrideParent="True" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\objects\na_fort_set\na_fort_set" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="1943101274" List.ParentItemID="1943101274">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\destructible_cell_ext" List.ItemID="684110929" List.ParentItemID="684110929">
+				<list name="cells">
+					<list name="main_cells_1f" comment="1st floor cells" overrideParent="True" List.ItemID="-349866011" List.ParentItemID="-349866011">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="953005998">
+							<float name="max_health" value="200" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_07" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_07" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="435558793">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_10" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_10" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="2096427630">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_11" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_11" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="1819211352">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_12" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_12" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="1004396126">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_13" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_13" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="760506959">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_14" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_14" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-1423570067">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_15" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_15" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-1653937293">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_16" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_16" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="1174338484">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_17" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_17" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="1316126719">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_18" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_18" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+					</list>
+					<list name="main_cells_2f" comment="2nd floor cells" overrideParent="True" List.ItemID="1350875820" List.ParentItemID="1350875820">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-1149156544">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_19" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_19" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-1706070579">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_20" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_20" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="504398679">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_21" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_21" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="1536023805">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_22" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_22" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="1125504831">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_23" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_23" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-390906176">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_24" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_24" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-1104869791">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_25" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_25" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="1892665320">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_26" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_26" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="1794433228">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_27" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_27" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+					</list>
+					<list name="main_cells_3f" comment="3rd floor cells" overrideParent="True" List.ItemID="1850343734" List.ParentItemID="1850343734">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="1827728411">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_28" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_28" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-621557628">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_29" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_29" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-1527775895">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_30" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_30" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="137635931">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_31" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_31" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="185997883">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_32" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_32" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="2123108594">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_33" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_33" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-108767836">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_34" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_34" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-1904246281">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_35" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_35" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="745742093">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_36" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_36" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+					</list>
+					<list name="accessories_1f" comment="1st floor accessories (door and window examples inside)" overrideParent="True" List.ItemID="1462648791" List.ParentItemID="1462648791">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-368005732">
+							<float name="max_health" value="20" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_door_arched_medium_exterior_01\na_door_arched_medium_exterior_01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_07\loc_acc_cell07_door_arched_medium_exterior_01" overrideParent="True" />
+							<string name="combat_slot_marker" value="loc_cell_07\mkr_combat_doorway_01" overrideParent="True" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="accessory_door" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-1130004616">
+							<float name="max_health" value="5" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_windows\na_window_fort_01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_07\loc_acc_cell07_fort_set_window_2" overrideParent="True" />
+							<string name="combat_slot_marker" value="loc_cell_07\mkr_combat_slot_12" overrideParent="True" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="accessory_default" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="551809308">
+							<float name="max_health" value="5" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_windows\na_window_fort_01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_07\loc_acc_cell07_fort_set_window_4" overrideParent="True" />
+							<string name="combat_slot_marker" value="loc_cell_07\mkr_combat_slot_10" overrideParent="True" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="accessory_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+					</list>
+					<list name="accessories_2f" comment="2nd floor accessories" overrideParent="True" List.ItemID="-2134088039" List.ParentItemID="-2134088039">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-354418527">
+							<float name="max_health" value="20" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_door_arched_large_exterior_02\na_door_arched_large_exterior_02" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_15\loc_acc_cell15_fort_set_door_arched_large_exterior_1" overrideParent="True" />
+							<string name="combat_slot_marker" value="loc_cell_15\mkr_combat_doorway_02" overrideParent="True" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="accessory_door" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+					</list>
+					<list name="accessories_3f" comment="3rd floor accessories" overrideParent="True" List.ItemID="-1785239219" List.ParentItemID="-1785239219">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-842409012">
+							<float name="max_health" value="5" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_windows\na_window_fort_01" />
+							<string name="attachment_marker" value="loc_cell_19\loc_acc_cell19_fort_set_window_1" overrideParent="True" />
+							<string name="combat_slot_marker" value="loc_cell_19\mkr_combat_slot_11" overrideParent="True" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="accessory_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-921675851">
+							<float name="max_health" value="5" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_windows\na_window_fort_01" />
+							<string name="attachment_marker" value="loc_cell_25\loc_acc_cell25_fort_set_window_3" overrideParent="True" />
+							<string name="combat_slot_marker" value="loc_cell_25\mkr_combat_slot_09" overrideParent="True" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="accessory_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+					</list>
+				</list>
+				<list name="cell_presets">
+					<template_reference name="cell_preset" value="options\ebpextensions\destructible_cell_ext\cell_preset" List.ItemID="166007298" List.ParentItemID="166007298">
+						<string name="name" value="cell_default" overrideParent="True" />
+					</template_reference>
+					<template_reference name="cell_preset" value="options\ebpextensions\destructible_cell_ext\cell_preset" List.ItemID="898595900" List.ParentItemID="898595900">
+						<float name="max_health" value="20" overrideParent="True" />
+						<string name="name" value="accessory_door" overrideParent="True" />
+					</template_reference>
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2072858" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\destructible_building_template" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="848206026" List.ParentItemID="848206026">
+				<enum name="selection_type" value="single_entity_select" overrideParent="True" />
+				<enum name="decorator_visibility" value="hidden" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-195156410" List.ParentItemID="-195156410">
+				<file name="alternate_sua" value="art\environment\objects\na_fort_set\na_fort_set" comment="this should be pointing to the custom simbox created for th building" overrideParent="True" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\objects\na_fort_set\na_fort_set" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="1943101274" List.ParentItemID="1943101274">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\destructible_cell_ext" List.ItemID="684110929" List.ParentItemID="684110929">
+				<list name="cells">
+					<list name="main_cells_1f" comment="1st floor cells" overrideParent="True" List.ItemID="-349866011" List.ParentItemID="-349866011">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="953005998">
+							<float name="max_health" value="200" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_07" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_07" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="435558793">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_10" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_10" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="2096427630">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_11" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_11" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="1819211352">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_12" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_12" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="1004396126">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_13" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_13" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="760506959">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_14" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_14" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-1423570067">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_15" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_15" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-1653937293">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_16" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_16" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="1174338484">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_17" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_17" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="1316126719">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_18" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_18" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+					</list>
+					<list name="main_cells_2f" comment="2nd floor cells" overrideParent="True" List.ItemID="1350875820" List.ParentItemID="1350875820">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-1149156544">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_19" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_19" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-1706070579">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_20" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_20" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="504398679">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_21" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_21" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="1536023805">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_22" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_22" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="1125504831">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_23" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_23" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-390906176">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_24" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_24" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-1104869791">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_25" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_25" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="1892665320">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_26" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_26" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="1794433228">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_27" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_27" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+					</list>
+					<list name="main_cells_3f" comment="3rd floor cells" overrideParent="True" List.ItemID="1850343734" List.ParentItemID="1850343734">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="1827728411">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_28" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_28" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-621557628">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_29" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_29" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-1527775895">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_30" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_30" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="137635931">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_31" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_31" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="185997883">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_32" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_32" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="2123108594">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_33" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_33" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-108767836">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_34" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_34" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-1904246281">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_35" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_35" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="745742093">
+							<float name="max_health" value="200" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\objects\na_fort_set\cell_36" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_36" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\stone" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+					</list>
+					<list name="accessories_1f" comment="1st floor accessories (door and window examples inside)" overrideParent="True" List.ItemID="1462648791" List.ParentItemID="1462648791">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-368005732">
+							<float name="max_health" value="20" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_door_arched_medium_exterior_01\na_door_arched_medium_exterior_01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_07\loc_acc_cell07_door_arched_medium_exterior_01" overrideParent="True" />
+							<string name="combat_slot_marker" value="loc_cell_07\mkr_combat_doorway_01" overrideParent="True" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="accessory_door" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-1130004616">
+							<float name="max_health" value="5" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_windows\na_window_fort_01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_07\loc_acc_cell07_fort_set_window_2" overrideParent="True" />
+							<string name="combat_slot_marker" value="loc_cell_07\mkr_combat_slot_12" overrideParent="True" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="accessory_default" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="551809308">
+							<float name="max_health" value="5" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_windows\na_window_fort_01" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_07\loc_acc_cell07_fort_set_window_4" overrideParent="True" />
+							<string name="combat_slot_marker" value="loc_cell_07\mkr_combat_slot_10" overrideParent="True" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="accessory_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+					</list>
+					<list name="accessories_2f" comment="2nd floor accessories" overrideParent="True" List.ItemID="-2134088039" List.ParentItemID="-2134088039">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-354418527">
+							<float name="max_health" value="20" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_door_arched_large_exterior_02\na_door_arched_large_exterior_02" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_15\loc_acc_cell15_fort_set_door_arched_large_exterior_1" overrideParent="True" />
+							<string name="combat_slot_marker" value="loc_cell_15\mkr_combat_doorway_02" overrideParent="True" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="accessory_door" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+					</list>
+					<list name="accessories_3f" comment="3rd floor accessories" overrideParent="True" List.ItemID="-1785239219" List.ParentItemID="-1785239219">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-842409012">
+							<float name="max_health" value="5" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_windows\na_window_fort_01" />
+							<string name="attachment_marker" value="loc_cell_19\loc_acc_cell19_fort_set_window_1" overrideParent="True" />
+							<string name="combat_slot_marker" value="loc_cell_19\mkr_combat_slot_11" overrideParent="True" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="accessory_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" overrideParent="True" List.ItemID="-921675851">
+							<float name="max_health" value="5" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\north_africa\accessories\na_windows\na_window_fort_01" />
+							<string name="attachment_marker" value="loc_cell_25\loc_acc_cell25_fort_set_window_3" overrideParent="True" />
+							<string name="combat_slot_marker" value="loc_cell_25\mkr_combat_slot_09" overrideParent="True" />
+							<instance_reference name="hit_material" value="" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="accessory_default" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+					</list>
+				</list>
+				<list name="cell_presets">
+					<template_reference name="cell_preset" value="options\ebpextensions\destructible_cell_ext\cell_preset" List.ItemID="166007298" List.ParentItemID="166007298">
+						<string name="name" value="cell_default" overrideParent="True" />
+					</template_reference>
+					<template_reference name="cell_preset" value="options\ebpextensions\destructible_cell_ext\cell_preset" List.ItemID="898595900" List.ParentItemID="898595900">
+						<float name="max_health" value="20" overrideParent="True" />
+						<string name="name" value="accessory_door" overrideParent="True" />
+					</template_reference>
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2072858" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\destructible_building_template" />
+	</variant>
+</instance>

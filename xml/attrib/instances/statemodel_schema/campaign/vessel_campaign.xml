@@ -1,0 +1,110 @@
+<instance version="5" description="" template="statemodel_schema">
+	<variant name="default">
+		<uniqueid name="pbgid" value="2062014" />
+		<group name="schema_bag">
+			<list name="int_properties">
+				<template_reference name="int" value="statemodel_int_property" List.ItemID="-708999186" List.ParentItemID="-708999186">
+					<int name="default" value="1" overrideParent="True" />
+				</template_reference>
+				<template_reference name="int" value="statemodel_int_property" List.ItemID="-2109004029" List.ParentItemID="-2109004029">
+					<int name="default" value="-1" overrideParent="True" />
+					<enum name="int_property_id" value="campaign_navy_fast_travel_timer" overrideParent="True" />
+				</template_reference>
+				<template_reference name="int" value="statemodel_int_property" List.ItemID="1775317719" List.ListAction="Append">
+					<int name="default" value="1" overrideParent="True" />
+					<enum name="int_property_id" value="company_slot_count" overrideParent="True" />
+				</template_reference>
+			</list>
+			<list name="target_properties">
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="1672615948" List.ParentItemID="1672615948">
+					<enum name="target_property_id" value="campaign_transport_ship_owner" overrideParent="True" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="390376687" List.ParentItemID="390376687">
+					<enum name="target_property_id" value="campaign_fast_travel_buoy_target" overrideParent="True" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="16922511" List.ListAction="Append">
+					<enum name="target_property_id" value="campaign_spawner_supply_provider_target_2" overrideParent="True" />
+				</template_reference>
+			</list>
+			<list name="list_properties">
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-238473582" List.ParentItemID="-238473582">
+					<int name="max_list_size" value="1" overrideParent="True" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="515595586" List.ParentItemID="515595586">
+					<int name="max_list_size" value="3" overrideParent="True" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="621160731" List.ListAction="Append">
+					<int name="max_list_size" value="1" overrideParent="True" />
+					<enum name="data_type" value="target" />
+					<enum name="list_property_id" value="owned_companies" overrideParent="True" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-1096115378" List.ListAction="Append">
+					<int name="max_list_size" value="3" overrideParent="True" />
+					<enum name="data_type" value="target" />
+					<enum name="list_property_id" value="reserved_aircrafts" overrideParent="True" />
+				</template_reference>
+			</list>
+			<list name="bool_properties">
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="48093366" List.ListAction="Append">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="cmap_friendly_unit" overrideParent="True" />
+				</template_reference>
+			</list>
+		</group>
+		<instance_reference name="parent_pbg" value="statemodel_schema\campaign\squad_campaign" />
+	</variant>
+	<variant name="sp">
+		<uniqueid name="pbgid" value="2062014" />
+		<group name="schema_bag">
+			<list name="int_properties">
+				<template_reference name="int" value="statemodel_int_property" List.ItemID="-708999186" List.ParentItemID="-708999186">
+					<int name="default" value="1" overrideParent="True" />
+				</template_reference>
+				<template_reference name="int" value="statemodel_int_property" List.ItemID="-2109004029" List.ParentItemID="-2109004029">
+					<int name="default" value="-1" overrideParent="True" />
+					<enum name="int_property_id" value="campaign_navy_fast_travel_timer" overrideParent="True" />
+				</template_reference>
+				<template_reference name="int" value="statemodel_int_property" List.ItemID="1775317719" List.ListAction="Append">
+					<int name="default" value="1" overrideParent="True" />
+					<enum name="int_property_id" value="company_slot_count" overrideParent="True" />
+				</template_reference>
+			</list>
+			<list name="target_properties">
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="1672615948" List.ParentItemID="1672615948">
+					<enum name="target_property_id" value="campaign_transport_ship_owner" overrideParent="True" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="390376687" List.ParentItemID="390376687">
+					<enum name="target_property_id" value="campaign_fast_travel_buoy_target" overrideParent="True" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="16922511" List.ListAction="Append">
+					<enum name="target_property_id" value="campaign_spawner_supply_provider_target_2" overrideParent="True" />
+				</template_reference>
+			</list>
+			<list name="list_properties">
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-238473582" List.ParentItemID="-238473582">
+					<int name="max_list_size" value="1" overrideParent="True" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="515595586" List.ParentItemID="515595586">
+					<int name="max_list_size" value="3" overrideParent="True" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="621160731" List.ListAction="Append">
+					<int name="max_list_size" value="1" overrideParent="True" />
+					<enum name="data_type" value="target" />
+					<enum name="list_property_id" value="owned_companies" overrideParent="True" />
+				</template_reference>
+				<template_reference name="list" value="statemodel_list_property" List.ItemID="-1096115378" List.ListAction="Append">
+					<int name="max_list_size" value="3" overrideParent="True" />
+					<enum name="data_type" value="target" />
+					<enum name="list_property_id" value="reserved_aircrafts" overrideParent="True" />
+				</template_reference>
+			</list>
+			<list name="bool_properties">
+				<template_reference name="boolean" value="statemodel_bool_property" List.ItemID="48093366" List.ListAction="Append">
+					<bool name="default" value="False" />
+					<enum name="bool_property_id" value="cmap_friendly_unit" overrideParent="True" />
+				</template_reference>
+			</list>
+		</group>
+		<instance_reference name="parent_pbg" value="statemodel_schema\campaign\squad_campaign" />
+	</variant>
+</instance>

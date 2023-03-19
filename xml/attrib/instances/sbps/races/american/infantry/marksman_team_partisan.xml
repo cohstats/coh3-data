@@ -1,0 +1,330 @@
+<instance version="5" description="" template="sbps">
+	<variant name="default">
+		<list name="extensions" removedIds="1959173547, -684080850">
+			<template_reference name="squadexts" value="sbpextensions\squad_action_apply_ext" List.ItemID="1329116401" List.ParentItemID="1329116401">
+				<list name="action_state_trees">
+					<group name="container" List.ItemID="-1739834346" List.ListAction="Append">
+						<state_tree_node name="state_tree" value="spawn_equip_sniper" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_capture_strategic_point_ext" List.ItemID="2104481947" List.ParentItemID="2104481947">
+				<float name="capture_rate_multiplier" value="1" overrideParent="True" />
+				<float name="revert_rate_multiplier" value="1" overrideParent="True" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_combat_behaviour_ext" List.ItemID="1298952002" List.ParentItemID="1298952002">
+				<bool name="accept_move_commands_while_combat" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_formation_ext" List.ItemID="27631006" List.ParentItemID="27631006">
+				<group name="squad_distribution_table">
+					<group name="05_soldiers">
+						<float name="units_in_core" value="5" overrideParent="True" />
+						<float name="units_in_scout" value="0" overrideParent="True" />
+					</group>
+					<group name="06_soldiers">
+						<float name="units_in_core" value="5" overrideParent="True" />
+						<float name="units_in_left_flank" value="0" overrideParent="True" />
+						<float name="units_in_right_flank" value="0" overrideParent="True" />
+					</group>
+					<group name="08_soldiers">
+						<float name="units_in_core" value="7" overrideParent="True" />
+						<float name="units_in_scout" value="1" overrideParent="True" />
+					</group>
+					<group name="10_soldiers">
+						<float name="units_in_core" value="9" overrideParent="True" />
+						<float name="units_in_scout" value="1" overrideParent="True" />
+					</group>
+				</group>
+				<enum_table name="cover_formation_table">
+					<instance_reference name="tp_defcover" value="squad_formations\common\line_defensive" overrideParent="True" />
+					<instance_reference name="tp_heavy_cover" value="squad_formations\common\cover" overrideParent="True" />
+					<instance_reference name="tp_light_cover" value="squad_formations\common\cover" overrideParent="True" />
+					<instance_reference name="tp_negative_cover" value="squad_formations\common\line_defensive" overrideParent="True" />
+					<instance_reference name="tp_water_cover" value="squad_formations\common\line_defensive" overrideParent="True" />
+					<instance_reference name="tp_smoke_cover" value="squad_formations\common\line_defensive" overrideParent="True" />
+					<instance_reference name="tp_garrison_cover" value="squad_formations\common\line_defensive" overrideParent="True" />
+					<instance_reference name="tp_trench_cover" value="squad_formations\common\cover" overrideParent="True" />
+					<instance_reference name="tp_road_light_cover" value="squad_formations\common\line_defensive" overrideParent="True" />
+					<instance_reference name="tp_road_heavy_cover" value="squad_formations\common\line_defensive" overrideParent="True" />
+				</enum_table>
+				<enum_table name="moving_cover_formation_override_table">
+					<instance_reference name="tp_defcover" value="squad_formations\common\line_defensive" overrideParent="True" />
+					<instance_reference name="tp_heavy_cover" value="squad_formations\common\cover" overrideParent="True" />
+					<instance_reference name="tp_light_cover" value="squad_formations\common\cover" overrideParent="True" />
+					<instance_reference name="tp_negative_cover" value="squad_formations\common\line_defensive" overrideParent="True" />
+					<instance_reference name="tp_water_cover" value="squad_formations\common\line_defensive" overrideParent="True" />
+					<instance_reference name="tp_smoke_cover" value="squad_formations\common\line_defensive" overrideParent="True" />
+					<instance_reference name="tp_garrison_cover" value="squad_formations\common\line_defensive" overrideParent="True" />
+					<instance_reference name="tp_trench_cover" value="squad_formations\common\cover" overrideParent="True" />
+					<instance_reference name="tp_road_light_cover" value="squad_formations\common\line_defensive" overrideParent="True" />
+					<instance_reference name="tp_road_heavy_cover" value="squad_formations\common\line_defensive" overrideParent="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_loadout_ext" List.ItemID="-853202734" List.ParentItemID="-853202734">
+				<list name="unit_list">
+					<group name="loadout_data" List.ItemID="-791374396" List.ParentItemID="-791374396">
+						<float name="num" value="2" overrideParent="True" />
+						<instance_reference name="type" value="ebps\races\american\infantry\marksman_team_partisan" overrideParent="True" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_population_ext" List.ItemID="1687884963" List.ParentItemID="1687884963">
+				<float name="personnel_pop" value="0" overrideParent="True" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_reinforce_ext" List.ItemID="1352158748" List.ParentItemID="1352158748">
+				<group name="time_cost_percentage">
+					<float name="cost_percentage" value="0.5" overrideParent="True" />
+				</group>
+				<group name="ui_info">
+					<locstring name="help_text" value="11198727" overrideParent="True" />
+					<locstring name="screen_name" value="11198728" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_ui_ext" List.ItemID="-1879462299" List.ParentItemID="-1879462299">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-1582085622" List.ParentItemID="-1582085622">
+						<group name="info">
+							<locstring name="extra_text" value="0" overrideParent="True" />
+							<locstring name="help_text" value="11241820" overrideParent="True" />
+							<file name="icon_name" value="races\american\infantry\marksman_team_partisan" overrideParent="True" />
+							<locstring name="screen_name" value="11198724" overrideParent="True" />
+							<string name="selection_group" value="marksmen_team_partisan" overrideParent="True" />
+							<int name="ui_priority" value="40" overrideParent="True" />
+							<locstring name="brief_text" value="11199300" overrideParent="True" />
+							<file name="symbol_icon_name" value="races\common\symbols\sniper" overrideParent="True" />
+							<file name="portrait_name" value="races\american\infantry\marksman_team_partisan_portrait" overrideParent="True" />
+							<locstring name="extra_help_text" value="11242277" overrideParent="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_upgrade_ext" List.ItemID="1077567511" List.ParentItemID="1077567511">
+				<list name="upgrades">
+					<instance_reference name="upgrade" value="upgrade\american\infantry\panzerbuchse_marksmen_team_partisan" List.ItemID="168401771" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_veterancy_ext" List.ItemID="-1475839438" List.ParentItemID="-1475839438">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-2047223751" List.ParentItemID="-2047223751">
+						<group name="info">
+							<list name="veterancy_rank_info">
+								<group name="veterancy_rank" List.ItemID="-789419873" List.ParentItemID="-789419873">
+									<locstring name="screen_name" value="11153313" overrideParent="True" />
+									<float name="veterancy_value" value="720" overrideParent="True" />
+									<locstring name="brief_text" value="11243273" overrideParent="True" />
+								</group>
+								<group name="veterancy_rank" List.ItemID="2000513804" List.ParentItemID="2000513804">
+									<locstring name="screen_name" value="11153314" overrideParent="True" />
+									<float name="veterancy_value" value="1440" overrideParent="True" />
+									<locstring name="brief_text" value="11243203" overrideParent="True" />
+								</group>
+								<group name="veterancy_rank" List.ItemID="1358881750" List.ParentItemID="1358881750">
+									<locstring name="screen_name" value="11153315" overrideParent="True" />
+									<float name="veterancy_value" value="2880" overrideParent="True" />
+									<locstring name="brief_text" value="11243300" overrideParent="True" />
+								</group>
+							</list>
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_type_ext" List.ItemID="-828273829" List.ParentItemID="-828273829">
+				<list name="squad_type_list">
+					<enum name="squad_type" value="sniper" List.ItemID="-994618575" List.ListAction="Append" />
+				</list>
+				<list name="squad_race_type_list" removedIds="-196014147">
+					<instance_reference name="squad_race_type" value="racebps\partisan" List.ItemID="1575907444" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_speech_ext" List.ItemID="-1495675653" List.ParentItemID="-1495675653">
+				<group name="squad_speech_parameters">
+					<string name="squad_name_code" value="sniper" overrideParent="True" />
+					<string name="squad_unit_code" value="marksman_team_partisan" overrideParent="True" />
+				</group>
+				<string name="squad_speaker_code" comment="squad_speaker_code is set in the attachments for this squad." />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_ability_ext" comment="Removing camouflage from the sniper temporarily for Vertical Slice." List.ItemID="-427816430" List.ParentItemID="-427816430">
+				<list name="abilities">
+					<instance_reference name="ability" value="abilities\races\american\infantry\toggle_camouflage_partisan" List.ItemID="1206964730" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\dev\vault_movement" List.ItemID="-1662593637" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\american\infantry\pinning_shot_marksmen_team_partisan" List.ItemID="-1331816548" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\american\infantry\forward_observation_marksman_team_partisan" List.ItemID="-578882107" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\american\infantry\passive_urban_experts_marksman_team_partisan" List.ItemID="-1246666865" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\american\infantry\tungsten_rounds_marksman_team_partisan" List.ItemID="775594543" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\common\hold_fire" List.ItemID="1485991880" List.ListAction="Append" />
+				</list>
+				<group name="squad_orders">
+					<group name="attack_ground">
+						<bool name="available" value="False" overrideParent="True" />
+					</group>
+				</group>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2027090" />
+		<instance_reference name="parent_pbg" value="sbps\races\common\parent\infantry_parent" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions" removedIds="1959173547, -684080850">
+			<template_reference name="squadexts" value="sbpextensions\squad_action_apply_ext" List.ItemID="1329116401" List.ParentItemID="1329116401">
+				<list name="action_state_trees">
+					<group name="container" List.ItemID="-1739834346" List.ListAction="Append">
+						<state_tree_node name="state_tree" value="sp_spawn_equip_sniper" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_capture_strategic_point_ext" List.ItemID="2104481947" List.ParentItemID="2104481947">
+				<float name="capture_rate_multiplier" value="1" overrideParent="True" />
+				<float name="revert_rate_multiplier" value="1" overrideParent="True" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_combat_behaviour_ext" List.ItemID="1298952002" List.ParentItemID="1298952002">
+				<bool name="accept_move_commands_while_combat" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_formation_ext" List.ItemID="27631006" List.ParentItemID="27631006">
+				<group name="squad_distribution_table">
+					<group name="05_soldiers">
+						<float name="units_in_core" value="5" overrideParent="True" />
+						<float name="units_in_scout" value="0" overrideParent="True" />
+					</group>
+					<group name="06_soldiers">
+						<float name="units_in_core" value="5" overrideParent="True" />
+						<float name="units_in_left_flank" value="0" overrideParent="True" />
+						<float name="units_in_right_flank" value="0" overrideParent="True" />
+					</group>
+					<group name="08_soldiers">
+						<float name="units_in_core" value="7" overrideParent="True" />
+						<float name="units_in_scout" value="1" overrideParent="True" />
+					</group>
+					<group name="10_soldiers">
+						<float name="units_in_core" value="9" overrideParent="True" />
+						<float name="units_in_scout" value="1" overrideParent="True" />
+					</group>
+				</group>
+				<enum_table name="cover_formation_table">
+					<instance_reference name="tp_defcover" value="squad_formations\common\line_defensive" overrideParent="True" />
+					<instance_reference name="tp_heavy_cover" value="squad_formations\common\cover" overrideParent="True" />
+					<instance_reference name="tp_light_cover" value="squad_formations\common\cover" overrideParent="True" />
+					<instance_reference name="tp_negative_cover" value="squad_formations\common\line_defensive" overrideParent="True" />
+					<instance_reference name="tp_water_cover" value="squad_formations\common\line_defensive" overrideParent="True" />
+					<instance_reference name="tp_smoke_cover" value="squad_formations\common\line_defensive" overrideParent="True" />
+					<instance_reference name="tp_garrison_cover" value="squad_formations\common\line_defensive" overrideParent="True" />
+					<instance_reference name="tp_trench_cover" value="squad_formations\common\cover" overrideParent="True" />
+					<instance_reference name="tp_road_light_cover" value="squad_formations\common\line_defensive" overrideParent="True" />
+					<instance_reference name="tp_road_heavy_cover" value="squad_formations\common\line_defensive" overrideParent="True" />
+				</enum_table>
+				<enum_table name="moving_cover_formation_override_table">
+					<instance_reference name="tp_defcover" value="squad_formations\common\line_defensive" overrideParent="True" />
+					<instance_reference name="tp_heavy_cover" value="squad_formations\common\cover" overrideParent="True" />
+					<instance_reference name="tp_light_cover" value="squad_formations\common\cover" overrideParent="True" />
+					<instance_reference name="tp_negative_cover" value="squad_formations\common\line_defensive" overrideParent="True" />
+					<instance_reference name="tp_water_cover" value="squad_formations\common\line_defensive" overrideParent="True" />
+					<instance_reference name="tp_smoke_cover" value="squad_formations\common\line_defensive" overrideParent="True" />
+					<instance_reference name="tp_garrison_cover" value="squad_formations\common\line_defensive" overrideParent="True" />
+					<instance_reference name="tp_trench_cover" value="squad_formations\common\cover" overrideParent="True" />
+					<instance_reference name="tp_road_light_cover" value="squad_formations\common\line_defensive" overrideParent="True" />
+					<instance_reference name="tp_road_heavy_cover" value="squad_formations\common\line_defensive" overrideParent="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_loadout_ext" List.ItemID="-853202734" List.ParentItemID="-853202734">
+				<list name="unit_list">
+					<group name="loadout_data" List.ItemID="-791374396" List.ParentItemID="-791374396">
+						<float name="num" value="2" overrideParent="True" />
+						<instance_reference name="type" value="ebps\races\american\infantry\marksman_team_partisan" overrideParent="True" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_population_ext" List.ItemID="1687884963" List.ParentItemID="1687884963">
+				<float name="personnel_pop" value="0" overrideParent="True" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_reinforce_ext" List.ItemID="1352158748" List.ParentItemID="1352158748">
+				<group name="time_cost_percentage">
+					<float name="cost_percentage" value="0.5" overrideParent="True" />
+				</group>
+				<group name="ui_info">
+					<locstring name="help_text" value="11198727" overrideParent="True" />
+					<locstring name="screen_name" value="11198728" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_ui_ext" List.ItemID="-1879462299" List.ParentItemID="-1879462299">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-1582085622" List.ParentItemID="-1582085622">
+						<group name="info">
+							<locstring name="extra_text" value="0" overrideParent="True" />
+							<locstring name="help_text" value="11241820" overrideParent="True" />
+							<file name="icon_name" value="races\american\infantry\marksman_team_partisan" overrideParent="True" />
+							<locstring name="screen_name" value="11198724" overrideParent="True" />
+							<string name="selection_group" value="marksmen_team_partisan" overrideParent="True" />
+							<int name="ui_priority" value="40" overrideParent="True" />
+							<locstring name="brief_text" value="11199300" overrideParent="True" />
+							<file name="symbol_icon_name" value="races\common\symbols\sniper" overrideParent="True" />
+							<file name="portrait_name" value="races\american\infantry\marksman_team_partisan_portrait" overrideParent="True" />
+							<locstring name="extra_help_text" value="11242277" overrideParent="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_upgrade_ext" List.ItemID="1077567511" List.ParentItemID="1077567511">
+				<list name="upgrades">
+					<instance_reference name="upgrade" value="upgrade\american\infantry\panzerbuchse_marksmen_team_partisan" List.ItemID="168401771" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_veterancy_ext" List.ItemID="-1475839438" List.ParentItemID="-1475839438">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-2047223751" List.ParentItemID="-2047223751">
+						<group name="info">
+							<list name="veterancy_rank_info">
+								<group name="veterancy_rank" List.ItemID="-789419873" List.ParentItemID="-789419873">
+									<locstring name="screen_name" value="11153313" overrideParent="True" />
+									<float name="veterancy_value" value="720" overrideParent="True" />
+									<locstring name="brief_text" value="11243273" overrideParent="True" />
+								</group>
+								<group name="veterancy_rank" List.ItemID="2000513804" List.ParentItemID="2000513804">
+									<locstring name="screen_name" value="11153314" overrideParent="True" />
+									<float name="veterancy_value" value="1440" overrideParent="True" />
+									<locstring name="brief_text" value="11243203" overrideParent="True" />
+								</group>
+								<group name="veterancy_rank" List.ItemID="1358881750" List.ParentItemID="1358881750">
+									<locstring name="screen_name" value="11153315" overrideParent="True" />
+									<float name="veterancy_value" value="2880" overrideParent="True" />
+									<locstring name="brief_text" value="11243300" overrideParent="True" />
+								</group>
+							</list>
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_type_ext" List.ItemID="-828273829" List.ParentItemID="-828273829">
+				<list name="squad_type_list">
+					<enum name="squad_type" value="sniper" List.ItemID="-994618575" List.ListAction="Append" />
+				</list>
+				<list name="squad_race_type_list" removedIds="-196014147">
+					<instance_reference name="squad_race_type" value="racebps\partisan" List.ItemID="1575907444" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_speech_ext" List.ItemID="-1495675653" List.ParentItemID="-1495675653">
+				<group name="squad_speech_parameters">
+					<string name="squad_name_code" value="sniper" overrideParent="True" />
+					<string name="squad_unit_code" value="marksman_team_partisan" overrideParent="True" />
+				</group>
+				<string name="squad_speaker_code" comment="squad_speaker_code is set in the attachments for this squad." />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_ability_ext" comment="Removing camouflage from the sniper temporarily for Vertical Slice." List.ItemID="-427816430" List.ParentItemID="-427816430">
+				<list name="abilities">
+					<instance_reference name="ability" value="abilities\races\american\infantry\toggle_camouflage_partisan" List.ItemID="1206964730" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\dev\vault_movement" List.ItemID="-1662593637" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\american\infantry\pinning_shot_marksmen_team_partisan" List.ItemID="-1331816548" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\american\infantry\forward_observation_marksman_team_partisan" List.ItemID="-578882107" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\american\infantry\passive_urban_experts_marksman_team_partisan" List.ItemID="-1246666865" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\american\infantry\tungsten_rounds_marksman_team_partisan" List.ItemID="775594543" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\common\hold_fire" List.ItemID="1485991880" List.ListAction="Append" />
+				</list>
+				<group name="squad_orders">
+					<group name="attack_ground">
+						<bool name="available" value="False" overrideParent="True" />
+					</group>
+				</group>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2027090" />
+		<instance_reference name="parent_pbg" value="sbps\races\common\parent\infantry_parent" />
+	</variant>
+</instance>

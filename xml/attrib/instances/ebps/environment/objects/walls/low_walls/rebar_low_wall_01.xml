@@ -1,0 +1,90 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-835837275" List.ParentItemID="-835837275">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\objects\walls\low_walls\rebar_low_wall_01" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-885140067" List.ParentItemID="-885140067">
+				<float name="hitpoints" value="200" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="-1844521268" List.ParentItemID="-1844521268">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" List.ItemID="1893253521" List.ParentItemID="1893253521">
+				<list name="block_path" removedIds="-743802030">
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_light" List.ItemID="-756105849" List.ListAction="Append" />
+					<instance_reference name="path_type" value="pass_types\vaulting_infantry" List.ItemID="-772925683" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\obj_cover_ext" List.ItemID="-848630571" List.ParentItemID="-848630571">
+				<enum name="cover_type" value="tp_light_cover" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="1526945053" List.ParentItemID="1526945053">
+				<enum name="occlusion_state" value="occlude_others" overrideParent="True" />
+				<enum name="decorator_visibility" value="hidden" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\line_of_sight_ext" List.ItemID="-431283980" List.ListAction="Append">
+				<group name="blocking_box">
+					<float name="x" value="0.01" />
+					<float name="y" value="0.01" />
+					<float name="z" value="0.01" />
+				</group>
+				<bool name="is_shot_blocking" value="True" />
+				<bool name="use_blocking_box" value="False" />
+				<bool name="reveal_center_when_outside_is_visible" value="False" />
+				<enum name="does_block_line_of_sight" value="when_alive" />
+				<bool name="disable_shot_blocking_on_death" value="False" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2076233" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\wall_heavy_cover" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-835837275" List.ParentItemID="-835837275">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\objects\walls\low_walls\rebar_low_wall_01" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-885140067" List.ParentItemID="-885140067">
+				<float name="hitpoints" value="200" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="-1844521268" List.ParentItemID="-1844521268">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" List.ItemID="1893253521" List.ParentItemID="1893253521">
+				<list name="block_path" removedIds="-743802030">
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_light" List.ItemID="-756105849" List.ListAction="Append" />
+					<instance_reference name="path_type" value="pass_types\vaulting_infantry" List.ItemID="-772925683" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\obj_cover_ext" List.ItemID="-848630571" List.ParentItemID="-848630571">
+				<enum name="cover_type" value="tp_light_cover" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="1526945053" List.ParentItemID="1526945053">
+				<enum name="occlusion_state" value="occlude_others" overrideParent="True" />
+				<enum name="decorator_visibility" value="hidden" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\line_of_sight_ext" List.ItemID="-431283980" List.ListAction="Append">
+				<group name="blocking_box">
+					<float name="x" value="0.01" />
+					<float name="y" value="0.01" />
+					<float name="z" value="0.01" />
+				</group>
+				<bool name="is_shot_blocking" value="True" />
+				<bool name="use_blocking_box" value="False" />
+				<bool name="reveal_center_when_outside_is_visible" value="False" />
+				<enum name="does_block_line_of_sight" value="when_alive" />
+				<bool name="disable_shot_blocking_on_death" value="False" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2076233" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\wall_heavy_cover" />
+	</variant>
+</instance>

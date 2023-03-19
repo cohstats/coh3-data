@@ -1,0 +1,58 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1457096239" List.ParentItemID="1457096239">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\objects\farm_features\barrel_set\barrel_03d" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="648975457" List.ParentItemID="648975457">
+				<float name="hitpoints" value="120" overrideParent="True" />
+				<template_reference name="armor_layout_option" value="options\ebpextensions\healthext\armor_layouts\armor_layout_uniform">
+					<float name="armor" value="25" overrideParent="True" />
+				</template_reference>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="-660714672" List.ParentItemID="-660714672">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\obj_cover_ext" List.ItemID="-1420463601" List.ParentItemID="-1420463601">
+				<bool name="is_solid_cover_object" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-2031532952" List.ParentItemID="-2031532952">
+				<enum name="occlusion_state" value="occlude_others" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2033160" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\object_light_cover" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1457096239" List.ParentItemID="1457096239">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\objects\farm_features\barrel_set\barrel_03d" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="648975457" List.ParentItemID="648975457">
+				<float name="hitpoints" value="120" overrideParent="True" />
+				<template_reference name="armor_layout_option" value="options\ebpextensions\healthext\armor_layouts\armor_layout_uniform">
+					<float name="armor" value="25" overrideParent="True" />
+				</template_reference>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="-660714672" List.ParentItemID="-660714672">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\obj_cover_ext" List.ItemID="-1420463601" List.ParentItemID="-1420463601">
+				<bool name="is_solid_cover_object" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-2031532952" List.ParentItemID="-2031532952">
+				<enum name="occlusion_state" value="occlude_others" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2033160" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\object_light_cover" />
+	</variant>
+</instance>

@@ -1,0 +1,206 @@
+<instance version="5" description="Medkit inventory object that can be picked up by infantry. Spawned by the Halftrack's ability." template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1856908301" List.ParentItemID="1856908301">
+				<file name="alternate_sua" value="art\armies\american\props\medical_paradrop_crate\medical_paradrop_crate" overrideParent="True" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\american\props\medical_paradrop_crate" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_react_tree_ext" List.ItemID="1067162505" List.ParentItemID="1067162505">
+				<state_tree_node name="ActionTree_OpeningBranch" value="" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_inventory_item_ext" List.ItemID="-452458619" List.ParentItemID="-452458619">
+				<template_reference name="simulation_item" value="sim_inventory_item\sim_inventory_item">
+					<template_reference name="item_data" value="sim_inventory_item\sim_item_data\attachment_inventory_data">
+						<template_reference name="attachment_data" value="options\attachment_types\entity_attachment">
+							<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+								<instance_reference name="ebp" value="ebps\races\german\gameplay\medkit_halftrack_ger" overrideParent="True" />
+							</template_reference>
+						</template_reference>
+					</template_reference>
+				</template_reference>
+				<group name="requirement">
+					<state_tree_node name="statetree_condition_node" value="" overrideParent="True" />
+					<state_tree_node name="statetree_condition_default_command_prioritize_as_success" value="" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="1131043906" List.ParentItemID="1131043906">
+				<locstring name="screen_name" value="11158331" overrideParent="True" />
+				<enum name="decorator_visibility" value="default" overrideParent="True" />
+				<locstring name="help_text" value="11235909" overrideParent="True" />
+				<locstring name="brief_text" value="11235908" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\attachment_child_ext" List.ItemID="2146639850" List.ParentItemID="2146639850">
+				<template_reference name="on_attach" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="airborne_medical_crate_healing_aura_us" overrideParent="True" />
+				</template_reference>
+				<template_reference name="on_detach" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="weapon_detach" overrideParent="True" />
+				</template_reference>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\statemodel_ext" List.ItemID="-491650445" List.ListAction="Append">
+				<instance_reference name="schema" value="statemodel_schema\infantry" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" overrideParent="True" List.ItemID="-311051763" List.ListAction="Append">
+				<bool name="cant_build" value="True" />
+				<group name="impass_simboxes">
+					<bool name="default_simbox" value="True" />
+					<list name="named_simboxes">
+						<group name="impass_box" List.ItemID="2037253872">
+							<string name="named_simboxes" value="_default" />
+							<list name="block_path">
+								<instance_reference name="path_type" value="pass_types\infantry" List.ItemID="1943228927" />
+								<instance_reference name="path_type" value="pass_types\vaulting_infantry" List.ItemID="-1589149993" />
+								<instance_reference name="path_type" value="pass_types\vehicle_medium" List.ItemID="1682186058" />
+								<instance_reference name="path_type" value="pass_types\vehicle_heavy" List.ItemID="-115264636" />
+								<instance_reference name="path_type" value="pass_types\vehicle_light" List.ItemID="-1353555092" />
+							</list>
+						</group>
+					</list>
+				</group>
+				<list name="block_path">
+					<instance_reference name="path_type" value="pass_types\infantry" List.ItemID="1425957597" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_heavy" List.ItemID="-1695027679" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_light" List.ItemID="946963814" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_medium" List.ItemID="541888011" />
+					<instance_reference name="path_type" value="pass_types\vaulting_infantry" List.ItemID="-1334437002" />
+					<instance_reference name="path_type" value="pass_types\vehicle_heavy" List.ItemID="545590173" />
+					<instance_reference name="path_type" value="pass_types\vehicle_light" List.ItemID="-1676326160" />
+					<instance_reference name="path_type" value="pass_types\vehicle_medium" List.ItemID="-1973837517" />
+				</list>
+				<bool name="should_rasterize_partial_cells" value="False" />
+				<enum name="blocker_lifetime_type" value="match_entity" />
+				<file name="stamp_blockers" value="" />
+				<group name="center_cell">
+					<bool name="cant_build" value="False" />
+					<list name="block_path">
+					</list>
+				</group>
+				<list name="cant_build_exemptions">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\site_ext" overrideParent="True" List.ItemID="-131753358" List.ListAction="Append">
+				<float name="extra_build_test_footprint_x" value="0" />
+				<bool name="snap_to_terrain" value="False" />
+				<bool name="lock_to_impass" value="True" />
+				<float name="extra_build_test_footprint_z" value="0" />
+				<float name="extra_build_test_footprint_offset_x" value="0" />
+				<float name="extra_build_test_footprint_offset_z" value="0" />
+				<float name="minimum_build_test_footprint_x" value="0" />
+				<float name="minimum_build_test_footprint_z" value="0" />
+				<enum name="impass_cell_check" value="AllCellsFree" />
+				<group name="footprint_scale">
+					<float name="x" value="0" />
+					<float name="y" value="0" />
+				</group>
+				<bool name="forced_axis_aligned_footprint" value="False" />
+				<bool name="remove_if_constructed_over" value="False" />
+				<list name="snap_to_surface_types">
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="182722" />
+		<instance_reference name="parent_pbg" value="ebps\races\common\gameplay\airdrop_crate_template" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1856908301" List.ParentItemID="1856908301">
+				<file name="alternate_sua" value="art\armies\american\props\medical_paradrop_crate\medical_paradrop_crate" overrideParent="True" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\american\props\medical_paradrop_crate" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_react_tree_ext" List.ItemID="1067162505" List.ParentItemID="1067162505">
+				<state_tree_node name="ActionTree_OpeningBranch" value="" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_inventory_item_ext" List.ItemID="-452458619" List.ParentItemID="-452458619">
+				<template_reference name="simulation_item" value="sim_inventory_item\sim_inventory_item">
+					<template_reference name="item_data" value="sim_inventory_item\sim_item_data\attachment_inventory_data">
+						<template_reference name="attachment_data" value="options\attachment_types\entity_attachment">
+							<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+								<instance_reference name="ebp" value="ebps\races\german\gameplay\medkit_halftrack_ger" overrideParent="True" />
+							</template_reference>
+						</template_reference>
+					</template_reference>
+				</template_reference>
+				<group name="requirement">
+					<state_tree_node name="statetree_condition_node" value="" overrideParent="True" />
+					<state_tree_node name="statetree_condition_default_command_prioritize_as_success" value="" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="1131043906" List.ParentItemID="1131043906">
+				<locstring name="screen_name" value="11158331" overrideParent="True" />
+				<enum name="decorator_visibility" value="default" overrideParent="True" />
+				<locstring name="help_text" value="11235909" overrideParent="True" />
+				<locstring name="brief_text" value="11235908" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\attachment_child_ext" List.ItemID="2146639850" List.ParentItemID="2146639850">
+				<template_reference name="on_attach" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="sp_airborne_medical_crate_healing_aura_us" overrideParent="True" />
+				</template_reference>
+				<template_reference name="on_detach" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="weapon_detach" overrideParent="True" />
+				</template_reference>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\statemodel_ext" List.ItemID="-491650445" List.ListAction="Append">
+				<instance_reference name="schema" value="statemodel_schema\infantry" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" overrideParent="True" List.ItemID="-311051763" List.ListAction="Append">
+				<bool name="cant_build" value="True" />
+				<group name="impass_simboxes">
+					<bool name="default_simbox" value="True" />
+					<list name="named_simboxes">
+						<group name="impass_box" List.ItemID="2037253872">
+							<string name="named_simboxes" value="_default" />
+							<list name="block_path">
+								<instance_reference name="path_type" value="pass_types\infantry" List.ItemID="1943228927" />
+								<instance_reference name="path_type" value="pass_types\vaulting_infantry" List.ItemID="-1589149993" />
+								<instance_reference name="path_type" value="pass_types\vehicle_medium" List.ItemID="1682186058" />
+								<instance_reference name="path_type" value="pass_types\vehicle_heavy" List.ItemID="-115264636" />
+								<instance_reference name="path_type" value="pass_types\vehicle_light" List.ItemID="-1353555092" />
+							</list>
+						</group>
+					</list>
+				</group>
+				<list name="block_path">
+					<instance_reference name="path_type" value="pass_types\infantry" List.ItemID="1425957597" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_heavy" List.ItemID="-1695027679" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_light" List.ItemID="946963814" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_medium" List.ItemID="541888011" />
+					<instance_reference name="path_type" value="pass_types\vaulting_infantry" List.ItemID="-1334437002" />
+					<instance_reference name="path_type" value="pass_types\vehicle_heavy" List.ItemID="545590173" />
+					<instance_reference name="path_type" value="pass_types\vehicle_light" List.ItemID="-1676326160" />
+					<instance_reference name="path_type" value="pass_types\vehicle_medium" List.ItemID="-1973837517" />
+				</list>
+				<bool name="should_rasterize_partial_cells" value="False" />
+				<enum name="blocker_lifetime_type" value="match_entity" />
+				<file name="stamp_blockers" value="" />
+				<group name="center_cell">
+					<bool name="cant_build" value="False" />
+					<list name="block_path">
+					</list>
+				</group>
+				<list name="cant_build_exemptions">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\site_ext" overrideParent="True" List.ItemID="-131753358" List.ListAction="Append">
+				<float name="extra_build_test_footprint_x" value="0" />
+				<bool name="snap_to_terrain" value="False" />
+				<bool name="lock_to_impass" value="True" />
+				<float name="extra_build_test_footprint_z" value="0" />
+				<float name="extra_build_test_footprint_offset_x" value="0" />
+				<float name="extra_build_test_footprint_offset_z" value="0" />
+				<float name="minimum_build_test_footprint_x" value="0" />
+				<float name="minimum_build_test_footprint_z" value="0" />
+				<enum name="impass_cell_check" value="AllCellsFree" />
+				<group name="footprint_scale">
+					<float name="x" value="0" />
+					<float name="y" value="0" />
+				</group>
+				<bool name="forced_axis_aligned_footprint" value="False" />
+				<bool name="remove_if_constructed_over" value="False" />
+				<list name="snap_to_surface_types">
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="182722" />
+		<instance_reference name="parent_pbg" value="ebps\races\common\gameplay\airdrop_crate_template" />
+	</variant>
+</instance>

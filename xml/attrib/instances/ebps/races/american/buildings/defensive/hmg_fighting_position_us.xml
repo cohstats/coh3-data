@@ -1,0 +1,594 @@
+<instance version="5" description="fighting position with a machine gun" template="ebps">
+	<variant name="default">
+		<list name="extensions" removedIds="1683235394">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="477439852" List.ParentItemID="477439852">
+				<file name="alternate_sua" value="art\armies\common\rigs\structures\usa_machinegun_emplacement\usa_machinegun_emplacement" overrideParent="True" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\american\buildings\base_defense_us" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="1022558304" List.ParentItemID="1022558304">
+				<float name="hitpoints" value="640" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="1605294826" List.ParentItemID="1605294826">
+				<locstring name="screen_name" value="11235459" overrideParent="True" />
+				<locstring name="brief_text" value="11235520" overrideParent="True" />
+				<locstring name="extra_text" value="0" overrideParent="True" />
+				<file name="minimap_icon" value="common\buildings\symbols\barbed_wire_ger" overrideParent="True" />
+				<file name="portrait_name" value="" overrideParent="True" />
+				<file name="portrait_icon" value="races\american\buildings\fighting_position_us_portrait" overrideParent="True" />
+				<locstring name="help_text" value="11235478" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\upgrade_ext" List.ItemID="1109552015" List.ParentItemID="1109552015">
+				<list name="standard_upgrades" removedIds="2041924938, 853726893">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hold_ext" List.ItemID="-1825575233" List.ParentItemID="-1825575233">
+				<bool name="disallow_load_command" value="True" overrideParent="True" />
+				<float name="num_squad_slots" value="0" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\construction_ext" List.ItemID="-1564017753" List.ParentItemID="-1564017753">
+				<instance_reference name="on_construction_squad" value="sbps\races\american\emplacements\hmg_fighting_position_us" overrideParent="True" />
+				<bool name="squad_ignore_pathfinding" value="True" overrideParent="True" />
+				<bool name="construction_site_erase_inactive" value="False" overrideParent="True" />
+				<bool name="too_light_to_destroy_built_over_entities" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="51139964" List.ListAction="Append">
+				<bool name="reject_attack_command" value="False" />
+				<list name="hardpoints">
+					<group name="hardpoint" List.ItemID="1230744864">
+						<float name="parent_hardpoint" value="-1" />
+						<list name="weapon_table">
+							<group name="weapon" List.ItemID="1547566071">
+								<group name="heading">
+									<float name="x" value="0" />
+									<float name="y" value="0" />
+									<float name="z" value="1" />
+								</group>
+								<float name="length" value="0" />
+								<group name="origin">
+									<float name="x" value="0" />
+									<float name="y" value="0.5" />
+									<float name="z" value="0" />
+								</group>
+								<enum name="type" value="dummy" />
+								<template_reference name="weapon_entity_attachment" value="options\attachment_types\entity_create_attachment">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<template_reference name="attach_data" value="attachments\attach_data">
+											<string name="marker_name_parent" value="" />
+											<string name="parent_rigidbody_target_name" value="" />
+											<enum name="game_object_attachment_type" value="scenegraph" />
+										</template_reference>
+										<instance_reference name="ebp" value="ebps\races\american\weapons\small_arms\machine_guns\heavy_machine_gun\w_30cal_fighting_position_us" />
+										<group name="attachment_flags">
+											<bool name="sim_only" value="False" />
+											<bool name="no_pathfinding" value="True" />
+											<bool name="not_snappable" value="False" />
+											<bool name="restore_snap_to_ground_on_detach" value="False" />
+											<bool name="no_sim_update" value="False" />
+											<bool name="join_parent_squad" value="False" />
+											<bool name="redirect_damage_to_parent_entity" value="True" />
+											<bool name="receive_parent_animations" value="False" />
+											<bool name="receive_parent_death" value="False" />
+										</group>
+									</template_reference>
+								</template_reference>
+								<template_reference name="non_entity_weapon_wrapper" value="">
+								</template_reference>
+							</group>
+						</list>
+						<bool name="receives_attack_commands" value="True" />
+						<string name="base_marker" value="loc_attachment_01" />
+						<list name="preferred_inventory_item_categories">
+						</list>
+						<list name="firing_offset_markers">
+						</list>
+						<string name="offhand_marker" value="" />
+						<bool name="initialize_weapons_on_creation" value="True" />
+					</group>
+					<group name="hardpoint" List.ItemID="-1529654044">
+						<float name="parent_hardpoint" value="1" />
+						<list name="weapon_table">
+						</list>
+						<bool name="receives_attack_commands" value="False" />
+						<string name="base_marker" value="" />
+						<list name="preferred_inventory_item_categories">
+						</list>
+						<list name="firing_offset_markers">
+						</list>
+						<string name="offhand_marker" value="" />
+						<bool name="initialize_weapons_on_creation" value="True" />
+					</group>
+				</list>
+				<int name="sight_hardpoint" value="-1" />
+				<float name="block_frontal_arc" value="0" />
+				<group name="attack_move">
+					<float name="attack_move_targeting_range" value="30" />
+					<float name="attack_move_priority_per_distance_meter" value="-1" />
+				</group>
+				<group name="idle_targeting">
+					<float name="idle_priority_per_angle_degree" value="-1.5" />
+					<float name="idle_priority_per_distance_meter" value="-1" />
+					<float name="idle_targeting_range" value="15" />
+					<float name="idle_priority_per_distance_unit_angle_multiplier" value="0" />
+				</group>
+				<template_reference name="kill_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<state_tree_node name="combat_choice_tree" value="" />
+				<int name="block_melee_blocks_per_sequence" value="0" />
+				<int name="block_melee_incoming_attack_sequence_length" value="1" />
+				<int name="block_ranged_blocks_per_sequence" value="0" />
+				<int name="block_ranged_incoming_attack_sequence_length" value="1" />
+				<int name="block_projectile_incoming_attack_sequence_length" value="1" />
+				<int name="block_projectile_blocks_per_sequence" value="0" />
+				<bool name="unequip_weapons_on_death" value="True" />
+				<float name="scan_interval_cached_target_invalid" value="2" />
+				<float name="scan_interval_cached_target_valid" value="2" />
+				<group name="combat_scan_intervals">
+					<group name="attack_move_scan_intervals">
+						<float name="interval_with_invalid_target" value="1" />
+						<float name="interval_with_valid_target" value="2" />
+						<float name="interval_with_valid_target_frequent" value="0.5" />
+						<float name="frequent_scan_radius" value="0" />
+					</group>
+					<group name="forced_engagement_scan_intervals">
+						<float name="interval_with_invalid_target" value="0.375" />
+						<float name="interval_with_valid_target" value="2" />
+					</group>
+					<group name="idle_scan_intervals">
+						<float name="interval_with_invalid_target" value="1" />
+						<float name="interval_with_valid_target" value="2" />
+						<float name="interval_with_valid_target_frequent" value="0.5" />
+						<float name="frequent_scan_radius" value="0" />
+					</group>
+				</group>
+				<bool name="ui_show_most_progressed_weapon_reload" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\crew_ext" List.ItemID="723969036" List.ListAction="Append">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-1148395176">
+						<instance_reference name="ext_key" value="" />
+						<group name="info">
+							<list name="role_list">
+								<group name="role" List.ItemID="1215796139">
+									<string name="name" value="gunner" />
+									<bool name="spawn_crew_on_create" value="True" />
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<template_reference name="attach_data" value="attachments\attach_data">
+											<string name="marker_name_parent" value="loc_gunner" />
+											<string name="parent_rigidbody_target_name" value="" />
+											<enum name="game_object_attachment_type" value="scenegraph" />
+										</template_reference>
+										<instance_reference name="ebp" value="ebps\races\american\infantry\crew_hmg_dummy_us" />
+										<group name="attachment_flags">
+											<bool name="sim_only" value="False" />
+											<bool name="no_pathfinding" value="True" />
+											<bool name="not_snappable" value="False" />
+											<bool name="restore_snap_to_ground_on_detach" value="False" />
+											<bool name="no_sim_update" value="False" />
+											<bool name="join_parent_squad" value="False" />
+											<bool name="redirect_damage_to_parent_entity" value="False" />
+											<bool name="receive_parent_animations" value="True" />
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+									<instance_reference name="animation_role" value="animation_role\soldier\hmg_variants\us_hmg_gunner" />
+									<string name="parent_inventory_slot" value="hard_point_0" />
+									<bool name="invulnerable" value="True" />
+									<template_reference name="weapon_override" value="weapon_choice">
+										<group name="weapon_choice">
+											<enum name="type" value="default" />
+											<template_reference name="non_entity_weapon_wrapper" value="">
+											</template_reference>
+											<template_reference name="weapon_entity_attachment" value="options\attachment_types\entity_create_attachment">
+												<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+													<template_reference name="attach_data" value="attachments\attach_data">
+														<string name="marker_name_parent" value="" />
+														<string name="parent_rigidbody_target_name" value="" />
+														<enum name="game_object_attachment_type" value="scenegraph" />
+													</template_reference>
+													<instance_reference name="ebp" value="" />
+													<group name="attachment_flags">
+														<bool name="sim_only" value="False" />
+														<bool name="no_pathfinding" value="True" />
+														<bool name="not_snappable" value="False" />
+														<bool name="restore_snap_to_ground_on_detach" value="False" />
+														<bool name="no_sim_update" value="False" />
+														<bool name="join_parent_squad" value="False" />
+														<bool name="redirect_damage_to_parent_entity" value="True" />
+														<bool name="receive_parent_animations" value="False" />
+														<bool name="receive_parent_death" value="False" />
+													</group>
+												</template_reference>
+											</template_reference>
+											<group name="heading">
+												<float name="x" value="0" />
+												<float name="y" value="0" />
+												<float name="z" value="0" />
+											</group>
+											<float name="length" value="0" />
+											<group name="origin">
+												<float name="x" value="0" />
+												<float name="y" value="0" />
+												<float name="z" value="0" />
+											</group>
+										</group>
+									</template_reference>
+									<string name="setup_marker_override" value="" />
+									<bool name="can_ragdoll" value="True" />
+								</group>
+								<group name="role" List.ItemID="-1653579002">
+									<string name="name" value="loader" />
+									<bool name="spawn_crew_on_create" value="True" />
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<template_reference name="attach_data" value="attachments\attach_data">
+											<string name="marker_name_parent" value="loc_loader_takeover" />
+											<string name="parent_rigidbody_target_name" value="" />
+											<enum name="game_object_attachment_type" value="scenegraph" />
+										</template_reference>
+										<instance_reference name="ebp" value="ebps\races\american\infantry\crew_hmg_dummy_us" />
+										<group name="attachment_flags">
+											<bool name="sim_only" value="False" />
+											<bool name="no_pathfinding" value="True" />
+											<bool name="not_snappable" value="False" />
+											<bool name="restore_snap_to_ground_on_detach" value="False" />
+											<bool name="no_sim_update" value="False" />
+											<bool name="join_parent_squad" value="False" />
+											<bool name="redirect_damage_to_parent_entity" value="False" />
+											<bool name="receive_parent_animations" value="True" />
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+									<instance_reference name="animation_role" value="animation_role\soldier\hmg_variants\us_hmg_loader" />
+									<string name="parent_inventory_slot" value="hard_point_0" />
+									<bool name="invulnerable" value="True" />
+									<template_reference name="weapon_override" value="weapon_choice">
+										<group name="weapon_choice">
+											<enum name="type" value="default" />
+											<template_reference name="non_entity_weapon_wrapper" value="">
+											</template_reference>
+											<template_reference name="weapon_entity_attachment" value="options\attachment_types\entity_create_attachment">
+												<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+													<template_reference name="attach_data" value="attachments\attach_data">
+														<string name="marker_name_parent" value="MotionExtraction_M" />
+														<string name="parent_rigidbody_target_name" value="" />
+														<enum name="game_object_attachment_type" value="scenegraph" />
+													</template_reference>
+													<instance_reference name="ebp" value="ebps\races\american\weapons\special\w_ammo_box_us" />
+													<group name="attachment_flags">
+														<bool name="sim_only" value="False" />
+														<bool name="no_pathfinding" value="True" />
+														<bool name="not_snappable" value="False" />
+														<bool name="restore_snap_to_ground_on_detach" value="False" />
+														<bool name="no_sim_update" value="False" />
+														<bool name="join_parent_squad" value="False" />
+														<bool name="redirect_damage_to_parent_entity" value="True" />
+														<bool name="receive_parent_animations" value="False" />
+														<bool name="receive_parent_death" value="False" />
+													</group>
+												</template_reference>
+											</template_reference>
+											<group name="heading">
+												<float name="x" value="0" />
+												<float name="y" value="0" />
+												<float name="z" value="0" />
+											</group>
+											<float name="length" value="0" />
+											<group name="origin">
+												<float name="x" value="0" />
+												<float name="y" value="0" />
+												<float name="z" value="0" />
+											</group>
+										</group>
+									</template_reference>
+									<string name="setup_marker_override" value="loc_loader_takeover" />
+									<bool name="can_ragdoll" value="True" />
+								</group>
+							</list>
+							<template_reference name="additional_crew_option" value="options\none">
+							</template_reference>
+							<bool name="add_attachment_dynamics_to_crew_and_apply_root_motion" value="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2033655" />
+		<instance_reference name="parent_pbg" value="ebps\races\american\buildings\defensive\fighting_position_us" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions" removedIds="1683235394">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="477439852" List.ParentItemID="477439852">
+				<file name="alternate_sua" value="art\armies\common\rigs\structures\usa_machinegun_emplacement\usa_machinegun_emplacement" overrideParent="True" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\american\buildings\base_defense_us" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="1022558304" List.ParentItemID="1022558304">
+				<float name="hitpoints" value="600" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="1605294826" List.ParentItemID="1605294826">
+				<locstring name="screen_name" value="11235459" overrideParent="True" />
+				<locstring name="brief_text" value="11235520" overrideParent="True" />
+				<locstring name="extra_text" value="0" overrideParent="True" />
+				<file name="minimap_icon" value="common\buildings\symbols\barbed_wire_ger" overrideParent="True" />
+				<file name="portrait_name" value="" overrideParent="True" />
+				<file name="portrait_icon" value="races\american\buildings\fighting_position_us_portrait" overrideParent="True" />
+				<locstring name="help_text" value="11235478" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\upgrade_ext" List.ItemID="1109552015" List.ParentItemID="1109552015">
+				<list name="standard_upgrades" removedIds="2041924938, 853726893">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hold_ext" List.ItemID="-1825575233" List.ParentItemID="-1825575233">
+				<bool name="disallow_load_command" value="True" overrideParent="True" />
+				<float name="num_squad_slots" value="0" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\construction_ext" List.ItemID="-1564017753" List.ParentItemID="-1564017753">
+				<instance_reference name="on_construction_squad" value="sbps\races\american\emplacements\hmg_fighting_position_us" overrideParent="True" />
+				<bool name="squad_ignore_pathfinding" value="True" overrideParent="True" />
+				<bool name="construction_site_erase_inactive" value="False" overrideParent="True" />
+				<bool name="too_light_to_destroy_built_over_entities" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="51139964" List.ListAction="Append">
+				<bool name="reject_attack_command" value="False" />
+				<list name="hardpoints">
+					<group name="hardpoint" List.ItemID="1230744864">
+						<float name="parent_hardpoint" value="-1" />
+						<list name="weapon_table">
+							<group name="weapon" List.ItemID="1547566071">
+								<group name="heading">
+									<float name="x" value="0" />
+									<float name="y" value="0" />
+									<float name="z" value="1" />
+								</group>
+								<float name="length" value="0" />
+								<group name="origin">
+									<float name="x" value="0" />
+									<float name="y" value="0.5" />
+									<float name="z" value="0" />
+								</group>
+								<enum name="type" value="dummy" />
+								<template_reference name="weapon_entity_attachment" value="options\attachment_types\entity_create_attachment">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<template_reference name="attach_data" value="attachments\attach_data">
+											<string name="marker_name_parent" value="" />
+											<string name="parent_rigidbody_target_name" value="" />
+											<enum name="game_object_attachment_type" value="scenegraph" />
+										</template_reference>
+										<instance_reference name="ebp" value="ebps\races\american\weapons\small_arms\machine_guns\heavy_machine_gun\w_30cal_fighting_position_us" />
+										<group name="attachment_flags">
+											<bool name="sim_only" value="False" />
+											<bool name="no_pathfinding" value="True" />
+											<bool name="not_snappable" value="False" />
+											<bool name="restore_snap_to_ground_on_detach" value="False" />
+											<bool name="no_sim_update" value="False" />
+											<bool name="join_parent_squad" value="False" />
+											<bool name="redirect_damage_to_parent_entity" value="True" />
+											<bool name="receive_parent_animations" value="False" />
+											<bool name="receive_parent_death" value="False" />
+										</group>
+									</template_reference>
+								</template_reference>
+								<template_reference name="non_entity_weapon_wrapper" value="">
+								</template_reference>
+							</group>
+						</list>
+						<bool name="receives_attack_commands" value="True" />
+						<string name="base_marker" value="loc_attachment_01" />
+						<list name="preferred_inventory_item_categories">
+						</list>
+						<list name="firing_offset_markers">
+						</list>
+						<string name="offhand_marker" value="" />
+						<bool name="initialize_weapons_on_creation" value="True" />
+					</group>
+					<group name="hardpoint" List.ItemID="-1529654044">
+						<float name="parent_hardpoint" value="1" />
+						<list name="weapon_table">
+						</list>
+						<bool name="receives_attack_commands" value="False" />
+						<string name="base_marker" value="" />
+						<list name="preferred_inventory_item_categories">
+						</list>
+						<list name="firing_offset_markers">
+						</list>
+						<string name="offhand_marker" value="" />
+						<bool name="initialize_weapons_on_creation" value="True" />
+					</group>
+				</list>
+				<int name="sight_hardpoint" value="-1" />
+				<float name="block_frontal_arc" value="0" />
+				<group name="attack_move">
+					<float name="attack_move_targeting_range" value="30" />
+					<float name="attack_move_priority_per_distance_meter" value="-1" />
+				</group>
+				<group name="idle_targeting">
+					<float name="idle_priority_per_angle_degree" value="-1.5" />
+					<float name="idle_priority_per_distance_meter" value="-1" />
+					<float name="idle_targeting_range" value="15" />
+					<float name="idle_priority_per_distance_unit_angle_multiplier" value="0" />
+				</group>
+				<template_reference name="kill_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<state_tree_node name="combat_choice_tree" value="" />
+				<int name="block_melee_blocks_per_sequence" value="0" />
+				<int name="block_melee_incoming_attack_sequence_length" value="1" />
+				<int name="block_ranged_blocks_per_sequence" value="0" />
+				<int name="block_ranged_incoming_attack_sequence_length" value="1" />
+				<int name="block_projectile_incoming_attack_sequence_length" value="1" />
+				<int name="block_projectile_blocks_per_sequence" value="0" />
+				<bool name="unequip_weapons_on_death" value="True" />
+				<float name="scan_interval_cached_target_invalid" value="2" />
+				<float name="scan_interval_cached_target_valid" value="2" />
+				<group name="combat_scan_intervals">
+					<group name="attack_move_scan_intervals">
+						<float name="interval_with_invalid_target" value="1" />
+						<float name="interval_with_valid_target" value="2" />
+						<float name="interval_with_valid_target_frequent" value="0.5" />
+						<float name="frequent_scan_radius" value="0" />
+					</group>
+					<group name="forced_engagement_scan_intervals">
+						<float name="interval_with_invalid_target" value="0.375" />
+						<float name="interval_with_valid_target" value="2" />
+					</group>
+					<group name="idle_scan_intervals">
+						<float name="interval_with_invalid_target" value="1" />
+						<float name="interval_with_valid_target" value="2" />
+						<float name="interval_with_valid_target_frequent" value="0.5" />
+						<float name="frequent_scan_radius" value="0" />
+					</group>
+				</group>
+				<bool name="ui_show_most_progressed_weapon_reload" value="False" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\crew_ext" List.ItemID="723969036" List.ListAction="Append">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-1148395176">
+						<instance_reference name="ext_key" value="" />
+						<group name="info">
+							<list name="role_list">
+								<group name="role" List.ItemID="1215796139">
+									<string name="name" value="gunner" />
+									<bool name="spawn_crew_on_create" value="True" />
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<template_reference name="attach_data" value="attachments\attach_data">
+											<string name="marker_name_parent" value="loc_gunner" />
+											<string name="parent_rigidbody_target_name" value="" />
+											<enum name="game_object_attachment_type" value="scenegraph" />
+										</template_reference>
+										<instance_reference name="ebp" value="ebps\races\american\infantry\crew_hmg_dummy_us" />
+										<group name="attachment_flags">
+											<bool name="sim_only" value="False" />
+											<bool name="no_pathfinding" value="True" />
+											<bool name="not_snappable" value="False" />
+											<bool name="restore_snap_to_ground_on_detach" value="False" />
+											<bool name="no_sim_update" value="False" />
+											<bool name="join_parent_squad" value="False" />
+											<bool name="redirect_damage_to_parent_entity" value="False" />
+											<bool name="receive_parent_animations" value="True" />
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+									<instance_reference name="animation_role" value="animation_role\soldier\hmg_variants\us_hmg_gunner" />
+									<string name="parent_inventory_slot" value="hard_point_0" />
+									<bool name="invulnerable" value="True" />
+									<template_reference name="weapon_override" value="weapon_choice">
+										<group name="weapon_choice">
+											<enum name="type" value="default" />
+											<template_reference name="non_entity_weapon_wrapper" value="">
+											</template_reference>
+											<template_reference name="weapon_entity_attachment" value="options\attachment_types\entity_create_attachment">
+												<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+													<template_reference name="attach_data" value="attachments\attach_data">
+														<string name="marker_name_parent" value="" />
+														<string name="parent_rigidbody_target_name" value="" />
+														<enum name="game_object_attachment_type" value="scenegraph" />
+													</template_reference>
+													<instance_reference name="ebp" value="" />
+													<group name="attachment_flags">
+														<bool name="sim_only" value="False" />
+														<bool name="no_pathfinding" value="True" />
+														<bool name="not_snappable" value="False" />
+														<bool name="restore_snap_to_ground_on_detach" value="False" />
+														<bool name="no_sim_update" value="False" />
+														<bool name="join_parent_squad" value="False" />
+														<bool name="redirect_damage_to_parent_entity" value="True" />
+														<bool name="receive_parent_animations" value="False" />
+														<bool name="receive_parent_death" value="False" />
+													</group>
+												</template_reference>
+											</template_reference>
+											<group name="heading">
+												<float name="x" value="0" />
+												<float name="y" value="0" />
+												<float name="z" value="0" />
+											</group>
+											<float name="length" value="0" />
+											<group name="origin">
+												<float name="x" value="0" />
+												<float name="y" value="0" />
+												<float name="z" value="0" />
+											</group>
+										</group>
+									</template_reference>
+									<string name="setup_marker_override" value="" />
+									<bool name="can_ragdoll" value="True" />
+								</group>
+								<group name="role" List.ItemID="-1653579002">
+									<string name="name" value="loader" />
+									<bool name="spawn_crew_on_create" value="True" />
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<template_reference name="attach_data" value="attachments\attach_data">
+											<string name="marker_name_parent" value="loc_loader_takeover" />
+											<string name="parent_rigidbody_target_name" value="" />
+											<enum name="game_object_attachment_type" value="scenegraph" />
+										</template_reference>
+										<instance_reference name="ebp" value="ebps\races\american\infantry\crew_hmg_dummy_us" />
+										<group name="attachment_flags">
+											<bool name="sim_only" value="False" />
+											<bool name="no_pathfinding" value="True" />
+											<bool name="not_snappable" value="False" />
+											<bool name="restore_snap_to_ground_on_detach" value="False" />
+											<bool name="no_sim_update" value="False" />
+											<bool name="join_parent_squad" value="False" />
+											<bool name="redirect_damage_to_parent_entity" value="False" />
+											<bool name="receive_parent_animations" value="True" />
+											<bool name="receive_parent_death" value="False" overrideParent="True" />
+										</group>
+									</template_reference>
+									<instance_reference name="animation_role" value="animation_role\soldier\hmg_variants\us_hmg_loader" />
+									<string name="parent_inventory_slot" value="hard_point_0" />
+									<bool name="invulnerable" value="True" />
+									<template_reference name="weapon_override" value="weapon_choice">
+										<group name="weapon_choice">
+											<enum name="type" value="default" />
+											<template_reference name="non_entity_weapon_wrapper" value="">
+											</template_reference>
+											<template_reference name="weapon_entity_attachment" value="options\attachment_types\entity_create_attachment">
+												<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+													<template_reference name="attach_data" value="attachments\attach_data">
+														<string name="marker_name_parent" value="MotionExtraction_M" />
+														<string name="parent_rigidbody_target_name" value="" />
+														<enum name="game_object_attachment_type" value="scenegraph" />
+													</template_reference>
+													<instance_reference name="ebp" value="ebps\races\american\weapons\special\w_ammo_box_us" />
+													<group name="attachment_flags">
+														<bool name="sim_only" value="False" />
+														<bool name="no_pathfinding" value="True" />
+														<bool name="not_snappable" value="False" />
+														<bool name="restore_snap_to_ground_on_detach" value="False" />
+														<bool name="no_sim_update" value="False" />
+														<bool name="join_parent_squad" value="False" />
+														<bool name="redirect_damage_to_parent_entity" value="True" />
+														<bool name="receive_parent_animations" value="False" />
+														<bool name="receive_parent_death" value="False" />
+													</group>
+												</template_reference>
+											</template_reference>
+											<group name="heading">
+												<float name="x" value="0" />
+												<float name="y" value="0" />
+												<float name="z" value="0" />
+											</group>
+											<float name="length" value="0" />
+											<group name="origin">
+												<float name="x" value="0" />
+												<float name="y" value="0" />
+												<float name="z" value="0" />
+											</group>
+										</group>
+									</template_reference>
+									<string name="setup_marker_override" value="loc_loader_takeover" />
+									<bool name="can_ragdoll" value="True" />
+								</group>
+							</list>
+							<template_reference name="additional_crew_option" value="options\none">
+							</template_reference>
+							<bool name="add_attachment_dynamics_to_crew_and_apply_root_motion" value="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2033655" />
+		<instance_reference name="parent_pbg" value="ebps\races\american\buildings\defensive\fighting_position_us" />
+	</variant>
+</instance>

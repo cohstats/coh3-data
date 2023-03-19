@@ -1,0 +1,80 @@
+<instance version="5" description="" template="ai\ai_statemodel_tunings">
+	<variant name="default">
+		<group name="ai_statemodel_tunings_bag">
+			<list name="bool_tunings">
+			</list>
+			<list name="float_tunings">
+				<group name="value_tuning" List.ItemID="-620413991">
+					<enum name="key" value="ai_si_offense_delta_per_minute" />
+					<float name="value" value="0.1" />
+				</group>
+				<group name="value_tuning" List.ItemID="555164197">
+					<enum name="key" value="ai_si_fuel_update_interval_seconds" />
+					<float name="value" value="5" />
+				</group>
+				<group name="value_tuning" List.ItemID="1966147763">
+					<enum name="key" value="ai_si_munition_update_interval_seconds" />
+					<float name="value" value="5" />
+				</group>
+				<group name="value_tuning" List.ItemID="-2028653998">
+					<enum name="key" value="ai_avoidance_min_delay" />
+					<float name="value" value="3" />
+				</group>
+				<group name="value_tuning" List.ItemID="-262995554">
+					<enum name="key" value="ai_avoidance_max_delay" />
+					<float name="value" value="4" />
+				</group>
+				<group name="value_tuning" List.ItemID="-276773756">
+					<enum name="key" value="ai_avoidance_outside_vision_box_delay" />
+					<float name="value" value="1" />
+				</group>
+				<group name="value_tuning" List.ItemID="-1251594387">
+					<enum name="key" value="ai_global_ability_cooldown" />
+					<float name="value" value="0" />
+				</group>
+				<group name="value_tuning" List.ItemID="780206274">
+					<enum name="key" value="ai_pathfinding_offense_SI_weight" />
+					<float name="value" value="1" />
+				</group>
+				<group name="value_tuning" List.ItemID="-1736424513">
+					<enum name="key" value="ai_production_batch_cooldown_seconds" />
+					<float name="value" value="10" />
+				</group>
+				<group name="value_tuning" comment="- higher values means do more fallback&#xD;&#xA;- 1.0 - unchanged&#xD;&#xA;- &lt; 1.0 - less fallback&#xD;&#xA;- &gt; 1.0 - more fallback" List.ItemID="739516453">
+					<enum name="key" value="ai_fallback_SI_weight" />
+					<float name="value" value="1.1" />
+				</group>
+			</list>
+			<list name="int_tunings">
+				<group name="value_tuning" List.ItemID="-2010942774">
+					<enum name="key" value="ai_si_victory_point_behind_threshold" />
+					<int name="value" value="1" />
+				</group>
+				<group name="value_tuning" List.ItemID="-286817253">
+					<enum name="key" value="ai_si_tech_focus_max" />
+					<int name="value" value="4" />
+				</group>
+				<group name="value_tuning" List.ItemID="877069900">
+					<enum name="key" value="ai_max_capture_encounters" />
+					<int name="value" value="0" />
+				</group>
+			</list>
+			<group name="special_enum_tunings">
+				<list name="unit_class_list">
+				</list>
+				<list name="ai_military_engagement_type">
+				</list>
+			</group>
+			<group name="special_pbg_tunings">
+				<list name="ai_phase_encounter_coordinator_bag">
+				</list>
+				<list name="ai_phase_encounter_coordinator_bag_enroute">
+				</list>
+				<list name="ai_phase_encounter_path_bag">
+				</list>
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="2061834" />
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+</instance>

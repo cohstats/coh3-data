@@ -1,0 +1,51 @@
+<instance version="5" description="" template="attachments\attachment_list">
+	<variant name="default">
+		<group name="attachment_list_group">
+			<list name="attachment_list" comment="If you are updating this list, please be aware of the second attachment list. That list has an additional Flag object for the campaign map. If appropriate, update the second list to match visuals.">
+				<template_reference name="attachment" value="options\attachment_types\animator_skin_attachment" List.ItemID="-21619586">
+					<file name="animator" value="art\armies\british\vehicles\churchill_mkiii\body\chassis\chassis" />
+					<enum name="inventory_item_category" value="" />
+					<bool name="is_selectable" value="True" />
+					<string name="marker_name" value="" />
+					<file name="material_override" value="" />
+					<list name="customizations">
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_decal\vehicles\british\british_churchill_decal_default" List.ItemID="-406372521" />
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_tint\british_tint_desert" List.ItemID="-1545346781" />
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_charred\charring_damage" List.ItemID="1863424715" />
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_weathering\mud_dry" List.ItemID="1282138089" />
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_damage\ballistic_2x_scale_damage" List.ItemID="938965953" />
+					</list>
+				</template_reference>
+				<template_reference name="attachment" value="options\attachment_types\destructible_cell_attachment" List.ItemID="1245812592">
+					<file name="animator" value="art\armies\british\vehicles\accessories\ammo_group_03\ammo_group_03" />
+					<file name="material_override" value="" />
+					<string name="attachment_marker" value="loc_main_acc_primary_back" />
+					<float name="health" value="60" />
+					<instance_reference name="hit_material" value="hit_material\metal" />
+					<list name="customizations">
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_charred\charring_damage" List.ItemID="147611732" />
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_weathering\mud_dry" List.ItemID="-583482335" />
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_tint\british_tint_africa_default_accessories_tritone" List.ItemID="-1592722666" />
+					</list>
+				</template_reference>
+				<template_reference name="attachment" value="options\attachment_types\destructible_cell_attachment" List.ItemID="2083885526">
+					<file name="animator" value="art\armies\british\vehicles\accessories\bedroll_group_01\bedroll_group_01" />
+					<file name="material_override" value="" />
+					<string name="attachment_marker" value="loc_main_acc_primary_left" />
+					<float name="health" value="60" />
+					<instance_reference name="hit_material" value="hit_material\metal" />
+					<list name="customizations">
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_charred\charring_damage" List.ItemID="-1199339969" />
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_weathering\mud_dry" List.ItemID="-1474041187" />
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_tint\british_tint_africa_default_accessories_tritone" List.ItemID="-1650326104" />
+					</list>
+				</template_reference>
+			</list>
+			<string name="attachment_category" value="default" />
+			<string name="attachment_speaker_code" value="" />
+			<string name="inventory_category" value="default" />
+		</group>
+		<uniqueid name="pbgid" value="1512686" />
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+</instance>

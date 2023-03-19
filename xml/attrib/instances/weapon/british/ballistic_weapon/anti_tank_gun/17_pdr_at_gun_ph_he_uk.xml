@@ -1,0 +1,204 @@
+<instance version="5" description="" template="weapon">
+	<variant name="default">
+		<group name="weapon_bag">
+			<group name="accuracy">
+				<float name="near" value="0.15" overrideParent="True" />
+			</group>
+			<group name="area_effect">
+				<template_reference name="area_info" value="options\area_info_options\circle_area_option">
+					<float name="outer_radius" value="6" overrideParent="True" />
+				</template_reference>
+				<group name="damage">
+					<float name="far" value="0.25" overrideParent="True" />
+					<float name="mid" value="0.5" overrideParent="True" />
+				</group>
+				<group name="distance">
+					<float name="far" value="6" overrideParent="True" />
+					<float name="near" value="1" overrideParent="True" />
+					<float name="mid" value="3" overrideParent="True" />
+				</group>
+				<bool name="has_friendly_fire" value="True" overrideParent="True" />
+			</group>
+			<group name="damage">
+				<float name="max" value="120" overrideParent="True" />
+				<float name="min" value="120" overrideParent="True" />
+			</group>
+			<group name="fire">
+				<float name="wind_down" value="1.625" overrideParent="True" />
+				<float name="wind_up" value="0" overrideParent="True" />
+			</group>
+			<string name="fx_munition_name" value="\cannon\shell_medium_he" overrideParent="True" />
+			<group name="range">
+				<float name="max" value="60" overrideParent="True" />
+				<float name="max_animation_angle_distance" value="20" overrideParent="True" />
+			</group>
+			<group name="reload">
+				<group name="duration">
+					<float name="max" value="3.3" overrideParent="True" />
+					<float name="min" value="3.3" overrideParent="True" />
+				</group>
+			</group>
+			<group name="scatter">
+				<float name="angle_scatter" value="7.5" overrideParent="True" />
+				<float name="distance_scatter_offset" value="0.25" overrideParent="True" />
+				<float name="distance_scatter_ratio" value="0.5" overrideParent="True" />
+				<float name="fow_angle_multiplier" value="1.25" overrideParent="True" />
+				<float name="fow_distance_multiplier" value="1.25" overrideParent="True" />
+			</group>
+			<group name="setup">
+				<float name="duration" value="2" overrideParent="True" />
+			</group>
+			<group name="teardown">
+				<float name="duration" value="1.75" overrideParent="True" />
+			</group>
+			<group name="penetration">
+				<float name="near" value="110" overrideParent="True" />
+				<float name="far" value="65" overrideParent="True" />
+				<float name="mid" value="85" overrideParent="True" />
+			</group>
+			<group name="height_bonuses">
+				<group name="height_advantage">
+					<group name="multipliers">
+						<float name="accuracy_multiplier" value="1.1" overrideParent="True" />
+					</group>
+					<bool name="negates_cover" value="True" overrideParent="True" />
+				</group>
+				<group name="height_disadvantage">
+					<float name="height_threshold" value="4.5" overrideParent="True" />
+				</group>
+			</group>
+			<template_reference name="animation_role_option" value="options\animation_role\animation_role_flavour_option">
+				<list name="squad_animation_roles">
+					<group name="flavour" List.ItemID="-1936764210" List.ParentItemID="-1936764210">
+						<list name="squad_contents">
+							<group name="squad_member" List.ItemID="-1481706979" List.ParentItemID="-1481706979">
+								<list name="animation_variants" removedIds="1561973687">
+									<instance_reference name="animation_role" value="animation_role\team_weapon\uk_17pounder_pheasant_gun" List.ItemID="701609097" List.ListAction="Append" />
+								</list>
+							</group>
+						</list>
+					</group>
+				</list>
+			</template_reference>
+			<list name="target_type_table" removedIds="385996968">
+			</list>
+			<group name="deflection">
+				<bool name="has_deflection_damage" value="False" overrideParent="True" />
+			</group>
+			<group name="aim">
+				<group name="fire_aim_time">
+					<float name="max" value="0.5" overrideParent="True" />
+					<float name="min" value="0.5" overrideParent="True" />
+				</group>
+			</group>
+			<group name="tracking">
+				<group name="normal">
+					<float name="speed_horizontal" value="33" overrideParent="True" />
+				</group>
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="2085123" />
+		<instance_reference name="parent_pbg" value="weapon\british\ballistic_weapon\anti_tank_gun\17pdr_at_gun_uk" />
+	</variant>
+	<variant name="sp">
+		<group name="weapon_bag">
+			<group name="accuracy">
+				<float name="near" value="0.15" overrideParent="True" />
+			</group>
+			<group name="area_effect">
+				<template_reference name="area_info" value="options\area_info_options\circle_area_option">
+					<float name="outer_radius" value="6" overrideParent="True" />
+				</template_reference>
+				<group name="damage">
+					<float name="far" value="0.25" overrideParent="True" />
+					<float name="mid" value="0.5" overrideParent="True" />
+				</group>
+				<group name="distance">
+					<float name="far" value="6" overrideParent="True" />
+					<float name="near" value="1" overrideParent="True" />
+					<float name="mid" value="3" overrideParent="True" />
+				</group>
+				<bool name="has_friendly_fire" value="True" overrideParent="True" />
+			</group>
+			<group name="damage">
+				<float name="max" value="120" overrideParent="True" />
+				<float name="min" value="120" overrideParent="True" />
+			</group>
+			<group name="fire">
+				<float name="wind_down" value="1.625" overrideParent="True" />
+				<float name="wind_up" value="0" overrideParent="True" />
+			</group>
+			<string name="fx_munition_name" value="\cannon\shell_medium_he" overrideParent="True" />
+			<group name="range">
+				<float name="max" value="60" overrideParent="True" />
+				<float name="max_animation_angle_distance" value="20" overrideParent="True" />
+			</group>
+			<group name="reload">
+				<group name="duration">
+					<float name="max" value="3.3" overrideParent="True" />
+					<float name="min" value="3.3" overrideParent="True" />
+				</group>
+			</group>
+			<group name="scatter">
+				<float name="angle_scatter" value="7.5" overrideParent="True" />
+				<float name="distance_scatter_offset" value="0.25" overrideParent="True" />
+				<float name="distance_scatter_ratio" value="0.5" overrideParent="True" />
+				<float name="fow_angle_multiplier" value="1.25" overrideParent="True" />
+				<float name="fow_distance_multiplier" value="1.25" overrideParent="True" />
+			</group>
+			<group name="setup">
+				<float name="duration" value="2" overrideParent="True" />
+			</group>
+			<group name="teardown">
+				<float name="duration" value="1.75" overrideParent="True" />
+			</group>
+			<group name="penetration">
+				<float name="near" value="110" overrideParent="True" />
+				<float name="far" value="65" overrideParent="True" />
+				<float name="mid" value="85" overrideParent="True" />
+			</group>
+			<group name="height_bonuses">
+				<group name="height_advantage">
+					<group name="multipliers">
+						<float name="accuracy_multiplier" value="1.1" overrideParent="True" />
+					</group>
+					<bool name="negates_cover" value="True" overrideParent="True" />
+				</group>
+				<group name="height_disadvantage">
+					<float name="height_threshold" value="4.5" overrideParent="True" />
+				</group>
+			</group>
+			<template_reference name="animation_role_option" value="options\animation_role\animation_role_flavour_option">
+				<list name="squad_animation_roles">
+					<group name="flavour" List.ItemID="-1936764210" List.ParentItemID="-1936764210">
+						<list name="squad_contents">
+							<group name="squad_member" List.ItemID="-1481706979" List.ParentItemID="-1481706979">
+								<list name="animation_variants" removedIds="1561973687">
+									<instance_reference name="animation_role" value="animation_role\team_weapon\uk_17pounder_pheasant_gun" List.ItemID="701609097" List.ListAction="Append" />
+								</list>
+							</group>
+						</list>
+					</group>
+				</list>
+			</template_reference>
+			<list name="target_type_table" removedIds="385996968">
+			</list>
+			<group name="deflection">
+				<bool name="has_deflection_damage" value="False" overrideParent="True" />
+			</group>
+			<group name="aim">
+				<group name="fire_aim_time">
+					<float name="max" value="0.5" overrideParent="True" />
+					<float name="min" value="0.5" overrideParent="True" />
+				</group>
+			</group>
+			<group name="tracking">
+				<group name="normal">
+					<float name="speed_horizontal" value="33" overrideParent="True" />
+				</group>
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="2085123" />
+		<instance_reference name="parent_pbg" value="weapon\british\ballistic_weapon\anti_tank_gun\17pdr_at_gun_uk" />
+	</variant>
+</instance>

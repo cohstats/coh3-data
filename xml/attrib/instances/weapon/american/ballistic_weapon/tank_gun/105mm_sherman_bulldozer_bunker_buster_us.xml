@@ -1,0 +1,148 @@
+<instance version="5" description="High explosive rounds for the M4 105mm M4A1 Sherman Bulldozer" template="weapon">
+	<variant name="default">
+		<group name="weapon_bag">
+			<group name="accuracy">
+				<float name="near" value="1" overrideParent="True" />
+				<float name="far" value="1" overrideParent="True" />
+				<float name="mid" value="1" overrideParent="True" />
+			</group>
+			<group name="area_effect">
+				<template_reference name="area_info" value="options\area_info_options\circle_area_option">
+					<float name="outer_radius" value="3" overrideParent="True" />
+				</template_reference>
+				<group name="distance">
+					<float name="far" value="3" overrideParent="True" />
+					<float name="mid" value="2" overrideParent="True" />
+				</group>
+				<int name="damage_max_members_per_squad" value="4" overrideParent="True" />
+			</group>
+			<group name="cooldown">
+				<group name="duration">
+					<float name="max" value="1.5" overrideParent="True" />
+					<float name="min" value="1.5" overrideParent="True" />
+				</group>
+			</group>
+			<string name="fx_munition_name" value="\artillery\artillery_medium" overrideParent="True" />
+			<group name="reload">
+				<group name="duration">
+					<float name="max" value="3" overrideParent="True" />
+					<float name="min" value="2.5" overrideParent="True" />
+				</group>
+				<bool name="require_reload_after_switch" value="True" overrideParent="True" />
+			</group>
+			<group name="scatter">
+				<float name="distance_scatter_max" value="5" overrideParent="True" />
+				<float name="distance_scatter_offset" value="0.1" overrideParent="True" />
+				<float name="distance_scatter_ratio" value="0.5" overrideParent="True" />
+				<float name="movement_scatter_angle_multiplier" value="1.25" overrideParent="True" />
+				<float name="movement_scatter_distance_multiplier" value="1.25" overrideParent="True" />
+			</group>
+			<group name="suppression">
+				<float name="nearby_suppression_multiplier" value="1" overrideParent="True" />
+				<float name="nearby_suppression_radius" value="10" overrideParent="True" />
+				<float name="amount" value="0.01" overrideParent="True" />
+			</group>
+			<list name="target_type_table">
+				<group name="target_unit_type_multipliers" List.ItemID="1553053277" List.ListAction="Append">
+					<enum name="unit_type" value="bunker" />
+					<group name="weapon_multipliers">
+						<float name="accuracy_multiplier" value="1" />
+						<float name="damage_multiplier" value="2" />
+						<float name="penetration_multiplier" value="2" />
+						<float name="suppression_multiplier" value="1" />
+					</group>
+					<float name="base_damage_modifier" value="0" />
+				</group>
+				<group name="target_unit_type_multipliers" List.ItemID="-1818000417" List.ListAction="Append">
+					<enum name="unit_type" value="building" />
+					<group name="weapon_multipliers">
+						<float name="accuracy_multiplier" value="1" />
+						<float name="damage_multiplier" value="2" />
+						<float name="penetration_multiplier" value="2" />
+						<float name="suppression_multiplier" value="1" />
+					</group>
+					<float name="base_damage_modifier" value="0" />
+				</group>
+			</list>
+			<group name="range">
+				<float name="max" value="40" comment="Must be greater than ability range or ability breaks. Difference is the buffer zone for moving away from target before ability stops." overrideParent="True" />
+				<float name="min" value="15" overrideParent="True" />
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="1564036" />
+		<instance_reference name="parent_pbg" value="weapon\american\ballistic_weapon\tank_gun\105mm_sherman_bulldozer_us" />
+	</variant>
+	<variant name="sp">
+		<group name="weapon_bag">
+			<group name="accuracy">
+				<float name="near" value="1" overrideParent="True" />
+				<float name="far" value="1" overrideParent="True" />
+				<float name="mid" value="1" overrideParent="True" />
+			</group>
+			<group name="area_effect">
+				<template_reference name="area_info" value="options\area_info_options\circle_area_option">
+					<float name="outer_radius" value="3" overrideParent="True" />
+				</template_reference>
+				<group name="distance">
+					<float name="far" value="3" overrideParent="True" />
+					<float name="mid" value="2" overrideParent="True" />
+				</group>
+				<int name="damage_max_members_per_squad" value="4" overrideParent="True" />
+			</group>
+			<group name="cooldown">
+				<group name="duration">
+					<float name="max" value="1.5" overrideParent="True" />
+					<float name="min" value="1.5" overrideParent="True" />
+				</group>
+			</group>
+			<string name="fx_munition_name" value="\artillery\artillery_medium" overrideParent="True" />
+			<group name="reload">
+				<group name="duration">
+					<float name="max" value="3" overrideParent="True" />
+					<float name="min" value="2.5" overrideParent="True" />
+				</group>
+				<bool name="require_reload_after_switch" value="True" overrideParent="True" />
+			</group>
+			<group name="scatter">
+				<float name="distance_scatter_max" value="5" overrideParent="True" />
+				<float name="distance_scatter_offset" value="0.1" overrideParent="True" />
+				<float name="distance_scatter_ratio" value="0.5" overrideParent="True" />
+				<float name="movement_scatter_angle_multiplier" value="1.25" overrideParent="True" />
+				<float name="movement_scatter_distance_multiplier" value="1.25" overrideParent="True" />
+			</group>
+			<group name="suppression">
+				<float name="nearby_suppression_multiplier" value="1" overrideParent="True" />
+				<float name="nearby_suppression_radius" value="10" overrideParent="True" />
+				<float name="amount" value="0.01" overrideParent="True" />
+			</group>
+			<list name="target_type_table">
+				<group name="target_unit_type_multipliers" List.ItemID="1553053277" List.ListAction="Append">
+					<enum name="unit_type" value="bunker" />
+					<group name="weapon_multipliers">
+						<float name="accuracy_multiplier" value="1" />
+						<float name="damage_multiplier" value="2" />
+						<float name="penetration_multiplier" value="2" />
+						<float name="suppression_multiplier" value="1" />
+					</group>
+					<float name="base_damage_modifier" value="0" />
+				</group>
+				<group name="target_unit_type_multipliers" List.ItemID="-1818000417" List.ListAction="Append">
+					<enum name="unit_type" value="building" />
+					<group name="weapon_multipliers">
+						<float name="accuracy_multiplier" value="1" />
+						<float name="damage_multiplier" value="2" />
+						<float name="penetration_multiplier" value="2" />
+						<float name="suppression_multiplier" value="1" />
+					</group>
+					<float name="base_damage_modifier" value="0" />
+				</group>
+			</list>
+			<group name="range">
+				<float name="max" value="40" comment="Must be greater than ability range or ability breaks. Difference is the buffer zone for moving away from target before ability stops." overrideParent="True" />
+				<float name="min" value="15" overrideParent="True" />
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="1564036" />
+		<instance_reference name="parent_pbg" value="weapon\american\ballistic_weapon\tank_gun\105mm_sherman_bulldozer_us" />
+	</variant>
+</instance>

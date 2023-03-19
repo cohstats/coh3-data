@@ -1,0 +1,108 @@
+<instance version="5" description="" template="abilities">
+	<variant name="default">
+		<group name="ability_bag">
+			<enum_table name="cost_to_player">
+				<float name="munition" value="30" overrideParent="True" />
+			</enum_table>
+			<group name="ui_info">
+				<locstring name="help_text" value="11240972" overrideParent="True" />
+				<file name="icon_name" value="common\abilities\grenade_sturmpioneer_ger" overrideParent="True" />
+				<locstring name="screen_name" value="11238884" overrideParent="True" />
+				<locstring name="brief_text" value="11240059" overrideParent="True" />
+			</group>
+			<list name="requirements">
+				<template_reference name="required" value="requirements\required_not" List.ItemID="414501136" List.ListAction="Append">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="0" />
+					<list name="requirement_table">
+						<template_reference name="required" value="requirements\required_in_state" List.ItemID="525331733">
+							<enum name="reason" value="usage" />
+							<locstring name="ui_name" value="0" />
+							<float name="was_attacked_within_seconds" value="-1" />
+							<list name="check_states">
+								<enum name="state_requirement_type" value="pinned" List.ItemID="1748100452" />
+							</list>
+							<float name="was_attacking_within_seconds" value="-1" />
+						</template_reference>
+					</list>
+				</template_reference>
+				<template_reference name="required" value="requirements\required_squad_upgrade" List.ItemID="-888987784" List.ListAction="Append">
+					<enum name="reason" value="usage_and_display" />
+					<locstring name="ui_name" value="0" />
+					<bool name="include_completed" value="True" />
+					<bool name="include_queued" value="False" />
+					<bool name="is_present" value="True" />
+					<instance_reference name="upgrade_name" value="upgrade\afrika_korps\infantry\m38_beretta_guastatori_ak" />
+					<int name="min_completed" value="1" />
+					<int name="max_completed" value="100" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+				</template_reference>
+			</list>
+			<group name="ui_position">
+				<int name="ui_position_column" value="2" overrideParent="True" />
+			</group>
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_entity_tree" value="grenade_guastatori_ak" overrideParent="True" />
+			</group>
+			<state_tree_node name="statetree_node_prereq_self_requirement" value="" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2072722" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\infantry\grenade_parent" />
+	</variant>
+	<variant name="sp">
+		<group name="ability_bag">
+			<enum_table name="cost_to_player">
+				<float name="munition" value="30" overrideParent="True" />
+			</enum_table>
+			<group name="ui_info">
+				<locstring name="help_text" value="11240972" overrideParent="True" />
+				<file name="icon_name" value="common\abilities\grenade_sturmpioneer_ger" overrideParent="True" />
+				<locstring name="screen_name" value="11238884" overrideParent="True" />
+				<locstring name="brief_text" value="11240059" overrideParent="True" />
+			</group>
+			<list name="requirements">
+				<template_reference name="required" value="requirements\required_not" List.ItemID="414501136" List.ListAction="Append">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="0" />
+					<list name="requirement_table">
+						<template_reference name="required" value="requirements\required_in_state" List.ItemID="525331733">
+							<enum name="reason" value="usage" />
+							<locstring name="ui_name" value="0" />
+							<float name="was_attacked_within_seconds" value="-1" />
+							<list name="check_states">
+								<enum name="state_requirement_type" value="pinned" List.ItemID="1748100452" />
+							</list>
+							<float name="was_attacking_within_seconds" value="-1" />
+						</template_reference>
+					</list>
+				</template_reference>
+				<template_reference name="required" value="requirements\required_squad_upgrade" List.ItemID="-888987784" List.ListAction="Append">
+					<enum name="reason" value="usage_and_display" />
+					<locstring name="ui_name" value="0" />
+					<bool name="include_completed" value="True" />
+					<bool name="include_queued" value="False" />
+					<bool name="is_present" value="True" />
+					<instance_reference name="upgrade_name" value="upgrade\afrika_korps\infantry\m38_beretta_guastatori_ak" />
+					<int name="min_completed" value="1" />
+					<int name="max_completed" value="100" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+				</template_reference>
+			</list>
+			<group name="ui_position">
+				<int name="ui_position_column" value="2" overrideParent="True" />
+			</group>
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_entity_tree" value="sp_grenade_guastatori_ak" overrideParent="True" />
+			</group>
+			<state_tree_node name="statetree_node_prereq_self_requirement" value="" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2072722" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\infantry\grenade_parent" />
+	</variant>
+</instance>

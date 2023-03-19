@@ -1,0 +1,234 @@
+<instance version="5" description="Crew that mans the nebelwerfer rocket launcher" template="ebps">
+	<variant name="default">
+		<list name="extensions" removedIds="-1396671542, 744063241">
+			<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="-1857756808" List.ParentItemID="-1857756808">
+				<list name="hardpoints">
+					<group name="hardpoint" List.ItemID="-12779701" List.ParentItemID="-12779701">
+						<list name="weapon_table">
+							<group name="weapon" List.ItemID="-1271477187" List.ListAction="Append">
+								<group name="heading">
+									<float name="x" value="0" />
+									<float name="y" value="0" />
+									<float name="z" value="1" />
+								</group>
+								<float name="length" value="0" />
+								<group name="origin">
+									<float name="x" value="0" />
+									<float name="y" value="0.5" />
+									<float name="z" value="0" />
+								</group>
+								<enum name="type" value="default" />
+								<template_reference name="weapon_entity_attachment" value="options\attachment_types\entity_create_attachment">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<template_reference name="attach_data" value="attachments\attach_data">
+											<string name="marker_name_parent" value="loc_weapon_01_r" />
+											<string name="parent_rigidbody_target_name" value="" />
+											<enum name="game_object_attachment_type" value="scenegraph" />
+										</template_reference>
+										<instance_reference name="ebp" value="ebps\races\german\weapons\small_arms\machine_gun\sub_machine_gun\w_mp40_crew_ger" />
+										<group name="attachment_flags">
+											<bool name="sim_only" value="False" />
+											<bool name="no_pathfinding" value="True" />
+											<bool name="not_snappable" value="False" />
+											<bool name="restore_snap_to_ground_on_detach" value="False" />
+											<bool name="no_sim_update" value="False" />
+											<bool name="join_parent_squad" value="False" />
+											<bool name="redirect_damage_to_parent_entity" value="True" />
+											<bool name="receive_parent_animations" value="True" />
+											<bool name="receive_parent_death" value="False" />
+										</group>
+									</template_reference>
+								</template_reference>
+								<template_reference name="non_entity_weapon_wrapper" value="">
+								</template_reference>
+							</group>
+						</list>
+						<string name="base_marker" value="" overrideParent="True" />
+						<string name="offhand_marker" value="" overrideParent="True" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-904066794" List.ParentItemID="-904066794">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\german\infantry\crew_mortar_ger" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="1633401127" List.ParentItemID="1633401127">
+				<float name="hitpoints" value="80" overrideParent="True" />
+				<float name="target_size" value="1.33" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\moving_ext" List.ItemID="331328646" List.ParentItemID="331328646">
+				<instance_reference name="pass_type" value="pass_types\infantry" overrideParent="True" />
+				<instance_reference name="pass_type_destination" value="" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sight_ext" List.ItemID="-1857005710" List.ParentItemID="-1857005710">
+				<group name="sight_package">
+					<float name="outer_height" comment="Based on the comments, it feels like this should be less than 0 and it traditionally has been. However, through testing, it seems like even if this is set to 0, units are still able to see below them just fine.&#xD;&#xA;&#xD;&#xA;NOTE: Jianfu suggested that this may exist just to soften the slope of the lampshade.&#xD;&#xA;-Brock 2017" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="798101727" List.ParentItemID="798101727">
+				<list name="race_type_list" removedIds="-1655187486">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\cover_ext" List.ItemID="523788995" List.ParentItemID="523788995">
+				<enum_table name="cover_types">
+					<template_reference name="tp_trench_cover" value="cover_ext_cover_type">
+						<float name="safety_value" value="0" overrideParent="True" />
+					</template_reference>
+				</enum_table>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="559878978" List.ParentItemID="559878978">
+				<group name="time_cost">
+					<enum_table name="cost">
+						<float name="manpower" value="55" overrideParent="True" />
+					</enum_table>
+					<float name="time_seconds" value="10" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\camouflage_ext" List.ItemID="-704111631" List.ParentItemID="-704111631">
+				<template_reference name="first_strike_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" overrideParent="True" />
+				</template_reference>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\population_ext" List.ItemID="462745794" List.ParentItemID="462745794">
+				<enum_table name="upkeep_per_pop_per_minute_override">
+					<float name="manpower" value="1" overrideParent="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\animation_role_ext" List.ItemID="832610114" List.ParentItemID="832610114">
+				<enum name="flavour_key" value="wehrmacht" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_inventory_ext" List.ItemID="-1295641152" List.ParentItemID="-1295641152">
+				<enum_table name="category_capacity">
+					<int name="special" value="0" overrideParent="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="-427855829" List.ParentItemID="-427855829">
+				<group name="speech_parameters">
+					<string name="name_code" value="crew" overrideParent="True" />
+					<string name="unit_code" value="crew_leig_ger" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\action_apply_ext" List.ItemID="1454706862" List.ParentItemID="1454706862">
+				<list name="action_state_trees" removedIds="1621420048">
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2032813" />
+		<instance_reference name="parent_pbg" value="ebps\races\common\parent\infantry_parent" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions" removedIds="-1396671542, 744063241">
+			<template_reference name="exts" value="ebpextensions\combat_ext" List.ItemID="-1857756808" List.ParentItemID="-1857756808">
+				<list name="hardpoints">
+					<group name="hardpoint" List.ItemID="-12779701" List.ParentItemID="-12779701">
+						<list name="weapon_table">
+							<group name="weapon" List.ItemID="-1271477187" List.ListAction="Append">
+								<group name="heading">
+									<float name="x" value="0" />
+									<float name="y" value="0" />
+									<float name="z" value="1" />
+								</group>
+								<float name="length" value="0" />
+								<group name="origin">
+									<float name="x" value="0" />
+									<float name="y" value="0.5" />
+									<float name="z" value="0" />
+								</group>
+								<enum name="type" value="default" />
+								<template_reference name="weapon_entity_attachment" value="options\attachment_types\entity_create_attachment">
+									<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+										<template_reference name="attach_data" value="attachments\attach_data">
+											<string name="marker_name_parent" value="loc_weapon_01_r" />
+											<string name="parent_rigidbody_target_name" value="" />
+											<enum name="game_object_attachment_type" value="scenegraph" />
+										</template_reference>
+										<instance_reference name="ebp" value="ebps\races\german\weapons\small_arms\machine_gun\sub_machine_gun\w_mp40_crew_ger" />
+										<group name="attachment_flags">
+											<bool name="sim_only" value="False" />
+											<bool name="no_pathfinding" value="True" />
+											<bool name="not_snappable" value="False" />
+											<bool name="restore_snap_to_ground_on_detach" value="False" />
+											<bool name="no_sim_update" value="False" />
+											<bool name="join_parent_squad" value="False" />
+											<bool name="redirect_damage_to_parent_entity" value="True" />
+											<bool name="receive_parent_animations" value="True" />
+											<bool name="receive_parent_death" value="False" />
+										</group>
+									</template_reference>
+								</template_reference>
+								<template_reference name="non_entity_weapon_wrapper" value="">
+								</template_reference>
+							</group>
+						</list>
+						<string name="base_marker" value="" overrideParent="True" />
+						<string name="offhand_marker" value="" overrideParent="True" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-904066794" List.ParentItemID="-904066794">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\german\infantry\crew_mortar_ger" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="1633401127" List.ParentItemID="1633401127">
+				<float name="hitpoints" value="80" overrideParent="True" />
+				<float name="target_size" value="1.33" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\moving_ext" List.ItemID="331328646" List.ParentItemID="331328646">
+				<instance_reference name="pass_type" value="pass_types\infantry" overrideParent="True" />
+				<instance_reference name="pass_type_destination" value="" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sight_ext" List.ItemID="-1857005710" List.ParentItemID="-1857005710">
+				<group name="sight_package">
+					<float name="outer_height" comment="Based on the comments, it feels like this should be less than 0 and it traditionally has been. However, through testing, it seems like even if this is set to 0, units are still able to see below them just fine.&#xD;&#xA;&#xD;&#xA;NOTE: Jianfu suggested that this may exist just to soften the slope of the lampshade.&#xD;&#xA;-Brock 2017" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="798101727" List.ParentItemID="798101727">
+				<list name="race_type_list" removedIds="-1655187486">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\cover_ext" List.ItemID="523788995" List.ParentItemID="523788995">
+				<enum_table name="cover_types">
+					<template_reference name="tp_trench_cover" value="cover_ext_cover_type">
+						<float name="safety_value" value="0" overrideParent="True" />
+					</template_reference>
+				</enum_table>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="559878978" List.ParentItemID="559878978">
+				<group name="time_cost">
+					<enum_table name="cost">
+						<float name="manpower" value="55" overrideParent="True" />
+					</enum_table>
+					<float name="time_seconds" value="10" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\camouflage_ext" List.ItemID="-704111631" List.ParentItemID="-704111631">
+				<template_reference name="first_strike_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" overrideParent="True" />
+				</template_reference>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\population_ext" List.ItemID="462745794" List.ParentItemID="462745794">
+				<enum_table name="upkeep_per_pop_per_minute_override">
+					<float name="manpower" value="1" overrideParent="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\animation_role_ext" List.ItemID="832610114" List.ParentItemID="832610114">
+				<enum name="flavour_key" value="wehrmacht" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_inventory_ext" List.ItemID="-1295641152" List.ParentItemID="-1295641152">
+				<enum_table name="category_capacity">
+					<int name="special" value="0" overrideParent="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="-427855829" List.ParentItemID="-427855829">
+				<group name="speech_parameters">
+					<string name="name_code" value="crew" overrideParent="True" />
+					<string name="unit_code" value="crew_leig_ger" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\action_apply_ext" List.ItemID="1454706862" List.ParentItemID="1454706862">
+				<list name="action_state_trees" removedIds="1621420048">
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2032813" />
+		<instance_reference name="parent_pbg" value="ebps\races\common\parent\infantry_parent" />
+	</variant>
+</instance>

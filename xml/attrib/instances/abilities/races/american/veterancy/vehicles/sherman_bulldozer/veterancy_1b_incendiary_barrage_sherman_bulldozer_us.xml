@@ -1,0 +1,84 @@
+<instance version="5" description="" template="abilities">
+	<variant name="default">
+		<group name="ability_bag">
+			<enum_table name="cost_to_player">
+				<float name="munition" value="30" overrideParent="True" />
+			</enum_table>
+			<float name="range" value="40" comment="Must be lower than weapon range or ability breaks." overrideParent="True" />
+			<float name="recharge_time" value="30" overrideParent="True" />
+			<enum name="shared_timer" value="shared_ability_1" overrideParent="True" />
+			<group name="ui_info">
+				<locstring name="extra_text" value="11239603" overrideParent="True" />
+				<locstring name="help_text" value="11241276" overrideParent="True" />
+				<file name="icon_name" value="common\abilities\ability_incendiary_artillery" overrideParent="True" />
+				<locstring name="screen_name" value="11183320" overrideParent="True" />
+			</group>
+			<list name="requirements">
+				<template_reference name="required" value="requirements\required_squad_upgrade" List.ItemID="-1619450910" List.ListAction="Append">
+					<enum name="reason" value="usage_and_display" />
+					<locstring name="ui_name" value="0" />
+					<bool name="include_queued" value="False" />
+					<bool name="is_present" value="True" />
+					<instance_reference name="upgrade_name" value="upgrade\american\veterancy\veterancy_1_unlock_b" />
+					<int name="min_completed" value="1" />
+					<int name="max_completed" value="100" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+					<bool name="include_completed" value="True" />
+				</template_reference>
+			</list>
+			<group name="ui_position">
+				<int name="ui_position_column" value="4" overrideParent="True" />
+			</group>
+			<float name="ui_reticule_radius_min" value="6" overrideParent="True" />
+			<float name="ui_reticule_radius_max" value="6" overrideParent="True" />
+			<state_tree_node name="entity_tree" value="sherman_bulldozer_incendiary_barrage_us" overrideParent="True" />
+			<state_tree_node name="statetree_node_prereq_self_requirement" value="ability_requirement_queries\inactive_ability_requirements\us_sherman_bulldozer_105mm" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2044859" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\vehicles\concurrent_vehicle_barrage_parent" />
+	</variant>
+	<variant name="sp">
+		<group name="ability_bag">
+			<enum_table name="cost_to_player">
+				<float name="munition" value="30" overrideParent="True" />
+			</enum_table>
+			<float name="range" value="40" comment="Must be lower than weapon range or ability breaks." overrideParent="True" />
+			<float name="recharge_time" value="30" overrideParent="True" />
+			<enum name="shared_timer" value="shared_ability_1" overrideParent="True" />
+			<group name="ui_info">
+				<locstring name="extra_text" value="11239603" overrideParent="True" />
+				<locstring name="help_text" value="11241276" overrideParent="True" />
+				<file name="icon_name" value="common\abilities\ability_incendiary_artillery" overrideParent="True" />
+				<locstring name="screen_name" value="11183320" overrideParent="True" />
+			</group>
+			<list name="requirements">
+				<template_reference name="required" value="requirements\required_squad_upgrade" List.ItemID="-1619450910" List.ListAction="Append">
+					<enum name="reason" value="usage_and_display" />
+					<locstring name="ui_name" value="0" />
+					<bool name="include_queued" value="False" />
+					<bool name="is_present" value="True" />
+					<instance_reference name="upgrade_name" value="upgrade\american\veterancy\veterancy_1_unlock_b" />
+					<int name="min_completed" value="1" />
+					<int name="max_completed" value="100" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+					<bool name="include_completed" value="True" />
+				</template_reference>
+			</list>
+			<group name="ui_position">
+				<int name="ui_position_column" value="4" overrideParent="True" />
+			</group>
+			<float name="ui_reticule_radius_min" value="6" overrideParent="True" />
+			<float name="ui_reticule_radius_max" value="6" overrideParent="True" />
+			<state_tree_node name="entity_tree" value="sp_sherman_bulldozer_incendiary_barrage_us" overrideParent="True" />
+			<state_tree_node name="statetree_node_prereq_self_requirement" value="ability_requirement_queries\inactive_ability_requirements\us_sherman_bulldozer_105mm" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2044859" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\vehicles\concurrent_vehicle_barrage_parent" />
+	</variant>
+</instance>

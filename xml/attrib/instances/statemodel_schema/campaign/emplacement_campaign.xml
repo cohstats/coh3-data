@@ -1,0 +1,64 @@
+<instance version="5" description="" template="statemodel_schema">
+	<variant name="default">
+		<uniqueid name="pbgid" value="2071681" />
+		<group name="schema_bag">
+			<list name="int_properties" overrideParent="True">
+				<template_reference name="int" value="statemodel_int_property" List.ItemID="-1229573833">
+					<int name="default" value="1" />
+					<enum name="int_property_id" value="campaign_building_action_point" />
+				</template_reference>
+				<template_reference name="int" value="statemodel_int_property" List.ItemID="-1778152254">
+					<int name="default" value="1" />
+					<enum name="int_property_id" value="campaign_overwatch_attack_charge" />
+				</template_reference>
+				<template_reference name="int" value="statemodel_int_property" overrideParent="True" List.ItemID="-1070367370">
+					<int name="default" value="30" overrideParent="True" />
+					<enum name="int_property_id" value="campaign_supply" overrideParent="True" />
+				</template_reference>
+			</list>
+			<list name="target_properties" overrideParent="True">
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-1958416008">
+					<enum name="target_property_id" value="temporary_ability_target_01" overrideParent="True" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-1187281340">
+					<enum name="target_property_id" value="meta_visual_attack_target" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="453958845">
+					<enum name="target_property_id" value="overwatch_target" />
+				</template_reference>
+			</list>
+		</group>
+		<instance_reference name="parent_pbg" value="statemodel_schema\emplacement" />
+	</variant>
+	<variant name="sp">
+		<uniqueid name="pbgid" value="2071681" />
+		<group name="schema_bag">
+			<list name="int_properties" overrideParent="True">
+				<template_reference name="int" value="statemodel_int_property" List.ItemID="-1229573833">
+					<int name="default" value="1" />
+					<enum name="int_property_id" value="campaign_building_action_point" />
+				</template_reference>
+				<template_reference name="int" value="statemodel_int_property" List.ItemID="-1778152254">
+					<int name="default" value="1" />
+					<enum name="int_property_id" value="campaign_overwatch_attack_charge" />
+				</template_reference>
+				<template_reference name="int" value="statemodel_int_property" overrideParent="True" List.ItemID="-1070367370">
+					<int name="default" value="30" overrideParent="True" />
+					<enum name="int_property_id" value="campaign_supply" overrideParent="True" />
+				</template_reference>
+			</list>
+			<list name="target_properties" overrideParent="True">
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-1958416008">
+					<enum name="target_property_id" value="temporary_ability_target_01" overrideParent="True" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="-1187281340">
+					<enum name="target_property_id" value="meta_visual_attack_target" />
+				</template_reference>
+				<template_reference name="target" value="statemodel_target_property" List.ItemID="453958845">
+					<enum name="target_property_id" value="overwatch_target" />
+				</template_reference>
+			</list>
+		</group>
+		<instance_reference name="parent_pbg" value="statemodel_schema\emplacement" />
+	</variant>
+</instance>

@@ -1,0 +1,82 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-91778333" List.ParentItemID="-91778333">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\npc\italian\male_urban" overrideParent="True" />
+				<bool name="browsable_in_editor" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\animation_role_ext" List.ItemID="1728164028" List.ParentItemID="1728164028">
+				<instance_reference name="default_role" value="animation_role\civilian\s_male_civilian_kneeling_digging_a" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="-417892628" List.ListAction="Append">
+				<instance_reference name="hit_material" value="hit_material\human" />
+				<float name="hit_chance" value="1" />
+				<template_reference name="projectile_reflect_option" value="options\none">
+				</template_reference>
+				<enum name="projectile_collision_check_type" value="main_simbox_only" />
+				<group name="shot_collision">
+					<enum_table name="pass_through_relation">
+						<bool name="undefined" value="False" />
+						<bool name="enemy" value="False" />
+						<bool name="ally" value="True" />
+						<bool name="neutral" value="False" />
+					</enum_table>
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_artillery" value="True" />
+						<bool name="tp_collide" value="False" />
+						<bool name="tp_vehicle_collide" value="True" />
+						<bool name="tp_piercing_blockers_only" value="True" />
+						<bool name="tp_throw" value="True" />
+					</enum_table>
+					<bool name="pass_through_weapon_ranged_non_projectile" value="False" />
+					<bool name="collide_with_missed_ranged_weapon_shots" value="False" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_react_tree_ext" List.ItemID="407427292" List.ListAction="Append">
+				<state_tree_node name="ActionTree_OpeningBranch" value="hit_infantry" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2081309" />
+		<instance_reference name="parent_pbg" value="ebps\races\npc\civilian\civilian_parent" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-91778333" List.ParentItemID="-91778333">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\npc\italian\male_urban" overrideParent="True" />
+				<bool name="browsable_in_editor" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\animation_role_ext" List.ItemID="1728164028" List.ParentItemID="1728164028">
+				<instance_reference name="default_role" value="animation_role\civilian\s_male_civilian_kneeling_digging_a" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="-417892628" List.ListAction="Append">
+				<instance_reference name="hit_material" value="hit_material\human" />
+				<float name="hit_chance" value="1" />
+				<template_reference name="projectile_reflect_option" value="options\none">
+				</template_reference>
+				<enum name="projectile_collision_check_type" value="main_simbox_only" />
+				<group name="shot_collision">
+					<enum_table name="pass_through_relation">
+						<bool name="undefined" value="False" />
+						<bool name="enemy" value="False" />
+						<bool name="ally" value="True" />
+						<bool name="neutral" value="False" />
+					</enum_table>
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_artillery" value="True" />
+						<bool name="tp_collide" value="False" />
+						<bool name="tp_vehicle_collide" value="True" />
+						<bool name="tp_piercing_blockers_only" value="True" />
+						<bool name="tp_throw" value="True" />
+					</enum_table>
+					<bool name="pass_through_weapon_ranged_non_projectile" value="False" />
+					<bool name="collide_with_missed_ranged_weapon_shots" value="False" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_react_tree_ext" List.ItemID="407427292" List.ListAction="Append">
+				<state_tree_node name="ActionTree_OpeningBranch" value="hit_infantry" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2081309" />
+		<instance_reference name="parent_pbg" value="ebps\races\npc\civilian\civilian_parent" />
+	</variant>
+</instance>

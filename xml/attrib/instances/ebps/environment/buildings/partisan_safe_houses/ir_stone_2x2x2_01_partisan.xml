@@ -1,0 +1,76 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="110748599" List.ParentItemID="110748599">
+				<locstring name="screen_name" value="11229204" overrideParent="True" />
+				<enum name="selection_method" value="mesh" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="723547312" List.ParentItemID="723547312">
+				<bool name="always_revealed_in_fow" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="225666127" List.ParentItemID="225666127">
+				<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\field_support_ext" List.ItemID="682517118" List.ParentItemID="682517118">
+				<string name="production_style_key" value="partisan" overrideParent="True" />
+				<list name="added_abilities_on_convert" removedIds="1572390501">
+					<instance_reference name="ability" value="abilities\races\american\buildings\withdraw_infantry_partisan" overrideParent="True" List.ItemID="-2133847357" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ability_ext" List.ItemID="1432672529" List.ParentItemID="1432672529">
+				<list name="abilities" removedIds="152775825">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\upgrade_ext" List.ItemID="434487496" List.ListAction="Append">
+				<bool name="must_be_in_supply" value="True" />
+				<float name="number_of_standard_slots" value="-1" />
+				<list name="standard_upgrades">
+					<instance_reference name="upgrade" value="upgrade\american\research\partisan\stolen_weapons_partisan" List.ItemID="588682447" />
+					<instance_reference name="upgrade" value="upgrade\american\research\partisan\pillage_partisan" List.ItemID="829758517" />
+				</list>
+				<int name="max_queue_size_override" value="-1" />
+				<state_tree_node name="production_item_completed_openingbranch" value="" />
+				<bool name="shared_team_production" value="False" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2058272" />
+		<instance_reference name="parent_pbg" value="ebps\environment\buildings\italian_rural\ir_stone_2x2x2_01" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="110748599" List.ParentItemID="110748599">
+				<locstring name="screen_name" value="11229204" overrideParent="True" />
+				<enum name="selection_method" value="mesh" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="723547312" List.ParentItemID="723547312">
+				<bool name="always_revealed_in_fow" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="225666127" List.ParentItemID="225666127">
+				<instance_reference name="hit_material" value="hit_material\stone" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\field_support_ext" List.ItemID="682517118" List.ParentItemID="682517118">
+				<string name="production_style_key" value="partisan" overrideParent="True" />
+				<list name="added_abilities_on_convert" removedIds="1572390501">
+					<instance_reference name="ability" value="abilities\races\american\buildings\withdraw_infantry_partisan" overrideParent="True" List.ItemID="-2133847357" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ability_ext" List.ItemID="1432672529" List.ParentItemID="1432672529">
+				<list name="abilities" removedIds="152775825">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\upgrade_ext" List.ItemID="434487496" List.ListAction="Append">
+				<bool name="must_be_in_supply" value="True" />
+				<float name="number_of_standard_slots" value="-1" />
+				<list name="standard_upgrades">
+					<instance_reference name="upgrade" value="upgrade\american\research\partisan\stolen_weapons_partisan" List.ItemID="588682447" />
+					<instance_reference name="upgrade" value="upgrade\american\research\partisan\pillage_partisan" List.ItemID="829758517" />
+				</list>
+				<int name="max_queue_size_override" value="-1" />
+				<state_tree_node name="production_item_completed_openingbranch" value="" />
+				<bool name="shared_team_production" value="False" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2058272" />
+		<instance_reference name="parent_pbg" value="ebps\environment\buildings\italian_rural\ir_stone_2x2x2_01" />
+	</variant>
+</instance>

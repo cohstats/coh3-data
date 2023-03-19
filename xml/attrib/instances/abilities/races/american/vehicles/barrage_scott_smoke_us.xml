@@ -1,0 +1,46 @@
+<instance version="5" description="" template="abilities">
+	<variant name="default">
+		<group name="ability_bag">
+			<float name="range" value="50" comment="Must be lower than weapon range or ability breaks." overrideParent="True" />
+			<enum name="shared_timer" value="" overrideParent="True" />
+			<group name="ui_info">
+				<locstring name="extra_text" value="11239526" overrideParent="True" />
+				<locstring name="help_text" value="11241183" overrideParent="True" />
+				<file name="icon_name" value="races\common\abilities\artillery_barrage_smoke" overrideParent="True" />
+				<locstring name="screen_name" value="11155178" overrideParent="True" />
+			</group>
+			<group name="ui_position">
+				<int name="ui_position_column" value="2" overrideParent="True" />
+			</group>
+			<instance_reference name="ui_reticule" value="ui_reticule\ability_reticule_barrage_smoke" overrideParent="True" />
+			<float name="ui_reticule_radius_min" value="5" overrideParent="True" />
+			<float name="ui_reticule_radius_max" value="5" overrideParent="True" />
+			<state_tree_node name="entity_tree" value="smoke_barrage_scott_us" overrideParent="True" />
+			<state_tree_node name="statetree_node_prereq_self_requirement" value="ability_requirement_queries\inactive_ability_requirements\us_scott_75mm" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="197111" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\vehicles\concurrent_vehicle_barrage_smoke_parent" />
+	</variant>
+	<variant name="sp">
+		<group name="ability_bag">
+			<float name="range" value="50" comment="Must be lower than weapon range or ability breaks." overrideParent="True" />
+			<enum name="shared_timer" value="" overrideParent="True" />
+			<group name="ui_info">
+				<locstring name="extra_text" value="11239526" overrideParent="True" />
+				<locstring name="help_text" value="11241183" overrideParent="True" />
+				<file name="icon_name" value="races\common\abilities\artillery_barrage_smoke" overrideParent="True" />
+				<locstring name="screen_name" value="11155178" overrideParent="True" />
+			</group>
+			<group name="ui_position">
+				<int name="ui_position_column" value="2" overrideParent="True" />
+			</group>
+			<instance_reference name="ui_reticule" value="ui_reticule\ability_reticule_barrage_smoke" overrideParent="True" />
+			<float name="ui_reticule_radius_min" value="5" overrideParent="True" />
+			<float name="ui_reticule_radius_max" value="5" overrideParent="True" />
+			<state_tree_node name="entity_tree" value="sp_smoke_barrage_scott_us" overrideParent="True" />
+			<state_tree_node name="statetree_node_prereq_self_requirement" value="ability_requirement_queries\inactive_ability_requirements\us_scott_75mm" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="197111" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\vehicles\concurrent_vehicle_barrage_smoke_parent" />
+	</variant>
+</instance>

@@ -1,0 +1,64 @@
+<instance version="5" description="" template="abilities">
+	<variant name="default">
+		<group name="ability_bag">
+			<group name="ui_cursor">
+				<string name="cursor_good" value="modal_ability" overrideParent="True" />
+				<string name="cursor_nonmodal_good" value="" overrideParent="True" />
+			</group>
+			<group name="ui_info">
+				<locstring name="extra_text" value="11239849" overrideParent="True" />
+				<locstring name="help_text" value="11241453" overrideParent="True" />
+				<file name="icon_name" value="common\abilities\dev\cmap_deploy_strategic_bombing_run_b25" overrideParent="True" />
+			</group>
+			<list name="requirements">
+				<template_reference name="required" value="requirements\required_race" List.ItemID="1703009058" List.ParentItemID="1703009058">
+					<instance_reference name="race" value="racebps\germans_campaign" overrideParent="True" />
+				</template_reference>
+			</list>
+			<instance_reference name="ui_reticule" value="ui_reticule\cmap_ability_reticule_default" overrideParent="True" />
+			<float name="ui_reticule_radius_min" value="6" overrideParent="True" />
+			<float name="ui_reticule_radius_max" value="6" overrideParent="True" />
+			<enum name="pending_ability_out_of_range_behaviour" value="chase" overrideParent="True" />
+			<bool name="can_be_interrupted" value="True" overrideParent="True" />
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_squad_tree" value="cmap_aircraft_deploy_ger\deploy_bombing_run_ger" overrideParent="True" />
+			</group>
+			<bool name="can_move_to_cast" value="True" overrideParent="True" />
+			<bool name="show_damage_preview" value="False" overrideParent="True" />
+			<float name="min_range" value="20" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2044364" />
+		<instance_reference name="parent_pbg" value="abilities\races\american\campaign\aircraft\cmap_deploy_bombing_run_us" />
+	</variant>
+	<variant name="sp">
+		<group name="ability_bag">
+			<group name="ui_cursor">
+				<string name="cursor_good" value="modal_ability" overrideParent="True" />
+				<string name="cursor_nonmodal_good" value="" overrideParent="True" />
+			</group>
+			<group name="ui_info">
+				<locstring name="extra_text" value="11239849" overrideParent="True" />
+				<locstring name="help_text" value="11241453" overrideParent="True" />
+				<file name="icon_name" value="common\abilities\dev\cmap_deploy_strategic_bombing_run_b25" overrideParent="True" />
+			</group>
+			<list name="requirements">
+				<template_reference name="required" value="requirements\required_race" List.ItemID="1703009058" List.ParentItemID="1703009058">
+					<instance_reference name="race" value="racebps\germans_campaign" overrideParent="True" />
+				</template_reference>
+			</list>
+			<instance_reference name="ui_reticule" value="ui_reticule\cmap_ability_reticule_default" overrideParent="True" />
+			<float name="ui_reticule_radius_min" value="6" overrideParent="True" />
+			<float name="ui_reticule_radius_max" value="6" overrideParent="True" />
+			<enum name="pending_ability_out_of_range_behaviour" value="chase" overrideParent="True" />
+			<bool name="can_be_interrupted" value="True" overrideParent="True" />
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_squad_tree" value="cmap_aircraft_deploy_ger\deploy_bombing_run_ger" overrideParent="True" />
+			</group>
+			<bool name="can_move_to_cast" value="True" overrideParent="True" />
+			<bool name="show_damage_preview" value="False" overrideParent="True" />
+			<float name="min_range" value="20" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="2044364" />
+		<instance_reference name="parent_pbg" value="abilities\races\american\campaign\aircraft\cmap_deploy_bombing_run_us" />
+	</variant>
+</instance>

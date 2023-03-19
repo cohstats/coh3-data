@@ -1,0 +1,254 @@
+<instance version="5" description="Recrewable Sherman" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="433366582" List.ParentItemID="433366582">
+				<template_reference name="armor_layout_option" value="options\ebpextensions\healthext\armor_layouts\armor_layout_front_rear_side">
+					<float name="rear_armor" value="80" overrideParent="True" />
+					<float name="side_armor" value="110" overrideParent="True" />
+					<float name="front_armor" value="195" overrideParent="True" />
+				</template_reference>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sight_ext" List.ItemID="-64524548" List.ParentItemID="-64524548">
+				<group name="vertical_truesight">
+					<float name="eye_height" value="3" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-1350927259" List.ParentItemID="-1350927259">
+				<locstring name="help_text" value="11153568" overrideParent="True" />
+				<locstring name="screen_name" value="11226379" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hold_ext" List.ItemID="-977656570" List.ParentItemID="-977656570">
+				<float name="unload_seconds_total" value="3" overrideParent="True" />
+				<float name="unload_seconds_per_entity" value="0" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\recrewable_ext" List.ItemID="-418586549" List.ListAction="Append">
+				<list name="race_list" overrideParent="True">
+					<group name="race_data" List.ItemID="989817326">
+						<instance_reference name="ext_key" value="" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\american\vehicles\sherman_recrewable_us" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="3" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-1746686713">
+						<instance_reference name="ext_key" value="racebps\afrika_korps" overrideParent="True" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\american\vehicles\sherman_recrewable_us" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="3" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="1823488294">
+						<instance_reference name="ext_key" value="racebps\americans" overrideParent="True" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\american\vehicles\sherman_recrewable_us" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="3" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="1957453453">
+						<instance_reference name="ext_key" value="racebps\british" overrideParent="True" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\american\vehicles\sherman_recrewable_us" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="3" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="368819692">
+						<instance_reference name="ext_key" value="racebps\germans" overrideParent="True" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\american\vehicles\sherman_recrewable_us" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="3" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="1797895375">
+						<instance_reference name="ext_key" value="racebps\partisan" overrideParent="True" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\american\vehicles\greyhound_recrewable_us" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="3" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2072110" />
+		<instance_reference name="parent_pbg" value="ebps\races\american\vehicles\sherman_us" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="433366582" List.ParentItemID="433366582">
+				<template_reference name="armor_layout_option" value="options\ebpextensions\healthext\armor_layouts\armor_layout_front_rear_side">
+					<float name="rear_armor" value="80" overrideParent="True" />
+					<float name="side_armor" value="110" overrideParent="True" />
+					<float name="front_armor" value="195" overrideParent="True" />
+				</template_reference>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sight_ext" List.ItemID="-64524548" List.ParentItemID="-64524548">
+				<group name="vertical_truesight">
+					<float name="eye_height" value="3" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-1350927259" List.ParentItemID="-1350927259">
+				<locstring name="help_text" value="11153568" overrideParent="True" />
+				<locstring name="screen_name" value="11226379" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hold_ext" List.ItemID="-977656570" List.ParentItemID="-977656570">
+				<float name="unload_seconds_total" value="3" overrideParent="True" />
+				<float name="unload_seconds_per_entity" value="0" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\recrewable_ext" List.ItemID="-418586549" List.ListAction="Append">
+				<list name="race_list" overrideParent="True">
+					<group name="race_data" List.ItemID="989817326">
+						<instance_reference name="ext_key" value="" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\american\vehicles\sherman_recrewable_us" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="3" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="-1746686713">
+						<instance_reference name="ext_key" value="racebps\afrika_korps" overrideParent="True" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\american\vehicles\sherman_recrewable_us" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="3" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="1823488294">
+						<instance_reference name="ext_key" value="racebps\americans" overrideParent="True" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\american\vehicles\sherman_recrewable_us" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="3" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="1957453453">
+						<instance_reference name="ext_key" value="racebps\british" overrideParent="True" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\american\vehicles\sherman_recrewable_us" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="3" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="368819692">
+						<instance_reference name="ext_key" value="racebps\germans" overrideParent="True" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\american\vehicles\sherman_recrewable_us" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="3" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+					<group name="race_data" List.ItemID="1797895375">
+						<instance_reference name="ext_key" value="racebps\partisan" overrideParent="True" />
+						<group name="info">
+							<instance_reference name="capture_squad_blueprint" value="sbps\races\american\vehicles\greyhound_recrewable_us" overrideParent="True" />
+							<float name="max_capture_crew_size" value="3" overrideParent="True" />
+							<float name="min_capture_crew_size" value="3" overrideParent="True" />
+							<float name="abandon_animation_seconds" value="0" />
+							<int name="recrew_max_squad_size" value="1" />
+							<bool name="abandoned_allows_pass_through" value="False" />
+							<float name="driver_death_chance_on_entity_death" value="1" />
+							<instance_reference name="driver_squad_blueprint" value="" />
+							<bool name="hide_selection_visual_when_crewed" value="False" />
+							<instance_reference name="reinforce_entity_blueprint" value="" />
+							<bool name="is_abandoned_on_spawn" value="True" overrideParent="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2072110" />
+		<instance_reference name="parent_pbg" value="ebps\races\american\vehicles\sherman_us" />
+	</variant>
+</instance>

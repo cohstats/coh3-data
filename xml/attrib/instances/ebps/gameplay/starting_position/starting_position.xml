@@ -1,0 +1,192 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-470561252">
+				<file name="alternate_sua" value="" />
+				<bool name="always_revealed_in_fow" value="False" />
+				<bool name="is_visible_in_game" value="False" />
+				<int name="precise_size" value="-1" />
+				<enum name="default_spawn_type" value="" />
+				<instance_reference name="unit_badge" value="" />
+				<bool name="is_spawned_when_not_in_interactive_area" value="True" />
+				<bool name="is_wreck" value="False" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\american\buildings\hq_us" />
+				<float name="animator_scale" value="100" />
+				<bool name="browsable_in_editor" value="True" />
+				<float name="entity_scale" value="100" />
+				<enum name="subclass_type" value="Generic" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_entity_ext" List.ItemID="1052355795">
+				<float name="rotate_snap" value="360" />
+				<bool name="kill_paradrop" value="False" />
+				<enum name="transferable" value="None" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\starting_marker_ext" List.ItemID="-1511497391">
+				<bool name="player_starting_position" value="True" />
+				<string name="key" value="default" />
+				<list name="starting_buildings">
+					<group name="starting_building" List.ItemID="-1511902428">
+						<instance_reference name="building" value="ebps\races\american\buildings\production\hq_us" />
+						<list name="starting_squads">
+						</list>
+						<instance_reference name="race" value="racebps\americans" />
+						<list name="player_upgrades">
+						</list>
+					</group>
+					<group name="starting_building" List.ItemID="-424137406">
+						<instance_reference name="building" value="ebps\races\german\buildings\production\hq_ger" />
+						<list name="starting_squads">
+						</list>
+						<instance_reference name="race" value="racebps\germans" />
+						<list name="player_upgrades">
+						</list>
+					</group>
+					<group name="starting_building" List.ItemID="1400773158">
+						<instance_reference name="building" value="ebps\races\american\buildings\production\hq_us" />
+						<list name="starting_squads">
+						</list>
+						<instance_reference name="race" value="racebps\americans_campaign" />
+						<list name="player_upgrades">
+						</list>
+					</group>
+					<group name="starting_building" List.ItemID="1492354229">
+						<instance_reference name="building" value="ebps\races\british\buildings\production\hq_uk" />
+						<list name="starting_squads">
+						</list>
+						<instance_reference name="race" value="racebps\british" />
+						<list name="player_upgrades">
+						</list>
+					</group>
+				</list>
+				<list name="spawn_building_requirements">
+				</list>
+				<bool name="show_in_multiplayer_map_preview" value="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\territory_ext" List.ItemID="18404119">
+				<bool name="command_provider" value="False" />
+				<bool name="default_on" value="False" />
+				<bool name="secures_territory_sector" value="False" />
+				<enum name="sector_entity_type" value="sector_independent" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\site_ext" List.ItemID="2047693656">
+				<float name="extra_build_test_footprint_x" value="0" />
+				<bool name="snap_to_terrain" value="True" />
+				<bool name="lock_to_impass" value="True" />
+				<float name="extra_build_test_footprint_z" value="0" />
+				<float name="extra_build_test_footprint_offset_x" value="0" />
+				<float name="extra_build_test_footprint_offset_z" value="0" />
+				<float name="minimum_build_test_footprint_x" value="0" />
+				<float name="minimum_build_test_footprint_z" value="0" />
+				<enum name="impass_cell_check" value="OneCellFree" />
+				<group name="footprint_scale">
+					<float name="x" value="0" />
+					<float name="y" value="0" />
+				</group>
+				<bool name="forced_axis_aligned_footprint" value="False" />
+				<bool name="remove_if_constructed_over" value="False" />
+				<list name="snap_to_surface_types">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\supply_ext" List.ItemID="-667152380">
+				<bool name="default_on" value="False" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="1301" />
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-470561252">
+				<file name="alternate_sua" value="" />
+				<bool name="always_revealed_in_fow" value="False" />
+				<bool name="is_visible_in_game" value="False" />
+				<int name="precise_size" value="-1" />
+				<enum name="default_spawn_type" value="" />
+				<instance_reference name="unit_badge" value="" />
+				<bool name="is_spawned_when_not_in_interactive_area" value="True" />
+				<bool name="is_wreck" value="False" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\american\buildings\hq_us" />
+				<float name="animator_scale" value="100" />
+				<bool name="browsable_in_editor" value="True" />
+				<float name="entity_scale" value="100" />
+				<enum name="subclass_type" value="Generic" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_entity_ext" List.ItemID="1052355795">
+				<float name="rotate_snap" value="360" />
+				<bool name="kill_paradrop" value="False" />
+				<enum name="transferable" value="None" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\starting_marker_ext" List.ItemID="-1511497391">
+				<bool name="player_starting_position" value="True" />
+				<string name="key" value="default" />
+				<list name="starting_buildings">
+					<group name="starting_building" List.ItemID="-1511902428">
+						<instance_reference name="building" value="ebps\races\american\buildings\production\hq_us" />
+						<list name="starting_squads">
+						</list>
+						<instance_reference name="race" value="racebps\americans" />
+						<list name="player_upgrades">
+						</list>
+					</group>
+					<group name="starting_building" List.ItemID="-424137406">
+						<instance_reference name="building" value="ebps\races\german\buildings\production\hq_ger" />
+						<list name="starting_squads">
+						</list>
+						<instance_reference name="race" value="racebps\germans" />
+						<list name="player_upgrades">
+						</list>
+					</group>
+					<group name="starting_building" List.ItemID="1400773158">
+						<instance_reference name="building" value="ebps\races\american\buildings\production\hq_us" />
+						<list name="starting_squads">
+						</list>
+						<instance_reference name="race" value="racebps\americans_campaign" />
+						<list name="player_upgrades">
+						</list>
+					</group>
+					<group name="starting_building" List.ItemID="1492354229">
+						<instance_reference name="building" value="ebps\races\british\buildings\production\hq_uk" />
+						<list name="starting_squads">
+						</list>
+						<instance_reference name="race" value="racebps\british" />
+						<list name="player_upgrades">
+						</list>
+					</group>
+				</list>
+				<list name="spawn_building_requirements">
+				</list>
+				<bool name="show_in_multiplayer_map_preview" value="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\territory_ext" List.ItemID="18404119">
+				<bool name="command_provider" value="False" />
+				<bool name="default_on" value="False" />
+				<bool name="secures_territory_sector" value="False" />
+				<enum name="sector_entity_type" value="sector_independent" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\site_ext" List.ItemID="2047693656">
+				<float name="extra_build_test_footprint_x" value="0" />
+				<bool name="snap_to_terrain" value="True" />
+				<bool name="lock_to_impass" value="True" />
+				<float name="extra_build_test_footprint_z" value="0" />
+				<float name="extra_build_test_footprint_offset_x" value="0" />
+				<float name="extra_build_test_footprint_offset_z" value="0" />
+				<float name="minimum_build_test_footprint_x" value="0" />
+				<float name="minimum_build_test_footprint_z" value="0" />
+				<enum name="impass_cell_check" value="OneCellFree" />
+				<group name="footprint_scale">
+					<float name="x" value="0" />
+					<float name="y" value="0" />
+				</group>
+				<bool name="forced_axis_aligned_footprint" value="False" />
+				<bool name="remove_if_constructed_over" value="False" />
+				<list name="snap_to_surface_types">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\supply_ext" List.ItemID="-667152380">
+				<bool name="default_on" value="False" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="1301" />
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+</instance>

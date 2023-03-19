@@ -1,0 +1,76 @@
+<instance version="5" description="" template="weapon">
+	<variant name="default">
+		<group name="weapon_bag">
+			<group name="damage">
+				<enum name="damage_type" value="explosive" overrideParent="True" />
+			</group>
+			<string name="fx_munition_name" value="\artillery\artillery_small" overrideParent="True" />
+			<group name="height_bonuses">
+				<group name="height_advantage">
+					<float name="height_threshold" value="3.5" overrideParent="True" />
+				</group>
+			</group>
+			<group name="suppressed">
+				<float name="pinned_burst_multiplier" value="1" overrideParent="True" />
+				<float name="pinned_cooldown_multiplier" value="1" overrideParent="True" />
+				<float name="pinned_reload_multiplier" value="1" overrideParent="True" />
+				<float name="suppressed_burst_multiplier" value="1" overrideParent="True" />
+				<float name="suppressed_cooldown_multiplier" value="1" overrideParent="True" />
+				<float name="suppressed_reload_multiplier" value="1" overrideParent="True" />
+			</group>
+			<group name="suppression">
+				<group name="target_pinned_multipliers">
+					<float name="accuracy_multiplier" value="0.25" overrideParent="True" />
+					<float name="damage_multiplier" value="1" overrideParent="True" />
+					<float name="penetration_multiplier" value="1" overrideParent="True" />
+					<float name="suppression_multiplier" value="0.1" overrideParent="True" />
+				</group>
+				<group name="target_suppressed_multipliers">
+					<float name="accuracy_multiplier" value="0.5" overrideParent="True" />
+					<float name="damage_multiplier" value="1" overrideParent="True" />
+					<float name="penetration_multiplier" value="1" overrideParent="True" />
+					<float name="suppression_multiplier" value="0.5" overrideParent="True" />
+				</group>
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="269816" />
+		<instance_reference name="parent_pbg" value="weapon\common\preroll_destruction\explode_area_small" />
+	</variant>
+	<variant name="sp">
+		<group name="weapon_bag">
+			<group name="damage">
+				<enum name="damage_type" value="explosive" overrideParent="True" />
+			</group>
+			<string name="fx_munition_name" value="\artillery\artillery_small" overrideParent="True" />
+			<group name="height_bonuses">
+				<group name="height_advantage">
+					<float name="height_threshold" value="3.5" overrideParent="True" />
+				</group>
+			</group>
+			<group name="suppressed">
+				<float name="pinned_burst_multiplier" value="1" overrideParent="True" />
+				<float name="pinned_cooldown_multiplier" value="1" overrideParent="True" />
+				<float name="pinned_reload_multiplier" value="1" overrideParent="True" />
+				<float name="suppressed_burst_multiplier" value="1" overrideParent="True" />
+				<float name="suppressed_cooldown_multiplier" value="1" overrideParent="True" />
+				<float name="suppressed_reload_multiplier" value="1" overrideParent="True" />
+			</group>
+			<group name="suppression">
+				<group name="target_pinned_multipliers">
+					<float name="accuracy_multiplier" value="0.25" overrideParent="True" />
+					<float name="damage_multiplier" value="1" overrideParent="True" />
+					<float name="penetration_multiplier" value="1" overrideParent="True" />
+					<float name="suppression_multiplier" value="0.1" overrideParent="True" />
+				</group>
+				<group name="target_suppressed_multipliers">
+					<float name="accuracy_multiplier" value="0.5" overrideParent="True" />
+					<float name="damage_multiplier" value="1" overrideParent="True" />
+					<float name="penetration_multiplier" value="1" overrideParent="True" />
+					<float name="suppression_multiplier" value="0.5" overrideParent="True" />
+				</group>
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="269816" />
+		<instance_reference name="parent_pbg" value="weapon\common\preroll_destruction\explode_area_small" />
+	</variant>
+</instance>

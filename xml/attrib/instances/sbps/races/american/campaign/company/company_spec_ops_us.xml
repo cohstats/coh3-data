@@ -1,0 +1,1550 @@
+<instance version="5" description="" template="sbps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="squadexts" value="sbpextensions\squad_ability_ext" List.ItemID="1757346470">
+				<list name="abilities">
+					<instance_reference name="ability" value="abilities\campaign\company\cmap_ability_company_dummy" comment="This prevents the Combat Support Ability form always displaying its range." List.ItemID="-973918817" />
+					<instance_reference name="ability" value="abilities\campaign\company\navy_spawn_company_setup" List.ItemID="1145103086" />
+					<instance_reference name="ability" value="abilities\campaign\company\cmap_navy_transport" List.ItemID="-2053251207" />
+					<instance_reference name="ability" value="abilities\campaign\company\cmap_navy_deploy" List.ItemID="-781238935" />
+					<instance_reference name="ability" value="abilities\campaign\company\cmap_ability_company_capture" List.ItemID="483620432" />
+					<instance_reference name="ability" value="abilities\campaign\company\cmap_ability_company_repair_target" comment="Engineer Detachment Unlock" List.ItemID="2045509240" />
+					<instance_reference name="ability" value="abilities\campaign\company\cmap_ability_company_heal_target" comment="Medic Detachment Unlock" List.ItemID="-2025799285" />
+					<instance_reference name="ability" value="abilities\races\american\campaign\company\cmap_company_construct_supply_cache_us" comment="Logistics Detachment Unlock" List.ItemID="-1988310417" />
+					<instance_reference name="ability" value="abilities\races\american\campaign\company\cmap_company_construct_howitzer_emplacement_us" comment="Howitzer Detachment Unlock" List.ItemID="-507973309" />
+					<instance_reference name="ability" value="abilities\races\american\campaign\company\cmap_company_combat_support_us_spec_ops" List.ItemID="962486360" />
+					<instance_reference name="ability" value="abilities\campaign\company\cmap_ability_company_heal_target_improved" List.ItemID="1442798769" />
+					<instance_reference name="ability" value="abilities\races\american\campaign\company\cmap_ability_company_encircle_target_us" List.ItemID="295546446" />
+					<instance_reference name="ability" value="abilities\campaign\company\cmap_stance_1" List.ItemID="488083310" />
+					<instance_reference name="ability" value="abilities\campaign\company\cmap_stance_2" List.ItemID="-1104340715" />
+				</list>
+				<int name="ui_combine_priority" value="0" />
+				<group name="squad_orders">
+					<group name="abandon_team_weapon">
+						<bool name="available" value="False" />
+					</group>
+					<group name="attack_ground">
+						<bool name="available" value="False" />
+					</group>
+					<group name="attack_move">
+						<bool name="available" value="False" />
+					</group>
+					<group name="cancel_construction">
+						<bool name="available" value="False" />
+					</group>
+					<group name="hold_fire_off">
+						<bool name="available" value="False" />
+					</group>
+					<group name="hold_fire_on">
+						<bool name="available" value="False" />
+					</group>
+					<group name="load">
+						<bool name="available" value="False" />
+						<bool name="default_issuable" value="True" />
+					</group>
+					<group name="move">
+						<bool name="available" value="False" />
+						<bool name="default_issuable" value="True" />
+					</group>
+					<group name="pickup_item">
+						<bool name="available" value="False" />
+						<bool name="default_issuable" value="True" />
+					</group>
+					<group name="plant_demolitions">
+						<bool name="available" value="False" />
+					</group>
+					<group name="prefer_melee">
+						<bool name="available" value="False" />
+					</group>
+					<group name="prefer_ranged">
+						<bool name="available" value="False" />
+					</group>
+					<group name="retire">
+						<bool name="available" value="False" />
+					</group>
+					<group name="retreat">
+						<bool name="available" value="False" />
+					</group>
+					<group name="reverse_move">
+						<bool name="available" value="False" />
+					</group>
+					<group name="stop">
+						<bool name="available" value="False" />
+					</group>
+					<group name="trade">
+						<bool name="available" value="False" />
+					</group>
+					<group name="unload">
+						<bool name="available" value="True" />
+						<bool name="default_issuable" value="True" />
+					</group>
+					<group name="unload_here">
+						<bool name="available" value="False" />
+					</group>
+					<group name="vault">
+						<bool name="available" value="False" />
+					</group>
+					<group name="hold_position">
+						<bool name="available" value="False" />
+					</group>
+				</group>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_action_apply_ext" List.ItemID="575711558">
+				<list name="action_state_trees">
+					<group name="container" List.ItemID="1824575124">
+						<state_tree_node name="state_tree" value="campaign_faction_trait_selection\random_number" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_attention_ext" List.ItemID="755202293">
+				<float name="search_radius" value="35" />
+				<bool name="spot_enemy_activity" value="False" />
+				<float name="last_seen_reset_delay_secs" value="20" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_can_defuse_charges_ext" List.ItemID="-329520170">
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_capture_strategic_point_ext" List.ItemID="-1377522728">
+				<float name="capture_distance" value="4" />
+				<float name="capture_rate_multiplier" value="1" />
+				<float name="revert_rate_multiplier" value="1" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_combat_behaviour_ext" List.ItemID="-739887629">
+				<float name="heavy_weapon_setup_delay" value="999" />
+				<float name="reaction_delay_seconds" value="25" />
+				<float name="reveal_self_attacker_time" value="0" />
+				<bool name="reveal_self_attacker_time_use" value="False" />
+				<group name="suppression">
+					<bool name="can_be_suppressed" value="False" />
+					<float name="noncombat_delay" value="0" />
+					<float name="noncombat_recover_multiplier" value="0" />
+					<float name="pin_down_activate_threshold" value="0" />
+					<float name="pin_down_recover_threshold" value="0" />
+					<float name="recover_rate" value="0" />
+					<float name="suppressed_activate_threshold" value="0" />
+					<float name="suppressed_recover_threshold" value="0" />
+					<enum_table name="cover_info">
+						<template_reference name="tp_defcover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_heavy_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_light_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_negative_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_water_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_smoke_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_garrison_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_trench_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_road_light_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_road_heavy_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+					</enum_table>
+					<template_reference name="pin_down_activate_action_tree" value="state_tree_reference_info">
+						<state_tree_node name="ActionTree_OpeningBranch" value="" />
+					</template_reference>
+					<template_reference name="suppressed_activate_action_tree" value="state_tree_reference_info">
+						<state_tree_node name="ActionTree_OpeningBranch" value="" />
+					</template_reference>
+				</group>
+				<float name="reaction_combat_delay_seconds" value="30" />
+				<template_reference name="can_recrew_abandoned_option" value="options\sbpextensions\squad_combat_behaviour_ext\can_recrew_abandoned">
+					<template_reference name="is_mobile_driver_option" value="options\sbpextensions\squad_combat_behaviour_ext\is_mobile_driver">
+						<list name="abilities_to_bring">
+						</list>
+					</template_reference>
+				</template_reference>
+				<template_reference name="charge_option" value="options\none">
+				</template_reference>
+				<bool name="ranged_weapons_prefer_single_squad_target" value="True" />
+				<bool name="accept_move_commands_while_combat" value="False" />
+				<float name="reveal_defender_time" value="0" />
+				<bool name="reveal_defender_time_use" value="False" />
+				<instance_reference name="range_reticule" value="" />
+				<bool name="can_be_tied_up" value="False" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_combat_stance_ext" List.ItemID="250106319">
+				<enum name="default_stance" value="attack" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_formation_ext" List.ItemID="-1926246184">
+				<float name="combat_follower_cover_search_radius" value="0" />
+				<float name="move_dest_cover_search_radius" value="0" />
+				<group name="squad_distribution_table">
+					<group name="01_soldiers">
+						<float name="units_in_core" value="1" />
+						<float name="units_in_left_flank" value="0" />
+						<float name="units_in_right_flank" value="0" />
+						<float name="units_in_scout" value="0" />
+					</group>
+					<group name="02_soldiers">
+						<float name="units_in_core" value="2" />
+						<float name="units_in_left_flank" value="0" />
+						<float name="units_in_right_flank" value="0" />
+						<float name="units_in_scout" value="0" />
+					</group>
+					<group name="03_soldiers">
+						<float name="units_in_core" value="3" />
+						<float name="units_in_left_flank" value="0" />
+						<float name="units_in_right_flank" value="0" />
+						<float name="units_in_scout" value="0" />
+					</group>
+					<group name="04_soldiers">
+						<float name="units_in_core" value="4" />
+						<float name="units_in_left_flank" value="0" />
+						<float name="units_in_right_flank" value="0" />
+						<float name="units_in_scout" value="0" />
+					</group>
+					<group name="05_soldiers">
+						<float name="units_in_core" value="5" />
+						<float name="units_in_left_flank" value="0" />
+						<float name="units_in_right_flank" value="0" />
+						<float name="units_in_scout" value="0" />
+					</group>
+					<group name="06_soldiers">
+						<float name="units_in_core" value="6" />
+						<float name="units_in_left_flank" value="0" />
+						<float name="units_in_right_flank" value="0" />
+						<float name="units_in_scout" value="0" />
+					</group>
+					<group name="07_soldiers">
+						<float name="units_in_core" value="7" />
+						<float name="units_in_left_flank" value="0" />
+						<float name="units_in_right_flank" value="0" />
+						<float name="units_in_scout" value="0" />
+					</group>
+					<group name="08_soldiers">
+						<float name="units_in_core" value="8" />
+						<float name="units_in_left_flank" value="0" />
+						<float name="units_in_right_flank" value="0" />
+						<float name="units_in_scout" value="0" />
+					</group>
+					<group name="09_soldiers">
+						<float name="units_in_core" value="9" />
+						<float name="units_in_left_flank" value="0" />
+						<float name="units_in_right_flank" value="0" />
+						<float name="units_in_scout" value="0" />
+					</group>
+					<group name="10_soldiers">
+						<float name="units_in_core" value="10" />
+						<float name="units_in_left_flank" value="0" />
+						<float name="units_in_right_flank" value="0" />
+						<float name="units_in_scout" value="0" />
+					</group>
+				</group>
+				<bool name="support_weapons_to_flanks" value="False" />
+				<list name="formation_overrides">
+				</list>
+				<enum_table name="cover_formation_table">
+					<instance_reference name="tp_defcover" value="squad_formations\common\campaign_company_stationary_small" />
+					<instance_reference name="tp_heavy_cover" value="squad_formations\common\campaign_company_stationary_small" />
+					<instance_reference name="tp_light_cover" value="squad_formations\common\campaign_company_stationary_small" />
+					<instance_reference name="tp_negative_cover" value="squad_formations\common\campaign_company_stationary_small" />
+					<instance_reference name="tp_water_cover" value="squad_formations\common\campaign_company_stationary_small" />
+					<instance_reference name="tp_smoke_cover" value="squad_formations\common\campaign_company_stationary_small" />
+					<instance_reference name="tp_garrison_cover" value="squad_formations\common\campaign_company_stationary_small" />
+					<instance_reference name="tp_trench_cover" value="squad_formations\common\campaign_company_stationary_small" />
+					<instance_reference name="tp_road_light_cover" value="squad_formations\common\campaign_company_stationary_small" />
+					<instance_reference name="tp_road_heavy_cover" value="squad_formations\common\campaign_company_stationary_small" />
+				</enum_table>
+				<enum_table name="moving_cover_formation_override_table">
+					<instance_reference name="tp_defcover" value="squad_formations\common\campaign_company_mobile" />
+					<instance_reference name="tp_heavy_cover" value="squad_formations\common\campaign_company_mobile" />
+					<instance_reference name="tp_light_cover" value="squad_formations\common\campaign_company_mobile" />
+					<instance_reference name="tp_negative_cover" value="squad_formations\common\campaign_company_mobile" />
+					<instance_reference name="tp_water_cover" value="squad_formations\common\campaign_company_mobile" />
+					<instance_reference name="tp_smoke_cover" value="squad_formations\common\campaign_company_mobile" />
+					<instance_reference name="tp_garrison_cover" value="squad_formations\common\campaign_company_mobile" />
+					<instance_reference name="tp_trench_cover" value="squad_formations\common\campaign_company_mobile" />
+					<instance_reference name="tp_road_light_cover" value="squad_formations\common\campaign_company_mobile" />
+					<instance_reference name="tp_road_heavy_cover" value="squad_formations\common\campaign_company_mobile" />
+				</enum_table>
+				<float name="desired_protection_level_in_formation" value="0" />
+				<bool name="restrict_sight_leadership_to_core_element" value="True" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_loadout_ext" List.ItemID="2142626811">
+				<list name="unit_list">
+					<group name="loadout_data" List.ItemID="-657913460">
+						<float name="num" value="1" />
+						<instance_reference name="type" value="ebps\races\american\campaign\company\company_spec_ops_us" />
+						<list name="unit_attachments">
+						</list>
+						<bool name="is_default_unit" value="True" />
+					</group>
+					<group name="loadout_data" List.ItemID="-1440183379">
+						<float name="num" value="2" />
+						<instance_reference name="type" value="ebps\races\american\campaign\formation\formation_infantry_commando_us" />
+						<list name="unit_attachments">
+						</list>
+						<bool name="is_default_unit" value="False" />
+					</group>
+				</list>
+				<float name="squad_female_chance" value="0" />
+				<int name="extra_unit_index" value="0" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_modifier_ext" List.ItemID="-1245033541">
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_requirement_ext" List.ItemID="-1283681071">
+				<list name="requirement_table">
+					<template_reference name="required" value="requirements\required_race" List.ItemID="-1822037563">
+						<enum name="reason" value="usage_and_display" />
+						<locstring name="ui_name" value="0" />
+						<instance_reference name="race" value="racebps\americans_campaign" />
+					</template_reference>
+					<template_reference name="required" value="requirements\required_any_in_list" List.ItemID="1937892675">
+						<enum name="reason" value="usage" />
+						<locstring name="ui_name" value="11228806" />
+						<list name="requirements">
+							<template_reference name="requirement" value="requirements\required_player_upgrade" List.ItemID="1109772222">
+								<enum name="reason" value="usage" />
+								<locstring name="ui_name" value="11226521" />
+								<bool name="is_present" value="True" />
+								<int name="max_completed" value="100" />
+								<int name="min_completed" value="1" />
+								<instance_reference name="upgrade_name" value="upgrade\campaign\unlocks\cmap_unlock_company_spec_ops_us" />
+								<bool name="include_completed" value="True" />
+								<bool name="include_queued" value="False" />
+								<group name="include_pbg_parenting">
+									<bool name="include_child_pbgs" value="False" />
+									<bool name="include_parent_pbgs" value="False" />
+								</group>
+							</template_reference>
+							<template_reference name="requirement" value="requirements\required_statemodelbool" List.ItemID="-1347714042">
+								<locstring name="ui_name" value="0" />
+								<enum name="reason" value="usage" />
+								<enum name="key" value="campaign_tutorial_playthrough" />
+								<enum name="data_source_type" value="player_datasource" />
+								<bool name="default_value" value="False" />
+								<bool name="compare_to_value" value="True" />
+							</template_reference>
+						</list>
+					</template_reference>
+					<template_reference name="required" value="requirements\required_any_in_list" comment="Checking Producing Queue and Statemodel owned_companies for Battleship production." List.ItemID="-345262551">
+						<enum name="reason" value="usage" />
+						<locstring name="ui_name" value="0" />
+						<list name="requirements">
+							<template_reference name="requirement" value="requirements\required_all_in_list" List.ItemID="-658066573">
+								<enum name="reason" value="usage" />
+								<locstring name="ui_name" value="11216629" />
+								<list name="requirements">
+									<template_reference name="requirement" value="requirements\required_unit_type" List.ItemID="-148584975">
+										<enum name="reason" value="usage" />
+										<locstring name="ui_name" value="0" />
+										<enum name="unit_type" value="naval" />
+										<template_reference name="qualify_option" value="options\none">
+										</template_reference>
+										<bool name="search_load_out" value="False" />
+									</template_reference>
+									<template_reference name="requirement" value="requirements\required_statemodel_target_link_count" List.ItemID="-183984496">
+										<int name="compare_to_value" value="1" />
+										<enum name="comparison" value="less_than" />
+										<enum name="key" value="owned_companies" />
+										<enum name="data_source_type" value="squad_datasource" />
+										<enum name="reason" value="usage" />
+										<locstring name="ui_name" value="0" />
+									</template_reference>
+								</list>
+							</template_reference>
+							<template_reference name="requirement" value="requirements\required_unit_type" List.ItemID="-493513146">
+								<enum name="reason" value="usage" />
+								<locstring name="ui_name" value="0" />
+								<enum name="unit_type" value="seaport" />
+								<template_reference name="qualify_option" value="options\none">
+								</template_reference>
+								<bool name="search_load_out" value="False" />
+							</template_reference>
+						</list>
+					</template_reference>
+				</list>
+				<state_tree_node name="requirement_statetree" value="" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_retreat_ext" List.ItemID="411748054">
+				<list name="retreat_building_types">
+					<enum name="unit_type" value="hq" List.ItemID="1318375693" />
+				</list>
+				<bool name="withdraw_only" value="False" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_ui_ext" List.ItemID="764690770">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-893484591">
+						<group name="info">
+							<bool name="allow_spawner_production" value="False" />
+							<locstring name="extra_text" value="11158242" />
+							<locstring name="help_text" value="11246241" comment="italy_base_battleplans.scar references these LocIds to update the starting Company Selection Pop-up" />
+							<string name="hotkey_name" value="" />
+							<file name="icon_name" value="races\american\battlegroups\spec_ops_us" />
+							<bool name="minimap_team_only" value="True" />
+							<file name="minimap_texture" value="" />
+							<instance_reference name="modal_ability" value="" />
+							<bool name="reveal_for_decryption" value="False" />
+							<locstring name="screen_name" value="11241666" />
+							<string name="selection_group" value="company_special_forces" />
+							<int name="ui_priority" value="46" />
+							<bool name="use_random_entity_speaker" value="False" />
+							<file name="portrait_name" value="races\american\battlegroups\spec_ops_us_portrait" />
+							<float name="minimap_texture_scale" value="1" />
+							<locstring name="brief_text" value="11215585" />
+							<locstring name="screen_name_short" value="11225239" comment="italy_base_battleplans.scar references these LocIds to update the starting Company Selection Pop-up" />
+							<enum name="map_rotation_type_override" value="no_override" />
+							<bool name="show_in_build_log" value="True" />
+							<file name="symbol_icon_name" value="common\units\symbols\company_ssf" />
+							<string name="cover_level_icon_postfix" value="" />
+							<bool name="hide_ucs" value="False" />
+							<enum name="decorator_visibility" value="visible" />
+							<string name="debug_text" value="" />
+							<string name="selection_datatemplate" value="" />
+							<string name="tooltip_data_template" value="" />
+							<bool name="is_unique" value="False" />
+							<string name="decorator_data_template" value="" />
+							<enum name="ui_combine_type" value="intersection" />
+							<int name="global_unit_control_row" value="1" />
+							<instance_reference name="ui_decorator" value="" />
+							<bool name="decorator_show_reload_progress" value="False" />
+							<bool name="is_respawnable" value="False" />
+							<enum name="respawn_location" value="" />
+							<enum name="respawn_progress" value="" />
+							<enum name="respawn_time" value="" />
+							<locstring name="respawn_help" value="0" />
+							<enum name="respawn_unit_class" value="" />
+							<bool name="is_unique_to_race" value="False" />
+							<bool name="show_production" value="True" />
+							<string name="respawn_datatemplate" value="" />
+							<enum name="decorator" value="AnvilCampaignSquad" />
+							<int name="map_layer" value="-1" />
+							<enum name="map_mark" value="" />
+							<file name="flag_icon_override" value="talking_heads\flag_usa" />
+							<file name="extra_icon" value="" />
+							<group name="ui_codex_info">
+								<bool name="exclusive" value="False" />
+								<int name="priority" value="0" />
+								<group name="ui_position">
+									<int name="ui_position_column" value="-1" />
+									<int name="ui_position_row" value="-1" />
+								</group>
+							</group>
+							<template_reference name="extra_text_formatter" value="">
+							</template_reference>
+							<template_reference name="help_text_formatter" value="">
+							</template_reference>
+							<template_reference name="screen_name_formatter" value="">
+							</template_reference>
+							<template_reference name="screen_name_short_formatter" value="">
+							</template_reference>
+							<template_reference name="brief_text_formatter" value="">
+							</template_reference>
+							<enum name="screen_name_visibility" value="visible" />
+							<string name="sound" value="" />
+							<string name="sound_alternative" value="" />
+							<locstring name="extra_help_text" value="11215585" />
+							<group name="ui_armor_info">
+								<file name="armor_icon" value="" />
+								<list name="armor_critical_damage">
+								</list>
+							</group>
+						</group>
+						<instance_reference name="ext_key" value="" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_upgrade_apply_ext" List.ItemID="-1591401397">
+				<list name="upgrades">
+					<instance_reference name="upgrade" value="upgrade\american\campaign\company\special_operations\c_special_operations_company_us" comment="Don't delete this, needed for any airborne upgrade to function!" List.ItemID="-1814092215" />
+					<instance_reference name="upgrade" value="upgrade\campaign\missions\sp_generic_company_check" comment="Do not remove! Used to check if a mission / skirmish has started with a company or not!" List.ItemID="-1524578133" />
+					<instance_reference name="upgrade" value="upgrade\campaign\traits\unit_type\cmap_type_infantry" List.ItemID="-554781879" />
+					<instance_reference name="upgrade" value="upgrade\campaign\traits\company_traits\cmap_trait_special_forces_company" List.ItemID="1360577136" />
+					<instance_reference name="upgrade" value="upgrade\american\campaign\company\special_operations\core_unlocks\c_special_operations_weasel_core_us" List.ItemID="217145423" />
+					<instance_reference name="upgrade" value="upgrade\american\campaign\company\special_operations\core_unlocks\c_special_operations_devils_brigade_core_us" List.ItemID="944684684" />
+					<instance_reference name="upgrade" value="upgrade\american\campaign\company\special_operations\unit_unlocks\hq\c_special_operations_scout_unlock_us" List.ItemID="-1988151784" />
+					<instance_reference name="upgrade" value="upgrade\american\campaign\company\special_operations\unit_unlocks\hq\c_special_operations_engineers_unlock_us" List.ItemID="-1817405297" />
+					<instance_reference name="upgrade" value="upgrade\american\campaign\company\special_operations\unit_unlocks\hq\c_special_operations_captain_unlock_us" List.ItemID="-269710731" />
+					<instance_reference name="upgrade" value="upgrade\american\campaign\company\special_operations\unit_unlocks\barracks\c_special_operations_riflemen_unlock_us" List.ItemID="-1227443993" />
+					<instance_reference name="upgrade" value="upgrade\american\campaign\company\special_operations\unit_unlocks\wsc\c_special_operations_hmg_unlock_us" List.ItemID="638274679" />
+					<instance_reference name="upgrade" value="upgrade\american\campaign\company\special_operations\unit_unlocks\wsc\c_special_operations_halftrack_unlock_us" List.ItemID="539366611" />
+					<instance_reference name="upgrade" value="upgrade\american\campaign\company\special_operations\unit_unlocks\motorpool\c_special_operations_atgun_unlock_us" List.ItemID="110858630" />
+					<instance_reference name="upgrade" value="upgrade\american\campaign\company\special_operations\unit_unlocks\motorpool\c_special_operations_chaffee_unlock_us" List.ItemID="-1145906867" />
+					<instance_reference name="upgrade" value="upgrade\american\campaign\company\special_operations\unit_unlocks\tankdepot\c_special_operations_sherman_bulldozer_unlock_us" List.ItemID="-479165086" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_upgrade_ext" List.ItemID="-425456950">
+				<float name="number_of_slots" value="-1" />
+				<list name="upgrades">
+					<instance_reference name="upgrade" value="upgrade\campaign\stances\cmap_stance_1" List.ItemID="1599079342" />
+					<instance_reference name="upgrade" value="upgrade\campaign\stances\cmap_stance_2" List.ItemID="241347374" />
+					<instance_reference name="upgrade" value="upgrade\campaign\detachments\types\unlock_detachment_type_howitzer" List.ItemID="-230538039" />
+					<instance_reference name="upgrade" value="upgrade\campaign\detachments\types\unlock_detachment_type_rifle" List.ItemID="1183688982" />
+					<instance_reference name="upgrade" value="upgrade\campaign\detachments\types\unlock_detachment_type_logistics" List.ItemID="1187185291" />
+					<instance_reference name="upgrade" value="upgrade\campaign\detachments\slots\unlock_detachment_slot" List.ItemID="1678752105" />
+				</list>
+				<int name="max_queue_size_override" value="-1" />
+				<list name="tech_trees">
+					<instance_reference name="tech_tree" value="tech_tree\companies\races\american\special_operations_company\core_unlocks\special_operations_weasel_us" List.ItemID="2031660768" />
+					<instance_reference name="tech_tree" value="tech_tree\companies\races\american\special_operations_company\core_unlocks\special_operations_quad_halftrack_us" List.ItemID="2062481323" />
+					<instance_reference name="tech_tree" value="tech_tree\companies\races\american\special_operations_company\core_unlocks\special_operations_whizbang_us" List.ItemID="-383107094" />
+					<instance_reference name="tech_tree" value="tech_tree\companies\races\american\special_operations_company\core_unlocks\special_operations_devils_brigade_us" List.ItemID="-1110010602" />
+					<instance_reference name="tech_tree" value="tech_tree\companies\races\american\special_operations_company\core_unlocks\special_operations_raiding_flares_us" List.ItemID="-1177059618" />
+					<instance_reference name="tech_tree" value="tech_tree\companies\races\american\special_operations_company\core_unlocks\special_operations_white_phosphorus_barrage_us" List.ItemID="1295125761" />
+					<instance_reference name="tech_tree" value="tech_tree\companies\races\american\special_operations_company\passive_unlocks\spec_ops_passive_top_us" List.ItemID="1386415966" />
+					<instance_reference name="tech_tree" value="tech_tree\companies\races\american\special_operations_company\passive_unlocks\spec_ops_passive_middle_us" List.ItemID="435651865" />
+					<instance_reference name="tech_tree" value="tech_tree\companies\races\american\special_operations_company\passive_unlocks\spec_ops_passive_bottom_us" List.ItemID="1154547797" />
+					<instance_reference name="tech_tree" value="tech_tree\companies\races\american\special_operations_company\unit_unlocks\spec_ops_hq_us" List.ItemID="1765975876" />
+					<instance_reference name="tech_tree" value="tech_tree\companies\races\american\special_operations_company\unit_unlocks\spec_ops_barracks_us" List.ItemID="317024013" />
+					<instance_reference name="tech_tree" value="tech_tree\companies\races\american\special_operations_company\unit_unlocks\spec_ops_wsc_us" List.ItemID="-992927164" />
+					<instance_reference name="tech_tree" value="tech_tree\companies\races\american\special_operations_company\unit_unlocks\spec_ops_motor_pool_us" List.ItemID="60406958" />
+					<instance_reference name="tech_tree" value="tech_tree\companies\races\american\special_operations_company\unit_unlocks\spec_ops_tank_depot_us" List.ItemID="-1519659736" />
+					<instance_reference name="tech_tree" value="tech_tree\companies\races\american\special_operations_company\spec_ops_traits_us" List.ItemID="-565186507" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_type_ext" List.ItemID="-1947044666">
+				<list name="squad_type_list">
+					<enum name="squad_type" value="infantry" List.ItemID="1566579615" />
+					<enum name="squad_type" value="campaign_combatant" List.ItemID="-1474736226" />
+					<enum name="squad_type" value="company" List.ItemID="967691096" />
+					<enum name="squad_type" value="infantry_ballistic" List.ItemID="-126703706" />
+				</list>
+				<list name="squad_race_type_list">
+					<instance_reference name="squad_race_type" value="racebps\americans_campaign" List.ItemID="-1463202161" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_action_tree_ext" List.ItemID="-854670740">
+				<state_tree_node name="ActionTree_OpeningBranch" value="squad_infantry_company_root" />
+				<state_tree_node name="ActionTree_CommandBehaviourBranch" value="" />
+				<instance_reference name="default_command_weight" value="" />
+				<instance_reference name="alternate_command_weight" value="" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_targeting_system_ext" List.ItemID="1121937464">
+				<bool name="allow_squad_scan_close_enemies" value="False" />
+				<int name="history_size" value="2" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_speech_ext" List.ItemID="85328192">
+				<string name="squad_speaker_code" value="company_spec_ops_us" />
+				<group name="squad_speech_parameters">
+					<string name="squad_class_code" value="infantry" />
+					<string name="squad_name_code" value="spec_ops" />
+					<string name="squad_unit_code" value="company_spec_ops_us" />
+				</group>
+				<int name="importance" value="1" />
+				<list name="age_mapping">
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_blueprint_ext" List.ItemID="1995767213">
+				<enum_table name="QueryTree_States">
+					<state_tree_node name="squad_state_idle" value="" />
+					<state_tree_node name="squad_state_move" value="squad_query_campaign\Move" />
+					<state_tree_node name="squad_state_attack" value="" />
+					<state_tree_node name="squad_state_gather" value="" />
+					<state_tree_node name="squad_state_gather_food" value="" />
+					<state_tree_node name="squad_state_gather_wood" value="" />
+					<state_tree_node name="squad_state_gather_stone" value="" />
+					<state_tree_node name="squad_state_gather_gold" value="" />
+					<state_tree_node name="squad_state_idle_villager" value="" />
+					<state_tree_node name="squad_state_retreat" value="squad_query_campaign\Retreat" />
+					<state_tree_node name="squad_state_construct" value="" />
+					<state_tree_node name="squad_state_capture" value="" />
+					<state_tree_node name="squad_state_attack_move" value="" />
+					<state_tree_node name="squad_state_set_demolitions" value="" />
+					<state_tree_node name="squad_state_ability" value="" />
+					<state_tree_node name="squad_state_evacuate" value="" />
+				</enum_table>
+				<bool name="browsable_in_editor" value="True" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_node_movement_ext" List.ItemID="-1541040960">
+				<enum_table name="terrain_cost_table">
+					<int name="Plain" value="2" />
+					<int name="Road" value="1" />
+					<int name="Mountain" value="-1" />
+					<int name="Forest" value="2" />
+					<int name="Hill" value="2" />
+					<int name="Ocean" value="-1" />
+					<int name="Coast" value="2" />
+					<int name="MountainPass" value="2" />
+					<int name="SideRoad" value="1" />
+					<int name="Town" value="2" />
+					<int name="River" value="-1" />
+					<int name="Sand" value="2" />
+					<int name="Oasis" value="2" />
+					<int name="Wadi" value="2" />
+					<int name="PontoonBridge" value="1" />
+					<int name="DefensiveLine" value="-1" />
+				</enum_table>
+				<int name="attack_cost" value="1" />
+				<int name="attack_distance" value="3" />
+				<int name="movement_distance" value="1" />
+				<int name="max_movement_point" value="20" />
+				<int name="max_action_point" value="1" />
+				<bool name="can_use_action_point_to_move" value="False" />
+				<state_tree_node name="statetree_node_attack_condition" value="campaign_company_conditions\company_attack_condition" />
+				<enum name="movement_node_combat_engagement_range" value="short" />
+				<float name="attack_rating" value="0" />
+				<float name="defense_rating" value="0" />
+				<state_tree_node name="statetree_node_counter_attack_condition" value="campaign_company_conditions\company_counterattack_condition" />
+				<int name="initiative" value="0" />
+				<state_tree_node name="statetree_node_attachment_attack_assist_condition" value="campaign_company_conditions\attachment_attack_assist_condition" />
+				<state_tree_node name="statetree_node_attachment_counter_attack_assist_condition" value="campaign_company_conditions\attachment_counterattack_assist_condition" />
+				<state_tree_node name="on_assault_statetree" value="" />
+				<int name="dangerous_movement_node_modifier_threat_level" value="5" />
+				<int name="min_attack_distance" value="0" />
+				<bool name="has_buoy_movement" value="False" />
+				<int name="enemy_territory_movement_node_threat_level" value="2" />
+				<bool name="fake_node_movement" value="False" />
+				<state_tree_node name="statetree_node_move_condition" value="campaign_company_conditions\company_move_condition" />
+				<state_tree_node name="statetree_node_load_condition" value="campaign_company_conditions\company_load_condition" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_statemodel_ext" List.ItemID="349230743">
+				<instance_reference name="schema" value="statemodel_schema\campaign\squad_campaign" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_holdable_ext" List.ItemID="689584818">
+				<list name="modifier_table">
+				</list>
+				<state_tree_node name="hold_target_requirement" value="squad_hold_target_queries\campaign_company_hold_target_requirement" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_population_ext" List.ItemID="-1362371300">
+				<float name="personnel_pop" value="6" />
+				<enum_table name="upkeep_per_pop_per_minute_override">
+					<float name="action" value="0" />
+					<float name="command" value="0" />
+					<float name="popcap" value="0" />
+					<float name="fuel" value="0" />
+					<float name="munition" value="0" />
+					<float name="manpower" value="0" />
+					<float name="requisition" value="0" />
+					<float name="ultimate" value="0" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_veterancy_ext" List.ItemID="1108760518">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-360600202">
+						<instance_reference name="ext_key" value="" />
+						<group name="info">
+							<bool name="can_receive_shared_veterancy" value="False" />
+							<float name="max_persistent_squads" value="3" />
+							<enum name="shared_veterancy_type" value="no_sharing" />
+							<list name="veterancy_rank_info">
+								<group name="veterancy_rank" List.ItemID="-1933531199">
+									<float name="veterancy_value" value="250" />
+									<bool name="hide_ingame_veterancy_art" value="False" />
+									<locstring name="screen_name" value="0" />
+									<bool name="single_player_only" value="False" />
+									<group name="state_tree_references">
+										<template_reference name="squad_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="veterancy_level_up_company" />
+										</template_reference>
+										<template_reference name="squad_entity_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="" />
+										</template_reference>
+										<template_reference name="action_non_leader_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="" />
+										</template_reference>
+										<template_reference name="action_leader_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="" />
+										</template_reference>
+									</group>
+									<list name="abilities">
+									</list>
+									<locstring name="brief_text" value="0" />
+								</group>
+								<group name="veterancy_rank" List.ItemID="618628300">
+									<float name="veterancy_value" value="750" />
+									<bool name="hide_ingame_veterancy_art" value="False" />
+									<locstring name="screen_name" value="0" />
+									<bool name="single_player_only" value="False" />
+									<group name="state_tree_references">
+										<template_reference name="squad_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="veterancy_level_up_company" />
+										</template_reference>
+										<template_reference name="squad_entity_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="" />
+										</template_reference>
+										<template_reference name="action_non_leader_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="" />
+										</template_reference>
+										<template_reference name="action_leader_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="" />
+										</template_reference>
+									</group>
+									<list name="abilities">
+									</list>
+									<locstring name="brief_text" value="0" />
+								</group>
+								<group name="veterancy_rank" List.ItemID="1713824480">
+									<float name="veterancy_value" value="1500" />
+									<bool name="hide_ingame_veterancy_art" value="False" />
+									<locstring name="screen_name" value="0" />
+									<bool name="single_player_only" value="False" />
+									<group name="state_tree_references">
+										<template_reference name="squad_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="veterancy_level_up_company" />
+										</template_reference>
+										<template_reference name="squad_entity_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="" />
+										</template_reference>
+										<template_reference name="action_non_leader_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="" />
+										</template_reference>
+										<template_reference name="action_leader_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="" />
+										</template_reference>
+									</group>
+									<list name="abilities">
+									</list>
+									<locstring name="brief_text" value="0" />
+								</group>
+							</list>
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_resource_ext" List.ItemID="-1748813805">
+				<enum_table name="initial_resources">
+					<float name="action" value="0" />
+					<float name="command" value="0" />
+					<float name="popcap" value="0" />
+					<float name="fuel" value="0" />
+					<float name="munition" value="0" />
+					<float name="manpower" value="0" />
+					<float name="requisition" value="0" />
+					<float name="ultimate" value="0" />
+				</enum_table>
+				<enum_table name="max_resources">
+					<float name="action" value="3.402823E+38" />
+					<float name="command" value="3.402823E+38" />
+					<float name="popcap" value="3.402823E+38" />
+					<float name="fuel" value="3.402823E+38" />
+					<float name="munition" value="3.402823E+38" />
+					<float name="manpower" value="3.402823E+38" />
+					<float name="requisition" value="3.402823E+38" />
+					<float name="ultimate" value="3.402823E+38" />
+				</enum_table>
+				<list name="conditional_incomes">
+				</list>
+				<group name="resource_bar">
+					<enum name="resource_shown" value="" />
+					<instance_reference name="bar_style" value="" />
+				</group>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_paradrop_ext" List.ItemID="332166882">
+				<float name="spawn_time_scatter" value="2" />
+				<float name="distance_between_units" value="3" />
+				<float name="max_scatter_radius" value="1" />
+				<state_tree_node name="on_all_squad_landed_action_tree" value="cmap_aircraft_payload_us\payload_paradrop_run_us\on_landed" />
+				<int name="paradrop_clearance" value="3" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_anvil_mission_loadout_ext" List.ItemID="-1538948286">
+				<enum_table name="starting_squads">
+					<instance_reference name="basic_infantry" value="sbps\races\american\infantry\riflemen_us" />
+					<instance_reference name="elite_infantry" value="sbps\races\american\infantry\ssf_commandos_us" />
+					<instance_reference name="light_vehicle" value="sbps\races\american\vehicles\truck_4x4_us" />
+					<instance_reference name="light_tank" value="sbps\races\american\vehicles\chaffee_us" />
+					<instance_reference name="medium_tank" value="sbps\races\american\vehicles\sherman_us" />
+					<instance_reference name="sniper" value="sbps\races\american\infantry\sniper_us" />
+					<instance_reference name="mortar" value="sbps\races\american\team_weapons\mortar_81mm_us" />
+					<instance_reference name="suppression" value="sbps\races\american\team_weapons\hmg_30cal_us" />
+					<instance_reference name="anti_tank" value="sbps\races\american\team_weapons\at_gun_57mm_us" />
+					<instance_reference name="transport" value="sbps\races\american\vehicles\halftrack_us" />
+					<instance_reference name="default" value="sbps\races\american\infantry\riflemen_us" />
+					<instance_reference name="builder" value="sbps\races\american\infantry\engineer_us" />
+					<instance_reference name="medium_vehicle" value="sbps\races\american\vehicles\greyhound_us" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_health_to_loadout_adjuster_ext" List.ItemID="-934046491">
+				<list name="death_exemption_entities">
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_officer_ext" List.ItemID="1684151618">
+				<int name="max_officer_slots" value="1" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_morale_ext" List.ItemID="-1860063768">
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_board_turn_ext" List.ItemID="-1507476000">
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="204532" />
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="squadexts" value="sbpextensions\squad_ability_ext" List.ItemID="1757346470">
+				<list name="abilities">
+					<instance_reference name="ability" value="abilities\campaign\company\cmap_ability_company_dummy" comment="This prevents the Combat Support Ability form always displaying its range." List.ItemID="-973918817" />
+					<instance_reference name="ability" value="abilities\campaign\company\navy_spawn_company_setup" List.ItemID="1145103086" />
+					<instance_reference name="ability" value="abilities\campaign\company\cmap_navy_transport" List.ItemID="-2053251207" />
+					<instance_reference name="ability" value="abilities\campaign\company\cmap_navy_deploy" List.ItemID="-781238935" />
+					<instance_reference name="ability" value="abilities\campaign\company\cmap_ability_company_capture" List.ItemID="483620432" />
+					<instance_reference name="ability" value="abilities\campaign\company\cmap_ability_company_repair_target" comment="Engineer Detachment Unlock" List.ItemID="2045509240" />
+					<instance_reference name="ability" value="abilities\campaign\company\cmap_ability_company_heal_target" comment="Medic Detachment Unlock" List.ItemID="-2025799285" />
+					<instance_reference name="ability" value="abilities\races\american\campaign\company\cmap_company_construct_supply_cache_us" comment="Logistics Detachment Unlock" List.ItemID="-1988310417" />
+					<instance_reference name="ability" value="abilities\races\american\campaign\company\cmap_company_construct_howitzer_emplacement_us" comment="Howitzer Detachment Unlock" List.ItemID="-507973309" />
+					<instance_reference name="ability" value="abilities\races\american\campaign\company\cmap_company_combat_support_us_spec_ops" List.ItemID="962486360" />
+					<instance_reference name="ability" value="abilities\campaign\company\cmap_ability_company_heal_target_improved" List.ItemID="1442798769" />
+					<instance_reference name="ability" value="abilities\races\american\campaign\company\cmap_ability_company_encircle_target_us" List.ItemID="295546446" />
+					<instance_reference name="ability" value="abilities\campaign\company\cmap_stance_1" List.ItemID="488083310" />
+					<instance_reference name="ability" value="abilities\campaign\company\cmap_stance_2" List.ItemID="-1104340715" />
+				</list>
+				<int name="ui_combine_priority" value="0" />
+				<group name="squad_orders">
+					<group name="abandon_team_weapon">
+						<bool name="available" value="False" />
+					</group>
+					<group name="attack_ground">
+						<bool name="available" value="False" />
+					</group>
+					<group name="attack_move">
+						<bool name="available" value="False" />
+					</group>
+					<group name="cancel_construction">
+						<bool name="available" value="False" />
+					</group>
+					<group name="hold_fire_off">
+						<bool name="available" value="False" />
+					</group>
+					<group name="hold_fire_on">
+						<bool name="available" value="False" />
+					</group>
+					<group name="load">
+						<bool name="available" value="False" />
+						<bool name="default_issuable" value="True" />
+					</group>
+					<group name="move">
+						<bool name="available" value="False" />
+						<bool name="default_issuable" value="True" />
+					</group>
+					<group name="pickup_item">
+						<bool name="available" value="False" />
+						<bool name="default_issuable" value="True" />
+					</group>
+					<group name="plant_demolitions">
+						<bool name="available" value="False" />
+					</group>
+					<group name="prefer_melee">
+						<bool name="available" value="False" />
+					</group>
+					<group name="prefer_ranged">
+						<bool name="available" value="False" />
+					</group>
+					<group name="retire">
+						<bool name="available" value="False" />
+					</group>
+					<group name="retreat">
+						<bool name="available" value="False" />
+					</group>
+					<group name="reverse_move">
+						<bool name="available" value="False" />
+					</group>
+					<group name="stop">
+						<bool name="available" value="False" />
+					</group>
+					<group name="trade">
+						<bool name="available" value="False" />
+					</group>
+					<group name="unload">
+						<bool name="available" value="True" />
+						<bool name="default_issuable" value="True" />
+					</group>
+					<group name="unload_here">
+						<bool name="available" value="False" />
+					</group>
+					<group name="vault">
+						<bool name="available" value="False" />
+					</group>
+					<group name="hold_position">
+						<bool name="available" value="False" />
+					</group>
+				</group>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_action_apply_ext" List.ItemID="575711558">
+				<list name="action_state_trees">
+					<group name="container" List.ItemID="1824575124">
+						<state_tree_node name="state_tree" value="campaign_faction_trait_selection\random_number" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_attention_ext" List.ItemID="755202293">
+				<float name="search_radius" value="35" />
+				<bool name="spot_enemy_activity" value="False" />
+				<float name="last_seen_reset_delay_secs" value="20" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_can_defuse_charges_ext" List.ItemID="-329520170">
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_capture_strategic_point_ext" List.ItemID="-1377522728">
+				<float name="capture_distance" value="4" />
+				<float name="capture_rate_multiplier" value="1" />
+				<float name="revert_rate_multiplier" value="1" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_combat_behaviour_ext" List.ItemID="-739887629">
+				<float name="heavy_weapon_setup_delay" value="999" />
+				<float name="reaction_delay_seconds" value="25" />
+				<float name="reveal_self_attacker_time" value="0" />
+				<bool name="reveal_self_attacker_time_use" value="False" />
+				<group name="suppression">
+					<bool name="can_be_suppressed" value="False" />
+					<float name="noncombat_delay" value="0" />
+					<float name="noncombat_recover_multiplier" value="0" />
+					<float name="pin_down_activate_threshold" value="0" />
+					<float name="pin_down_recover_threshold" value="0" />
+					<float name="recover_rate" value="0" />
+					<float name="suppressed_activate_threshold" value="0" />
+					<float name="suppressed_recover_threshold" value="0" />
+					<enum_table name="cover_info">
+						<template_reference name="tp_defcover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_heavy_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_light_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_negative_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_water_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_smoke_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_garrison_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_trench_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_road_light_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+						<template_reference name="tp_road_heavy_cover" value="suppression_cover_info">
+							<float name="recover_multiplier" value="1" />
+						</template_reference>
+					</enum_table>
+					<template_reference name="pin_down_activate_action_tree" value="state_tree_reference_info">
+						<state_tree_node name="ActionTree_OpeningBranch" value="" />
+					</template_reference>
+					<template_reference name="suppressed_activate_action_tree" value="state_tree_reference_info">
+						<state_tree_node name="ActionTree_OpeningBranch" value="" />
+					</template_reference>
+				</group>
+				<float name="reaction_combat_delay_seconds" value="30" />
+				<template_reference name="can_recrew_abandoned_option" value="options\sbpextensions\squad_combat_behaviour_ext\can_recrew_abandoned">
+					<template_reference name="is_mobile_driver_option" value="options\sbpextensions\squad_combat_behaviour_ext\is_mobile_driver">
+						<list name="abilities_to_bring">
+						</list>
+					</template_reference>
+				</template_reference>
+				<template_reference name="charge_option" value="options\none">
+				</template_reference>
+				<bool name="ranged_weapons_prefer_single_squad_target" value="True" />
+				<bool name="accept_move_commands_while_combat" value="False" />
+				<float name="reveal_defender_time" value="0" />
+				<bool name="reveal_defender_time_use" value="False" />
+				<instance_reference name="range_reticule" value="" />
+				<bool name="can_be_tied_up" value="False" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_combat_stance_ext" List.ItemID="250106319">
+				<enum name="default_stance" value="attack" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_formation_ext" List.ItemID="-1926246184">
+				<float name="combat_follower_cover_search_radius" value="0" />
+				<float name="move_dest_cover_search_radius" value="0" />
+				<group name="squad_distribution_table">
+					<group name="01_soldiers">
+						<float name="units_in_core" value="1" />
+						<float name="units_in_left_flank" value="0" />
+						<float name="units_in_right_flank" value="0" />
+						<float name="units_in_scout" value="0" />
+					</group>
+					<group name="02_soldiers">
+						<float name="units_in_core" value="2" />
+						<float name="units_in_left_flank" value="0" />
+						<float name="units_in_right_flank" value="0" />
+						<float name="units_in_scout" value="0" />
+					</group>
+					<group name="03_soldiers">
+						<float name="units_in_core" value="3" />
+						<float name="units_in_left_flank" value="0" />
+						<float name="units_in_right_flank" value="0" />
+						<float name="units_in_scout" value="0" />
+					</group>
+					<group name="04_soldiers">
+						<float name="units_in_core" value="4" />
+						<float name="units_in_left_flank" value="0" />
+						<float name="units_in_right_flank" value="0" />
+						<float name="units_in_scout" value="0" />
+					</group>
+					<group name="05_soldiers">
+						<float name="units_in_core" value="5" />
+						<float name="units_in_left_flank" value="0" />
+						<float name="units_in_right_flank" value="0" />
+						<float name="units_in_scout" value="0" />
+					</group>
+					<group name="06_soldiers">
+						<float name="units_in_core" value="6" />
+						<float name="units_in_left_flank" value="0" />
+						<float name="units_in_right_flank" value="0" />
+						<float name="units_in_scout" value="0" />
+					</group>
+					<group name="07_soldiers">
+						<float name="units_in_core" value="7" />
+						<float name="units_in_left_flank" value="0" />
+						<float name="units_in_right_flank" value="0" />
+						<float name="units_in_scout" value="0" />
+					</group>
+					<group name="08_soldiers">
+						<float name="units_in_core" value="8" />
+						<float name="units_in_left_flank" value="0" />
+						<float name="units_in_right_flank" value="0" />
+						<float name="units_in_scout" value="0" />
+					</group>
+					<group name="09_soldiers">
+						<float name="units_in_core" value="9" />
+						<float name="units_in_left_flank" value="0" />
+						<float name="units_in_right_flank" value="0" />
+						<float name="units_in_scout" value="0" />
+					</group>
+					<group name="10_soldiers">
+						<float name="units_in_core" value="10" />
+						<float name="units_in_left_flank" value="0" />
+						<float name="units_in_right_flank" value="0" />
+						<float name="units_in_scout" value="0" />
+					</group>
+				</group>
+				<bool name="support_weapons_to_flanks" value="False" />
+				<list name="formation_overrides">
+				</list>
+				<enum_table name="cover_formation_table">
+					<instance_reference name="tp_defcover" value="squad_formations\common\campaign_company_stationary_small" />
+					<instance_reference name="tp_heavy_cover" value="squad_formations\common\campaign_company_stationary_small" />
+					<instance_reference name="tp_light_cover" value="squad_formations\common\campaign_company_stationary_small" />
+					<instance_reference name="tp_negative_cover" value="squad_formations\common\campaign_company_stationary_small" />
+					<instance_reference name="tp_water_cover" value="squad_formations\common\campaign_company_stationary_small" />
+					<instance_reference name="tp_smoke_cover" value="squad_formations\common\campaign_company_stationary_small" />
+					<instance_reference name="tp_garrison_cover" value="squad_formations\common\campaign_company_stationary_small" />
+					<instance_reference name="tp_trench_cover" value="squad_formations\common\campaign_company_stationary_small" />
+					<instance_reference name="tp_road_light_cover" value="squad_formations\common\campaign_company_stationary_small" />
+					<instance_reference name="tp_road_heavy_cover" value="squad_formations\common\campaign_company_stationary_small" />
+				</enum_table>
+				<enum_table name="moving_cover_formation_override_table">
+					<instance_reference name="tp_defcover" value="squad_formations\common\campaign_company_mobile" />
+					<instance_reference name="tp_heavy_cover" value="squad_formations\common\campaign_company_mobile" />
+					<instance_reference name="tp_light_cover" value="squad_formations\common\campaign_company_mobile" />
+					<instance_reference name="tp_negative_cover" value="squad_formations\common\campaign_company_mobile" />
+					<instance_reference name="tp_water_cover" value="squad_formations\common\campaign_company_mobile" />
+					<instance_reference name="tp_smoke_cover" value="squad_formations\common\campaign_company_mobile" />
+					<instance_reference name="tp_garrison_cover" value="squad_formations\common\campaign_company_mobile" />
+					<instance_reference name="tp_trench_cover" value="squad_formations\common\campaign_company_mobile" />
+					<instance_reference name="tp_road_light_cover" value="squad_formations\common\campaign_company_mobile" />
+					<instance_reference name="tp_road_heavy_cover" value="squad_formations\common\campaign_company_mobile" />
+				</enum_table>
+				<float name="desired_protection_level_in_formation" value="0" />
+				<bool name="restrict_sight_leadership_to_core_element" value="True" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_loadout_ext" List.ItemID="2142626811">
+				<list name="unit_list">
+					<group name="loadout_data" List.ItemID="-657913460">
+						<float name="num" value="1" />
+						<instance_reference name="type" value="ebps\races\american\campaign\company\company_spec_ops_us" />
+						<list name="unit_attachments">
+						</list>
+						<bool name="is_default_unit" value="True" />
+					</group>
+					<group name="loadout_data" List.ItemID="-1440183379">
+						<float name="num" value="2" />
+						<instance_reference name="type" value="ebps\races\american\campaign\formation\formation_infantry_commando_us" />
+						<list name="unit_attachments">
+						</list>
+						<bool name="is_default_unit" value="False" />
+					</group>
+				</list>
+				<float name="squad_female_chance" value="0" />
+				<int name="extra_unit_index" value="0" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_modifier_ext" List.ItemID="-1245033541">
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_requirement_ext" List.ItemID="-1283681071">
+				<list name="requirement_table">
+					<template_reference name="required" value="requirements\required_race" List.ItemID="-1822037563">
+						<enum name="reason" value="usage_and_display" />
+						<locstring name="ui_name" value="0" />
+						<instance_reference name="race" value="racebps\americans_campaign" />
+					</template_reference>
+					<template_reference name="required" value="requirements\required_any_in_list" List.ItemID="1937892675">
+						<enum name="reason" value="usage" />
+						<locstring name="ui_name" value="11228806" />
+						<list name="requirements">
+							<template_reference name="requirement" value="requirements\required_player_upgrade" List.ItemID="1109772222">
+								<enum name="reason" value="usage" />
+								<locstring name="ui_name" value="11226521" />
+								<bool name="is_present" value="True" />
+								<int name="max_completed" value="100" />
+								<int name="min_completed" value="1" />
+								<instance_reference name="upgrade_name" value="upgrade\campaign\unlocks\cmap_unlock_company_spec_ops_us" />
+								<bool name="include_completed" value="True" />
+								<bool name="include_queued" value="False" />
+								<group name="include_pbg_parenting">
+									<bool name="include_child_pbgs" value="False" />
+									<bool name="include_parent_pbgs" value="False" />
+								</group>
+							</template_reference>
+							<template_reference name="requirement" value="requirements\required_statemodelbool" List.ItemID="-1347714042">
+								<locstring name="ui_name" value="0" />
+								<enum name="reason" value="usage" />
+								<enum name="key" value="campaign_tutorial_playthrough" />
+								<enum name="data_source_type" value="player_datasource" />
+								<bool name="default_value" value="False" />
+								<bool name="compare_to_value" value="True" />
+							</template_reference>
+						</list>
+					</template_reference>
+					<template_reference name="required" value="requirements\required_any_in_list" comment="Checking Producing Queue and Statemodel owned_companies for Battleship production." List.ItemID="-345262551">
+						<enum name="reason" value="usage" />
+						<locstring name="ui_name" value="0" />
+						<list name="requirements">
+							<template_reference name="requirement" value="requirements\required_all_in_list" List.ItemID="-658066573">
+								<enum name="reason" value="usage" />
+								<locstring name="ui_name" value="11216629" />
+								<list name="requirements">
+									<template_reference name="requirement" value="requirements\required_unit_type" List.ItemID="-148584975">
+										<enum name="reason" value="usage" />
+										<locstring name="ui_name" value="0" />
+										<enum name="unit_type" value="naval" />
+										<template_reference name="qualify_option" value="options\none">
+										</template_reference>
+										<bool name="search_load_out" value="False" />
+									</template_reference>
+									<template_reference name="requirement" value="requirements\required_statemodel_target_link_count" List.ItemID="-183984496">
+										<int name="compare_to_value" value="1" />
+										<enum name="comparison" value="less_than" />
+										<enum name="key" value="owned_companies" />
+										<enum name="data_source_type" value="squad_datasource" />
+										<enum name="reason" value="usage" />
+										<locstring name="ui_name" value="0" />
+									</template_reference>
+								</list>
+							</template_reference>
+							<template_reference name="requirement" value="requirements\required_unit_type" List.ItemID="-493513146">
+								<enum name="reason" value="usage" />
+								<locstring name="ui_name" value="0" />
+								<enum name="unit_type" value="seaport" />
+								<template_reference name="qualify_option" value="options\none">
+								</template_reference>
+								<bool name="search_load_out" value="False" />
+							</template_reference>
+						</list>
+					</template_reference>
+				</list>
+				<state_tree_node name="requirement_statetree" value="" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_retreat_ext" List.ItemID="411748054">
+				<list name="retreat_building_types">
+					<enum name="unit_type" value="hq" List.ItemID="1318375693" />
+				</list>
+				<bool name="withdraw_only" value="False" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_ui_ext" List.ItemID="764690770">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-893484591">
+						<group name="info">
+							<bool name="allow_spawner_production" value="False" />
+							<locstring name="extra_text" value="11158242" />
+							<locstring name="help_text" value="11246241" comment="italy_base_battleplans.scar references these LocIds to update the starting Company Selection Pop-up" />
+							<string name="hotkey_name" value="" />
+							<file name="icon_name" value="races\american\battlegroups\spec_ops_us" />
+							<bool name="minimap_team_only" value="True" />
+							<file name="minimap_texture" value="" />
+							<instance_reference name="modal_ability" value="" />
+							<bool name="reveal_for_decryption" value="False" />
+							<locstring name="screen_name" value="11241666" />
+							<string name="selection_group" value="company_special_forces" />
+							<int name="ui_priority" value="46" />
+							<bool name="use_random_entity_speaker" value="False" />
+							<file name="portrait_name" value="races\american\battlegroups\spec_ops_us_portrait" />
+							<float name="minimap_texture_scale" value="1" />
+							<locstring name="brief_text" value="11215585" />
+							<locstring name="screen_name_short" value="11225239" comment="italy_base_battleplans.scar references these LocIds to update the starting Company Selection Pop-up" />
+							<enum name="map_rotation_type_override" value="no_override" />
+							<bool name="show_in_build_log" value="True" />
+							<file name="symbol_icon_name" value="common\units\symbols\company_ssf" />
+							<string name="cover_level_icon_postfix" value="" />
+							<bool name="hide_ucs" value="False" />
+							<enum name="decorator_visibility" value="visible" />
+							<string name="debug_text" value="" />
+							<string name="selection_datatemplate" value="" />
+							<string name="tooltip_data_template" value="" />
+							<bool name="is_unique" value="False" />
+							<string name="decorator_data_template" value="" />
+							<enum name="ui_combine_type" value="intersection" />
+							<int name="global_unit_control_row" value="1" />
+							<instance_reference name="ui_decorator" value="" />
+							<bool name="decorator_show_reload_progress" value="False" />
+							<bool name="is_respawnable" value="False" />
+							<enum name="respawn_location" value="" />
+							<enum name="respawn_progress" value="" />
+							<enum name="respawn_time" value="" />
+							<locstring name="respawn_help" value="0" />
+							<enum name="respawn_unit_class" value="" />
+							<bool name="is_unique_to_race" value="False" />
+							<bool name="show_production" value="True" />
+							<string name="respawn_datatemplate" value="" />
+							<enum name="decorator" value="AnvilCampaignSquad" />
+							<int name="map_layer" value="-1" />
+							<enum name="map_mark" value="" />
+							<file name="flag_icon_override" value="talking_heads\flag_usa" />
+							<file name="extra_icon" value="" />
+							<group name="ui_codex_info">
+								<bool name="exclusive" value="False" />
+								<int name="priority" value="0" />
+								<group name="ui_position">
+									<int name="ui_position_column" value="-1" />
+									<int name="ui_position_row" value="-1" />
+								</group>
+							</group>
+							<template_reference name="extra_text_formatter" value="">
+							</template_reference>
+							<template_reference name="help_text_formatter" value="">
+							</template_reference>
+							<template_reference name="screen_name_formatter" value="">
+							</template_reference>
+							<template_reference name="screen_name_short_formatter" value="">
+							</template_reference>
+							<template_reference name="brief_text_formatter" value="">
+							</template_reference>
+							<enum name="screen_name_visibility" value="visible" />
+							<string name="sound" value="" />
+							<string name="sound_alternative" value="" />
+							<locstring name="extra_help_text" value="11215585" />
+							<group name="ui_armor_info">
+								<file name="armor_icon" value="" />
+								<list name="armor_critical_damage">
+								</list>
+							</group>
+						</group>
+						<instance_reference name="ext_key" value="" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_upgrade_apply_ext" List.ItemID="-1591401397">
+				<list name="upgrades">
+					<instance_reference name="upgrade" value="upgrade\american\campaign\company\special_operations\c_special_operations_company_us" comment="Don't delete this, needed for any airborne upgrade to function!" List.ItemID="-1814092215" />
+					<instance_reference name="upgrade" value="upgrade\campaign\missions\sp_generic_company_check" comment="Do not remove! Used to check if a mission / skirmish has started with a company or not!" List.ItemID="-1524578133" />
+					<instance_reference name="upgrade" value="upgrade\campaign\traits\unit_type\cmap_type_infantry" List.ItemID="-554781879" />
+					<instance_reference name="upgrade" value="upgrade\campaign\traits\company_traits\cmap_trait_special_forces_company" List.ItemID="1360577136" />
+					<instance_reference name="upgrade" value="upgrade\american\campaign\company\special_operations\core_unlocks\c_special_operations_weasel_core_us" List.ItemID="217145423" />
+					<instance_reference name="upgrade" value="upgrade\american\campaign\company\special_operations\core_unlocks\c_special_operations_devils_brigade_core_us" List.ItemID="944684684" />
+					<instance_reference name="upgrade" value="upgrade\american\campaign\company\special_operations\unit_unlocks\hq\c_special_operations_scout_unlock_us" List.ItemID="-1988151784" />
+					<instance_reference name="upgrade" value="upgrade\american\campaign\company\special_operations\unit_unlocks\hq\c_special_operations_engineers_unlock_us" List.ItemID="-1817405297" />
+					<instance_reference name="upgrade" value="upgrade\american\campaign\company\special_operations\unit_unlocks\hq\c_special_operations_captain_unlock_us" List.ItemID="-269710731" />
+					<instance_reference name="upgrade" value="upgrade\american\campaign\company\special_operations\unit_unlocks\barracks\c_special_operations_riflemen_unlock_us" List.ItemID="-1227443993" />
+					<instance_reference name="upgrade" value="upgrade\american\campaign\company\special_operations\unit_unlocks\wsc\c_special_operations_hmg_unlock_us" List.ItemID="638274679" />
+					<instance_reference name="upgrade" value="upgrade\american\campaign\company\special_operations\unit_unlocks\wsc\c_special_operations_halftrack_unlock_us" List.ItemID="539366611" />
+					<instance_reference name="upgrade" value="upgrade\american\campaign\company\special_operations\unit_unlocks\motorpool\c_special_operations_atgun_unlock_us" List.ItemID="110858630" />
+					<instance_reference name="upgrade" value="upgrade\american\campaign\company\special_operations\unit_unlocks\motorpool\c_special_operations_chaffee_unlock_us" List.ItemID="-1145906867" />
+					<instance_reference name="upgrade" value="upgrade\american\campaign\company\special_operations\unit_unlocks\tankdepot\c_special_operations_sherman_bulldozer_unlock_us" List.ItemID="-479165086" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_upgrade_ext" List.ItemID="-425456950">
+				<float name="number_of_slots" value="-1" />
+				<list name="upgrades">
+					<instance_reference name="upgrade" value="upgrade\campaign\stances\cmap_stance_1" List.ItemID="1599079342" />
+					<instance_reference name="upgrade" value="upgrade\campaign\stances\cmap_stance_2" List.ItemID="241347374" />
+					<instance_reference name="upgrade" value="upgrade\campaign\detachments\types\unlock_detachment_type_howitzer" List.ItemID="-230538039" />
+					<instance_reference name="upgrade" value="upgrade\campaign\detachments\types\unlock_detachment_type_rifle" List.ItemID="1183688982" />
+					<instance_reference name="upgrade" value="upgrade\campaign\detachments\types\unlock_detachment_type_logistics" List.ItemID="1187185291" />
+					<instance_reference name="upgrade" value="upgrade\campaign\detachments\slots\unlock_detachment_slot" List.ItemID="1678752105" />
+				</list>
+				<int name="max_queue_size_override" value="-1" />
+				<list name="tech_trees">
+					<instance_reference name="tech_tree" value="tech_tree\companies\races\american\special_operations_company\core_unlocks\special_operations_weasel_us" List.ItemID="2031660768" />
+					<instance_reference name="tech_tree" value="tech_tree\companies\races\american\special_operations_company\core_unlocks\special_operations_quad_halftrack_us" List.ItemID="2062481323" />
+					<instance_reference name="tech_tree" value="tech_tree\companies\races\american\special_operations_company\core_unlocks\special_operations_whizbang_us" List.ItemID="-383107094" />
+					<instance_reference name="tech_tree" value="tech_tree\companies\races\american\special_operations_company\core_unlocks\special_operations_devils_brigade_us" List.ItemID="-1110010602" />
+					<instance_reference name="tech_tree" value="tech_tree\companies\races\american\special_operations_company\core_unlocks\special_operations_raiding_flares_us" List.ItemID="-1177059618" />
+					<instance_reference name="tech_tree" value="tech_tree\companies\races\american\special_operations_company\core_unlocks\special_operations_white_phosphorus_barrage_us" List.ItemID="1295125761" />
+					<instance_reference name="tech_tree" value="tech_tree\companies\races\american\special_operations_company\passive_unlocks\spec_ops_passive_top_us" List.ItemID="1386415966" />
+					<instance_reference name="tech_tree" value="tech_tree\companies\races\american\special_operations_company\passive_unlocks\spec_ops_passive_middle_us" List.ItemID="435651865" />
+					<instance_reference name="tech_tree" value="tech_tree\companies\races\american\special_operations_company\passive_unlocks\spec_ops_passive_bottom_us" List.ItemID="1154547797" />
+					<instance_reference name="tech_tree" value="tech_tree\companies\races\american\special_operations_company\unit_unlocks\spec_ops_hq_us" List.ItemID="1765975876" />
+					<instance_reference name="tech_tree" value="tech_tree\companies\races\american\special_operations_company\unit_unlocks\spec_ops_barracks_us" List.ItemID="317024013" />
+					<instance_reference name="tech_tree" value="tech_tree\companies\races\american\special_operations_company\unit_unlocks\spec_ops_wsc_us" List.ItemID="-992927164" />
+					<instance_reference name="tech_tree" value="tech_tree\companies\races\american\special_operations_company\unit_unlocks\spec_ops_motor_pool_us" List.ItemID="60406958" />
+					<instance_reference name="tech_tree" value="tech_tree\companies\races\american\special_operations_company\unit_unlocks\spec_ops_tank_depot_us" List.ItemID="-1519659736" />
+					<instance_reference name="tech_tree" value="tech_tree\companies\races\american\special_operations_company\spec_ops_traits_us" List.ItemID="-565186507" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_type_ext" List.ItemID="-1947044666">
+				<list name="squad_type_list">
+					<enum name="squad_type" value="infantry" List.ItemID="1566579615" />
+					<enum name="squad_type" value="campaign_combatant" List.ItemID="-1474736226" />
+					<enum name="squad_type" value="company" List.ItemID="967691096" />
+					<enum name="squad_type" value="infantry_ballistic" List.ItemID="-126703706" />
+				</list>
+				<list name="squad_race_type_list">
+					<instance_reference name="squad_race_type" value="racebps\americans_campaign" List.ItemID="-1463202161" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_action_tree_ext" List.ItemID="-854670740">
+				<state_tree_node name="ActionTree_OpeningBranch" value="squad_infantry_company_root" />
+				<state_tree_node name="ActionTree_CommandBehaviourBranch" value="" />
+				<instance_reference name="default_command_weight" value="" />
+				<instance_reference name="alternate_command_weight" value="" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_targeting_system_ext" List.ItemID="1121937464">
+				<bool name="allow_squad_scan_close_enemies" value="False" />
+				<int name="history_size" value="2" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_speech_ext" List.ItemID="85328192">
+				<string name="squad_speaker_code" value="company_spec_ops_us" />
+				<group name="squad_speech_parameters">
+					<string name="squad_class_code" value="infantry" />
+					<string name="squad_name_code" value="spec_ops" />
+					<string name="squad_unit_code" value="company_spec_ops_us" />
+				</group>
+				<int name="importance" value="1" />
+				<list name="age_mapping">
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_blueprint_ext" List.ItemID="1995767213">
+				<enum_table name="QueryTree_States">
+					<state_tree_node name="squad_state_idle" value="" />
+					<state_tree_node name="squad_state_move" value="squad_query_campaign\Move" />
+					<state_tree_node name="squad_state_attack" value="" />
+					<state_tree_node name="squad_state_gather" value="" />
+					<state_tree_node name="squad_state_gather_food" value="" />
+					<state_tree_node name="squad_state_gather_wood" value="" />
+					<state_tree_node name="squad_state_gather_stone" value="" />
+					<state_tree_node name="squad_state_gather_gold" value="" />
+					<state_tree_node name="squad_state_idle_villager" value="" />
+					<state_tree_node name="squad_state_retreat" value="squad_query_campaign\Retreat" />
+					<state_tree_node name="squad_state_construct" value="" />
+					<state_tree_node name="squad_state_capture" value="" />
+					<state_tree_node name="squad_state_attack_move" value="" />
+					<state_tree_node name="squad_state_set_demolitions" value="" />
+					<state_tree_node name="squad_state_ability" value="" />
+					<state_tree_node name="squad_state_evacuate" value="" />
+				</enum_table>
+				<bool name="browsable_in_editor" value="True" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_node_movement_ext" List.ItemID="-1541040960">
+				<enum_table name="terrain_cost_table">
+					<int name="Plain" value="2" />
+					<int name="Road" value="1" />
+					<int name="Mountain" value="-1" />
+					<int name="Forest" value="2" />
+					<int name="Hill" value="2" />
+					<int name="Ocean" value="-1" />
+					<int name="Coast" value="2" />
+					<int name="MountainPass" value="2" />
+					<int name="SideRoad" value="1" />
+					<int name="Town" value="2" />
+					<int name="River" value="-1" />
+					<int name="Sand" value="2" />
+					<int name="Oasis" value="2" />
+					<int name="Wadi" value="2" />
+					<int name="PontoonBridge" value="1" />
+					<int name="DefensiveLine" value="-1" />
+				</enum_table>
+				<int name="attack_cost" value="1" />
+				<int name="attack_distance" value="3" />
+				<int name="movement_distance" value="1" />
+				<int name="max_movement_point" value="20" />
+				<int name="max_action_point" value="1" />
+				<bool name="can_use_action_point_to_move" value="False" />
+				<state_tree_node name="statetree_node_attack_condition" value="campaign_company_conditions\company_attack_condition" />
+				<enum name="movement_node_combat_engagement_range" value="short" />
+				<float name="attack_rating" value="0" />
+				<float name="defense_rating" value="0" />
+				<state_tree_node name="statetree_node_counter_attack_condition" value="campaign_company_conditions\company_counterattack_condition" />
+				<int name="initiative" value="0" />
+				<state_tree_node name="statetree_node_attachment_attack_assist_condition" value="campaign_company_conditions\attachment_attack_assist_condition" />
+				<state_tree_node name="statetree_node_attachment_counter_attack_assist_condition" value="campaign_company_conditions\attachment_counterattack_assist_condition" />
+				<state_tree_node name="on_assault_statetree" value="" />
+				<int name="dangerous_movement_node_modifier_threat_level" value="5" />
+				<int name="min_attack_distance" value="0" />
+				<bool name="has_buoy_movement" value="False" />
+				<int name="enemy_territory_movement_node_threat_level" value="2" />
+				<bool name="fake_node_movement" value="False" />
+				<state_tree_node name="statetree_node_move_condition" value="campaign_company_conditions\company_move_condition" />
+				<state_tree_node name="statetree_node_load_condition" value="campaign_company_conditions\company_load_condition" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_statemodel_ext" List.ItemID="349230743">
+				<instance_reference name="schema" value="statemodel_schema\campaign\squad_campaign" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_holdable_ext" List.ItemID="689584818">
+				<list name="modifier_table">
+				</list>
+				<state_tree_node name="hold_target_requirement" value="squad_hold_target_queries\campaign_company_hold_target_requirement" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_population_ext" List.ItemID="-1362371300">
+				<float name="personnel_pop" value="6" />
+				<enum_table name="upkeep_per_pop_per_minute_override">
+					<float name="action" value="0" />
+					<float name="command" value="0" />
+					<float name="popcap" value="0" />
+					<float name="fuel" value="0" />
+					<float name="munition" value="0" />
+					<float name="manpower" value="0" />
+					<float name="requisition" value="0" />
+					<float name="ultimate" value="0" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_veterancy_ext" List.ItemID="1108760518">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-360600202">
+						<instance_reference name="ext_key" value="" />
+						<group name="info">
+							<bool name="can_receive_shared_veterancy" value="False" />
+							<float name="max_persistent_squads" value="3" />
+							<enum name="shared_veterancy_type" value="no_sharing" />
+							<list name="veterancy_rank_info">
+								<group name="veterancy_rank" List.ItemID="-1933531199">
+									<float name="veterancy_value" value="250" />
+									<bool name="hide_ingame_veterancy_art" value="False" />
+									<locstring name="screen_name" value="0" />
+									<bool name="single_player_only" value="False" />
+									<group name="state_tree_references">
+										<template_reference name="squad_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="veterancy_level_up_company" />
+										</template_reference>
+										<template_reference name="squad_entity_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="" />
+										</template_reference>
+										<template_reference name="action_non_leader_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="" />
+										</template_reference>
+										<template_reference name="action_leader_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="" />
+										</template_reference>
+									</group>
+									<list name="abilities">
+									</list>
+									<locstring name="brief_text" value="0" />
+								</group>
+								<group name="veterancy_rank" List.ItemID="618628300">
+									<float name="veterancy_value" value="750" />
+									<bool name="hide_ingame_veterancy_art" value="False" />
+									<locstring name="screen_name" value="0" />
+									<bool name="single_player_only" value="False" />
+									<group name="state_tree_references">
+										<template_reference name="squad_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="veterancy_level_up_company" />
+										</template_reference>
+										<template_reference name="squad_entity_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="" />
+										</template_reference>
+										<template_reference name="action_non_leader_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="" />
+										</template_reference>
+										<template_reference name="action_leader_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="" />
+										</template_reference>
+									</group>
+									<list name="abilities">
+									</list>
+									<locstring name="brief_text" value="0" />
+								</group>
+								<group name="veterancy_rank" List.ItemID="1713824480">
+									<float name="veterancy_value" value="1500" />
+									<bool name="hide_ingame_veterancy_art" value="False" />
+									<locstring name="screen_name" value="0" />
+									<bool name="single_player_only" value="False" />
+									<group name="state_tree_references">
+										<template_reference name="squad_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="veterancy_level_up_company" />
+										</template_reference>
+										<template_reference name="squad_entity_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="" />
+										</template_reference>
+										<template_reference name="action_non_leader_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="" />
+										</template_reference>
+										<template_reference name="action_leader_action_tree" value="state_tree_reference_info">
+											<state_tree_node name="ActionTree_OpeningBranch" value="" />
+										</template_reference>
+									</group>
+									<list name="abilities">
+									</list>
+									<locstring name="brief_text" value="0" />
+								</group>
+							</list>
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_resource_ext" List.ItemID="-1748813805">
+				<enum_table name="initial_resources">
+					<float name="action" value="0" />
+					<float name="command" value="0" />
+					<float name="popcap" value="0" />
+					<float name="fuel" value="0" />
+					<float name="munition" value="0" />
+					<float name="manpower" value="0" />
+					<float name="requisition" value="0" />
+					<float name="ultimate" value="0" />
+				</enum_table>
+				<enum_table name="max_resources">
+					<float name="action" value="3.402823E+38" />
+					<float name="command" value="3.402823E+38" />
+					<float name="popcap" value="3.402823E+38" />
+					<float name="fuel" value="3.402823E+38" />
+					<float name="munition" value="3.402823E+38" />
+					<float name="manpower" value="3.402823E+38" />
+					<float name="requisition" value="3.402823E+38" />
+					<float name="ultimate" value="3.402823E+38" />
+				</enum_table>
+				<list name="conditional_incomes">
+				</list>
+				<group name="resource_bar">
+					<enum name="resource_shown" value="" />
+					<instance_reference name="bar_style" value="" />
+				</group>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_paradrop_ext" List.ItemID="332166882">
+				<float name="spawn_time_scatter" value="2" />
+				<float name="distance_between_units" value="3" />
+				<float name="max_scatter_radius" value="1" />
+				<state_tree_node name="on_all_squad_landed_action_tree" value="cmap_aircraft_payload_us\payload_paradrop_run_us\on_landed" />
+				<int name="paradrop_clearance" value="3" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_anvil_mission_loadout_ext" List.ItemID="-1538948286">
+				<enum_table name="starting_squads">
+					<instance_reference name="basic_infantry" value="sbps\races\american\infantry\riflemen_us" />
+					<instance_reference name="elite_infantry" value="sbps\races\american\infantry\ssf_commandos_us" />
+					<instance_reference name="light_vehicle" value="sbps\races\american\vehicles\truck_4x4_us" />
+					<instance_reference name="light_tank" value="sbps\races\american\vehicles\chaffee_us" />
+					<instance_reference name="medium_tank" value="sbps\races\american\vehicles\sherman_us" />
+					<instance_reference name="sniper" value="sbps\races\american\infantry\sniper_us" />
+					<instance_reference name="mortar" value="sbps\races\american\team_weapons\mortar_81mm_us" />
+					<instance_reference name="suppression" value="sbps\races\american\team_weapons\hmg_30cal_us" />
+					<instance_reference name="anti_tank" value="sbps\races\american\team_weapons\at_gun_57mm_us" />
+					<instance_reference name="transport" value="sbps\races\american\vehicles\halftrack_us" />
+					<instance_reference name="default" value="sbps\races\american\infantry\riflemen_us" />
+					<instance_reference name="builder" value="sbps\races\american\infantry\engineer_us" />
+					<instance_reference name="medium_vehicle" value="sbps\races\american\vehicles\greyhound_us" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_health_to_loadout_adjuster_ext" List.ItemID="-934046491">
+				<list name="death_exemption_entities">
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_officer_ext" List.ItemID="1684151618">
+				<int name="max_officer_slots" value="1" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_morale_ext" List.ItemID="-1860063768">
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_board_turn_ext" List.ItemID="-1507476000">
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="204532" />
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+</instance>

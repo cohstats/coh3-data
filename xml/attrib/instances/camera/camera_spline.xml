@@ -1,0 +1,52 @@
+<instance version="5" description="Camera for replaying a spline.&#xD;&#xA;" template="camera">
+	<variant name="default">
+		<uniqueid name="pbgid" value="192198" />
+		<group name="camera_bag">
+			<group name="defaults">
+				<template_reference name="position" value="basic_data_types\vector3">
+					<float name="x" value="0" />
+					<float name="y" value="10" />
+					<float name="z" value="0" />
+				</template_reference>
+				<template_reference name="lookAt" value="basic_data_types\vector3">
+					<float name="x" value="0" />
+					<float name="y" value="10" />
+					<float name="z" value="0" />
+				</template_reference>
+				<float name="fov" value="60" />
+				<bool name="validate_position" value="True" />
+				<float name="clip_near" value="1" />
+				<float name="clip_far" value="100000" />
+				<enum name="projection_mode" value="perspective" />
+				<float name="projection_start_culling_distance" value="95" />
+			</group>
+			<group name="tuning">
+				<group name="input">
+					<float name="distance_rate_wheel" value="1.5" />
+					<float name="distance_rate_wheel_in" value="1" />
+					<float name="distance_rate_wheel_out" value="1" />
+					<float name="tilt_rate_mouse" value="50" />
+					<float name="yaw_rate_mouse" value="50" />
+					<float name="pan_scale_keyboard" value="3" />
+					<float name="pan_scale_screen" value="3" />
+					<float name="pan_scale_mouse" value="3" />
+					<float name="yaw_rate_keyboard" value="1" />
+					<float name="tilt_rate_keyboard" value="1" />
+					<float name="distance_rate_gamepad" value="1.5" />
+					<float name="distance_rate_gamepad_in" value="1" />
+					<float name="distance_rate_gamepad_out" value="1" />
+					<float name="tilt_rate_gamepad" value="4" />
+					<float name="yaw_rate_gamepad" value="4" />
+				</group>
+			</group>
+			<list name="modules">
+				<template_reference name="camera_modules" value="camera_modules\cam_module_spline" List.ItemID="310055177">
+				</template_reference>
+				<template_reference name="camera_modules" value="camera_modules\cam_module_fov" List.ItemID="649065683">
+				</template_reference>
+				<template_reference name="camera_modules" value="camera_modules\cam_module_offset" List.ItemID="964416787">
+				</template_reference>
+			</list>
+		</group>
+	</variant>
+</instance>

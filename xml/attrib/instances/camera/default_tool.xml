@@ -1,0 +1,98 @@
+<instance version="5" description="" template="camera">
+	<variant name="default">
+		<uniqueid name="pbgid" value="165372" />
+		<group name="camera_bag">
+			<group name="defaults">
+				<template_reference name="position" value="basic_data_types\vector3">
+					<float name="x" value="0" />
+					<float name="y" value="10" />
+					<float name="z" value="0" />
+				</template_reference>
+				<template_reference name="lookAt" value="basic_data_types\vector3">
+					<float name="x" value="0" />
+					<float name="y" value="10" />
+					<float name="z" value="0" />
+				</template_reference>
+				<float name="fov" value="30" />
+				<bool name="validate_position" value="True" />
+				<float name="clip_near" value="0.1" />
+				<float name="clip_far" value="100000" />
+				<enum name="projection_mode" value="perspective" />
+				<float name="projection_start_culling_distance" value="100000" />
+			</group>
+			<group name="tuning">
+				<group name="input">
+					<float name="distance_rate_wheel" value="2" />
+					<float name="distance_rate_wheel_in" value="2" />
+					<float name="distance_rate_wheel_out" value="2" />
+					<float name="tilt_rate_mouse" value="100" />
+					<float name="yaw_rate_mouse" value="300" />
+					<float name="pan_scale_keyboard" value="10" />
+					<float name="pan_scale_screen" value="10" />
+					<float name="pan_scale_mouse" value="10" />
+					<float name="yaw_rate_keyboard" value="1" />
+					<float name="tilt_rate_keyboard" value="1" />
+					<float name="distance_rate_gamepad" value="1.5" />
+					<float name="distance_rate_gamepad_in" value="1" />
+					<float name="distance_rate_gamepad_out" value="1" />
+					<float name="tilt_rate_gamepad" value="4" />
+					<float name="yaw_rate_gamepad" value="4" />
+				</group>
+			</group>
+			<list name="modules">
+				<template_reference name="camera_modules" value="camera_modules\cam_module_pan" List.ItemID="751634143">
+					<float name="pan_min_keyboard" value="200" />
+					<float name="pan_min_screen" value="75" />
+					<float name="pan_min_mouse" value="1200" />
+					<float name="pan_accelerate_screen" value="0" />
+					<float name="pan_speed_max_screen" value="75" />
+					<float name="pan_accelerate_keyboard" value="150" />
+					<float name="pan_speed_max_keyboard" value="300" />
+					<group name="smoothing">
+						<template_reference name="spring_keyboard" value="options\none">
+						</template_reference>
+						<template_reference name="spring_mouse" value="options\none">
+						</template_reference>
+						<template_reference name="spring_screen" value="options\none">
+						</template_reference>
+						<template_reference name="spring_minimap" value="options\none">
+						</template_reference>
+						<template_reference name="spring_gamepad" value="options\none">
+						</template_reference>
+					</group>
+					<float name="pan_speed_max_mouse" value="10000" />
+					<float name="pan_distance_factor" value="0.4" />
+					<bool name="lock_xz_plane" value="True" />
+					<float name="pan_min_gamepad" value="1200" />
+					<float name="pan_speed_max_gamepad" value="10000" />
+				</template_reference>
+				<template_reference name="camera_modules" value="camera_modules\cam_module_isometric" List.ItemID="799121055">
+					<group name="defaults">
+						<float name="pitch" value="37" />
+						<float name="distance" value="45" />
+						<float name="yaw" value="90" />
+					</group>
+					<group name="tuning">
+						<float name="distance_min" value="1" />
+						<float name="distance_max" value="5000" />
+						<float name="pitch_min" value="0" />
+						<float name="pitch_max" value="89" />
+						<bool name="enable_pitch_input" value="True" />
+						<bool name="enable_orbit_input" value="True" />
+						<float name="rotation_speed_multiplier" value="17.5" />
+						<group name="smoothing">
+							<template_reference name="spring_distance" value="options\none">
+							</template_reference>
+						</group>
+						<float name="fov" value="48" />
+						<float name="distance_delta_exponent" value="1.025" />
+					</group>
+				</template_reference>
+				<template_reference name="camera_modules" value="camera_modules\cam_module_ground_height" List.ItemID="-740358919">
+					<float name="dist_ground_min" value="0.1" />
+					<bool name="modify_pivot" value="True" />
+				</template_reference>
+			</list>
+		</group>
+	</variant>
+</instance>

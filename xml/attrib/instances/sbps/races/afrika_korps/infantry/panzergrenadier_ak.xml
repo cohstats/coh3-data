@@ -1,0 +1,513 @@
+<instance version="5" description="" template="sbps">
+	<variant name="default">
+		<list name="extensions" removedIds="1503736721, -1932615600">
+			<template_reference name="squadexts" value="sbpextensions\squad_action_apply_ext" List.ItemID="1329116401" List.ParentItemID="1329116401">
+				<list name="action_state_trees">
+					<group name="container" List.ItemID="-1839357883" List.ListAction="Append">
+						<state_tree_node name="state_tree" value="" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_capture_strategic_point_ext" List.ItemID="2104481947" List.ParentItemID="2104481947">
+				<float name="capture_rate_multiplier" value="1.33" overrideParent="True" />
+				<float name="revert_rate_multiplier" value="1" overrideParent="True" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_combat_behaviour_ext" List.ItemID="1298952002" List.ParentItemID="1298952002">
+				<bool name="accept_move_commands_while_combat" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_formation_ext" List.ItemID="27631006" List.ParentItemID="27631006">
+				<group name="squad_distribution_table">
+					<group name="03_soldiers">
+						<float name="units_in_core" value="3" overrideParent="True" />
+						<float name="units_in_scout" value="0" overrideParent="True" />
+					</group>
+					<group name="04_soldiers">
+						<float name="units_in_core" value="4" overrideParent="True" />
+						<float name="units_in_left_flank" value="0" overrideParent="True" />
+						<float name="units_in_right_flank" value="0" overrideParent="True" />
+						<float name="units_in_scout" value="0" overrideParent="True" />
+					</group>
+					<group name="05_soldiers">
+						<float name="units_in_left_flank" value="1" overrideParent="True" />
+						<float name="units_in_right_flank" value="1" overrideParent="True" />
+						<float name="units_in_scout" value="0" overrideParent="True" />
+					</group>
+					<group name="06_soldiers">
+						<float name="units_in_left_flank" value="1" overrideParent="True" />
+						<float name="units_in_right_flank" value="1" overrideParent="True" />
+						<float name="units_in_scout" value="0" overrideParent="True" />
+						<float name="units_in_core" value="4" overrideParent="True" />
+					</group>
+					<group name="02_soldiers">
+						<float name="units_in_core" value="1" overrideParent="True" />
+						<float name="units_in_scout" value="1" overrideParent="True" />
+					</group>
+				</group>
+				<enum_table name="cover_formation_table">
+					<instance_reference name="tp_defcover" value="squad_formations\common\u_panzer_grenadier" overrideParent="True" />
+					<instance_reference name="tp_negative_cover" value="squad_formations\common\u_panzer_grenadier" overrideParent="True" />
+					<instance_reference name="tp_water_cover" value="squad_formations\common\u_panzer_grenadier" overrideParent="True" />
+					<instance_reference name="tp_smoke_cover" value="squad_formations\common\u_panzer_grenadier" overrideParent="True" />
+					<instance_reference name="tp_garrison_cover" value="squad_formations\common\u_panzer_grenadier" overrideParent="True" />
+					<instance_reference name="tp_road_light_cover" value="squad_formations\common\u_panzer_grenadier" overrideParent="True" />
+					<instance_reference name="tp_road_heavy_cover" value="squad_formations\common\u_panzer_grenadier" overrideParent="True" />
+				</enum_table>
+				<enum_table name="moving_cover_formation_override_table">
+					<instance_reference name="tp_defcover" value="squad_formations\common\u_panzer_grenadier" overrideParent="True" />
+					<instance_reference name="tp_negative_cover" value="squad_formations\common\u_panzer_grenadier" overrideParent="True" />
+					<instance_reference name="tp_water_cover" value="squad_formations\common\u_panzer_grenadier" overrideParent="True" />
+					<instance_reference name="tp_smoke_cover" value="squad_formations\common\u_panzer_grenadier" overrideParent="True" />
+					<instance_reference name="tp_garrison_cover" value="squad_formations\common\u_panzer_grenadier" overrideParent="True" />
+					<instance_reference name="tp_road_light_cover" value="squad_formations\common\u_panzer_grenadier" overrideParent="True" />
+					<instance_reference name="tp_road_heavy_cover" value="squad_formations\common\u_panzer_grenadier" overrideParent="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_holdable_ext" List.ItemID="-1249062715" List.ParentItemID="-1249062715">
+				<list name="modifier_table" removedIds="-1863488202">
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_loadout_ext" List.ItemID="-853202734" List.ParentItemID="-853202734">
+				<list name="unit_list">
+					<group name="loadout_data" List.ItemID="-791374396" List.ParentItemID="-791374396">
+						<instance_reference name="type" value="ebps\races\afrika_korps\infantry\panzergrenadier_ak" overrideParent="True" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_population_ext" List.ItemID="1687884963" List.ParentItemID="1687884963">
+				<float name="personnel_pop" value="3" overrideParent="True" />
+				<enum_table name="upkeep_per_pop_per_minute_override">
+					<float name="manpower" value="1.25" overrideParent="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_reinforce_ext" List.ItemID="1352158748" List.ParentItemID="1352158748">
+				<group name="time_cost_percentage">
+					<float name="cost_percentage" value="0.46875" overrideParent="True" />
+					<float name="time_percentage" value="0.667" overrideParent="True" />
+				</group>
+				<group name="ui_info">
+					<locstring name="help_text" value="11153305" overrideParent="True" />
+					<locstring name="screen_name" value="11153295" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_retreat_ext" List.ItemID="296262004" List.ParentItemID="296262004">
+				<list name="retreat_building_types" removedIds="-1660069690">
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_ui_ext" List.ItemID="-1879462299" List.ParentItemID="-1879462299">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-1582085622" List.ParentItemID="-1582085622">
+						<group name="info">
+							<locstring name="extra_text" value="11241756" overrideParent="True" />
+							<locstring name="help_text" value="11242273" overrideParent="True" />
+							<file name="icon_name" value="races\afrika_corps\infantry\panzergrenadier_ak" overrideParent="True" />
+							<locstring name="screen_name" value="11166831" overrideParent="True" />
+							<string name="selection_group" value="panzergrenadier_ger" overrideParent="True" />
+							<file name="portrait_name" value="races\afrika_corps\infantry\panzergrenadier_ak_portrait" overrideParent="True" />
+							<locstring name="brief_text" value="11241998" overrideParent="True" />
+							<file name="symbol_icon_name" value="races\german\symbols\panzer_grenadier_ger" overrideParent="True" />
+							<locstring name="extra_help_text" value="11241756" overrideParent="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_upgrade_ext" List.ItemID="1077567511" List.ParentItemID="1077567511">
+				<list name="upgrades">
+					<instance_reference name="upgrade" value="upgrade\afrika_korps\infantry\lmg_panzergrenadier_ak" List.ItemID="-452313894" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_veterancy_ext" List.ItemID="-1475839438" List.ParentItemID="-1475839438">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-2047223751" List.ParentItemID="-2047223751">
+						<group name="info">
+							<enum name="shared_veterancy_type" value="no_sharing" overrideParent="True" />
+							<list name="veterancy_rank_info">
+								<group name="veterancy_rank" List.ItemID="-789419873" List.ParentItemID="-789419873">
+									<float name="veterancy_value" value="1000" overrideParent="True" />
+									<locstring name="screen_name" value="11153313" overrideParent="True" />
+									<locstring name="brief_text" value="11243460" overrideParent="True" />
+								</group>
+								<group name="veterancy_rank" List.ItemID="2000513804" List.ParentItemID="2000513804">
+									<locstring name="screen_name" value="11153314" overrideParent="True" />
+									<locstring name="brief_text" value="11243203" overrideParent="True" />
+									<float name="veterancy_value" value="3000" overrideParent="True" />
+								</group>
+								<group name="veterancy_rank" List.ItemID="1358881750" List.ParentItemID="1358881750">
+									<float name="veterancy_value" value="7000" overrideParent="True" />
+									<locstring name="screen_name" value="11153315" overrideParent="True" />
+									<locstring name="brief_text" value="11243300" overrideParent="True" />
+								</group>
+							</list>
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_type_ext" List.ItemID="-828273829" List.ParentItemID="-828273829">
+				<list name="squad_type_list">
+					<enum name="squad_type" value="standard_infantry" List.ItemID="760960956" List.ListAction="Append" />
+					<enum name="squad_type" value="panzergrenader_ak" List.ItemID="842057091" List.ListAction="Append" />
+					<enum name="squad_type" value="tier1" List.ItemID="-1409793411" List.ListAction="Append" />
+				</list>
+				<list name="squad_race_type_list" removedIds="-196014147">
+					<instance_reference name="squad_race_type" value="racebps\afrika_korps" List.ItemID="1551315961" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_action_tree_ext" List.ItemID="494367626" List.ParentItemID="494367626">
+				<instance_reference name="alternate_command_weight" value="default_command_weight\deprioritize_ability" overrideParent="True" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_speech_ext" List.ItemID="-1495675653" List.ParentItemID="-1495675653">
+				<string name="squad_speaker_code" value="dak_panzergrenadier" overrideParent="True" />
+				<group name="squad_speech_parameters">
+					<string name="squad_name_code" value="panzergrenadier" overrideParent="True" />
+					<string name="squad_unit_code" value="panzergrenadier_ak" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_inventory_ext" List.ItemID="1456194728" List.ParentItemID="1456194728">
+				<enum_table name="category_capacity">
+					<int name="special" value="5" overrideParent="True" />
+					<int name="upgrade" value="5" overrideParent="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_ability_ext" List.ItemID="-427816430" List.ParentItemID="-427816430">
+				<list name="abilities">
+					<instance_reference name="ability" value="abilities\races\afrika_korps\infantry\anti_tank_grenade_panzergrenadier_ak" List.ItemID="1809713011" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\afrika_korps\infantry\grenade_panzergrenadier_ak" List.ItemID="-1691769585" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\afrika_korps\infantry\rudimentary_repair_ak" List.ItemID="-1510813107" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\afrika_korps\infantry\repair_panzergrenadier_ak" List.ItemID="1222771089" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\afrika_korps\infantry\infantry_combined_arms_panzergrenadier_ak" List.ItemID="-776986662" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\afrika_korps\infantry\counter_attack_passive_ak" List.ItemID="-1675018268" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\afrika_korps\infantry\double_time_ak" List.ItemID="1721777369" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\afrika_korps\infantry\salvage_panzerpioneer_ak" List.ItemID="-1406257478" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\afrika_korps\infantry\focus_fire_panzergrenadiers_ak" List.ItemID="257531431" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\afrika_korps\battlegroups\italian_combined_arms\italian_combined_arms_secured_flanks_ak" List.ItemID="-1583216905" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\afrika_korps\infantry\secured_flanks_ak" List.ItemID="-322219881" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\afrika_korps\infantry\force_recon_ak" List.ItemID="1592385688" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_audio_ext" List.ItemID="1709067478" List.ParentItemID="1709067478">
+				<int name="importance" value="10" overrideParent="True" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_engineer_ext" List.ItemID="1959173547" List.ParentItemID="1959173547">
+				<list name="construction_groups">
+					<group name="construction_group" List.ItemID="1562174388" List.ListAction="Append">
+						<instance_reference name="construction_menu" value="menu\construction" />
+						<list name="construction_items">
+							<group name="construction_item" List.ItemID="-139133001">
+								<instance_reference name="ebp" value="ebps\races\afrika_korps\buildings\defensive\sandbag_wall_panzergrenadier_ak" />
+								<group name="ui_position">
+									<int name="ui_position_row" value="1" />
+									<int name="ui_position_column" value="1" />
+								</group>
+								<list name="associated_ebps">
+								</list>
+							</group>
+							<group name="construction_item" List.ItemID="64295895">
+								<instance_reference name="ebp" value="ebps\races\afrika_korps\buildings\defensive\barbed_wire_reinforced_ak" />
+								<group name="ui_position">
+									<int name="ui_position_row" value="1" />
+									<int name="ui_position_column" value="2" />
+								</group>
+								<list name="associated_ebps">
+								</list>
+							</group>
+							<group name="construction_item" List.ItemID="-1514134118">
+								<instance_reference name="ebp" value="ebps\races\afrika_korps\buildings\defensive\mine_panzergrenadier_ak" />
+								<group name="ui_position">
+									<int name="ui_position_row" value="2" />
+									<int name="ui_position_column" value="1" />
+								</group>
+								<list name="associated_ebps">
+								</list>
+							</group>
+						</list>
+						<enum name="construction_type" value="tp_construction_base" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_breach_ext" List.ItemID="-684080850" List.ParentItemID="-684080850">
+				<group name="door_kicker_animation_start_positions">
+					<template_reference name="forward" value="basic_data_types\vector3">
+						<float name="x" value="0" overrideParent="True" />
+						<float name="z" value="0" overrideParent="True" />
+					</template_reference>
+					<template_reference name="left_45" value="basic_data_types\vector3">
+						<float name="x" value="0" overrideParent="True" />
+						<float name="z" value="0" overrideParent="True" />
+					</template_reference>
+					<template_reference name="right_45" value="basic_data_types\vector3">
+						<float name="x" value="0" overrideParent="True" />
+						<float name="z" value="0" overrideParent="True" />
+					</template_reference>
+					<template_reference name="left_90" value="basic_data_types\vector3">
+						<float name="x" value="0" overrideParent="True" />
+						<float name="z" value="0" overrideParent="True" />
+					</template_reference>
+					<template_reference name="right_90" value="basic_data_types\vector3">
+						<float name="x" value="0" overrideParent="True" />
+						<float name="z" value="0" overrideParent="True" />
+					</template_reference>
+				</group>
+				<group name="executor_animation_start_positions">
+					<template_reference name="forward" value="basic_data_types\vector3">
+						<float name="x" value="0" overrideParent="True" />
+						<float name="z" value="0" overrideParent="True" />
+					</template_reference>
+					<template_reference name="left_45" value="basic_data_types\vector3">
+						<float name="x" value="0" overrideParent="True" />
+						<float name="z" value="0" overrideParent="True" />
+					</template_reference>
+					<template_reference name="left_90" value="basic_data_types\vector3">
+						<float name="x" value="0" overrideParent="True" />
+						<float name="z" value="0" overrideParent="True" />
+					</template_reference>
+					<template_reference name="right_45" value="basic_data_types\vector3">
+						<float name="x" value="0" overrideParent="True" />
+						<float name="z" value="0" overrideParent="True" />
+					</template_reference>
+					<template_reference name="right_90" value="basic_data_types\vector3">
+						<float name="x" value="0" overrideParent="True" />
+						<float name="z" value="0" overrideParent="True" />
+					</template_reference>
+				</group>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="198340" />
+		<instance_reference name="parent_pbg" value="sbps\races\common\parent\infantry_parent" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions" removedIds="1503736721, -1932615600">
+			<template_reference name="squadexts" value="sbpextensions\squad_action_apply_ext" List.ItemID="1329116401" List.ParentItemID="1329116401">
+				<list name="action_state_trees">
+					<group name="container" List.ItemID="-1839357883" List.ListAction="Append">
+						<state_tree_node name="state_tree" value="" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_capture_strategic_point_ext" List.ItemID="2104481947" List.ParentItemID="2104481947">
+				<float name="capture_rate_multiplier" value="1.33" overrideParent="True" />
+				<float name="revert_rate_multiplier" value="1" overrideParent="True" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_combat_behaviour_ext" List.ItemID="1298952002" List.ParentItemID="1298952002">
+				<bool name="accept_move_commands_while_combat" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_formation_ext" List.ItemID="27631006" List.ParentItemID="27631006">
+				<group name="squad_distribution_table">
+					<group name="03_soldiers">
+						<float name="units_in_core" value="3" overrideParent="True" />
+						<float name="units_in_scout" value="0" overrideParent="True" />
+					</group>
+					<group name="04_soldiers">
+						<float name="units_in_core" value="4" overrideParent="True" />
+						<float name="units_in_left_flank" value="0" overrideParent="True" />
+						<float name="units_in_right_flank" value="0" overrideParent="True" />
+						<float name="units_in_scout" value="0" overrideParent="True" />
+					</group>
+					<group name="05_soldiers">
+						<float name="units_in_left_flank" value="1" overrideParent="True" />
+						<float name="units_in_right_flank" value="1" overrideParent="True" />
+						<float name="units_in_scout" value="0" overrideParent="True" />
+					</group>
+					<group name="06_soldiers">
+						<float name="units_in_left_flank" value="1" overrideParent="True" />
+						<float name="units_in_right_flank" value="1" overrideParent="True" />
+						<float name="units_in_scout" value="0" overrideParent="True" />
+						<float name="units_in_core" value="4" overrideParent="True" />
+					</group>
+					<group name="02_soldiers">
+						<float name="units_in_core" value="1" overrideParent="True" />
+						<float name="units_in_scout" value="1" overrideParent="True" />
+					</group>
+				</group>
+				<enum_table name="cover_formation_table">
+					<instance_reference name="tp_defcover" value="squad_formations\common\u_panzer_grenadier" overrideParent="True" />
+					<instance_reference name="tp_negative_cover" value="squad_formations\common\u_panzer_grenadier" overrideParent="True" />
+					<instance_reference name="tp_water_cover" value="squad_formations\common\u_panzer_grenadier" overrideParent="True" />
+					<instance_reference name="tp_smoke_cover" value="squad_formations\common\u_panzer_grenadier" overrideParent="True" />
+					<instance_reference name="tp_garrison_cover" value="squad_formations\common\u_panzer_grenadier" overrideParent="True" />
+					<instance_reference name="tp_road_light_cover" value="squad_formations\common\u_panzer_grenadier" overrideParent="True" />
+					<instance_reference name="tp_road_heavy_cover" value="squad_formations\common\u_panzer_grenadier" overrideParent="True" />
+				</enum_table>
+				<enum_table name="moving_cover_formation_override_table">
+					<instance_reference name="tp_defcover" value="squad_formations\common\u_panzer_grenadier" overrideParent="True" />
+					<instance_reference name="tp_negative_cover" value="squad_formations\common\u_panzer_grenadier" overrideParent="True" />
+					<instance_reference name="tp_water_cover" value="squad_formations\common\u_panzer_grenadier" overrideParent="True" />
+					<instance_reference name="tp_smoke_cover" value="squad_formations\common\u_panzer_grenadier" overrideParent="True" />
+					<instance_reference name="tp_garrison_cover" value="squad_formations\common\u_panzer_grenadier" overrideParent="True" />
+					<instance_reference name="tp_road_light_cover" value="squad_formations\common\u_panzer_grenadier" overrideParent="True" />
+					<instance_reference name="tp_road_heavy_cover" value="squad_formations\common\u_panzer_grenadier" overrideParent="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_holdable_ext" List.ItemID="-1249062715" List.ParentItemID="-1249062715">
+				<list name="modifier_table" removedIds="-1863488202">
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_loadout_ext" List.ItemID="-853202734" List.ParentItemID="-853202734">
+				<list name="unit_list">
+					<group name="loadout_data" List.ItemID="-791374396" List.ParentItemID="-791374396">
+						<instance_reference name="type" value="ebps\races\afrika_korps\infantry\panzergrenadier_ak" overrideParent="True" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_population_ext" List.ItemID="1687884963" List.ParentItemID="1687884963">
+				<float name="personnel_pop" value="3" overrideParent="True" />
+				<enum_table name="upkeep_per_pop_per_minute_override">
+					<float name="manpower" value="1.25" overrideParent="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_reinforce_ext" List.ItemID="1352158748" List.ParentItemID="1352158748">
+				<group name="time_cost_percentage">
+					<float name="cost_percentage" value="0.46875" overrideParent="True" />
+					<float name="time_percentage" value="0.667" overrideParent="True" />
+				</group>
+				<group name="ui_info">
+					<locstring name="help_text" value="11153305" overrideParent="True" />
+					<locstring name="screen_name" value="11153295" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_retreat_ext" List.ItemID="296262004" List.ParentItemID="296262004">
+				<list name="retreat_building_types" removedIds="-1660069690">
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_ui_ext" List.ItemID="-1879462299" List.ParentItemID="-1879462299">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-1582085622" List.ParentItemID="-1582085622">
+						<group name="info">
+							<locstring name="extra_text" value="11241756" overrideParent="True" />
+							<locstring name="help_text" value="11242273" overrideParent="True" />
+							<file name="icon_name" value="races\afrika_corps\infantry\panzergrenadier_ak" overrideParent="True" />
+							<locstring name="screen_name" value="11166831" overrideParent="True" />
+							<string name="selection_group" value="panzergrenadier_ger" overrideParent="True" />
+							<file name="portrait_name" value="races\afrika_corps\infantry\panzergrenadier_ak_portrait" overrideParent="True" />
+							<locstring name="brief_text" value="11241998" overrideParent="True" />
+							<file name="symbol_icon_name" value="races\german\symbols\panzer_grenadier_ger" overrideParent="True" />
+							<locstring name="extra_help_text" value="11241756" overrideParent="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_upgrade_ext" List.ItemID="1077567511" List.ParentItemID="1077567511">
+				<list name="upgrades">
+					<instance_reference name="upgrade" value="upgrade\afrika_korps\infantry\lmg_panzergrenadier_ak" List.ItemID="-452313894" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_veterancy_ext" List.ItemID="-1475839438" List.ParentItemID="-1475839438">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-2047223751" List.ParentItemID="-2047223751">
+						<group name="info">
+							<enum name="shared_veterancy_type" value="no_sharing" overrideParent="True" />
+							<list name="veterancy_rank_info">
+								<group name="veterancy_rank" List.ItemID="-789419873" List.ParentItemID="-789419873">
+									<float name="veterancy_value" value="1000" overrideParent="True" />
+									<locstring name="screen_name" value="11153313" overrideParent="True" />
+									<locstring name="brief_text" value="11243460" overrideParent="True" />
+								</group>
+								<group name="veterancy_rank" List.ItemID="2000513804" List.ParentItemID="2000513804">
+									<locstring name="screen_name" value="11153314" overrideParent="True" />
+									<locstring name="brief_text" value="11243203" overrideParent="True" />
+									<float name="veterancy_value" value="3000" overrideParent="True" />
+								</group>
+								<group name="veterancy_rank" List.ItemID="1358881750" List.ParentItemID="1358881750">
+									<float name="veterancy_value" value="7000" overrideParent="True" />
+									<locstring name="screen_name" value="11153315" overrideParent="True" />
+									<locstring name="brief_text" value="11243300" overrideParent="True" />
+								</group>
+							</list>
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_type_ext" List.ItemID="-828273829" List.ParentItemID="-828273829">
+				<list name="squad_type_list">
+					<enum name="squad_type" value="standard_infantry" List.ItemID="760960956" List.ListAction="Append" />
+					<enum name="squad_type" value="panzergrenader_ak" List.ItemID="842057091" List.ListAction="Append" />
+					<enum name="squad_type" value="tier1" List.ItemID="-1409793411" List.ListAction="Append" />
+				</list>
+				<list name="squad_race_type_list" removedIds="-196014147">
+					<instance_reference name="squad_race_type" value="racebps\afrika_korps" List.ItemID="1551315961" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_action_tree_ext" List.ItemID="494367626" List.ParentItemID="494367626">
+				<instance_reference name="alternate_command_weight" value="default_command_weight\deprioritize_ability" overrideParent="True" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_speech_ext" List.ItemID="-1495675653" List.ParentItemID="-1495675653">
+				<string name="squad_speaker_code" value="dak_panzergrenadier" overrideParent="True" />
+				<group name="squad_speech_parameters">
+					<string name="squad_name_code" value="panzergrenadier" overrideParent="True" />
+					<string name="squad_unit_code" value="panzergrenadier_ak" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_inventory_ext" List.ItemID="1456194728" List.ParentItemID="1456194728">
+				<enum_table name="category_capacity">
+					<int name="special" value="5" overrideParent="True" />
+					<int name="upgrade" value="5" overrideParent="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_ability_ext" List.ItemID="-427816430" List.ParentItemID="-427816430">
+				<list name="abilities">
+					<instance_reference name="ability" value="abilities\races\afrika_korps\infantry\anti_tank_grenade_panzergrenadier_ak" List.ItemID="1809713011" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\afrika_korps\infantry\grenade_panzergrenadier_ak" List.ItemID="-1691769585" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\afrika_korps\infantry\rudimentary_repair_ak" List.ItemID="-1510813107" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\afrika_korps\infantry\repair_panzergrenadier_ak" List.ItemID="1222771089" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\afrika_korps\infantry\infantry_combined_arms_panzergrenadier_ak" List.ItemID="-776986662" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\afrika_korps\infantry\counter_attack_passive_ak" List.ItemID="-1675018268" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\afrika_korps\infantry\double_time_ak" List.ItemID="1721777369" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\afrika_korps\infantry\salvage_panzerpioneer_ak" List.ItemID="-1406257478" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\afrika_korps\infantry\focus_fire_panzergrenadiers_ak" List.ItemID="257531431" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\afrika_korps\battlegroups\italian_combined_arms\italian_combined_arms_secured_flanks_ak" List.ItemID="-1583216905" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\afrika_korps\infantry\secured_flanks_ak" List.ItemID="-322219881" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\afrika_korps\infantry\force_recon_ak" List.ItemID="1592385688" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_audio_ext" List.ItemID="1709067478" List.ParentItemID="1709067478">
+				<int name="importance" value="10" overrideParent="True" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_breach_ext" List.ItemID="-684080850" List.ParentItemID="-684080850">
+				<group name="door_kicker_animation_start_positions">
+					<template_reference name="forward" value="basic_data_types\vector3">
+						<float name="x" value="0" overrideParent="True" />
+						<float name="z" value="0" overrideParent="True" />
+					</template_reference>
+					<template_reference name="left_45" value="basic_data_types\vector3">
+						<float name="x" value="0" overrideParent="True" />
+						<float name="z" value="0" overrideParent="True" />
+					</template_reference>
+					<template_reference name="right_45" value="basic_data_types\vector3">
+						<float name="x" value="0" overrideParent="True" />
+						<float name="z" value="0" overrideParent="True" />
+					</template_reference>
+					<template_reference name="left_90" value="basic_data_types\vector3">
+						<float name="x" value="0" overrideParent="True" />
+						<float name="z" value="0" overrideParent="True" />
+					</template_reference>
+					<template_reference name="right_90" value="basic_data_types\vector3">
+						<float name="x" value="0" overrideParent="True" />
+						<float name="z" value="0" overrideParent="True" />
+					</template_reference>
+				</group>
+				<group name="executor_animation_start_positions">
+					<template_reference name="forward" value="basic_data_types\vector3">
+						<float name="x" value="0" overrideParent="True" />
+						<float name="z" value="0" overrideParent="True" />
+					</template_reference>
+					<template_reference name="left_45" value="basic_data_types\vector3">
+						<float name="x" value="0" overrideParent="True" />
+						<float name="z" value="0" overrideParent="True" />
+					</template_reference>
+					<template_reference name="left_90" value="basic_data_types\vector3">
+						<float name="x" value="0" overrideParent="True" />
+						<float name="z" value="0" overrideParent="True" />
+					</template_reference>
+					<template_reference name="right_45" value="basic_data_types\vector3">
+						<float name="x" value="0" overrideParent="True" />
+						<float name="z" value="0" overrideParent="True" />
+					</template_reference>
+					<template_reference name="right_90" value="basic_data_types\vector3">
+						<float name="x" value="0" overrideParent="True" />
+						<float name="z" value="0" overrideParent="True" />
+					</template_reference>
+				</group>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="198340" />
+		<instance_reference name="parent_pbg" value="sbps\races\common\parent\infantry_parent" />
+	</variant>
+</instance>

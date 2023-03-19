@@ -1,0 +1,48 @@
+<instance version="5" description="6 pounder 57mm anti-tank gun" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-485308748" List.ParentItemID="-485308748">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\british_africa\weapons\cannon_57mm_command_churchill_africa" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_inventory_item_ext" List.ItemID="-552796306" List.ParentItemID="-552796306">
+				<template_reference name="simulation_item" value="sim_inventory_item\sim_inventory_item">
+					<template_reference name="item_data" value="sim_inventory_item\sim_item_data\attachment_inventory_data">
+						<template_reference name="attachment_data" value="options\attachment_types\entity_attachment">
+							<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+								<instance_reference name="ebp" value="ebps\races\british\weapons\ballistic_weapon\tank_gun\w_40mm_churchill_command_uk" overrideParent="True" />
+							</template_reference>
+						</template_reference>
+					</template_reference>
+				</template_reference>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\animation_role_ext" List.ItemID="-1987999535" List.ParentItemID="-1987999535">
+				<instance_reference name="default_role" value="animation_role\vehicle_turret\uk_churchill\vt_churchill_command_turret" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2053852" />
+		<instance_reference name="parent_pbg" value="ebps\races\british\weapons\ballistic_weapon\tank_gun\w_40mm_churchill_uk" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-485308748" List.ParentItemID="-485308748">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\british_africa\weapons\cannon_57mm_command_churchill_africa" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_inventory_item_ext" List.ItemID="-552796306" List.ParentItemID="-552796306">
+				<template_reference name="simulation_item" value="sim_inventory_item\sim_inventory_item">
+					<template_reference name="item_data" value="sim_inventory_item\sim_item_data\attachment_inventory_data">
+						<template_reference name="attachment_data" value="options\attachment_types\entity_attachment">
+							<template_reference name="entity_attach_data" value="attachments\attach_data_entity">
+								<instance_reference name="ebp" value="ebps\races\british\weapons\ballistic_weapon\tank_gun\w_40mm_churchill_command_uk" overrideParent="True" />
+							</template_reference>
+						</template_reference>
+					</template_reference>
+				</template_reference>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\animation_role_ext" List.ItemID="-1987999535" List.ParentItemID="-1987999535">
+				<instance_reference name="default_role" value="animation_role\vehicle_turret\uk_churchill\vt_churchill_command_turret" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2053852" />
+		<instance_reference name="parent_pbg" value="ebps\races\british\weapons\ballistic_weapon\tank_gun\w_40mm_churchill_uk" />
+	</variant>
+</instance>

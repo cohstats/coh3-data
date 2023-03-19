@@ -1,0 +1,258 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1588943975" List.ParentItemID="-1588943975">
+				<file name="alternate_sua" value="art\environment\objects\buildings\italian_gazebo_structure\italian_gazebo_structure_1piece" overrideParent="True" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\objects\buildings\italian_gazebo_structure_01" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-844435906" List.ParentItemID="-844435906">
+				<float name="hitpoints" value="100000" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="1239090663" List.ParentItemID="1239090663">
+				<float name="hit_chance" value="1" overrideParent="True" />
+				<enum name="projectile_collision_check_type" value="internal_simboxes_only" overrideParent="True" />
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" List.ItemID="-2116666765" List.ParentItemID="-2116666765">
+				<group name="impass_simboxes">
+					<bool name="default_simbox" value="False" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\crushee_ext" List.ItemID="4947737" List.ParentItemID="4947737">
+				<bool name="destroy_on_crush" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\wall_ext" List.ItemID="1666834939" List.ListAction="Append">
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\destructible_cell_ext" List.ItemID="-119168508" List.ListAction="Append">
+				<list name="cells">
+					<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="310942778">
+						<float name="max_health" value="200" overrideParent="True" />
+						<list name="supporting_cells">
+						</list>
+						<file name="animator" value="art\environment\objects\buildings\italian_gazebo_01\italian_gazebo_01" />
+						<string name="attachment_marker" value="loc_gazebo_01_a" />
+						<string name="combat_slot_marker" value="" />
+						<instance_reference name="hit_material" value="" />
+						<bool name="use_as_impass_blocker" value="True" overrideParent="True" />
+						<string name="cell_preset" value="" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+						<list name="customizations">
+						</list>
+					</template_reference>
+					<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1379483991">
+						<float name="max_health" value="200" overrideParent="True" />
+						<list name="supporting_cells">
+						</list>
+						<file name="animator" value="art\environment\objects\buildings\italian_gazebo_02\italian_gazebo_02" />
+						<string name="attachment_marker" value="loc_gazebo_01_a" />
+						<string name="combat_slot_marker" value="" />
+						<instance_reference name="hit_material" value="" />
+						<bool name="use_as_impass_blocker" value="True" overrideParent="True" />
+						<string name="cell_preset" value="" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+						<list name="customizations">
+						</list>
+					</template_reference>
+					<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1898215490">
+						<float name="max_health" value="200" overrideParent="True" />
+						<list name="supporting_cells">
+						</list>
+						<file name="animator" value="art\environment\objects\buildings\italian_gazebo_03\italian_gazebo_03" />
+						<string name="attachment_marker" value="loc_gazebo_01_a" />
+						<string name="combat_slot_marker" value="" />
+						<instance_reference name="hit_material" value="" />
+						<bool name="use_as_impass_blocker" value="True" overrideParent="True" />
+						<string name="cell_preset" value="" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+						<list name="customizations">
+						</list>
+					</template_reference>
+					<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1428136737">
+						<float name="max_health" value="200" overrideParent="True" />
+						<list name="supporting_cells">
+						</list>
+						<file name="animator" value="art\environment\objects\buildings\italian_gazebo_01\italian_gazebo_01" />
+						<string name="attachment_marker" value="loc_gazebo_01_b" />
+						<string name="combat_slot_marker" value="" />
+						<instance_reference name="hit_material" value="" />
+						<bool name="use_as_impass_blocker" value="True" overrideParent="True" />
+						<string name="cell_preset" value="" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+						<list name="customizations">
+						</list>
+					</template_reference>
+					<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="242992345">
+						<float name="max_health" value="200" overrideParent="True" />
+						<list name="supporting_cells">
+						</list>
+						<file name="animator" value="art\environment\objects\buildings\italian_gazebo_02\italian_gazebo_02" />
+						<string name="attachment_marker" value="loc_gazebo_01_b" />
+						<string name="combat_slot_marker" value="" />
+						<instance_reference name="hit_material" value="" />
+						<bool name="use_as_impass_blocker" value="True" overrideParent="True" />
+						<string name="cell_preset" value="" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+						<list name="customizations">
+						</list>
+					</template_reference>
+				</list>
+				<list name="dca_initialization">
+				</list>
+				<list name="cell_presets">
+				</list>
+				<group name="core_cells">
+					<int name="num_core_cells" value="0" />
+				</group>
+				<group name="combat_slot_behaviour_info">
+					<float name="indestructible_combatslot_layer_vertical_offset_begin" value="-0.5" />
+					<float name="indestructible_combatslot_layer_vertical_width" value="2" />
+					<bool name="occupants_killed_on_cell_destruction" value="False" />
+				</group>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="194006" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\object_path_blocker" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-1588943975" List.ParentItemID="-1588943975">
+				<file name="alternate_sua" value="art\environment\objects\buildings\italian_gazebo_structure\italian_gazebo_structure_1piece" overrideParent="True" />
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\objects\buildings\italian_gazebo_structure_01" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="-844435906" List.ParentItemID="-844435906">
+				<float name="hitpoints" value="100000" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="1239090663" List.ParentItemID="1239090663">
+				<float name="hit_chance" value="1" overrideParent="True" />
+				<enum name="projectile_collision_check_type" value="internal_simboxes_only" overrideParent="True" />
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" List.ItemID="-2116666765" List.ParentItemID="-2116666765">
+				<group name="impass_simboxes">
+					<bool name="default_simbox" value="False" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\crushee_ext" List.ItemID="4947737" List.ParentItemID="4947737">
+				<bool name="destroy_on_crush" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\wall_ext" List.ItemID="1666834939" List.ListAction="Append">
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\destructible_cell_ext" List.ItemID="-119168508" List.ListAction="Append">
+				<list name="cells">
+					<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="310942778">
+						<float name="max_health" value="200" overrideParent="True" />
+						<list name="supporting_cells">
+						</list>
+						<file name="animator" value="art\environment\objects\buildings\italian_gazebo_01\italian_gazebo_01" />
+						<string name="attachment_marker" value="loc_gazebo_01_a" />
+						<string name="combat_slot_marker" value="" />
+						<instance_reference name="hit_material" value="" />
+						<bool name="use_as_impass_blocker" value="True" overrideParent="True" />
+						<string name="cell_preset" value="" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+						<list name="customizations">
+						</list>
+					</template_reference>
+					<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1379483991">
+						<float name="max_health" value="200" overrideParent="True" />
+						<list name="supporting_cells">
+						</list>
+						<file name="animator" value="art\environment\objects\buildings\italian_gazebo_02\italian_gazebo_02" />
+						<string name="attachment_marker" value="loc_gazebo_01_a" />
+						<string name="combat_slot_marker" value="" />
+						<instance_reference name="hit_material" value="" />
+						<bool name="use_as_impass_blocker" value="True" overrideParent="True" />
+						<string name="cell_preset" value="" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+						<list name="customizations">
+						</list>
+					</template_reference>
+					<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1898215490">
+						<float name="max_health" value="200" overrideParent="True" />
+						<list name="supporting_cells">
+						</list>
+						<file name="animator" value="art\environment\objects\buildings\italian_gazebo_03\italian_gazebo_03" />
+						<string name="attachment_marker" value="loc_gazebo_01_a" />
+						<string name="combat_slot_marker" value="" />
+						<instance_reference name="hit_material" value="" />
+						<bool name="use_as_impass_blocker" value="True" overrideParent="True" />
+						<string name="cell_preset" value="" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+						<list name="customizations">
+						</list>
+					</template_reference>
+					<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="1428136737">
+						<float name="max_health" value="200" overrideParent="True" />
+						<list name="supporting_cells">
+						</list>
+						<file name="animator" value="art\environment\objects\buildings\italian_gazebo_01\italian_gazebo_01" />
+						<string name="attachment_marker" value="loc_gazebo_01_b" />
+						<string name="combat_slot_marker" value="" />
+						<instance_reference name="hit_material" value="" />
+						<bool name="use_as_impass_blocker" value="True" overrideParent="True" />
+						<string name="cell_preset" value="" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+						<list name="customizations">
+						</list>
+					</template_reference>
+					<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="242992345">
+						<float name="max_health" value="200" overrideParent="True" />
+						<list name="supporting_cells">
+						</list>
+						<file name="animator" value="art\environment\objects\buildings\italian_gazebo_02\italian_gazebo_02" />
+						<string name="attachment_marker" value="loc_gazebo_01_b" />
+						<string name="combat_slot_marker" value="" />
+						<instance_reference name="hit_material" value="" />
+						<bool name="use_as_impass_blocker" value="True" overrideParent="True" />
+						<string name="cell_preset" value="" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+						<list name="customizations">
+						</list>
+					</template_reference>
+				</list>
+				<list name="dca_initialization">
+				</list>
+				<list name="cell_presets">
+				</list>
+				<group name="core_cells">
+					<int name="num_core_cells" value="0" />
+				</group>
+				<group name="combat_slot_behaviour_info">
+					<float name="indestructible_combatslot_layer_vertical_offset_begin" value="-0.5" />
+					<float name="indestructible_combatslot_layer_vertical_width" value="2" />
+					<bool name="occupants_killed_on_cell_destruction" value="False" />
+				</group>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="194006" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\object_path_blocker" />
+	</variant>
+</instance>

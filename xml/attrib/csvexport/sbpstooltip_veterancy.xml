@@ -1,0 +1,23 @@
+<tuningtemplate csvfilename = "sbpstooltip_veterancy.csv" template="sbps" pathregex="^sbps" createnewlocstringsonimport="true" exportlocstringastext="true">
+	<columns>
+		<attribute columnname="vet_brief_text">
+			<query name="default">
+				<query name="extensions">
+					<query name="squad_veterancy_ext">
+						<query name="race_list">
+							<query name="race_data" rowset="race_data" usename="false">
+								<query name="info">
+									<query name="veterancy_rank_info">
+										<query name="veterancy_rank" rowset="veterancy_rank" usename="false">
+											<value name="brief_text" />
+										</query>
+									</query>
+								</query>
+							</query>
+						</query>
+					</query>
+				</query>
+			</query>
+		</attribute>
+	</columns>
+</tuningtemplate>

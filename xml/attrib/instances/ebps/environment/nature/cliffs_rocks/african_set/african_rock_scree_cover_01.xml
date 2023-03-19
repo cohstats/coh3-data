@@ -1,0 +1,130 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions" removedIds="-150978377">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-112477501" List.ParentItemID="-112477501">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\nature\cliffs_rocks\african_set\african_rock_scree_cover_01" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" comment="Making all these rocks invincible!" List.ItemID="-1655736512" List.ParentItemID="-1655736512">
+				<float name="hitpoints" value="350" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="-1702320986" List.ParentItemID="-1702320986">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_artillery" value="False" overrideParent="True" />
+						<bool name="tp_piercing_blockers_only" value="False" overrideParent="True" />
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" List.ItemID="-27317073" List.ParentItemID="-27317073">
+				<list name="block_path" removedIds="1526548506">
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_light" List.ItemID="-464749874" List.ListAction="Append" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_medium" List.ItemID="1079740656" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\crushee_ext" List.ItemID="-430337570" List.ParentItemID="-430337570">
+				<enum name="min_crush_mode" value="crush_heavy" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-117130769" List.ParentItemID="-117130769">
+				<bool name="ap_killed_kicker" value="True" overrideParent="True" />
+				<bool name="ap_loss_kicker" value="True" overrideParent="True" />
+				<enum name="decorator_visibility" value="hidden" overrideParent="True" />
+				<bool name="use_combat_range_on_selection" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="-624070910" List.ListAction="Append">
+				<string name="speaker_code" value="" />
+				<group name="speech_parameters">
+					<string name="class_code" value="" />
+					<string name="name_code" value="" />
+					<string name="unit_code" value="" />
+				</group>
+				<int name="importance" value="1" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\obj_cover_ext" List.ItemID="538740580" List.ListAction="Append">
+				<enum name="cover_type" value="tp_heavy_cover" />
+				<bool name="is_cover_directional" value="True" />
+				<bool name="is_shoot_through" value="False" />
+				<bool name="use_simbox_range" value="True" />
+				<bool name="absorb_explosions" value="False" />
+				<bool name="generate_cover_spots" value="True" />
+				<bool name="absorb_non_damaging_shots_and_their_on_penetrated_actions" value="False" />
+				<template_reference name="additional_sim_box_option" value="options\none">
+				</template_reference>
+				<bool name="block_enemy_path" value="False" />
+				<bool name="always_block_shoot_through_projectiles" value="False" />
+				<bool name="start_enabled" value="True" />
+				<float name="cover_spot_distance_from_simbox" value="0.25" />
+				<float name="cover_spot_width" value="1.75" />
+				<float name="cover_hit_hox_expansion_amount" value="0" />
+				<enum name="terrain_cover_type" value="" />
+				<bool name="is_solid_cover_object" value="False" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2058776" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\object_shot_blocker_uncrushable" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions" removedIds="-150978377">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-112477501" List.ParentItemID="-112477501">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\nature\cliffs_rocks\african_set\african_rock_scree_cover_01" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" comment="Making all these rocks invincible!" List.ItemID="-1655736512" List.ParentItemID="-1655736512">
+				<float name="hitpoints" value="350" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="-1702320986" List.ParentItemID="-1702320986">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_artillery" value="False" overrideParent="True" />
+						<bool name="tp_piercing_blockers_only" value="False" overrideParent="True" />
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" List.ItemID="-27317073" List.ParentItemID="-27317073">
+				<list name="block_path" removedIds="1526548506">
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_light" List.ItemID="-464749874" List.ListAction="Append" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_medium" List.ItemID="1079740656" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\crushee_ext" List.ItemID="-430337570" List.ParentItemID="-430337570">
+				<enum name="min_crush_mode" value="crush_heavy" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="-117130769" List.ParentItemID="-117130769">
+				<bool name="ap_killed_kicker" value="True" overrideParent="True" />
+				<bool name="ap_loss_kicker" value="True" overrideParent="True" />
+				<enum name="decorator_visibility" value="hidden" overrideParent="True" />
+				<bool name="use_combat_range_on_selection" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="-624070910" List.ListAction="Append">
+				<string name="speaker_code" value="" />
+				<group name="speech_parameters">
+					<string name="class_code" value="" />
+					<string name="name_code" value="" />
+					<string name="unit_code" value="" />
+				</group>
+				<int name="importance" value="1" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\obj_cover_ext" List.ItemID="538740580" List.ListAction="Append">
+				<enum name="cover_type" value="tp_heavy_cover" />
+				<bool name="is_cover_directional" value="True" />
+				<bool name="is_shoot_through" value="False" />
+				<bool name="use_simbox_range" value="True" />
+				<bool name="absorb_explosions" value="False" />
+				<bool name="generate_cover_spots" value="True" />
+				<bool name="absorb_non_damaging_shots_and_their_on_penetrated_actions" value="False" />
+				<template_reference name="additional_sim_box_option" value="options\none">
+				</template_reference>
+				<bool name="block_enemy_path" value="False" />
+				<bool name="always_block_shoot_through_projectiles" value="False" />
+				<bool name="start_enabled" value="True" />
+				<float name="cover_spot_distance_from_simbox" value="0.25" />
+				<float name="cover_spot_width" value="1.75" />
+				<float name="cover_hit_hox_expansion_amount" value="0" />
+				<enum name="terrain_cover_type" value="" />
+				<bool name="is_solid_cover_object" value="False" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2058776" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\object_shot_blocker_uncrushable" />
+	</variant>
+</instance>

@@ -1,0 +1,112 @@
+<instance version="5" description="Pak 40 anti-tank gun, used by the AT gun squad." template="weapon">
+	<variant name="default">
+		<group name="weapon_bag">
+			<group name="moving">
+				<float name="moving_end_time" value="0.75" overrideParent="True" />
+				<float name="moving_start_time" value="0.6" overrideParent="True" />
+			</group>
+			<group name="setup">
+				<float name="duration" value="1.5" overrideParent="True" />
+			</group>
+			<group name="teardown">
+				<float name="duration" value="1" overrideParent="True" />
+			</group>
+			<group name="tracking">
+				<group name="normal">
+					<float name="max_down" value="-90" overrideParent="True" />
+				</group>
+			</group>
+			<group name="height_bonuses">
+				<group name="height_advantage">
+					<group name="multipliers">
+						<float name="accuracy_multiplier" value="1.1" overrideParent="True" />
+					</group>
+					<bool name="negates_cover" value="True" overrideParent="True" />
+				</group>
+				<group name="height_disadvantage">
+					<float name="height_threshold" value="4.5" overrideParent="True" />
+				</group>
+			</group>
+			<group name="deflection">
+				<bool name="has_deflection_damage" value="False" overrideParent="True" />
+			</group>
+			<group name="accuracy">
+				<float name="near" value="0.075" overrideParent="True" />
+				<float name="far" value="0.04" overrideParent="True" />
+				<float name="mid" value="0.045" overrideParent="True" />
+			</group>
+			<group name="range">
+				<group name="distance">
+					<float name="near" value="15" overrideParent="True" />
+				</group>
+			</group>
+			<group name="aim">
+				<group name="fire_aim_time">
+					<float name="max" value="0.5" overrideParent="True" />
+					<float name="min" value="0.5" overrideParent="True" />
+				</group>
+				<group name="ready_aim_time">
+					<float name="max" value="0.125" overrideParent="True" />
+					<float name="min" value="0.125" overrideParent="True" />
+				</group>
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="197134" />
+		<instance_reference name="parent_pbg" value="weapon\german\ballistic_weapon\anti_tank_gun\75mm_at_gun_ger" />
+	</variant>
+	<variant name="sp">
+		<group name="weapon_bag">
+			<group name="moving">
+				<float name="moving_end_time" value="0.75" overrideParent="True" />
+				<float name="moving_start_time" value="0.6" overrideParent="True" />
+			</group>
+			<group name="setup">
+				<float name="duration" value="1.5" overrideParent="True" />
+			</group>
+			<group name="teardown">
+				<float name="duration" value="1" overrideParent="True" />
+			</group>
+			<group name="tracking">
+				<group name="normal">
+					<float name="max_down" value="-90" overrideParent="True" />
+				</group>
+			</group>
+			<group name="height_bonuses">
+				<group name="height_advantage">
+					<group name="multipliers">
+						<float name="accuracy_multiplier" value="1.1" overrideParent="True" />
+					</group>
+					<bool name="negates_cover" value="True" overrideParent="True" />
+				</group>
+				<group name="height_disadvantage">
+					<float name="height_threshold" value="4.5" overrideParent="True" />
+				</group>
+			</group>
+			<group name="deflection">
+				<bool name="has_deflection_damage" value="False" overrideParent="True" />
+			</group>
+			<group name="accuracy">
+				<float name="near" value="0.075" overrideParent="True" />
+				<float name="far" value="0.04" overrideParent="True" />
+				<float name="mid" value="0.045" overrideParent="True" />
+			</group>
+			<group name="range">
+				<group name="distance">
+					<float name="near" value="15" overrideParent="True" />
+				</group>
+			</group>
+			<group name="aim">
+				<group name="fire_aim_time">
+					<float name="max" value="0.5" overrideParent="True" />
+					<float name="min" value="0.5" overrideParent="True" />
+				</group>
+				<group name="ready_aim_time">
+					<float name="max" value="0.125" overrideParent="True" />
+					<float name="min" value="0.125" overrideParent="True" />
+				</group>
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="197134" />
+		<instance_reference name="parent_pbg" value="weapon\german\ballistic_weapon\anti_tank_gun\75mm_at_gun_ger" />
+	</variant>
+</instance>

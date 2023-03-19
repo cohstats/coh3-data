@@ -1,0 +1,41 @@
+<instance version="5" description="" template="ai\ai_personality">
+	<variant name="default">
+		<group name="ai_personality_bag">
+			<enum_table name="difficulty">
+				<template_reference name="easy" value="ai\ai_personality_per_difficulty_info">
+					<file name="lua_script" value="anvil_default_missions" />
+					<instance_reference name="settings" value="ai\ai_settings\default_ai_settings" />
+					<instance_reference name="economy" value="ai\ai_economy_group\default_skirmish" />
+					<state_tree_node name="planner_statetree_node" value="ai_skirmish_default" />
+					<state_tree_node name="strategizer_statetree_node" value="ai_strategy_default" />
+					<instance_reference name="statemodel_tunings" value="" />
+				</template_reference>
+				<template_reference name="standard" value="ai\ai_personality_per_difficulty_info">
+					<file name="lua_script" value="anvil_default_missions" />
+					<instance_reference name="settings" value="ai\ai_settings\default_ai_settings" />
+					<instance_reference name="economy" value="ai\ai_economy_group\default_skirmish" />
+					<state_tree_node name="planner_statetree_node" value="ai_skirmish_default" />
+					<state_tree_node name="strategizer_statetree_node" value="ai_strategy_default" />
+					<instance_reference name="statemodel_tunings" value="" />
+				</template_reference>
+				<template_reference name="hard" value="ai\ai_personality_per_difficulty_info">
+					<file name="lua_script" value="anvil_default_missions" />
+					<instance_reference name="settings" value="ai\ai_settings\default_ai_settings" />
+					<instance_reference name="economy" value="ai\ai_economy_group\default_skirmish" />
+					<state_tree_node name="planner_statetree_node" value="ai_skirmish_default" />
+					<state_tree_node name="strategizer_statetree_node" value="ai_strategy_default" />
+					<instance_reference name="statemodel_tunings" value="" />
+				</template_reference>
+				<template_reference name="expert" value="ai\ai_personality_per_difficulty_info">
+					<file name="lua_script" value="anvil_default_missions" />
+					<instance_reference name="settings" value="ai\ai_settings\default_ai_settings" />
+					<instance_reference name="economy" value="ai\ai_economy_group\default_skirmish" />
+					<state_tree_node name="planner_statetree_node" value="ai_skirmish_default" />
+					<state_tree_node name="strategizer_statetree_node" value="ai_strategy_default" />
+					<instance_reference name="statemodel_tunings" value="" />
+				</template_reference>
+			</enum_table>
+		</group>
+		<uniqueid name="pbgid" value="201430" />
+	</variant>
+</instance>

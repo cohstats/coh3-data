@@ -1,0 +1,108 @@
+<instance version="5" description="" template="worldbp">
+	<variant name="default">
+		<list name="modules">
+			<template_reference name="world_modules" value="world_modules\globalstatetree_module" List.ItemID="-978820275">
+			</template_reference>
+			<template_reference name="world_modules" value="world_modules\territory_module" List.ItemID="402048000">
+				<bool name="show_enemy_territory_minimap" value="False" />
+				<bool name="show_enemy_territory_multiplayer" value="False" />
+				<bool name="show_enemy_territory_singleplayer" value="True" />
+				<enum name="territory_type" value="SupplyRoad" />
+				<float name="min_polygon_simplification_distance_threshold" value="0" />
+				<float name="conforming_square_to_preserve_side_length_meters" value="9" />
+				<bool name="merge_frontlines" value="True" />
+				<bool name="territory_sectors_check_fow" value="False" />
+				<enum name="territory_fow_reveal_type" value="friendly" />
+				<group name="neutral_territory_effects">
+					<bool name="hide_surrounded_neutral_territories" value="True" />
+					<float name="surrounded_requirement" value="0.6" />
+				</group>
+				<bool name="use_override_territory_visual" value="True" />
+				<bool name="render_territory_sector_texture" value="False" />
+			</template_reference>
+			<template_reference name="world_modules" value="world_modules\movement_node_module" List.ItemID="2019748247">
+				<float name="movement_node_search_radius" value="5" />
+				<bool name="path_around_obstacles" value="True" />
+				<float name="node_width" value="3" />
+				<string name="meta_data_map_skirmish_layer_name" value="SkirmishMap" />
+				<int name="low_cost_cut_off" value="3" />
+				<float name="zone_of_control_radius" value="5" />
+				<string name="meta_data_map_supply_road_layer_name" value="SupplyRoad" />
+				<bool name="visual_outside_move_range" value="False" />
+				<int name="max_steps_out_of_range" value="4" />
+				<bool name="show_danger_cursor" value="False" />
+				<bool name="zone_of_control_blocks_movement" value="False" />
+				<bool name="zone_of_control_blocks_supply" value="False" />
+				<enum_table name="supply_impass">
+					<bool name="Plain" value="True" />
+					<bool name="Road" value="True" />
+					<bool name="Mountain" value="True" />
+					<bool name="Forest" value="True" />
+					<bool name="Hill" value="True" />
+					<bool name="Ocean" value="True" />
+					<bool name="Coast" value="True" />
+					<bool name="MountainPass" value="True" />
+					<bool name="SideRoad" value="True" />
+					<bool name="Town" value="True" />
+					<bool name="River" value="False" />
+					<bool name="Sand" value="True" />
+					<bool name="Oasis" value="True" />
+					<bool name="Wadi" value="True" />
+					<bool name="PontoonBridge" value="True" />
+					<bool name="DefensiveLine" value="True" />
+				</enum_table>
+				<int name="reinforcement_range" value="5" />
+				<group name="visual_bags">
+					<instance_reference name="ability_invalid" value="ui_territory\ability_invalid" />
+					<instance_reference name="movement_range" value="ui_territory\movement" />
+					<instance_reference name="selection_ally" value="ui_territory\ally_capturable" />
+					<instance_reference name="selection_enemy" value="ui_territory\enemy_capturable" />
+					<instance_reference name="ability_valid" value="ui_territory\ability_normal" />
+					<instance_reference name="ability_range" value="ui_territory\movement" />
+					<instance_reference name="zoc_visual" value="ui_territory\ability_invalid" />
+				</group>
+				<bool name="apply_smoothing_to_hex_visual" value="False" />
+				<bool name="show_selection_visual" value="False" />
+				<bool name="segment_movement_traversal_visual" value="False" />
+				<bool name="use_hex_distance_for_abilities" value="False" />
+				<float name="buoy_reticule_radius" value="2" />
+				<bool name="show_friendly_zoc_visual" value="False" />
+				<bool name="show_enemy_zoc_visual" value="True" />
+			</template_reference>
+			<template_reference name="world_modules" value="world_modules\turn_module" List.ItemID="-1620875667">
+				<float name="sim_rate_multiplier" value="16" />
+			</template_reference>
+			<template_reference name="world_modules" value="world_modules\basic_fog_of_war_module" List.ItemID="130906093">
+				<string name="painted_fow_visibility_layer_name" value="" />
+				<enum name="painted_visible_layer" value="visible" />
+				<enum name="painted_explored_layer" value="explored" />
+				<enum name="painted_shroud_effect_layer" value="sight_plus_shroud" />
+				<int name="resolution_scale" value="1" />
+			</template_reference>
+			<template_reference name="world_modules" value="world_modules\entity_visibility_module" List.ItemID="-2021879524">
+			</template_reference>
+			<template_reference name="world_modules" value="world_modules\town_module" List.ItemID="-1475260804">
+				<string name="meta_data_map_layer_name" value="TownArea" />
+				<enum name="mission_initiator" value="campaign_combatant" />
+			</template_reference>
+			<template_reference name="world_modules" value="world_modules\narrative_influence_module" List.ItemID="-1477143929">
+				<list name="narrative_influence_characters">
+					<instance_reference name="narrative_influence_character" value="narrative_influence\narrative_influence_character\buckram" List.ItemID="644216175" />
+					<instance_reference name="narrative_influence_character" value="narrative_influence\narrative_influence_character\norton" List.ItemID="1945835128" />
+					<instance_reference name="narrative_influence_character" value="narrative_influence\narrative_influence_character\valenti" List.ItemID="-1770058368" />
+				</list>
+			</template_reference>
+			<template_reference name="world_modules" value="world_modules\narrative_action_director_module" List.ItemID="1214099043">
+				<int name="max_player_load" value="4" />
+			</template_reference>
+			<template_reference name="world_modules" value="world_modules\narrative_variable_module" List.ItemID="1097263885">
+			</template_reference>
+			<template_reference name="world_modules" value="world_modules\officer_module" List.ItemID="32743243">
+				<list name="officers">
+				</list>
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="204968" />
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+</instance>

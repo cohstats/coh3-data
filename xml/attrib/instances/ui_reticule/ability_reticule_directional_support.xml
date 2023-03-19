@@ -1,0 +1,45 @@
+<instance version="5" description="" template="ui_reticule">
+	<variant name="default">
+		<group name="ui_reticule_bag">
+			<template_reference name="data" value="tables\ui_reticule_placement_data">
+				<float name="thickness" value="0.32" />
+				<colour name="diffuse" value="4288413488" />
+				<float name="subdivision_size" value="1" />
+				<file name="texture" value="selection\selection_solid_line" />
+				<file name="texture_invalid" value="selection\selection_solid_line" />
+				<float name="tile" value="7" />
+				<group name="directional_data">
+					<float name="ratio_height" value="1" />
+					<float name="ratio_width" value="0.5" />
+					<file name="texture" value="targeting\reticle_directional_arrow" />
+					<float name="tile" value="4" />
+					<file name="texture_invalid" value="targeting\reticle_directional_arrow" />
+					<bool name="is_optional" value="False" />
+				</group>
+				<bool name="can_drag_scale" value="False" />
+				<bool name="center_at_origin" value="True" />
+				<bool name="show_if_has_facing" value="True" />
+			</template_reference>
+			<group name="map">
+				<colour name="colour" value="16711680" />
+			</group>
+			<group name="retention">
+				<int name="strobe_count" value="3" />
+				<float name="strobe_seconds_on" value="0.2" />
+				<float name="strobe_seconds_off" value="0.2" />
+				<float name="strobe_alpha_on" value="1" />
+				<float name="strobe_alpha_off" value="0.2" />
+			</group>
+			<group name="easing">
+				<float name="speed" value="0" />
+				<float name="factor" value="10" />
+			</group>
+			<group name="pulsing">
+				<float name="pulse_alpha_off" value="0.8" />
+				<float name="pulse_alpha_on" value="1" />
+				<float name="pulse_seconds" value="3" />
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="2125644" />
+	</variant>
+</instance>

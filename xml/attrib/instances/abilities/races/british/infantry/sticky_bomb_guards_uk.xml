@@ -1,0 +1,46 @@
+<instance version="5" description="" template="abilities">
+	<variant name="default">
+		<group name="ability_bag">
+			<float name="caster_close_in_distance" value="5" overrideParent="True" />
+			<enum_table name="cost_to_player">
+				<float name="munition" value="30" overrideParent="True" />
+			</enum_table>
+			<bool name="facing_ignore" value="True" overrideParent="True" />
+			<group name="ui_info">
+				<file name="icon_name" value="common\upgrades\sticky_bomb_riflemen_us" overrideParent="True" />
+				<locstring name="screen_name" value="11154316" overrideParent="True" />
+				<locstring name="brief_text" value="11240623" overrideParent="True" />
+			</group>
+			<instance_reference name="ability_category" value="" overrideParent="True" />
+			<bool name="always_refund_cost_if_failed" value="True" overrideParent="True" />
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_squad_tree" value="" overrideParent="True" />
+				<state_tree_node name="ability_activate_entity_tree" value="sticky_bomb_riflemen_us" overrideParent="True" />
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="203811" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\infantry\single_target_anti_tank_subtypes\single_target_anti_tank_grenade_parent" />
+	</variant>
+	<variant name="sp">
+		<group name="ability_bag">
+			<float name="caster_close_in_distance" value="5" overrideParent="True" />
+			<enum_table name="cost_to_player">
+				<float name="munition" value="30" overrideParent="True" />
+			</enum_table>
+			<bool name="facing_ignore" value="True" overrideParent="True" />
+			<group name="ui_info">
+				<file name="icon_name" value="common\upgrades\sticky_bomb_riflemen_us" overrideParent="True" />
+				<locstring name="screen_name" value="11154316" overrideParent="True" />
+				<locstring name="brief_text" value="11240623" overrideParent="True" />
+			</group>
+			<instance_reference name="ability_category" value="" overrideParent="True" />
+			<bool name="always_refund_cost_if_failed" value="True" overrideParent="True" />
+			<group name="ability_active_state_tree_group">
+				<state_tree_node name="ability_activate_squad_tree" value="" overrideParent="True" />
+				<state_tree_node name="ability_activate_entity_tree" value="sp_sticky_bomb_riflemen_us" overrideParent="True" />
+			</group>
+		</group>
+		<uniqueid name="pbgid" value="203811" />
+		<instance_reference name="parent_pbg" value="abilities\races\common\infantry\single_target_anti_tank_subtypes\single_target_anti_tank_grenade_parent" />
+	</variant>
+</instance>

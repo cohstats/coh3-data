@@ -1,0 +1,43 @@
+<instance version="5" description="" template="attachments\attachment_list">
+	<variant name="default">
+		<group name="attachment_list_group">
+			<list name="attachment_list">
+				<template_reference name="attachment" value="options\attachment_types\destructible_cell_attachment" List.ItemID="-1663862072" List.ParentItemID="-1663862072">
+					<list name="customizations" overrideParent="True">
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_charred\charring_damage" List.ItemID="1885472121" />
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_weathering\mud_dry" List.ItemID="2111338587" />
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_tint\british_tint_italian_default_accessories_tritone" List.ItemID="-678210626" />
+					</list>
+				</template_reference>
+				<template_reference name="attachment" value="options\attachment_types\destructible_cell_attachment" List.ItemID="-491282862" List.ParentItemID="-491282862">
+					<list name="customizations" overrideParent="True">
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_charred\charring_damage" List.ItemID="40059985" />
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_weathering\mud_dry" List.ItemID="118954630" />
+						<instance_reference name="customization" value="attachments\customizations\anvil_attachment_customization_tint\british_tint_italian_default_accessories_tritone" List.ItemID="-1747434873" />
+					</list>
+				</template_reference>
+				<template_reference name="attachment" value="options\attachment_types\animator_skin_attachment" List.ItemID="12192909" List.ListAction="Append">
+					<file name="animator" value="art\armies\common\props\flagpoles_campaign_set\flagpoles_campaign_set_b2" />
+					<enum name="inventory_item_category" value="" />
+					<bool name="is_selectable" value="False" />
+					<string name="marker_name" value="suspension4_r" />
+					<file name="material_override" value="" />
+					<list name="customizations">
+					</list>
+				</template_reference>
+				<template_reference name="attachment" value="options\attachment_types\animator_skin_attachment" List.ItemID="949842045" List.ListAction="Append">
+					<file name="animator" value="art\environment\objects\defenses\sandbags\sandbag_dugin_campaign_03\sandbag_dugin_campaign_03" />
+					<enum name="inventory_item_category" value="" />
+					<bool name="is_selectable" value="False" />
+					<string name="marker_name" value="" />
+					<file name="material_override" value="" />
+					<list name="customizations">
+					</list>
+				</template_reference>
+			</list>
+			<string name="attachment_category" value="cmp_leader" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="1520099" />
+		<instance_reference name="parent_pbg" value="attachments\attachment_list\races\british\vehicles\crusader\default_crusader" />
+	</variant>
+</instance>

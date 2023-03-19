@@ -1,0 +1,240 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions" removedIds="-156423515, 1695694039, 404753658">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1878148505" List.ParentItemID="1878148505">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\german\buildings\bunker_mortar_ger" overrideParent="True" />
+				<float name="animator_scale" value="100" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="759786906" List.ParentItemID="759786906">
+				<float name="death_seconds" value="1" overrideParent="True" />
+				<template_reference name="armor_layout_option" value="options\ebpextensions\healthext\armor_layouts\armor_layout_uniform">
+					<float name="armor" value="25" overrideParent="True" />
+				</template_reference>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="-1566166775" List.ParentItemID="-1566166775">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_vehicle_collide" value="False" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\site_ext" List.ItemID="1075485898" List.ParentItemID="1075485898">
+				<float name="extra_build_test_footprint_x" value="0.8" overrideParent="True" />
+				<float name="extra_build_test_footprint_z" value="0.8" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" overrideParent="True" List.ItemID="-1946178376" List.ParentItemID="-1946178376">
+				<bool name="cant_build" value="True" />
+				<group name="impass_simboxes">
+					<bool name="default_simbox" value="True" />
+					<list name="named_simboxes" overrideParent="True">
+						<group name="impass_box" List.ItemID="-969628597">
+							<string name="named_simboxes" value="SidePiece" />
+							<list name="block_path">
+								<instance_reference name="path_type" value="pass_types\infantry" List.ItemID="1696322622" List.ParentItemID="1696322622" />
+								<instance_reference name="path_type" value="pass_types\vehicle_light" List.ItemID="880302449" List.ParentItemID="880302449" />
+								<instance_reference name="path_type" value="pass_types\vehicle_medium" List.ItemID="1315380937" List.ParentItemID="1315380937" />
+								<instance_reference name="path_type" value="pass_types\vehicle_heavy" List.ItemID="-1512449893" List.ParentItemID="-1512449893" />
+								<instance_reference name="path_type" value="pass_types\vaulting_infantry" List.ItemID="-630974238" List.ParentItemID="-630974238" />
+								<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_heavy" List.ItemID="926260526" List.ParentItemID="926260526" />
+								<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_light" List.ItemID="599917807" List.ParentItemID="599917807" />
+								<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_medium" List.ItemID="-1952927493" List.ParentItemID="-1952927493" />
+							</list>
+						</group>
+						<group name="impass_box" List.ItemID="-369552087">
+							<string name="named_simboxes" value="SidePiece2" />
+							<list name="block_path">
+								<instance_reference name="path_type" value="pass_types\infantry" List.ItemID="1696322622" List.ParentItemID="1696322622" />
+								<instance_reference name="path_type" value="pass_types\vehicle_light" List.ItemID="880302449" List.ParentItemID="880302449" />
+								<instance_reference name="path_type" value="pass_types\vehicle_medium" List.ItemID="1315380937" List.ParentItemID="1315380937" />
+								<instance_reference name="path_type" value="pass_types\vehicle_heavy" List.ItemID="-1512449893" List.ParentItemID="-1512449893" />
+								<instance_reference name="path_type" value="pass_types\vaulting_infantry" List.ItemID="-630974238" List.ParentItemID="-630974238" />
+								<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_heavy" List.ItemID="926260526" List.ParentItemID="926260526" />
+								<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_light" List.ItemID="599917807" List.ParentItemID="599917807" />
+								<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_medium" List.ItemID="-1952927493" List.ParentItemID="-1952927493" />
+							</list>
+						</group>
+						<group name="impass_box" List.ItemID="354141686">
+							<string name="named_simboxes" value="_default" />
+							<list name="block_path">
+							</list>
+						</group>
+					</list>
+				</group>
+				<list name="block_path">
+					<instance_reference name="path_type" value="pass_types\infantry" List.ItemID="1696322622" List.ParentItemID="1696322622" />
+					<instance_reference name="path_type" value="pass_types\vehicle_light" List.ItemID="880302449" List.ParentItemID="880302449" />
+					<instance_reference name="path_type" value="pass_types\vehicle_medium" List.ItemID="1315380937" List.ParentItemID="1315380937" />
+					<instance_reference name="path_type" value="pass_types\vehicle_heavy" List.ItemID="-1512449893" List.ParentItemID="-1512449893" />
+					<instance_reference name="path_type" value="pass_types\vaulting_infantry" List.ItemID="-630974238" List.ParentItemID="-630974238" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_heavy" List.ItemID="926260526" List.ParentItemID="926260526" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_light" List.ItemID="599917807" List.ParentItemID="599917807" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_medium" List.ItemID="-1952927493" List.ParentItemID="-1952927493" />
+				</list>
+				<bool name="should_rasterize_partial_cells" value="False" />
+				<enum name="blocker_lifetime_type" value="match_entity" />
+				<file name="stamp_blockers" value="" />
+				<group name="center_cell">
+					<bool name="cant_build" value="False" />
+					<list name="block_path">
+					</list>
+				</group>
+				<list name="cant_build_exemptions">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="451975033" List.ParentItemID="451975033">
+				<locstring name="help_text" value="11158242" overrideParent="True" />
+				<locstring name="screen_name" value="11216386" overrideParent="True" />
+				<locstring name="brief_text" value="11235524" overrideParent="True" />
+				<locstring name="extra_text" value="11235473" overrideParent="True" />
+				<enum name="map_rotation_type_override" value="none" overrideParent="True" />
+				<enum name="occlusion_state" value="terrain_layer" overrideParent="True" />
+				<file name="minimap_icon" value="common\units\symbols\emplacement_symbol" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\construction_ext" List.ItemID="-1904639171" List.ParentItemID="-1904639171">
+				<instance_reference name="on_construction_squad" value="sbps\races\german\emplacements\mortar_bunker_ger" overrideParent="True" />
+				<instance_reference name="ui_range" value="ui_reticule\ability_range_default" overrideParent="True" />
+				<float name="ui_range_radius" value="0" overrideParent="True" />
+				<bool name="squad_ignore_pathfinding" value="True" overrideParent="True" />
+				<bool name="construction_site_erase_inactive" value="False" overrideParent="True" />
+				<instance_reference name="placement_weapon" value="" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\interactive_object_ext" List.ItemID="-1242494263" List.ParentItemID="-1242494263">
+				<list name="type_list">
+					<group name="type" List.ItemID="1505866433" List.ParentItemID="1505866433">
+						<enum name="interaction_type" value="repair" overrideParent="True" />
+						<int name="prefer_number" value="-1" overrideParent="True" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="989653620" List.ParentItemID="989653620">
+				<group name="speech_parameters">
+					<string name="unit_code" value="bunker" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\animation_role_ext" List.ItemID="-174658519" List.ParentItemID="-174658519">
+				<instance_reference name="default_role" value="animation_role\buildings\production\pb_ger_bunker_mortar" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2059232" />
+		<instance_reference name="parent_pbg" value="ebps\races\german\buildings\defensive\bunker_ger" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions" removedIds="-156423515, 1695694039, 404753658">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="1878148505" List.ParentItemID="1878148505">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\german\buildings\bunker_mortar_ger" overrideParent="True" />
+				<float name="animator_scale" value="100" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="759786906" List.ParentItemID="759786906">
+				<float name="death_seconds" value="1" overrideParent="True" />
+				<template_reference name="armor_layout_option" value="options\ebpextensions\healthext\armor_layouts\armor_layout_uniform">
+					<float name="armor" value="25" overrideParent="True" />
+				</template_reference>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="-1566166775" List.ParentItemID="-1566166775">
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_vehicle_collide" value="False" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\site_ext" List.ItemID="1075485898" List.ParentItemID="1075485898">
+				<float name="extra_build_test_footprint_x" value="0.8" overrideParent="True" />
+				<float name="extra_build_test_footprint_z" value="0.8" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" overrideParent="True" List.ItemID="-1946178376" List.ParentItemID="-1946178376">
+				<bool name="cant_build" value="True" />
+				<group name="impass_simboxes">
+					<bool name="default_simbox" value="True" />
+					<list name="named_simboxes" overrideParent="True">
+						<group name="impass_box" List.ItemID="-969628597">
+							<string name="named_simboxes" value="SidePiece" />
+							<list name="block_path">
+								<instance_reference name="path_type" value="pass_types\infantry" List.ItemID="1696322622" List.ParentItemID="1696322622" />
+								<instance_reference name="path_type" value="pass_types\vehicle_light" List.ItemID="880302449" List.ParentItemID="880302449" />
+								<instance_reference name="path_type" value="pass_types\vehicle_medium" List.ItemID="1315380937" List.ParentItemID="1315380937" />
+								<instance_reference name="path_type" value="pass_types\vehicle_heavy" List.ItemID="-1512449893" List.ParentItemID="-1512449893" />
+								<instance_reference name="path_type" value="pass_types\vaulting_infantry" List.ItemID="-630974238" List.ParentItemID="-630974238" />
+								<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_heavy" List.ItemID="926260526" List.ParentItemID="926260526" />
+								<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_light" List.ItemID="599917807" List.ParentItemID="599917807" />
+								<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_medium" List.ItemID="-1952927493" List.ParentItemID="-1952927493" />
+							</list>
+						</group>
+						<group name="impass_box" List.ItemID="-369552087">
+							<string name="named_simboxes" value="SidePiece2" />
+							<list name="block_path">
+								<instance_reference name="path_type" value="pass_types\infantry" List.ItemID="1696322622" List.ParentItemID="1696322622" />
+								<instance_reference name="path_type" value="pass_types\vehicle_light" List.ItemID="880302449" List.ParentItemID="880302449" />
+								<instance_reference name="path_type" value="pass_types\vehicle_medium" List.ItemID="1315380937" List.ParentItemID="1315380937" />
+								<instance_reference name="path_type" value="pass_types\vehicle_heavy" List.ItemID="-1512449893" List.ParentItemID="-1512449893" />
+								<instance_reference name="path_type" value="pass_types\vaulting_infantry" List.ItemID="-630974238" List.ParentItemID="-630974238" />
+								<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_heavy" List.ItemID="926260526" List.ParentItemID="926260526" />
+								<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_light" List.ItemID="599917807" List.ParentItemID="599917807" />
+								<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_medium" List.ItemID="-1952927493" List.ParentItemID="-1952927493" />
+							</list>
+						</group>
+						<group name="impass_box" List.ItemID="354141686">
+							<string name="named_simboxes" value="_default" />
+							<list name="block_path">
+							</list>
+						</group>
+					</list>
+				</group>
+				<list name="block_path">
+					<instance_reference name="path_type" value="pass_types\infantry" List.ItemID="1696322622" List.ParentItemID="1696322622" />
+					<instance_reference name="path_type" value="pass_types\vehicle_light" List.ItemID="880302449" List.ParentItemID="880302449" />
+					<instance_reference name="path_type" value="pass_types\vehicle_medium" List.ItemID="1315380937" List.ParentItemID="1315380937" />
+					<instance_reference name="path_type" value="pass_types\vehicle_heavy" List.ItemID="-1512449893" List.ParentItemID="-1512449893" />
+					<instance_reference name="path_type" value="pass_types\vaulting_infantry" List.ItemID="-630974238" List.ParentItemID="-630974238" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_heavy" List.ItemID="926260526" List.ParentItemID="926260526" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_light" List.ItemID="599917807" List.ParentItemID="599917807" />
+					<instance_reference name="path_type" value="pass_types\trench_crossing_vehicle_medium" List.ItemID="-1952927493" List.ParentItemID="-1952927493" />
+				</list>
+				<bool name="should_rasterize_partial_cells" value="False" />
+				<enum name="blocker_lifetime_type" value="match_entity" />
+				<file name="stamp_blockers" value="" />
+				<group name="center_cell">
+					<bool name="cant_build" value="False" />
+					<list name="block_path">
+					</list>
+				</group>
+				<list name="cant_build_exemptions">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="451975033" List.ParentItemID="451975033">
+				<locstring name="help_text" value="11158242" overrideParent="True" />
+				<locstring name="screen_name" value="11216386" overrideParent="True" />
+				<locstring name="brief_text" value="11235524" overrideParent="True" />
+				<locstring name="extra_text" value="11235473" overrideParent="True" />
+				<enum name="map_rotation_type_override" value="none" overrideParent="True" />
+				<enum name="occlusion_state" value="terrain_layer" overrideParent="True" />
+				<file name="minimap_icon" value="common\units\symbols\emplacement_symbol" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\construction_ext" List.ItemID="-1904639171" List.ParentItemID="-1904639171">
+				<instance_reference name="on_construction_squad" value="sbps\races\german\emplacements\mortar_bunker_ger" overrideParent="True" />
+				<instance_reference name="ui_range" value="ui_reticule\ability_range_default" overrideParent="True" />
+				<float name="ui_range_radius" value="0" overrideParent="True" />
+				<bool name="squad_ignore_pathfinding" value="True" overrideParent="True" />
+				<bool name="construction_site_erase_inactive" value="False" overrideParent="True" />
+				<instance_reference name="placement_weapon" value="" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\interactive_object_ext" List.ItemID="-1242494263" List.ParentItemID="-1242494263">
+				<list name="type_list">
+					<group name="type" List.ItemID="1505866433" List.ParentItemID="1505866433">
+						<enum name="interaction_type" value="repair" overrideParent="True" />
+						<int name="prefer_number" value="-1" overrideParent="True" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="989653620" List.ParentItemID="989653620">
+				<group name="speech_parameters">
+					<string name="unit_code" value="bunker" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\animation_role_ext" List.ItemID="-174658519" List.ParentItemID="-174658519">
+				<instance_reference name="default_role" value="animation_role\buildings\production\pb_ger_bunker_mortar" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2059232" />
+		<instance_reference name="parent_pbg" value="ebps\races\german\buildings\defensive\bunker_ger" />
+	</variant>
+</instance>

@@ -1,0 +1,376 @@
+<instance version="5" description="Adds a piat weapon to the africa sapper squad" template="upgrade">
+	<variant name="default">
+		<group name="upgrade_bag">
+			<bool name="enable_in_hold" value="True" />
+			<float name="global_max_limit" value="0" />
+			<bool name="has_speech_code" value="True" />
+			<float name="local_max_limit" value="0" />
+			<enum name="owner_type" value="self" />
+			<group name="time_cost">
+				<enum_table name="cost">
+					<float name="action" value="0" />
+					<float name="popcap" value="0" />
+					<float name="command" value="0" />
+					<float name="fuel" value="0" />
+					<float name="munition" value="75" />
+					<float name="manpower" value="0" />
+					<float name="requisition" value="0" />
+					<float name="ultimate" value="0" />
+				</enum_table>
+				<float name="time_seconds" value="30" />
+			</group>
+			<bool name="ui_event_cue" value="True" />
+			<enum name="ui_production_group" value="unit_upgrade_panel" />
+			<group name="ui_info">
+				<locstring name="extra_text" value="11242708" />
+				<locstring name="help_text" value="11158242" />
+				<string name="hotkey_name" value="G" />
+				<file name="icon_name" value="common\abilities\ability_british_drop_piat" />
+				<bool name="reveal_for_decryption" value="False" />
+				<locstring name="screen_name" value="11242538" />
+				<locstring name="brief_text" value="11242909" />
+				<locstring name="screen_name_short" value="0" />
+				<string name="debug_text" value="" />
+				<string name="tooltip_data_template" value="" />
+				<enum name="ui_combine_type" value="intersection" />
+				<template_reference name="brief_text_formatter" value="">
+				</template_reference>
+				<template_reference name="extra_text_formatter" value="">
+				</template_reference>
+				<template_reference name="help_text_formatter" value="">
+				</template_reference>
+				<template_reference name="screen_name_formatter" value="">
+				</template_reference>
+				<template_reference name="screen_name_short_formatter" value="">
+				</template_reference>
+				<enum name="screen_name_visibility" value="visible" />
+				<string name="sound" value="" />
+				<string name="sound_alternative" value="" />
+				<file name="symbol_icon_name" value="common\abilities\ability_british_drop_piat" />
+			</group>
+			<list name="requirements">
+				<template_reference name="required" value="requirements\required_squad_upgrade" List.ItemID="184389493">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="0" />
+					<bool name="include_queued" value="False" />
+					<bool name="is_present" value="False" />
+					<instance_reference name="upgrade_name" value="upgrade\british_africa\infantry\piat_sapper_africa_uk" />
+					<int name="min_completed" value="1" />
+					<int name="max_completed" value="100" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+					<bool name="include_completed" value="True" />
+				</template_reference>
+				<template_reference name="required" value="requirements\required_in_territory" List.ItemID="1738434147">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="0" />
+					<bool name="in_supply" value="True" />
+					<bool name="is_secured" value="False" />
+					<bool name="is_secured_by_checkpoint" value="False" />
+					<bool name="not_in_transition" value="False" />
+				</template_reference>
+				<template_reference name="required" value="requirements\required_player_upgrade" List.ItemID="1937069435">
+					<enum name="reason" value="usage_and_display" />
+					<locstring name="ui_name" value="0" />
+					<bool name="is_present" value="True" />
+					<int name="max_completed" value="100" />
+					<int name="min_completed" value="1" />
+					<instance_reference name="upgrade_name" value="upgrade\british\battlegroups\british_canadian_vanguard\british_canadian_vanguard_right_1_piats_uk" />
+					<bool name="include_completed" value="True" />
+					<bool name="include_queued" value="False" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+				</template_reference>
+				<template_reference name="required" value="requirements\required_squad_upgrade" List.ItemID="12971981">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="0" />
+					<bool name="include_queued" value="False" />
+					<bool name="is_present" value="False" />
+					<instance_reference name="upgrade_name" value="upgrade\british_africa\infantry\flamethrower_sapper_africa_uk" />
+					<int name="min_completed" value="1" />
+					<int name="max_completed" value="100" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+					<bool name="include_completed" value="True" />
+				</template_reference>
+				<template_reference name="required" value="requirements\required_squad_upgrade" List.ItemID="-1712857286">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="0" />
+					<bool name="include_queued" value="False" />
+					<bool name="is_present" value="False" />
+					<instance_reference name="upgrade_name" value="upgrade\british_africa\infantry\utility_sapper_africa_uk" />
+					<int name="min_completed" value="1" />
+					<int name="max_completed" value="100" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+					<bool name="include_completed" value="True" />
+				</template_reference>
+			</list>
+			<file name="ui_kicker_icon_name" value="" />
+			<locstring name="ui_squad_name_override" value="0" />
+			<locstring name="ui_squad_help_text_override" value="0" />
+			<locstring name="ui_squad_extra_text_override" value="0" />
+			<list name="ui_preview">
+			</list>
+			<string name="speech_code" value="piat_upgrade" />
+			<file name="ui_squad_portrait_icon_override" value="" />
+			<group name="ui_position">
+				<int name="ui_position_row" value="1" />
+				<int name="ui_position_column" value="3" />
+			</group>
+			<float name="min_music_intensity" value="0" />
+			<group name="state_tree_references">
+				<template_reference name="on_begin_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="on_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="canadian_vanguard_piats_uk" />
+				</template_reference>
+				<template_reference name="on_cancel_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="on_action_entity_tree" value="state_tree_entity_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="on_action_squad_tree" value="state_tree_squad_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+			</group>
+			<list name="upgrade_type">
+			</list>
+			<state_tree_node name="requirements_openingbranch" value="" />
+			<instance_reference name="ui_menu" value="" />
+			<bool name="is_progress_permanent" value="False" />
+			<enum_table name="squad_cost">
+				<float name="action" value="0" />
+				<float name="command" value="0" />
+				<float name="popcap" value="0" />
+				<float name="fuel" value="0" />
+				<float name="munition" value="0" />
+				<float name="manpower" value="0" />
+				<float name="requisition" value="0" />
+				<float name="ultimate" value="0" />
+			</enum_table>
+			<group name="ui_codex_info">
+				<int name="priority" value="0" />
+				<bool name="exclusive" value="False" />
+				<group name="ui_position">
+					<int name="ui_position_column" value="-1" />
+					<int name="ui_position_row" value="-1" />
+				</group>
+			</group>
+			<group name="filter_conditions">
+				<state_tree_node name="apply_to_filter_condition_statetree_ref" value="" />
+				<enum name="apply_to_target_type" value="entity" />
+				<list name="apply_to_unit_classes">
+				</list>
+				<enum name="apply_to_application_type" value="current_and_future_units" />
+				<enum name="apply_to_future_units" value="current_and_future_units" />
+				<list name="apply_to_squad_types">
+				</list>
+			</group>
+			<float name="duration_seconds" value="0" />
+			<file name="ui_squad_icon_override" value="" />
+			<locstring name="ui_squad_brief_text_override" value="0" />
+			<file name="ui_squad_symbol_icon_name_override" value="" />
+			<locstring name="ui_squad_extra_help_text_override" value="0" />
+		</group>
+		<uniqueid name="pbgid" value="2071686" />
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+	<variant name="sp">
+		<group name="upgrade_bag">
+			<bool name="enable_in_hold" value="True" />
+			<float name="global_max_limit" value="0" />
+			<bool name="has_speech_code" value="True" />
+			<float name="local_max_limit" value="0" />
+			<enum name="owner_type" value="self" />
+			<group name="time_cost">
+				<enum_table name="cost">
+					<float name="action" value="0" />
+					<float name="popcap" value="0" />
+					<float name="command" value="0" />
+					<float name="fuel" value="0" />
+					<float name="munition" value="75" />
+					<float name="manpower" value="0" />
+					<float name="requisition" value="0" />
+					<float name="ultimate" value="0" />
+				</enum_table>
+				<float name="time_seconds" value="30" />
+			</group>
+			<bool name="ui_event_cue" value="True" />
+			<enum name="ui_production_group" value="unit_upgrade_panel" />
+			<group name="ui_info">
+				<locstring name="extra_text" value="11242708" />
+				<locstring name="help_text" value="11158242" />
+				<string name="hotkey_name" value="G" />
+				<file name="icon_name" value="common\abilities\ability_british_drop_piat" />
+				<bool name="reveal_for_decryption" value="False" />
+				<locstring name="screen_name" value="11242538" />
+				<locstring name="brief_text" value="11242909" />
+				<locstring name="screen_name_short" value="0" />
+				<string name="debug_text" value="" />
+				<string name="tooltip_data_template" value="" />
+				<enum name="ui_combine_type" value="intersection" />
+				<template_reference name="brief_text_formatter" value="">
+				</template_reference>
+				<template_reference name="extra_text_formatter" value="">
+				</template_reference>
+				<template_reference name="help_text_formatter" value="">
+				</template_reference>
+				<template_reference name="screen_name_formatter" value="">
+				</template_reference>
+				<template_reference name="screen_name_short_formatter" value="">
+				</template_reference>
+				<enum name="screen_name_visibility" value="visible" />
+				<string name="sound" value="" />
+				<string name="sound_alternative" value="" />
+				<file name="symbol_icon_name" value="common\abilities\ability_british_drop_piat" />
+			</group>
+			<list name="requirements">
+				<template_reference name="required" value="requirements\required_squad_upgrade" List.ItemID="184389493">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="0" />
+					<bool name="include_queued" value="False" />
+					<bool name="is_present" value="False" />
+					<instance_reference name="upgrade_name" value="upgrade\british_africa\infantry\piat_sapper_africa_uk" />
+					<int name="min_completed" value="1" />
+					<int name="max_completed" value="100" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+					<bool name="include_completed" value="True" />
+				</template_reference>
+				<template_reference name="required" value="requirements\required_in_territory" List.ItemID="1738434147">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="0" />
+					<bool name="in_supply" value="True" />
+					<bool name="is_secured" value="False" />
+					<bool name="is_secured_by_checkpoint" value="False" />
+					<bool name="not_in_transition" value="False" />
+				</template_reference>
+				<template_reference name="required" value="requirements\required_player_upgrade" List.ItemID="1937069435">
+					<enum name="reason" value="usage_and_display" />
+					<locstring name="ui_name" value="0" />
+					<bool name="is_present" value="True" />
+					<int name="max_completed" value="100" />
+					<int name="min_completed" value="1" />
+					<instance_reference name="upgrade_name" value="upgrade\british\battlegroups\british_canadian_vanguard\british_canadian_vanguard_right_1_piats_uk" />
+					<bool name="include_completed" value="True" />
+					<bool name="include_queued" value="False" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+				</template_reference>
+				<template_reference name="required" value="requirements\required_squad_upgrade" List.ItemID="12971981">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="0" />
+					<bool name="include_queued" value="False" />
+					<bool name="is_present" value="False" />
+					<instance_reference name="upgrade_name" value="upgrade\british_africa\infantry\flamethrower_sapper_africa_uk" />
+					<int name="min_completed" value="1" />
+					<int name="max_completed" value="100" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+					<bool name="include_completed" value="True" />
+				</template_reference>
+				<template_reference name="required" value="requirements\required_squad_upgrade" List.ItemID="-1712857286">
+					<enum name="reason" value="usage" />
+					<locstring name="ui_name" value="0" />
+					<bool name="include_queued" value="False" />
+					<bool name="is_present" value="False" />
+					<instance_reference name="upgrade_name" value="upgrade\british_africa\infantry\utility_sapper_africa_uk" />
+					<int name="min_completed" value="1" />
+					<int name="max_completed" value="100" />
+					<group name="include_pbg_parenting">
+						<bool name="include_child_pbgs" value="False" />
+						<bool name="include_parent_pbgs" value="False" />
+					</group>
+					<bool name="include_completed" value="True" />
+				</template_reference>
+			</list>
+			<file name="ui_kicker_icon_name" value="" />
+			<locstring name="ui_squad_name_override" value="0" />
+			<locstring name="ui_squad_help_text_override" value="0" />
+			<locstring name="ui_squad_extra_text_override" value="0" />
+			<list name="ui_preview">
+			</list>
+			<string name="speech_code" value="piat_upgrade" />
+			<file name="ui_squad_portrait_icon_override" value="" />
+			<group name="ui_position">
+				<int name="ui_position_row" value="1" />
+				<int name="ui_position_column" value="3" />
+			</group>
+			<float name="min_music_intensity" value="0" />
+			<group name="state_tree_references">
+				<template_reference name="on_begin_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="on_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="sp_canadian_vanguard_piats_uk" />
+				</template_reference>
+				<template_reference name="on_cancel_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="on_action_entity_tree" value="state_tree_entity_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<template_reference name="on_action_squad_tree" value="state_tree_squad_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+			</group>
+			<list name="upgrade_type">
+			</list>
+			<state_tree_node name="requirements_openingbranch" value="" />
+			<instance_reference name="ui_menu" value="" />
+			<bool name="is_progress_permanent" value="False" />
+			<enum_table name="squad_cost">
+				<float name="action" value="0" />
+				<float name="command" value="0" />
+				<float name="popcap" value="0" />
+				<float name="fuel" value="0" />
+				<float name="munition" value="0" />
+				<float name="manpower" value="0" />
+				<float name="requisition" value="0" />
+				<float name="ultimate" value="0" />
+			</enum_table>
+			<group name="ui_codex_info">
+				<int name="priority" value="0" />
+				<bool name="exclusive" value="False" />
+				<group name="ui_position">
+					<int name="ui_position_column" value="-1" />
+					<int name="ui_position_row" value="-1" />
+				</group>
+			</group>
+			<group name="filter_conditions">
+				<state_tree_node name="apply_to_filter_condition_statetree_ref" value="" />
+				<enum name="apply_to_target_type" value="entity" />
+				<list name="apply_to_unit_classes">
+				</list>
+				<enum name="apply_to_application_type" value="current_and_future_units" />
+				<enum name="apply_to_future_units" value="current_and_future_units" />
+				<list name="apply_to_squad_types">
+				</list>
+			</group>
+			<float name="duration_seconds" value="0" />
+			<file name="ui_squad_icon_override" value="" />
+			<locstring name="ui_squad_brief_text_override" value="0" />
+			<file name="ui_squad_symbol_icon_name_override" value="" />
+			<locstring name="ui_squad_extra_help_text_override" value="0" />
+		</group>
+		<uniqueid name="pbgid" value="2071686" />
+		<instance_reference name="parent_pbg" value="" />
+	</variant>
+</instance>

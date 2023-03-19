@@ -1,0 +1,31 @@
+<instance version="5" description="" template="attachments\attachment_list">
+	<variant name="default">
+		<group name="attachment_list_group">
+			<list name="attachment_list">
+				<template_reference name="attachment" value="options\attachment_types\animator_skin_attachment" List.ItemID="-1966682630" List.ParentItemID="-1966682630">
+					<file name="animator" value="art\armies\american\heads\heads_randomize_captain\heads_randomize_captain" overrideParent="True" />
+				</template_reference>
+				<template_reference name="attachment" value="options\attachment_types\animator_skin_attachment" List.ItemID="557138955" List.ParentItemID="557138955">
+					<string name="marker_name" value="Helmet_M" overrideParent="True" />
+				</template_reference>
+				<template_reference name="attachment" value="options\attachment_types\animator_skin_attachment" comment="FLAG" List.ItemID="-187148731" List.ParentItemID="-187148731">
+					<file name="animator" value="art\armies\common\props\flagpoles_campaign_set\flagpoles_campaign_set_a1" overrideParent="True" />
+					<bool name="is_selectable" value="False" overrideParent="True" />
+					<string name="marker_name" value="fx_flag_ui" overrideParent="True" />
+				</template_reference>
+				<template_reference name="attachment" value="options\attachment_types\animator_skin_attachment" List.ItemID="-971208377" List.ListAction="Append">
+					<file name="animator" value="art\armies\common\giblets\giblets" />
+					<enum name="inventory_item_category" value="" />
+					<bool name="is_selectable" value="True" />
+					<string name="marker_name" value="" />
+					<file name="material_override" value="" />
+					<list name="customizations">
+					</list>
+				</template_reference>
+			</list>
+			<string name="attachment_category" value="cmp_leader" overrideParent="True" />
+		</group>
+		<uniqueid name="pbgid" value="1512470" />
+		<instance_reference name="parent_pbg" value="attachments\attachment_list\races\american\infantry\mortar_crew_am\default_mortar_crew_am" />
+	</variant>
+</instance>

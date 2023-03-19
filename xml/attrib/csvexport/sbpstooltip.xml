@@ -1,0 +1,64 @@
+<tuningtemplate csvfilename = "sbpstooltip.csv" template="sbps" pathregex="^sbps" createnewlocstringsonimport="true" exportlocstringastext="true">
+	<columns>
+		<attribute columnname="screen_name">
+			<query name="default">
+				<query name="extensions">
+					<query name="squad_ui_ext">
+						<query name="race_list">
+							<query name="race_data" rowset="race_data" usename="false">
+								<query name="info">
+									<value name="screen_name" />
+								</query>
+							</query>
+						</query>
+					</query>
+				</query>
+			</query>
+		</attribute>
+		<attribute columnname="extra_text">
+			<query name="default">
+				<query name="extensions">
+					<query name="squad_ui_ext">
+						<query name="race_list">
+							<query name="race_data" rowset="race_data" usename="false">
+								<query name="info">
+									<value name="extra_text" />
+								</query>
+							</query>
+						</query>
+					</query>
+				</query>
+			</query>
+		</attribute>
+		<attribute columnname="brief_text">
+			<query name="default">
+				<query name="extensions">
+					<query name="squad_ui_ext">
+						<query name="race_list">
+							<query name="race_data" rowset="race_data" usename="false">
+								<query name="info">
+									<value name="brief_text" />
+								</query>
+							</query>
+						</query>
+					</query>
+				</query>
+			</query>
+		</attribute>
+		<attribute columnname="extra_help_text">
+			<query name="default">
+				<query name="extensions">
+					<query name="squad_ui_ext">
+						<query name="race_list">
+							<query name="race_data" rowset="race_data" usename="false">
+								<query name="info">
+									<value name="extra_help_text" />
+								</query>
+							</query>
+						</query>
+					</query>
+				</query>
+			</query>
+		</attribute>
+	</columns>
+</tuningtemplate>

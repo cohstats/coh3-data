@@ -1,0 +1,328 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions" removedIds="49689098, -347659859, 460609661, -1834313989, -1020420653, -950278796">
+			<template_reference name="exts" value="ebpextensions\obj_cover_ext" List.ItemID="-289902371" List.ParentItemID="-289902371">
+				<enum name="cover_type" value="" overrideParent="True" />
+				<bool name="generate_cover_spots" value="False" overrideParent="True" />
+				<enum name="terrain_cover_type" value="tp_heavy_cover" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="-511867459" List.ParentItemID="-511867459">
+				<list name="unit_type_list" overrideParent="True">
+					<enum name="unit_type" value="destructible_object" List.ItemID="-39078405" />
+				</list>
+				<enum name="weapon_targeting" value="no_targeting" comment="This must be set to manual_only to fix a bug where squads can auto-target the building for a few moments even after the enemy has vacated." overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="848206026" List.ParentItemID="848206026">
+				<enum name="selection_type" value="single_entity_select" overrideParent="True" />
+				<locstring name="screen_name" value="11231366" overrideParent="True" />
+				<string name="debug_text" value="" overrideParent="True" />
+				<enum name="map_rotation_type_override" value="heading" overrideParent="True" />
+				<enum name="occlusion_state" value="occlude_others" overrideParent="True" />
+				<enum name="selection_method" value="mesh" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="45344089" List.ParentItemID="45344089">
+				<float name="death_seconds" value="1" overrideParent="True" />
+				<float name="hitpoints" value="10000" overrideParent="True" />
+				<bool name="is_invincible" value="True" overrideParent="True" />
+				<template_reference name="wreck_entity_option" value="options\none" overrideParent="True">
+				</template_reference>
+				<bool name="remove_from_pathfinding_on_death" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-195156410" List.ParentItemID="-195156410">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\buildings\industrial_buildings\brick_01_3x1_hangar_01\brick_01_3x1_hangar_center" overrideParent="True" />
+				<file name="alternate_sua" value="" comment="this should be pointing to the custom simbox created for th building" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_entity_ext" List.ItemID="1005954274" List.ParentItemID="1005954274">
+				<float name="rotate_snap" value="360" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" List.ItemID="-105962779" List.ParentItemID="-105962779">
+				<group name="impass_simboxes">
+					<bool name="default_simbox" value="False" overrideParent="True" />
+					<list name="named_simboxes" overrideParent="True">
+						<group name="impass_box" List.ItemID="-1786821424">
+							<string name="named_simboxes" value="left" overrideParent="True" />
+							<list name="block_path" overrideParent="True">
+								<instance_reference name="path_type" value="pass_types\infantry" List.ItemID="1902685833" List.ParentItemID="1902685833" />
+								<instance_reference name="path_type" value="pass_types\vehicle_medium" List.ItemID="-386317487" List.ParentItemID="-386317487" />
+								<instance_reference name="path_type" value="pass_types\vehicle_heavy" List.ItemID="-1473418445" List.ParentItemID="-1473418445" />
+								<instance_reference name="path_type" value="pass_types\vehicle_light" List.ItemID="1502965022" List.ParentItemID="1502965022" />
+								<instance_reference name="path_type" value="pass_types\vaulting_infantry" List.ItemID="-708801477" List.ParentItemID="-708801477" />
+							</list>
+						</group>
+						<group name="impass_box" List.ItemID="1166616198">
+							<string name="named_simboxes" value="right" overrideParent="True" />
+							<list name="block_path" overrideParent="True">
+								<instance_reference name="path_type" value="pass_types\infantry" List.ItemID="1902685833" List.ParentItemID="1902685833" />
+								<instance_reference name="path_type" value="pass_types\vehicle_medium" List.ItemID="-386317487" List.ParentItemID="-386317487" />
+								<instance_reference name="path_type" value="pass_types\vehicle_heavy" List.ItemID="-1473418445" List.ParentItemID="-1473418445" />
+								<instance_reference name="path_type" value="pass_types\vehicle_light" List.ItemID="1502965022" List.ParentItemID="1502965022" />
+								<instance_reference name="path_type" value="pass_types\vaulting_infantry" List.ItemID="-708801477" List.ParentItemID="-708801477" />
+							</list>
+						</group>
+					</list>
+				</group>
+				<bool name="should_rasterize_partial_cells" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\line_of_sight_ext" List.ItemID="-1815585223" List.ParentItemID="-1815585223">
+				<group name="blocking_box" comment="Sim/ sight blocker was already bigger than physical object, so maintained that ratio. -Brock 6/14/2019">
+					<float name="x" value="0" overrideParent="True" />
+					<float name="y" value="0" overrideParent="True" />
+					<float name="z" value="0" overrideParent="True" />
+				</group>
+				<enum name="does_block_line_of_sight" value="never" overrideParent="True" />
+				<bool name="use_blocking_box" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="1943101274" List.ParentItemID="1943101274">
+				<instance_reference name="hit_material" value="hit_material\building_brick" overrideParent="True" />
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_artillery" value="False" overrideParent="True" />
+						<bool name="tp_vehicle_collide" value="False" overrideParent="True" />
+						<bool name="tp_piercing_blockers_only" value="False" overrideParent="True" />
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+				<enum name="projectile_collision_check_type" value="all_simboxes" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="-1084547450" List.ParentItemID="-1084547450">
+				<group name="speech_parameters">
+					<string name="name_code" value="building" overrideParent="True" />
+					<string name="unit_code" value="building" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\destructible_cell_ext" List.ItemID="684110929" List.ParentItemID="684110929">
+				<list name="cells">
+					<list name="main_cells_1f" comment="1st floor cells" overrideParent="True" List.ItemID="-349866011" List.ParentItemID="-349866011">
+					</list>
+					<list name="main_cells_roof" comment="roof cells" overrideParent="True" List.ItemID="-529296806" List.ParentItemID="-529296806">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-232079977">
+							<float name="max_health" value="200" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\industrial_buildings\brick_01_3x1_hangar_01\cell_08" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_08" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\building_brick" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="582187285">
+							<float name="max_health" value="200" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\industrial_buildings\brick_01_3x1_hangar_01\cell_06" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_06" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\building_brick" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+					</list>
+					<list name="accessories_1f" comment="1st floor accessories (door and window examples inside)" overrideParent="True" List.ItemID="1462648791" List.ParentItemID="1462648791">
+					</list>
+				</list>
+				<list name="cell_presets" overrideParent="True">
+					<template_reference name="cell_preset" value="options\ebpextensions\destructible_cell_ext\cell_preset" List.ItemID="-536791482">
+						<instance_reference name="hit_material" value="" />
+						<float name="max_health" value="200" />
+						<string name="name" value="cell_default" overrideParent="True" />
+						<bool name="use_as_impass_blocker" value="False" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+					</template_reference>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\burn_ext" List.ItemID="-97310770" List.ListAction="Append">
+				<float name="on_fire_damage_per_sec" value="2" />
+				<float name="on_fire_decay_amount_per_sec" value="-1" />
+				<float name="on_fire_threshold" value="2" />
+				<float name="max_fire_damage_per_second" value="10000" />
+				<float name="on_fire_health_percentage" value="-1" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\crushee_ext" List.ItemID="815631875" List.ListAction="Append">
+				<enum name="min_crush_mode" value="crush_off" overrideParent="True" />
+				<template_reference name="on_crushed_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<bool name="destroy_on_crush" value="False" overrideParent="True" />
+				<bool name="can_be_crushed_by_allies" value="False" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2074961" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\destructible_building_template" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions" removedIds="49689098, -347659859, 460609661, -1834313989, -1020420653, -950278796">
+			<template_reference name="exts" value="ebpextensions\obj_cover_ext" List.ItemID="-289902371" List.ParentItemID="-289902371">
+				<enum name="cover_type" value="" overrideParent="True" />
+				<bool name="generate_cover_spots" value="False" overrideParent="True" />
+				<enum name="terrain_cover_type" value="tp_heavy_cover" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\type_ext" List.ItemID="-511867459" List.ParentItemID="-511867459">
+				<list name="unit_type_list" overrideParent="True">
+					<enum name="unit_type" value="destructible_object" List.ItemID="-39078405" />
+				</list>
+				<enum name="weapon_targeting" value="no_targeting" comment="This must be set to manual_only to fix a bug where squads can auto-target the building for a few moments even after the enemy has vacated." overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\ui_ext" List.ItemID="848206026" List.ParentItemID="848206026">
+				<enum name="selection_type" value="single_entity_select" overrideParent="True" />
+				<locstring name="screen_name" value="11231366" overrideParent="True" />
+				<string name="debug_text" value="" overrideParent="True" />
+				<enum name="map_rotation_type_override" value="heading" overrideParent="True" />
+				<enum name="occlusion_state" value="occlude_others" overrideParent="True" />
+				<enum name="selection_method" value="mesh" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" List.ItemID="45344089" List.ParentItemID="45344089">
+				<float name="death_seconds" value="1" overrideParent="True" />
+				<float name="hitpoints" value="10000" overrideParent="True" />
+				<bool name="is_invincible" value="True" overrideParent="True" />
+				<template_reference name="wreck_entity_option" value="options\none" overrideParent="True">
+				</template_reference>
+				<bool name="remove_from_pathfinding_on_death" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-195156410" List.ParentItemID="-195156410">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\buildings\industrial_buildings\brick_01_3x1_hangar_01\brick_01_3x1_hangar_center" overrideParent="True" />
+				<file name="alternate_sua" value="" comment="this should be pointing to the custom simbox created for th building" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\sim_entity_ext" List.ItemID="1005954274" List.ParentItemID="1005954274">
+				<float name="rotate_snap" value="360" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" List.ItemID="-105962779" List.ParentItemID="-105962779">
+				<group name="impass_simboxes">
+					<bool name="default_simbox" value="False" overrideParent="True" />
+					<list name="named_simboxes" overrideParent="True">
+						<group name="impass_box" List.ItemID="-1786821424">
+							<string name="named_simboxes" value="left" overrideParent="True" />
+							<list name="block_path" overrideParent="True">
+								<instance_reference name="path_type" value="pass_types\infantry" List.ItemID="1902685833" List.ParentItemID="1902685833" />
+								<instance_reference name="path_type" value="pass_types\vehicle_medium" List.ItemID="-386317487" List.ParentItemID="-386317487" />
+								<instance_reference name="path_type" value="pass_types\vehicle_heavy" List.ItemID="-1473418445" List.ParentItemID="-1473418445" />
+								<instance_reference name="path_type" value="pass_types\vehicle_light" List.ItemID="1502965022" List.ParentItemID="1502965022" />
+								<instance_reference name="path_type" value="pass_types\vaulting_infantry" List.ItemID="-708801477" List.ParentItemID="-708801477" />
+							</list>
+						</group>
+						<group name="impass_box" List.ItemID="1166616198">
+							<string name="named_simboxes" value="right" overrideParent="True" />
+							<list name="block_path" overrideParent="True">
+								<instance_reference name="path_type" value="pass_types\infantry" List.ItemID="1902685833" List.ParentItemID="1902685833" />
+								<instance_reference name="path_type" value="pass_types\vehicle_medium" List.ItemID="-386317487" List.ParentItemID="-386317487" />
+								<instance_reference name="path_type" value="pass_types\vehicle_heavy" List.ItemID="-1473418445" List.ParentItemID="-1473418445" />
+								<instance_reference name="path_type" value="pass_types\vehicle_light" List.ItemID="1502965022" List.ParentItemID="1502965022" />
+								<instance_reference name="path_type" value="pass_types\vaulting_infantry" List.ItemID="-708801477" List.ParentItemID="-708801477" />
+							</list>
+						</group>
+					</list>
+				</group>
+				<bool name="should_rasterize_partial_cells" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\line_of_sight_ext" List.ItemID="-1815585223" List.ParentItemID="-1815585223">
+				<group name="blocking_box" comment="Sim/ sight blocker was already bigger than physical object, so maintained that ratio. -Brock 6/14/2019">
+					<float name="x" value="0" overrideParent="True" />
+					<float name="y" value="0" overrideParent="True" />
+					<float name="z" value="0" overrideParent="True" />
+				</group>
+				<enum name="does_block_line_of_sight" value="never" overrideParent="True" />
+				<bool name="use_blocking_box" value="False" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="1943101274" List.ParentItemID="1943101274">
+				<instance_reference name="hit_material" value="hit_material\building_brick" overrideParent="True" />
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_artillery" value="False" overrideParent="True" />
+						<bool name="tp_vehicle_collide" value="False" overrideParent="True" />
+						<bool name="tp_piercing_blockers_only" value="False" overrideParent="True" />
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+				<enum name="projectile_collision_check_type" value="all_simboxes" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="-1084547450" List.ParentItemID="-1084547450">
+				<group name="speech_parameters">
+					<string name="name_code" value="building" overrideParent="True" />
+					<string name="unit_code" value="building" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\destructible_cell_ext" List.ItemID="684110929" List.ParentItemID="684110929">
+				<list name="cells">
+					<list name="main_cells_1f" comment="1st floor cells" overrideParent="True" List.ItemID="-349866011" List.ParentItemID="-349866011">
+					</list>
+					<list name="main_cells_roof" comment="roof cells" overrideParent="True" List.ItemID="-529296806" List.ParentItemID="-529296806">
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="-232079977">
+							<float name="max_health" value="200" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\industrial_buildings\brick_01_3x1_hangar_01\cell_08" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_08" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\building_brick" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+						<template_reference name="cell" value="options\ebpextensions\destructible_cell_ext\cell" List.ItemID="582187285">
+							<float name="max_health" value="200" overrideParent="True" />
+							<list name="supporting_cells">
+							</list>
+							<file name="animator" value="art\environment\buildings\industrial_buildings\brick_01_3x1_hangar_01\cell_06" overrideParent="True" />
+							<string name="attachment_marker" value="loc_cell_06" overrideParent="True" />
+							<string name="combat_slot_marker" value="" />
+							<instance_reference name="hit_material" value="hit_material\building_brick" overrideParent="True" />
+							<bool name="use_as_impass_blocker" value="False" />
+							<string name="cell_preset" value="cell_default" overrideParent="True" />
+							<file name="material_override" value="" />
+							<state_tree_node name="on_cell_broken_tree" value="" />
+							<state_tree_node name="on_cell_destroyed_tree" value="" />
+							<list name="customizations">
+							</list>
+						</template_reference>
+					</list>
+					<list name="accessories_1f" comment="1st floor accessories (door and window examples inside)" overrideParent="True" List.ItemID="1462648791" List.ParentItemID="1462648791">
+					</list>
+				</list>
+				<list name="cell_presets" overrideParent="True">
+					<template_reference name="cell_preset" value="options\ebpextensions\destructible_cell_ext\cell_preset" List.ItemID="-536791482">
+						<instance_reference name="hit_material" value="" />
+						<float name="max_health" value="200" />
+						<string name="name" value="cell_default" overrideParent="True" />
+						<bool name="use_as_impass_blocker" value="False" />
+						<state_tree_node name="on_cell_broken_tree" value="" />
+						<state_tree_node name="on_cell_destroyed_tree" value="" />
+						<file name="material_override" value="" />
+					</template_reference>
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\burn_ext" List.ItemID="-97310770" List.ListAction="Append">
+				<float name="on_fire_damage_per_sec" value="2" />
+				<float name="on_fire_decay_amount_per_sec" value="-1" />
+				<float name="on_fire_threshold" value="2" />
+				<float name="max_fire_damage_per_second" value="10000" />
+				<float name="on_fire_health_percentage" value="-1" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\crushee_ext" List.ItemID="815631875" List.ListAction="Append">
+				<enum name="min_crush_mode" value="crush_off" overrideParent="True" />
+				<template_reference name="on_crushed_action_tree" value="state_tree_reference_info">
+					<state_tree_node name="ActionTree_OpeningBranch" value="" />
+				</template_reference>
+				<bool name="destroy_on_crush" value="False" overrideParent="True" />
+				<bool name="can_be_crushed_by_allies" value="False" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2074961" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\destructible_building_template" />
+	</variant>
+</instance>

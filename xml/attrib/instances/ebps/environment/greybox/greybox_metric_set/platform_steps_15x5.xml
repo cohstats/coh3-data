@@ -1,0 +1,108 @@
+<instance version="5" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-112477501" List.ParentItemID="-112477501">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\greybox\greybox_metric_set\platform_steps_15x5" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" comment="Making all these rocks invincible!" List.ItemID="-1655736512" List.ParentItemID="-1655736512">
+				<bool name="is_invincible" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="-1702320986" List.ParentItemID="-1702320986">
+				<instance_reference name="hit_material" value="hit_material\wood" overrideParent="True" />
+				<float name="hit_chance" value="1" overrideParent="True" />
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" List.ItemID="-27317073" List.ParentItemID="-27317073">
+				<list name="block_path" overrideParent="True">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="37187072" List.ListAction="Append">
+				<string name="speaker_code" value="" />
+				<group name="speech_parameters">
+					<string name="class_code" value="" />
+					<string name="name_code" value="" />
+					<string name="unit_code" value="" />
+				</group>
+				<int name="importance" value="1" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\walkable_surface_ext" List.ItemID="459979226" List.ListAction="Append">
+				<enum name="cover_type" value="" />
+				<float name="seconds_after_death" value="0" />
+				<file name="animator_dgm_name" value="art\environment\greybox\greybox_metric_set\platform_steps_15x5" overrideParent="True" />
+				<bool name="remove_on_death" value="True" />
+				<bool name="start_active" value="True" />
+				<template_reference name="impass_override" value="options\ebpextensions\walkablesurfaceext\impass_override">
+					<list name="block_path">
+					</list>
+					<bool name="cant_build" value="True" />
+				</template_reference>
+				<bool name="should_rasterize_partial_cells" value="False" />
+				<bool name="stackable" value="True" />
+				<enum name="walkable_surface_on_remove_action" value="none" overrideParent="True" />
+				<enum name="walkable_surface_terrain_type" value="" />
+				<list name="remove_on_death_meshes">
+				</list>
+				<bool name="only_override_above_terrain" value="False" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="199262" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\object_shot_blocker_uncrushable" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-112477501" List.ParentItemID="-112477501">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\environment\greybox\greybox_metric_set\platform_steps_15x5" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\health_ext" comment="Making all these rocks invincible!" List.ItemID="-1655736512" List.ParentItemID="-1655736512">
+				<bool name="is_invincible" value="True" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\hit_object_ext" List.ItemID="-1702320986" List.ParentItemID="-1702320986">
+				<instance_reference name="hit_material" value="hit_material\wood" overrideParent="True" />
+				<float name="hit_chance" value="1" overrideParent="True" />
+				<group name="shot_collision">
+					<enum_table name="pass_through_projectile">
+						<bool name="tp_throw" value="True" overrideParent="True" />
+					</enum_table>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\impass_ext" List.ItemID="-27317073" List.ParentItemID="-27317073">
+				<list name="block_path" overrideParent="True">
+				</list>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\speech_ext" List.ItemID="37187072" List.ListAction="Append">
+				<string name="speaker_code" value="" />
+				<group name="speech_parameters">
+					<string name="class_code" value="" />
+					<string name="name_code" value="" />
+					<string name="unit_code" value="" />
+				</group>
+				<int name="importance" value="1" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\walkable_surface_ext" List.ItemID="459979226" List.ListAction="Append">
+				<enum name="cover_type" value="" />
+				<float name="seconds_after_death" value="0" />
+				<file name="animator_dgm_name" value="art\environment\greybox\greybox_metric_set\platform_steps_15x5" overrideParent="True" />
+				<bool name="remove_on_death" value="True" />
+				<bool name="start_active" value="True" />
+				<template_reference name="impass_override" value="options\ebpextensions\walkablesurfaceext\impass_override">
+					<list name="block_path">
+					</list>
+					<bool name="cant_build" value="True" />
+				</template_reference>
+				<bool name="should_rasterize_partial_cells" value="False" />
+				<bool name="stackable" value="True" />
+				<enum name="walkable_surface_on_remove_action" value="none" overrideParent="True" />
+				<enum name="walkable_surface_terrain_type" value="" />
+				<list name="remove_on_death_meshes">
+				</list>
+				<bool name="only_override_above_terrain" value="False" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="199262" />
+		<instance_reference name="parent_pbg" value="ebps\environment\templates\object_shot_blocker_uncrushable" />
+	</variant>
+</instance>

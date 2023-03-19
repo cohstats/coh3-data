@@ -1,0 +1,63 @@
+<instance version="5" description="" template="multiplayer\automatch_maps">
+	<variant name="default">
+		<uniqueid name="pbgid" value="2104757" />
+		<group name="automatch_map_bag">
+			<file name="teaser_image" value="" />
+			<locstring name="name" value="0" />
+			<list name="available_modes">
+				<template_reference name="mode" value="multiplayer\mp_map_mode" List.ItemID="-600622074">
+					<int name="team_count" value="2" />
+					<int name="max_player" value="6" />
+					<bool name="enable" value="False" />
+					<instance_reference name="match_type" value="multiplayer\match_type\3v3_ranked" />
+				</template_reference>
+				<template_reference name="mode" value="multiplayer\mp_map_mode" List.ItemID="-1521391022">
+					<int name="team_count" value="2" />
+					<int name="max_player" value="6" />
+					<bool name="enable" value="True" />
+					<instance_reference name="match_type" value="multiplayer\match_type\3v3_unranked" />
+				</template_reference>
+				<template_reference name="mode" value="multiplayer\mp_map_mode" List.ItemID="-1537288508">
+					<int name="team_count" value="2" />
+					<int name="max_player" value="6" />
+					<bool name="enable" value="False" />
+					<instance_reference name="match_type" value="multiplayer\match_type\3v3_ai_easy" />
+				</template_reference>
+				<template_reference name="mode" value="multiplayer\mp_map_mode" List.ItemID="1327382457">
+					<int name="team_count" value="2" />
+					<int name="max_player" value="6" />
+					<bool name="enable" value="True" />
+					<instance_reference name="match_type" value="multiplayer\match_type\3v3_ai_medium" />
+				</template_reference>
+				<template_reference name="mode" value="multiplayer\mp_map_mode" List.ItemID="-358765326">
+					<int name="team_count" value="2" />
+					<int name="max_player" value="6" />
+					<bool name="enable" value="False" />
+					<instance_reference name="match_type" value="multiplayer\match_type\3v3_ai_hard" />
+				</template_reference>
+				<template_reference name="mode" value="multiplayer\mp_map_mode" List.ItemID="1945527862">
+					<int name="team_count" value="2" />
+					<int name="max_player" value="6" />
+					<bool name="enable" value="False" />
+					<instance_reference name="match_type" value="multiplayer\match_type\3v3_ai_expert" />
+				</template_reference>
+				<template_reference name="mode" value="multiplayer\mp_map_mode" List.ItemID="1926704466">
+					<int name="team_count" value="2" />
+					<int name="max_player" value="6" />
+					<bool name="enable" value="True" />
+					<instance_reference name="match_type" value="multiplayer\match_type\attrition_3v3" />
+				</template_reference>
+				<template_reference name="mode" value="multiplayer\mp_map_mode" List.ItemID="254300846">
+					<int name="team_count" value="2" />
+					<int name="max_player" value="6" />
+					<bool name="enable" value="True" />
+					<instance_reference name="match_type" value="multiplayer\match_type\fixedforce_3v3" />
+				</template_reference>
+			</list>
+			<locstring name="description" value="0" />
+			<template_reference name="scenario" value="multiplayer\mp_map_crafted_scenario">
+				<file name="crafted_scenario" value="multiplayer\desert_airfield_6p_mkii\desert_airfield_6p_mkii" />
+			</template_reference>
+		</group>
+	</variant>
+</instance>

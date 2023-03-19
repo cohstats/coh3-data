@@ -20,14 +20,14 @@ We are looking for more help! If you would like to contribute in any way. Please
 
 1. Open Company of Heroes 3 Essence Editor (it's located in your COH3 instalaltion folder). 
 2. One file ReferenceAttributes.sga `...\Company of Heroes 3\anvil\archives\ReferenceAttributes.sga`
-3. Click on the attrib field, right click, extract 
+3. Click on the attrib field, right click, extract   
 ![image](https://user-images.githubusercontent.com/8086995/226179199-855c6ea5-5336-4df9-941c-3dc4f4dc0ad0.png)
 
 4. Extract it into folder `xml` of this repository. SHould look like this:  
 ![image](https://user-images.githubusercontent.com/8086995/226179287-a61f956c-ff99-456f-a679-faf1251ae18a.png)
 
 5. Go into folder `cd scripts/xml-to-json`. 
-6. Run Python script main.py. You need python3. Like this `python main.py`, you should see this result:
+6. Run Python script main.py. You need python3. Like this `python main.py`, you should see this result:  
 ![image](https://user-images.githubusercontent.com/8086995/226179423-711db84e-9cb4-41e7-92de-e2341b9130ba.png)
 
 7. Check the folder, you should see exported files. 

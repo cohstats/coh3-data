@@ -21,7 +21,6 @@ locstring_export_path = os.path.join(script_root_dir, f'{CONST_EXPORT_DIR}')
 save_dict_to_json(locstring, locstring_export_path, "locstring.json")
 
 
-
 # navigate to weapon XMLs and build a dictionary
 weapons_src_dir = os.path.abspath(os.path.join(xml_data_dir, 'attrib\instances\weapon'))
 result = build_files_dictionary(weapons_src_dir, parse_weapon_xml_data)
@@ -57,5 +56,32 @@ upgrade = resolve_dict_value_by_path(result, get_path_as_string(upgrade_src_dir)
 # export to json
 exported_upgrade_dir = os.path.join(script_root_dir, f'{CONST_EXPORT_DIR}')
 save_dict_to_json(upgrade, exported_upgrade_dir, "upgrade.json")
+
+# Use a function to easily spot each xml-to-json execution.
+def exportBattlegroups():
+    print('## Started processing battlegroups....')
+    # Navigate to tech_tree/battlegroup XMLs and build a dictionary. We do not need the campaign ones.
+    battlegroup_src_dir = os.path.abspath(os.path.join(xml_data_dir, 'attrib\instances\\tech_tree\\battlegroup'))
+    result = build_files_dictionary(battlegroup_src_dir, parse_weapon_xml_data)
+    battlegroup = resolve_dict_value_by_path(result, get_path_as_string(battlegroup_src_dir))
+    # export to json
+    exported_battlegroup_dir = os.path.join(script_root_dir, f'{CONST_EXPORT_DIR}')
+    save_dict_to_json(battlegroup, exported_battlegroup_dir, "battlegroup.json")
+    print('## Finished processing battlegroups....')
+
+def exportAbilities():
+    print('## Started processing abilities....')
+    # Navigate to tech_tree/battlegroup XMLs and build a dictionary. We do not need the campaign ones.
+    abilities_src_dir = os.path.abspath(os.path.join(xml_data_dir, 'attrib\instances\\abilities'))
+    result = build_files_dictionary(abilities_src_dir, parse_weapon_xml_data)
+    abilities = resolve_dict_value_by_path(result, get_path_as_string(abilities_src_dir))
+    # export to json
+    exported_abilities_dir = os.path.join(script_root_dir, f'{CONST_EXPORT_DIR}')
+    save_dict_to_json(abilities, exported_abilities_dir, "abilities.json")
+    print('## Finished processing abilities....')
+
+
+exportBattlegroups()
+exportAbilities()
 
 print('Parsing done. View this folder for results: \n"'+ get_path_as_string(script_root_dir)+f'\{CONST_EXPORT_DIR}"')

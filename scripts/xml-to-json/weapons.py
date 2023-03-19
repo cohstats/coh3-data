@@ -3,9 +3,6 @@ import json
 import xml.etree.ElementTree as ET
 from scriptUtils import get_nth_level_parent, get_attribute, has_children, string_num
 
-
-
-
 def parse_weapon_xml_data(element: ET.Element) -> dict:
     """Parses XML data from a given ElementTree element and returns a dictionary.
 
@@ -65,27 +62,28 @@ def parse_weapon_xml_data(element: ET.Element) -> dict:
 
 
 #######################################################################################################
-if __name__ == "__main__":
-
-    # this script cwd
-    script_root_dir = os.path.abspath(os.getcwd())
-    # 2 levels up to the repository
-    source_xml_dir = os.path.abspath(os.path.join(
-        get_nth_level_parent(script_root_dir, 2), 'xml'))
-    # pathStr
-    print(source_xml_dir)
-    
-    tommy_path_relative = "attrib/instances/weapon/american/small_arms/machine_gun/sub_machine_gun/thompson_ranger_us.xml";
-    
-    weapon_file = os.path.join(source_xml_dir, tommy_path_relative)
-    #eapon_file = "C:/GIT/coh3-data/xml/attrib/instances/weapon/american/small_arms/machine_gun/sub_machine_gun/thompson_ranger_us.xml"
-    weapon_file = "C:/GIT/coh3-data/xml/attrib/instances/ebps/races/american/infantry/assault_engineer_us.xml"
-    print(weapon_file)
-    
-    # load weapon_file xml
-    xmltree = ET.parse(weapon_file)
-    xmlroot = xmltree.getroot()
-    # get the default weapon variant(not the single player version!)
-    default_variant = xmlroot.findall("variant[@name='default']")[0]
-    weapon = parse_weapon_xml_data(default_variant)
-    weapon_json = json.dumps(weapon)
+# This is just for testing purposes
+# if __name__ == "__main__":
+#
+#     # this script cwd
+#     script_root_dir = os.path.abspath(os.getcwd())
+#     # 2 levels up to the repository
+#     source_xml_dir = os.path.abspath(os.path.join(
+#         get_nth_level_parent(script_root_dir, 2), 'xml'))
+#     # pathStr
+#     print(source_xml_dir)
+#
+#     tommy_path_relative = "attrib/instances/weapon/american/small_arms/machine_gun/sub_machine_gun/thompson_ranger_us.xml";
+#
+#     weapon_file = os.path.join(source_xml_dir, tommy_path_relative)
+#     #eapon_file = "C:/GIT/coh3-data/xml/attrib/instances/weapon/american/small_arms/machine_gun/sub_machine_gun/thompson_ranger_us.xml"
+#     weapon_file = "C:/GIT/coh3-data/xml/attrib/instances/ebps/races/american/infantry/assault_engineer_us.xml"
+#     print(weapon_file)
+#
+#     # load weapon_file xml
+#     xmltree = ET.parse(weapon_file)
+#     xmlroot = xmltree.getroot()
+#     # get the default weapon variant(not the single player version!)
+#     default_variant = xmlroot.findall("variant[@name='default']")[0]
+#     weapon = parse_weapon_xml_data(default_variant)
+#     weapon_json = json.dumps(weapon)

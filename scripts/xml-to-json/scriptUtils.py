@@ -1,6 +1,7 @@
 import os
 import json
 import xml.etree.ElementTree as ET
+import copy
 
 def string_num(input_string: str):
     """
@@ -205,6 +206,96 @@ def build_files_dictionary(directory, parse_func):
             current_dict[filename] = parse_func(default_variant)
     return files_dict
 
+def resolve_inheritance_dic(dic_current_node, dic_root): 
+
+    # recursively find and process all nodes that use inheritance
+
+    ## check if node can inherit
+    if  'parent_pbg' in dic_current_node :
+
+        ## get reference 
+        reference = dic_current_node['parent_pbg']['instance_reference']
+
+        ## check if reference exists
+        if(reference is None or reference == ""):
+            return dic_current_node
+        
+        ## get name of reference parent
+        key = os.path.splitext(os.path.basename(reference))[0]
+
+        # find inheritance parent
+        parent = find_key_in_nested_dict(dic_root,key)
+
+        # resolve inheritance for parent itself
+        resolve_inheritance_dic(parent,dic_root)
+
+        parent_clone = copy.deepcopy(parent)
+
+        return resolve_inheritance_node(parent_clone,dic_current_node)
+ 
+    else: 
+        for child in dic_current_node:
+           if type(dic_current_node[child]) is dict:
+                dic_current_node[child] = resolve_inheritance_dic(dic_current_node[child],dic_root)
+
+    return dic_current_node
+
+def resolve_inheritance_node(base,overwrite):
+    
+    if overwrite is None:
+        return base
+    
+    if type(base) is not dict:
+        return overwrite 
+    
+    # Convention: If parent node is a dict and overwrite is a string
+    # parent node is overwriting
+    if type (overwrite) is str: 
+        return base
+    
+    for prop in overwrite:
+
+        if prop not in base:
+            base[prop] = overwrite[prop]
+            continue
+        if prop == 'extensions':
+            base[prop] = resolve_extensions(base[prop],overwrite[prop])
+            continue
+        if type(overwrite[prop]) is list:
+            base[prop] = resolve_list(base[prop],overwrite[prop])
+            continue
+        base[prop] = resolve_inheritance_node(base[prop],overwrite[prop])
+
+
+        # node can inherit
+    return base
+
+def resolve_extensions(base,overwrite):
+
+    for i in range(len(overwrite)):
+        found =False
+        keyOwr =list(overwrite[i].keys())[0] 
+        for j in range(len(base)):
+            keyBase =list(base[j].keys())[0] 
+            if overwrite[i][keyOwr]['template_reference']['value'] == base[j][keyBase]['template_reference']['value']:
+                base[j] = resolve_inheritance_node(base[j],overwrite[i]) 
+                found = True
+                break
+        if found == False:  
+            base.append(overwrite[i])
+    
+    return base
+
+def resolve_list(base,overwrite):
+
+    for i in range(len(overwrite)):
+        if i >= len(base) :
+            base.append(overwrite[i])
+            continue
+        base[i] = resolve_inheritance_node(base[i],overwrite[i]) 
+
+    return base
+    
 
 def save_dict_to_json(dictionary, path, file_name, indent=4):
     """

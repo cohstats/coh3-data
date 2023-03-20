@@ -1,4 +1,6 @@
 import os
+
+from mappingSbps import parseSquadBlueprintXML
 from scriptUtils import get_nth_level_parent, build_files_dictionary, save_dict_to_json, get_path_as_string, resolve_dict_value_by_path, create_locstring_dictionary
 from weapons import parse_weapon_xml_data
 
@@ -95,12 +97,14 @@ def exportAbilities():
     print('## Finished processing abilities....')
 
 
-exportLocstrings()
-exportWeapons()
-exportEntityBlueprints()
-exportSquadBlueprints()
-exportUpgrades()
-exportBattlegroups()
-exportAbilities()
+# exportLocstrings()
+# exportWeapons()
+# exportEntityBlueprints()
+# exportSquadBlueprints()
+# exportUpgrades()
+# exportBattlegroups()
+# exportAbilities()
+
+parseSquadBlueprintXML()
 
 print('Parsing done. View this folder for results: \n"'+ get_path_as_string(script_root_dir)+f'\{CONST_EXPORT_DIR}"')

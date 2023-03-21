@@ -32,9 +32,11 @@ We are looking for more help! If you would like to contribute in any way. Please
 
 7. Check the folder, you should see exported files. 
 
+Hint: `python main.py -no_bl` disables blacklist filter and generates complete JSON files. However, when possible,
+the filtered JSON files should be used to reduce file size. 
 
 ## Changes after the patch
-1. Generate teh data
+1. Generate the data
 2. Copy the .json files into folder `/data`
 3. Make an MR with the changes 
 

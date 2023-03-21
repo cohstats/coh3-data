@@ -2,6 +2,8 @@ import os
 import json
 import xml.etree.ElementTree as ET
 import copy
+import re
+import sys
 
 def string_num(input_string: str):
     """
@@ -177,6 +179,10 @@ def build_files_dictionary(directory, parse_func):
     """
     Builds a nested dictionary from a directory containing files by recursively walking through the directory 
     and parsing each file using the provided parse function.
+
+    Blacklist mechanic has been added to filter out folders and extension that are not required. Blacklists are saved
+    under /blacklists/[ROOT_FOLDER]_bl.txt for folder blacklists (eg. /blacklists/ebps_bl.txt ) and 
+    /blacklists/[ROOT_FOLDER]_ext_bl.txt for extension blacklists. 
     
     Args:
         directory (str): The path to the directory to build the dictionary from.
@@ -188,27 +194,108 @@ def build_files_dictionary(directory, parse_func):
         The keys of the dictionary are the names of files and folders, and the values are either sub-dictionaries 
         for folders or the parsed representation of the file for files.
     """
+    skip_blackllist = False
 
+    # receive blacklists
+    if len(sys.argv) > 1 and '-no_bl' in sys.argv:
+        skip_blackllist = True
+
+    blacklist = []
+    blacklist_ext = []
+    if not skip_blackllist:
+        ## xml folder must be 2 level upwards in the folder hierarchy = project root
+        blacklist_dir = os.path.dirname(os.path.abspath(__file__+"/../../"))
+        blacklist_dir = os.path.join(blacklist_dir, 'blacklists')
+        print("- Using blacklist from "+blacklist_dir)
+        blacklist = getBlacklist(os.path.join(blacklist_dir,os.path.splitext(os.path.basename(directory))[0])+'_bl.txt')
+        blacklist_ext = getBlacklist(os.path.join(blacklist_dir,os.path.splitext(os.path.basename(directory))[0])+'_ext_bl.txt')
+    
     files_dict = {}
     for root, dirs, files in os.walk(directory):
+
+        ## check if root is blacklisted
+        if len(blacklist) > 0 and isBlacklisted(root,directory,blacklist):
+            continue
+
         current_dict = files_dict
         path = root.split(os.sep)
+
         for i in range(len(path)):
+
             folder = path[i]
             if folder not in current_dict:
                 current_dict[folder] = {}
             current_dict = current_dict[folder]
+
         for file in files:
+
             file_path = os.path.join(root, file)
             filename = os.path.splitext(os.path.basename(file_path))[0]
             # get the default variant(not the single player version!)
             default_variant = get_default_variant(file_path)
-            current_dict[filename] = parse_func(default_variant)
+            current_dict[filename] = parse_func(default_variant,blacklist_ext)
+
     return files_dict
 
+
+def getBlacklist(path) :
+    """
+    Reads the corresponding blacklist file and returns an array with expressions
+    
+    Args:
+        path (str): The path to the blacklilst file
+    
+    
+    Returns:
+        a string array containing all expressions of the blackllist
+    """
+    if not os.path.isfile(path):
+        return []
+
+    with open(path) as file:
+        lines = file.read().splitlines()
+    file.close()
+
+    return lines
+
+
+def isBlacklisted(path:str,directory:str,  blacklist):
+    """
+    Checks if folder path is blacklisted. 
+    
+    Args:
+        path (str): The path to be checked
+        dictonary (str): Path to root folder for concrete blueprint (eg. ebps)
+        blacklist List: the blacklist array of strings (expressions) to be checked against
+    
+    Returns:
+        true if path is in checklist
+    """
+    # convert to relative path of directory
+    relative_path = path.replace(directory,'')
+
+    for expr in blacklist:
+        if expr != '' and re.search(expr, relative_path) :
+            return True
+    return False
+
+
 def resolve_inheritance_dic(dic_current_node, dic_root): 
+    """
+    Resolves inheritance for given blueprint dictionary recursively
+    
+    Args:
+        dic_current_node Dict: the current node to be checked 
+        dic_root Dict: the complete dictionary to find parents
+    
+    Returns:
+        Dict - Resolved dictionary including inherited values
+    """ 
+
 
     # recursively find and process all nodes that use inheritance
+    if dic_current_node is None:
+        return None
 
     ## check if node can inherit
     if  'parent_pbg' in dic_current_node :
@@ -226,6 +313,10 @@ def resolve_inheritance_dic(dic_current_node, dic_root):
         # find inheritance parent
         parent = find_key_in_nested_dict(dic_root,key)
 
+        if parent is None :
+            print("Info: Inheritance reference "+reference+" not resolved. Probably blacklisted.")
+            return dic_current_node
+
         # resolve inheritance for parent itself
         resolve_inheritance_dic(parent,dic_root)
 
@@ -240,7 +331,21 @@ def resolve_inheritance_dic(dic_current_node, dic_root):
 
     return dic_current_node
 
+
 def resolve_inheritance_node(base,overwrite):
+
+    """
+    Resolves inheritance for given node
+    
+    Args:
+        base Dict:       the base node containing all values from parent
+        overwrite Dict:  the overwriting node 
+    
+    Returns:
+        Dict - Resolved dictionary including inherited values
+    """ 
+
+
     
     if overwrite is None:
         return base
@@ -258,19 +363,33 @@ def resolve_inheritance_node(base,overwrite):
         if prop not in base:
             base[prop] = overwrite[prop]
             continue
+
         if prop == 'extensions':
             base[prop] = resolve_extensions(base[prop],overwrite[prop])
             continue
+
         if type(overwrite[prop]) is list:
             base[prop] = resolve_list(base[prop],overwrite[prop])
             continue
+
         base[prop] = resolve_inheritance_node(base[prop],overwrite[prop])
 
 
         # node can inherit
     return base
 
+
 def resolve_extensions(base,overwrite):
+    """
+    Resolves inheritance for extensions (Special case)
+    
+    Args:
+        base Dict:       the base node containing all values from parent
+        overwrite Dict:  the overwriting node 
+    
+    Returns:
+        Dict - Resolved dictionary including inherited values
+    """ 
 
     for i in range(len(overwrite)):
         found =False
@@ -287,7 +406,16 @@ def resolve_extensions(base,overwrite):
     return base
 
 def resolve_list(base,overwrite):
-
+    """
+    Resolves inheritance for lists 
+    
+    Args:
+        base Dict:       the base node containing all values from parent
+        overwrite Dict:  the overwriting node 
+    
+    Returns:
+        Dict - Resolved dictionary including inherited values
+    """ 
     for i in range(len(overwrite)):
         if i >= len(base) :
             base.append(overwrite[i])
@@ -320,6 +448,15 @@ def save_dict_to_json(dictionary, path, file_name, indent=4):
     # write the dictionary as formatted JSON to file
     with open(file_path, 'w') as json_file:
         json.dump(dictionary, json_file, indent=indent)
+    json_file.close()
+
+    # json_str = json.dumps(dictionary)
+    # json_str = str(zlib.compress(json_str.encode()))
+    # # write the dictionary as formatted JSON to file
+    # with open(file_path+"_c", 'w') as compressed_file:
+    #     compressed_file.write(json_str)
+    # compressed_file.close()
+
 
 
 

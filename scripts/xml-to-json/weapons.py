@@ -3,11 +3,15 @@ import json
 import xml.etree.ElementTree as ET
 from scriptUtils import get_nth_level_parent, get_attribute, has_children, string_num
 
-def parse_weapon_xml_data(element: ET.Element) -> dict:
+def parse_weapon_xml_data(element: ET.Element,blacklist:list = []) -> dict:
     """Parses XML data from a given ElementTree element and returns a dictionary.
+
+    Added blacklist mechanic. Extensions listed in /blacklists/[FILE]_ext_bl.txt are
+    not exported. 
 
     Args:
         element (xml.etree.ElementTree.Element): An ElementTree element to parse.
+        blacklis List : String array with blacklisted extensions
 
     Returns:
         dict: A dictionary containing the parsed XML data.
@@ -21,6 +25,13 @@ def parse_weapon_xml_data(element: ET.Element) -> dict:
     # add tag metadata for certain tag types
     if element.tag == 'template_reference':
         result[element.tag] = {'name':get_attribute(element,"name"), 'value':get_attribute(element,"value")}
+        
+        ## check for blacklisting extensions -> don't export
+        #extName = os.path.splitext(os.path.basename(result[element.tag]['value']))[0]
+        extName = result[element.tag]['value']
+        if extName in blacklist : 
+            return None
+
     elif element.tag == 'locstring':
         result[element.tag] = {'name':get_attribute(element,"name"), 'value':get_attribute(element,"value")}
         
@@ -32,11 +43,14 @@ def parse_weapon_xml_data(element: ET.Element) -> dict:
                 # for all children of a list node
                 for item in child:
                     listItem = {}
-                    listItem[get_attribute(item,"name")] = parse_weapon_xml_data(item)
-                    result[get_attribute(child,"name")].append(listItem)
+                    listItem[get_attribute(item,"name")] = parse_weapon_xml_data(item,blacklist)
+                    if listItem[get_attribute(item,"name")]  is not None:
+                        result[get_attribute(child,"name")].append(listItem)
             else:
                 try:
-                    result[get_attribute(child,"name")] = parse_weapon_xml_data(child)
+                    value = parse_weapon_xml_data(child,blacklist)
+                    if value is not None:
+                        result[get_attribute(child,"name")] = value
                 except Exception as e:
                     print(e)
                     pass

@@ -318,7 +318,7 @@ def resolve_inheritance_dic(dic_current_node, dic_root):
             return dic_current_node
 
         # resolve inheritance for parent itself
-        resolve_inheritance_dic(parent,dic_root)
+        parent = resolve_inheritance_dic(parent,dic_root)
 
         parent_clone = copy.deepcopy(parent)
 

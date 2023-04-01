@@ -279,6 +279,47 @@ def isBlacklisted(path:str,directory:str,  blacklist):
             return True
     return False
 
+def mod_overwrite(dic_root , mod_path:str, parser ):
+    mod_dic = build_files_dictionary(mod_path,parser)
+    mod_overwrite_traverse(dic_root,mod_dic)
+    return dic_root
+
+def mod_overwrite_traverse(dic_root,mod_dic, path = ""):
+    
+    if('pbgid' in mod_dic):
+        return mod_overwrite_by_path(dic_root,mod_dic,path)
+    
+    # No overwrite, keep going searching
+    for prop in mod_dic:
+        path = path + prop + '/'
+        dic_root = mod_overwrite_traverse(dic_root,mod_dic[prop],path)
+
+
+    return dic_root
+
+
+def mod_overwrite_by_path(dic_root,mod_dic, path:str):
+   
+    pathArray = path.split('/')
+    pathFirst = pathArray[0]
+    pathLast = pathArray[len(pathArray)-2]
+    pathNext = path.replace(pathFirst+'/','')
+
+    if(pathFirst == pathLast): 
+        dic_root[pathFirst] = mod_dic
+        return dic_root
+    
+    if pathFirst in dic_root: 
+        dic_root[pathFirst] = mod_overwrite_by_path(dic_root[pathFirst],mod_dic, pathNext )
+        return dic_root
+    else: dic_root = mod_overwrite_by_path(dic_root,mod_dic,pathNext )
+
+    
+    # for prop in dic_root:
+    #     dic_root[prop] = mod_overwrite(dic_root[prop],mod_dic,pathNext)
+
+    return dic_root
+
 
 def resolve_inheritance_dic(dic_current_node, dic_root): 
     """

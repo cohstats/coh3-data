@@ -10,6 +10,24 @@ CONST_EXPORT_DIR = 'exported'       # this is not gitignored
 ## xml folder must be 2 level upwards in the folder hierarchy
 PROJECT_ROOT_DIR = os.path.dirname(os.path.abspath(__file__+"/../.."))
 
+def exportByType( type:str, prefix = ""):
+    print('## Started processing '+type+'....')
+    # navigate to sbps XMLs and build a dictionary
+    src_dir = os.path.abspath(os.path.join(xml_data_dir, 'attrib\instances\\'+prefix+type))
+    result = build_files_dictionary(src_dir, parse_weapon_xml_data)
+    # overwrite mod xml
+    if len(sys.argv) < 1 or '-no_mod' not in sys.argv:
+        print('- Mod fix overwrite...')
+        mod_dir = os.path.abspath(os.path.join(xml_data_dir, 'coh3-state-tree-fix\\assets\\attrib\instances\\'+prefix+type))
+        result = mod_overwrite(result,mod_dir,parse_weapon_xml_data)
+    print('- Resolving inheritance....')
+    result = resolve_inheritance_dic(result,result)
+    resolved_dic = resolve_dict_value_by_path(result, get_path_as_string(src_dir))
+    # export to json
+    print('- Writing to file....')
+    exported_dir = os.path.join(script_root_dir, f'{CONST_EXPORT_DIR}')
+    save_dict_to_json(resolved_dic, exported_dir, type+".json")
+
 print('Parsing xml to json...')
 # this script cwd
 #script_root_dir = os.path.abspath(os.getcwd())
@@ -27,29 +45,11 @@ locstring = create_locstring_dictionary(locstring_path)
 locstring_export_path = os.path.join(script_root_dir, f'{CONST_EXPORT_DIR}')
 save_dict_to_json(locstring, locstring_export_path, "locstring.json")
 
-def exportByType( type:str):
-    print('## Started processing '+type+'....')
-    # navigate to sbps XMLs and build a dictionary
-    src_dir = os.path.abspath(os.path.join(xml_data_dir, 'attrib\instances\\'+type))
-    result = build_files_dictionary(src_dir, parse_weapon_xml_data)
-    # overwrite mod xml
-    if len(sys.argv) < 1 or '-no_mod' not in sys.argv:
-        print('- Mod fix overwrite...')
-        mod_dir = os.path.abspath(os.path.join(xml_data_dir, 'coh3-state-tree-fix\\assets\\attrib\instances\\'+type))
-        result = mod_overwrite(result,mod_dir,parse_weapon_xml_data)
-    print('- Resolving inheritance....')
-    result = resolve_inheritance_dic(result,result)
-    sbps = resolve_dict_value_by_path(result, get_path_as_string(src_dir))
-    # export to json
-    print('- Writing to file....')
-    exported_dir = os.path.join(script_root_dir, f'{CONST_EXPORT_DIR}')
-    save_dict_to_json(sbps, exported_dir, type+".json")
-
 exportByType('ebps')
 exportByType('sbps')
 exportByType('weapon')
 exportByType('upgrade')
-exportByType('battlegroup')
+exportByType('battlegroup','tech_tree\\')
 exportByType('abilities')
 
 

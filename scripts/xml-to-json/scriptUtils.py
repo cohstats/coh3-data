@@ -321,14 +321,16 @@ def mod_overwrite_traverse(dic_root,mod_dic, path = ""):
     return dic_root
 
 
-def mod_overwrite_by_path(dic_root,mod_dic, path:str):
+def mod_overwrite_by_path(dic_root,mod_dic, path:str, common_root = False):
     """
     Navigates to a given path of the dictory and overwrites the last
     path element as property by the given mod_dic dictionary/file. 
     
     Args:
-        dic_root to be navigated and overwritten
-        mod_dic overwriting instance
+        dic_root    to be navigated and overwritten
+        mod_dic     overwriting instance
+        common_root indicates if traversal begins from a common
+                    root folder
     
     Returns:
         dic_root - Resolved dictionary including overwritten values
@@ -339,14 +341,22 @@ def mod_overwrite_by_path(dic_root,mod_dic, path:str):
     pathLast = pathArray[len(pathArray)-2]
     pathNext = path.replace(pathFirst+'/','')
 
+    # traverse the first parent folder until we find the attrib folder
+    # to have the same starting point as the original dictionary
+    if common_root == False and pathFirst == 'attrib':
+        common_root = True
+    
+    if not common_root : 
+        dic_root = mod_overwrite_by_path(dic_root,mod_dic,pathNext )
+        return dic_root
+
     if(pathFirst == pathLast): 
         dic_root[pathFirst] = mod_dic
         return dic_root
     
     if pathFirst in dic_root: 
-        dic_root[pathFirst] = mod_overwrite_by_path(dic_root[pathFirst],mod_dic, pathNext )
+        dic_root[pathFirst] = mod_overwrite_by_path(dic_root[pathFirst],mod_dic, pathNext,True )
         return dic_root
-    else: dic_root = mod_overwrite_by_path(dic_root,mod_dic,pathNext )
 
     
     # for prop in dic_root:

@@ -314,8 +314,8 @@ def mod_overwrite_traverse(dic_root,mod_dic, path = ""):
     
     # No overwrite, keep going searching
     for prop in mod_dic:
-        path = path + prop + '/'
-        dic_root = mod_overwrite_traverse(dic_root,mod_dic[prop],path)
+        path_new = path + prop + '/'
+        dic_root = mod_overwrite_traverse(dic_root,mod_dic[prop],path_new)
 
 
     return dic_root
@@ -341,14 +341,21 @@ def mod_overwrite_by_path(dic_root,mod_dic, path:str, common_root = False):
     pathLast = pathArray[len(pathArray)-2]
     pathNext = path.replace(pathFirst+'/','')
 
-    # traverse the first parent folder until we find the attrib folder
-    # to have the same starting point as the original dictionary
-    if common_root == False and pathFirst == 'attrib':
-        common_root = True
-    
-    if not common_root : 
-        dic_root = mod_overwrite_by_path(dic_root,mod_dic,pathNext )
-        return dic_root
+    # # traverse the first parent folder until we find the attrib folder
+    # # to have the same starting point as the original dictionary
+    if not common_root:
+        if 'attrib' not in dic_root and pathFirst != 'attrib':
+            for prop in dic_root:
+                dic_root[prop] = mod_overwrite_by_path(dic_root[prop],mod_dic,pathNext )
+            return dic_root
+        elif 'attrib' not in dic_root and pathFirst == 'attrib':
+            for prop in dic_root:
+                dic_root[prop] = mod_overwrite_by_path(dic_root[prop],mod_dic,path )
+            return dic_root
+        elif 'attrib' in dic_root and pathFirst != 'attrib':
+            dic_root = mod_overwrite_by_path(dic_root,mod_dic,pathNext )
+            return dic_root
+        else: common_root = True
 
     if(pathFirst == pathLast): 
         dic_root[pathFirst] = mod_dic

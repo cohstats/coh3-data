@@ -280,12 +280,35 @@ def isBlacklisted(path:str,directory:str,  blacklist):
     return False
 
 def mod_overwrite(dic_root , mod_path:str, parser ):
+    """
+    Overwrites original data by data extracted from 
+    mod. 
+    
+    Args:
+        dic_root target dictionary
+        mod_dic overwriting dictionary
+        parser custom xml parser
+    
+    Returns:
+        dic_root - Resolved dictionary including overwritten values
+    """  
     mod_dic = build_files_dictionary(mod_path,parser)
     mod_overwrite_traverse(dic_root,mod_dic)
     return dic_root
 
 def mod_overwrite_traverse(dic_root,mod_dic, path = ""):
+    """
+    Navigates through mod dictionary and overwrites to 
+    identify all elements that need to overwrite
     
+    Args:
+        dic_root target dictionary
+        mod_dic overwriting instance
+        path of overwriting instance
+    
+    Returns:
+        dic_root - Resolved dictionary including overwritten values
+    """  
     if('pbgid' in mod_dic):
         return mod_overwrite_by_path(dic_root,mod_dic,path)
     
@@ -299,7 +322,18 @@ def mod_overwrite_traverse(dic_root,mod_dic, path = ""):
 
 
 def mod_overwrite_by_path(dic_root,mod_dic, path:str):
-   
+    """
+    Navigates to a given path of the dictory and overwrites the last
+    path element as property by the given mod_dic dictionary/file. 
+    
+    Args:
+        dic_root to be navigated and overwritten
+        mod_dic overwriting instance
+    
+    Returns:
+        dic_root - Resolved dictionary including overwritten values
+    """ 
+       
     pathArray = path.split('/')
     pathFirst = pathArray[0]
     pathLast = pathArray[len(pathArray)-2]

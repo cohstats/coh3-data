@@ -27,6 +27,7 @@ def exportByType( type:str, prefix = ""):
     print('- Writing to file....')
     exported_dir = os.path.join(script_root_dir, f'{CONST_EXPORT_DIR}')
     save_dict_to_json(resolved_dic, exported_dir, type+".json")
+    print(' ')
 
 print('Parsing xml to json...')
 # this script cwd
@@ -44,6 +45,7 @@ locstring = create_locstring_dictionary(locstring_path)
 # export to json
 locstring_export_path = os.path.join(script_root_dir, f'{CONST_EXPORT_DIR}')
 save_dict_to_json(locstring, locstring_export_path, "locstring.json")
+print(' ')
 
 exportByType('ebps')
 exportByType('sbps')

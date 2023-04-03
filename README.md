@@ -43,6 +43,35 @@ the filtered JSON files should be used to reduce file size.
 The folder /data should always have the stable export of the data. 
 
 
+## How to add/fix missing data not delivered by the Essence Editor
+
+Some times it is nessecary to add some modifications to the XML as not all informations are delivered by relic. 
+E.g. Stormtroopers are spawned with an lmg but there is no lmg member referenced within the loadout of the sbps. 
+For that we created a CoH3 tuning mod which can be adoptet to overwrite missing information.
+
+1. Open the mod from the projects `xml` directory with the Essence Editor
+![image](https://user-images.githubusercontent.com/682343/229565471-1b457592-1276-4df8-8cab-21b31e52d6a3.png)
+
+2. Clone the attribute file that needs to be modified and assign a name. It will later overrite the original file if it keeps the same name otherwise,
+a new json object will be created for that element. 
+![image](https://user-images.githubusercontent.com/682343/229566966-4ce0b48c-314e-44d3-b4e0-5b7292b0b6b2.png)
+![image](https://user-images.githubusercontent.com/682343/229567655-93690d6b-eeb5-4faa-b732-195fc8675bac.png)
+
+3. Modify the cloned file which will appear in the corresponding Mod directory. You can also delete some extensions which are not required at all
+to reduce traffic. 
+![image](https://user-images.githubusercontent.com/682343/229568348-a7d77d4b-0a19-4e25-967d-7bc66fd3a812.png)
+
+4. Save the mod. When the steps of `How to extract data` are performed, the modifications will be added or overwrite the original data
+during the json generation process (see step 6 above). 
+
+Hint: Overwriting can be skipped during script execution via `-no_mod` flag. Be aware after patches, the overwriting mod might need to be
+adopted to reflect Relics patch changes. Thus, choose the files to modify wisely. 
+
+
+
+
+
+
 
 
 ### References:

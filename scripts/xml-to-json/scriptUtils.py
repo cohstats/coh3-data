@@ -279,6 +279,98 @@ def isBlacklisted(path:str,directory:str,  blacklist):
             return True
     return False
 
+def mod_overwrite(dic_root , mod_path:str, parser ):
+    """
+    Overwrites original data by data extracted from 
+    mod. 
+    
+    Args:
+        dic_root target dictionary
+        mod_dic overwriting dictionary
+        parser custom xml parser
+    
+    Returns:
+        dic_root - Resolved dictionary including overwritten values
+    """  
+    mod_dic = build_files_dictionary(mod_path,parser)
+    mod_overwrite_traverse(dic_root,mod_dic)
+    return dic_root
+
+def mod_overwrite_traverse(dic_root,mod_dic, path = ""):
+    """
+    Navigates through mod dictionary and overwrites to 
+    identify all elements that need to overwrite
+    
+    Args:
+        dic_root target dictionary
+        mod_dic overwriting instance
+        path of overwriting instance
+    
+    Returns:
+        dic_root - Resolved dictionary including overwritten values
+    """  
+    if('pbgid' in mod_dic):
+        return mod_overwrite_by_path(dic_root,mod_dic,path)
+    
+    # No overwrite, keep going searching
+    for prop in mod_dic:
+        path_new = path + prop + '/'
+        dic_root = mod_overwrite_traverse(dic_root,mod_dic[prop],path_new)
+
+
+    return dic_root
+
+
+def mod_overwrite_by_path(dic_root,mod_dic, path:str, common_root = False):
+    """
+    Navigates to a given path of the dictory and overwrites the last
+    path element as property by the given mod_dic dictionary/file. 
+    
+    Args:
+        dic_root    to be navigated and overwritten
+        mod_dic     overwriting instance
+        common_root indicates if traversal begins from a common
+                    root folder
+    
+    Returns:
+        dic_root - Resolved dictionary including overwritten values
+    """ 
+       
+    pathArray = path.split('/')
+    pathFirst = pathArray[0]
+    pathLast = pathArray[len(pathArray)-2]
+    pathNext = path.replace(pathFirst+'/','')
+
+    # # traverse the first parent folder until we find the attrib folder
+    # # to have the same starting point as the original dictionary
+    if not common_root:
+        if 'attrib' not in dic_root and pathFirst != 'attrib':
+            for prop in dic_root:
+                dic_root[prop] = mod_overwrite_by_path(dic_root[prop],mod_dic,pathNext )
+            return dic_root
+        elif 'attrib' not in dic_root and pathFirst == 'attrib':
+            for prop in dic_root:
+                dic_root[prop] = mod_overwrite_by_path(dic_root[prop],mod_dic,path )
+            return dic_root
+        elif 'attrib' in dic_root and pathFirst != 'attrib':
+            dic_root = mod_overwrite_by_path(dic_root,mod_dic,pathNext )
+            return dic_root
+        else: common_root = True
+
+    if(pathFirst == pathLast): 
+        dic_root[pathFirst] = mod_dic
+        return dic_root
+    
+    if pathFirst in dic_root: 
+        dic_root[pathFirst] = mod_overwrite_by_path(dic_root[pathFirst],mod_dic, pathNext,True )
+        return dic_root
+
+    
+    # for prop in dic_root:
+    #     dic_root[prop] = mod_overwrite(dic_root[prop],mod_dic,pathNext)
+
+    return dic_root
+
 
 def resolve_inheritance_dic(dic_current_node, dic_root): 
     """

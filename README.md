@@ -61,7 +61,7 @@ a new json object will be created for that element.
 to reduce traffic. 
 ![image](https://user-images.githubusercontent.com/682343/229568348-a7d77d4b-0a19-4e25-967d-7bc66fd3a812.png)
 
-4. Save the mod. When the steps of `How to extract data` are performed, the modifications will be added or overwrite the original data
+4. Save the mod. When the steps of `How to generate data` are performed, the modifications will be added or overwrite the original data
 during the json generation process (see step 6 above). 
 
 Hint: Overwriting can be skipped during script execution via `-no_mod` flag. Be aware after patches, the overwriting mod might need to be

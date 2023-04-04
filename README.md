@@ -23,14 +23,21 @@ We are looking for more help! If you would like to contribute in any way. Please
 3. Click on the attrib field, right click, extract   
 ![image](https://user-images.githubusercontent.com/8086995/226179199-855c6ea5-5336-4df9-941c-3dc4f4dc0ad0.png)
 
-4. Extract it into folder `xml` of this repository. SHould look like this:  
+4. Extract it into folder `xml` of this repository. Should look like this:  
 ![image](https://user-images.githubusercontent.com/8086995/226179287-a61f956c-ff99-456f-a679-faf1251ae18a.png)
 
-5. Go into folder `cd scripts/xml-to-json`. 
-6. Run Python script main.py. You need python3. Like this `python main.py`, you should see this result:  
-![image](https://user-images.githubusercontent.com/8086995/226179423-711db84e-9cb4-41e7-92de-e2341b9130ba.png)
+The **locstrings** must be exported as well, but requires the following steps:
 
-7. Check the folder, you should see exported files. 
+1. Within the Essence Editor, click **"Attributes"** in the menu panel then click **"Open Attributes"**. Wait for it to completely load.
+2. Open any attribute file (ebps is opened by default) then click **"View"** -> **Show LocString Report...** in the menu panel.
+3. With the opened locstring table, select the first column then scroll to the last one and press "Shift" to select all (alternatively Ctrl + A). Then right click, copy or Ctrl + C then paste the content inside the `xml/loc_english/locale.txt` file of this repository.
+
+### Convert the data
+
+1. Go into folder `cd scripts/xml-to-json`. 
+2. Run Python script main.py. You need python3. Like this `python main.py`, you should see this result:  
+![image](https://user-images.githubusercontent.com/8086995/226179423-711db84e-9cb4-41e7-92de-e2341b9130ba.png)
+3. Check the folder, you should see exported files. 
 
 Hint: `python main.py -no_bl` disables blacklist filter and generates complete JSON files. However, when possible,
 the filtered JSON files should be used to reduce file size. 

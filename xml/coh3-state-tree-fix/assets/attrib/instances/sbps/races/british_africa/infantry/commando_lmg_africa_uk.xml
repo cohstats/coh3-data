@@ -1,0 +1,198 @@
+<instance version="5" description="" template="sbps">
+	<variant name="default">
+		<list name="extensions" removedIds="-684080850, -1932615600, 27631006, -1249062715, 1329116401, 494367626, 1709067478, -533925400, 1503736721, 895872510, 1392805360, 117829828, 296262004, -1495675653, -1484301192, -883796035, -4068987">
+			<template_reference name="squadexts" value="sbpextensions\squad_capture_strategic_point_ext" List.ItemID="2104481947" List.ParentItemID="2104481947">
+				<float name="capture_rate_multiplier" value="1.33" overrideParent="True" />
+				<float name="revert_rate_multiplier" value="1.25" overrideParent="True" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_loadout_ext" List.ItemID="-853202734" List.ParentItemID="-853202734">
+				<list name="unit_list">
+					<group name="loadout_data" List.ItemID="-791374396" List.ParentItemID="-791374396">
+						<float name="num" value="3" overrideParent="True" />
+						<instance_reference name="type" value="ebps\races\british_africa\infantry\commando_lmg_africa_uk" overrideParent="True" />
+					</group>
+					<group name="loadout_data" List.ItemID="-2115467674" List.ListAction="Append">
+						<float name="num" value="1" />
+						<instance_reference name="type" value="ebps\races\british_africa\infantry\commando_vickers_africa_uk" mod="53b5a0950d364410bb3130148f28ae68" overrideParent="True" />
+						<list name="unit_attachments">
+						</list>
+						<bool name="is_default_unit" value="True" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_population_ext" List.ItemID="1687884963" List.ParentItemID="1687884963">
+				<float name="personnel_pop" value="5" overrideParent="True" />
+				<enum_table name="upkeep_per_pop_per_minute_override">
+					<float name="manpower" value="1.5" overrideParent="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_reinforce_ext" List.ItemID="1352158748" List.ParentItemID="1352158748">
+				<group name="time_cost_percentage">
+					<float name="cost_percentage" value="0.572" overrideParent="True" />
+					<float name="time_percentage" value="0.647" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_ui_ext" List.ItemID="-1879462299" List.ParentItemID="-1879462299">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-1582085622" List.ParentItemID="-1582085622">
+						<group name="info">
+							<file name="icon_name" value="races\british\infantry\commando_lmg_uk_portrait" overrideParent="True" />
+							<string name="selection_group" value="commando_lmg_team_uk" overrideParent="True" />
+							<file name="portrait_name" value="races\british\infantry\commando_lmg_uk_portrait" overrideParent="True" />
+							<file name="symbol_icon_name" value="races\british\symbols\commando_lmg" overrideParent="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_veterancy_ext" List.ItemID="-1475839438" List.ParentItemID="-1475839438">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-2047223751" List.ParentItemID="-2047223751">
+						<group name="info">
+							<enum name="shared_veterancy_type" value="no_sharing" overrideParent="True" />
+							<list name="veterancy_rank_info">
+								<group name="veterancy_rank" List.ItemID="-789419873" List.ParentItemID="-789419873">
+									<float name="veterancy_value" value="1200" overrideParent="True" />
+								</group>
+								<group name="veterancy_rank" List.ItemID="2000513804" List.ParentItemID="2000513804">
+									<float name="veterancy_value" value="3600" overrideParent="True" />
+								</group>
+								<group name="veterancy_rank" List.ItemID="1358881750" List.ParentItemID="1358881750">
+									<float name="veterancy_value" value="7200" overrideParent="True" />
+								</group>
+							</list>
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_type_ext" List.ItemID="-828273829" List.ParentItemID="-828273829">
+				<list name="squad_type_list">
+					<enum name="squad_type" value="elite_infantry" List.ItemID="-2071359996" List.ListAction="Append" />
+					<enum name="squad_type" value="infantry_burst_weapon" List.ItemID="-1913156747" List.ListAction="Append" />
+				</list>
+				<list name="squad_race_type_list" removedIds="-196014147">
+					<instance_reference name="squad_race_type" value="racebps\british_africa" List.ItemID="222101863" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_inventory_ext" List.ItemID="1456194728" List.ParentItemID="1456194728">
+				<enum_table name="category_capacity">
+					<int name="upgrade" value="0" overrideParent="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_ability_ext" List.ItemID="-427816430" List.ParentItemID="-427816430">
+				<list name="abilities">
+					<instance_reference name="ability" value="abilities\races\american\infantry\camouflage_in_cover_sniper_us" List.ItemID="1051868469" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\british\infantry\suppressing_fire_commando_lmg_uk" List.ItemID="-1103406578" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\british\infantry\cover_combat_bonus_uk" List.ItemID="-1679998517" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\common\hold_fire" List.ItemID="-1468383260" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_paradrop_ext" List.ItemID="-1252323409" List.ListAction="Append">
+				<float name="spawn_time_scatter" value="2" />
+				<float name="distance_between_units" value="3" />
+				<float name="max_scatter_radius" value="1" />
+				<state_tree_node name="on_all_squad_landed_action_tree" value="" />
+				<int name="paradrop_clearance" value="3" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2033148" />
+		<instance_reference name="parent_pbg" value="sbps\races\common\parent\infantry_parent" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions" removedIds="-684080850, -1932615600, 27631006, -1249062715, 1329116401, 494367626, 1709067478, -533925400, 1503736721, 895872510, 1392805360, 117829828, 296262004, -1495675653, -1484301192, -883796035, -4068987">
+			<template_reference name="squadexts" value="sbpextensions\squad_capture_strategic_point_ext" List.ItemID="2104481947" List.ParentItemID="2104481947">
+				<float name="capture_rate_multiplier" value="1.33" overrideParent="True" />
+				<float name="revert_rate_multiplier" value="1.25" overrideParent="True" />
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_loadout_ext" List.ItemID="-853202734" List.ParentItemID="-853202734">
+				<list name="unit_list">
+					<group name="loadout_data" List.ItemID="-791374396" List.ParentItemID="-791374396">
+						<float name="num" value="3" overrideParent="True" />
+						<instance_reference name="type" value="ebps\races\british_africa\infantry\commando_lmg_africa_uk" overrideParent="True" />
+					</group>
+					<group name="loadout_data" List.ItemID="1769081402" List.ListAction="Append">
+						<float name="num" value="1" />
+						<instance_reference name="type" value="ebps\races\british_africa\infantry\commando_vickers_africa_uk" mod="53b5a0950d364410bb3130148f28ae68" overrideParent="True" />
+						<list name="unit_attachments">
+						</list>
+						<bool name="is_default_unit" value="True" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_population_ext" List.ItemID="1687884963" List.ParentItemID="1687884963">
+				<float name="personnel_pop" value="5" overrideParent="True" />
+				<enum_table name="upkeep_per_pop_per_minute_override">
+					<float name="manpower" value="1.5" overrideParent="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_reinforce_ext" List.ItemID="1352158748" List.ParentItemID="1352158748">
+				<group name="time_cost_percentage">
+					<float name="cost_percentage" value="0.572" overrideParent="True" />
+					<float name="time_percentage" value="0.647" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_ui_ext" List.ItemID="-1879462299" List.ParentItemID="-1879462299">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-1582085622" List.ParentItemID="-1582085622">
+						<group name="info">
+							<file name="icon_name" value="races\british\infantry\commando_lmg_uk_portrait" overrideParent="True" />
+							<string name="selection_group" value="commando_lmg_team_uk" overrideParent="True" />
+							<file name="portrait_name" value="races\british\infantry\commando_lmg_uk_portrait" overrideParent="True" />
+							<file name="symbol_icon_name" value="races\british\symbols\commando_lmg" overrideParent="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_veterancy_ext" List.ItemID="-1475839438" List.ParentItemID="-1475839438">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-2047223751" List.ParentItemID="-2047223751">
+						<group name="info">
+							<enum name="shared_veterancy_type" value="no_sharing" overrideParent="True" />
+							<list name="veterancy_rank_info">
+								<group name="veterancy_rank" List.ItemID="-789419873" List.ParentItemID="-789419873">
+									<float name="veterancy_value" value="1200" overrideParent="True" />
+								</group>
+								<group name="veterancy_rank" List.ItemID="2000513804" List.ParentItemID="2000513804">
+									<float name="veterancy_value" value="3600" overrideParent="True" />
+								</group>
+								<group name="veterancy_rank" List.ItemID="1358881750" List.ParentItemID="1358881750">
+									<float name="veterancy_value" value="7200" overrideParent="True" />
+								</group>
+							</list>
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_type_ext" List.ItemID="-828273829" List.ParentItemID="-828273829">
+				<list name="squad_type_list">
+					<enum name="squad_type" value="elite_infantry" List.ItemID="-250925645" List.ListAction="Append" />
+					<enum name="squad_type" value="infantry_burst_weapon" List.ItemID="187095184" List.ListAction="Append" />
+				</list>
+				<list name="squad_race_type_list" removedIds="-196014147">
+					<instance_reference name="squad_race_type" value="racebps\british_africa" List.ItemID="-559987483" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_inventory_ext" List.ItemID="1456194728" List.ParentItemID="1456194728">
+				<enum_table name="category_capacity">
+					<int name="upgrade" value="0" overrideParent="True" />
+				</enum_table>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_ability_ext" List.ItemID="-427816430" List.ParentItemID="-427816430">
+				<list name="abilities">
+					<instance_reference name="ability" value="abilities\races\american\infantry\camouflage_in_cover_sniper_us" List.ItemID="1594825122" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\british\infantry\suppressing_fire_commando_lmg_uk" List.ItemID="1852310935" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\british\infantry\cover_combat_bonus_uk" List.ItemID="111950909" List.ListAction="Append" />
+					<instance_reference name="ability" value="abilities\races\common\hold_fire" List.ItemID="-1334667999" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_paradrop_ext" List.ItemID="1438953752" List.ListAction="Append">
+				<float name="spawn_time_scatter" value="2" />
+				<float name="distance_between_units" value="3" />
+				<float name="max_scatter_radius" value="1" />
+				<state_tree_node name="on_all_squad_landed_action_tree" value="" />
+				<int name="paradrop_clearance" value="3" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2033148" />
+		<instance_reference name="parent_pbg" value="sbps\races\common\parent\infantry_parent" />
+	</variant>
+</instance>

@@ -59,7 +59,8 @@ For that we created a CoH3 tuning mod which can be adoptet to overwrite missing 
 1. Open the mod from the projects `xml` directory with the Essence Editor
 ![image](https://user-images.githubusercontent.com/682343/229565471-1b457592-1276-4df8-8cab-21b31e52d6a3.png)
 
-2. Clone the attribute file that needs to be modified and assign a name. It will later overrite the original file if it keeps the same name otherwise,
+2. Clone the attribute file that needs to be modified and assign a name. If the mod file has the same name as the original file, the
+extensions will overwrite extensions from the orginal otherwise,
 a new json object will be created for that element. 
 ![image](https://user-images.githubusercontent.com/682343/229566966-4ce0b48c-314e-44d3-b4e0-5b7292b0b6b2.png)
 ![image](https://user-images.githubusercontent.com/682343/229567655-93690d6b-eeb5-4faa-b732-195fc8675bac.png)

@@ -358,7 +358,10 @@ def mod_overwrite_by_path(dic_root,mod_dic, path:str, common_root = False):
         else: common_root = True
 
     if(pathFirst == pathLast): 
-        dic_root[pathFirst] = mod_dic
+        if( pathFirst in dic_root ):
+            dic_root[pathFirst] = resolve_inheritance_node(dic_root[pathFirst],mod_dic)
+        else: 
+            dic_root[pathFirst] = mod_dic
         return dic_root
     
     if pathFirst in dic_root: 

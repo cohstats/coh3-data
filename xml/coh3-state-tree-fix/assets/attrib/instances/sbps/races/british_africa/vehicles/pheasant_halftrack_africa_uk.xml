@@ -1,0 +1,162 @@
+<instance version="5" override_type="merge" description="" template="sbps">
+	<variant name="default">
+		<list name="extensions" overrideParent="True">
+			<template_reference name="squadexts" value="sbpextensions\squad_loadout_ext" List.ItemID="-1294684174" List.ParentItemID="-1664135055">
+				<list name="unit_list" overrideParent="True">
+					<group name="loadout_data" List.ItemID="979548898">
+						<float name="num" value="1" />
+						<instance_reference name="type" value="ebps\races\british_africa\team_weapons\tw_at_gun_17pdr_africa_uk" overrideParent="True" />
+						<list name="unit_attachments">
+						</list>
+						<bool name="is_default_unit" value="True" />
+					</group>
+					<group name="loadout_data" List.ItemID="1192139676" List.ParentItemID="-226045775">
+						<instance_reference name="type" value="ebps\races\british_africa\vehicles\pheasant_halftrack_africa_uk" overrideParent="True" />
+						<float name="num" value="1" />
+						<list name="unit_attachments">
+						</list>
+						<bool name="is_default_unit" value="True" />
+					</group>
+					<group name="loadout_data" List.ItemID="-552830439">
+						<float name="num" value="6" overrideParent="True" />
+						<instance_reference name="type" value="ebps\races\british_africa\infantry\crew_pheasant_at_gun_africa_uk" overrideParent="True" />
+						<list name="unit_attachments">
+						</list>
+						<bool name="is_default_unit" value="True" />
+					</group>
+				</list>
+				<float name="squad_female_chance" value="0" />
+				<int name="extra_unit_index" value="0" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="224382" />
+		<instance_reference name="parent_pbg" value="sbps\races\british_africa\vehicles\cwt_15_truck_africa_uk" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="squadexts" value="sbpextensions\squad_ability_ext" List.ItemID="-282815056" List.ParentItemID="-282815056">
+				<list name="abilities" overrideParent="True">
+					<instance_reference name="ability" value="abilities\races\common\vehicles\towing_pickup" List.ItemID="-492381472" />
+					<instance_reference name="ability" value="abilities\races\common\vehicles\towing_drop" List.ItemID="-1987753338" />
+					<instance_reference name="ability" value="abilities\races\british\vehicles\veterancy_abilities\war_supply_cwt_uk" List.ItemID="-1873928366" />
+					<instance_reference name="ability" value="abilities\races\common\vehicles\auto_reinforce_halftrack" List.ItemID="872897171" />
+					<instance_reference name="ability" value="abilities\races\american\vehicles\recrew_team_weapon_halftrack_us" List.ItemID="1724838282" />
+					<instance_reference name="ability" value="abilities\races\british\vehicles\repair_critical_engine_damage_uk" List.ItemID="237625822" />
+					<instance_reference name="ability" value="abilities\races\common\veterancy\vehicle\common_shared_veterancy_dummy_parent" overrideParent="True" List.ItemID="-628493015" />
+				</list>
+				<group name="squad_orders">
+					<group name="attack_move">
+						<bool name="available" value="False" overrideParent="True" />
+					</group>
+				</group>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_action_apply_ext" List.ItemID="-1221160168" List.ParentItemID="-1221160168">
+				<list name="action_state_trees">
+					<group name="container" List.ItemID="1736076702" List.ListAction="Append">
+						<state_tree_node name="state_tree" value="sp_spawn_17pdr_in_tow_uk" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_loadout_ext" List.ItemID="-1664135055" List.ParentItemID="-1664135055">
+				<list name="unit_list" overrideParent="True">
+					<group name="loadout_data" List.ItemID="-2141534443">
+						<float name="num" value="1" />
+						<instance_reference name="type" value="ebps\races\british_africa\team_weapons\tw_at_gun_17pdr_africa_uk" overrideParent="True" />
+						<list name="unit_attachments">
+						</list>
+						<bool name="is_default_unit" value="True" />
+					</group>
+					<group name="loadout_data" List.ItemID="-226045775">
+						<instance_reference name="type" value="ebps\races\british_africa\vehicles\pheasant_halftrack_africa_uk" overrideParent="True" />
+						<float name="num" value="1" />
+						<list name="unit_attachments">
+						</list>
+						<bool name="is_default_unit" value="True" />
+					</group>
+					<group name="loadout_data" List.ItemID="-826050059">
+						<float name="num" value="6" overrideParent="True" />
+						<instance_reference name="type" value="ebps\races\british_africa\infantry\crew_pheasant_at_gun_africa_uk" overrideParent="True" />
+						<list name="unit_attachments">
+						</list>
+						<bool name="is_default_unit" value="True" />
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_requirement_ext" List.ItemID="1025783431" List.ParentItemID="1025783431">
+				<list name="requirement_table" removedIds="1598011426">
+					<template_reference name="required" value="requirements\required_player_upgrade" List.ItemID="-301112349" List.ListAction="Append">
+						<enum name="reason" value="usage" />
+						<locstring name="ui_name" value="0" />
+						<bool name="is_present" value="True" />
+						<int name="max_completed" value="100" />
+						<int name="min_completed" value="1" />
+						<instance_reference name="upgrade_name" value="upgrade\british\research\armoured_platoon\17pdr_squad_unlock_uk" />
+						<bool name="include_completed" value="True" />
+						<bool name="include_queued" value="False" />
+						<group name="include_pbg_parenting">
+							<bool name="include_child_pbgs" value="False" />
+							<bool name="include_parent_pbgs" value="False" />
+						</group>
+					</template_reference>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_ui_ext" List.ItemID="538184085" List.ParentItemID="538184085">
+				<list name="race_list">
+					<group name="race_data" List.ItemID="-660682231" List.ParentItemID="-660682231">
+						<group name="info">
+							<file name="icon_name" value="races\british\team_weapons\at_gun_17pdr_mobile_africa_uk" overrideParent="True" />
+							<file name="minimap_texture" value="common\units\symbols\vehicle_light_symbol" overrideParent="True" />
+							<string name="selection_group" value="cwt_15_uk" overrideParent="True" />
+							<int name="ui_priority" value="29" overrideParent="True" />
+							<file name="symbol_icon_name" value="common\units\symbols\halftrack_m3_us" overrideParent="True" />
+							<group name="ui_armor_info">
+								<file name="armor_icon" value="common\units\vehicle_armor\light_halftrack" overrideParent="True" />
+								<list name="armor_critical_damage">
+									<group name="critical_damage_coordinate_bag" List.ItemID="-444383023" List.ParentItemID="-444383023">
+										<float name="x" value="85" overrideParent="True" />
+										<file name="armor_section_highlight_icon" value="common\units\vehicle_armor\light_halftrack_engine_damaged" overrideParent="True" />
+										<float name="y" value="33" overrideParent="True" />
+									</group>
+									<group name="critical_damage_coordinate_bag" List.ItemID="140851124" List.ParentItemID="140851124">
+										<instance_reference name="squad_status" value="squad_status\indicators\heavy_engine_damaged" overrideParent="True" />
+										<float name="x" value="85" overrideParent="True" />
+										<float name="y" value="33" overrideParent="True" />
+										<file name="armor_section_highlight_icon" value="common\units\vehicle_armor\light_halftrack_engine_critical" overrideParent="True" />
+									</group>
+								</list>
+							</group>
+							<file name="portrait_name" value="races\british\vehicles\cwt_15_africa_uk_portrait" overrideParent="True" />
+							<bool name="reveal_for_decryption" value="False" overrideParent="True" />
+						</group>
+					</group>
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_upgrade_apply_ext" List.ItemID="93597846" List.ParentItemID="93597846">
+				<list name="upgrades">
+					<instance_reference name="upgrade" value="upgrade\british\vehicle\cwt_truck_ui_item_uk" List.ItemID="-780677094" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_type_ext" List.ItemID="29649503" List.ParentItemID="29649503">
+				<list name="squad_type_list" removedIds="-901482235">
+					<enum name="squad_type" value="reinforce_healing_platform" overrideParent="True" List.ItemID="-564610646" List.ParentItemID="-564610646" />
+					<enum name="squad_type" value="tier4" List.ItemID="-1145759468" List.ListAction="Append" />
+					<enum name="squad_type" value="vehicle_support" List.ItemID="564670756" List.ListAction="Append" />
+				</list>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_speech_ext" List.ItemID="1947268137" List.ParentItemID="1947268137">
+				<string name="squad_speaker_code" value="uk_light_vehicle" overrideParent="True" />
+				<group name="squad_speech_parameters">
+					<string name="squad_name_code" value="truck" overrideParent="True" />
+					<string name="squad_unit_code" value="pheasant_halftrack_africa_uk" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="squadexts" value="sbpextensions\squad_audio_ext" List.ItemID="40543565" List.ParentItemID="40543565">
+				<enum name="unit_type" value="vehicle_small" overrideParent="True" />
+				<int name="importance" value="10" overrideParent="True" />
+				<bool name="enable_radio" value="True" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="224382" />
+		<instance_reference name="parent_pbg" value="sbps\races\british_africa\vehicles\cwt_15_truck_africa_uk" />
+	</variant>
+</instance>

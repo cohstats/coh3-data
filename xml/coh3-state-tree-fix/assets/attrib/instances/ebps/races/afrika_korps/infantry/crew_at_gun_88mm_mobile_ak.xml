@@ -1,0 +1,65 @@
+<instance version="5" override_type="merge" description="" template="ebps">
+	<variant name="default">
+		<list name="extensions" overrideParent="True">
+			<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="-1201456785" List.ParentItemID="559878978">
+				<group name="time_cost">
+					<enum_table name="cost">
+						<float name="manpower" value="0" overrideParent="True" />
+						<float name="action" value="0" />
+						<float name="command" value="0" />
+						<float name="popcap" value="0" />
+						<float name="fuel" value="0" />
+						<float name="munition" value="0" />
+						<float name="requisition" value="0" />
+						<float name="ultimate" value="0" />
+					</enum_table>
+					<float name="time_seconds" value="0" overrideParent="True" />
+					<int name="time_turns" value="0" />
+					<group name="builder_cost">
+						<float name="action_points" value="0" />
+					</group>
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\population_ext" List.ItemID="-258386753" List.ParentItemID="462745794">
+				<enum_table name="upkeep_per_pop_per_minute_override">
+					<float name="manpower" value="0" overrideParent="True" />
+					<float name="action" value="0" />
+					<float name="command" value="0" />
+					<float name="popcap" value="0" />
+					<float name="fuel" value="0" />
+					<float name="munition" value="0" />
+					<float name="requisition" value="0" />
+					<float name="ultimate" value="0" />
+				</enum_table>
+				<float name="medic_pop" value="0" />
+				<float name="personnel_pop" value="0" overrideParent="True" />
+				<float name="vehicle_pop" value="0" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2107787" />
+		<instance_reference name="parent_pbg" value="ebps\races\afrika_korps\infantry\crew_at_gun_ak" />
+	</variant>
+	<variant name="sp">
+		<list name="extensions">
+			<template_reference name="exts" value="ebpextensions\entity_blueprint_ext" List.ItemID="-904066794" List.ParentItemID="-904066794">
+				<instance_reference name="animator_attachments" value="attachments\attachment_lists\races\afrika_korps\infantry\crew_at_gun_88mm_mobile_ak" overrideParent="True" />
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\cost_ext" List.ItemID="559878978" List.ParentItemID="559878978">
+				<group name="time_cost">
+					<enum_table name="cost">
+						<float name="manpower" value="0" overrideParent="True" />
+					</enum_table>
+					<float name="time_seconds" value="0" overrideParent="True" />
+				</group>
+			</template_reference>
+			<template_reference name="exts" value="ebpextensions\population_ext" List.ItemID="462745794" List.ParentItemID="462745794">
+				<enum_table name="upkeep_per_pop_per_minute_override">
+					<float name="manpower" value="0" overrideParent="True" />
+				</enum_table>
+				<float name="personnel_pop" value="0" comment="Update ability call-ins that reference pop-cap&#xD;&#xA;- abilities\races\american\campaign\company\armoured\active\core\right\c_armoured_easy_8_core_us" overrideParent="True" />
+			</template_reference>
+		</list>
+		<uniqueid name="pbgid" value="2107787" />
+		<instance_reference name="parent_pbg" value="ebps\races\afrika_korps\infantry\crew_at_gun_ak" />
+	</variant>
+</instance>

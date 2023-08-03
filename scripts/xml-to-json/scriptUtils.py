@@ -630,4 +630,7 @@ def create_locstring_dictionary(file_path, encode="utf-8"):
                 else:
                     print(f'Unable to parse:\n{line}')
 
-    return dictionary
+    # Sort the dictionary by key (the locstring id).
+    sorted_dictionary = dict(sorted(dictionary.items(), key=lambda x: int(x[0])))
+
+    return sorted_dictionary

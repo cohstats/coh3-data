@@ -10,11 +10,20 @@ Once we have the data it's up to anyone to build any web-site or apps and work w
 - Please provide all the scripts / add manuals how you get the data
    - We can expect a lot of updates from developers. So we will need to run our scripts many times.
 - We shall do git tags to mark patch changes 
-- The tags are in this format 1.0.7-1, where 1.0.7 should match the game patch version -x (marks our revision)
+- The tags are in the format v1.0.7-1, where 1.0.7 should match the game patch version, -x (marks our revision). So v1.0.7-1 means game patch 1.0.7, data revision 1.
+
+### Downloading the data 
+If you want to utilize the data in the build / download them periodically. Please use this URL:  
+`https://data.coh3stats.com/cohstats/coh3-data/${dataTag}/data/${dataFile}`
+- `dataTag` is the [tag](https://github.com/cohstats/coh3-data/tags) in this repo 
+- `dataFile` is the file from the [data](https://github.com/cohstats/coh3-data/tree/master/data) folder in this repo 
+
+So for example the url could look like this: https://data.coh3stats.com/cohstats/coh3-data/v1.2.5-1/data/battlegroup.json
 
 ### Contribution 
 We are looking for more help! If you would like to contribute in any way. Please rech out ot us here in the issues / on the discord https://discord.gg/jRrnwqMfkr
 
+Also if you utilize the data, please give us shoutout! Thank you
 
 ## How to generate the data
 

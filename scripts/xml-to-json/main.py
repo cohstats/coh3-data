@@ -53,6 +53,8 @@ exportByType('weapon')
 exportByType('upgrade')
 exportByType('battlegroup','tech_tree\\')
 exportByType('abilities')
+exportByType('daily_challenges_store_release','challenges\\challenge\\')
+exportByType('weekly_challenges_store_release','challenges\\challenge\\')
 
 
 # print('## Started processing sbps....')

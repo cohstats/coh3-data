@@ -32,7 +32,8 @@ Also if you utilize the data, please give us shoutout! Thank you
 3. Click on the attrib field, right click, extract   
 ![image](https://user-images.githubusercontent.com/8086995/226179199-855c6ea5-5336-4df9-941c-3dc4f4dc0ad0.png)
 
-4. Extract it into folder `xml` of this repository. Should look like this:  
+4. Delete content of folder `xml` in this repo,
+5. Extract it into folder `xml` of this repository. Should look like this:  
 ![image](https://user-images.githubusercontent.com/8086995/226179287-a61f956c-ff99-456f-a679-faf1251ae18a.png)
 
 The **locstrings** must be exported as well, but requires the following steps:

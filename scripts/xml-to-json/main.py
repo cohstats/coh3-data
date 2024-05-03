@@ -86,16 +86,19 @@ def main():
         ('weekly_challenges_store_release', 'challenges\\challenge\\')
     ]
 
+    futures = []
+
     # Create a ThreadPoolExecutor
     with concurrent.futures.ProcessPoolExecutor() as executor:
         # Use list comprehension to start the tasks and collect the Future objects
         futures = [executor.submit(export_by_type, type, prefix, script_root_dir, xml_data_dir, CONST_EXPORT_DIR) for
                    type, prefix in types_and_prefixes]
 
-        # Wait for all tasks to complete
-        for future in concurrent.futures.as_completed(futures):
-            print(f"Task completed: {future.result()}")
 
+    # Wait for all tasks to complete
+    for future in concurrent.futures.as_completed(futures):
+        print(f"Task completed: {future.result()}")
+   
     print('Parsing done. View this folder for results: \n"' + get_path_as_string(
         script_root_dir) + f'\{CONST_EXPORT_DIR}"')
     print(f"Execution time: {round(time.time() - start_time, 1)} seconds")

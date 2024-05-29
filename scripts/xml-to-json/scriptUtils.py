@@ -534,8 +534,7 @@ def save_dict_to_json(dictionary, path, file_name, indent=4):
         None
     """
     # create directory if it does not exist
-    if not os.path.exists(path):
-        os.makedirs(path)
+    os.makedirs(path, exist_ok=True)
         
     # construct the full file path
     file_path = os.path.join(path, file_name)
@@ -546,6 +545,33 @@ def save_dict_to_json(dictionary, path, file_name, indent=4):
         # This is done to avoid windows line endings, so we are in sync on git
         json_file.write(json_str)
     json_file.close()
+
+
+    # Generate chunked smaller files to better see changes
+    path = os.path.join(path, "chunked")
+    file_name = os.path.splitext(file_name)[0]
+
+    # Do not generate this for locstring json, there is a lot of them 
+    if file_name == "locstring":
+        return
+
+    ## Generate smaller json files for better seeing changes
+    os.makedirs(os.path.join(path, file_name), exist_ok=True)
+
+    for key in dictionary:
+        # In EBS and SBS we have extra key races
+        if key == 'races':
+            for subkey in dictionary[key]:
+                os.makedirs(os.path.join(path, file_name, 'races'), exist_ok=True)
+                with open(os.path.join(path, file_name, 'races', subkey+'.json'), 'w', newline='\n') as json_file:
+                    json_str = json.dumps(dictionary[key][subkey], indent=indent)
+                    json_file.write(json_str)
+                    json_file.close()
+        else:
+            with open(os.path.join(path, file_name, key+'.json'), 'w', newline='\n') as json_file:
+                json_str = json.dumps(dictionary[key], indent=indent)
+                json_file.write(json_str)
+                json_file.close()
 
     # json_str = json.dumps(dictionary)
     # json_str = str(zlib.compress(json_str.encode()))

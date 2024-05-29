@@ -1,0 +1,245 @@
+{
+    "challenge_bag": {
+        "id": 1755308.0,
+        "name": {
+            "locstring": {
+                "name": "name",
+                "value": "11263421"
+            }
+        },
+        "description": {
+            "locstring": {
+                "name": "description",
+                "value": "11263422"
+            }
+        },
+        "tip": {
+            "locstring": {
+                "name": "tip",
+                "value": "0"
+            }
+        },
+        "requirement": {
+            "requirements": [
+                {
+                    "requirement_instance": {
+                        "instance_reference": "challenges/requirement_instance/no_active_ugc"
+                    }
+                },
+                {
+                    "requirement": {
+                        "template_reference": {
+                            "name": "requirement",
+                            "value": "challenges\\requirement"
+                        },
+                        "operator": "equal",
+                        "values": [
+                            {
+                                "value_requirement": {
+                                    "template_reference": {
+                                        "name": "value_requirement",
+                                        "value": "challenges\\requirement_values\\dynamic\\map"
+                                    }
+                                }
+                            },
+                            {
+                                "value_requirement": {
+                                    "template_reference": {
+                                        "name": "value_requirement",
+                                        "value": "challenges\\requirement_values\\constant\\map"
+                                    },
+                                    "value": "missions/africa/majors/tobruk/tobruk_capture"
+                                }
+                            }
+                        ],
+                        "requirements": []
+                    }
+                },
+                {
+                    "requirement": {
+                        "template_reference": {
+                            "name": "requirement",
+                            "value": "challenges\\requirement"
+                        },
+                        "operator": "equal",
+                        "values": [
+                            {
+                                "value_requirement": {
+                                    "template_reference": {
+                                        "name": "value_requirement",
+                                        "value": "challenges\\requirement_values\\dynamic\\matchtypeid"
+                                    }
+                                }
+                            },
+                            {
+                                "value_requirement": {
+                                    "template_reference": {
+                                        "name": "value_requirement",
+                                        "value": "challenges\\requirement_values\\constant\\matchtypeid"
+                                    },
+                                    "value": {
+                                        "instance_reference": "multiplayer/match_type/campaign"
+                                    }
+                                }
+                            }
+                        ],
+                        "requirements": []
+                    }
+                }
+            ],
+            "operator": "and"
+        },
+        "update_rule": {
+            "value_requirement": {
+                "template_reference": {
+                    "name": "value_requirement",
+                    "value": "challenges\\requirement_values\\constant\\generic"
+                },
+                "value": 0.0
+            }
+        },
+        "completion_count": 1.0,
+        "reward": {
+            "item_bundle": {
+                "instance_reference": "inventory_item_bundle/challenges/merit_reward_30"
+            },
+            "challenge": {
+                "instance_reference": ""
+            },
+            "achievement": {
+                "instance_reference": ""
+            },
+            "xp": 0.0
+        },
+        "enable": "True",
+        "counters": [
+            {
+                "counter": {
+                    "template_reference": {
+                        "name": "counter",
+                        "value": "challenges\\counters\\counter"
+                    },
+                    "name": "win_sp_tobruk",
+                    "enabled": "True",
+                    "tracking_event": "Win",
+                    "trigger_rules": [
+                        {
+                            "rule": {
+                                "template_reference": {
+                                    "name": "rule",
+                                    "value": "challenges\\counters\\counter_rule"
+                                },
+                                "requirement": {
+                                    "template_reference": {
+                                        "name": "requirement",
+                                        "value": "challenges\\requirement"
+                                    },
+                                    "operator": "equal",
+                                    "values": [
+                                        {
+                                            "value_requirement": {
+                                                "template_reference": {
+                                                    "name": "value_requirement",
+                                                    "value": "challenges\\requirement_values\\dynamic\\result"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "value_requirement": {
+                                                "template_reference": {
+                                                    "name": "value_requirement",
+                                                    "value": "challenges\\requirement_values\\constant\\result"
+                                                },
+                                                "value": 1.0
+                                            }
+                                        }
+                                    ],
+                                    "requirements": []
+                                },
+                                "actions": [
+                                    {
+                                        "action": {
+                                            "template_reference": {
+                                                "name": "action",
+                                                "value": "challenges\\counter_actions\\complete_challenge"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "complete_rule": {
+                        "template_reference": {
+                            "name": "complete_rule",
+                            "value": "challenges\\counters\\counter_rule"
+                        },
+                        "requirement": {
+                            "template_reference": {
+                                "name": "requirement",
+                                "value": "challenges\\requirement"
+                            },
+                            "operator": "equal",
+                            "values": [
+                                {
+                                    "value_requirement": {
+                                        "template_reference": {
+                                            "name": "value_requirement",
+                                            "value": "challenges\\requirement_values\\dynamic\\clientcounter"
+                                        },
+                                        "value": "win_sp_tobruk"
+                                    }
+                                },
+                                {
+                                    "value_requirement": {
+                                        "template_reference": {
+                                            "name": "value_requirement",
+                                            "value": "challenges\\requirement_values\\constant\\generic"
+                                        },
+                                        "value": 1.0
+                                    }
+                                }
+                            ],
+                            "requirements": []
+                        },
+                        "actions": [
+                            {
+                                "action": {
+                                    "template_reference": {
+                                        "name": "action",
+                                        "value": "challenges\\counter_actions\\complete_challenge"
+                                    }
+                                }
+                            },
+                            {
+                                "action": {
+                                    "template_reference": {
+                                        "name": "action",
+                                        "value": "challenges\\counter_actions\\toggle_counter"
+                                    },
+                                    "enabled": "False",
+                                    "name": "win_sp_tobruk"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "icon": "",
+        "fe_priority": 0.0,
+        "group": {
+            "instance_reference": "challenges/challenge_group/store_challenge_groups/daily_sp_mission_merit_group"
+        },
+        "award_source": "Client",
+        "platform_stat_key": "",
+        "tags": [],
+        "xbox_title_achievement_id": "",
+        "reward_expires": "False",
+        "reward_collection": "Automatic"
+    },
+    "pbgid": 1755309.0,
+    "parent_pbg": {
+        "instance_reference": ""
+    }
+}

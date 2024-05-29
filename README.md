@@ -55,11 +55,13 @@ the filtered JSON files should be used to reduce file size.
 You can verify the changes by running command `git diff`
 
 ## Changes after the patch
-1. Generate the data
-2. Copy the .json files into folder `/data`
-3. Make an MR with the changes 
+1. Generate the data into folder `/data`
+2. Make an MR with the changes 
 
 The folder /data should always have the stable export of the data. 
+
+## Folder `chunked`
+Folder `chunked` has the big json files split to a smaller files for better manipulation.
 
 
 ## How to add/fix missing data not delivered by the Essence Editor

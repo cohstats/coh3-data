@@ -1,0 +1,235 @@
+{
+    "challenge_bag": {
+        "id": 1528996.0,
+        "name": {
+            "locstring": {
+                "name": "name",
+                "value": "11251290"
+            }
+        },
+        "description": {
+            "locstring": {
+                "name": "description",
+                "value": "11251291"
+            }
+        },
+        "tip": {
+            "locstring": {
+                "name": "tip",
+                "value": "0"
+            }
+        },
+        "requirement": {
+            "requirements": [
+                {
+                    "requirement": {
+                        "template_reference": {
+                            "name": "requirement",
+                            "value": "challenges\\requirement"
+                        },
+                        "operator": "not",
+                        "values": [
+                            {
+                                "value_requirement": {
+                                    "template_reference": {
+                                        "name": "value_requirement",
+                                        "value": "challenges\\requirement_values\\dynamic\\matchtypeid"
+                                    }
+                                }
+                            },
+                            {
+                                "value_requirement": {
+                                    "template_reference": {
+                                        "name": "value_requirement",
+                                        "value": "challenges\\requirement_values\\constant\\matchtypeid"
+                                    },
+                                    "value": {
+                                        "instance_reference": "multiplayer/match_type/campaign"
+                                    }
+                                }
+                            }
+                        ],
+                        "requirements": []
+                    }
+                },
+                {
+                    "requirement_instance": {
+                        "instance_reference": "challenges/requirement_instance/no_active_ugc"
+                    }
+                }
+            ],
+            "operator": "and"
+        },
+        "update_rule": {
+            "value_requirement": {
+                "template_reference": {
+                    "name": "value_requirement",
+                    "value": "challenges\\requirement_values\\constant\\generic"
+                },
+                "value": 1.0
+            }
+        },
+        "completion_count": 1.0,
+        "reward": {
+            "item_bundle": {
+                "instance_reference": "inventory_item_bundle/challenges/merit_reward_100"
+            },
+            "challenge": {
+                "instance_reference": ""
+            },
+            "achievement": {
+                "instance_reference": ""
+            },
+            "xp": 0.0
+        },
+        "enable": "True",
+        "counters": [
+            {
+                "counter": {
+                    "template_reference": {
+                        "name": "counter",
+                        "value": "challenges\\counters\\counter"
+                    },
+                    "name": "kill_halftracks",
+                    "enabled": "True",
+                    "tracking_event": "SquadKilled",
+                    "trigger_rules": [
+                        {
+                            "rule": {
+                                "template_reference": {
+                                    "name": "rule",
+                                    "value": "challenges\\counters\\counter_rule"
+                                },
+                                "requirement": {
+                                    "template_reference": {
+                                        "name": "requirement",
+                                        "value": "challenges\\requirement"
+                                    },
+                                    "operator": "and",
+                                    "values": [],
+                                    "requirements": [
+                                        {
+                                            "requirement_instance": {
+                                                "instance_reference": "challenges/requirement_instance/target_is_truck_or_halftrack_axis"
+                                            }
+                                        },
+                                        {
+                                            "requirement": {
+                                                "template_reference": {
+                                                    "name": "requirement",
+                                                    "value": "challenges\\requirement"
+                                                },
+                                                "operator": "equal",
+                                                "values": [
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\dynamic\\squadrelationtoplayer"
+                                                            },
+                                                            "value": "Target"
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\squadrelationtoplayer"
+                                                            },
+                                                            "value": "enemy"
+                                                        }
+                                                    }
+                                                ],
+                                                "requirements": []
+                                            }
+                                        }
+                                    ]
+                                },
+                                "actions": [
+                                    {
+                                        "action": {
+                                            "template_reference": {
+                                                "name": "action",
+                                                "value": "challenges\\counter_actions\\change_counter"
+                                            },
+                                            "op": "Increment"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "complete_rule": {
+                        "template_reference": {
+                            "name": "complete_rule",
+                            "value": "challenges\\counters\\counter_rule"
+                        },
+                        "requirement": {
+                            "template_reference": {
+                                "name": "requirement",
+                                "value": "challenges\\requirement"
+                            },
+                            "operator": "equal",
+                            "values": [
+                                {
+                                    "value_requirement": {
+                                        "template_reference": {
+                                            "name": "value_requirement",
+                                            "value": "challenges\\requirement_values\\dynamic\\clientcounter"
+                                        },
+                                        "value": "kill_halftracks"
+                                    }
+                                },
+                                {
+                                    "value_requirement": {
+                                        "template_reference": {
+                                            "name": "value_requirement",
+                                            "value": "challenges\\requirement_values\\constant\\generic"
+                                        },
+                                        "value": 1.0
+                                    }
+                                }
+                            ],
+                            "requirements": []
+                        },
+                        "actions": [
+                            {
+                                "action": {
+                                    "template_reference": {
+                                        "name": "action",
+                                        "value": "challenges\\counter_actions\\complete_challenge"
+                                    }
+                                }
+                            },
+                            {
+                                "action": {
+                                    "template_reference": {
+                                        "name": "action",
+                                        "value": "challenges\\counter_actions\\toggle_counter"
+                                    },
+                                    "enabled": "False",
+                                    "name": "kill_halftracks"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "icon": "",
+        "fe_priority": 0.0,
+        "group": {
+            "instance_reference": "challenges/challenge_group/store_challenge_groups/daily_100_merit_group"
+        },
+        "award_source": "Client",
+        "platform_stat_key": "",
+        "tags": [],
+        "xbox_title_achievement_id": "",
+        "reward_expires": "False",
+        "reward_collection": "Automatic"
+    },
+    "pbgid": 1528997.0,
+    "parent_pbg": {
+        "instance_reference": ""
+    }
+}

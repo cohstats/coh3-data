@@ -1,0 +1,1339 @@
+{
+    "infantry": {
+        "casualty": {
+            "extensions": [
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_type_ext"
+                        },
+                        "squad_type_list": [],
+                        "squad_race_type_list": []
+                    }
+                }
+            ],
+            "pbgid": 202394.0,
+            "parent_pbg": {
+                "instance_reference": ""
+            }
+        }
+    },
+    "parent": {
+        "infantry_parent": {
+            "extensions": [
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_can_defuse_charges_ext"
+                        }
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_capture_strategic_point_ext"
+                        },
+                        "capture_distance": 4.0,
+                        "capture_rate_multiplier": 1.25,
+                        "revert_rate_multiplier": 1.25
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_loadout_ext"
+                        },
+                        "unit_list": [
+                            {
+                                "loadout_data": {
+                                    "num": 5.0,
+                                    "type": {
+                                        "instance_reference": "ebps/races/common/parent/infantry_parent"
+                                    },
+                                    "unit_attachments": [],
+                                    "is_default_unit": "True"
+                                }
+                            }
+                        ],
+                        "squad_female_chance": 0.0,
+                        "extra_unit_index": 0.0
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_population_ext"
+                        },
+                        "personnel_pop": 2.0,
+                        "upkeep_per_pop_per_minute_override": {
+                            "action": 0.0,
+                            "command": 0.0,
+                            "popcap": 0.0,
+                            "fuel": 0.0,
+                            "munition": 0.0,
+                            "manpower": 0.0,
+                            "requisition": 0.0,
+                            "ultimate": 0.0
+                        }
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_reinforce_ext"
+                        },
+                        "time_cost_percentage": {
+                            "cost_percentage": 0.5307,
+                            "time_percentage": 1.0,
+                            "upgrade_cost_percentage": 0.0
+                        },
+                        "ui_info": {
+                            "extra_text": {
+                                "locstring": {
+                                    "name": "extra_text",
+                                    "value": "0"
+                                }
+                            },
+                            "help_text": {
+                                "locstring": {
+                                    "name": "help_text",
+                                    "value": "11230840"
+                                }
+                            },
+                            "hotkey_name": "a",
+                            "icon_name": "common/orders/reinforce",
+                            "overlay_name": "",
+                            "reveal_for_decryption": "False",
+                            "screen_name": {
+                                "locstring": {
+                                    "name": "screen_name",
+                                    "value": "11153293"
+                                }
+                            },
+                            "ui_position": {
+                                "ui_position_row": 2.0,
+                                "ui_position_column": 4.0
+                            },
+                            "ui_combine_type": "union",
+                            "screen_name_visibility": "visible",
+                            "symbol_icon_name": "common/orders/reinforce"
+                        },
+                        "paradrop_requirements": [],
+                        "spawn_type": "",
+                        "on_reinforced_action_tree": {
+                            "template_reference": {
+                                "name": "on_reinforced_action_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "reinforcement_requirements": []
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_requirement_ext"
+                        },
+                        "requirement_table": [],
+                        "requirement_statetree": ""
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_ui_ext"
+                        },
+                        "race_list": [
+                            {
+                                "race_data": {
+                                    "info": {
+                                        "allow_spawner_production": "False",
+                                        "extra_text": {
+                                            "locstring": {
+                                                "name": "extra_text",
+                                                "value": "0"
+                                            }
+                                        },
+                                        "help_text": {
+                                            "locstring": {
+                                                "name": "help_text",
+                                                "value": "0"
+                                            }
+                                        },
+                                        "hotkey_name": "A",
+                                        "icon_name": "",
+                                        "minimap_team_only": "False",
+                                        "minimap_texture": "",
+                                        "modal_ability": {
+                                            "instance_reference": ""
+                                        },
+                                        "reveal_for_decryption": "False",
+                                        "screen_name": {
+                                            "locstring": {
+                                                "name": "screen_name",
+                                                "value": "0"
+                                            }
+                                        },
+                                        "selection_group": "",
+                                        "ui_priority": 49.0,
+                                        "use_random_entity_speaker": "False",
+                                        "portrait_name": "",
+                                        "minimap_texture_scale": 1.0,
+                                        "brief_text": {
+                                            "locstring": {
+                                                "name": "brief_text",
+                                                "value": "0"
+                                            }
+                                        },
+                                        "screen_name_short": {
+                                            "locstring": {
+                                                "name": "screen_name_short",
+                                                "value": "0"
+                                            }
+                                        },
+                                        "map_rotation_type_override": "no_override",
+                                        "show_in_build_log": "True",
+                                        "symbol_icon_name": "",
+                                        "cover_level_icon_postfix": "",
+                                        "hide_ucs": "False",
+                                        "decorator_visibility": "visible",
+                                        "debug_text": "",
+                                        "selection_datatemplate": "",
+                                        "tooltip_data_template": "",
+                                        "is_unique": "False",
+                                        "decorator_data_template": "",
+                                        "ui_combine_type": "intersection",
+                                        "global_unit_control_row": 1.0,
+                                        "ui_decorator": {
+                                            "instance_reference": ""
+                                        },
+                                        "decorator_show_reload_progress": "False",
+                                        "is_respawnable": "False",
+                                        "respawn_location": "",
+                                        "respawn_progress": "",
+                                        "respawn_time": "",
+                                        "respawn_help": {
+                                            "locstring": {
+                                                "name": "respawn_help",
+                                                "value": "0"
+                                            }
+                                        },
+                                        "respawn_unit_class": "",
+                                        "is_unique_to_race": "False",
+                                        "show_production": "True",
+                                        "respawn_datatemplate": "",
+                                        "decorator": "",
+                                        "map_layer": -1.0,
+                                        "map_mark": "",
+                                        "flag_icon_override": "",
+                                        "extra_icon": "",
+                                        "ui_codex_info": {
+                                            "exclusive": "False",
+                                            "priority": 0.0,
+                                            "ui_position": {
+                                                "ui_position_column": -1.0,
+                                                "ui_position_row": -1.0
+                                            }
+                                        },
+                                        "extra_text_formatter": {
+                                            "template_reference": {
+                                                "name": "extra_text_formatter",
+                                                "value": ""
+                                            }
+                                        },
+                                        "help_text_formatter": {
+                                            "template_reference": {
+                                                "name": "help_text_formatter",
+                                                "value": ""
+                                            }
+                                        },
+                                        "screen_name_formatter": {
+                                            "template_reference": {
+                                                "name": "screen_name_formatter",
+                                                "value": ""
+                                            }
+                                        },
+                                        "screen_name_short_formatter": {
+                                            "template_reference": {
+                                                "name": "screen_name_short_formatter",
+                                                "value": ""
+                                            }
+                                        },
+                                        "brief_text_formatter": {
+                                            "template_reference": {
+                                                "name": "brief_text_formatter",
+                                                "value": ""
+                                            }
+                                        },
+                                        "screen_name_visibility": "visible",
+                                        "sound": "",
+                                        "sound_alternative": "",
+                                        "extra_help_text": {
+                                            "locstring": {
+                                                "name": "extra_help_text",
+                                                "value": "0"
+                                            }
+                                        },
+                                        "ui_armor_info": {
+                                            "armor_icon": "",
+                                            "armor_critical_damage": []
+                                        },
+                                        "disable_enemy_spotted_event_cue": "False"
+                                    },
+                                    "ext_key": {
+                                        "instance_reference": ""
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_upgrade_ext"
+                        },
+                        "number_of_slots": -1.0,
+                        "upgrades": [],
+                        "max_queue_size_override": -1.0,
+                        "tech_trees": []
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_veterancy_ext"
+                        },
+                        "race_list": [
+                            {
+                                "race_data": {
+                                    "ext_key": {
+                                        "instance_reference": ""
+                                    },
+                                    "info": {
+                                        "can_receive_shared_veterancy": "False",
+                                        "max_persistent_squads": 3.0,
+                                        "shared_veterancy_type": "no_sharing",
+                                        "veterancy_rank_info": [
+                                            {
+                                                "veterancy_rank": {
+                                                    "hide_ingame_veterancy_art": "False",
+                                                    "screen_name": {
+                                                        "locstring": {
+                                                            "name": "screen_name",
+                                                            "value": "0"
+                                                        }
+                                                    },
+                                                    "single_player_only": "False",
+                                                    "veterancy_value": 560.0,
+                                                    "state_tree_references": {
+                                                        "squad_action_tree": {
+                                                            "template_reference": {
+                                                                "name": "squad_action_tree",
+                                                                "value": "state_tree_reference_info"
+                                                            },
+                                                            "ActionTree_OpeningBranch": "veterancy_level_up\\level_up"
+                                                        },
+                                                        "squad_entity_action_tree": {
+                                                            "template_reference": {
+                                                                "name": "squad_entity_action_tree",
+                                                                "value": "state_tree_reference_info"
+                                                            },
+                                                            "ActionTree_OpeningBranch": ""
+                                                        },
+                                                        "action_non_leader_action_tree": {
+                                                            "template_reference": {
+                                                                "name": "action_non_leader_action_tree",
+                                                                "value": "state_tree_reference_info"
+                                                            },
+                                                            "ActionTree_OpeningBranch": ""
+                                                        },
+                                                        "action_leader_action_tree": {
+                                                            "template_reference": {
+                                                                "name": "action_leader_action_tree",
+                                                                "value": "state_tree_reference_info"
+                                                            },
+                                                            "ActionTree_OpeningBranch": ""
+                                                        }
+                                                    },
+                                                    "abilities": [],
+                                                    "brief_text": {
+                                                        "locstring": {
+                                                            "name": "brief_text",
+                                                            "value": "0"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "veterancy_rank": {
+                                                    "hide_ingame_veterancy_art": "False",
+                                                    "screen_name": {
+                                                        "locstring": {
+                                                            "name": "screen_name",
+                                                            "value": "0"
+                                                        }
+                                                    },
+                                                    "single_player_only": "False",
+                                                    "veterancy_value": 1120.0,
+                                                    "state_tree_references": {
+                                                        "squad_action_tree": {
+                                                            "template_reference": {
+                                                                "name": "squad_action_tree",
+                                                                "value": "state_tree_reference_info"
+                                                            },
+                                                            "ActionTree_OpeningBranch": "veterancy_level_up\\level_up"
+                                                        },
+                                                        "squad_entity_action_tree": {
+                                                            "template_reference": {
+                                                                "name": "squad_entity_action_tree",
+                                                                "value": "state_tree_reference_info"
+                                                            },
+                                                            "ActionTree_OpeningBranch": ""
+                                                        },
+                                                        "action_non_leader_action_tree": {
+                                                            "template_reference": {
+                                                                "name": "action_non_leader_action_tree",
+                                                                "value": "state_tree_reference_info"
+                                                            },
+                                                            "ActionTree_OpeningBranch": ""
+                                                        },
+                                                        "action_leader_action_tree": {
+                                                            "template_reference": {
+                                                                "name": "action_leader_action_tree",
+                                                                "value": "state_tree_reference_info"
+                                                            },
+                                                            "ActionTree_OpeningBranch": ""
+                                                        }
+                                                    },
+                                                    "abilities": [],
+                                                    "brief_text": {
+                                                        "locstring": {
+                                                            "name": "brief_text",
+                                                            "value": "0"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "veterancy_rank": {
+                                                    "hide_ingame_veterancy_art": "False",
+                                                    "screen_name": {
+                                                        "locstring": {
+                                                            "name": "screen_name",
+                                                            "value": "0"
+                                                        }
+                                                    },
+                                                    "single_player_only": "False",
+                                                    "veterancy_value": 2576.0,
+                                                    "state_tree_references": {
+                                                        "squad_action_tree": {
+                                                            "template_reference": {
+                                                                "name": "squad_action_tree",
+                                                                "value": "state_tree_reference_info"
+                                                            },
+                                                            "ActionTree_OpeningBranch": "veterancy_level_up\\level_up"
+                                                        },
+                                                        "squad_entity_action_tree": {
+                                                            "template_reference": {
+                                                                "name": "squad_entity_action_tree",
+                                                                "value": "state_tree_reference_info"
+                                                            },
+                                                            "ActionTree_OpeningBranch": ""
+                                                        },
+                                                        "action_non_leader_action_tree": {
+                                                            "template_reference": {
+                                                                "name": "action_non_leader_action_tree",
+                                                                "value": "state_tree_reference_info"
+                                                            },
+                                                            "ActionTree_OpeningBranch": ""
+                                                        },
+                                                        "action_leader_action_tree": {
+                                                            "template_reference": {
+                                                                "name": "action_leader_action_tree",
+                                                                "value": "state_tree_reference_info"
+                                                            },
+                                                            "ActionTree_OpeningBranch": ""
+                                                        }
+                                                    },
+                                                    "abilities": [],
+                                                    "brief_text": {
+                                                        "locstring": {
+                                                            "name": "brief_text",
+                                                            "value": "0"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_type_ext"
+                        },
+                        "squad_type_list": [
+                            {
+                                "squad_type": "infantry"
+                            }
+                        ],
+                        "squad_race_type_list": [
+                            {
+                                "squad_race_type": {
+                                    "instance_reference": ""
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_inventory_ext"
+                        },
+                        "can_pick_up_items": "True",
+                        "pick_up_reach": 2.0,
+                        "category_capacity": {
+                            "special": 2.0,
+                            "default": -1.0,
+                            "upgrade": -1.0,
+                            "casualty": 0.0,
+                            "vehicle_wreck": 0.0
+                        }
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_ability_ext"
+                        },
+                        "abilities": [],
+                        "ui_combine_priority": 0.0,
+                        "squad_orders": {
+                            "abandon_team_weapon": {
+                                "available": "True"
+                            },
+                            "attack_ground": {
+                                "available": "True"
+                            },
+                            "attack_move": {
+                                "available": "True"
+                            },
+                            "cancel_construction": {
+                                "available": "True"
+                            },
+                            "hold_fire_off": {
+                                "available": "False"
+                            },
+                            "hold_fire_on": {
+                                "available": "False"
+                            },
+                            "load": {
+                                "available": "True",
+                                "default_issuable": "True"
+                            },
+                            "move": {
+                                "available": "True",
+                                "default_issuable": "True"
+                            },
+                            "pickup_item": {
+                                "available": "True",
+                                "default_issuable": "True"
+                            },
+                            "plant_demolitions": {
+                                "available": "True"
+                            },
+                            "prefer_melee": {
+                                "available": "True"
+                            },
+                            "prefer_ranged": {
+                                "available": "True"
+                            },
+                            "retire": {
+                                "available": "True"
+                            },
+                            "retreat": {
+                                "available": "True"
+                            },
+                            "reverse_move": {
+                                "available": "True"
+                            },
+                            "stop": {
+                                "available": "True"
+                            },
+                            "trade": {
+                                "available": "True"
+                            },
+                            "unload": {
+                                "available": "True",
+                                "default_issuable": "True"
+                            },
+                            "unload_here": {
+                                "available": "True"
+                            },
+                            "vault": {
+                                "available": "False"
+                            },
+                            "hold_position": {
+                                "available": "True"
+                            }
+                        }
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_engineer_ext"
+                        },
+                        "construction_rate_multiplier": 1.0,
+                        "construction_groups": []
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_breach_ext"
+                        },
+                        "is_special_weapon_breach": "False",
+                        "breach_type": "",
+                        "door_kicker_animation_start_positions": {
+                            "forward": {
+                                "template_reference": {
+                                    "name": "forward",
+                                    "value": "basic_data_types\\vector3"
+                                },
+                                "x": 0.75,
+                                "y": 0.0,
+                                "z": -3.1
+                            },
+                            "left_45": {
+                                "template_reference": {
+                                    "name": "left_45",
+                                    "value": "basic_data_types\\vector3"
+                                },
+                                "x": 2.0,
+                                "y": 0.0,
+                                "z": -3.0
+                            },
+                            "right_45": {
+                                "template_reference": {
+                                    "name": "right_45",
+                                    "value": "basic_data_types\\vector3"
+                                },
+                                "x": -0.5,
+                                "y": 0.0,
+                                "z": -2.5
+                            },
+                            "left_90": {
+                                "template_reference": {
+                                    "name": "left_90",
+                                    "value": "basic_data_types\\vector3"
+                                },
+                                "x": 2.25,
+                                "y": 0.0,
+                                "z": -1.0
+                            },
+                            "right_90": {
+                                "template_reference": {
+                                    "name": "right_90",
+                                    "value": "basic_data_types\\vector3"
+                                },
+                                "x": -2.5,
+                                "y": 0.0,
+                                "z": -1.25
+                            }
+                        },
+                        "executor_animation_start_positions": {
+                            "forward": {
+                                "template_reference": {
+                                    "name": "forward",
+                                    "value": "basic_data_types\\vector3"
+                                },
+                                "x": -0.5,
+                                "y": 0.0,
+                                "z": -2.0
+                            },
+                            "left_45": {
+                                "template_reference": {
+                                    "name": "left_45",
+                                    "value": "basic_data_types\\vector3"
+                                },
+                                "x": 0.25,
+                                "y": 0.0,
+                                "z": -1.5
+                            },
+                            "left_90": {
+                                "template_reference": {
+                                    "name": "left_90",
+                                    "value": "basic_data_types\\vector3"
+                                },
+                                "x": 1.5,
+                                "y": 0.0,
+                                "z": -1.5
+                            },
+                            "right_45": {
+                                "template_reference": {
+                                    "name": "right_45",
+                                    "value": "basic_data_types\\vector3"
+                                },
+                                "x": -1.5,
+                                "y": 0.0,
+                                "z": -2.0
+                            },
+                            "right_90": {
+                                "template_reference": {
+                                    "name": "right_90",
+                                    "value": "basic_data_types\\vector3"
+                                },
+                                "x": -4.0,
+                                "y": 0.0,
+                                "z": -0.5
+                            }
+                        }
+                    }
+                }
+            ],
+            "pbgid": 2104695.0,
+            "parent_pbg": {
+                "instance_reference": ""
+            }
+        },
+        "vehicle_parent": {
+            "extensions": [
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_ability_ext"
+                        },
+                        "abilities": [],
+                        "ui_combine_priority": 0.0,
+                        "squad_orders": {
+                            "abandon_team_weapon": {
+                                "available": "True"
+                            },
+                            "attack_ground": {
+                                "available": "True"
+                            },
+                            "attack_move": {
+                                "available": "True"
+                            },
+                            "cancel_construction": {
+                                "available": "True"
+                            },
+                            "hold_fire_off": {
+                                "available": "False"
+                            },
+                            "hold_fire_on": {
+                                "available": "False"
+                            },
+                            "load": {
+                                "available": "True",
+                                "default_issuable": "True"
+                            },
+                            "move": {
+                                "available": "True",
+                                "default_issuable": "True"
+                            },
+                            "pickup_item": {
+                                "available": "True",
+                                "default_issuable": "True"
+                            },
+                            "plant_demolitions": {
+                                "available": "True"
+                            },
+                            "prefer_melee": {
+                                "available": "True"
+                            },
+                            "prefer_ranged": {
+                                "available": "True"
+                            },
+                            "retire": {
+                                "available": "True"
+                            },
+                            "retreat": {
+                                "available": "True"
+                            },
+                            "reverse_move": {
+                                "available": "True"
+                            },
+                            "stop": {
+                                "available": "True"
+                            },
+                            "trade": {
+                                "available": "True"
+                            },
+                            "unload": {
+                                "available": "True",
+                                "default_issuable": "True"
+                            },
+                            "unload_here": {
+                                "available": "True"
+                            },
+                            "vault": {
+                                "available": "True"
+                            },
+                            "hold_position": {
+                                "available": "True"
+                            }
+                        }
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_can_defuse_charges_ext"
+                        }
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_loadout_ext"
+                        },
+                        "unit_list": [
+                            {
+                                "loadout_data": {
+                                    "num": 1.0,
+                                    "type": {
+                                        "instance_reference": "ebps/races/common/parent/vehicle_parent"
+                                    },
+                                    "unit_attachments": [],
+                                    "is_default_unit": "True"
+                                }
+                            }
+                        ],
+                        "squad_female_chance": 0.0,
+                        "extra_unit_index": 0.0
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_reinforce_ext"
+                        },
+                        "time_cost_percentage": {
+                            "cost_percentage": 0.5,
+                            "time_percentage": 1.0,
+                            "upgrade_cost_percentage": 0.0
+                        },
+                        "ui_info": {
+                            "extra_text": {
+                                "locstring": {
+                                    "name": "extra_text",
+                                    "value": "0"
+                                }
+                            },
+                            "help_text": {
+                                "locstring": {
+                                    "name": "help_text",
+                                    "value": "0"
+                                }
+                            },
+                            "hotkey_name": "",
+                            "icon_name": "",
+                            "overlay_name": "",
+                            "reveal_for_decryption": "False",
+                            "screen_name": {
+                                "locstring": {
+                                    "name": "screen_name",
+                                    "value": "0"
+                                }
+                            },
+                            "ui_position": {
+                                "ui_position_row": -1.0,
+                                "ui_position_column": -1.0
+                            },
+                            "ui_combine_type": "union",
+                            "screen_name_visibility": "visible",
+                            "symbol_icon_name": ""
+                        },
+                        "paradrop_requirements": [],
+                        "spawn_type": "",
+                        "on_reinforced_action_tree": {
+                            "template_reference": {
+                                "name": "on_reinforced_action_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "reinforcement_requirements": []
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_requirement_ext"
+                        },
+                        "requirement_table": [],
+                        "requirement_statetree": ""
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_ui_ext"
+                        },
+                        "race_list": [
+                            {
+                                "race_data": {
+                                    "info": {
+                                        "allow_spawner_production": "False",
+                                        "extra_text": {
+                                            "locstring": {
+                                                "name": "extra_text",
+                                                "value": "0"
+                                            }
+                                        },
+                                        "help_text": {
+                                            "locstring": {
+                                                "name": "help_text",
+                                                "value": "0"
+                                            }
+                                        },
+                                        "hotkey_name": "A",
+                                        "icon_name": "",
+                                        "minimap_team_only": "False",
+                                        "minimap_texture": "common/units/symbols/vehicle_medium_symbol",
+                                        "modal_ability": {
+                                            "instance_reference": ""
+                                        },
+                                        "reveal_for_decryption": "False",
+                                        "screen_name": {
+                                            "locstring": {
+                                                "name": "screen_name",
+                                                "value": "0"
+                                            }
+                                        },
+                                        "selection_group": "",
+                                        "ui_priority": 46.0,
+                                        "use_random_entity_speaker": "False",
+                                        "portrait_name": "",
+                                        "minimap_texture_scale": 0.5,
+                                        "brief_text": {
+                                            "locstring": {
+                                                "name": "brief_text",
+                                                "value": "0"
+                                            }
+                                        },
+                                        "screen_name_short": {
+                                            "locstring": {
+                                                "name": "screen_name_short",
+                                                "value": "0"
+                                            }
+                                        },
+                                        "map_rotation_type_override": "heading",
+                                        "show_in_build_log": "True",
+                                        "symbol_icon_name": "",
+                                        "cover_level_icon_postfix": "",
+                                        "hide_ucs": "False",
+                                        "decorator_visibility": "visible",
+                                        "debug_text": "",
+                                        "selection_datatemplate": "",
+                                        "tooltip_data_template": "",
+                                        "is_unique": "False",
+                                        "decorator_data_template": "",
+                                        "ui_combine_type": "intersection",
+                                        "global_unit_control_row": 2.0,
+                                        "ui_decorator": {
+                                            "instance_reference": ""
+                                        },
+                                        "decorator_show_reload_progress": "False",
+                                        "is_respawnable": "False",
+                                        "respawn_location": "",
+                                        "respawn_progress": "",
+                                        "respawn_time": "",
+                                        "respawn_help": {
+                                            "locstring": {
+                                                "name": "respawn_help",
+                                                "value": "0"
+                                            }
+                                        },
+                                        "respawn_unit_class": "",
+                                        "is_unique_to_race": "False",
+                                        "show_production": "True",
+                                        "respawn_datatemplate": "",
+                                        "decorator": "",
+                                        "map_layer": -1.0,
+                                        "map_mark": "Vehicle",
+                                        "flag_icon_override": "",
+                                        "extra_icon": "",
+                                        "ui_codex_info": {
+                                            "exclusive": "False",
+                                            "priority": 0.0,
+                                            "ui_position": {
+                                                "ui_position_column": -1.0,
+                                                "ui_position_row": -1.0
+                                            }
+                                        },
+                                        "extra_text_formatter": {
+                                            "template_reference": {
+                                                "name": "extra_text_formatter",
+                                                "value": ""
+                                            }
+                                        },
+                                        "help_text_formatter": {
+                                            "template_reference": {
+                                                "name": "help_text_formatter",
+                                                "value": ""
+                                            }
+                                        },
+                                        "screen_name_formatter": {
+                                            "template_reference": {
+                                                "name": "screen_name_formatter",
+                                                "value": ""
+                                            }
+                                        },
+                                        "screen_name_short_formatter": {
+                                            "template_reference": {
+                                                "name": "screen_name_short_formatter",
+                                                "value": ""
+                                            }
+                                        },
+                                        "brief_text_formatter": {
+                                            "template_reference": {
+                                                "name": "brief_text_formatter",
+                                                "value": ""
+                                            }
+                                        },
+                                        "screen_name_visibility": "visible",
+                                        "sound": "",
+                                        "sound_alternative": "",
+                                        "extra_help_text": {
+                                            "locstring": {
+                                                "name": "extra_help_text",
+                                                "value": "0"
+                                            }
+                                        },
+                                        "ui_armor_info": {
+                                            "armor_icon": "common/units/vehicle_armor/medium_tank",
+                                            "armor_critical_damage": [
+                                                {
+                                                    "critical_damage_coordinate_bag": {
+                                                        "squad_status": {
+                                                            "instance_reference": "squad_status/indicators/engine_damaged"
+                                                        },
+                                                        "x": 26.0,
+                                                        "y": 33.0,
+                                                        "armor_section_highlight_icon": "common/units/vehicle_armor/medium_tank_engine_damaged"
+                                                    }
+                                                },
+                                                {
+                                                    "critical_damage_coordinate_bag": {
+                                                        "squad_status": {
+                                                            "instance_reference": "squad_status/indicators/vehicle_immobilized"
+                                                        },
+                                                        "x": 55.0,
+                                                        "y": 15.0,
+                                                        "armor_section_highlight_icon": "common/units/vehicle_armor/medium_tank_left_tread_damaged"
+                                                    }
+                                                },
+                                                {
+                                                    "critical_damage_coordinate_bag": {
+                                                        "squad_status": {
+                                                            "instance_reference": "squad_status/indicators/vehicle_immobilized"
+                                                        },
+                                                        "x": 55.0,
+                                                        "y": 50.0,
+                                                        "armor_section_highlight_icon": "common/units/vehicle_armor/medium_tank_right_tread_damaged"
+                                                    }
+                                                },
+                                                {
+                                                    "critical_damage_coordinate_bag": {
+                                                        "squad_status": {
+                                                            "instance_reference": "squad_status/indicators/heavy_engine_damaged"
+                                                        },
+                                                        "x": 26.0,
+                                                        "y": 33.0,
+                                                        "armor_section_highlight_icon": "common/units/vehicle_armor/medium_tank_engine_critical"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "disable_enemy_spotted_event_cue": "False"
+                                    },
+                                    "ext_key": {
+                                        "instance_reference": ""
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_upgrade_ext"
+                        },
+                        "number_of_slots": -1.0,
+                        "upgrades": [],
+                        "max_queue_size_override": -1.0,
+                        "tech_trees": []
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_veterancy_ext"
+                        },
+                        "race_list": [
+                            {
+                                "race_data": {
+                                    "ext_key": {
+                                        "instance_reference": ""
+                                    },
+                                    "info": {
+                                        "can_receive_shared_veterancy": "False",
+                                        "max_persistent_squads": 3.0,
+                                        "shared_veterancy_type": "no_sharing",
+                                        "veterancy_rank_info": [
+                                            {
+                                                "veterancy_rank": {
+                                                    "hide_ingame_veterancy_art": "False",
+                                                    "screen_name": {
+                                                        "locstring": {
+                                                            "name": "screen_name",
+                                                            "value": "0"
+                                                        }
+                                                    },
+                                                    "single_player_only": "False",
+                                                    "veterancy_value": 2020.0,
+                                                    "state_tree_references": {
+                                                        "squad_action_tree": {
+                                                            "template_reference": {
+                                                                "name": "squad_action_tree",
+                                                                "value": "state_tree_reference_info"
+                                                            },
+                                                            "ActionTree_OpeningBranch": "veterancy_level_up"
+                                                        },
+                                                        "squad_entity_action_tree": {
+                                                            "template_reference": {
+                                                                "name": "squad_entity_action_tree",
+                                                                "value": "state_tree_reference_info"
+                                                            },
+                                                            "ActionTree_OpeningBranch": ""
+                                                        },
+                                                        "action_non_leader_action_tree": {
+                                                            "template_reference": {
+                                                                "name": "action_non_leader_action_tree",
+                                                                "value": "state_tree_reference_info"
+                                                            },
+                                                            "ActionTree_OpeningBranch": ""
+                                                        },
+                                                        "action_leader_action_tree": {
+                                                            "template_reference": {
+                                                                "name": "action_leader_action_tree",
+                                                                "value": "state_tree_reference_info"
+                                                            },
+                                                            "ActionTree_OpeningBranch": ""
+                                                        }
+                                                    },
+                                                    "abilities": [],
+                                                    "brief_text": {
+                                                        "locstring": {
+                                                            "name": "brief_text",
+                                                            "value": "0"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "veterancy_rank": {
+                                                    "hide_ingame_veterancy_art": "False",
+                                                    "screen_name": {
+                                                        "locstring": {
+                                                            "name": "screen_name",
+                                                            "value": "0"
+                                                        }
+                                                    },
+                                                    "single_player_only": "False",
+                                                    "veterancy_value": 4040.0,
+                                                    "state_tree_references": {
+                                                        "squad_action_tree": {
+                                                            "template_reference": {
+                                                                "name": "squad_action_tree",
+                                                                "value": "state_tree_reference_info"
+                                                            },
+                                                            "ActionTree_OpeningBranch": "veterancy_level_up"
+                                                        },
+                                                        "squad_entity_action_tree": {
+                                                            "template_reference": {
+                                                                "name": "squad_entity_action_tree",
+                                                                "value": "state_tree_reference_info"
+                                                            },
+                                                            "ActionTree_OpeningBranch": ""
+                                                        },
+                                                        "action_non_leader_action_tree": {
+                                                            "template_reference": {
+                                                                "name": "action_non_leader_action_tree",
+                                                                "value": "state_tree_reference_info"
+                                                            },
+                                                            "ActionTree_OpeningBranch": ""
+                                                        },
+                                                        "action_leader_action_tree": {
+                                                            "template_reference": {
+                                                                "name": "action_leader_action_tree",
+                                                                "value": "state_tree_reference_info"
+                                                            },
+                                                            "ActionTree_OpeningBranch": ""
+                                                        }
+                                                    },
+                                                    "abilities": [],
+                                                    "brief_text": {
+                                                        "locstring": {
+                                                            "name": "brief_text",
+                                                            "value": "0"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "veterancy_rank": {
+                                                    "hide_ingame_veterancy_art": "False",
+                                                    "screen_name": {
+                                                        "locstring": {
+                                                            "name": "screen_name",
+                                                            "value": "0"
+                                                        }
+                                                    },
+                                                    "single_player_only": "False",
+                                                    "veterancy_value": 8080.0,
+                                                    "state_tree_references": {
+                                                        "squad_action_tree": {
+                                                            "template_reference": {
+                                                                "name": "squad_action_tree",
+                                                                "value": "state_tree_reference_info"
+                                                            },
+                                                            "ActionTree_OpeningBranch": "veterancy_level_up"
+                                                        },
+                                                        "squad_entity_action_tree": {
+                                                            "template_reference": {
+                                                                "name": "squad_entity_action_tree",
+                                                                "value": "state_tree_reference_info"
+                                                            },
+                                                            "ActionTree_OpeningBranch": ""
+                                                        },
+                                                        "action_non_leader_action_tree": {
+                                                            "template_reference": {
+                                                                "name": "action_non_leader_action_tree",
+                                                                "value": "state_tree_reference_info"
+                                                            },
+                                                            "ActionTree_OpeningBranch": ""
+                                                        },
+                                                        "action_leader_action_tree": {
+                                                            "template_reference": {
+                                                                "name": "action_leader_action_tree",
+                                                                "value": "state_tree_reference_info"
+                                                            },
+                                                            "ActionTree_OpeningBranch": ""
+                                                        }
+                                                    },
+                                                    "abilities": [],
+                                                    "brief_text": {
+                                                        "locstring": {
+                                                            "name": "brief_text",
+                                                            "value": "0"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_type_ext"
+                        },
+                        "squad_type_list": [
+                            {
+                                "squad_type": "vehicle"
+                            },
+                            {
+                                "squad_type": "medium_armor"
+                            },
+                            {
+                                "squad_type": "tier4"
+                            },
+                            {
+                                "squad_type": "vehicle_anti_tank"
+                            }
+                        ],
+                        "squad_race_type_list": [
+                            {
+                                "squad_race_type": {
+                                    "instance_reference": ""
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_inventory_ext"
+                        },
+                        "can_pick_up_items": "False",
+                        "pick_up_reach": 2.0,
+                        "category_capacity": {
+                            "special": 0.0,
+                            "default": -1.0,
+                            "upgrade": 0.0,
+                            "casualty": 0.0,
+                            "vehicle_wreck": 0.0
+                        }
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_capture_strategic_point_ext"
+                        },
+                        "capture_distance": 4.0,
+                        "capture_rate_multiplier": 0.0,
+                        "revert_rate_multiplier": 0.0
+                    }
+                }
+            ],
+            "pbgid": 2105285.0,
+            "parent_pbg": {
+                "instance_reference": ""
+            }
+        }
+    }
+}

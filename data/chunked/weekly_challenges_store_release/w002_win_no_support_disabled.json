@@ -1,0 +1,178 @@
+{
+    "challenge_bag": {
+        "id": 1528299.0,
+        "name": {
+            "locstring": {
+                "name": "name",
+                "value": "11249180"
+            }
+        },
+        "description": {
+            "locstring": {
+                "name": "description",
+                "value": "11249181"
+            }
+        },
+        "tip": {
+            "locstring": {
+                "name": "tip",
+                "value": "0"
+            }
+        },
+        "requirement": {
+            "requirements": [
+                {
+                    "requirement_instance": {
+                        "instance_reference": "challenges/requirement_instance/no_active_ugc"
+                    }
+                }
+            ],
+            "operator": "and"
+        },
+        "update_rule": {
+            "value_requirement": {
+                "template_reference": {
+                    "name": "value_requirement",
+                    "value": "challenges\\requirement_values\\constant\\generic"
+                },
+                "value": 1.0
+            }
+        },
+        "completion_count": 5.0,
+        "reward": {
+            "item_bundle": {
+                "instance_reference": ""
+            },
+            "challenge": {
+                "instance_reference": ""
+            },
+            "achievement": {
+                "instance_reference": ""
+            },
+            "xp": 0.0
+        },
+        "enable": "False",
+        "counters": [
+            {
+                "counter": {
+                    "template_reference": {
+                        "name": "counter",
+                        "value": "challenges\\counters\\counter"
+                    },
+                    "name": "",
+                    "enabled": "False",
+                    "tracking_event": "Win",
+                    "trigger_rules": [
+                        {
+                            "rule": {
+                                "template_reference": {
+                                    "name": "rule",
+                                    "value": "challenges\\counters\\counter_rule"
+                                },
+                                "requirement": {
+                                    "template_reference": {
+                                        "name": "requirement",
+                                        "value": "challenges\\requirement"
+                                    },
+                                    "operator": "and",
+                                    "values": [],
+                                    "requirements": []
+                                },
+                                "actions": [
+                                    {
+                                        "action": {
+                                            "template_reference": {
+                                                "name": "action",
+                                                "value": "challenges\\counter_actions\\change_counter"
+                                            },
+                                            "op": "Increment"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "complete_rule": {
+                        "template_reference": {
+                            "name": "complete_rule",
+                            "value": "challenges\\counters\\counter_rule"
+                        },
+                        "requirement": {
+                            "template_reference": {
+                                "name": "requirement",
+                                "value": "challenges\\requirement"
+                            },
+                            "operator": "and",
+                            "values": [
+                                {
+                                    "value_requirement": {
+                                        "template_reference": {
+                                            "name": "value_requirement",
+                                            "value": "challenges\\requirement_values\\dynamic\\clientcounter"
+                                        },
+                                        "value": "win_no_battlegroup"
+                                    }
+                                },
+                                {
+                                    "value_requirement": {
+                                        "template_reference": {
+                                            "name": "value_requirement",
+                                            "value": "challenges\\requirement_values\\constant\\generic"
+                                        },
+                                        "value": 1.0
+                                    }
+                                }
+                            ],
+                            "requirements": []
+                        },
+                        "actions": [
+                            {
+                                "action": {
+                                    "template_reference": {
+                                        "name": "action",
+                                        "value": "challenges\\counter_actions\\uncomplete_counter"
+                                    },
+                                    "name": "win_no_battlegroup"
+                                }
+                            },
+                            {
+                                "action": {
+                                    "template_reference": {
+                                        "name": "action",
+                                        "value": "challenges\\counter_actions\\change_named_counter"
+                                    },
+                                    "op": "Set",
+                                    "name": "win_no_battlegroup",
+                                    "amount": 0.0
+                                }
+                            },
+                            {
+                                "action": {
+                                    "template_reference": {
+                                        "name": "action",
+                                        "value": "challenges\\counter_actions\\complete_challenge"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "icon": "",
+        "fe_priority": 0.0,
+        "group": {
+            "instance_reference": "challenges/challenge_group/deprecated/weekly_challenges_store_release"
+        },
+        "award_source": "Client",
+        "platform_stat_key": "",
+        "tags": [],
+        "xbox_title_achievement_id": "",
+        "reward_expires": "False",
+        "reward_collection": "Automatic"
+    },
+    "pbgid": 1528300.0,
+    "parent_pbg": {
+        "instance_reference": ""
+    }
+}

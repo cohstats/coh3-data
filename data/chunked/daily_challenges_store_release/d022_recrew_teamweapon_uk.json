@@ -1,0 +1,425 @@
+{
+    "challenge_bag": {
+        "id": 1529281.0,
+        "name": {
+            "locstring": {
+                "name": "name",
+                "value": "11251328"
+            }
+        },
+        "description": {
+            "locstring": {
+                "name": "description",
+                "value": "11251329"
+            }
+        },
+        "tip": {
+            "locstring": {
+                "name": "tip",
+                "value": "0"
+            }
+        },
+        "requirement": {
+            "requirements": [
+                {
+                    "requirement": {
+                        "template_reference": {
+                            "name": "requirement",
+                            "value": "challenges\\requirement"
+                        },
+                        "operator": "equal",
+                        "values": [
+                            {
+                                "value_requirement": {
+                                    "template_reference": {
+                                        "name": "value_requirement",
+                                        "value": "challenges\\requirement_values\\dynamic\\raceid"
+                                    }
+                                }
+                            },
+                            {
+                                "value_requirement": {
+                                    "template_reference": {
+                                        "name": "value_requirement",
+                                        "value": "challenges\\requirement_values\\constant\\raceid"
+                                    },
+                                    "value": {
+                                        "instance_reference": "racebps/british_africa"
+                                    }
+                                }
+                            }
+                        ],
+                        "requirements": []
+                    }
+                },
+                {
+                    "requirement": {
+                        "template_reference": {
+                            "name": "requirement",
+                            "value": "challenges\\requirement"
+                        },
+                        "operator": "not",
+                        "values": [
+                            {
+                                "value_requirement": {
+                                    "template_reference": {
+                                        "name": "value_requirement",
+                                        "value": "challenges\\requirement_values\\dynamic\\matchtypeid"
+                                    }
+                                }
+                            },
+                            {
+                                "value_requirement": {
+                                    "template_reference": {
+                                        "name": "value_requirement",
+                                        "value": "challenges\\requirement_values\\constant\\matchtypeid"
+                                    },
+                                    "value": {
+                                        "instance_reference": "multiplayer/match_type/campaign"
+                                    }
+                                }
+                            }
+                        ],
+                        "requirements": []
+                    }
+                },
+                {
+                    "requirement_instance": {
+                        "instance_reference": "challenges/requirement_instance/no_active_ugc"
+                    }
+                }
+            ],
+            "operator": "and"
+        },
+        "update_rule": {
+            "value_requirement": {
+                "template_reference": {
+                    "name": "value_requirement",
+                    "value": "challenges\\requirement_values\\constant\\generic"
+                },
+                "value": 1.0
+            }
+        },
+        "completion_count": 1.0,
+        "reward": {
+            "item_bundle": {
+                "instance_reference": "inventory_item_bundle/challenges/merit_reward_30"
+            },
+            "challenge": {
+                "instance_reference": ""
+            },
+            "achievement": {
+                "instance_reference": ""
+            },
+            "xp": 0.0
+        },
+        "enable": "True",
+        "counters": [
+            {
+                "counter": {
+                    "template_reference": {
+                        "name": "counter",
+                        "value": "challenges\\counters\\counter"
+                    },
+                    "name": "recrew_teamweapon",
+                    "enabled": "True",
+                    "tracking_event": "AbilityComplete",
+                    "trigger_rules": [
+                        {
+                            "rule": {
+                                "template_reference": {
+                                    "name": "rule",
+                                    "value": "challenges\\counters\\counter_rule"
+                                },
+                                "requirement": {
+                                    "template_reference": {
+                                        "name": "requirement",
+                                        "value": "challenges\\requirement"
+                                    },
+                                    "operator": "and",
+                                    "values": [],
+                                    "requirements": [
+                                        {
+                                            "requirement": {
+                                                "template_reference": {
+                                                    "name": "requirement",
+                                                    "value": "challenges\\requirement"
+                                                },
+                                                "operator": "equal",
+                                                "values": [
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\dynamic\\abilitytype"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\abilitytype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "abilities/races/american/vehicles/recrew_team_weapon_halftrack_us"
+                                                            }
+                                                        }
+                                                    }
+                                                ],
+                                                "requirements": []
+                                            }
+                                        },
+                                        {
+                                            "requirement": {
+                                                "template_reference": {
+                                                    "name": "requirement",
+                                                    "value": "challenges\\requirement"
+                                                },
+                                                "operator": "in",
+                                                "values": [
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\dynamic\\squadtype"
+                                                            },
+                                                            "value": "Source"
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\squadtype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "sbps/races/british_africa/vehicles/cwt_15_truck_africa_uk"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\squadtype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "sbps/races/british_africa/vehicles/cwt_15_truck_medical_africa_uk"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\squadtype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "sbps/races/british_africa/vehicles/cwt_15_truck_recrewable_africa_uk"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\squadtype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "sbps/races/british_africa/vehicles/cwt_15_truck_repair_resupply_africa_uk"
+                                                            }
+                                                        }
+                                                    }
+                                                ],
+                                                "requirements": []
+                                            }
+                                        },
+                                        {
+                                            "requirement": {
+                                                "template_reference": {
+                                                    "name": "requirement",
+                                                    "value": "challenges\\requirement"
+                                                },
+                                                "operator": "in",
+                                                "values": [
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\dynamic\\entitytype"
+                                                            },
+                                                            "value": "Target"
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\entitytype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "ebps/races/british_africa/team_weapons/tw_4_2_heavy_mortar_africa_uk"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\entitytype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "ebps/races/british_africa/team_weapons/tw_at_gun_17pdr_africa_uk"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\entitytype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "ebps/races/british_africa/team_weapons/tw_at_gun_2pdr_africa_uk"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\entitytype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "ebps/races/british_africa/team_weapons/tw_at_gun_6pdr_africa_uk"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\entitytype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "ebps/races/british_africa/team_weapons/tw_bofors_towed_africa_uk"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\entitytype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "ebps/races/british_africa/team_weapons/tw_pack_howitzer_75mm_africa_uk"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\entitytype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "ebps/races/british_africa/weapons/small_arms/machine_guns/heavy_machine_gun/w_vickers_hmg_africa_uk"
+                                                            }
+                                                        }
+                                                    }
+                                                ],
+                                                "requirements": []
+                                            }
+                                        }
+                                    ]
+                                },
+                                "actions": [
+                                    {
+                                        "action": {
+                                            "template_reference": {
+                                                "name": "action",
+                                                "value": "challenges\\counter_actions\\change_counter"
+                                            },
+                                            "op": "Increment"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "complete_rule": {
+                        "template_reference": {
+                            "name": "complete_rule",
+                            "value": "challenges\\counters\\counter_rule"
+                        },
+                        "requirement": {
+                            "template_reference": {
+                                "name": "requirement",
+                                "value": "challenges\\requirement"
+                            },
+                            "operator": "greaterthanequal",
+                            "values": [
+                                {
+                                    "value_requirement": {
+                                        "template_reference": {
+                                            "name": "value_requirement",
+                                            "value": "challenges\\requirement_values\\dynamic\\clientcounter"
+                                        },
+                                        "value": "recrew_teamweapon"
+                                    }
+                                },
+                                {
+                                    "value_requirement": {
+                                        "template_reference": {
+                                            "name": "value_requirement",
+                                            "value": "challenges\\requirement_values\\constant\\generic"
+                                        },
+                                        "value": 1.0
+                                    }
+                                }
+                            ],
+                            "requirements": []
+                        },
+                        "actions": [
+                            {
+                                "action": {
+                                    "template_reference": {
+                                        "name": "action",
+                                        "value": "challenges\\counter_actions\\complete_challenge"
+                                    }
+                                }
+                            },
+                            {
+                                "action": {
+                                    "template_reference": {
+                                        "name": "action",
+                                        "value": "challenges\\counter_actions\\toggle_counter"
+                                    },
+                                    "enabled": "False",
+                                    "name": "recrew_teamweapon"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "icon": "",
+        "fe_priority": 0.0,
+        "group": {
+            "instance_reference": "challenges/challenge_group/store_challenge_groups/daily_30_merit_group"
+        },
+        "award_source": "Client",
+        "platform_stat_key": "",
+        "tags": [],
+        "xbox_title_achievement_id": "",
+        "reward_expires": "False",
+        "reward_collection": "Automatic"
+    },
+    "pbgid": 1529282.0,
+    "parent_pbg": {
+        "instance_reference": ""
+    }
+}

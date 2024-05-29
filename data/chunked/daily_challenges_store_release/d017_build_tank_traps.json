@@ -1,0 +1,495 @@
+{
+    "challenge_bag": {
+        "id": 1529023.0,
+        "name": {
+            "locstring": {
+                "name": "name",
+                "value": "11251318"
+            }
+        },
+        "description": {
+            "locstring": {
+                "name": "description",
+                "value": "11251319"
+            }
+        },
+        "tip": {
+            "locstring": {
+                "name": "tip",
+                "value": "0"
+            }
+        },
+        "requirement": {
+            "requirements": [
+                {
+                    "requirement": {
+                        "template_reference": {
+                            "name": "requirement",
+                            "value": "challenges\\requirement"
+                        },
+                        "operator": "not",
+                        "values": [
+                            {
+                                "value_requirement": {
+                                    "template_reference": {
+                                        "name": "value_requirement",
+                                        "value": "challenges\\requirement_values\\dynamic\\matchtypeid"
+                                    }
+                                }
+                            },
+                            {
+                                "value_requirement": {
+                                    "template_reference": {
+                                        "name": "value_requirement",
+                                        "value": "challenges\\requirement_values\\constant\\matchtypeid"
+                                    },
+                                    "value": {
+                                        "instance_reference": "multiplayer/match_type/campaign"
+                                    }
+                                }
+                            }
+                        ],
+                        "requirements": []
+                    }
+                },
+                {
+                    "requirement_instance": {
+                        "instance_reference": "challenges/requirement_instance/no_active_ugc"
+                    }
+                }
+            ],
+            "operator": "and"
+        },
+        "update_rule": {
+            "value_requirement": {
+                "template_reference": {
+                    "name": "value_requirement",
+                    "value": "challenges\\requirement_values\\constant\\generic"
+                },
+                "value": 1.0
+            }
+        },
+        "completion_count": 1.0,
+        "reward": {
+            "item_bundle": {
+                "instance_reference": "inventory_item_bundle/challenges/merit_reward_100"
+            },
+            "challenge": {
+                "instance_reference": ""
+            },
+            "achievement": {
+                "instance_reference": ""
+            },
+            "xp": 0.0
+        },
+        "enable": "True",
+        "counters": [
+            {
+                "counter": {
+                    "template_reference": {
+                        "name": "counter",
+                        "value": "challenges\\counters\\counter"
+                    },
+                    "name": "build_tank_traps",
+                    "enabled": "True",
+                    "tracking_event": "EntityBuild",
+                    "trigger_rules": [
+                        {
+                            "rule": {
+                                "template_reference": {
+                                    "name": "rule",
+                                    "value": "challenges\\counters\\counter_rule"
+                                },
+                                "requirement": {
+                                    "template_reference": {
+                                        "name": "requirement",
+                                        "value": "challenges\\requirement"
+                                    },
+                                    "operator": "in",
+                                    "values": [
+                                        {
+                                            "value_requirement": {
+                                                "template_reference": {
+                                                    "name": "value_requirement",
+                                                    "value": "challenges\\requirement_values\\dynamic\\entitytype"
+                                                },
+                                                "value": "Target"
+                                            }
+                                        },
+                                        {
+                                            "value_requirement": {
+                                                "template_reference": {
+                                                    "name": "value_requirement",
+                                                    "value": "challenges\\requirement_values\\constant\\entitytype"
+                                                },
+                                                "value": {
+                                                    "instance_reference": "ebps/environment/objects/defenses/sandbags/sandbag_pile"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "value_requirement": {
+                                                "template_reference": {
+                                                    "name": "value_requirement",
+                                                    "value": "challenges\\requirement_values\\constant\\entitytype"
+                                                },
+                                                "value": {
+                                                    "instance_reference": "ebps/environment/objects/defenses/sandbags/sandbag_pile_01"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "value_requirement": {
+                                                "template_reference": {
+                                                    "name": "value_requirement",
+                                                    "value": "challenges\\requirement_values\\constant\\entitytype"
+                                                },
+                                                "value": {
+                                                    "instance_reference": "ebps/environment/objects/defenses/sandbags/sandbag_pile_02"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "value_requirement": {
+                                                "template_reference": {
+                                                    "name": "value_requirement",
+                                                    "value": "challenges\\requirement_values\\constant\\entitytype"
+                                                },
+                                                "value": {
+                                                    "instance_reference": "ebps/environment/objects/defenses/sandbags/sandbag_pile_03"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "value_requirement": {
+                                                "template_reference": {
+                                                    "name": "value_requirement",
+                                                    "value": "challenges\\requirement_values\\constant\\entitytype"
+                                                },
+                                                "value": {
+                                                    "instance_reference": "ebps/environment/objects/defenses/sandbags/sandbag_section_02"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "value_requirement": {
+                                                "template_reference": {
+                                                    "name": "value_requirement",
+                                                    "value": "challenges\\requirement_values\\constant\\entitytype"
+                                                },
+                                                "value": {
+                                                    "instance_reference": "ebps/environment/objects/defenses/sandbags/sandbag_section_03"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "value_requirement": {
+                                                "template_reference": {
+                                                    "name": "value_requirement",
+                                                    "value": "challenges\\requirement_values\\constant\\entitytype"
+                                                },
+                                                "value": {
+                                                    "instance_reference": "ebps/environment/objects/defenses/sandbags/sandbag_section_04"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "value_requirement": {
+                                                "template_reference": {
+                                                    "name": "value_requirement",
+                                                    "value": "challenges\\requirement_values\\constant\\entitytype"
+                                                },
+                                                "value": {
+                                                    "instance_reference": "ebps/environment/objects/defenses/sandbags/sandbag_single_01"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "value_requirement": {
+                                                "template_reference": {
+                                                    "name": "value_requirement",
+                                                    "value": "challenges\\requirement_values\\constant\\entitytype"
+                                                },
+                                                "value": {
+                                                    "instance_reference": "ebps/environment/objects/defenses/sandbags/sandbag_wall_01"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "value_requirement": {
+                                                "template_reference": {
+                                                    "name": "value_requirement",
+                                                    "value": "challenges\\requirement_values\\constant\\entitytype"
+                                                },
+                                                "value": {
+                                                    "instance_reference": "ebps/environment/objects/defenses/sandbags/sandbag_wall_02"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "value_requirement": {
+                                                "template_reference": {
+                                                    "name": "value_requirement",
+                                                    "value": "challenges\\requirement_values\\constant\\entitytype"
+                                                },
+                                                "value": {
+                                                    "instance_reference": "ebps/environment/objects/defenses/sandbags/sandbag_wall_03"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "value_requirement": {
+                                                "template_reference": {
+                                                    "name": "value_requirement",
+                                                    "value": "challenges\\requirement_values\\constant\\entitytype"
+                                                },
+                                                "value": {
+                                                    "instance_reference": "ebps/races/american/buildings/defensive/tank_trap_us"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "value_requirement": {
+                                                "template_reference": {
+                                                    "name": "value_requirement",
+                                                    "value": "challenges\\requirement_values\\constant\\entitytype"
+                                                },
+                                                "value": {
+                                                    "instance_reference": "ebps/races/british/buildings/defensive/tank_trap_uk"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "value_requirement": {
+                                                "template_reference": {
+                                                    "name": "value_requirement",
+                                                    "value": "challenges\\requirement_values\\constant\\entitytype"
+                                                },
+                                                "value": {
+                                                    "instance_reference": "ebps/races/american/buildings/defensive/tank_trap_rifleman_us"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "value_requirement": {
+                                                "template_reference": {
+                                                    "name": "value_requirement",
+                                                    "value": "challenges\\requirement_values\\constant\\entitytype"
+                                                },
+                                                "value": {
+                                                    "instance_reference": "ebps/races/afrika_korps/buildings/defensive/tank_trap_ak"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "value_requirement": {
+                                                "template_reference": {
+                                                    "name": "value_requirement",
+                                                    "value": "challenges\\requirement_values\\constant\\entitytype"
+                                                },
+                                                "value": {
+                                                    "instance_reference": "ebps/races/german/buildings/defensive/tank_trap_ger"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "value_requirement": {
+                                                "template_reference": {
+                                                    "name": "value_requirement",
+                                                    "value": "challenges\\requirement_values\\constant\\entitytype"
+                                                },
+                                                "value": {
+                                                    "instance_reference": "ebps/races/afrika_korps/buildings/defensive/sandbag_wall_ak"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "value_requirement": {
+                                                "template_reference": {
+                                                    "name": "value_requirement",
+                                                    "value": "challenges\\requirement_values\\constant\\entitytype"
+                                                },
+                                                "value": {
+                                                    "instance_reference": "ebps/races/afrika_korps/buildings/defensive/sandbag_ring_large_ak"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "value_requirement": {
+                                                "template_reference": {
+                                                    "name": "value_requirement",
+                                                    "value": "challenges\\requirement_values\\constant\\entitytype"
+                                                },
+                                                "value": {
+                                                    "instance_reference": "ebps/races/afrika_korps/buildings/defensive/sandbag_wall_panzergrenadier_ak"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "value_requirement": {
+                                                "template_reference": {
+                                                    "name": "value_requirement",
+                                                    "value": "challenges\\requirement_values\\constant\\entitytype"
+                                                },
+                                                "value": {
+                                                    "instance_reference": "ebps/races/british/buildings/defensive/sandbag_wall_tommy_uk"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "value_requirement": {
+                                                "template_reference": {
+                                                    "name": "value_requirement",
+                                                    "value": "challenges\\requirement_values\\constant\\entitytype"
+                                                },
+                                                "value": {
+                                                    "instance_reference": "ebps/races/british/buildings/defensive/sandbag_wall_uk"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "value_requirement": {
+                                                "template_reference": {
+                                                    "name": "value_requirement",
+                                                    "value": "challenges\\requirement_values\\constant\\entitytype"
+                                                },
+                                                "value": {
+                                                    "instance_reference": "ebps/races/common/weapons/w_construction_sandbag"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "value_requirement": {
+                                                "template_reference": {
+                                                    "name": "value_requirement",
+                                                    "value": "challenges\\requirement_values\\constant\\entitytype"
+                                                },
+                                                "value": {
+                                                    "instance_reference": "ebps/races/german/buildings/defensive/sandbag_ring_ger"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "value_requirement": {
+                                                "template_reference": {
+                                                    "name": "value_requirement",
+                                                    "value": "challenges\\requirement_values\\constant\\entitytype"
+                                                },
+                                                "value": {
+                                                    "instance_reference": "ebps/races/german/buildings/defensive/sandbag_wall_ger"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "value_requirement": {
+                                                "template_reference": {
+                                                    "name": "value_requirement",
+                                                    "value": "challenges\\requirement_values\\constant\\entitytype"
+                                                },
+                                                "value": {
+                                                    "instance_reference": "ebps/races/american/buildings/defensive/sandbag_wall_rifleman_us"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "value_requirement": {
+                                                "template_reference": {
+                                                    "name": "value_requirement",
+                                                    "value": "challenges\\requirement_values\\constant\\entitytype"
+                                                },
+                                                "value": {
+                                                    "instance_reference": "ebps/races/american/buildings/defensive/sandbag_wall_us"
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "requirements": []
+                                },
+                                "actions": [
+                                    {
+                                        "action": {
+                                            "template_reference": {
+                                                "name": "action",
+                                                "value": "challenges\\counter_actions\\change_counter"
+                                            },
+                                            "op": "Increment"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "complete_rule": {
+                        "template_reference": {
+                            "name": "complete_rule",
+                            "value": "challenges\\counters\\counter_rule"
+                        },
+                        "requirement": {
+                            "template_reference": {
+                                "name": "requirement",
+                                "value": "challenges\\requirement"
+                            },
+                            "operator": "greaterthanequal",
+                            "values": [
+                                {
+                                    "value_requirement": {
+                                        "template_reference": {
+                                            "name": "value_requirement",
+                                            "value": "challenges\\requirement_values\\dynamic\\clientcounter"
+                                        },
+                                        "value": "build_tank_traps"
+                                    }
+                                },
+                                {
+                                    "value_requirement": {
+                                        "template_reference": {
+                                            "name": "value_requirement",
+                                            "value": "challenges\\requirement_values\\constant\\generic"
+                                        },
+                                        "value": 5.0
+                                    }
+                                }
+                            ],
+                            "requirements": []
+                        },
+                        "actions": [
+                            {
+                                "action": {
+                                    "template_reference": {
+                                        "name": "action",
+                                        "value": "challenges\\counter_actions\\complete_challenge"
+                                    }
+                                }
+                            },
+                            {
+                                "action": {
+                                    "template_reference": {
+                                        "name": "action",
+                                        "value": "challenges\\counter_actions\\toggle_counter"
+                                    },
+                                    "enabled": "False",
+                                    "name": "build_tank_traps"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "icon": "",
+        "fe_priority": 0.0,
+        "group": {
+            "instance_reference": "challenges/challenge_group/store_challenge_groups/daily_100_merit_group"
+        },
+        "award_source": "Client",
+        "platform_stat_key": "",
+        "tags": [],
+        "xbox_title_achievement_id": "",
+        "reward_expires": "False",
+        "reward_collection": "Automatic"
+    },
+    "pbgid": 1529024.0,
+    "parent_pbg": {
+        "instance_reference": ""
+    }
+}

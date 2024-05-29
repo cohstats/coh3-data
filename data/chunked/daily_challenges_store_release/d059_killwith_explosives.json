@@ -1,0 +1,546 @@
+{
+    "challenge_bag": {
+        "id": 1529392.0,
+        "name": {
+            "locstring": {
+                "name": "name",
+                "value": "11251402"
+            }
+        },
+        "description": {
+            "locstring": {
+                "name": "description",
+                "value": "11251403"
+            }
+        },
+        "tip": {
+            "locstring": {
+                "name": "tip",
+                "value": "0"
+            }
+        },
+        "requirement": {
+            "requirements": [
+                {
+                    "requirement": {
+                        "template_reference": {
+                            "name": "requirement",
+                            "value": "challenges\\requirement"
+                        },
+                        "operator": "not",
+                        "values": [
+                            {
+                                "value_requirement": {
+                                    "template_reference": {
+                                        "name": "value_requirement",
+                                        "value": "challenges\\requirement_values\\dynamic\\matchtypeid"
+                                    }
+                                }
+                            },
+                            {
+                                "value_requirement": {
+                                    "template_reference": {
+                                        "name": "value_requirement",
+                                        "value": "challenges\\requirement_values\\constant\\matchtypeid"
+                                    },
+                                    "value": {
+                                        "instance_reference": "multiplayer/match_type/campaign"
+                                    }
+                                }
+                            }
+                        ],
+                        "requirements": []
+                    }
+                },
+                {
+                    "requirement_instance": {
+                        "instance_reference": "challenges/requirement_instance/no_active_ugc"
+                    }
+                }
+            ],
+            "operator": "and"
+        },
+        "update_rule": {
+            "value_requirement": {
+                "template_reference": {
+                    "name": "value_requirement",
+                    "value": "challenges\\requirement_values\\constant\\generic"
+                },
+                "value": 1.0
+            }
+        },
+        "completion_count": 1.0,
+        "reward": {
+            "item_bundle": {
+                "instance_reference": "inventory_item_bundle/challenges/merit_reward_30"
+            },
+            "challenge": {
+                "instance_reference": ""
+            },
+            "achievement": {
+                "instance_reference": ""
+            },
+            "xp": 0.0
+        },
+        "enable": "False",
+        "counters": [
+            {
+                "counter": {
+                    "template_reference": {
+                        "name": "counter",
+                        "value": "challenges\\counters\\counter"
+                    },
+                    "name": "kill_with_explosives",
+                    "enabled": "True",
+                    "tracking_event": "EntityKilled",
+                    "trigger_rules": [
+                        {
+                            "rule": {
+                                "template_reference": {
+                                    "name": "rule",
+                                    "value": "challenges\\counters\\counter_rule"
+                                },
+                                "requirement": {
+                                    "template_reference": {
+                                        "name": "requirement",
+                                        "value": "challenges\\requirement"
+                                    },
+                                    "operator": "and",
+                                    "values": [],
+                                    "requirements": [
+                                        {
+                                            "requirement": {
+                                                "template_reference": {
+                                                    "name": "requirement",
+                                                    "value": "challenges\\requirement"
+                                                },
+                                                "operator": "in",
+                                                "values": [
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\dynamic\\abilitytype"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\abilitytype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "abilities/throw_grenade"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\abilitytype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "abilities/races/afrika_korps/infantry/assault_grenades_assault_grenadier_ak"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\abilitytype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "abilities/races/afrika_korps/infantry/grenade_bersaglieri_ak"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\abilitytype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "abilities/races/afrika_korps/infantry/grenade_panzergrenadier_ak"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\abilitytype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "abilities/races/american/infantry/fighting_position_auto_grenade_us"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\abilitytype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "abilities/races/american/infantry/grenade_ranger_us"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\abilitytype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "abilities/races/american/infantry/grenade_type_l_resistance_fighters_partisan"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\abilitytype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "abilities/races/american/infantry/grenade_riflemen_us"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\abilitytype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "abilities/races/american/infantry/grenade_white_phosphorus_devils_brigade_us"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\abilitytype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "abilities/races/american/infantry/rifle_grenade_pathfinder_us"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\abilitytype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "abilities/races/british_africa/infantry/grenade_no69_africa_uk"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\abilitytype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "abilities/races/british_africa/infantry/rifle_grenade_tommy_africa_uk"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\abilitytype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "abilities/races/british_africa/infantry/gammon_bomb_guards_africa_uk"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\abilitytype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "abilities/races/german/infantry/bundle_grenade_panzergrenadier_ger"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\abilitytype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "abilities/races/german/infantry/grenade_assault_grenadier_ger"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\abilitytype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "abilities/races/german/infantry/grenade_fallschirmjager_ger"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\abilitytype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "abilities/races/german/infantry/grenade_guastatori_ger"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\abilitytype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "abilities/races/german/infantry/grenade_m24_stick_grenadier_ger"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\abilitytype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "abilities/races/german/infantry/grenade_stormtrooper_ger"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\abilitytype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "abilities/races/german/infantry/grenade_white_phosphorus_stormtrooper_ger"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\abilitytype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "abilities/races/german/infantry/bundle_grenade_panzergrenadier_ger"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\abilitytype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "abilities/races/afrika_korps/infantry/satchel_charge_guastatori_ak"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\abilitytype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "abilities/races/american/infantry/satchel_charge_engineers_us"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\abilitytype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "abilities/races/american/infantry/satchel_charge_paratrooper_us"
+                                                            }
+                                                        }
+                                                    }
+                                                ],
+                                                "requirements": []
+                                            }
+                                        },
+                                        {
+                                            "requirement": {
+                                                "template_reference": {
+                                                    "name": "requirement",
+                                                    "value": "challenges\\requirement"
+                                                },
+                                                "operator": "equal",
+                                                "values": [
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\dynamic\\squadtype"
+                                                            },
+                                                            "value": "Source"
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\squadtype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "sbps/races/common/parent/infantry_parent"
+                                                            }
+                                                        }
+                                                    }
+                                                ],
+                                                "requirements": []
+                                            }
+                                        },
+                                        {
+                                            "requirement": {
+                                                "template_reference": {
+                                                    "name": "requirement",
+                                                    "value": "challenges\\requirement"
+                                                },
+                                                "operator": "equal",
+                                                "values": [
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\dynamic\\entityrelationtoplayer"
+                                                            },
+                                                            "value": "Target"
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\entityrelationtoplayer"
+                                                            },
+                                                            "value": "enemy"
+                                                        }
+                                                    }
+                                                ],
+                                                "requirements": []
+                                            }
+                                        }
+                                    ]
+                                },
+                                "actions": [
+                                    {
+                                        "action": {
+                                            "template_reference": {
+                                                "name": "action",
+                                                "value": "challenges\\counter_actions\\change_counter"
+                                            },
+                                            "op": "Increment"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "complete_rule": {
+                        "template_reference": {
+                            "name": "complete_rule",
+                            "value": "challenges\\counters\\counter_rule"
+                        },
+                        "requirement": {
+                            "template_reference": {
+                                "name": "requirement",
+                                "value": "challenges\\requirement"
+                            },
+                            "operator": "equal",
+                            "values": [
+                                {
+                                    "value_requirement": {
+                                        "template_reference": {
+                                            "name": "value_requirement",
+                                            "value": "challenges\\requirement_values\\dynamic\\clientcounter"
+                                        },
+                                        "value": "kill_with_explosives"
+                                    }
+                                },
+                                {
+                                    "value_requirement": {
+                                        "template_reference": {
+                                            "name": "value_requirement",
+                                            "value": "challenges\\requirement_values\\constant\\generic"
+                                        },
+                                        "value": 5.0
+                                    }
+                                }
+                            ],
+                            "requirements": []
+                        },
+                        "actions": [
+                            {
+                                "action": {
+                                    "template_reference": {
+                                        "name": "action",
+                                        "value": "challenges\\counter_actions\\complete_challenge"
+                                    }
+                                }
+                            },
+                            {
+                                "action": {
+                                    "template_reference": {
+                                        "name": "action",
+                                        "value": "challenges\\counter_actions\\toggle_counter"
+                                    },
+                                    "enabled": "False",
+                                    "name": "kill_with_explosives"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "icon": "",
+        "fe_priority": 0.0,
+        "group": {
+            "instance_reference": "challenges/challenge_group/deprecated/daily_challenges_store_release"
+        },
+        "award_source": "Client",
+        "platform_stat_key": "",
+        "tags": [],
+        "xbox_title_achievement_id": "",
+        "reward_expires": "False",
+        "reward_collection": "Automatic"
+    },
+    "pbgid": 1529393.0,
+    "parent_pbg": {
+        "instance_reference": ""
+    }
+}

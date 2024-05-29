@@ -541,8 +541,10 @@ def save_dict_to_json(dictionary, path, file_name, indent=4):
     file_path = os.path.join(path, file_name)
     
     # write the dictionary as formatted JSON to file
-    with open(file_path, 'w') as json_file:
-        json.dump(dictionary, json_file, indent=indent)
+    with open(file_path, 'w', newline='\n') as json_file:
+        json_str = json.dumps(dictionary, indent=indent)
+        # This is done to avoid windows line endings, so we are in sync on git
+        json_file.write(json_str)
     json_file.close()
 
     # json_str = json.dumps(dictionary)

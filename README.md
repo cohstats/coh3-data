@@ -52,6 +52,8 @@ The **locstrings** must be exported as well, but requires the following steps:
 Hint: `python main.py -no_bl` disables blacklist filter and generates complete JSON files. However, when possible,
 the filtered JSON files should be used to reduce file size. 
 
+You can verify the changes by running command `git diff`
+
 ## Changes after the patch
 1. Generate the data
 2. Copy the .json files into folder `/data`

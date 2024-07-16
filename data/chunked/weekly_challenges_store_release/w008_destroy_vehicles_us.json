@@ -25,7 +25,7 @@
                     "requirement": {
                         "template_reference": {
                             "name": "requirement",
-                            "value": "challenges\\requirement"
+                            "value": "challenges\\values_requirement"
                         },
                         "operator": "equal",
                         "values": [
@@ -48,15 +48,14 @@
                                     }
                                 }
                             }
-                        ],
-                        "requirements": []
+                        ]
                     }
                 },
                 {
                     "requirement": {
                         "template_reference": {
                             "name": "requirement",
-                            "value": "challenges\\requirement"
+                            "value": "challenges\\values_requirement"
                         },
                         "operator": "not",
                         "values": [
@@ -79,8 +78,7 @@
                                     }
                                 }
                             }
-                        ],
-                        "requirements": []
+                        ]
                     }
                 },
                 {
@@ -116,171 +114,8 @@
         "enable": "True",
         "counters": [
             {
-                "counter": {
-                    "template_reference": {
-                        "name": "counter",
-                        "value": "challenges\\counters\\counter"
-                    },
-                    "name": "kill_vehicle",
-                    "enabled": "True",
-                    "tracking_event": "SquadKilled",
-                    "trigger_rules": [
-                        {
-                            "rule": {
-                                "template_reference": {
-                                    "name": "rule",
-                                    "value": "challenges\\counters\\counter_rule"
-                                },
-                                "requirement": {
-                                    "template_reference": {
-                                        "name": "requirement",
-                                        "value": "challenges\\requirement"
-                                    },
-                                    "operator": "and",
-                                    "values": [],
-                                    "requirements": [
-                                        {
-                                            "requirement": {
-                                                "template_reference": {
-                                                    "name": "requirement",
-                                                    "value": "challenges\\requirement"
-                                                },
-                                                "operator": "equal",
-                                                "values": [
-                                                    {
-                                                        "value_requirement": {
-                                                            "template_reference": {
-                                                                "name": "value_requirement",
-                                                                "value": "challenges\\requirement_values\\dynamic\\squadrelationtoplayer"
-                                                            },
-                                                            "value": "Target"
-                                                        }
-                                                    },
-                                                    {
-                                                        "value_requirement": {
-                                                            "template_reference": {
-                                                                "name": "value_requirement",
-                                                                "value": "challenges\\requirement_values\\constant\\squadrelationtoplayer"
-                                                            },
-                                                            "value": "enemy"
-                                                        }
-                                                    }
-                                                ],
-                                                "requirements": []
-                                            }
-                                        },
-                                        {
-                                            "requirement": {
-                                                "template_reference": {
-                                                    "name": "requirement",
-                                                    "value": "challenges\\requirement"
-                                                },
-                                                "operator": "equal",
-                                                "values": [
-                                                    {
-                                                        "value_requirement": {
-                                                            "template_reference": {
-                                                                "name": "value_requirement",
-                                                                "value": "challenges\\requirement_values\\dynamic\\squadtype"
-                                                            },
-                                                            "value": "Target"
-                                                        }
-                                                    },
-                                                    {
-                                                        "value_requirement": {
-                                                            "template_reference": {
-                                                                "name": "value_requirement",
-                                                                "value": "challenges\\requirement_values\\constant\\squadtype"
-                                                            },
-                                                            "value": {
-                                                                "instance_reference": "sbps/races/common/parent/vehicle_parent"
-                                                            }
-                                                        }
-                                                    }
-                                                ],
-                                                "requirements": []
-                                            }
-                                        }
-                                    ]
-                                },
-                                "actions": [
-                                    {
-                                        "action": {
-                                            "template_reference": {
-                                                "name": "action",
-                                                "value": "challenges\\counter_actions\\change_counter"
-                                            },
-                                            "op": "Increment"
-                                        }
-                                    }
-                                ]
-                            }
-                        }
-                    ],
-                    "complete_rule": {
-                        "template_reference": {
-                            "name": "complete_rule",
-                            "value": "challenges\\counters\\counter_rule"
-                        },
-                        "requirement": {
-                            "template_reference": {
-                                "name": "requirement",
-                                "value": "challenges\\requirement"
-                            },
-                            "operator": "equal",
-                            "values": [
-                                {
-                                    "value_requirement": {
-                                        "template_reference": {
-                                            "name": "value_requirement",
-                                            "value": "challenges\\requirement_values\\dynamic\\clientcounter"
-                                        },
-                                        "value": "kill_vehicle"
-                                    }
-                                },
-                                {
-                                    "value_requirement": {
-                                        "template_reference": {
-                                            "name": "value_requirement",
-                                            "value": "challenges\\requirement_values\\constant\\generic"
-                                        },
-                                        "value": 1.0
-                                    }
-                                }
-                            ],
-                            "requirements": []
-                        },
-                        "actions": [
-                            {
-                                "action": {
-                                    "template_reference": {
-                                        "name": "action",
-                                        "value": "challenges\\counter_actions\\uncomplete_counter"
-                                    },
-                                    "name": "kill_vehicle"
-                                }
-                            },
-                            {
-                                "action": {
-                                    "template_reference": {
-                                        "name": "action",
-                                        "value": "challenges\\counter_actions\\change_named_counter"
-                                    },
-                                    "op": "Set",
-                                    "name": "kill_vehicle",
-                                    "amount": 0.0
-                                }
-                            },
-                            {
-                                "action": {
-                                    "template_reference": {
-                                        "name": "action",
-                                        "value": "challenges\\counter_actions\\complete_challenge"
-                                    }
-                                }
-                            }
-                        ]
-                    }
+                "counter_instance": {
+                    "instance_reference": "challenges/counters/counter_instance/kill_enemy_vehicle"
                 }
             }
         ],

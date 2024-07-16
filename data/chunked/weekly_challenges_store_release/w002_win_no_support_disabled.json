@@ -72,10 +72,9 @@
                                 "requirement": {
                                     "template_reference": {
                                         "name": "requirement",
-                                        "value": "challenges\\requirement"
+                                        "value": "challenges\\boolean_requirement"
                                     },
                                     "operator": "and",
-                                    "values": [],
                                     "requirements": []
                                 },
                                 "actions": [
@@ -100,9 +99,9 @@
                         "requirement": {
                             "template_reference": {
                                 "name": "requirement",
-                                "value": "challenges\\requirement"
+                                "value": "challenges\\values_requirement"
                             },
-                            "operator": "and",
+                            "operator": "equal",
                             "values": [
                                 {
                                     "value_requirement": {
@@ -122,8 +121,7 @@
                                         "value": 1.0
                                     }
                                 }
-                            ],
-                            "requirements": []
+                            ]
                         },
                         "actions": [
                             {
@@ -155,7 +153,8 @@
                                 }
                             }
                         ]
-                    }
+                    },
+                    "persistence_type": "None"
                 }
             }
         ],

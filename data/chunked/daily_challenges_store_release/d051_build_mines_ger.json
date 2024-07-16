@@ -25,7 +25,7 @@
                     "requirement": {
                         "template_reference": {
                             "name": "requirement",
-                            "value": "challenges\\requirement"
+                            "value": "challenges\\values_requirement"
                         },
                         "operator": "equal",
                         "values": [
@@ -48,15 +48,14 @@
                                     }
                                 }
                             }
-                        ],
-                        "requirements": []
+                        ]
                     }
                 },
                 {
                     "requirement": {
                         "template_reference": {
                             "name": "requirement",
-                            "value": "challenges\\requirement"
+                            "value": "challenges\\values_requirement"
                         },
                         "operator": "not",
                         "values": [
@@ -79,8 +78,7 @@
                                     }
                                 }
                             }
-                        ],
-                        "requirements": []
+                        ]
                     }
                 },
                 {
@@ -134,37 +132,15 @@
                                 "requirement": {
                                     "template_reference": {
                                         "name": "requirement",
-                                        "value": "challenges\\requirement"
+                                        "value": "challenges\\boolean_requirement"
                                     },
                                     "operator": "and",
-                                    "values": [
-                                        {
-                                            "value_requirement": {
-                                                "template_reference": {
-                                                    "name": "value_requirement",
-                                                    "value": "challenges\\requirement_values\\dynamic\\squadtype"
-                                                },
-                                                "value": "Source"
-                                            }
-                                        },
-                                        {
-                                            "value_requirement": {
-                                                "template_reference": {
-                                                    "name": "value_requirement",
-                                                    "value": "challenges\\requirement_values\\constant\\squadtype"
-                                                },
-                                                "value": {
-                                                    "instance_reference": "sbps/races/german/vehicles/halftrack_ger"
-                                                }
-                                            }
-                                        }
-                                    ],
                                     "requirements": [
                                         {
                                             "requirement": {
                                                 "template_reference": {
                                                     "name": "requirement",
-                                                    "value": "challenges\\requirement"
+                                                    "value": "challenges\\values_requirement"
                                                 },
                                                 "operator": "equal",
                                                 "values": [
@@ -188,19 +164,38 @@
                                                             }
                                                         }
                                                     }
-                                                ],
-                                                "requirements": []
+                                                ]
                                             }
                                         },
                                         {
                                             "requirement": {
                                                 "template_reference": {
                                                     "name": "requirement",
-                                                    "value": "challenges\\requirement"
+                                                    "value": "challenges\\values_requirement"
                                                 },
-                                                "operator": "and",
-                                                "values": [],
-                                                "requirements": []
+                                                "operator": "equal",
+                                                "values": [
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\dynamic\\squadtype"
+                                                            },
+                                                            "value": "Source"
+                                                        }
+                                                    },
+                                                    {
+                                                        "value_requirement": {
+                                                            "template_reference": {
+                                                                "name": "value_requirement",
+                                                                "value": "challenges\\requirement_values\\constant\\squadtype"
+                                                            },
+                                                            "value": {
+                                                                "instance_reference": "sbps/races/german/vehicles/halftrack_ger"
+                                                            }
+                                                        }
+                                                    }
+                                                ]
                                             }
                                         }
                                     ]
@@ -235,7 +230,7 @@
                         "requirement": {
                             "template_reference": {
                                 "name": "requirement",
-                                "value": "challenges\\requirement"
+                                "value": "challenges\\values_requirement"
                             },
                             "operator": "greaterthanequal",
                             "values": [
@@ -257,8 +252,7 @@
                                         "value": 3.0
                                     }
                                 }
-                            ],
-                            "requirements": []
+                            ]
                         },
                         "actions": [
                             {
@@ -272,7 +266,8 @@
                                 }
                             }
                         ]
-                    }
+                    },
+                    "persistence_type": "None"
                 }
             }
         ],

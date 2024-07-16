@@ -40,6 +40,813 @@
             }
         },
         "defensive": {
+            "demolition_charge_parent": {
+                "extensions": [
+                    {
+                        "exts": {
+                            "template_reference": {
+                                "name": "exts",
+                                "value": "ebpextensions\\line_of_sight_ext"
+                            },
+                            "blocking_box": {
+                                "x": 0.01,
+                                "y": 0.01,
+                                "z": 0.01
+                            },
+                            "is_shot_blocking": "False",
+                            "use_blocking_box": "False",
+                            "reveal_center_when_outside_is_visible": "True",
+                            "does_block_line_of_sight": "Never",
+                            "disable_shot_blocking_on_death": "False",
+                            "blocks_ground_targeting_if_shot_block": "False"
+                        }
+                    },
+                    {
+                        "exts": {
+                            "template_reference": {
+                                "name": "exts",
+                                "value": "ebpextensions\\type_ext"
+                            },
+                            "weapon_targeting": "manual_only",
+                            "intersection_testing": "False",
+                            "unit_type_list": [
+                                {
+                                    "unit_type": "demolition_charge"
+                                },
+                                {
+                                    "unit_type": "defence_building"
+                                }
+                            ],
+                            "race_type_list": [],
+                            "attack_target_restriction_on_attacker": [],
+                            "attack_target_restriction_on_victim": [],
+                            "weapon_category_targeting_filter": {
+                                "1melee": "True",
+                                "2ranged": "True",
+                                "3siege": "True",
+                                "4charge": "True",
+                                "5brace": "True",
+                                "6auto_ability_cast": "True",
+                                "7single_cast_ability": "True",
+                                "8dummy": "True"
+                            }
+                        }
+                    },
+                    {
+                        "exts": {
+                            "template_reference": {
+                                "name": "exts",
+                                "value": "ebpextensions\\construction_ext"
+                            },
+                            "automatic_fit_on_placement": "True",
+                            "cancel_refund_percentage": 100.0,
+                            "construction_state_name": "Mine_Lay_State",
+                            "construction_transition_time": 1.36666,
+                            "force_construction": "False",
+                            "max_engineers": 1.0,
+                            "on_construction_squad": {
+                                "instance_reference": ""
+                            },
+                            "orientation": 0.0,
+                            "placement_type": "tp_fence",
+                            "prefer_spots_on_side_with_leader": "False",
+                            "query_abilities_for_range_ui": "False",
+                            "random_rotation": "False",
+                            "replace_ghost_distance": 5.0,
+                            "self_construct": "False",
+                            "field_placement_info": {
+                                "border_entity": {
+                                    "instance_reference": ""
+                                },
+                                "replace_entity": {
+                                    "instance_reference": ""
+                                },
+                                "replace_count": 0.0,
+                                "replace_retry_distance": 0.0
+                            },
+                            "placement_valid": {
+                                "instance_reference": ""
+                            },
+                            "placement_invalid": {
+                                "instance_reference": "ui_rectangle/construction_placement_invalid"
+                            },
+                            "ui_range": {
+                                "instance_reference": "ui_reticule/ability_range_default"
+                            },
+                            "ui_range_radius": 3.75,
+                            "ui_setfacing": {
+                                "instance_reference": ""
+                            },
+                            "query_weapon_for_range_ui": "False",
+                            "squad_ignore_pathfinding": "False",
+                            "placement_requirements": {
+                                "must_be_in_line_of_sight": "False",
+                                "must_not_be_in_walkable_surfaces": "False",
+                                "must_be_on_strategic_point": "False",
+                                "requirements": [],
+                                "spacing_distance": 0.0,
+                                "skip_impass_checks_and_ignore_immovable_entities": "False",
+                                "state_tree_conditions": "",
+                                "must_be_in_explored_area": "False",
+                                "must_be_on_movement_node": "False",
+                                "placement_requirement_options": [],
+                                "ui_usage_txt": {
+                                    "locstring": {
+                                        "name": "ui_usage_txt",
+                                        "value": "0"
+                                    }
+                                }
+                            },
+                            "can_be_cancelled": "True",
+                            "construction_health_option": {
+                                "template_reference": {
+                                    "name": "construction_health_option",
+                                    "value": "options\\none"
+                                }
+                            },
+                            "min_music_intensity": 0.0,
+                            "tooltip_data_template": "",
+                            "placement_set_facing_style": "disabled",
+                            "facing_quadrants": {
+                                "search_radius_metres": 0.0,
+                                "radius_metres": 0.0,
+                                "quadrants": {
+                                    "front": "None",
+                                    "rear": "None",
+                                    "left": "None",
+                                    "right": "None"
+                                }
+                            },
+                            "facing_surface_normal": "True",
+                            "fixed_rotation_impass_avoidance": {
+                                "minimum_search_radius_cells": 5.0,
+                                "use_impass_avoidance": "False"
+                            },
+                            "on_construction_complete_state_tree_refs": {
+                                "on_construction_complete_entity_state_tree_ref": "",
+                                "on_construction_complete_physical_state_tree_ref": "",
+                                "on_construction_complete_squad_state_tree_ref": "",
+                                "on_construction_plan_complete_global_state_tree_ref": "",
+                                "while_construction_complete_entity_state_tree_ref": "",
+                                "while_construction_complete_physical_state_tree_ref": ""
+                            },
+                            "can_be_cancelled_state_tree_conditions": "",
+                            "query_movement_node_modifier_for_range_ui": "False",
+                            "construction_site_erase_inactive": "True",
+                            "entity_placement_class": "",
+                            "show_ability_range_in_construction_item_preview": "False",
+                            "preview_upgrade_effects": {
+                                "statemachine_key": "",
+                                "on_key": "",
+                                "off_key": "",
+                                "unit_type": "",
+                                "reticule": {
+                                    "instance_reference": ""
+                                },
+                                "reticule_radius": 0.0,
+                                "area_info": {
+                                    "template_reference": {
+                                        "name": "area_info",
+                                        "value": ""
+                                    }
+                                }
+                            },
+                            "placement_position_ignores_walkable_surfaces": "False",
+                            "construction_site_erase_inactive_in_progress": "True",
+                            "max_fence_placement_count": 1.0,
+                            "placement_weapon": {
+                                "instance_reference": ""
+                            },
+                            "started_and_inactive_max_duration_seconds": 5.0,
+                            "started_and_inactive_max_distance_from_builders": 10.0,
+                            "too_light_to_destroy_built_over_entities": "True",
+                            "default_facing_mode": "towards_enemy_base"
+                        }
+                    },
+                    {
+                        "exts": {
+                            "template_reference": {
+                                "name": "exts",
+                                "value": "ebpextensions\\ui_ext"
+                            },
+                            "ap_killed_kicker": "True",
+                            "ap_loss_kicker": "True",
+                            "extra_text_deprecated": "",
+                            "ghost_enable": "False",
+                            "help_text": {
+                                "locstring": {
+                                    "name": "help_text",
+                                    "value": "11235481"
+                                }
+                            },
+                            "hotkey_name": "R",
+                            "kill_type": "",
+                            "minimap_enable": "False",
+                            "minimap_team_only": "False",
+                            "minimap_teamcolor": "False",
+                            "overlay_name": "",
+                            "reveal_for_decryption": "False",
+                            "screen_name": {
+                                "locstring": {
+                                    "name": "screen_name",
+                                    "value": "11235458"
+                                }
+                            },
+                            "selection_name": "mine",
+                            "selection_scale": 1.0,
+                            "selection_type": "single_entity_select",
+                            "tooltip_txt": {
+                                "locstring": {
+                                    "name": "tooltip_txt",
+                                    "value": "0"
+                                }
+                            },
+                            "ui_priority": 0.0,
+                            "minimap_icon_scale": 1.0,
+                            "brief_text": {
+                                "locstring": {
+                                    "name": "brief_text",
+                                    "value": "11265123"
+                                }
+                            },
+                            "extra_text": {
+                                "locstring": {
+                                    "name": "extra_text",
+                                    "value": "11250961"
+                                }
+                            },
+                            "screen_name_short": {
+                                "locstring": {
+                                    "name": "screen_name_short",
+                                    "value": "0"
+                                }
+                            },
+                            "show_in_build_log": "False",
+                            "show_entity_appearance": "True",
+                            "screen_name_world": {
+                                "locstring": {
+                                    "name": "screen_name_world",
+                                    "value": "0"
+                                }
+                            },
+                            "help_text_world": {
+                                "locstring": {
+                                    "name": "help_text_world",
+                                    "value": "0"
+                                }
+                            },
+                            "extra_text_world": {
+                                "locstring": {
+                                    "name": "extra_text_world",
+                                    "value": "0"
+                                }
+                            },
+                            "map_rotation_type_override": "no_override",
+                            "occlusion_state": "can_be_occluded",
+                            "decorator_visibility": "visible",
+                            "skin_pack_override": "False",
+                            "skin_summer": "",
+                            "skin_winter": "",
+                            "decorator_height": -1.0,
+                            "icon_name": "races/common/abilities/democharge_icon",
+                            "minimap_color": "*",
+                            "minimap_icon": "",
+                            "symbol_icon_name": "",
+                            "targeting_and_bandbox_selection_priority": "highest",
+                            "selection_method": "terrain_obb_mesh",
+                            "terrain_info_display_offset": {
+                                "x": 0.0,
+                                "y": 0.0
+                            },
+                            "decorator_ledger_key": "",
+                            "decorator_ledger_bar_style": {
+                                "instance_reference": ""
+                            },
+                            "selection_name_squad_override": "",
+                            "selection_grouping_ledger_key": "",
+                            "debug_text": "",
+                            "selection_datatemplate": "",
+                            "use_construction_range_on_selection": "True",
+                            "use_combat_range_on_selection": "False",
+                            "is_armoured": "False",
+                            "decorator_data_template": "",
+                            "ui_combine_type": "intersection",
+                            "spotted_on_spawn": "False",
+                            "district_info": {
+                                "instance_reference": ""
+                            },
+                            "force_facing_and_range_visual_to_center_on_entity": "False",
+                            "is_unique_to_race": "False",
+                            "kicker_offset": 0.0,
+                            "portrait_name": "races/common/abilities/democharge_portrait",
+                            "selection_secondary_bounds_scale": {
+                                "x": 1.0,
+                                "y": 1.0,
+                                "z": 1.0
+                            },
+                            "decorator": "EntityDemolitionCharge",
+                            "map_layer": 0.0,
+                            "map_mark": "",
+                            "portrait_icon": "",
+                            "ui_codex_info": {
+                                "priority": 0.0,
+                                "exclusive": "False",
+                                "ui_position": {
+                                    "ui_position_column": -1.0,
+                                    "ui_position_row": -1.0
+                                }
+                            },
+                            "custom_selection_obbs": [],
+                            "ui_extra_infos": [],
+                            "screen_name_visibility": "visible",
+                            "help_text_formatter": {
+                                "template_reference": {
+                                    "name": "help_text_formatter",
+                                    "value": ""
+                                }
+                            },
+                            "extra_text_formatter": {
+                                "template_reference": {
+                                    "name": "extra_text_formatter",
+                                    "value": ""
+                                }
+                            },
+                            "extra_text_world_formatter": {
+                                "template_reference": {
+                                    "name": "extra_text_world_formatter",
+                                    "value": ""
+                                }
+                            },
+                            "help_text_world_formatter": {
+                                "template_reference": {
+                                    "name": "help_text_world_formatter",
+                                    "value": ""
+                                }
+                            },
+                            "screen_name_formatter": {
+                                "template_reference": {
+                                    "name": "screen_name_formatter",
+                                    "value": ""
+                                }
+                            },
+                            "screen_name_short_formatter": {
+                                "template_reference": {
+                                    "name": "screen_name_short_formatter",
+                                    "value": ""
+                                }
+                            },
+                            "screen_name_world_formatter": {
+                                "template_reference": {
+                                    "name": "screen_name_world_formatter",
+                                    "value": ""
+                                }
+                            },
+                            "brief_text_formatter": {
+                                "template_reference": {
+                                    "name": "brief_text_formatter",
+                                    "value": ""
+                                }
+                            },
+                            "sound": "",
+                            "sound_alternative": "",
+                            "telemetry_name": "",
+                            "selectable_in_non_interactive_area": "True",
+                            "selection_obb_size": {
+                                "x": 1.0,
+                                "y": 1.0,
+                                "z": 1.0
+                            },
+                            "target_selection_priority_by_owner": "none",
+                            "turn_in_place_distance": 0.0,
+                            "bandbox_selection_priority_override": "lowest"
+                        }
+                    },
+                    {
+                        "exts": {
+                            "template_reference": {
+                                "name": "exts",
+                                "value": "ebpextensions\\cost_ext"
+                            },
+                            "time_cost": {
+                                "cost": {
+                                    "action": 0.0,
+                                    "command": 0.0,
+                                    "popcap": 0.0,
+                                    "fuel": 0.0,
+                                    "munition": 50.0,
+                                    "manpower": 0.0,
+                                    "requisition": 0.0,
+                                    "ultimate": 0.0
+                                },
+                                "time_seconds": 10.0,
+                                "time_turns": 0.0,
+                                "builder_cost": {
+                                    "action_points": 0.0
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "exts": {
+                            "template_reference": {
+                                "name": "exts",
+                                "value": "ebpextensions\\camouflage_ext"
+                            },
+                            "attack_priority": 0.0,
+                            "camouflage_type": "tp_democharge",
+                            "chain_revealer": "False",
+                            "detection_radius": 12.5,
+                            "must_be_fully_constructed": "False",
+                            "permanently_activated": "True",
+                            "combat_reset_time": 5.0,
+                            "first_strike_shots": 1.0,
+                            "revert_max": 10.0,
+                            "revert_multiplier": 2.0,
+                            "revert_time": 5.0,
+                            "revert_time_on_detection": 10.0,
+                            "camouflaged_combat_stance": "cease_fire",
+                            "camouflage_action_tree": {
+                                "template_reference": {
+                                    "name": "camouflage_action_tree",
+                                    "value": "state_tree_reference_info"
+                                },
+                                "ActionTree_OpeningBranch": ""
+                            },
+                            "first_strike_tree": {
+                                "template_reference": {
+                                    "name": "first_strike_tree",
+                                    "value": "state_tree_reference_info"
+                                },
+                                "ActionTree_OpeningBranch": ""
+                            },
+                            "on_observed_by_detector_tree": {
+                                "template_reference": {
+                                    "name": "on_observed_by_detector_tree",
+                                    "value": "state_tree_reference_info"
+                                },
+                                "ActionTree_OpeningBranch": "demo_charge_us\\detection_behaviour\\on_detected"
+                            },
+                            "on_observed_wear_off_seconds": 2.0
+                        }
+                    },
+                    {
+                        "exts": {
+                            "template_reference": {
+                                "name": "exts",
+                                "value": "ebpextensions\\combat_ext"
+                            },
+                            "reject_attack_command": "False",
+                            "hardpoints": [
+                                {
+                                    "hardpoint": {
+                                        "parent_hardpoint": -1.0,
+                                        "weapon_table": [
+                                            {
+                                                "weapon": {
+                                                    "heading": {
+                                                        "x": 0.0,
+                                                        "y": 0.0,
+                                                        "z": 1.0
+                                                    },
+                                                    "length": 0.0,
+                                                    "origin": {
+                                                        "x": 0.0,
+                                                        "y": 0.5,
+                                                        "z": 0.0
+                                                    },
+                                                    "type": "default",
+                                                    "weapon_entity_attachment": {
+                                                        "template_reference": {
+                                                            "name": "weapon_entity_attachment",
+                                                            "value": "options\\attachment_types\\entity_create_attachment"
+                                                        },
+                                                        "entity_attach_data": {
+                                                            "template_reference": {
+                                                                "name": "entity_attach_data",
+                                                                "value": "attachments\\attach_data_entity"
+                                                            },
+                                                            "attach_data": {
+                                                                "template_reference": {
+                                                                    "name": "attach_data",
+                                                                    "value": "attachments\\attach_data"
+                                                                },
+                                                                "marker_name_parent": "",
+                                                                "parent_rigidbody_target_name": "",
+                                                                "game_object_attachment_type": "scenegraph"
+                                                            },
+                                                            "ebp": {
+                                                                "instance_reference": "ebps/races/american/weapons/explosive_weapons/grenade/w_timed_demo_charge_devils_brigade_us"
+                                                            },
+                                                            "attachment_flags": {
+                                                                "sim_only": "False",
+                                                                "no_pathfinding": "True",
+                                                                "not_snappable": "False",
+                                                                "restore_snap_to_ground_on_detach": "False",
+                                                                "no_sim_update": "False",
+                                                                "join_parent_squad": "False",
+                                                                "redirect_damage_to_parent_entity": "True",
+                                                                "receive_parent_animations": "False",
+                                                                "receive_parent_death": "False"
+                                                            }
+                                                        }
+                                                    },
+                                                    "non_entity_weapon_wrapper": {
+                                                        "template_reference": {
+                                                            "name": "non_entity_weapon_wrapper",
+                                                            "value": ""
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "receives_attack_commands": "False",
+                                        "base_marker": "",
+                                        "preferred_inventory_item_categories": [],
+                                        "firing_offset_markers": [],
+                                        "offhand_marker": "",
+                                        "initialize_weapons_on_creation": "True"
+                                    }
+                                }
+                            ],
+                            "sight_hardpoint": -1.0,
+                            "block_frontal_arc": 0.0,
+                            "attack_move": {
+                                "attack_move_targeting_range": 30.0,
+                                "attack_move_priority_per_distance_meter": -1.0
+                            },
+                            "idle_targeting": {
+                                "idle_priority_per_angle_degree": -1.5,
+                                "idle_priority_per_distance_meter": -1.0,
+                                "idle_targeting_range": 15.0,
+                                "idle_priority_per_distance_unit_angle_multiplier": 0.0
+                            },
+                            "kill_action_tree": {
+                                "template_reference": {
+                                    "name": "kill_action_tree",
+                                    "value": "state_tree_reference_info"
+                                },
+                                "ActionTree_OpeningBranch": "demo_charge_us_global\\explode"
+                            },
+                            "combat_choice_tree": "",
+                            "block_melee_blocks_per_sequence": 0.0,
+                            "block_melee_incoming_attack_sequence_length": 1.0,
+                            "block_ranged_blocks_per_sequence": 0.0,
+                            "block_ranged_incoming_attack_sequence_length": 1.0,
+                            "block_projectile_incoming_attack_sequence_length": 1.0,
+                            "block_projectile_blocks_per_sequence": 0.0,
+                            "unequip_weapons_on_death": "True",
+                            "scan_interval_cached_target_invalid": 2.0,
+                            "scan_interval_cached_target_valid": 2.0,
+                            "combat_scan_intervals": {
+                                "attack_move_scan_intervals": {
+                                    "interval_with_invalid_target": 1.0,
+                                    "interval_with_valid_target": 2.0,
+                                    "interval_with_valid_target_frequent": 0.5,
+                                    "frequent_scan_radius": 0.0
+                                },
+                                "forced_engagement_scan_intervals": {
+                                    "interval_with_invalid_target": 0.375,
+                                    "interval_with_valid_target": 2.0
+                                },
+                                "idle_scan_intervals": {
+                                    "interval_with_invalid_target": 1.0,
+                                    "interval_with_valid_target": 2.0,
+                                    "interval_with_valid_target_frequent": 0.5,
+                                    "frequent_scan_radius": 0.0
+                                }
+                            },
+                            "ui_show_most_progressed_weapon_reload": "False"
+                        }
+                    },
+                    {
+                        "exts": {
+                            "template_reference": {
+                                "name": "exts",
+                                "value": "ebpextensions\\health_ext"
+                            },
+                            "can_repair": "False",
+                            "cuttable": "False",
+                            "death_event_name": "Death",
+                            "death_seconds": 1.0,
+                            "delete_when_dead": "True",
+                            "force_attacker_memory": "False",
+                            "hitpoints": 20.0,
+                            "is_invincible": "False",
+                            "is_salvagable_wreck": "False",
+                            "rebuilt_entity": {
+                                "instance_reference": ""
+                            },
+                            "rebuilt_squad": {
+                                "instance_reference": ""
+                            },
+                            "rebuilt_use_wreck_owner": "False",
+                            "receive_weapon_cover_modifiers": "False",
+                            "regeneration": 0.0,
+                            "regeneration_disabled": "True",
+                            "remove_from_pathfinding_on_death": "True",
+                            "reveal_to_all_on_death": "False",
+                            "ui_can_scuttle": "True",
+                            "target_size": 1.0,
+                            "weapon_priority": 0.0,
+                            "wreck_entity_option": {
+                                "template_reference": {
+                                    "name": "wreck_entity_option",
+                                    "value": "options\\none"
+                                }
+                            },
+                            "armor_type": "None",
+                            "armor_layout_option": {
+                                "template_reference": {
+                                    "name": "armor_layout_option",
+                                    "value": "options\\ebpextensions\\healthext\\armor_layouts\\armor_layout_uniform"
+                                },
+                                "armor": 1.0
+                            },
+                            "allegiance_override": "none",
+                            "not_default_attackable": "False",
+                            "armor_scaler_by_damage_type": {
+                                "True Damage": 1.0,
+                                "flame": 1.0,
+                                "ballistic": 1.0,
+                                "explosive": 1.0
+                            },
+                            "self_destruct_action_tree": {
+                                "template_reference": {
+                                    "name": "self_destruct_action_tree",
+                                    "value": "state_tree_reference_info"
+                                },
+                                "ActionTree_OpeningBranch": ""
+                            },
+                            "rebuilt_entity_action_tree": {
+                                "template_reference": {
+                                    "name": "rebuilt_entity_action_tree",
+                                    "value": "state_tree_reference_info"
+                                },
+                                "ActionTree_OpeningBranch": ""
+                            },
+                            "on_received_damage_action_tree": {
+                                "template_reference": {
+                                    "name": "on_received_damage_action_tree",
+                                    "value": "state_tree_reference_info"
+                                },
+                                "ActionTree_OpeningBranch": ""
+                            },
+                            "death_action_tree": "",
+                            "can_be_damaged_by_ally": "True",
+                            "on_reach_invulnerable_min_cap_entity_state_tree_ref": "",
+                            "on_reach_max_health_entity_state_tree_ref": "",
+                            "restore_hook_offsets": [],
+                            "can_be_restored": "False",
+                            "can_be_damaged_by_ally_default_attack_allowed": "False"
+                        }
+                    },
+                    {
+                        "exts": {
+                            "template_reference": {
+                                "name": "exts",
+                                "value": "ebpextensions\\mine_ext"
+                            },
+                            "defuse_seconds": 2.0,
+                            "detonate_radius": 3.5,
+                            "initial_delay_seconds": 2.5,
+                            "trigger_type": "",
+                            "detonate_on_death": "True",
+                            "accept_target_conditions": "weapon_queries\\global_library\\mine_target_query"
+                        }
+                    },
+                    {
+                        "exts": {
+                            "template_reference": {
+                                "name": "exts",
+                                "value": "ebpextensions\\sight_ext"
+                            },
+                            "detect_camouflage": {
+                                "tp_global": -1.0,
+                                "tp_mine": -1.0,
+                                "tp_unit": -1.0,
+                                "tp_democharge": -1.0
+                            },
+                            "extended_sight": "False",
+                            "extended_sight_radius": 70.0,
+                            "reveal_area_on_death_time": 1.5,
+                            "sight_package": {
+                                "inner_height": 0.0,
+                                "inner_radius": 0.0,
+                                "outer_height": 0.0,
+                                "outer_radius": 0.0,
+                                "cone_angle": 360.0,
+                                "cone_start_radius": 0.0
+                            },
+                            "specific_detector_actions": [],
+                            "vertical_truesight": {
+                                "enable": "True",
+                                "tolerance": 1.0,
+                                "eye_height": 2.5
+                            },
+                            "camouflage_detection_enabled": "True",
+                            "blockers_check_bounding_box": "True",
+                            "reveal_area_on_death_radius": 0.0,
+                            "camouflage_detection_respects_fog_of_war_vision": "True",
+                            "camouflage_detection_respects_shot_blockers": "True"
+                        }
+                    },
+                    {
+                        "exts": {
+                            "template_reference": {
+                                "name": "exts",
+                                "value": "ebpextensions\\explosion_ext"
+                            },
+                            "terrain_hit": {
+                                "chance_splat_only": 0.0,
+                                "cover_type": "tp_defcover",
+                                "deformation": {
+                                    "deform_decal_file": "",
+                                    "limited": "True",
+                                    "random_rotation": "False",
+                                    "rotation": 0.0,
+                                    "splat_list": [],
+                                    "vertical_scale": 0.0,
+                                    "deform_type": "tp_additive"
+                                },
+                                "radius_max": 7.0,
+                                "radius_min": 6.5,
+                                "splat_only_splat_seconds": 0.0,
+                                "splat_only_splats": []
+                            },
+                            "area_over_time_option": {
+                                "template_reference": {
+                                    "name": "area_over_time_option",
+                                    "value": "options\\none"
+                                }
+                            },
+                            "on_detonate_action_tree": {
+                                "template_reference": {
+                                    "name": "on_detonate_action_tree",
+                                    "value": "state_tree_reference_info"
+                                },
+                                "ActionTree_OpeningBranch": "demo_charge_us\\explosion_warning\\demo_charge_explosion"
+                            },
+                            "on_absorbed_action_tree": {
+                                "template_reference": {
+                                    "name": "on_absorbed_action_tree",
+                                    "value": "state_tree_reference_info"
+                                },
+                                "ActionTree_OpeningBranch": ""
+                            },
+                            "can_hit_targets_outside_interactive_area": "False"
+                        }
+                    },
+                    {
+                        "exts": {
+                            "template_reference": {
+                                "name": "exts",
+                                "value": "ebpextensions\\demolition_charge_ext"
+                            },
+                            "booby_trap_enabled": "False",
+                            "booby_trap_target_action_tree": {
+                                "template_reference": {
+                                    "name": "booby_trap_target_action_tree",
+                                    "value": "state_tree_reference_info"
+                                },
+                                "ActionTree_OpeningBranch": ""
+                            },
+                            "death_delay_seconds": 20.0,
+                            "detect_type": "mine",
+                            "detected_action_tree": {
+                                "template_reference": {
+                                    "name": "detected_action_tree",
+                                    "value": "state_tree_reference_info"
+                                },
+                                "ActionTree_OpeningBranch": ""
+                            },
+                            "detonation_delay_seconds": 0.0,
+                            "explosion_action_tree": {
+                                "template_reference": {
+                                    "name": "explosion_action_tree",
+                                    "value": "state_tree_reference_info"
+                                },
+                                "ActionTree_OpeningBranch": "demo_charge_us_global\\explode"
+                            },
+                            "explosions_max": 4.0,
+                            "explosions_min": 1.0,
+                            "explosions_stagger_time": 2.0,
+                            "is_auto_detonate": "False",
+                            "triggered_action_tree": {
+                                "template_reference": {
+                                    "name": "triggered_action_tree",
+                                    "value": "state_tree_reference_info"
+                                },
+                                "ActionTree_OpeningBranch": ""
+                            },
+                            "entity_decorator_needed_to_allow_detonate": "EntityDemolitionCharge"
+                        }
+                    }
+                ],
+                "pbgid": 2162929.0,
+                "parent_pbg": {
+                    "instance_reference": "ebps/races/common/buildings/defensive/mine_parent"
+                }
+            },
             "mine_parent": {
                 "extensions": [
                     {
@@ -478,7 +1285,15 @@
                                     "value": "state_tree_reference_info"
                                 },
                                 "ActionTree_OpeningBranch": ""
-                            }
+                            },
+                            "on_observed_by_detector_tree": {
+                                "template_reference": {
+                                    "name": "on_observed_by_detector_tree",
+                                    "value": "state_tree_reference_info"
+                                },
+                                "ActionTree_OpeningBranch": ""
+                            },
+                            "on_observed_wear_off_seconds": 2.0
                         }
                     },
                     {
@@ -688,7 +1503,8 @@
                             "on_reach_invulnerable_min_cap_entity_state_tree_ref": "",
                             "on_reach_max_health_entity_state_tree_ref": "",
                             "restore_hook_offsets": [],
-                            "can_be_restored": "False"
+                            "can_be_restored": "False",
+                            "can_be_damaged_by_ally_default_attack_allowed": "True"
                         }
                     },
                     {
@@ -714,7 +1530,8 @@
                             "detect_camouflage": {
                                 "tp_global": -1.0,
                                 "tp_mine": -1.0,
-                                "tp_unit": -1.0
+                                "tp_unit": -1.0,
+                                "tp_democharge": -1.0
                             },
                             "extended_sight": "False",
                             "extended_sight_radius": 70.0,
@@ -736,7 +1553,8 @@
                             "camouflage_detection_enabled": "True",
                             "blockers_check_bounding_box": "True",
                             "reveal_area_on_death_radius": 0.0,
-                            "camouflage_detection_respects_sight_blockers": "True"
+                            "camouflage_detection_respects_fog_of_war_vision": "True",
+                            "camouflage_detection_respects_shot_blockers": "True"
                         }
                     },
                     {
@@ -911,7 +1729,7 @@
                             "brief_text": {
                                 "locstring": {
                                     "name": "brief_text",
-                                    "value": "11235526"
+                                    "value": "11265105"
                                 }
                             },
                             "extra_text": {
@@ -1158,7 +1976,8 @@
                             "on_reach_invulnerable_min_cap_entity_state_tree_ref": "",
                             "on_reach_max_health_entity_state_tree_ref": "",
                             "restore_hook_offsets": [],
-                            "can_be_restored": "False"
+                            "can_be_restored": "False",
+                            "can_be_damaged_by_ally_default_attack_allowed": "True"
                         }
                     },
                     {
@@ -1426,7 +2245,8 @@
                             "detect_camouflage": {
                                 "tp_global": 3.0,
                                 "tp_mine": -1.0,
-                                "tp_unit": -1.0
+                                "tp_unit": -1.0,
+                                "tp_democharge": -1.0
                             },
                             "extended_sight": "False",
                             "extended_sight_radius": 70.0,
@@ -1448,7 +2268,8 @@
                             "camouflage_detection_enabled": "True",
                             "blockers_check_bounding_box": "True",
                             "reveal_area_on_death_radius": 0.0,
-                            "camouflage_detection_respects_sight_blockers": "True"
+                            "camouflage_detection_respects_fog_of_war_vision": "True",
+                            "camouflage_detection_respects_shot_blockers": "True"
                         }
                     },
                     {
@@ -1507,6 +2328,41 @@
                                 }
                             },
                             "ui_show_most_progressed_weapon_reload": "False"
+                        }
+                    },
+                    {
+                        "exts": {
+                            "template_reference": {
+                                "name": "exts",
+                                "value": "ebpextensions\\ability_ext"
+                            },
+                            "abilities": [
+                                {
+                                    "ability": {
+                                        "instance_reference": "abilities/races/common/buildings/retreat_point_mobile_toggle_ui_31_upgrade"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "exts": {
+                            "template_reference": {
+                                "name": "exts",
+                                "value": "ebpextensions\\upgrade_ext"
+                            },
+                            "max_queue_size_override": -1.0,
+                            "must_be_in_supply": "True",
+                            "number_of_standard_slots": -1.0,
+                            "production_item_completed_openingbranch": "",
+                            "shared_team_production": "False",
+                            "standard_upgrades": [
+                                {
+                                    "upgrade": {
+                                        "instance_reference": "upgrade/common/buildings/forward_retreat_point_common"
+                                    }
+                                }
+                            ]
                         }
                     }
                 ],
@@ -1898,7 +2754,8 @@
                         "on_reach_invulnerable_min_cap_entity_state_tree_ref": "",
                         "on_reach_max_health_entity_state_tree_ref": "",
                         "restore_hook_offsets": [],
-                        "can_be_restored": "False"
+                        "can_be_restored": "False",
+                        "can_be_damaged_by_ally_default_attack_allowed": "True"
                     }
                 },
                 {
@@ -2012,7 +2869,8 @@
                         "detect_camouflage": {
                             "tp_global": 12.5,
                             "tp_mine": -1.0,
-                            "tp_unit": -1.0
+                            "tp_unit": -1.0,
+                            "tp_democharge": -1.0
                         },
                         "extended_sight": "False",
                         "extended_sight_radius": 90.0,
@@ -2034,7 +2892,8 @@
                         "camouflage_detection_enabled": "True",
                         "blockers_check_bounding_box": "True",
                         "reveal_area_on_death_radius": 3.0,
-                        "camouflage_detection_respects_sight_blockers": "True"
+                        "camouflage_detection_respects_fog_of_war_vision": "True",
+                        "camouflage_detection_respects_shot_blockers": "True"
                     }
                 },
                 {
@@ -2340,7 +3199,15 @@
                                 "value": "state_tree_reference_info"
                             },
                             "ActionTree_OpeningBranch": ""
-                        }
+                        },
+                        "on_observed_by_detector_tree": {
+                            "template_reference": {
+                                "name": "on_observed_by_detector_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "on_observed_wear_off_seconds": 2.0
                     }
                 },
                 {
@@ -2652,7 +3519,8 @@
                             "on_reach_invulnerable_min_cap_entity_state_tree_ref": "",
                             "on_reach_max_health_entity_state_tree_ref": "",
                             "restore_hook_offsets": [],
-                            "can_be_restored": "False"
+                            "can_be_restored": "False",
+                            "can_be_damaged_by_ally_default_attack_allowed": "True"
                         }
                     },
                     {
@@ -2689,7 +3557,8 @@
                             "detect_camouflage": {
                                 "tp_global": 3.0,
                                 "tp_mine": -1.0,
-                                "tp_unit": -1.0
+                                "tp_unit": -1.0,
+                                "tp_democharge": -1.0
                             },
                             "extended_sight": "False",
                             "extended_sight_radius": 70.0,
@@ -2711,7 +3580,8 @@
                             "camouflage_detection_enabled": "True",
                             "blockers_check_bounding_box": "True",
                             "reveal_area_on_death_radius": 0.0,
-                            "camouflage_detection_respects_sight_blockers": "True"
+                            "camouflage_detection_respects_fog_of_war_vision": "True",
+                            "camouflage_detection_respects_shot_blockers": "True"
                         }
                     },
                     {
@@ -3101,7 +3971,8 @@
                             "unload_seconds_total": 2.0,
                             "unload_seconds_per_entity": 0.25,
                             "allow_allies_to_occupy": "False",
-                            "has_internal_entrances": "False"
+                            "has_internal_entrances": "False",
+                            "ignore_stationable_combat_slot_markers": "False"
                         }
                     },
                     {
@@ -3342,7 +4213,8 @@
                             "on_reach_invulnerable_min_cap_entity_state_tree_ref": "",
                             "on_reach_max_health_entity_state_tree_ref": "",
                             "restore_hook_offsets": [],
-                            "can_be_restored": "False"
+                            "can_be_restored": "False",
+                            "can_be_damaged_by_ally_default_attack_allowed": "True"
                         }
                     },
                     {
@@ -3379,7 +4251,8 @@
                             "detect_camouflage": {
                                 "tp_global": 10.0,
                                 "tp_mine": -1.0,
-                                "tp_unit": -1.0
+                                "tp_unit": -1.0,
+                                "tp_democharge": -1.0
                             },
                             "extended_sight": "False",
                             "extended_sight_radius": 70.0,
@@ -3401,7 +4274,8 @@
                             "camouflage_detection_enabled": "True",
                             "blockers_check_bounding_box": "True",
                             "reveal_area_on_death_radius": 0.0,
-                            "camouflage_detection_respects_sight_blockers": "True"
+                            "camouflage_detection_respects_fog_of_war_vision": "True",
+                            "camouflage_detection_respects_shot_blockers": "True"
                         }
                     },
                     {
@@ -4046,7 +4920,8 @@
                             "count_units_in_units": "True",
                             "unload_seconds_per_entity": 0.0,
                             "allow_allies_to_occupy": "False",
-                            "has_internal_entrances": "True"
+                            "has_internal_entrances": "True",
+                            "ignore_stationable_combat_slot_markers": "False"
                         }
                     },
                     {
@@ -4377,7 +5252,8 @@
                             "on_reach_invulnerable_min_cap_entity_state_tree_ref": "",
                             "on_reach_max_health_entity_state_tree_ref": "",
                             "restore_hook_offsets": [],
-                            "can_be_restored": "False"
+                            "can_be_restored": "False",
+                            "can_be_damaged_by_ally_default_attack_allowed": "True"
                         }
                     },
                     {
@@ -4414,7 +5290,8 @@
                             "detect_camouflage": {
                                 "tp_global": 10.0,
                                 "tp_mine": -1.0,
-                                "tp_unit": -1.0
+                                "tp_unit": -1.0,
+                                "tp_democharge": -1.0
                             },
                             "extended_sight": "False",
                             "extended_sight_radius": 70.0,
@@ -4436,7 +5313,8 @@
                             "camouflage_detection_enabled": "True",
                             "blockers_check_bounding_box": "True",
                             "reveal_area_on_death_radius": 0.0,
-                            "camouflage_detection_respects_sight_blockers": "True"
+                            "camouflage_detection_respects_fog_of_war_vision": "True",
+                            "camouflage_detection_respects_shot_blockers": "True"
                         }
                     },
                     {
@@ -5081,7 +5959,8 @@
                             "count_units_in_units": "True",
                             "unload_seconds_per_entity": 0.0,
                             "allow_allies_to_occupy": "False",
-                            "has_internal_entrances": "True"
+                            "has_internal_entrances": "True",
+                            "ignore_stationable_combat_slot_markers": "False"
                         }
                     },
                     {
@@ -5285,7 +6164,8 @@
                             "on_reach_invulnerable_min_cap_entity_state_tree_ref": "",
                             "on_reach_max_health_entity_state_tree_ref": "",
                             "restore_hook_offsets": [],
-                            "can_be_restored": "False"
+                            "can_be_restored": "False",
+                            "can_be_damaged_by_ally_default_attack_allowed": "True"
                         }
                     },
                     {
@@ -5322,7 +6202,8 @@
                             "detect_camouflage": {
                                 "tp_global": 10.0,
                                 "tp_mine": -1.0,
-                                "tp_unit": -1.0
+                                "tp_unit": -1.0,
+                                "tp_democharge": -1.0
                             },
                             "extended_sight": "False",
                             "extended_sight_radius": 70.0,
@@ -5344,7 +6225,8 @@
                             "camouflage_detection_enabled": "True",
                             "blockers_check_bounding_box": "True",
                             "reveal_area_on_death_radius": 0.0,
-                            "camouflage_detection_respects_sight_blockers": "True"
+                            "camouflage_detection_respects_fog_of_war_vision": "True",
+                            "camouflage_detection_respects_shot_blockers": "True"
                         }
                     },
                     {
@@ -5600,7 +6482,7 @@
                             },
                             "target_selection_priority_by_owner": "none",
                             "turn_in_place_distance": 0.0,
-                            "bandbox_selection_priority_override": "medium"
+                            "bandbox_selection_priority_override": ""
                         }
                     },
                     {
@@ -5706,11 +6588,11 @@
                                 "ignore_num_cells_worse_cost": 3.0,
                                 "with_cost_speed_multiplier": 0.4
                             },
-                            "direct_path_look_ahead_max_dist": 71.0,
+                            "direct_path_look_ahead_max_dist": 20.0,
                             "start_move_speed_option": {
                                 "template_reference": {
                                     "name": "start_move_speed_option",
-                                    "value": "options\\ebpextensions\\movingext\\start_move_speed_option"
+                                    "value": "options\\none"
                                 },
                                 "speed": "speed",
                                 "max_frame_ticks_from_stopped": 2.0,
@@ -6179,7 +7061,15 @@
                                     "value": "state_tree_reference_info"
                                 },
                                 "ActionTree_OpeningBranch": ""
-                            }
+                            },
+                            "on_observed_by_detector_tree": {
+                                "template_reference": {
+                                    "name": "on_observed_by_detector_tree",
+                                    "value": "state_tree_reference_info"
+                                },
+                                "ActionTree_OpeningBranch": ""
+                            },
+                            "on_observed_wear_off_seconds": 2.0
                         }
                     },
                     {
@@ -6708,7 +7598,9 @@
                             "count_units_in_units": "True",
                             "unload_seconds_total": 2.0,
                             "unload_seconds_per_entity": 0.0,
-                            "allow_allies_to_occupy": "False"
+                            "allow_allies_to_occupy": "False",
+                            "has_internal_entrances": "False",
+                            "ignore_stationable_combat_slot_markers": "False"
                         }
                     },
                     {
@@ -6879,7 +7771,8 @@
                         "on_reach_invulnerable_min_cap_entity_state_tree_ref": "",
                         "on_reach_max_health_entity_state_tree_ref": "",
                         "restore_hook_offsets": [],
-                        "can_be_restored": "False"
+                        "can_be_restored": "False",
+                        "can_be_damaged_by_ally_default_attack_allowed": "True"
                     }
                 },
                 {
@@ -6993,7 +7886,8 @@
                         "detect_camouflage": {
                             "tp_global": 12.5,
                             "tp_mine": -1.0,
-                            "tp_unit": -1.0
+                            "tp_unit": -1.0,
+                            "tp_democharge": -1.0
                         },
                         "extended_sight": "False",
                         "extended_sight_radius": 90.0,
@@ -7015,7 +7909,8 @@
                         "camouflage_detection_enabled": "True",
                         "blockers_check_bounding_box": "True",
                         "reveal_area_on_death_radius": 3.0,
-                        "camouflage_detection_respects_sight_blockers": "True"
+                        "camouflage_detection_respects_fog_of_war_vision": "True",
+                        "camouflage_detection_respects_shot_blockers": "True"
                     }
                 },
                 {
@@ -7321,7 +8216,15 @@
                                 "value": "state_tree_reference_info"
                             },
                             "ActionTree_OpeningBranch": ""
-                        }
+                        },
+                        "on_observed_by_detector_tree": {
+                            "template_reference": {
+                                "name": "on_observed_by_detector_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "on_observed_wear_off_seconds": 2.0
                     }
                 },
                 {
@@ -7501,7 +8404,8 @@
                         "on_reach_invulnerable_min_cap_entity_state_tree_ref": "",
                         "on_reach_max_health_entity_state_tree_ref": "",
                         "restore_hook_offsets": [],
-                        "can_be_restored": "False"
+                        "can_be_restored": "False",
+                        "can_be_damaged_by_ally_default_attack_allowed": "True"
                     }
                 },
                 {
@@ -7513,7 +8417,8 @@
                         "detect_camouflage": {
                             "tp_global": 10.0,
                             "tp_mine": -1.0,
-                            "tp_unit": -1.0
+                            "tp_unit": -1.0,
+                            "tp_democharge": -1.0
                         },
                         "extended_sight": "False",
                         "extended_sight_radius": 70.0,
@@ -7534,7 +8439,9 @@
                         },
                         "camouflage_detection_enabled": "True",
                         "blockers_check_bounding_box": "True",
-                        "reveal_area_on_death_radius": 0.0
+                        "reveal_area_on_death_radius": 0.0,
+                        "camouflage_detection_respects_fog_of_war_vision": "True",
+                        "camouflage_detection_respects_shot_blockers": "True"
                     }
                 },
                 {
@@ -7874,7 +8781,13 @@
                             "ignore_num_cells_worse_cost": 3.0,
                             "with_cost_speed_multiplier": 0.4
                         },
-                        "direct_path_look_ahead_max_dist": 20.0
+                        "direct_path_look_ahead_max_dist": 20.0,
+                        "start_move_speed_option": {
+                            "template_reference": {
+                                "name": "start_move_speed_option",
+                                "value": "options\\none"
+                            }
+                        }
                     }
                 },
                 {
@@ -8162,7 +9075,8 @@
                         "on_reach_invulnerable_min_cap_entity_state_tree_ref": "",
                         "on_reach_max_health_entity_state_tree_ref": "",
                         "restore_hook_offsets": [],
-                        "can_be_restored": "False"
+                        "can_be_restored": "False",
+                        "can_be_damaged_by_ally_default_attack_allowed": "True"
                     }
                 },
                 {
@@ -8174,7 +9088,8 @@
                         "detect_camouflage": {
                             "tp_global": 10.0,
                             "tp_mine": -1.0,
-                            "tp_unit": -1.0
+                            "tp_unit": -1.0,
+                            "tp_democharge": -1.0
                         },
                         "extended_sight": "False",
                         "extended_sight_radius": 70.0,
@@ -8195,7 +9110,9 @@
                         },
                         "camouflage_detection_enabled": "True",
                         "blockers_check_bounding_box": "True",
-                        "reveal_area_on_death_radius": 0.0
+                        "reveal_area_on_death_radius": 0.0,
+                        "camouflage_detection_respects_fog_of_war_vision": "True",
+                        "camouflage_detection_respects_shot_blockers": "True"
                     }
                 },
                 {
@@ -8535,7 +9452,13 @@
                             "ignore_num_cells_worse_cost": 3.0,
                             "with_cost_speed_multiplier": 0.4
                         },
-                        "direct_path_look_ahead_max_dist": 20.0
+                        "direct_path_look_ahead_max_dist": 20.0,
+                        "start_move_speed_option": {
+                            "template_reference": {
+                                "name": "start_move_speed_option",
+                                "value": "options\\none"
+                            }
+                        }
                     }
                 },
                 {
@@ -8835,7 +9758,8 @@
                         "on_reach_invulnerable_min_cap_entity_state_tree_ref": "",
                         "on_reach_max_health_entity_state_tree_ref": "",
                         "restore_hook_offsets": [],
-                        "can_be_restored": "False"
+                        "can_be_restored": "False",
+                        "can_be_damaged_by_ally_default_attack_allowed": "True"
                     }
                 },
                 {
@@ -8872,7 +9796,8 @@
                         "detect_camouflage": {
                             "tp_global": 12.5,
                             "tp_mine": -1.0,
-                            "tp_unit": -1.0
+                            "tp_unit": -1.0,
+                            "tp_democharge": -1.0
                         },
                         "extended_sight": "False",
                         "extended_sight_radius": 70.0,
@@ -8894,7 +9819,8 @@
                         "camouflage_detection_enabled": "True",
                         "blockers_check_bounding_box": "True",
                         "reveal_area_on_death_radius": 5.0,
-                        "camouflage_detection_respects_sight_blockers": "True"
+                        "camouflage_detection_respects_fog_of_war_vision": "True",
+                        "camouflage_detection_respects_shot_blockers": "True"
                     }
                 },
                 {
@@ -9358,7 +10284,15 @@
                                 "value": "state_tree_reference_info"
                             },
                             "ActionTree_OpeningBranch": ""
-                        }
+                        },
+                        "on_observed_by_detector_tree": {
+                            "template_reference": {
+                                "name": "on_observed_by_detector_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "on_observed_wear_off_seconds": 2.0
                     }
                 },
                 {
@@ -9697,7 +10631,8 @@
                         "on_reach_invulnerable_min_cap_entity_state_tree_ref": "",
                         "on_reach_max_health_entity_state_tree_ref": "",
                         "restore_hook_offsets": [],
-                        "can_be_restored": "False"
+                        "can_be_restored": "False",
+                        "can_be_damaged_by_ally_default_attack_allowed": "True"
                     }
                 },
                 {
@@ -9807,7 +10742,8 @@
                         "detect_camouflage": {
                             "tp_global": 10.0,
                             "tp_mine": -1.0,
-                            "tp_unit": -1.0
+                            "tp_unit": -1.0,
+                            "tp_democharge": -1.0
                         },
                         "extended_sight": "False",
                         "extended_sight_radius": 90.0,
@@ -9829,7 +10765,8 @@
                         "camouflage_detection_enabled": "True",
                         "blockers_check_bounding_box": "True",
                         "reveal_area_on_death_radius": 5.0,
-                        "camouflage_detection_respects_sight_blockers": "True"
+                        "camouflage_detection_respects_fog_of_war_vision": "True",
+                        "camouflage_detection_respects_shot_blockers": "True"
                     }
                 },
                 {
@@ -10138,7 +11075,15 @@
                                 "value": "state_tree_reference_info"
                             },
                             "ActionTree_OpeningBranch": ""
-                        }
+                        },
+                        "on_observed_by_detector_tree": {
+                            "template_reference": {
+                                "name": "on_observed_by_detector_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "on_observed_wear_off_seconds": 2.0
                     }
                 },
                 {
@@ -10701,7 +11646,8 @@
                         "on_reach_invulnerable_min_cap_entity_state_tree_ref": "",
                         "on_reach_max_health_entity_state_tree_ref": "",
                         "restore_hook_offsets": [],
-                        "can_be_restored": "False"
+                        "can_be_restored": "False",
+                        "can_be_damaged_by_ally_default_attack_allowed": "True"
                     }
                 },
                 {
@@ -10738,7 +11684,8 @@
                         "detect_camouflage": {
                             "tp_global": 12.5,
                             "tp_mine": -1.0,
-                            "tp_unit": -1.0
+                            "tp_unit": -1.0,
+                            "tp_democharge": -1.0
                         },
                         "extended_sight": "False",
                         "extended_sight_radius": 70.0,
@@ -10760,7 +11707,8 @@
                         "camouflage_detection_enabled": "True",
                         "blockers_check_bounding_box": "True",
                         "reveal_area_on_death_radius": 5.0,
-                        "camouflage_detection_respects_sight_blockers": "True"
+                        "camouflage_detection_respects_fog_of_war_vision": "True",
+                        "camouflage_detection_respects_shot_blockers": "True"
                     }
                 },
                 {
@@ -11304,7 +12252,15 @@
                                 "value": "state_tree_reference_info"
                             },
                             "ActionTree_OpeningBranch": ""
-                        }
+                        },
+                        "on_observed_by_detector_tree": {
+                            "template_reference": {
+                                "name": "on_observed_by_detector_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "on_observed_wear_off_seconds": 2.0
                     }
                 },
                 {
@@ -12475,7 +13431,8 @@
                             "on_reach_invulnerable_min_cap_entity_state_tree_ref": "",
                             "on_reach_max_health_entity_state_tree_ref": "",
                             "restore_hook_offsets": [],
-                            "can_be_restored": "False"
+                            "can_be_restored": "False",
+                            "can_be_damaged_by_ally_default_attack_allowed": "True"
                         }
                     },
                     {
@@ -12593,7 +13550,8 @@
                             "detect_camouflage": {
                                 "tp_global": 12.5,
                                 "tp_mine": -1.0,
-                                "tp_unit": -1.0
+                                "tp_unit": -1.0,
+                                "tp_democharge": -1.0
                             },
                             "extended_sight": "False",
                             "extended_sight_radius": 90.0,
@@ -12615,7 +13573,8 @@
                             "camouflage_detection_enabled": "True",
                             "blockers_check_bounding_box": "True",
                             "reveal_area_on_death_radius": 3.0,
-                            "camouflage_detection_respects_sight_blockers": "True"
+                            "camouflage_detection_respects_fog_of_war_vision": "True",
+                            "camouflage_detection_respects_shot_blockers": "True"
                         }
                     },
                     {
@@ -12921,7 +13880,15 @@
                                     "value": "state_tree_reference_info"
                                 },
                                 "ActionTree_OpeningBranch": ""
-                            }
+                            },
+                            "on_observed_by_detector_tree": {
+                                "template_reference": {
+                                    "name": "on_observed_by_detector_tree",
+                                    "value": "state_tree_reference_info"
+                                },
+                                "ActionTree_OpeningBranch": ""
+                            },
+                            "on_observed_wear_off_seconds": 2.0
                         }
                     },
                     {
@@ -13445,7 +14412,8 @@
                             "z": 3.0
                         },
                         "target_selection_priority_by_owner": "none",
-                        "turn_in_place_distance": 0.0
+                        "turn_in_place_distance": 0.0,
+                        "bandbox_selection_priority_override": ""
                     }
                 },
                 {

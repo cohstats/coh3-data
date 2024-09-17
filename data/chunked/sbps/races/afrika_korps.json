@@ -557,7 +557,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "mouse_over"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -634,6 +635,340 @@
             "pbgid": 2033713.0,
             "parent_pbg": {
                 "instance_reference": ""
+            }
+        },
+        "hmg_bunker_ak": {
+            "extensions": [
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_ability_ext"
+                        },
+                        "abilities": [],
+                        "ui_combine_priority": 0.0,
+                        "squad_orders": {
+                            "abandon_team_weapon": {
+                                "available": "True"
+                            },
+                            "attack_ground": {
+                                "available": "False"
+                            },
+                            "attack_move": {
+                                "available": "True"
+                            },
+                            "cancel_construction": {
+                                "available": "True"
+                            },
+                            "hold_fire_off": {
+                                "available": "False"
+                            },
+                            "hold_fire_on": {
+                                "available": "False"
+                            },
+                            "load": {
+                                "available": "True",
+                                "default_issuable": "True"
+                            },
+                            "move": {
+                                "available": "True",
+                                "default_issuable": "True"
+                            },
+                            "pickup_item": {
+                                "available": "True",
+                                "default_issuable": "True"
+                            },
+                            "plant_demolitions": {
+                                "available": "True"
+                            },
+                            "prefer_melee": {
+                                "available": "True"
+                            },
+                            "prefer_ranged": {
+                                "available": "True"
+                            },
+                            "retire": {
+                                "available": "True"
+                            },
+                            "retreat": {
+                                "available": "True"
+                            },
+                            "reverse_move": {
+                                "available": "True"
+                            },
+                            "stop": {
+                                "available": "True"
+                            },
+                            "trade": {
+                                "available": "True"
+                            },
+                            "unload": {
+                                "available": "True",
+                                "default_issuable": "True"
+                            },
+                            "unload_here": {
+                                "available": "True"
+                            },
+                            "vault": {
+                                "available": "True"
+                            },
+                            "hold_position": {
+                                "available": "True"
+                            }
+                        }
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_loadout_ext"
+                        },
+                        "unit_list": [
+                            {
+                                "loadout_data": {
+                                    "num": 1.0,
+                                    "type": {
+                                        "instance_reference": "ebps/races/afrika_korps/buildings/defensive/bunker_hmg_ak"
+                                    },
+                                    "unit_attachments": [],
+                                    "is_default_unit": "True"
+                                }
+                            }
+                        ],
+                        "squad_female_chance": 0.0,
+                        "extra_unit_index": 0.0
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_requirement_ext"
+                        },
+                        "requirement_table": [],
+                        "requirement_statetree": ""
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_ui_ext"
+                        },
+                        "race_list": [
+                            {
+                                "race_data": {
+                                    "info": {
+                                        "allow_spawner_production": "False",
+                                        "extra_text": {
+                                            "locstring": {
+                                                "name": "extra_text",
+                                                "value": "0"
+                                            }
+                                        },
+                                        "help_text": {
+                                            "locstring": {
+                                                "name": "help_text",
+                                                "value": "11235473"
+                                            }
+                                        },
+                                        "hotkey_name": "A",
+                                        "icon_name": "races/afrika_corps/buildings/base_defense_ak",
+                                        "minimap_team_only": "False",
+                                        "minimap_texture": "",
+                                        "modal_ability": {
+                                            "instance_reference": ""
+                                        },
+                                        "reveal_for_decryption": "False",
+                                        "screen_name": {
+                                            "locstring": {
+                                                "name": "screen_name",
+                                                "value": "11198143"
+                                            }
+                                        },
+                                        "selection_group": "base_defense_ak",
+                                        "ui_priority": 0.0,
+                                        "use_random_entity_speaker": "False",
+                                        "portrait_name": "races/afrika_corps/buildings/base_defense_ak_portrait",
+                                        "minimap_texture_scale": 0.55,
+                                        "brief_text": {
+                                            "locstring": {
+                                                "name": "brief_text",
+                                                "value": "11248675"
+                                            }
+                                        },
+                                        "screen_name_short": {
+                                            "locstring": {
+                                                "name": "screen_name_short",
+                                                "value": "0"
+                                            }
+                                        },
+                                        "map_rotation_type_override": "no_override",
+                                        "show_in_build_log": "True",
+                                        "symbol_icon_name": "races/common/symbols/hmg",
+                                        "cover_level_icon_postfix": "",
+                                        "hide_ucs": "False",
+                                        "decorator_visibility": "default",
+                                        "debug_text": "",
+                                        "selection_datatemplate": "",
+                                        "tooltip_data_template": "",
+                                        "is_unique": "False",
+                                        "decorator_data_template": "",
+                                        "ui_combine_type": "intersection",
+                                        "global_unit_control_row": -1.0,
+                                        "ui_decorator": {
+                                            "instance_reference": ""
+                                        },
+                                        "decorator_show_reload_progress": "False",
+                                        "is_respawnable": "False",
+                                        "respawn_location": "",
+                                        "respawn_progress": "",
+                                        "respawn_time": "",
+                                        "respawn_help": {
+                                            "locstring": {
+                                                "name": "respawn_help",
+                                                "value": "0"
+                                            }
+                                        },
+                                        "respawn_unit_class": "",
+                                        "is_unique_to_race": "False",
+                                        "show_production": "True",
+                                        "respawn_datatemplate": "",
+                                        "decorator": "",
+                                        "map_layer": -1.0,
+                                        "map_mark": "Emplacement",
+                                        "flag_icon_override": "",
+                                        "extra_icon": "",
+                                        "ui_codex_info": {
+                                            "exclusive": "False",
+                                            "priority": 0.0,
+                                            "ui_position": {
+                                                "ui_position_column": -1.0,
+                                                "ui_position_row": -1.0
+                                            }
+                                        },
+                                        "extra_text_formatter": {
+                                            "template_reference": {
+                                                "name": "extra_text_formatter",
+                                                "value": ""
+                                            }
+                                        },
+                                        "help_text_formatter": {
+                                            "template_reference": {
+                                                "name": "help_text_formatter",
+                                                "value": ""
+                                            }
+                                        },
+                                        "screen_name_formatter": {
+                                            "template_reference": {
+                                                "name": "screen_name_formatter",
+                                                "value": ""
+                                            }
+                                        },
+                                        "screen_name_short_formatter": {
+                                            "template_reference": {
+                                                "name": "screen_name_short_formatter",
+                                                "value": ""
+                                            }
+                                        },
+                                        "brief_text_formatter": {
+                                            "template_reference": {
+                                                "name": "brief_text_formatter",
+                                                "value": ""
+                                            }
+                                        },
+                                        "screen_name_visibility": "visible",
+                                        "sound": "",
+                                        "sound_alternative": "",
+                                        "extra_help_text": {
+                                            "locstring": {
+                                                "name": "extra_help_text",
+                                                "value": "11242403"
+                                            }
+                                        },
+                                        "ui_armor_info": {
+                                            "armor_icon": "",
+                                            "armor_critical_damage": []
+                                        },
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "mouse_over"
+                                    },
+                                    "ext_key": {
+                                        "instance_reference": ""
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_upgrade_ext"
+                        },
+                        "number_of_slots": -1.0,
+                        "upgrades": [],
+                        "max_queue_size_override": -1.0,
+                        "tech_trees": []
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_type_ext"
+                        },
+                        "squad_type_list": [
+                            {
+                                "squad_type": "suppression"
+                            },
+                            {
+                                "squad_type": "building"
+                            },
+                            {
+                                "squad_type": "base_defense"
+                            }
+                        ],
+                        "squad_race_type_list": [
+                            {
+                                "squad_race_type": {
+                                    "instance_reference": "racebps/afrika_korps"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_team_weapon_ext"
+                        }
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_inventory_ext"
+                        },
+                        "can_pick_up_items": "False",
+                        "pick_up_reach": 2.0,
+                        "category_capacity": {
+                            "special": 0.0,
+                            "default": -1.0,
+                            "upgrade": 0.0,
+                            "casualty": 0.0,
+                            "vehicle_wreck": 0.0
+                        }
+                    }
+                }
+            ],
+            "pbgid": 2163951.0,
+            "parent_pbg": {
+                "instance_reference": "sbps/races/afrika_korps/emplacements/base_defense_ak"
             }
         }
     },
@@ -1165,11 +1500,6 @@
                             {
                                 "ability": {
                                     "instance_reference": "abilities/races/afrika_korps/infantry/breach_panzerpioneers_ak"
-                                }
-                            },
-                            {
-                                "ability": {
-                                    "instance_reference": "abilities/races/afrika_korps/infantry/counter_attack_passive_ak"
                                 }
                             },
                             {
@@ -3148,7 +3478,7 @@
                                         "help_text": {
                                             "locstring": {
                                                 "name": "help_text",
-                                                "value": "11241755"
+                                                "value": "0"
                                             }
                                         },
                                         "hotkey_name": "A",
@@ -3173,7 +3503,7 @@
                                         "brief_text": {
                                             "locstring": {
                                                 "name": "brief_text",
-                                                "value": "11248888"
+                                                "value": "0"
                                             }
                                         },
                                         "screen_name_short": {
@@ -3235,8 +3565,32 @@
                                         "help_text_formatter": {
                                             "template_reference": {
                                                 "name": "help_text_formatter",
-                                                "value": ""
-                                            }
+                                                "value": "ui_text_formatter"
+                                            },
+                                            "formatter": {
+                                                "locstring": {
+                                                    "name": "formatter",
+                                                    "value": "11265170"
+                                                }
+                                            },
+                                            "formatter_arguments": [
+                                                {
+                                                    "locstring_value": {
+                                                        "locstring": {
+                                                            "name": "locstring_value",
+                                                            "value": "11265502"
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "locstring_value": {
+                                                        "locstring": {
+                                                            "name": "locstring_value",
+                                                            "value": "11241992"
+                                                        }
+                                                    }
+                                                }
+                                            ]
                                         },
                                         "screen_name_formatter": {
                                             "template_reference": {
@@ -3253,8 +3607,22 @@
                                         "brief_text_formatter": {
                                             "template_reference": {
                                                 "name": "brief_text_formatter",
-                                                "value": ""
-                                            }
+                                                "value": "ui_text_formatter"
+                                            },
+                                            "formatter": {
+                                                "locstring": {
+                                                    "name": "formatter",
+                                                    "value": "11265501"
+                                                }
+                                            },
+                                            "formatter_arguments": [
+                                                {
+                                                    "int_value": 25.0
+                                                },
+                                                {
+                                                    "int_value": 12.0
+                                                }
+                                            ]
                                         },
                                         "screen_name_visibility": "visible",
                                         "sound": "",
@@ -3552,11 +3920,6 @@
                             },
                             {
                                 "ability": {
-                                    "instance_reference": "abilities/races/afrika_korps/infantry/counter_attack_passive_ak"
-                                }
-                            },
-                            {
-                                "ability": {
                                     "instance_reference": "abilities/races/afrika_korps/infantry/grenade_smoke_guastatori_ak"
                                 }
                             },
@@ -3593,6 +3956,11 @@
                             {
                                 "ability": {
                                     "instance_reference": "abilities/races/afrika_korps/infantry/salvage_plunder_ak"
+                                }
+                            },
+                            {
+                                "ability": {
+                                    "instance_reference": "abilities/races/common/infantry/damage_reduction_25_percent_parent"
                                 }
                             }
                         ],
@@ -5274,11 +5642,6 @@
                             },
                             {
                                 "ability": {
-                                    "instance_reference": "abilities/races/afrika_korps/infantry/counter_attack_passive_ak"
-                                }
-                            },
-                            {
-                                "ability": {
                                     "instance_reference": "abilities/races/afrika_korps/infantry/double_time_ak"
                                 }
                             },
@@ -6123,11 +6486,6 @@
                             },
                             {
                                 "ability": {
-                                    "instance_reference": "abilities/races/afrika_korps/infantry/counter_attack_passive_ak"
-                                }
-                            },
-                            {
-                                "ability": {
                                     "instance_reference": "abilities/races/afrika_korps/infantry/double_time_ak"
                                 }
                             },
@@ -6711,7 +7069,7 @@
                                                         }
                                                     },
                                                     "single_player_only": "False",
-                                                    "veterancy_value": 700.0,
+                                                    "veterancy_value": 650.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -6761,7 +7119,7 @@
                                                         }
                                                     },
                                                     "single_player_only": "False",
-                                                    "veterancy_value": 2100.0,
+                                                    "veterancy_value": 1950.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -6811,7 +7169,7 @@
                                                         }
                                                     },
                                                     "single_player_only": "False",
-                                                    "veterancy_value": 4200.0,
+                                                    "veterancy_value": 3900.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -6942,11 +7300,6 @@
                             {
                                 "ability": {
                                     "instance_reference": "abilities/races/afrika_korps/infantry/infantry_combined_arms_ak"
-                                }
-                            },
-                            {
-                                "ability": {
-                                    "instance_reference": "abilities/races/afrika_korps/infantry/counter_attack_passive_ak"
                                 }
                             },
                             {
@@ -21580,6 +21933,16 @@
                                 "ability": {
                                     "instance_reference": "abilities/races/afrika_korps/vehicles/vehicle_capture_dummy_254_ak"
                                 }
+                            },
+                            {
+                                "ability": {
+                                    "instance_reference": "abilities/races/common/vehicles/towing_pickup"
+                                }
+                            },
+                            {
+                                "ability": {
+                                    "instance_reference": "abilities/races/common/vehicles/towing_drop"
+                                }
                             }
                         ],
                         "ui_combine_priority": 0.0,
@@ -21768,7 +22131,7 @@
                                         "help_text": {
                                             "locstring": {
                                                 "name": "help_text",
-                                                "value": "11241828"
+                                                "value": "0"
                                             }
                                         },
                                         "hotkey_name": "A",
@@ -21793,7 +22156,7 @@
                                         "brief_text": {
                                             "locstring": {
                                                 "name": "brief_text",
-                                                "value": "11262730"
+                                                "value": "11265475"
                                             }
                                         },
                                         "screen_name_short": {
@@ -21855,8 +22218,32 @@
                                         "help_text_formatter": {
                                             "template_reference": {
                                                 "name": "help_text_formatter",
-                                                "value": ""
-                                            }
+                                                "value": "ui_text_formatter"
+                                            },
+                                            "formatter": {
+                                                "locstring": {
+                                                    "name": "formatter",
+                                                    "value": "11265170"
+                                                }
+                                            },
+                                            "formatter_arguments": [
+                                                {
+                                                    "locstring_value": {
+                                                        "locstring": {
+                                                            "name": "locstring_value",
+                                                            "value": "11265471"
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "locstring_value": {
+                                                        "locstring": {
+                                                            "name": "locstring_value",
+                                                            "value": "11250647"
+                                                        }
+                                                    }
+                                                }
+                                            ]
                                         },
                                         "screen_name_formatter": {
                                             "template_reference": {
@@ -21930,7 +22317,8 @@
                                                 }
                                             ]
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -23598,6 +23986,11 @@
                                 "ability": {
                                     "instance_reference": "abilities/races/afrika_korps/battlegroups/subterfuge/infiltration_right_1_silent_running_toggle_ak"
                                 }
+                            },
+                            {
+                                "ability": {
+                                    "instance_reference": "abilities/races/afrika_korps/vehicles/flak_moving_suppression_ak"
+                                }
                             }
                         ],
                         "ui_combine_priority": 0.0,
@@ -23831,7 +24224,7 @@
                                         "help_text": {
                                             "locstring": {
                                                 "name": "help_text",
-                                                "value": "11241835"
+                                                "value": "0"
                                             }
                                         },
                                         "hotkey_name": "A",
@@ -23856,7 +24249,7 @@
                                         "brief_text": {
                                             "locstring": {
                                                 "name": "brief_text",
-                                                "value": "11248931"
+                                                "value": "11265473"
                                             }
                                         },
                                         "screen_name_short": {
@@ -23918,8 +24311,32 @@
                                         "help_text_formatter": {
                                             "template_reference": {
                                                 "name": "help_text_formatter",
-                                                "value": ""
-                                            }
+                                                "value": "ui_text_formatter"
+                                            },
+                                            "formatter": {
+                                                "locstring": {
+                                                    "name": "formatter",
+                                                    "value": "11265170"
+                                                }
+                                            },
+                                            "formatter_arguments": [
+                                                {
+                                                    "locstring_value": {
+                                                        "locstring": {
+                                                            "name": "locstring_value",
+                                                            "value": "11265471"
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "locstring_value": {
+                                                        "locstring": {
+                                                            "name": "locstring_value",
+                                                            "value": "11241835"
+                                                        }
+                                                    }
+                                                }
+                                            ]
                                         },
                                         "screen_name_formatter": {
                                             "template_reference": {
@@ -23945,7 +24362,7 @@
                                         "extra_help_text": {
                                             "locstring": {
                                                 "name": "extra_help_text",
-                                                "value": "11242292"
+                                                "value": "0"
                                             }
                                         },
                                         "ui_armor_info": {

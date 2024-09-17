@@ -3820,7 +3820,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "mouse_over"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -4071,7 +4072,7 @@
                                         "symbol_icon_name": "races/common/symbols/hmg",
                                         "cover_level_icon_postfix": "",
                                         "hide_ucs": "False",
-                                        "decorator_visibility": "mouse_over",
+                                        "decorator_visibility": "visible",
                                         "debug_text": "",
                                         "selection_datatemplate": "",
                                         "tooltip_data_template": "",
@@ -4153,7 +4154,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "mouse_over"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -5015,7 +5017,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "mouse_over"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -7476,7 +7479,7 @@
                             "value": "sbpextensions\\squad_reinforce_ext"
                         },
                         "time_cost_percentage": {
-                            "cost_percentage": 0.38,
+                            "cost_percentage": 0.425,
                             "time_percentage": 0.5,
                             "upgrade_cost_percentage": 0.0
                         },
@@ -15960,7 +15963,7 @@
                             "name": "squadexts",
                             "value": "sbpextensions\\squad_population_ext"
                         },
-                        "personnel_pop": 1.0,
+                        "personnel_pop": 2.0,
                         "upkeep_per_pop_per_minute_override": {
                             "action": 0.0,
                             "command": 0.0,
@@ -16243,7 +16246,7 @@
                                                         }
                                                     },
                                                     "single_player_only": "False",
-                                                    "veterancy_value": 900.0,
+                                                    "veterancy_value": 950.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -16293,7 +16296,7 @@
                                                         }
                                                     },
                                                     "single_player_only": "False",
-                                                    "veterancy_value": 2700.0,
+                                                    "veterancy_value": 2850.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -16343,7 +16346,7 @@
                                                         }
                                                     },
                                                     "single_player_only": "False",
-                                                    "veterancy_value": 5400.0,
+                                                    "veterancy_value": 5700.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -17683,7 +17686,7 @@
                         },
                         "time_cost_percentage": {
                             "cost_percentage": 0.52,
-                            "time_percentage": 0.43,
+                            "time_percentage": 0.645,
                             "upgrade_cost_percentage": 0.0
                         },
                         "ui_info": {
@@ -36914,11 +36917,11 @@
                                         "name": "required",
                                         "value": "requirements\\required_player_upgrade"
                                     },
-                                    "reason": "usage_and_display",
+                                    "reason": "usage",
                                     "ui_name": {
                                         "locstring": {
                                             "name": "ui_name",
-                                            "value": "0"
+                                            "value": "11265575"
                                         }
                                     },
                                     "is_present": "True",
@@ -36986,7 +36989,7 @@
                                         "help_text": {
                                             "locstring": {
                                                 "name": "help_text",
-                                                "value": "11244957"
+                                                "value": "0"
                                             }
                                         },
                                         "hotkey_name": "A",
@@ -37011,7 +37014,7 @@
                                         "brief_text": {
                                             "locstring": {
                                                 "name": "brief_text",
-                                                "value": "11248781"
+                                                "value": "11265481"
                                             }
                                         },
                                         "screen_name_short": {
@@ -37073,8 +37076,32 @@
                                         "help_text_formatter": {
                                             "template_reference": {
                                                 "name": "help_text_formatter",
-                                                "value": ""
-                                            }
+                                                "value": "ui_text_formatter"
+                                            },
+                                            "formatter": {
+                                                "locstring": {
+                                                    "name": "formatter",
+                                                    "value": "11265170"
+                                                }
+                                            },
+                                            "formatter_arguments": [
+                                                {
+                                                    "locstring_value": {
+                                                        "locstring": {
+                                                            "name": "locstring_value",
+                                                            "value": "11265471"
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "locstring_value": {
+                                                        "locstring": {
+                                                            "name": "locstring_value",
+                                                            "value": "11265547"
+                                                        }
+                                                    }
+                                                }
+                                            ]
                                         },
                                         "screen_name_formatter": {
                                             "template_reference": {
@@ -37100,7 +37127,7 @@
                                         "extra_help_text": {
                                             "locstring": {
                                                 "name": "extra_help_text",
-                                                "value": "11248956"
+                                                "value": "0"
                                             }
                                         },
                                         "ui_armor_info": {
@@ -39125,11 +39152,11 @@
                                         "name": "required",
                                         "value": "requirements\\required_player_upgrade"
                                     },
-                                    "reason": "usage_and_display",
+                                    "reason": "usage",
                                     "ui_name": {
                                         "locstring": {
                                             "name": "ui_name",
-                                            "value": "0"
+                                            "value": "11265575"
                                         }
                                     },
                                     "is_present": "True",
@@ -54355,7 +54382,7 @@
                                             "help_text": {
                                                 "locstring": {
                                                     "name": "help_text",
-                                                    "value": "11244957"
+                                                    "value": "0"
                                                 }
                                             },
                                             "hotkey_name": "A",
@@ -54380,7 +54407,7 @@
                                             "brief_text": {
                                                 "locstring": {
                                                     "name": "brief_text",
-                                                    "value": "11248781"
+                                                    "value": "11265481"
                                                 }
                                             },
                                             "screen_name_short": {
@@ -54442,8 +54469,32 @@
                                             "help_text_formatter": {
                                                 "template_reference": {
                                                     "name": "help_text_formatter",
-                                                    "value": ""
-                                                }
+                                                    "value": "ui_text_formatter"
+                                                },
+                                                "formatter": {
+                                                    "locstring": {
+                                                        "name": "formatter",
+                                                        "value": "11265170"
+                                                    }
+                                                },
+                                                "formatter_arguments": [
+                                                    {
+                                                        "locstring_value": {
+                                                            "locstring": {
+                                                                "name": "locstring_value",
+                                                                "value": "11265471"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "locstring_value": {
+                                                            "locstring": {
+                                                                "name": "locstring_value",
+                                                                "value": "11265547"
+                                                            }
+                                                        }
+                                                    }
+                                                ]
                                             },
                                             "screen_name_formatter": {
                                                 "template_reference": {
@@ -54469,7 +54520,7 @@
                                             "extra_help_text": {
                                                 "locstring": {
                                                     "name": "extra_help_text",
-                                                    "value": "11248956"
+                                                    "value": "0"
                                                 }
                                             },
                                             "ui_armor_info": {
@@ -55000,11 +55051,11 @@
                                             "name": "required",
                                             "value": "requirements\\required_player_upgrade"
                                         },
-                                        "reason": "usage_and_display",
+                                        "reason": "usage",
                                         "ui_name": {
                                             "locstring": {
                                                 "name": "ui_name",
-                                                "value": "0"
+                                                "value": "11265575"
                                             }
                                         },
                                         "is_present": "True",

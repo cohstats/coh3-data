@@ -244,7 +244,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -539,7 +540,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -834,7 +836,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -881,6 +884,302 @@
                 }
             ],
             "pbgid": 2089014.0,
+            "parent_pbg": {
+                "instance_reference": ""
+            }
+        },
+        "hawker_typhoon_strafing_run_uk": {
+            "extensions": [
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_ability_ext"
+                        },
+                        "abilities": [],
+                        "ui_combine_priority": 0.0,
+                        "squad_orders": {
+                            "abandon_team_weapon": {
+                                "available": "True"
+                            },
+                            "attack_ground": {
+                                "available": "True"
+                            },
+                            "attack_move": {
+                                "available": "True"
+                            },
+                            "cancel_construction": {
+                                "available": "True"
+                            },
+                            "hold_fire_off": {
+                                "available": "True"
+                            },
+                            "hold_fire_on": {
+                                "available": "True"
+                            },
+                            "load": {
+                                "available": "True",
+                                "default_issuable": "True"
+                            },
+                            "move": {
+                                "available": "True",
+                                "default_issuable": "True"
+                            },
+                            "pickup_item": {
+                                "available": "True",
+                                "default_issuable": "True"
+                            },
+                            "plant_demolitions": {
+                                "available": "True"
+                            },
+                            "prefer_melee": {
+                                "available": "True"
+                            },
+                            "prefer_ranged": {
+                                "available": "True"
+                            },
+                            "retire": {
+                                "available": "True"
+                            },
+                            "retreat": {
+                                "available": "True"
+                            },
+                            "reverse_move": {
+                                "available": "True"
+                            },
+                            "stop": {
+                                "available": "True"
+                            },
+                            "trade": {
+                                "available": "True"
+                            },
+                            "unload": {
+                                "available": "True",
+                                "default_issuable": "True"
+                            },
+                            "unload_here": {
+                                "available": "True"
+                            },
+                            "vault": {
+                                "available": "True"
+                            },
+                            "hold_position": {
+                                "available": "True"
+                            }
+                        }
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_loadout_ext"
+                        },
+                        "unit_list": [
+                            {
+                                "loadout_data": {
+                                    "num": 1.0,
+                                    "type": {
+                                        "instance_reference": "ebps/races/british/aircraft/hawker_typhoon_strafing_run_uk"
+                                    },
+                                    "unit_attachments": [],
+                                    "is_default_unit": "True"
+                                }
+                            }
+                        ],
+                        "squad_female_chance": 0.0,
+                        "extra_unit_index": 0.0
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_ui_ext"
+                        },
+                        "race_list": [
+                            {
+                                "race_data": {
+                                    "info": {
+                                        "allow_spawner_production": "False",
+                                        "extra_text": {
+                                            "locstring": {
+                                                "name": "extra_text",
+                                                "value": "0"
+                                            }
+                                        },
+                                        "help_text": {
+                                            "locstring": {
+                                                "name": "help_text",
+                                                "value": "0"
+                                            }
+                                        },
+                                        "hotkey_name": "A",
+                                        "icon_name": "common/units/icons/halftrack_m3_us",
+                                        "minimap_team_only": "False",
+                                        "minimap_texture": "common/units/symbols/p47_thunderbolt_us",
+                                        "modal_ability": {
+                                            "instance_reference": ""
+                                        },
+                                        "reveal_for_decryption": "False",
+                                        "screen_name": {
+                                            "locstring": {
+                                                "name": "screen_name",
+                                                "value": "0"
+                                            }
+                                        },
+                                        "selection_group": "m3_halftrack_us",
+                                        "ui_priority": 29.0,
+                                        "use_random_entity_speaker": "False",
+                                        "portrait_name": "",
+                                        "minimap_texture_scale": 1.0,
+                                        "brief_text": {
+                                            "locstring": {
+                                                "name": "brief_text",
+                                                "value": "0"
+                                            }
+                                        },
+                                        "screen_name_short": {
+                                            "locstring": {
+                                                "name": "screen_name_short",
+                                                "value": "0"
+                                            }
+                                        },
+                                        "map_rotation_type_override": "heading",
+                                        "show_in_build_log": "False",
+                                        "symbol_icon_name": "common/units/symbols/p47_thunderbolt_us",
+                                        "cover_level_icon_postfix": "",
+                                        "hide_ucs": "False",
+                                        "decorator_visibility": "hidden",
+                                        "debug_text": "",
+                                        "selection_datatemplate": "",
+                                        "tooltip_data_template": "",
+                                        "is_unique": "False",
+                                        "decorator_data_template": "",
+                                        "ui_combine_type": "intersection",
+                                        "global_unit_control_row": -1.0,
+                                        "ui_decorator": {
+                                            "instance_reference": ""
+                                        },
+                                        "decorator_show_reload_progress": "False",
+                                        "is_respawnable": "False",
+                                        "respawn_location": "",
+                                        "respawn_progress": "",
+                                        "respawn_time": "",
+                                        "respawn_help": {
+                                            "locstring": {
+                                                "name": "respawn_help",
+                                                "value": "0"
+                                            }
+                                        },
+                                        "respawn_unit_class": "",
+                                        "is_unique_to_race": "False",
+                                        "show_production": "True",
+                                        "respawn_datatemplate": "",
+                                        "decorator": "",
+                                        "map_layer": -1.0,
+                                        "map_mark": "",
+                                        "flag_icon_override": "",
+                                        "extra_icon": "",
+                                        "ui_codex_info": {
+                                            "exclusive": "False",
+                                            "priority": 0.0,
+                                            "ui_position": {
+                                                "ui_position_column": -1.0,
+                                                "ui_position_row": -1.0
+                                            }
+                                        },
+                                        "extra_text_formatter": {
+                                            "template_reference": {
+                                                "name": "extra_text_formatter",
+                                                "value": ""
+                                            }
+                                        },
+                                        "help_text_formatter": {
+                                            "template_reference": {
+                                                "name": "help_text_formatter",
+                                                "value": ""
+                                            }
+                                        },
+                                        "screen_name_formatter": {
+                                            "template_reference": {
+                                                "name": "screen_name_formatter",
+                                                "value": ""
+                                            }
+                                        },
+                                        "screen_name_short_formatter": {
+                                            "template_reference": {
+                                                "name": "screen_name_short_formatter",
+                                                "value": ""
+                                            }
+                                        },
+                                        "brief_text_formatter": {
+                                            "template_reference": {
+                                                "name": "brief_text_formatter",
+                                                "value": ""
+                                            }
+                                        },
+                                        "screen_name_visibility": "visible",
+                                        "sound": "",
+                                        "sound_alternative": "",
+                                        "extra_help_text": {
+                                            "locstring": {
+                                                "name": "extra_help_text",
+                                                "value": "0"
+                                            }
+                                        },
+                                        "ui_armor_info": {
+                                            "armor_icon": "",
+                                            "armor_critical_damage": []
+                                        },
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
+                                    },
+                                    "ext_key": {
+                                        "instance_reference": ""
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_upgrade_ext"
+                        },
+                        "number_of_slots": -1.0,
+                        "upgrades": [],
+                        "max_queue_size_override": -1.0,
+                        "tech_trees": []
+                    }
+                },
+                {
+                    "squadexts": {
+                        "template_reference": {
+                            "name": "squadexts",
+                            "value": "sbpextensions\\squad_type_ext"
+                        },
+                        "squad_type_list": [
+                            {
+                                "squad_type": "vehicle"
+                            },
+                            {
+                                "squad_type": "airplane"
+                            }
+                        ],
+                        "squad_race_type_list": [
+                            {
+                                "squad_race_type": {
+                                    "instance_reference": "racebps/british_africa"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ],
+            "pbgid": 2164363.0,
             "parent_pbg": {
                 "instance_reference": ""
             }
@@ -1129,7 +1428,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -1801,7 +2101,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -2486,7 +2787,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -3111,7 +3413,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -3528,7 +3831,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -4069,7 +4373,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -4790,7 +5095,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -5522,7 +5828,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -6289,7 +6596,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -7415,7 +7723,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -8157,7 +8466,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -8914,7 +9224,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -9638,7 +9949,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -10683,7 +10995,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -11584,7 +11897,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -12341,7 +12655,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -13405,7 +13720,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -14245,7 +14561,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -14838,7 +15155,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -15486,7 +15804,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -16178,7 +16497,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -17167,7 +17487,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -18159,7 +18480,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -18818,7 +19140,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -19560,7 +19883,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -20545,7 +20869,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -20686,7 +21011,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": "racebps/americans"
@@ -20827,7 +21153,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": "racebps/germans"
@@ -20968,7 +21295,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": "racebps/afrika_korps"
@@ -21953,7 +22281,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -22094,7 +22423,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": "racebps/americans"
@@ -22235,7 +22565,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": "racebps/germans"
@@ -22376,7 +22707,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": "racebps/afrika_korps"
@@ -23371,7 +23703,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -23512,7 +23845,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": "racebps/americans"
@@ -23653,7 +23987,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": "racebps/germans"
@@ -23794,7 +24129,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": "racebps/afrika_korps"
@@ -24773,7 +25109,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -24914,7 +25251,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": "racebps/americans"
@@ -25055,7 +25393,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": "racebps/germans"
@@ -25196,7 +25535,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": "racebps/afrika_korps"
@@ -25844,7 +26184,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -26479,7 +26820,8 @@
                                             "armor_icon": "",
                                             "armor_critical_damage": []
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -27523,7 +27865,8 @@
                                                 }
                                             ]
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -28501,7 +28844,8 @@
                                                 }
                                             ]
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -29138,7 +29482,8 @@
                                                 }
                                             ]
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -29808,7 +30153,8 @@
                                                 }
                                             ]
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -30445,7 +30791,8 @@
                                                 }
                                             ]
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -31082,7 +31429,8 @@
                                                 }
                                             ]
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -32071,7 +32419,8 @@
                                                 }
                                             ]
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -32724,7 +33073,8 @@
                                                 }
                                             ]
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -33366,7 +33716,8 @@
                                                 }
                                             ]
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -34013,7 +34364,8 @@
                                                 }
                                             ]
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -34655,7 +35007,8 @@
                                                 }
                                             ]
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -35534,7 +35887,8 @@
                                                 }
                                             ]
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -36171,7 +36525,8 @@
                                                 }
                                             ]
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -36833,7 +37188,8 @@
                                                 }
                                             ]
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -36917,8 +37273,41 @@
                                                     "brief_text": {
                                                         "locstring": {
                                                             "name": "brief_text",
-                                                            "value": "11243410"
+                                                            "value": "0"
                                                         }
+                                                    },
+                                                    "brief_text_formatter": {
+                                                        "template_reference": {
+                                                            "name": "brief_text_formatter",
+                                                            "value": "ui_text_formatter"
+                                                        },
+                                                        "formatter": {
+                                                            "locstring": {
+                                                                "name": "formatter",
+                                                                "value": "11266072"
+                                                            }
+                                                        },
+                                                        "formatter_arguments": [
+                                                            {
+                                                                "locstring_value": {
+                                                                    "locstring": {
+                                                                        "name": "locstring_value",
+                                                                        "value": "11265945"
+                                                                    }
+                                                                }
+                                                            },
+                                                            {
+                                                                "int_value": 10.0
+                                                            },
+                                                            {
+                                                                "locstring_value": {
+                                                                    "locstring": {
+                                                                        "name": "locstring_value",
+                                                                        "value": "11266091"
+                                                                    }
+                                                                }
+                                                            }
+                                                        ]
                                                     }
                                                 }
                                             },
@@ -36967,8 +37356,44 @@
                                                     "brief_text": {
                                                         "locstring": {
                                                             "name": "brief_text",
-                                                            "value": "11243505"
+                                                            "value": "0"
                                                         }
+                                                    },
+                                                    "brief_text_formatter": {
+                                                        "template_reference": {
+                                                            "name": "brief_text_formatter",
+                                                            "value": "ui_text_formatter"
+                                                        },
+                                                        "formatter": {
+                                                            "locstring": {
+                                                                "name": "formatter",
+                                                                "value": "11266124"
+                                                            }
+                                                        },
+                                                        "formatter_arguments": [
+                                                            {
+                                                                "float_value": 20.0
+                                                            },
+                                                            {
+                                                                "locstring_value": {
+                                                                    "locstring": {
+                                                                        "name": "locstring_value",
+                                                                        "value": "11266092"
+                                                                    }
+                                                                }
+                                                            },
+                                                            {
+                                                                "float_value": 10.0
+                                                            },
+                                                            {
+                                                                "locstring_value": {
+                                                                    "locstring": {
+                                                                        "name": "locstring_value",
+                                                                        "value": "11266096"
+                                                                    }
+                                                                }
+                                                            }
+                                                        ]
                                                     }
                                                 }
                                             },
@@ -37017,8 +37442,41 @@
                                                     "brief_text": {
                                                         "locstring": {
                                                             "name": "brief_text",
-                                                            "value": "11243625"
+                                                            "value": "0"
                                                         }
+                                                    },
+                                                    "brief_text_formatter": {
+                                                        "template_reference": {
+                                                            "name": "brief_text_formatter",
+                                                            "value": "ui_text_formatter"
+                                                        },
+                                                        "formatter": {
+                                                            "locstring": {
+                                                                "name": "formatter",
+                                                                "value": "11266093"
+                                                            }
+                                                        },
+                                                        "formatter_arguments": [
+                                                            {
+                                                                "int_value": 80.0
+                                                            },
+                                                            {
+                                                                "locstring_value": {
+                                                                    "locstring": {
+                                                                        "name": "locstring_value",
+                                                                        "value": "11266094"
+                                                                    }
+                                                                }
+                                                            },
+                                                            {
+                                                                "locstring_value": {
+                                                                    "locstring": {
+                                                                        "name": "locstring_value",
+                                                                        "value": "11266095"
+                                                                    }
+                                                                }
+                                                            }
+                                                        ]
                                                     }
                                                 }
                                             }
@@ -37475,7 +37933,8 @@
                                                 }
                                             ]
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -38473,7 +38932,8 @@
                                                 }
                                             ]
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -39482,7 +39942,8 @@
                                                 }
                                             ]
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -40119,7 +40580,8 @@
                                                 }
                                             ]
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -40751,7 +41213,8 @@
                                                 }
                                             ]
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -41783,7 +42246,8 @@
                                                 }
                                             ]
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -42771,7 +43235,8 @@
                                                 }
                                             ]
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -43403,7 +43868,8 @@
                                                 }
                                             ]
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -44095,7 +44561,8 @@
                                                 }
                                             ]
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -44787,7 +45254,8 @@
                                                 }
                                             ]
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -45660,7 +46128,7 @@
                                         "brief_text": {
                                             "locstring": {
                                                 "name": "brief_text",
-                                                "value": "11250052"
+                                                "value": "11266279"
                                             }
                                         },
                                         "screen_name_short": {
@@ -45797,7 +46265,8 @@
                                                 }
                                             ]
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -46824,7 +47293,8 @@
                                                 }
                                             ]
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -47658,7 +48128,8 @@
                                                 }
                                             ]
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -48453,7 +48924,8 @@
                                                 }
                                             ]
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -49461,7 +49933,8 @@
                                                 }
                                             ]
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -50149,7 +50622,8 @@
                                                 }
                                             ]
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""
@@ -51175,7 +51649,8 @@
                                                 }
                                             ]
                                         },
-                                        "disable_enemy_spotted_event_cue": "False"
+                                        "disable_enemy_spotted_event_cue": "False",
+                                        "decorator_unit_icon_visibility": "visible"
                                     },
                                     "ext_key": {
                                         "instance_reference": ""

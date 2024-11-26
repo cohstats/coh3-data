@@ -2085,7 +2085,7 @@
                         "ground_hit_rate": 1.0,
                         "ignore_shot_blocking": "False",
                         "non_moving_setup": "False",
-                        "point_blank": "False",
+                        "point_blank": "True",
                         "prevents_prone": "False",
                         "reset_rotation_on_teardown": "False",
                         "share_parent_anim": "False",
@@ -2576,15 +2576,15 @@
                         "height_advantage": {
                             "height_threshold": 3.5,
                             "multipliers": {
-                                "accuracy_multiplier": 1.1,
+                                "accuracy_multiplier": 1.25,
                                 "suppression_multiplier": 1.0,
                                 "penetration_multiplier": 1.0,
                                 "damage_multiplier": 1.0
                             },
-                            "negates_cover": "True"
+                            "negates_cover": "False"
                         },
                         "height_disadvantage": {
-                            "height_threshold": 4.5,
+                            "height_threshold": 0.0,
                             "multipliers": {
                                 "accuracy_multiplier": 1.0,
                                 "damage_multiplier": 1.0,
@@ -9515,9 +9515,9 @@
                 "30cal_hmg_africa_uk": {
                     "weapon_bag": {
                         "accuracy": {
-                            "near": 0.7,
-                            "far": 0.375,
-                            "mid": 0.5
+                            "near": 0.805,
+                            "far": 0.432,
+                            "mid": 0.575
                         },
                         "aim": {
                             "fire_aim_time": {
@@ -9657,7 +9657,8 @@
                             "share_parent_anim": "False",
                             "copy_transform_on_equip": "True",
                             "aa_range_multiplier": 6.0,
-                            "can_only_fire_once_while_out_of_control": "False"
+                            "can_only_fire_once_while_out_of_control": "False",
+                            "target_selection_prioritizes_hold": "True"
                         },
                         "burst": {
                             "can_burst": "True",
@@ -9857,7 +9858,7 @@
                             "suppressed_reload_multiplier": 1.0
                         },
                         "suppression": {
-                            "nearby_suppression_multiplier": 0.75,
+                            "nearby_suppression_multiplier": 1.0,
                             "nearby_suppression_radius": 15.0,
                             "target_pinned_multipliers": {
                                 "accuracy_multiplier": 0.25,
@@ -12056,9 +12057,9 @@
                 "sten_commando_africa_uk": {
                     "weapon_bag": {
                         "accuracy": {
-                            "near": 0.5,
-                            "far": 0.15,
-                            "mid": 0.25
+                            "near": 0.55,
+                            "far": 0.165,
+                            "mid": 0.275
                         },
                         "aim": {
                             "fire_aim_time": {

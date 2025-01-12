@@ -1,4 +1,4 @@
-# Company of Heores 3 Data
+# Company of Heroes 3 Data
 Data and icons on all Company of Heroes 3 units / stuff in a developer friendly format.
 
 ### Goal 

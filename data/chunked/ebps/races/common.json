@@ -37,6 +37,27 @@
             "pbgid": 2083735.0,
             "parent_pbg": {
                 "instance_reference": ""
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "child_custom_properties": [],
+                "custom_bool_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "custom_float_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_int32_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_reflected_enum_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_vector3f_properties": []
             }
         },
         "defensive": {
@@ -122,7 +143,9 @@
                                     "instance_reference": ""
                                 },
                                 "replace_count": 0.0,
-                                "replace_retry_distance": 0.0
+                                "replace_retry_distance": 0.0,
+                                "column_count": 2.0,
+                                "row_count": 2.0
                             },
                             "placement_valid": {
                                 "instance_reference": ""
@@ -133,7 +156,7 @@
                             "ui_range": {
                                 "instance_reference": "ui_reticule/ability_range_default"
                             },
-                            "ui_range_radius": 3.75,
+                            "ui_range_radius": 8.0,
                             "ui_setfacing": {
                                 "instance_reference": ""
                             },
@@ -221,7 +244,8 @@
                             "started_and_inactive_max_distance_from_builders": 10.0,
                             "too_light_to_destroy_built_over_entities": "True",
                             "default_facing_mode": "towards_enemy_base",
-                            "random_rotation_step": 0.0
+                            "random_rotation_step": 0.0,
+                            "block_pathing_only_on_construction_complete": "False"
                         }
                     },
                     {
@@ -419,7 +443,9 @@
                             },
                             "target_selection_priority_by_owner": "none",
                             "turn_in_place_distance": 0.0,
-                            "bandbox_selection_priority_override": "lowest"
+                            "bandbox_selection_priority_override": "lowest",
+                            "decorator_visibility_statetree_node_condition": "",
+                            "selection_ui_visibility_statetree_node_condition": ""
                         }
                     },
                     {
@@ -847,6 +873,27 @@
                 "pbgid": 2162929.0,
                 "parent_pbg": {
                     "instance_reference": "ebps/races/common/buildings/defensive/mine_parent"
+                },
+                "custom_properties": {
+                    "template_reference": {
+                        "name": "custom_properties",
+                        "value": "custom_property_template"
+                    },
+                    "child_custom_properties": [],
+                    "custom_bool_properties": [],
+                    "custom_deferred_entity_state_tree_reference_properties": [],
+                    "custom_entity_state_tree_reference_properties": [],
+                    "custom_enum_properties": [],
+                    "custom_float_properties": [],
+                    "custom_global_state_tree_reference_properties": [],
+                    "custom_hash_key_properties": [],
+                    "custom_int32_properties": [],
+                    "custom_loc_string_properties": [],
+                    "custom_pbgid_properties": [],
+                    "custom_physical_state_tree_reference_properties": [],
+                    "custom_reflected_enum_properties": [],
+                    "custom_squad_state_tree_reference_properties": [],
+                    "custom_vector3f_properties": []
                 }
             },
             "emplacement_anti_tank_parent": {
@@ -930,7 +977,8 @@
                             "on_reach_max_health_entity_state_tree_ref": "",
                             "restore_hook_offsets": [],
                             "can_be_restored": "False",
-                            "can_be_damaged_by_ally_default_attack_allowed": "True"
+                            "can_be_damaged_by_ally_default_attack_allowed": "True",
+                            "can_be_targeted_by_ally": "False"
                         }
                     },
                     {
@@ -1242,7 +1290,9 @@
                             },
                             "target_selection_priority_by_owner": "none",
                             "bandbox_selection_priority_override": "",
-                            "turn_in_place_distance": 0.0
+                            "turn_in_place_distance": 0.0,
+                            "decorator_visibility_statetree_node_condition": "",
+                            "selection_ui_visibility_statetree_node_condition": ""
                         }
                     },
                     {
@@ -1299,7 +1349,9 @@
                                     "instance_reference": ""
                                 },
                                 "replace_count": 0.0,
-                                "replace_retry_distance": 0.0
+                                "replace_retry_distance": 0.0,
+                                "column_count": 2.0,
+                                "row_count": 2.0
                             },
                             "placement_valid": {
                                 "instance_reference": ""
@@ -1337,7 +1389,8 @@
                                             "in_supply": "True",
                                             "is_secured": "False",
                                             "is_secured_by_checkpoint": "False",
-                                            "not_in_transition": "False"
+                                            "not_in_transition": "False",
+                                            "relative_to_caster": "False"
                                         }
                                     }
                                 ],
@@ -1418,13 +1471,35 @@
                             "started_and_inactive_max_distance_from_builders": 0.0,
                             "too_light_to_destroy_built_over_entities": "False",
                             "default_facing_mode": "towards_enemy_base",
-                            "random_rotation_step": 0.0
+                            "random_rotation_step": 0.0,
+                            "block_pathing_only_on_construction_complete": "False"
                         }
                     }
                 ],
                 "pbgid": 2164942.0,
                 "parent_pbg": {
                     "instance_reference": ""
+                },
+                "custom_properties": {
+                    "template_reference": {
+                        "name": "custom_properties",
+                        "value": "custom_property_template"
+                    },
+                    "child_custom_properties": [],
+                    "custom_bool_properties": [],
+                    "custom_deferred_entity_state_tree_reference_properties": [],
+                    "custom_entity_state_tree_reference_properties": [],
+                    "custom_enum_properties": [],
+                    "custom_float_properties": [],
+                    "custom_global_state_tree_reference_properties": [],
+                    "custom_hash_key_properties": [],
+                    "custom_int32_properties": [],
+                    "custom_loc_string_properties": [],
+                    "custom_pbgid_properties": [],
+                    "custom_physical_state_tree_reference_properties": [],
+                    "custom_reflected_enum_properties": [],
+                    "custom_squad_state_tree_reference_properties": [],
+                    "custom_vector3f_properties": []
                 }
             },
             "emplacement_artillery_parent": {
@@ -1624,7 +1699,9 @@
                             "selectable_in_non_interactive_area": "True",
                             "target_selection_priority_by_owner": "none",
                             "turn_in_place_distance": 0.0,
-                            "bandbox_selection_priority_override": ""
+                            "bandbox_selection_priority_override": "",
+                            "decorator_visibility_statetree_node_condition": "",
+                            "selection_ui_visibility_statetree_node_condition": ""
                         }
                     },
                     {
@@ -1835,7 +1912,8 @@
                             "on_reach_max_health_entity_state_tree_ref": "",
                             "restore_hook_offsets": [],
                             "can_be_restored": "False",
-                            "can_be_damaged_by_ally_default_attack_allowed": "True"
+                            "can_be_damaged_by_ally_default_attack_allowed": "True",
+                            "can_be_targeted_by_ally": "False"
                         }
                     },
                     {
@@ -2354,7 +2432,9 @@
                                     "instance_reference": ""
                                 },
                                 "replace_count": 0.0,
-                                "replace_retry_distance": 0.0
+                                "replace_retry_distance": 0.0,
+                                "column_count": 2.0,
+                                "row_count": 2.0
                             },
                             "placement_valid": {
                                 "instance_reference": ""
@@ -2392,7 +2472,8 @@
                                             "in_supply": "True",
                                             "is_secured": "False",
                                             "is_secured_by_checkpoint": "False",
-                                            "not_in_transition": "False"
+                                            "not_in_transition": "False",
+                                            "relative_to_caster": "False"
                                         }
                                     }
                                 ],
@@ -2473,7 +2554,8 @@
                             "started_and_inactive_max_distance_from_builders": 0.0,
                             "too_light_to_destroy_built_over_entities": "False",
                             "default_facing_mode": "towards_enemy_base",
-                            "random_rotation_step": 0.0
+                            "random_rotation_step": 0.0,
+                            "block_pathing_only_on_construction_complete": "False"
                         }
                     },
                     {
@@ -3638,6 +3720,27 @@
                 "pbgid": 2164941.0,
                 "parent_pbg": {
                     "instance_reference": ""
+                },
+                "custom_properties": {
+                    "template_reference": {
+                        "name": "custom_properties",
+                        "value": "custom_property_template"
+                    },
+                    "child_custom_properties": [],
+                    "custom_bool_properties": [],
+                    "custom_deferred_entity_state_tree_reference_properties": [],
+                    "custom_entity_state_tree_reference_properties": [],
+                    "custom_enum_properties": [],
+                    "custom_float_properties": [],
+                    "custom_global_state_tree_reference_properties": [],
+                    "custom_hash_key_properties": [],
+                    "custom_int32_properties": [],
+                    "custom_loc_string_properties": [],
+                    "custom_pbgid_properties": [],
+                    "custom_physical_state_tree_reference_properties": [],
+                    "custom_reflected_enum_properties": [],
+                    "custom_squad_state_tree_reference_properties": [],
+                    "custom_vector3f_properties": []
                 }
             },
             "mine_parent": {
@@ -3722,7 +3825,9 @@
                                     "instance_reference": ""
                                 },
                                 "replace_count": 0.0,
-                                "replace_retry_distance": 0.0
+                                "replace_retry_distance": 0.0,
+                                "column_count": 2.0,
+                                "row_count": 2.0
                             },
                             "placement_valid": {
                                 "instance_reference": "ui_rectangle/construction_placement_valid"
@@ -3821,7 +3926,8 @@
                             "started_and_inactive_max_distance_from_builders": 25.0,
                             "too_light_to_destroy_built_over_entities": "True",
                             "default_facing_mode": "towards_enemy_base",
-                            "random_rotation_step": 0.0
+                            "random_rotation_step": 0.0,
+                            "block_pathing_only_on_construction_complete": "False"
                         }
                     },
                     {
@@ -4019,7 +4125,9 @@
                             },
                             "target_selection_priority_by_owner": "none",
                             "turn_in_place_distance": 0.0,
-                            "bandbox_selection_priority_override": ""
+                            "bandbox_selection_priority_override": "",
+                            "decorator_visibility_statetree_node_condition": "",
+                            "selection_ui_visibility_statetree_node_condition": ""
                         }
                     },
                     {
@@ -4402,6 +4510,27 @@
                 "pbgid": 2151071.0,
                 "parent_pbg": {
                     "instance_reference": ""
+                },
+                "custom_properties": {
+                    "template_reference": {
+                        "name": "custom_properties",
+                        "value": "custom_property_template"
+                    },
+                    "child_custom_properties": [],
+                    "custom_bool_properties": [],
+                    "custom_deferred_entity_state_tree_reference_properties": [],
+                    "custom_entity_state_tree_reference_properties": [],
+                    "custom_enum_properties": [],
+                    "custom_float_properties": [],
+                    "custom_global_state_tree_reference_properties": [],
+                    "custom_hash_key_properties": [],
+                    "custom_int32_properties": [],
+                    "custom_loc_string_properties": [],
+                    "custom_pbgid_properties": [],
+                    "custom_physical_state_tree_reference_properties": [],
+                    "custom_reflected_enum_properties": [],
+                    "custom_squad_state_tree_reference_properties": [],
+                    "custom_vector3f_properties": []
                 }
             },
             "observation_post_parent": {
@@ -4693,7 +4822,9 @@
                             },
                             "target_selection_priority_by_owner": "none",
                             "turn_in_place_distance": 0.0,
-                            "bandbox_selection_priority_override": ""
+                            "bandbox_selection_priority_override": "",
+                            "decorator_visibility_statetree_node_condition": "",
+                            "selection_ui_visibility_statetree_node_condition": ""
                         }
                     },
                     {
@@ -4809,7 +4940,9 @@
                                     "instance_reference": ""
                                 },
                                 "replace_count": 0.0,
-                                "replace_retry_distance": 0.0
+                                "replace_retry_distance": 0.0,
+                                "column_count": 2.0,
+                                "row_count": 2.0
                             },
                             "placement_valid": {
                                 "instance_reference": "ui_rectangle/construction_placement_valid"
@@ -4903,7 +5036,8 @@
                                             "in_supply": "True",
                                             "is_secured": "False",
                                             "is_secured_by_checkpoint": "False",
-                                            "not_in_transition": "False"
+                                            "not_in_transition": "False",
+                                            "relative_to_caster": "False"
                                         }
                                     }
                                 ],
@@ -4984,7 +5118,8 @@
                             "started_and_inactive_max_distance_from_builders": 0.0,
                             "too_light_to_destroy_built_over_entities": "False",
                             "default_facing_mode": "towards_enemy_base",
-                            "random_rotation_step": 0.0
+                            "random_rotation_step": 0.0,
+                            "block_pathing_only_on_construction_complete": "False"
                         }
                     },
                     {
@@ -5169,6 +5304,27 @@
                 "pbgid": 2160350.0,
                 "parent_pbg": {
                     "instance_reference": ""
+                },
+                "custom_properties": {
+                    "template_reference": {
+                        "name": "custom_properties",
+                        "value": "custom_property_template"
+                    },
+                    "child_custom_properties": [],
+                    "custom_bool_properties": [],
+                    "custom_deferred_entity_state_tree_reference_properties": [],
+                    "custom_entity_state_tree_reference_properties": [],
+                    "custom_enum_properties": [],
+                    "custom_float_properties": [],
+                    "custom_global_state_tree_reference_properties": [],
+                    "custom_hash_key_properties": [],
+                    "custom_int32_properties": [],
+                    "custom_loc_string_properties": [],
+                    "custom_pbgid_properties": [],
+                    "custom_physical_state_tree_reference_properties": [],
+                    "custom_reflected_enum_properties": [],
+                    "custom_squad_state_tree_reference_properties": [],
+                    "custom_vector3f_properties": []
                 }
             },
             "sandbag_wall_parent": {
@@ -5246,7 +5402,7 @@
                                     "requisition": 0.0,
                                     "ultimate": 0.0
                                 },
-                                "time_seconds": 10.0,
+                                "time_seconds": 6.0,
                                 "time_turns": 0.0,
                                 "builder_cost": {
                                     "action_points": 0.0
@@ -5449,7 +5605,9 @@
                             },
                             "target_selection_priority_by_owner": "none",
                             "turn_in_place_distance": 0.0,
-                            "bandbox_selection_priority_override": ""
+                            "bandbox_selection_priority_override": "",
+                            "decorator_visibility_statetree_node_condition": "",
+                            "selection_ui_visibility_statetree_node_condition": ""
                         }
                     },
                     {
@@ -5565,7 +5723,9 @@
                                     "instance_reference": ""
                                 },
                                 "replace_count": 0.0,
-                                "replace_retry_distance": 0.0
+                                "replace_retry_distance": 0.0,
+                                "column_count": 2.0,
+                                "row_count": 2.0
                             },
                             "placement_valid": {
                                 "instance_reference": "ui_rectangle/construction_placement_valid"
@@ -5664,7 +5824,8 @@
                             "started_and_inactive_max_distance_from_builders": 25.0,
                             "too_light_to_destroy_built_over_entities": "True",
                             "default_facing_mode": "towards_enemy_base",
-                            "random_rotation_step": 0.0
+                            "random_rotation_step": 0.0,
+                            "block_pathing_only_on_construction_complete": "False"
                         }
                     },
                     {
@@ -5679,6 +5840,27 @@
                 "pbgid": 2162296.0,
                 "parent_pbg": {
                     "instance_reference": ""
+                },
+                "custom_properties": {
+                    "template_reference": {
+                        "name": "custom_properties",
+                        "value": "custom_property_template"
+                    },
+                    "child_custom_properties": [],
+                    "custom_bool_properties": [],
+                    "custom_deferred_entity_state_tree_reference_properties": [],
+                    "custom_entity_state_tree_reference_properties": [],
+                    "custom_enum_properties": [],
+                    "custom_float_properties": [],
+                    "custom_global_state_tree_reference_properties": [],
+                    "custom_hash_key_properties": [],
+                    "custom_int32_properties": [],
+                    "custom_loc_string_properties": [],
+                    "custom_pbgid_properties": [],
+                    "custom_physical_state_tree_reference_properties": [],
+                    "custom_reflected_enum_properties": [],
+                    "custom_squad_state_tree_reference_properties": [],
+                    "custom_vector3f_properties": []
                 }
             },
             "tank_trap_parent": {
@@ -5830,7 +6012,9 @@
                                     "instance_reference": ""
                                 },
                                 "replace_count": 0.0,
-                                "replace_retry_distance": 0.0
+                                "replace_retry_distance": 0.0,
+                                "column_count": 2.0,
+                                "row_count": 2.0
                             },
                             "placement_valid": {
                                 "instance_reference": "ui_rectangle/construction_placement_valid"
@@ -5852,7 +6036,7 @@
                                 "must_not_be_in_walkable_surfaces": "False",
                                 "must_be_on_strategic_point": "False",
                                 "requirements": [],
-                                "spacing_distance": 1.0,
+                                "spacing_distance": 1.2,
                                 "skip_impass_checks_and_ignore_immovable_entities": "False",
                                 "state_tree_conditions": "",
                                 "must_be_in_explored_area": "False",
@@ -5929,7 +6113,8 @@
                             "started_and_inactive_max_distance_from_builders": 25.0,
                             "too_light_to_destroy_built_over_entities": "True",
                             "default_facing_mode": "towards_enemy_base",
-                            "random_rotation_step": 0.0
+                            "random_rotation_step": 0.0,
+                            "block_pathing_only_on_construction_complete": "True"
                         }
                     },
                     {
@@ -5949,7 +6134,7 @@
                                     "requisition": 0.0,
                                     "ultimate": 0.0
                                 },
-                                "time_seconds": 12.0,
+                                "time_seconds": 9.0,
                                 "time_turns": 0.0,
                                 "builder_cost": {
                                     "action_points": 0.0
@@ -6152,7 +6337,9 @@
                             },
                             "target_selection_priority_by_owner": "none",
                             "turn_in_place_distance": 0.0,
-                            "bandbox_selection_priority_override": ""
+                            "bandbox_selection_priority_override": "",
+                            "decorator_visibility_statetree_node_condition": "",
+                            "selection_ui_visibility_statetree_node_condition": ""
                         }
                     },
                     {
@@ -6197,6 +6384,27 @@
                 "pbgid": 2164872.0,
                 "parent_pbg": {
                     "instance_reference": ""
+                },
+                "custom_properties": {
+                    "template_reference": {
+                        "name": "custom_properties",
+                        "value": "custom_property_template"
+                    },
+                    "child_custom_properties": [],
+                    "custom_bool_properties": [],
+                    "custom_deferred_entity_state_tree_reference_properties": [],
+                    "custom_entity_state_tree_reference_properties": [],
+                    "custom_enum_properties": [],
+                    "custom_float_properties": [],
+                    "custom_global_state_tree_reference_properties": [],
+                    "custom_hash_key_properties": [],
+                    "custom_int32_properties": [],
+                    "custom_loc_string_properties": [],
+                    "custom_pbgid_properties": [],
+                    "custom_physical_state_tree_reference_properties": [],
+                    "custom_reflected_enum_properties": [],
+                    "custom_squad_state_tree_reference_properties": [],
+                    "custom_vector3f_properties": []
                 }
             }
         }
@@ -6412,7 +6620,8 @@
                         "on_reach_max_health_entity_state_tree_ref": "",
                         "restore_hook_offsets": [],
                         "can_be_restored": "False",
-                        "can_be_damaged_by_ally_default_attack_allowed": "True"
+                        "can_be_damaged_by_ally_default_attack_allowed": "True",
+                        "can_be_targeted_by_ally": "False"
                     }
                 },
                 {
@@ -6692,7 +6901,9 @@
                         },
                         "target_selection_priority_by_owner": "none",
                         "turn_in_place_distance": 0.0,
-                        "bandbox_selection_priority_override": ""
+                        "bandbox_selection_priority_override": "",
+                        "decorator_visibility_statetree_node_condition": "",
+                        "selection_ui_visibility_statetree_node_condition": ""
                     }
                 },
                 {
@@ -7062,7 +7273,9 @@
                                 "instance_reference": ""
                             },
                             "replace_count": 0.0,
-                            "replace_retry_distance": 0.0
+                            "replace_retry_distance": 0.0,
+                            "column_count": 2.0,
+                            "row_count": 2.0
                         },
                         "placement_valid": {
                             "instance_reference": "ui_rectangle/construction_placement_valid"
@@ -7100,7 +7313,8 @@
                                         "in_supply": "True",
                                         "is_secured": "False",
                                         "is_secured_by_checkpoint": "False",
-                                        "not_in_transition": "False"
+                                        "not_in_transition": "False",
+                                        "relative_to_caster": "False"
                                     }
                                 }
                             ],
@@ -7181,7 +7395,8 @@
                         "started_and_inactive_max_distance_from_builders": 0.0,
                         "too_light_to_destroy_built_over_entities": "False",
                         "default_facing_mode": "towards_enemy_base",
-                        "random_rotation_step": 0.0
+                        "random_rotation_step": 0.0,
+                        "block_pathing_only_on_construction_complete": "False"
                     }
                 },
                 {
@@ -8467,6 +8682,27 @@
             "pbgid": 2164959.0,
             "parent_pbg": {
                 "instance_reference": ""
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "child_custom_properties": [],
+                "custom_bool_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "custom_float_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_int32_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_reflected_enum_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_vector3f_properties": []
             }
         }
     },
@@ -9223,7 +9459,9 @@
                         },
                         "target_selection_priority_by_owner": "none",
                         "turn_in_place_distance": 0.0,
-                        "bandbox_selection_priority_override": ""
+                        "bandbox_selection_priority_override": "",
+                        "decorator_visibility_statetree_node_condition": "",
+                        "selection_ui_visibility_statetree_node_condition": ""
                     }
                 },
                 {
@@ -9350,7 +9588,7 @@
                             "upgrade": 0.0,
                             "casualty": 0.0,
                             "vehicle_wreck": 0.0,
-                            "hold_weapon": 0.0
+                            "hold_weapon": 1.0
                         }
                     }
                 },
@@ -9397,11 +9635,40 @@
                         "animated_motion": "False",
                         "kill_if_landing_on_impass": "True"
                     }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\entity_dynamic_root_client_ext"
+                        }
+                    }
                 }
             ],
             "pbgid": 1284095.0,
             "parent_pbg": {
                 "instance_reference": "ebps/races/common/parent/infantry_parent"
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "child_custom_properties": [],
+                "custom_bool_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "custom_float_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_int32_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_reflected_enum_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_vector3f_properties": []
             }
         }
     },
@@ -9439,7 +9706,9 @@
                                     "instance_reference": ""
                                 },
                                 "replace_count": 0.0,
-                                "replace_retry_distance": 0.0
+                                "replace_retry_distance": 0.0,
+                                "column_count": 2.0,
+                                "row_count": 2.0
                             },
                             "placement_valid": {
                                 "instance_reference": "ui_rectangle/construction_placement_valid"
@@ -9538,7 +9807,8 @@
                             "started_and_inactive_max_distance_from_builders": 0.0,
                             "too_light_to_destroy_built_over_entities": "False",
                             "default_facing_mode": "towards_enemy_base",
-                            "random_rotation_step": 0.0
+                            "random_rotation_step": 0.0,
+                            "block_pathing_only_on_construction_complete": "False"
                         }
                     },
                     {
@@ -9949,7 +10219,9 @@
                             },
                             "target_selection_priority_by_owner": "none",
                             "turn_in_place_distance": 0.0,
-                            "bandbox_selection_priority_override": ""
+                            "bandbox_selection_priority_override": "",
+                            "decorator_visibility_statetree_node_condition": "",
+                            "selection_ui_visibility_statetree_node_condition": ""
                         }
                     },
                     {
@@ -10089,6 +10361,27 @@
                 "pbgid": 208581.0,
                 "parent_pbg": {
                     "instance_reference": ""
+                },
+                "custom_properties": {
+                    "template_reference": {
+                        "name": "custom_properties",
+                        "value": "custom_property_template"
+                    },
+                    "child_custom_properties": [],
+                    "custom_bool_properties": [],
+                    "custom_deferred_entity_state_tree_reference_properties": [],
+                    "custom_entity_state_tree_reference_properties": [],
+                    "custom_enum_properties": [],
+                    "custom_float_properties": [],
+                    "custom_global_state_tree_reference_properties": [],
+                    "custom_hash_key_properties": [],
+                    "custom_int32_properties": [],
+                    "custom_loc_string_properties": [],
+                    "custom_pbgid_properties": [],
+                    "custom_physical_state_tree_reference_properties": [],
+                    "custom_reflected_enum_properties": [],
+                    "custom_squad_state_tree_reference_properties": [],
+                    "custom_vector3f_properties": []
                 }
             }
         },
@@ -10125,7 +10418,9 @@
                                     "instance_reference": ""
                                 },
                                 "replace_count": 0.0,
-                                "replace_retry_distance": 0.0
+                                "replace_retry_distance": 0.0,
+                                "column_count": 2.0,
+                                "row_count": 2.0
                             },
                             "placement_valid": {
                                 "instance_reference": ""
@@ -10224,7 +10519,8 @@
                             "started_and_inactive_max_distance_from_builders": 0.0,
                             "too_light_to_destroy_built_over_entities": "False",
                             "default_facing_mode": "towards_enemy_base",
-                            "random_rotation_step": 0.0
+                            "random_rotation_step": 0.0,
+                            "block_pathing_only_on_construction_complete": "False"
                         }
                     },
                     {
@@ -11133,6 +11429,27 @@
                 "pbgid": 2152972.0,
                 "parent_pbg": {
                     "instance_reference": "ebps/races/american/vehicles/higgins_boat_us"
+                },
+                "custom_properties": {
+                    "template_reference": {
+                        "name": "custom_properties",
+                        "value": "custom_property_template"
+                    },
+                    "child_custom_properties": [],
+                    "custom_bool_properties": [],
+                    "custom_deferred_entity_state_tree_reference_properties": [],
+                    "custom_entity_state_tree_reference_properties": [],
+                    "custom_enum_properties": [],
+                    "custom_float_properties": [],
+                    "custom_global_state_tree_reference_properties": [],
+                    "custom_hash_key_properties": [],
+                    "custom_int32_properties": [],
+                    "custom_loc_string_properties": [],
+                    "custom_pbgid_properties": [],
+                    "custom_physical_state_tree_reference_properties": [],
+                    "custom_reflected_enum_properties": [],
+                    "custom_squad_state_tree_reference_properties": [],
+                    "custom_vector3f_properties": []
                 }
             },
             "higgins_boat_stationary": {
@@ -11167,7 +11484,9 @@
                                     "instance_reference": ""
                                 },
                                 "replace_count": 0.0,
-                                "replace_retry_distance": 0.0
+                                "replace_retry_distance": 0.0,
+                                "column_count": 2.0,
+                                "row_count": 2.0
                             },
                             "placement_valid": {
                                 "instance_reference": ""
@@ -11266,7 +11585,8 @@
                             "started_and_inactive_max_distance_from_builders": 0.0,
                             "too_light_to_destroy_built_over_entities": "False",
                             "default_facing_mode": "towards_enemy_base",
-                            "random_rotation_step": 0.0
+                            "random_rotation_step": 0.0,
+                            "block_pathing_only_on_construction_complete": "False"
                         }
                     },
                     {
@@ -12175,6 +12495,27 @@
                 "pbgid": 2153633.0,
                 "parent_pbg": {
                     "instance_reference": "ebps/races/common/missions/vehicles/higgins_boat_hold"
+                },
+                "custom_properties": {
+                    "template_reference": {
+                        "name": "custom_properties",
+                        "value": "custom_property_template"
+                    },
+                    "child_custom_properties": [],
+                    "custom_bool_properties": [],
+                    "custom_deferred_entity_state_tree_reference_properties": [],
+                    "custom_entity_state_tree_reference_properties": [],
+                    "custom_enum_properties": [],
+                    "custom_float_properties": [],
+                    "custom_global_state_tree_reference_properties": [],
+                    "custom_hash_key_properties": [],
+                    "custom_int32_properties": [],
+                    "custom_loc_string_properties": [],
+                    "custom_pbgid_properties": [],
+                    "custom_physical_state_tree_reference_properties": [],
+                    "custom_reflected_enum_properties": [],
+                    "custom_squad_state_tree_reference_properties": [],
+                    "custom_vector3f_properties": []
                 }
             },
             "sherman_po": {
@@ -12591,7 +12932,9 @@
                             },
                             "target_selection_priority_by_owner": "none",
                             "turn_in_place_distance": 0.0,
-                            "bandbox_selection_priority_override": ""
+                            "bandbox_selection_priority_override": "",
+                            "decorator_visibility_statetree_node_condition": "",
+                            "selection_ui_visibility_statetree_node_condition": ""
                         }
                     },
                     {
@@ -13725,6 +14068,27 @@
                 "pbgid": 2081684.0,
                 "parent_pbg": {
                     "instance_reference": "ebps/races/british/vehicles/sherman_uk"
+                },
+                "custom_properties": {
+                    "template_reference": {
+                        "name": "custom_properties",
+                        "value": "custom_property_template"
+                    },
+                    "child_custom_properties": [],
+                    "custom_bool_properties": [],
+                    "custom_deferred_entity_state_tree_reference_properties": [],
+                    "custom_entity_state_tree_reference_properties": [],
+                    "custom_enum_properties": [],
+                    "custom_float_properties": [],
+                    "custom_global_state_tree_reference_properties": [],
+                    "custom_hash_key_properties": [],
+                    "custom_int32_properties": [],
+                    "custom_loc_string_properties": [],
+                    "custom_pbgid_properties": [],
+                    "custom_physical_state_tree_reference_properties": [],
+                    "custom_reflected_enum_properties": [],
+                    "custom_squad_state_tree_reference_properties": [],
+                    "custom_vector3f_properties": []
                 }
             }
         }
@@ -14253,7 +14617,9 @@
                         },
                         "target_selection_priority_by_owner": "none",
                         "turn_in_place_distance": 0.0,
-                        "bandbox_selection_priority_override": ""
+                        "bandbox_selection_priority_override": "",
+                        "decorator_visibility_statetree_node_condition": "",
+                        "selection_ui_visibility_statetree_node_condition": ""
                     }
                 },
                 {
@@ -14380,7 +14746,7 @@
                             "upgrade": 0.0,
                             "casualty": 0.0,
                             "vehicle_wreck": 0.0,
-                            "hold_weapon": 0.0
+                            "hold_weapon": 1.0
                         }
                     }
                 },
@@ -14427,11 +14793,40 @@
                         "animated_motion": "True",
                         "kill_if_landing_on_impass": "True"
                     }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\entity_dynamic_root_client_ext"
+                        }
+                    }
                 }
             ],
             "pbgid": 2104698.0,
             "parent_pbg": {
                 "instance_reference": ""
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "child_custom_properties": [],
+                "custom_bool_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "custom_float_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_int32_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_reflected_enum_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_vector3f_properties": []
             }
         },
         "loiter_plane_parent": {
@@ -14793,7 +15188,9 @@
                         },
                         "target_selection_priority_by_owner": "none",
                         "turn_in_place_distance": 0.0,
-                        "bandbox_selection_priority_override": ""
+                        "bandbox_selection_priority_override": "",
+                        "decorator_visibility_statetree_node_condition": "",
+                        "selection_ui_visibility_statetree_node_condition": ""
                     }
                 },
                 {
@@ -15105,6 +15502,27 @@
             "pbgid": 2146552.0,
             "parent_pbg": {
                 "instance_reference": ""
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "child_custom_properties": [],
+                "custom_bool_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "custom_float_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_int32_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_reflected_enum_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_vector3f_properties": []
             }
         },
         "strafe_plane_parent": {
@@ -15466,7 +15884,9 @@
                         },
                         "target_selection_priority_by_owner": "none",
                         "turn_in_place_distance": 0.0,
-                        "bandbox_selection_priority_override": ""
+                        "bandbox_selection_priority_override": "",
+                        "decorator_visibility_statetree_node_condition": "",
+                        "selection_ui_visibility_statetree_node_condition": ""
                     }
                 },
                 {
@@ -15778,6 +16198,27 @@
             "pbgid": 2146553.0,
             "parent_pbg": {
                 "instance_reference": ""
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "child_custom_properties": [],
+                "custom_bool_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "custom_float_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_int32_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_reflected_enum_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_vector3f_properties": []
             }
         },
         "vehicle_parent": {
@@ -16173,7 +16614,9 @@
                         },
                         "target_selection_priority_by_owner": "none",
                         "turn_in_place_distance": 0.0,
-                        "bandbox_selection_priority_override": "medium"
+                        "bandbox_selection_priority_override": "medium",
+                        "decorator_visibility_statetree_node_condition": "",
+                        "selection_ui_visibility_statetree_node_condition": ""
                     }
                 },
                 {
@@ -16480,6 +16923,27 @@
             "pbgid": 2104281.0,
             "parent_pbg": {
                 "instance_reference": ""
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "child_custom_properties": [],
+                "custom_bool_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "custom_float_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_int32_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_reflected_enum_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_vector3f_properties": []
             }
         }
     },
@@ -17124,7 +17588,9 @@
                         },
                         "target_selection_priority_by_owner": "none",
                         "turn_in_place_distance": 3.0,
-                        "bandbox_selection_priority_override": ""
+                        "bandbox_selection_priority_override": "",
+                        "decorator_visibility_statetree_node_condition": "",
+                        "selection_ui_visibility_statetree_node_condition": ""
                     }
                 },
                 {
@@ -17656,6 +18122,27 @@
             "pbgid": 2158502.0,
             "parent_pbg": {
                 "instance_reference": ""
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "child_custom_properties": [],
+                "custom_bool_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "custom_float_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_int32_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_reflected_enum_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_vector3f_properties": []
             }
         }
     },
@@ -18078,7 +18565,9 @@
                         },
                         "target_selection_priority_by_owner": "none",
                         "turn_in_place_distance": 0.0,
-                        "bandbox_selection_priority_override": "medium"
+                        "bandbox_selection_priority_override": "medium",
+                        "decorator_visibility_statetree_node_condition": "",
+                        "selection_ui_visibility_statetree_node_condition": ""
                     }
                 },
                 {
@@ -19404,6 +19893,27 @@
             "pbgid": 2146778.0,
             "parent_pbg": {
                 "instance_reference": "ebps/races/common/parent/vehicle_parent"
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "child_custom_properties": [],
+                "custom_bool_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "custom_float_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_int32_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_reflected_enum_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_vector3f_properties": []
             }
         },
         "crew": {
@@ -19934,7 +20444,9 @@
                             },
                             "target_selection_priority_by_owner": "none",
                             "turn_in_place_distance": 0.0,
-                            "bandbox_selection_priority_override": ""
+                            "bandbox_selection_priority_override": "",
+                            "decorator_visibility_statetree_node_condition": "",
+                            "selection_ui_visibility_statetree_node_condition": ""
                         }
                     },
                     {
@@ -20061,7 +20573,7 @@
                                 "upgrade": 0.0,
                                 "casualty": 0.0,
                                 "vehicle_wreck": 0.0,
-                                "hold_weapon": 0.0
+                                "hold_weapon": 1.0
                             }
                         }
                     },
@@ -20108,11 +20620,40 @@
                             "animated_motion": "True",
                             "kill_if_landing_on_impass": "True"
                         }
+                    },
+                    {
+                        "exts": {
+                            "template_reference": {
+                                "name": "exts",
+                                "value": "ebpextensions\\entity_dynamic_root_client_ext"
+                            }
+                        }
                     }
                 ],
                 "pbgid": 2145702.0,
                 "parent_pbg": {
                     "instance_reference": "ebps/races/common/parent/infantry_parent"
+                },
+                "custom_properties": {
+                    "template_reference": {
+                        "name": "custom_properties",
+                        "value": "custom_property_template"
+                    },
+                    "child_custom_properties": [],
+                    "custom_bool_properties": [],
+                    "custom_deferred_entity_state_tree_reference_properties": [],
+                    "custom_entity_state_tree_reference_properties": [],
+                    "custom_enum_properties": [],
+                    "custom_float_properties": [],
+                    "custom_global_state_tree_reference_properties": [],
+                    "custom_hash_key_properties": [],
+                    "custom_int32_properties": [],
+                    "custom_loc_string_properties": [],
+                    "custom_pbgid_properties": [],
+                    "custom_physical_state_tree_reference_properties": [],
+                    "custom_reflected_enum_properties": [],
+                    "custom_squad_state_tree_reference_properties": [],
+                    "custom_vector3f_properties": []
                 }
             }
         }
@@ -20542,7 +21083,9 @@
                         },
                         "target_selection_priority_by_owner": "none",
                         "turn_in_place_distance": 0.0,
-                        "bandbox_selection_priority_override": ""
+                        "bandbox_selection_priority_override": "",
+                        "decorator_visibility_statetree_node_condition": "",
+                        "selection_ui_visibility_statetree_node_condition": ""
                     }
                 },
                 {
@@ -20751,6 +21294,27 @@
             "pbgid": 2146452.0,
             "parent_pbg": {
                 "instance_reference": ""
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "child_custom_properties": [],
+                "custom_bool_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "custom_float_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_int32_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_reflected_enum_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_vector3f_properties": []
             }
         },
         "w_construction_barbed_wire": {
@@ -20798,6 +21362,27 @@
             "pbgid": 2076862.0,
             "parent_pbg": {
                 "instance_reference": ""
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "child_custom_properties": [],
+                "custom_bool_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "custom_float_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_int32_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_reflected_enum_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_vector3f_properties": []
             }
         },
         "w_construction_british_shrapnel_mine": {
@@ -20845,6 +21430,27 @@
             "pbgid": 2161331.0,
             "parent_pbg": {
                 "instance_reference": ""
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "child_custom_properties": [],
+                "custom_bool_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "custom_float_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_int32_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_reflected_enum_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_vector3f_properties": []
             }
         },
         "w_construction_demo": {
@@ -20892,6 +21498,27 @@
             "pbgid": 2018741.0,
             "parent_pbg": {
                 "instance_reference": ""
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "child_custom_properties": [],
+                "custom_bool_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "custom_float_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_int32_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_reflected_enum_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_vector3f_properties": []
             }
         },
         "w_construction_landmine": {
@@ -20939,6 +21566,27 @@
             "pbgid": 205358.0,
             "parent_pbg": {
                 "instance_reference": ""
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "child_custom_properties": [],
+                "custom_bool_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "custom_float_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_int32_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_reflected_enum_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_vector3f_properties": []
             }
         },
         "w_construction_landmine_dak": {
@@ -20986,6 +21634,27 @@
             "pbgid": 2157705.0,
             "parent_pbg": {
                 "instance_reference": ""
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "child_custom_properties": [],
+                "custom_bool_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "custom_float_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_int32_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_reflected_enum_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_vector3f_properties": []
             }
         },
         "w_construction_landmine_german": {
@@ -21033,6 +21702,27 @@
             "pbgid": 2063011.0,
             "parent_pbg": {
                 "instance_reference": ""
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "child_custom_properties": [],
+                "custom_bool_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "custom_float_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_int32_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_reflected_enum_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_vector3f_properties": []
             }
         },
         "w_construction_m1_mine": {
@@ -21080,6 +21770,27 @@
             "pbgid": 2157708.0,
             "parent_pbg": {
                 "instance_reference": ""
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "child_custom_properties": [],
+                "custom_bool_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "custom_float_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_int32_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_reflected_enum_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_vector3f_properties": []
             }
         },
         "w_construction_m6_at_mine": {
@@ -21127,6 +21838,95 @@
             "pbgid": 2157709.0,
             "parent_pbg": {
                 "instance_reference": ""
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "child_custom_properties": [],
+                "custom_bool_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "custom_float_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_int32_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_reflected_enum_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_vector3f_properties": []
+            }
+        },
+        "w_construction_minefield": {
+            "extensions": [
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\weapon_ext"
+                        },
+                        "weapon": {
+                            "instance_reference": "weapon/common/dummy_construction_barbed_wire"
+                        }
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\attachment_child_ext"
+                        },
+                        "on_attach": {
+                            "template_reference": {
+                                "name": "on_attach",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": "weapon_attach"
+                        },
+                        "on_detach": {
+                            "template_reference": {
+                                "name": "on_detach",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": "weapon_detach"
+                        },
+                        "requires_attachment_dynamics": "False",
+                        "tracking_affects_transformation_when_setup": "True",
+                        "rotation_rate_degrees_per_second_signed_dca_key": "",
+                        "output_dca_to_parent": "False",
+                        "dca_vertical_degrees_offset": 0.0,
+                        "horizontal_angle_limits_only_apply_when_setup": "False"
+                    }
+                }
+            ],
+            "pbgid": 2164917.0,
+            "parent_pbg": {
+                "instance_reference": ""
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "child_custom_properties": [],
+                "custom_bool_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "custom_float_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_int32_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_reflected_enum_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_vector3f_properties": []
             }
         },
         "w_construction_modified_gs_mine": {
@@ -21174,6 +21974,27 @@
             "pbgid": 2157711.0,
             "parent_pbg": {
                 "instance_reference": ""
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "child_custom_properties": [],
+                "custom_bool_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "custom_float_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_int32_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_reflected_enum_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_vector3f_properties": []
             }
         },
         "w_construction_sandbag": {
@@ -21221,6 +22042,27 @@
             "pbgid": 205359.0,
             "parent_pbg": {
                 "instance_reference": ""
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "child_custom_properties": [],
+                "custom_bool_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "custom_float_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_int32_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_reflected_enum_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_vector3f_properties": []
             }
         },
         "w_construction_schumine": {
@@ -21268,6 +22110,27 @@
             "pbgid": 2130137.0,
             "parent_pbg": {
                 "instance_reference": ""
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "child_custom_properties": [],
+                "custom_bool_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "custom_float_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_int32_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_reflected_enum_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_vector3f_properties": []
             }
         },
         "w_construction_shovel": {
@@ -21315,6 +22178,27 @@
             "pbgid": 205357.0,
             "parent_pbg": {
                 "instance_reference": ""
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "child_custom_properties": [],
+                "custom_bool_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "custom_float_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_int32_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_reflected_enum_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_vector3f_properties": []
             }
         },
         "w_construction_teller_mine": {
@@ -21362,6 +22246,27 @@
             "pbgid": 2157710.0,
             "parent_pbg": {
                 "instance_reference": ""
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "child_custom_properties": [],
+                "custom_bool_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "custom_float_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_int32_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_reflected_enum_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_vector3f_properties": []
             }
         },
         "w_construction_welding_gear": {
@@ -21409,6 +22314,27 @@
             "pbgid": 210177.0,
             "parent_pbg": {
                 "instance_reference": ""
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "child_custom_properties": [],
+                "custom_bool_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "custom_float_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_int32_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_reflected_enum_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_vector3f_properties": []
             }
         },
         "w_construction_wire_cutters": {
@@ -21456,6 +22382,27 @@
             "pbgid": 2082647.0,
             "parent_pbg": {
                 "instance_reference": "ebps/races/common/weapons/w_construction_shovel"
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "child_custom_properties": [],
+                "custom_bool_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "custom_float_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_int32_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_reflected_enum_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_vector3f_properties": []
             }
         },
         "missions": {
@@ -21506,6 +22453,27 @@
                         "pbgid": 2082027.0,
                         "parent_pbg": {
                             "instance_reference": "ebps/races/british/weapons/ballistic_weapon/tank_gun/w_75mm_sherman_uk"
+                        },
+                        "custom_properties": {
+                            "template_reference": {
+                                "name": "custom_properties",
+                                "value": "custom_property_template"
+                            },
+                            "child_custom_properties": [],
+                            "custom_bool_properties": [],
+                            "custom_deferred_entity_state_tree_reference_properties": [],
+                            "custom_entity_state_tree_reference_properties": [],
+                            "custom_enum_properties": [],
+                            "custom_float_properties": [],
+                            "custom_global_state_tree_reference_properties": [],
+                            "custom_hash_key_properties": [],
+                            "custom_int32_properties": [],
+                            "custom_loc_string_properties": [],
+                            "custom_pbgid_properties": [],
+                            "custom_physical_state_tree_reference_properties": [],
+                            "custom_reflected_enum_properties": [],
+                            "custom_squad_state_tree_reference_properties": [],
+                            "custom_vector3f_properties": []
                         }
                     }
                 }
@@ -21541,6 +22509,27 @@
                         "pbgid": 610471.0,
                         "parent_pbg": {
                             "instance_reference": ""
+                        },
+                        "custom_properties": {
+                            "template_reference": {
+                                "name": "custom_properties",
+                                "value": "custom_property_template"
+                            },
+                            "child_custom_properties": [],
+                            "custom_bool_properties": [],
+                            "custom_deferred_entity_state_tree_reference_properties": [],
+                            "custom_entity_state_tree_reference_properties": [],
+                            "custom_enum_properties": [],
+                            "custom_float_properties": [],
+                            "custom_global_state_tree_reference_properties": [],
+                            "custom_hash_key_properties": [],
+                            "custom_int32_properties": [],
+                            "custom_loc_string_properties": [],
+                            "custom_pbgid_properties": [],
+                            "custom_physical_state_tree_reference_properties": [],
+                            "custom_reflected_enum_properties": [],
+                            "custom_squad_state_tree_reference_properties": [],
+                            "custom_vector3f_properties": []
                         }
                     }
                 }

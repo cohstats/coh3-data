@@ -1,7 +1,7 @@
 {
     "ability_bag": {
-        "activation": "targeted",
-        "can_target_in_fow": "True",
+        "activation": "toggle",
+        "can_target_in_fow": "False",
         "caster_close_in_distance": 0.0,
         "casters_can_evacuate": "False",
         "cost_to_player": {
@@ -18,74 +18,74 @@
         "cursor_ghost_blueprint_angle": 0.0,
         "disable_combat": "False",
         "disable_when_active": "False",
-        "enable_in_building": "False",
-        "enable_in_vehicle": "False",
+        "enable_in_building": "True",
+        "enable_in_vehicle": "True",
         "engage_combat": "False",
-        "entity_busy_time": 0.0,
+        "entity_busy_time": 1.0,
         "facing_angle": 5.0,
-        "facing_ignore": "False",
+        "facing_ignore": "True",
         "final_close_in_distance": 0.0,
         "fire_and_forget": "False",
         "garrison_target": "False",
         "initial_recharge": "False",
         "move_back": "False",
         "move_back_distance": 10.0,
-        "range": 20.0,
-        "range_ignore": "False",
-        "recharge_time": 10.0,
+        "range": 0.0,
+        "range_ignore": "True",
+        "recharge_time": 0.0,
         "refundable": "True",
         "require_no_shot_block": "False",
-        "shared_timer": "shared_ability_1",
+        "shared_timer": "",
         "shared_timer_player_wide": "False",
-        "squad_caster": "one_entity",
-        "target": "tp_position",
+        "squad_caster": "squad",
+        "target": "tp_any",
         "toggled_recharge_time_off": 0.0,
         "toggled_recharge_time_on": 0.0,
         "ui_cursor": {
-            "cursor_bad": "modal_ability_cancel",
-            "cursor_good": "modal_ability",
-            "cursor_nonmodal_good": "modal_ability"
+            "cursor_bad": "",
+            "cursor_good": "",
+            "cursor_nonmodal_good": ""
         },
         "ui_info": {
             "extra_text": {
                 "locstring": {
                     "name": "extra_text",
-                    "value": "11226461"
+                    "value": "0"
                 }
             },
             "help_text": {
                 "locstring": {
                     "name": "help_text",
-                    "value": "11226460"
+                    "value": "11248348"
                 }
             },
-            "hotkey_name": "W",
-            "icon_name": "common/upgrades/grenade_riflemen_us",
+            "hotkey_name": "S",
+            "icon_name": "races/common/abilities/focus_vehicle_disabled",
             "overlay_name": "",
             "reveal_for_decryption": "False",
             "screen_name": {
                 "locstring": {
                     "name": "screen_name",
-                    "value": "11154319"
+                    "value": "11155111"
                 }
             },
-            "icon_alternate_name": "",
+            "icon_alternate_name": "races/common/abilities/focus_vehicle_enabled",
             "brief_text": {
                 "locstring": {
                     "name": "brief_text",
-                    "value": "11152200"
+                    "value": "11248352"
                 }
             },
             "help_text_alternate": {
                 "locstring": {
                     "name": "help_text_alternate",
-                    "value": "0"
+                    "value": "11248354"
                 }
             },
             "screen_name_alternate": {
                 "locstring": {
                     "name": "screen_name_alternate",
-                    "value": "0"
+                    "value": "11184469"
                 }
             },
             "screen_name_short": {
@@ -150,11 +150,39 @@
             }
         },
         "validate_actions": "True",
-        "requirements": [],
+        "requirements": [
+            {
+                "required": {
+                    "template_reference": {
+                        "name": "required",
+                        "value": "requirements\\required_squad_upgrade"
+                    },
+                    "include_completed": "True",
+                    "include_pbg_parenting": {
+                        "include_child_pbgs": "False",
+                        "include_parent_pbgs": "False"
+                    },
+                    "include_queued": "False",
+                    "is_present": "True",
+                    "max_completed": 100.0,
+                    "min_completed": 1.0,
+                    "reason": "usage_and_display",
+                    "ui_name": {
+                        "locstring": {
+                            "name": "ui_name",
+                            "value": "0"
+                        }
+                    },
+                    "upgrade_name": {
+                        "instance_reference": ""
+                    }
+                }
+            }
+        ],
         "ability_super": "tp_none",
         "ui_position": {
-            "ui_position_row": 3.0,
-            "ui_position_column": 1.0
+            "ui_position_row": 2.0,
+            "ui_position_column": 3.0
         },
         "ui_mini_map_capture": "False",
         "facing_ignore_during_active": "False",
@@ -178,7 +206,7 @@
             "map_sector": "False",
             "map_sector_hq_link_extender": "False"
         },
-        "ui_group_cast_type": "single",
+        "ui_group_cast_type": "multi",
         "requirements_target": [],
         "targeted_ability_option": {
             "template_reference": {
@@ -213,7 +241,7 @@
                 "value": "options\\none"
             }
         },
-        "can_be_interrupted": "True",
+        "can_be_interrupted": "False",
         "casting_option": {
             "template_reference": {
                 "name": "casting_option",
@@ -239,19 +267,19 @@
         },
         "statetree_ability_id": "",
         "construction_preview": "False",
-        "entity_tree": "",
-        "squad_tree": "",
-        "ability_active_state_tree_group": {
-            "ability_activate_squad_tree": "ability_throw_grenade_squad",
-            "ability_activate_entity_tree": "ability_throw_grenade_entity",
-            "ability_activate_deferred_tree": ""
-        },
         "statetree_node_prereq_self_requirement": "",
         "statetree_node_prereq_target_requirement": "",
         "statetree_node_prereq_self_recharge_requirement": "",
+        "entity_tree": "ability_prioritize_vehicles_entity",
+        "squad_tree": "ability_prioritize_vehicles_squad",
+        "ability_active_state_tree_group": {
+            "ability_activate_squad_tree": "",
+            "ability_activate_entity_tree": "",
+            "ability_activate_deferred_tree": ""
+        },
         "hold_period": 0.0,
-        "min_range": 5.0,
         "clear_ability_on_blueprint_conversion": "True",
+        "min_range": 0.0,
         "ability_description": {
             "instance_reference": ""
         },
@@ -308,7 +336,7 @@
             "HACK_queue_targeted_player_ability_activation_if_already_active": "False",
             "HACK_check_ability_cost_on_can_use_query_even_if_already_charged": "False"
         },
-        "toggled_dectivate_on_failed_requirements": "True",
+        "toggled_dectivate_on_failed_requirements": "False",
         "min_shot_blocker_height": 0.0,
         "statetree_node_prereq_default_command_prioritize_as_success": {
             "statetree_node_self": "",
@@ -320,9 +348,9 @@
         "show_movement_node_pathing_preview": "True",
         "active_range_bonus": 0.0
     },
-    "pbgid": 165228.0,
+    "pbgid": 2165878.0,
     "parent_pbg": {
-        "instance_reference": ""
+        "instance_reference": "abilities/prioritize_vehicles"
     },
     "custom_properties": {
         "template_reference": {

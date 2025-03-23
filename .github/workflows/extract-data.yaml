@@ -1,0 +1,212 @@
+name: COH3 Data Extraction
+
+on:
+  workflow_dispatch: # Manual trigger
+
+jobs:
+  extract_coh3_data:
+    name: Check COH3 Version
+    runs-on: windows-latest # Using Windows runner to handle Windows executables
+    timeout-minutes: 120 # Add a timeout for the entire job
+
+    env:
+      STEAM_USERNAME: ${{ secrets.STEAM_USERNAME }}
+      STEAM_PASSWORD: ${{ secrets.STEAM_PASSWORD }}
+      COH3_APP_ID: 1677280
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create SteamCMD directory
+        run: mkdir -p steamcmd
+        shell: bash
+
+      - name: Download SteamCMD
+        run: |
+          Invoke-WebRequest -Uri "https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip" -OutFile "steamcmd.zip"
+          Expand-Archive -Path "steamcmd.zip" -DestinationPath "steamcmd" -Force
+        shell: pwsh
+
+      - name: Create game directory
+        run: mkdir -p coh3
+        shell: bash
+
+      - name: Initialize SteamCMD
+        run: |
+          .\steamcmd\steamcmd.exe +quit
+        shell: pwsh
+        continue-on-error: true
+        timeout-minutes: 2
+
+      - name: Download COH3 using SteamCMD with direct command
+        id: direct_download
+        timeout-minutes: 60 # Add a timeout for this step
+        run: |
+          # Use direct command line approach with all parameters - force_install_dir BEFORE login
+          .\steamcmd\steamcmd.exe +@NoPromptForPassword 1 +@ShutdownOnFailedCommand 1 +force_install_dir ./coh3 +login $env:STEAM_USERNAME $env:STEAM_PASSWORD +app_update $env:COH3_APP_ID validate +quit
+        shell: pwsh
+
+      - name: List SteamCMD logs
+        run: |
+          echo "SteamCMD logs:"
+          if (Test-Path "steamcmd\logs") {
+            Get-ChildItem -Path "steamcmd\logs" -Recurse | ForEach-Object {
+              echo "Log file: $($_.FullName)"
+              Get-Content $_.FullName
+            }
+          } else {
+            echo "No logs directory found"
+          }
+        shell: pwsh
+        continue-on-error: true
+
+      - name: Check RelicCoH3.exe
+        id: check_exe
+        run: |
+          # Direct path to the executable
+          $exePath = ".\steamcmd\coh3\RelicCoH3.exe"
+          if (Test-Path $exePath) {
+            echo "EXE_EXISTS=true" >> $env:GITHUB_OUTPUT
+            echo "RelicCoH3.exe found at the expected location"
+          } else {
+            echo "EXE_EXISTS=false" >> $env:GITHUB_OUTPUT
+            echo "RelicCoH3.exe not found at the expected location"
+          }
+        shell: pwsh
+
+      - name: Get COH3 Version
+        id: get_version
+        if: steps.check_exe.outputs.EXE_EXISTS == 'true'
+        run: |
+          $exePath = ".\steamcmd\coh3\RelicCoH3.exe"
+          $versionInfo = (Get-Item $exePath).VersionInfo
+          $fileVersion = $versionInfo.FileVersion
+          echo "COH3_VERSION=$fileVersion" >> $env:GITHUB_OUTPUT
+          echo "COH3 Version: $fileVersion"
+
+          # Extract minor version using regex
+          if ($fileVersion -match '(\d+)\.(\d+)\.(\d+)\.(\d+)') {
+            $minorVersion = $matches[3]
+            echo "COH3_MINOR_VERSION=$minorVersion" >> $env:GITHUB_OUTPUT
+            echo "COH3 Minor Version: $minorVersion"
+          } else {
+            echo "Failed to extract minor version from $fileVersion"
+          }
+        shell: pwsh
+
+      - name: Extract and Run COH3-SGA-Extraction
+        if: steps.check_exe.outputs.EXE_EXISTS == 'true'
+        run: |
+          # Extract the SGA extraction tool
+          Expand-Archive -Path "tools/COH3-SGA-Extraction.zip" -DestinationPath "tools/COH3-SGA-Extraction" -Force
+          
+          # Create output directory
+          New-Item -Path "locale" -ItemType Directory -Force
+          
+          # Process each locale file
+          $localeFiles = @(
+            @{sga="LocaleEnglish.sga"; out="locale/en/anvil.en.ucs"},
+            @{sga="LocaleFrench.sga"; out="locale/fr/anvil.fr.ucs"},
+            @{sga="LocaleGerman.sga"; out="locale/de/anvil.de.ucs"},
+            @{sga="LocaleItalian.sga"; out="locale/it/anvil.it.ucs"},
+            @{sga="LocaleJapanese.sga"; out="locale/ja/anvil.ja.ucs"},
+            @{sga="LocaleKorean.sga"; out="locale/ko/anvil.ko.ucs"},
+            @{sga="LocalePolish.sga"; out="locale/pl/anvil.pl.ucs"},
+            @{sga="LocalePortugueseBrazil.sga"; out="locale/pt-br/anvil.pt.ucs"},
+            @{sga="LocaleSimplifiedChinese.sga"; out="locale/zh-hans/anvil.zh.ucs"},
+            @{sga="LocaleSpanish.sga"; out="locale/es/anvil.es.ucs"},
+            @{sga="LocaleTraditionalChinese.sga"; out="locale/zh-hant/anvil.zh.ucs"},
+            @{sga="LocaleTurkish.sga"; out="locale/tr/anvil.tr.ucs"},
+            @{sga="LocaleCzech.sga"; out="locale/cs/anvil.cs.ucs"}
+          )
+          
+          foreach ($locale in $localeFiles) {
+            $sgaPath = ".\steamcmd\coh3\anvil\archives\$($locale.sga)"
+            if (Test-Path $sgaPath) {
+              $outDir = Split-Path $locale.out -Parent
+              New-Item -Path $outDir -ItemType Directory -Force
+              Write-Host "Processing $($locale.sga)..."
+              & ".\tools\COH3-SGA-Extraction\COH3-SGA-Extraction.exe" $sgaPath $locale.out
+            } else {
+              Write-Host "Warning: $sgaPath not found"
+            }
+          }
+        shell: pwsh
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Process UCS files to JSON
+        run: |
+          $locales = @(
+            "en",
+            "fr",
+            "de",
+            "it",
+            "ja",
+            "ko",
+            "pl",
+            "pt-br",
+            "zh-hans",
+            "es",
+            "zh-hant",
+            "tr",
+            "cs"
+          )
+          
+          foreach ($locale in $locales) {
+            $ucsFile = ".\tools\anvil.$locale.ucs"
+            if (Test-Path $ucsFile) {
+              Write-Host "Converting $ucsFile to JSON..."
+              python .\scripts\ucs-to-json.py $ucsFile
+            } else {
+              Write-Host "Warning: $ucsFile not found"
+            }
+          }
+        shell: pwsh
+
+      - name: Setup GitHub CLI
+        if: steps.check_config.outputs.CONFIG_NEEDS_UPDATE == 'true'
+        run: |
+          choco install gh -y
+        shell: pwsh
+
+      - name: Create new branch and commit changes
+        if: steps.check_config.outputs.CONFIG_NEEDS_UPDATE == 'true'
+        run: |
+          # Configure git
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+
+          # Create new branch with timestamp
+          $BRANCH_NAME="data-updates-version-${{ steps.get_version.outputs.COH3_MINOR_VERSION }}"
+          git checkout -b $BRANCH_NAME
+
+          # Add and commit changes
+          git add data/locales/*.json
+
+          # Commit changes
+          git commit -m "feat: update game data to version ${{ steps.get_version.outputs.COH3_MINOR_VERSION }}
+
+          - Added new locale data files"
+
+          # Push the new branch
+          git push origin $BRANCH_NAME
+
+          # Create a pull request using GitHub CLI
+          gh pr create --title "Update game data to version ${{ steps.get_version.outputs.COH3_MINOR_VERSION }}" `
+                      --body "This PR updates the game data files with the latest localization from version ${{ steps.get_version.outputs.COH3_MINOR_VERSION }}.
+
+                      Changes:
+                      - Added new localization files in data/locales/
+                      - Generated JSON files for all supported languages
+                      
+                      This update was automatically generated by the COH3 Data Extraction workflow based on the latest version of RelicCoH3.exe." `
+                      --base master `
+                      --head $BRANCH_NAME
+        shell: pwsh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -3,6 +3,7 @@ Works just for the langauge files.
 
 Extraction tool for the locale files 
 
+```
 COH3-SGA-Extraction.exe LocaleEnglish.sga locale/en/anvil.en.ucs
 COH3-SGA-Extraction.exe LocaleFrench.sga locale/fr/anvil.fr.ucs
 COH3-SGA-Extraction.exe LocaleGerman.sga locale/de/anvil.de.ucs
@@ -16,3 +17,4 @@ COH3-SGA-Extraction.exe LocaleSpanish.sga locale/es/anvil.es.ucs
 COH3-SGA-Extraction.exe LocaleTraditionalChinese.sga locale/zh-hant/anvil.zh.ucs
 COH3-SGA-Extraction.exe LocaleTurkish.sga locale/tr/anvil.tr.ucs
 COH3-SGA-Extraction.exe LocaleCzech.sga locale/cs/anvil.cs.ucs
+```

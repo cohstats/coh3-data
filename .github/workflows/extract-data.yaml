@@ -158,7 +158,7 @@ jobs:
           )
           
           foreach ($locale in $locales) {
-            $ucsFile = ".\tools\anvil.$locale.ucs"
+            $ucsFile = ".\tools\COH3-SGA-Extraction\anvil.$locale.ucs"
             if (Test-Path $ucsFile) {
               Write-Host "Converting $ucsFile to JSON..."
               python .\scripts\ucs-to-json.py $ucsFile

@@ -169,13 +169,11 @@ jobs:
         shell: pwsh
 
       - name: Setup GitHub CLI
-        if: steps.check_config.outputs.CONFIG_NEEDS_UPDATE == 'true'
         run: |
           choco install gh -y
         shell: pwsh
 
       - name: Create new branch and commit changes
-        if: steps.check_config.outputs.CONFIG_NEEDS_UPDATE == 'true'
         run: |
           # Configure git
           git config --global user.name 'GitHub Action'

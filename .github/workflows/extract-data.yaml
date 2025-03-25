@@ -215,7 +215,7 @@ jobs:
           git checkout -b $BRANCH_NAME
 
           # Add all changes in the data folder
-          git add data/**/*
+          git add data/
 
           # Commit changes
           git commit -m "feat: update game data to version ${{ steps.get_version.outputs.COH3_MINOR_VERSION }}

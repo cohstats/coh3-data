@@ -113,10 +113,10 @@ jobs:
             @{sga="LocaleJapanese.sga"; out="locale/ja/anvil.ja.ucs"},
             @{sga="LocaleKorean.sga"; out="locale/ko/anvil.ko.ucs"},
             @{sga="LocalePolish.sga"; out="locale/pl/anvil.pl.ucs"},
-            @{sga="LocalePortugueseBrazil.sga"; out="locale/pt-br/anvil.pt.ucs"},
-            @{sga="LocaleSimplifiedChinese.sga"; out="locale/zh-hans/anvil.zh.ucs"},
+            @{sga="LocalePortugueseBrazil.sga"; out="locale/pt-br/anvil.pt-br.ucs"},
+            @{sga="LocaleSimplifiedChinese.sga"; out="locale/zh-hans/anvil.zh-hans.ucs"},
             @{sga="LocaleSpanish.sga"; out="locale/es/anvil.es.ucs"},
-            @{sga="LocaleTraditionalChinese.sga"; out="locale/zh-hant/anvil.zh.ucs"},
+            @{sga="LocaleTraditionalChinese.sga"; out="locale/zh-hant/anvil.zh-hant.ucs"},
             @{sga="LocaleTurkish.sga"; out="locale/tr/anvil.tr.ucs"},
             @{sga="LocaleCzech.sga"; out="locale/cs/anvil.cs.ucs"}
           )
@@ -132,6 +132,11 @@ jobs:
               Write-Host "Warning: $sgaPath not found"
             }
           }
+
+          # After processing all files, copy English localization to root data folder
+          Write-Host "Copying English localization to data/locstring.json..."
+          New-Item -Path "data" -ItemType Directory -Force
+          Copy-Item "data/locales/en-locstring.json" "data/locstring.json" -Force
         shell: pwsh
 
       - name: Setup Python

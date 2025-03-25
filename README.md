@@ -25,6 +25,27 @@ We are looking for more help! If you would like to contribute in any way. Please
 
 Also if you utilize the data, please give us shoutout! Thank you
 
+## Automated data generation
+
+You can use the GitHub workflow to automatically extract and process game data:
+
+1. Go to the [Extract Data workflow](https://github.com/cohstats/coh3-data/actions/workflows/extract-data.yaml)
+2. Click "Run workflow" button
+3. Select the branch you want to run it against (usually `master`)
+4. Click "Run workflow"
+
+The workflow will:
+- Download the latest game files
+- Extract USC lang files from .sga using COH3-SGA-Extraction tool for all languages (en, fr, de, it, ja, ko, pl, pt-br, zh-hans, es, zh-hant, tr, cs)
+- Process UCS files into JSON using `scripts/ucs-to-json.py` which converts the raw localization data into structured JSON files
+- Extract and process ReferenceAttributes using AOEMods.Essence tool, which:
+  - Unpacks ReferenceAttributes.sga into XML files
+  - Converts XML data to JSON using `scripts/xml-to-json/main.py`
+- Create a new branch with changes
+- Submit a Pull Request with the updates
+
+Alternatively, you can still generate the data manually following the steps in the "How to generate the data" section above.
+
 ## How to generate the data
 
 1. Open Company of Heroes 3 Essence Editor (it's located in your COH3 instalaltion folder). 

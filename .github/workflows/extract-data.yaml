@@ -168,17 +168,16 @@ jobs:
               Write-Host "Warning: $ucsFile not found"
             }
           }
-          
-          # After processing all files, copy English localization to root data folder
-          Write-Host "Copying English localization to data/locstring.json..."
-          New-Item -Path "data" -ItemType Directory -Force
-          Copy-Item "data/locales/en-locstring.json" "data/locstring.json" -Force
+        shell: pwsh
 
+      - name: Copy English localization to root data folder
+        run: |
+          Write-Host "Copying English localization data/locales/en-locstring.json to data/locstring.json..."
+          Copy-Item "data/locales/en-locstring.json" "data/locstring.json" -Force
         shell: pwsh
 
 
       - name: Extract and Process ReferenceAttributes
-        if: steps.check_exe.outputs.EXE_EXISTS == 'true'
         run: |
           # Extract AOEMods.Essence tool
           Write-Host "Extracting AOEMods.Essence tool..."

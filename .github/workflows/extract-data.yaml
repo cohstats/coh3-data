@@ -172,8 +172,35 @@ jobs:
 
       - name: Copy English localization to root data folder
         run: |
-          Write-Host "Copying English localization data/locales/en-locstring.json to data/locstring.json..."
-          Copy-Item "data/locales/en-locstring.json" "data/locstring.json" -Force
+          $sourcePath = "data/locales/en-locstring.json"
+          $targetPath = "data/locstring.json"
+          
+          # Check if source exists
+          if (!(Test-Path $sourcePath)) {
+            Write-Host "ERROR: Source file not found at: $sourcePath"
+            Write-Host "Current directory: $(Get-Location)"
+            Write-Host "Contents of data/locales:"
+            Get-ChildItem "data/locales" -ErrorAction SilentlyContinue
+            exit 1
+          }
+          
+          # Try to copy
+          try {
+            Write-Host "Copying $sourcePath to $targetPath..."
+            Copy-Item $sourcePath $targetPath -Force
+            
+            # Verify the copy worked
+            if (Test-Path $targetPath) {
+              Write-Host "Successfully copied file. Target exists at: $targetPath"
+              Write-Host "Target file size: $((Get-Item $targetPath).Length) bytes"
+            } else {
+              Write-Host "ERROR: Copy seemed to succeed but target file doesn't exist!"
+              exit 1
+            }
+          } catch {
+            Write-Host "ERROR: Failed to copy file: $_"
+            exit 1
+          }
         shell: pwsh
 
 

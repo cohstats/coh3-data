@@ -17554,7 +17554,7 @@
                         "max": 0.125,
                         "min": 0.125
                     },
-                    "post_firing_aim_time_seconds": 0.5,
+                    "post_firing_aim_time_seconds": 4.0,
                     "post_firing_cooldown_interval_seconds": 0.0,
                     "ready_aim_time": {
                         "max": 0.125,
@@ -17592,12 +17592,16 @@
                     "area_info": {
                         "template_reference": {
                             "name": "area_info",
-                            "value": "options\\area_info_options\\rectangle_area_option"
+                            "value": "options\\area_info_options\\circle_area_option"
                         },
                         "outer_length": 5.0,
                         "inner_length": 0.0,
                         "width": 4.0,
-                        "dynamic_length_type": "fixed"
+                        "dynamic_length_type": "fixed",
+                        "dynamic_radius_type": "fixed",
+                        "inner_radius": 0.0,
+                        "is_two_dimensional": "True",
+                        "outer_radius": 4.0
                     },
                     "damage": {
                         "far": 1.0,
@@ -17640,7 +17644,7 @@
                     "aoe_origin_and_direction": "hit_position_and_direction",
                     "fx": {
                         "exponential_distribution_lambda": 0.0,
-                        "num_randomized_ground_hit_fx": 3.0
+                        "num_randomized_ground_hit_fx": 1.0
                     },
                     "area_over_time_option": {
                         "template_reference": {
@@ -18234,7 +18238,7 @@
             },
             "pbgid": 2164286.0,
             "parent_pbg": {
-                "instance_reference": "weapon/common/parent/flamethrower_parent"
+                "instance_reference": "weapon/british/flame_throwers/flamethrower_crocodile_uk"
             }
         },
         "flamethrower_crocodile_flame_sweep_africa_uk": {

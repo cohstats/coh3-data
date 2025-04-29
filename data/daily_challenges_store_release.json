@@ -2067,6 +2067,53 @@
                                         }
                                     ]
                                 }
+                            },
+                            {
+                                "rule": {
+                                    "template_reference": {
+                                        "name": "rule",
+                                        "value": "challenges\\counters\\counter_rule"
+                                    },
+                                    "requirement": {
+                                        "template_reference": {
+                                            "name": "requirement",
+                                            "value": "challenges\\values_requirement"
+                                        },
+                                        "operator": "equal",
+                                        "values": [
+                                            {
+                                                "value_requirement": {
+                                                    "template_reference": {
+                                                        "name": "value_requirement",
+                                                        "value": "challenges\\requirement_values\\dynamic\\upgradetype"
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "value_requirement": {
+                                                    "template_reference": {
+                                                        "name": "value_requirement",
+                                                        "value": "challenges\\requirement_values\\constant\\upgradetype"
+                                                    },
+                                                    "value": {
+                                                        "instance_reference": "upgrade/american/research/air_support_center/aircraft_armor_upgrade_us"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "actions": [
+                                        {
+                                            "action": {
+                                                "template_reference": {
+                                                    "name": "action",
+                                                    "value": "challenges\\counter_actions\\change_counter"
+                                                },
+                                                "op": "Increment"
+                                            }
+                                        }
+                                    ]
+                                }
                             }
                         ],
                         "complete_rule": {

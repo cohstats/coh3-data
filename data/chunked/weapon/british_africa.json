@@ -106,6 +106,11 @@
                                 "name": "area_over_time_option",
                                 "value": ""
                             }
+                        },
+                        "damage_own_units": {
+                            "far": 0.025,
+                            "mid": 0.075,
+                            "near": 0.5
                         }
                     },
                     "behaviour": {
@@ -318,9 +323,9 @@
                             "max": 0.0,
                             "min": 0.0
                         },
-                        "require_reload_after_switch": "True",
-                        "persistent_reloadticks": "True",
-                        "skip_reload_after_blueprint_convert": "False"
+                        "require_reload_after_switch": "False",
+                        "persistent_reloadticks": "False",
+                        "weapon_reload_behavior_on_blueprint_convert": "persistent"
                     },
                     "scatter": {
                         "angle_scatter": 8.5,
@@ -776,6 +781,11 @@
                                 "name": "area_over_time_option",
                                 "value": ""
                             }
+                        },
+                        "damage_own_units": {
+                            "far": 0.025,
+                            "mid": 0.075,
+                            "near": 0.5
                         }
                     },
                     "behaviour": {
@@ -985,7 +995,7 @@
                         },
                         "require_reload_after_switch": "False",
                         "persistent_reloadticks": "False",
-                        "skip_reload_after_blueprint_convert": "False"
+                        "weapon_reload_behavior_on_blueprint_convert": "normal"
                     },
                     "scatter": {
                         "angle_scatter": 7.0,
@@ -1435,6 +1445,11 @@
                                 "name": "area_over_time_option",
                                 "value": ""
                             }
+                        },
+                        "damage_own_units": {
+                            "far": 0.025,
+                            "mid": 0.075,
+                            "near": 0.5
                         }
                     },
                     "behaviour": {
@@ -1644,7 +1659,7 @@
                         },
                         "require_reload_after_switch": "False",
                         "persistent_reloadticks": "False",
-                        "skip_reload_after_blueprint_convert": "False"
+                        "weapon_reload_behavior_on_blueprint_convert": "normal"
                     },
                     "scatter": {
                         "angle_scatter": 7.0,
@@ -2090,6 +2105,11 @@
                                 "name": "area_over_time_option",
                                 "value": ""
                             }
+                        },
+                        "damage_own_units": {
+                            "far": 0.025,
+                            "mid": 0.075,
+                            "near": 0.5
                         }
                     },
                     "behaviour": {
@@ -2299,7 +2319,7 @@
                         },
                         "require_reload_after_switch": "False",
                         "persistent_reloadticks": "False",
-                        "skip_reload_after_blueprint_convert": "False"
+                        "weapon_reload_behavior_on_blueprint_convert": "normal"
                     },
                     "scatter": {
                         "angle_scatter": 4.0,
@@ -2769,6 +2789,11 @@
                                 "name": "area_over_time_option",
                                 "value": ""
                             }
+                        },
+                        "damage_own_units": {
+                            "far": 0.025,
+                            "mid": 0.075,
+                            "near": 0.5
                         }
                     },
                     "behaviour": {
@@ -2978,7 +3003,7 @@
                         },
                         "require_reload_after_switch": "False",
                         "persistent_reloadticks": "False",
-                        "skip_reload_after_blueprint_convert": "False"
+                        "weapon_reload_behavior_on_blueprint_convert": "normal"
                     },
                     "scatter": {
                         "angle_scatter": 4.0,
@@ -3416,6 +3441,11 @@
                                 "name": "area_over_time_option",
                                 "value": ""
                             }
+                        },
+                        "damage_own_units": {
+                            "far": 0.025,
+                            "mid": 0.075,
+                            "near": 0.5
                         }
                     },
                     "behaviour": {
@@ -3515,6 +3545,11 @@
                             {
                                 "container": {
                                     "state_tree": "anti_tank_weapon_on_penetrate_wrapper"
+                                }
+                            },
+                            {
+                                "container": {
+                                    "state_tree": "improvised_armor_snare_bonus_us\\attack_type_snare_panzerschrek\\snare_panzerschrek_attack_selector"
                                 }
                             }
                         ],
@@ -3625,7 +3660,7 @@
                         },
                         "require_reload_after_switch": "True",
                         "persistent_reloadticks": "True",
-                        "skip_reload_after_blueprint_convert": "False"
+                        "weapon_reload_behavior_on_blueprint_convert": "normal"
                     },
                     "scatter": {
                         "angle_scatter": 15.0,
@@ -4093,6 +4128,11 @@
                                 "name": "area_over_time_option",
                                 "value": ""
                             }
+                        },
+                        "damage_own_units": {
+                            "far": 0.025,
+                            "mid": 0.075,
+                            "near": 0.5
                         }
                     },
                     "behaviour": {
@@ -4302,7 +4342,7 @@
                         },
                         "require_reload_after_switch": "False",
                         "persistent_reloadticks": "False",
-                        "skip_reload_after_blueprint_convert": "False"
+                        "weapon_reload_behavior_on_blueprint_convert": "normal"
                     },
                     "scatter": {
                         "angle_scatter": 5.0,
@@ -4758,6 +4798,11 @@
                                 "name": "area_over_time_option",
                                 "value": ""
                             }
+                        },
+                        "damage_own_units": {
+                            "far": -1.0,
+                            "mid": -1.0,
+                            "near": -1.0
                         }
                     },
                     "behaviour": {
@@ -4967,7 +5012,7 @@
                         },
                         "require_reload_after_switch": "False",
                         "persistent_reloadticks": "False",
-                        "skip_reload_after_blueprint_convert": "False"
+                        "weapon_reload_behavior_on_blueprint_convert": "normal"
                     },
                     "scatter": {
                         "angle_scatter": 2.0,
@@ -5380,6 +5425,11 @@
                                 "name": "area_over_time_option",
                                 "value": ""
                             }
+                        },
+                        "damage_own_units": {
+                            "far": -1.0,
+                            "mid": -1.0,
+                            "near": -1.0
                         }
                     },
                     "behaviour": {
@@ -5583,7 +5633,7 @@
                         },
                         "require_reload_after_switch": "False",
                         "persistent_reloadticks": "False",
-                        "skip_reload_after_blueprint_convert": "False"
+                        "weapon_reload_behavior_on_blueprint_convert": "normal"
                     },
                     "scatter": {
                         "angle_scatter": 0.0,
@@ -5996,6 +6046,11 @@
                                 "name": "area_over_time_option",
                                 "value": ""
                             }
+                        },
+                        "damage_own_units": {
+                            "far": 0.35,
+                            "mid": 0.4,
+                            "near": 1.0
                         }
                     },
                     "behaviour": {
@@ -6199,7 +6254,7 @@
                         },
                         "require_reload_after_switch": "False",
                         "persistent_reloadticks": "False",
-                        "skip_reload_after_blueprint_convert": "False"
+                        "weapon_reload_behavior_on_blueprint_convert": "normal"
                     },
                     "scatter": {
                         "angle_scatter": 0.0,
@@ -6342,7 +6397,7 @@
                                 "unit_type": "sandbag",
                                 "weapon_multipliers": {
                                     "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 2.5,
+                                    "damage_multiplier": 3.75,
                                     "penetration_multiplier": 1.0,
                                     "suppression_multiplier": 1.0
                                 }
@@ -6649,6 +6704,11 @@
                                 "name": "area_over_time_option",
                                 "value": ""
                             }
+                        },
+                        "damage_own_units": {
+                            "far": 0.35,
+                            "mid": 0.4,
+                            "near": 1.0
                         }
                     },
                     "behaviour": {
@@ -6852,7 +6912,7 @@
                         },
                         "require_reload_after_switch": "False",
                         "persistent_reloadticks": "False",
-                        "skip_reload_after_blueprint_convert": "False"
+                        "weapon_reload_behavior_on_blueprint_convert": "normal"
                     },
                     "scatter": {
                         "angle_scatter": 0.0,
@@ -6995,7 +7055,7 @@
                                 "unit_type": "sandbag",
                                 "weapon_multipliers": {
                                     "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 2.5,
+                                    "damage_multiplier": 3.75,
                                     "penetration_multiplier": 1.0,
                                     "suppression_multiplier": 1.0
                                 }
@@ -7302,6 +7362,11 @@
                                 "name": "area_over_time_option",
                                 "value": ""
                             }
+                        },
+                        "damage_own_units": {
+                            "far": 0.35,
+                            "mid": 0.4,
+                            "near": 1.0
                         }
                     },
                     "behaviour": {
@@ -7505,7 +7570,7 @@
                         },
                         "require_reload_after_switch": "False",
                         "persistent_reloadticks": "False",
-                        "skip_reload_after_blueprint_convert": "False"
+                        "weapon_reload_behavior_on_blueprint_convert": "normal"
                     },
                     "scatter": {
                         "angle_scatter": 0.0,
@@ -7648,7 +7713,7 @@
                                 "unit_type": "sandbag",
                                 "weapon_multipliers": {
                                     "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 2.5,
+                                    "damage_multiplier": 3.75,
                                     "penetration_multiplier": 1.0,
                                     "suppression_multiplier": 1.0
                                 }
@@ -7955,6 +8020,11 @@
                                 "name": "area_over_time_option",
                                 "value": ""
                             }
+                        },
+                        "damage_own_units": {
+                            "far": 0.35,
+                            "mid": 0.4,
+                            "near": 1.0
                         }
                     },
                     "behaviour": {
@@ -8158,7 +8228,7 @@
                         },
                         "require_reload_after_switch": "False",
                         "persistent_reloadticks": "False",
-                        "skip_reload_after_blueprint_convert": "False"
+                        "weapon_reload_behavior_on_blueprint_convert": "normal"
                     },
                     "scatter": {
                         "angle_scatter": 0.0,
@@ -8301,7 +8371,7 @@
                                 "unit_type": "sandbag",
                                 "weapon_multipliers": {
                                     "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 2.5,
+                                    "damage_multiplier": 3.75,
                                     "penetration_multiplier": 1.0,
                                     "suppression_multiplier": 1.0
                                 }
@@ -8608,6 +8678,11 @@
                                 "name": "area_over_time_option",
                                 "value": ""
                             }
+                        },
+                        "damage_own_units": {
+                            "far": 0.35,
+                            "mid": 0.4,
+                            "near": 1.0
                         }
                     },
                     "behaviour": {
@@ -8811,7 +8886,7 @@
                         },
                         "require_reload_after_switch": "False",
                         "persistent_reloadticks": "False",
-                        "skip_reload_after_blueprint_convert": "False"
+                        "weapon_reload_behavior_on_blueprint_convert": "normal"
                     },
                     "scatter": {
                         "angle_scatter": 0.0,
@@ -8954,7 +9029,7 @@
                                 "unit_type": "sandbag",
                                 "weapon_multipliers": {
                                     "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 2.5,
+                                    "damage_multiplier": 3.75,
                                     "penetration_multiplier": 1.0,
                                     "suppression_multiplier": 1.0
                                 }
@@ -9261,6 +9336,11 @@
                                 "name": "area_over_time_option",
                                 "value": ""
                             }
+                        },
+                        "damage_own_units": {
+                            "far": 0.35,
+                            "mid": 0.4,
+                            "near": 1.0
                         }
                     },
                     "behaviour": {
@@ -9464,7 +9544,7 @@
                         },
                         "require_reload_after_switch": "False",
                         "persistent_reloadticks": "False",
-                        "skip_reload_after_blueprint_convert": "False"
+                        "weapon_reload_behavior_on_blueprint_convert": "normal"
                     },
                     "scatter": {
                         "angle_scatter": 0.0,
@@ -9607,7 +9687,7 @@
                                 "unit_type": "sandbag",
                                 "weapon_multipliers": {
                                     "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 2.5,
+                                    "damage_multiplier": 3.75,
                                     "penetration_multiplier": 1.0,
                                     "suppression_multiplier": 1.0
                                 }
@@ -9812,9 +9892,9 @@
             "grenade_no69_africa_uk": {
                 "weapon_bag": {
                     "accuracy": {
-                        "near": 1.0,
-                        "far": 1.0,
-                        "mid": 1.0
+                        "near": 11.0,
+                        "far": 11.0,
+                        "mid": 11.0
                     },
                     "aim": {
                         "fire_aim_time": {
@@ -9861,15 +9941,15 @@
                                 "name": "area_info",
                                 "value": "options\\area_info_options\\circle_area_option"
                             },
-                            "outer_radius": 4.0,
+                            "outer_radius": 4.5,
                             "inner_radius": 0.0,
-                            "is_two_dimensional": "False",
+                            "is_two_dimensional": "True",
                             "dynamic_radius_type": "fixed"
                         },
                         "damage": {
-                            "far": 0.3,
+                            "far": 0.2,
                             "near": 1.0,
-                            "mid": 0.6
+                            "mid": 0.85
                         },
                         "damage_friendly": {
                             "far": 0.025,
@@ -9877,12 +9957,12 @@
                             "mid": 0.075
                         },
                         "distance": {
-                            "far": 4.5,
-                            "near": 0.5,
+                            "far": 3.0,
+                            "near": 0.35,
                             "mid": 1.5
                         },
                         "has_friendly_fire": "True",
-                        "can_harm_shooter": "False",
+                        "can_harm_shooter": "True",
                         "suppression": {
                             "far": 0.0,
                             "near": 0.0,
@@ -9903,7 +9983,7 @@
                             "mid": 25.0,
                             "near": 25.0
                         },
-                        "damage_max_members_per_squad": 3.0,
+                        "damage_max_members_per_squad": 4.0,
                         "aoe_origin_and_direction": "hit_position_and_direction",
                         "fx": {
                             "exponential_distribution_lambda": 0.0,
@@ -9914,6 +9994,11 @@
                                 "name": "area_over_time_option",
                                 "value": ""
                             }
+                        },
+                        "damage_own_units": {
+                            "far": 0.2,
+                            "mid": 0.85,
+                            "near": 1.0
                         }
                     },
                     "behaviour": {
@@ -10005,8 +10090,8 @@
                         "persistent_cooldownticks": "False"
                     },
                     "damage": {
-                        "max": 87.0,
-                        "min": 87.0,
+                        "max": 120.0,
+                        "min": 120.0,
                         "damage_type": "explosive",
                         "allow_overkill": "False",
                         "on_penetrated_state_trees": [],
@@ -10117,15 +10202,15 @@
                         },
                         "require_reload_after_switch": "False",
                         "persistent_reloadticks": "False",
-                        "skip_reload_after_blueprint_convert": "False"
+                        "weapon_reload_behavior_on_blueprint_convert": "normal"
                     },
                     "scatter": {
-                        "angle_scatter": 2.0,
+                        "angle_scatter": 0.0,
                         "burst_pattern_enable": "False",
                         "delay_bracket_change_chance": 0.0,
                         "distance_bracket_count_air": 0.0,
                         "distance_bracket_count_ground": 1.0,
-                        "distance_scatter_max": 2.75,
+                        "distance_scatter_max": 0.0,
                         "distance_scatter_obj_hit_min": 0.0,
                         "distance_scatter_offset": 0.2,
                         "distance_scatter_ratio": 0.0,
@@ -10260,7 +10345,7 @@
                                 "unit_type": "sandbag",
                                 "weapon_multipliers": {
                                     "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 2.5,
+                                    "damage_multiplier": 3.75,
                                     "penetration_multiplier": 1.0,
                                     "suppression_multiplier": 1.0
                                 }
@@ -10459,15 +10544,15 @@
                 },
                 "pbgid": 2071644.0,
                 "parent_pbg": {
-                    "instance_reference": ""
+                    "instance_reference": "weapon/common/explosive_weapon/grenade/grenade_parent"
                 }
             },
             "grenade_no69_incendiary_africa_uk": {
                 "weapon_bag": {
                     "accuracy": {
-                        "near": 1.0,
-                        "far": 1.0,
-                        "mid": 1.0
+                        "near": 11.0,
+                        "far": 11.0,
+                        "mid": 11.0
                     },
                     "aim": {
                         "fire_aim_time": {
@@ -10514,15 +10599,15 @@
                                 "name": "area_info",
                                 "value": "options\\area_info_options\\circle_area_option"
                             },
-                            "outer_radius": 4.0,
+                            "outer_radius": 4.5,
                             "inner_radius": 0.0,
                             "is_two_dimensional": "True",
                             "dynamic_radius_type": "fixed"
                         },
                         "damage": {
-                            "far": 0.3,
+                            "far": 0.2,
                             "near": 1.0,
-                            "mid": 0.6
+                            "mid": 0.85
                         },
                         "damage_friendly": {
                             "far": 0.025,
@@ -10530,12 +10615,12 @@
                             "mid": 0.075
                         },
                         "distance": {
-                            "far": 4.5,
-                            "near": 0.5,
+                            "far": 3.0,
+                            "near": 0.35,
                             "mid": 1.5
                         },
                         "has_friendly_fire": "True",
-                        "can_harm_shooter": "False",
+                        "can_harm_shooter": "True",
                         "suppression": {
                             "far": 0.0,
                             "near": 0.0,
@@ -10556,7 +10641,7 @@
                             "mid": 25.0,
                             "near": 25.0
                         },
-                        "damage_max_members_per_squad": 3.0,
+                        "damage_max_members_per_squad": 4.0,
                         "aoe_origin_and_direction": "hit_position_and_direction",
                         "fx": {
                             "exponential_distribution_lambda": 0.0,
@@ -10567,6 +10652,11 @@
                                 "name": "area_over_time_option",
                                 "value": ""
                             }
+                        },
+                        "damage_own_units": {
+                            "far": 0.2,
+                            "mid": 0.85,
+                            "near": 1.0
                         }
                     },
                     "behaviour": {
@@ -10658,8 +10748,8 @@
                         "persistent_cooldownticks": "False"
                     },
                     "damage": {
-                        "max": 87.0,
-                        "min": 87.0,
+                        "max": 120.0,
+                        "min": 120.0,
                         "damage_type": "explosive",
                         "allow_overkill": "False",
                         "on_penetrated_state_trees": [],
@@ -10770,15 +10860,15 @@
                         },
                         "require_reload_after_switch": "False",
                         "persistent_reloadticks": "False",
-                        "skip_reload_after_blueprint_convert": "False"
+                        "weapon_reload_behavior_on_blueprint_convert": "normal"
                     },
                     "scatter": {
-                        "angle_scatter": 2.0,
+                        "angle_scatter": 0.0,
                         "burst_pattern_enable": "False",
                         "delay_bracket_change_chance": 0.0,
                         "distance_bracket_count_air": 0.0,
                         "distance_bracket_count_ground": 1.0,
-                        "distance_scatter_max": 2.75,
+                        "distance_scatter_max": 0.0,
                         "distance_scatter_obj_hit_min": 0.0,
                         "distance_scatter_offset": 0.2,
                         "distance_scatter_ratio": 0.0,
@@ -10913,7 +11003,7 @@
                                 "unit_type": "sandbag",
                                 "weapon_multipliers": {
                                     "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 2.5,
+                                    "damage_multiplier": 3.75,
                                     "penetration_multiplier": 1.0,
                                     "suppression_multiplier": 1.0
                                 }
@@ -11118,9 +11208,9 @@
             "grenade_no69_pyrotechnics_africa_uk": {
                 "weapon_bag": {
                     "accuracy": {
-                        "near": 1.0,
-                        "far": 1.0,
-                        "mid": 1.0
+                        "near": 11.0,
+                        "far": 11.0,
+                        "mid": 11.0
                     },
                     "aim": {
                         "fire_aim_time": {
@@ -11167,15 +11257,15 @@
                                 "name": "area_info",
                                 "value": "options\\area_info_options\\circle_area_option"
                             },
-                            "outer_radius": 4.0,
+                            "outer_radius": 4.5,
                             "inner_radius": 0.0,
                             "is_two_dimensional": "True",
                             "dynamic_radius_type": "fixed"
                         },
                         "damage": {
-                            "far": 0.3,
+                            "far": 0.2,
                             "near": 1.0,
-                            "mid": 0.6
+                            "mid": 0.85
                         },
                         "damage_friendly": {
                             "far": 0.025,
@@ -11183,12 +11273,12 @@
                             "mid": 0.075
                         },
                         "distance": {
-                            "far": 4.5,
-                            "near": 0.5,
+                            "far": 3.0,
+                            "near": 0.35,
                             "mid": 1.5
                         },
                         "has_friendly_fire": "True",
-                        "can_harm_shooter": "False",
+                        "can_harm_shooter": "True",
                         "suppression": {
                             "far": 0.0,
                             "near": 0.0,
@@ -11209,7 +11299,7 @@
                             "mid": 25.0,
                             "near": 25.0
                         },
-                        "damage_max_members_per_squad": 3.0,
+                        "damage_max_members_per_squad": 4.0,
                         "aoe_origin_and_direction": "hit_position_and_direction",
                         "fx": {
                             "exponential_distribution_lambda": 0.0,
@@ -11220,6 +11310,11 @@
                                 "name": "area_over_time_option",
                                 "value": ""
                             }
+                        },
+                        "damage_own_units": {
+                            "far": 0.2,
+                            "mid": 0.85,
+                            "near": 1.0
                         }
                     },
                     "behaviour": {
@@ -11311,8 +11406,8 @@
                         "persistent_cooldownticks": "False"
                     },
                     "damage": {
-                        "max": 87.0,
-                        "min": 87.0,
+                        "max": 120.0,
+                        "min": 120.0,
                         "damage_type": "explosive",
                         "allow_overkill": "False",
                         "on_penetrated_state_trees": [],
@@ -11423,15 +11518,15 @@
                         },
                         "require_reload_after_switch": "False",
                         "persistent_reloadticks": "False",
-                        "skip_reload_after_blueprint_convert": "False"
+                        "weapon_reload_behavior_on_blueprint_convert": "normal"
                     },
                     "scatter": {
-                        "angle_scatter": 2.0,
+                        "angle_scatter": 0.0,
                         "burst_pattern_enable": "False",
                         "delay_bracket_change_chance": 0.0,
                         "distance_bracket_count_air": 0.0,
                         "distance_bracket_count_ground": 1.0,
-                        "distance_scatter_max": 2.75,
+                        "distance_scatter_max": 0.0,
                         "distance_scatter_obj_hit_min": 0.0,
                         "distance_scatter_offset": 0.2,
                         "distance_scatter_ratio": 0.0,
@@ -11566,7 +11661,7 @@
                                 "unit_type": "sandbag",
                                 "weapon_multipliers": {
                                     "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 2.5,
+                                    "damage_multiplier": 3.75,
                                     "penetration_multiplier": 1.0,
                                     "suppression_multiplier": 1.0
                                 }
@@ -11873,6 +11968,11 @@
                                 "name": "area_over_time_option",
                                 "value": ""
                             }
+                        },
+                        "damage_own_units": {
+                            "far": -1.0,
+                            "mid": -1.0,
+                            "near": -1.0
                         }
                     },
                     "behaviour": {
@@ -12076,7 +12176,7 @@
                         },
                         "require_reload_after_switch": "False",
                         "persistent_reloadticks": "False",
-                        "skip_reload_after_blueprint_convert": "False"
+                        "weapon_reload_behavior_on_blueprint_convert": "normal"
                     },
                     "scatter": {
                         "angle_scatter": 2.0,
@@ -12489,6 +12589,11 @@
                                 "name": "area_over_time_option",
                                 "value": ""
                             }
+                        },
+                        "damage_own_units": {
+                            "far": -1.0,
+                            "mid": -1.0,
+                            "near": -1.0
                         }
                     },
                     "behaviour": {
@@ -12692,7 +12797,7 @@
                         },
                         "require_reload_after_switch": "False",
                         "persistent_reloadticks": "False",
-                        "skip_reload_after_blueprint_convert": "False"
+                        "weapon_reload_behavior_on_blueprint_convert": "normal"
                     },
                     "scatter": {
                         "angle_scatter": 0.0,
@@ -13015,8 +13120,8 @@
                         "post_firing_aim_time_seconds": 0.25,
                         "post_firing_cooldown_interval_seconds": 0.0,
                         "ready_aim_time": {
-                            "max": 0.375,
-                            "min": 0.375
+                            "max": 0.125,
+                            "min": 0.125
                         },
                         "aim_time_multiplier": {
                             "near": 1.0,
@@ -13052,15 +13157,15 @@
                                 "name": "area_info",
                                 "value": "options\\area_info_options\\circle_area_option"
                             },
-                            "outer_radius": 4.0,
+                            "outer_radius": 3.0,
                             "inner_radius": 0.0,
                             "is_two_dimensional": "True",
                             "dynamic_radius_type": "fixed"
                         },
                         "damage": {
-                            "far": 0.15,
+                            "far": 0.1669,
                             "near": 1.0,
-                            "mid": 0.25
+                            "mid": 1.0
                         },
                         "damage_friendly": {
                             "far": 0.025,
@@ -13068,12 +13173,12 @@
                             "mid": 0.075
                         },
                         "distance": {
-                            "far": 3.0,
-                            "near": 0.35,
-                            "mid": 1.25
+                            "far": 2.0,
+                            "near": 2.0,
+                            "mid": 2.0
                         },
                         "has_friendly_fire": "True",
-                        "can_harm_shooter": "False",
+                        "can_harm_shooter": "True",
                         "suppression": {
                             "far": 0.0,
                             "near": 0.0,
@@ -13090,11 +13195,11 @@
                                 "name": "aoe_penetration",
                                 "value": "tables\\range_table"
                             },
-                            "far": 1.0,
-                            "mid": 5.0,
-                            "near": 10.0
+                            "far": 25.0,
+                            "mid": 25.0,
+                            "near": 25.0
                         },
-                        "damage_max_members_per_squad": -1.0,
+                        "damage_max_members_per_squad": 4.0,
                         "aoe_origin_and_direction": "hit_position_and_direction",
                         "fx": {
                             "exponential_distribution_lambda": 0.0,
@@ -13105,6 +13210,11 @@
                                 "name": "area_over_time_option",
                                 "value": ""
                             }
+                        },
+                        "damage_own_units": {
+                            "far": 0.1669,
+                            "mid": 1.0,
+                            "near": 1.0
                         }
                     },
                     "behaviour": {
@@ -13196,8 +13306,8 @@
                         "persistent_cooldownticks": "False"
                     },
                     "damage": {
-                        "max": 100.0,
-                        "min": 100.0,
+                        "max": 120.0,
+                        "min": 120.0,
                         "damage_type": "explosive",
                         "allow_overkill": "False",
                         "on_penetrated_state_trees": [],
@@ -13282,7 +13392,7 @@
                     },
                     "range": {
                         "max": 30.0,
-                        "min": 5.0,
+                        "min": 0.0,
                         "distance": {
                             "near": -1.0,
                             "far": -1.0,
@@ -13308,7 +13418,7 @@
                         },
                         "require_reload_after_switch": "False",
                         "persistent_reloadticks": "False",
-                        "skip_reload_after_blueprint_convert": "False"
+                        "weapon_reload_behavior_on_blueprint_convert": "normal"
                     },
                     "scatter": {
                         "angle_scatter": 0.0,
@@ -13316,12 +13426,12 @@
                         "delay_bracket_change_chance": 0.0,
                         "distance_bracket_count_air": 0.0,
                         "distance_bracket_count_ground": 1.0,
-                        "distance_scatter_max": 1.5,
+                        "distance_scatter_max": 0.0,
                         "distance_scatter_obj_hit_min": 0.0,
-                        "distance_scatter_offset": 0.2,
+                        "distance_scatter_offset": 0.0,
                         "distance_scatter_ratio": 0.0,
-                        "fow_angle_multiplier": 1.5,
-                        "fow_distance_multiplier": 1.5,
+                        "fow_angle_multiplier": 1.0,
+                        "fow_distance_multiplier": 1.0,
                         "max_tilt_angle": 0.0,
                         "min_tilt_angle": 0.0,
                         "tilt_max_distance": 0.0,
@@ -13420,7 +13530,44 @@
                     "weapon_class": "rifle_grenade",
                     "fx_aoe_munition_name": "",
                     "speech_code": "",
-                    "target_type_table": [],
+                    "target_type_table": [
+                        {
+                            "target_unit_type_multipliers": {
+                                "unit_type": "building",
+                                "weapon_multipliers": {
+                                    "accuracy_multiplier": 1.0,
+                                    "damage_multiplier": 0.75,
+                                    "penetration_multiplier": 1.0,
+                                    "suppression_multiplier": 1.0
+                                },
+                                "base_damage_modifier": 0.0
+                            }
+                        },
+                        {
+                            "target_unit_type_multipliers": {
+                                "unit_type": "emplacement",
+                                "weapon_multipliers": {
+                                    "accuracy_multiplier": 1.0,
+                                    "damage_multiplier": 0.75,
+                                    "penetration_multiplier": 1.0,
+                                    "suppression_multiplier": 1.0
+                                },
+                                "base_damage_modifier": 0.0
+                            }
+                        },
+                        {
+                            "target_unit_type_multipliers": {
+                                "base_damage_modifier": 0.0,
+                                "unit_type": "sandbag",
+                                "weapon_multipliers": {
+                                    "accuracy_multiplier": 1.0,
+                                    "damage_multiplier": 2.5,
+                                    "penetration_multiplier": 1.0,
+                                    "suppression_multiplier": 1.0
+                                }
+                            }
+                        }
+                    ],
                     "cover_table": {
                         "tp_defcover": {
                             "template_reference": {
@@ -13613,7 +13760,7 @@
                 },
                 "pbgid": 2071436.0,
                 "parent_pbg": {
-                    "instance_reference": ""
+                    "instance_reference": "weapon/common/explosive_weapon/grenade/rifle_grenade_parent"
                 }
             },
             "rifle_grenade_tommy_incendiary_africa_uk": {
@@ -13631,8 +13778,8 @@
                         "post_firing_aim_time_seconds": 0.25,
                         "post_firing_cooldown_interval_seconds": 0.0,
                         "ready_aim_time": {
-                            "max": 0.375,
-                            "min": 0.375
+                            "max": 0.125,
+                            "min": 0.125
                         },
                         "aim_time_multiplier": {
                             "near": 1.0,
@@ -13668,15 +13815,15 @@
                                 "name": "area_info",
                                 "value": "options\\area_info_options\\circle_area_option"
                             },
-                            "outer_radius": 4.0,
+                            "outer_radius": 3.0,
                             "inner_radius": 0.0,
                             "is_two_dimensional": "True",
                             "dynamic_radius_type": "fixed"
                         },
                         "damage": {
-                            "far": 0.15,
+                            "far": 0.1669,
                             "near": 1.0,
-                            "mid": 0.25
+                            "mid": 1.0
                         },
                         "damage_friendly": {
                             "far": 0.025,
@@ -13684,12 +13831,12 @@
                             "mid": 0.075
                         },
                         "distance": {
-                            "far": 3.0,
-                            "near": 0.35,
-                            "mid": 1.25
+                            "far": 2.0,
+                            "near": 2.0,
+                            "mid": 2.0
                         },
                         "has_friendly_fire": "True",
-                        "can_harm_shooter": "False",
+                        "can_harm_shooter": "True",
                         "suppression": {
                             "far": 0.0,
                             "near": 0.0,
@@ -13706,11 +13853,11 @@
                                 "name": "aoe_penetration",
                                 "value": "tables\\range_table"
                             },
-                            "far": 1.0,
-                            "mid": 5.0,
-                            "near": 10.0
+                            "far": 25.0,
+                            "mid": 25.0,
+                            "near": 25.0
                         },
-                        "damage_max_members_per_squad": -1.0,
+                        "damage_max_members_per_squad": 4.0,
                         "aoe_origin_and_direction": "hit_position_and_direction",
                         "fx": {
                             "exponential_distribution_lambda": 0.0,
@@ -13721,6 +13868,11 @@
                                 "name": "area_over_time_option",
                                 "value": ""
                             }
+                        },
+                        "damage_own_units": {
+                            "far": 0.1669,
+                            "mid": 1.0,
+                            "near": 1.0
                         }
                     },
                     "behaviour": {
@@ -13812,8 +13964,8 @@
                         "persistent_cooldownticks": "False"
                     },
                     "damage": {
-                        "max": 100.0,
-                        "min": 100.0,
+                        "max": 120.0,
+                        "min": 120.0,
                         "damage_type": "explosive",
                         "allow_overkill": "False",
                         "on_penetrated_state_trees": [],
@@ -13898,7 +14050,7 @@
                     },
                     "range": {
                         "max": 30.0,
-                        "min": 5.0,
+                        "min": 0.0,
                         "distance": {
                             "near": -1.0,
                             "far": -1.0,
@@ -13924,7 +14076,7 @@
                         },
                         "require_reload_after_switch": "False",
                         "persistent_reloadticks": "False",
-                        "skip_reload_after_blueprint_convert": "False"
+                        "weapon_reload_behavior_on_blueprint_convert": "normal"
                     },
                     "scatter": {
                         "angle_scatter": 0.0,
@@ -13932,12 +14084,12 @@
                         "delay_bracket_change_chance": 0.0,
                         "distance_bracket_count_air": 0.0,
                         "distance_bracket_count_ground": 1.0,
-                        "distance_scatter_max": 1.5,
+                        "distance_scatter_max": 0.0,
                         "distance_scatter_obj_hit_min": 0.0,
-                        "distance_scatter_offset": 0.2,
+                        "distance_scatter_offset": 0.0,
                         "distance_scatter_ratio": 0.0,
-                        "fow_angle_multiplier": 1.5,
-                        "fow_distance_multiplier": 1.5,
+                        "fow_angle_multiplier": 1.0,
+                        "fow_distance_multiplier": 1.0,
                         "max_tilt_angle": 0.0,
                         "min_tilt_angle": 0.0,
                         "tilt_max_distance": 0.0,
@@ -14036,7 +14188,44 @@
                     "weapon_class": "flame",
                     "fx_aoe_munition_name": "flamethrower_aoe",
                     "speech_code": "",
-                    "target_type_table": [],
+                    "target_type_table": [
+                        {
+                            "target_unit_type_multipliers": {
+                                "unit_type": "building",
+                                "weapon_multipliers": {
+                                    "accuracy_multiplier": 1.0,
+                                    "damage_multiplier": 0.75,
+                                    "penetration_multiplier": 1.0,
+                                    "suppression_multiplier": 1.0
+                                },
+                                "base_damage_modifier": 0.0
+                            }
+                        },
+                        {
+                            "target_unit_type_multipliers": {
+                                "unit_type": "emplacement",
+                                "weapon_multipliers": {
+                                    "accuracy_multiplier": 1.0,
+                                    "damage_multiplier": 0.75,
+                                    "penetration_multiplier": 1.0,
+                                    "suppression_multiplier": 1.0
+                                },
+                                "base_damage_modifier": 0.0
+                            }
+                        },
+                        {
+                            "target_unit_type_multipliers": {
+                                "base_damage_modifier": 0.0,
+                                "unit_type": "sandbag",
+                                "weapon_multipliers": {
+                                    "accuracy_multiplier": 1.0,
+                                    "damage_multiplier": 2.5,
+                                    "penetration_multiplier": 1.0,
+                                    "suppression_multiplier": 1.0
+                                }
+                            }
+                        }
+                    ],
                     "cover_table": {
                         "tp_defcover": {
                             "template_reference": {
@@ -14247,8 +14436,8 @@
                         "post_firing_aim_time_seconds": 0.25,
                         "post_firing_cooldown_interval_seconds": 0.0,
                         "ready_aim_time": {
-                            "max": 0.375,
-                            "min": 0.375
+                            "max": 0.125,
+                            "min": 0.125
                         },
                         "aim_time_multiplier": {
                             "near": 1.0,
@@ -14284,15 +14473,15 @@
                                 "name": "area_info",
                                 "value": "options\\area_info_options\\circle_area_option"
                             },
-                            "outer_radius": 4.0,
+                            "outer_radius": 3.0,
                             "inner_radius": 0.0,
                             "is_two_dimensional": "True",
                             "dynamic_radius_type": "fixed"
                         },
                         "damage": {
-                            "far": 0.15,
+                            "far": 0.1669,
                             "near": 1.0,
-                            "mid": 0.25
+                            "mid": 1.0
                         },
                         "damage_friendly": {
                             "far": 0.025,
@@ -14300,12 +14489,12 @@
                             "mid": 0.075
                         },
                         "distance": {
-                            "far": 3.0,
-                            "near": 0.35,
-                            "mid": 1.25
+                            "far": 2.0,
+                            "near": 2.0,
+                            "mid": 2.0
                         },
                         "has_friendly_fire": "True",
-                        "can_harm_shooter": "False",
+                        "can_harm_shooter": "True",
                         "suppression": {
                             "far": 0.0,
                             "near": 0.0,
@@ -14322,11 +14511,11 @@
                                 "name": "aoe_penetration",
                                 "value": "tables\\range_table"
                             },
-                            "far": 1.0,
-                            "mid": 5.0,
-                            "near": 10.0
+                            "far": 25.0,
+                            "mid": 25.0,
+                            "near": 25.0
                         },
-                        "damage_max_members_per_squad": -1.0,
+                        "damage_max_members_per_squad": 4.0,
                         "aoe_origin_and_direction": "hit_position_and_direction",
                         "fx": {
                             "exponential_distribution_lambda": 0.0,
@@ -14337,6 +14526,11 @@
                                 "name": "area_over_time_option",
                                 "value": ""
                             }
+                        },
+                        "damage_own_units": {
+                            "far": 0.1669,
+                            "mid": 1.0,
+                            "near": 1.0
                         }
                     },
                     "behaviour": {
@@ -14428,8 +14622,8 @@
                         "persistent_cooldownticks": "False"
                     },
                     "damage": {
-                        "max": 100.0,
-                        "min": 100.0,
+                        "max": 120.0,
+                        "min": 120.0,
                         "damage_type": "explosive",
                         "allow_overkill": "False",
                         "on_penetrated_state_trees": [],
@@ -14514,7 +14708,7 @@
                     },
                     "range": {
                         "max": 30.0,
-                        "min": 5.0,
+                        "min": 0.0,
                         "distance": {
                             "near": -1.0,
                             "far": -1.0,
@@ -14540,7 +14734,7 @@
                         },
                         "require_reload_after_switch": "False",
                         "persistent_reloadticks": "False",
-                        "skip_reload_after_blueprint_convert": "False"
+                        "weapon_reload_behavior_on_blueprint_convert": "normal"
                     },
                     "scatter": {
                         "angle_scatter": 0.0,
@@ -14548,12 +14742,12 @@
                         "delay_bracket_change_chance": 0.0,
                         "distance_bracket_count_air": 0.0,
                         "distance_bracket_count_ground": 1.0,
-                        "distance_scatter_max": 1.5,
+                        "distance_scatter_max": 0.0,
                         "distance_scatter_obj_hit_min": 0.0,
-                        "distance_scatter_offset": 0.2,
+                        "distance_scatter_offset": 0.0,
                         "distance_scatter_ratio": 0.0,
-                        "fow_angle_multiplier": 1.5,
-                        "fow_distance_multiplier": 1.5,
+                        "fow_angle_multiplier": 1.0,
+                        "fow_distance_multiplier": 1.0,
                         "max_tilt_angle": 0.0,
                         "min_tilt_angle": 0.0,
                         "tilt_max_distance": 0.0,
@@ -14652,7 +14846,44 @@
                     "weapon_class": "flame",
                     "fx_aoe_munition_name": "flamethrower_aoe",
                     "speech_code": "",
-                    "target_type_table": [],
+                    "target_type_table": [
+                        {
+                            "target_unit_type_multipliers": {
+                                "unit_type": "building",
+                                "weapon_multipliers": {
+                                    "accuracy_multiplier": 1.0,
+                                    "damage_multiplier": 0.75,
+                                    "penetration_multiplier": 1.0,
+                                    "suppression_multiplier": 1.0
+                                },
+                                "base_damage_modifier": 0.0
+                            }
+                        },
+                        {
+                            "target_unit_type_multipliers": {
+                                "unit_type": "emplacement",
+                                "weapon_multipliers": {
+                                    "accuracy_multiplier": 1.0,
+                                    "damage_multiplier": 0.75,
+                                    "penetration_multiplier": 1.0,
+                                    "suppression_multiplier": 1.0
+                                },
+                                "base_damage_modifier": 0.0
+                            }
+                        },
+                        {
+                            "target_unit_type_multipliers": {
+                                "base_damage_modifier": 0.0,
+                                "unit_type": "sandbag",
+                                "weapon_multipliers": {
+                                    "accuracy_multiplier": 1.0,
+                                    "damage_multiplier": 2.5,
+                                    "penetration_multiplier": 1.0,
+                                    "suppression_multiplier": 1.0
+                                }
+                            }
+                        }
+                    ],
                     "cover_table": {
                         "tp_defcover": {
                             "template_reference": {
@@ -14953,6 +15184,11 @@
                                 "name": "area_over_time_option",
                                 "value": ""
                             }
+                        },
+                        "damage_own_units": {
+                            "far": 0.1669,
+                            "mid": 1.0,
+                            "near": 1.0
                         }
                     },
                     "behaviour": {
@@ -15059,7 +15295,7 @@
                         "has_deflection_damage": "False"
                     },
                     "fire": {
-                        "wind_down": 0.75,
+                        "wind_down": 1.0,
                         "wind_up": 1.0
                     },
                     "flinch_radius": 0.0,
@@ -15130,7 +15366,7 @@
                     },
                     "range": {
                         "max": 30.0,
-                        "min": 5.0,
+                        "min": 0.0,
                         "distance": {
                             "near": -1.0,
                             "far": -1.0,
@@ -15156,7 +15392,7 @@
                         },
                         "require_reload_after_switch": "False",
                         "persistent_reloadticks": "False",
-                        "skip_reload_after_blueprint_convert": "False"
+                        "weapon_reload_behavior_on_blueprint_convert": "normal"
                     },
                     "scatter": {
                         "angle_scatter": 0.0,
@@ -15608,6 +15844,11 @@
                                 "name": "area_over_time_option",
                                 "value": ""
                             }
+                        },
+                        "damage_own_units": {
+                            "far": 0.2,
+                            "mid": 0.25,
+                            "near": 0.3
                         }
                     },
                     "behaviour": {
@@ -15809,9 +16050,9 @@
                             "max": 0.0,
                             "min": 0.0
                         },
-                        "require_reload_after_switch": "False",
+                        "require_reload_after_switch": "True",
                         "persistent_reloadticks": "False",
-                        "skip_reload_after_blueprint_convert": "False"
+                        "weapon_reload_behavior_on_blueprint_convert": "persistent"
                     },
                     "scatter": {
                         "angle_scatter": 0.0,
@@ -16327,6 +16568,11 @@
                                 "name": "area_over_time_option",
                                 "value": ""
                             }
+                        },
+                        "damage_own_units": {
+                            "far": 0.2,
+                            "mid": 0.25,
+                            "near": 0.3
                         }
                     },
                     "behaviour": {
@@ -16528,9 +16774,9 @@
                             "max": 0.0,
                             "min": 0.0
                         },
-                        "require_reload_after_switch": "False",
+                        "require_reload_after_switch": "True",
                         "persistent_reloadticks": "False",
-                        "skip_reload_after_blueprint_convert": "False"
+                        "weapon_reload_behavior_on_blueprint_convert": "persistent"
                     },
                     "scatter": {
                         "angle_scatter": 0.0,
@@ -17048,6 +17294,11 @@
                                 "name": "area_over_time_option",
                                 "value": ""
                             }
+                        },
+                        "damage_own_units": {
+                            "far": -1.0,
+                            "mid": -1.0,
+                            "near": -1.0
                         }
                     },
                     "behaviour": {
@@ -17251,7 +17502,7 @@
                         },
                         "require_reload_after_switch": "False",
                         "persistent_reloadticks": "False",
-                        "skip_reload_after_blueprint_convert": "False"
+                        "weapon_reload_behavior_on_blueprint_convert": "normal"
                     },
                     "scatter": {
                         "angle_scatter": 3.0,
@@ -17651,6 +17902,11 @@
                             "name": "area_over_time_option",
                             "value": ""
                         }
+                    },
+                    "damage_own_units": {
+                        "far": -1.0,
+                        "mid": -1.0,
+                        "near": -1.0
                     }
                 },
                 "behaviour": {
@@ -17866,7 +18122,7 @@
                     },
                     "require_reload_after_switch": "False",
                     "persistent_reloadticks": "False",
-                    "skip_reload_after_blueprint_convert": "False"
+                    "weapon_reload_behavior_on_blueprint_convert": "normal"
                 },
                 "scatter": {
                     "angle_scatter": 6.0,
@@ -18346,6 +18602,11 @@
                             "name": "area_over_time_option",
                             "value": ""
                         }
+                    },
+                    "damage_own_units": {
+                        "far": -1.0,
+                        "mid": -1.0,
+                        "near": -1.0
                     }
                 },
                 "behaviour": {
@@ -18561,7 +18822,7 @@
                     },
                     "require_reload_after_switch": "False",
                     "persistent_reloadticks": "False",
-                    "skip_reload_after_blueprint_convert": "False"
+                    "weapon_reload_behavior_on_blueprint_convert": "normal"
                 },
                 "scatter": {
                     "angle_scatter": 6.0,
@@ -19041,6 +19302,11 @@
                             "name": "area_over_time_option",
                             "value": ""
                         }
+                    },
+                    "damage_own_units": {
+                        "far": -1.0,
+                        "mid": -1.0,
+                        "near": -1.0
                     }
                 },
                 "behaviour": {
@@ -19256,7 +19522,7 @@
                     },
                     "require_reload_after_switch": "False",
                     "persistent_reloadticks": "False",
-                    "skip_reload_after_blueprint_convert": "False"
+                    "weapon_reload_behavior_on_blueprint_convert": "normal"
                 },
                 "scatter": {
                     "angle_scatter": 6.0,
@@ -19736,6 +20002,11 @@
                                     "name": "area_over_time_option",
                                     "value": ""
                                 }
+                            },
+                            "damage_own_units": {
+                                "far": -1.0,
+                                "mid": -1.0,
+                                "near": -1.0
                             }
                         },
                         "behaviour": {
@@ -19938,7 +20209,7 @@
                             },
                             "require_reload_after_switch": "False",
                             "persistent_reloadticks": "False",
-                            "skip_reload_after_blueprint_convert": "False"
+                            "weapon_reload_behavior_on_blueprint_convert": "normal"
                         },
                         "scatter": {
                             "angle_scatter": 8.0,
@@ -20404,6 +20675,11 @@
                                     "name": "area_over_time_option",
                                     "value": ""
                                 }
+                            },
+                            "damage_own_units": {
+                                "far": -1.0,
+                                "mid": -1.0,
+                                "near": -1.0
                             }
                         },
                         "behaviour": {
@@ -20612,7 +20888,7 @@
                             },
                             "require_reload_after_switch": "False",
                             "persistent_reloadticks": "False",
-                            "skip_reload_after_blueprint_convert": "False"
+                            "weapon_reload_behavior_on_blueprint_convert": "normal"
                         },
                         "scatter": {
                             "angle_scatter": 3.0,
@@ -21022,6 +21298,11 @@
                                     "name": "area_over_time_option",
                                     "value": ""
                                 }
+                            },
+                            "damage_own_units": {
+                                "far": -1.0,
+                                "mid": -1.0,
+                                "near": -1.0
                             }
                         },
                         "behaviour": {
@@ -21224,7 +21505,7 @@
                             },
                             "require_reload_after_switch": "True",
                             "persistent_reloadticks": "False",
-                            "skip_reload_after_blueprint_convert": "False"
+                            "weapon_reload_behavior_on_blueprint_convert": "normal"
                         },
                         "scatter": {
                             "angle_scatter": 3.0,
@@ -21636,6 +21917,11 @@
                                     "name": "area_over_time_option",
                                     "value": ""
                                 }
+                            },
+                            "damage_own_units": {
+                                "far": -1.0,
+                                "mid": -1.0,
+                                "near": -1.0
                             }
                         },
                         "behaviour": {
@@ -21839,7 +22125,7 @@
                             },
                             "require_reload_after_switch": "False",
                             "persistent_reloadticks": "False",
-                            "skip_reload_after_blueprint_convert": "False"
+                            "weapon_reload_behavior_on_blueprint_convert": "normal"
                         },
                         "scatter": {
                             "angle_scatter": 20.0,
@@ -22292,6 +22578,11 @@
                                     "name": "area_over_time_option",
                                     "value": ""
                                 }
+                            },
+                            "damage_own_units": {
+                                "far": -1.0,
+                                "mid": -1.0,
+                                "near": -1.0
                             }
                         },
                         "behaviour": {
@@ -22495,7 +22786,7 @@
                             },
                             "require_reload_after_switch": "False",
                             "persistent_reloadticks": "False",
-                            "skip_reload_after_blueprint_convert": "False"
+                            "weapon_reload_behavior_on_blueprint_convert": "normal"
                         },
                         "scatter": {
                             "angle_scatter": 15.0,
@@ -22948,6 +23239,11 @@
                                     "name": "area_over_time_option",
                                     "value": ""
                                 }
+                            },
+                            "damage_own_units": {
+                                "far": -1.0,
+                                "mid": -1.0,
+                                "near": -1.0
                             }
                         },
                         "behaviour": {
@@ -23151,7 +23447,7 @@
                             },
                             "require_reload_after_switch": "False",
                             "persistent_reloadticks": "False",
-                            "skip_reload_after_blueprint_convert": "False"
+                            "weapon_reload_behavior_on_blueprint_convert": "normal"
                         },
                         "scatter": {
                             "angle_scatter": 20.0,
@@ -23608,6 +23904,11 @@
                                     "name": "area_over_time_option",
                                     "value": ""
                                 }
+                            },
+                            "damage_own_units": {
+                                "far": -1.0,
+                                "mid": -1.0,
+                                "near": -1.0
                             }
                         },
                         "behaviour": {
@@ -23703,7 +24004,13 @@
                             "min": 14.0,
                             "damage_type": "True Damage",
                             "allow_overkill": "False",
-                            "on_penetrated_state_trees": [],
+                            "on_penetrated_state_trees": [
+                                {
+                                    "container": {
+                                        "state_tree": "rifle_weapon_on_penetrate_wrapper"
+                                    }
+                                }
+                            ],
                             "on_deflected_state_trees": [],
                             "post_damage_state_trees": [],
                             "damage_target_requirement": "",
@@ -23811,7 +24118,7 @@
                             },
                             "require_reload_after_switch": "False",
                             "persistent_reloadticks": "False",
-                            "skip_reload_after_blueprint_convert": "False"
+                            "weapon_reload_behavior_on_blueprint_convert": "normal"
                         },
                         "scatter": {
                             "angle_scatter": 5.0,
@@ -24326,6 +24633,11 @@
                                     "name": "area_over_time_option",
                                     "value": ""
                                 }
+                            },
+                            "damage_own_units": {
+                                "far": -1.0,
+                                "mid": -1.0,
+                                "near": -1.0
                             }
                         },
                         "behaviour": {
@@ -24421,7 +24733,13 @@
                             "min": 12.0,
                             "damage_type": "True Damage",
                             "allow_overkill": "False",
-                            "on_penetrated_state_trees": [],
+                            "on_penetrated_state_trees": [
+                                {
+                                    "container": {
+                                        "state_tree": "rifle_weapon_on_penetrate_wrapper"
+                                    }
+                                }
+                            ],
                             "on_deflected_state_trees": [],
                             "post_damage_state_trees": [],
                             "damage_target_requirement": "",
@@ -24529,7 +24847,7 @@
                             },
                             "require_reload_after_switch": "False",
                             "persistent_reloadticks": "False",
-                            "skip_reload_after_blueprint_convert": "False"
+                            "weapon_reload_behavior_on_blueprint_convert": "normal"
                         },
                         "scatter": {
                             "angle_scatter": 5.0,
@@ -25044,6 +25362,11 @@
                                     "name": "area_over_time_option",
                                     "value": ""
                                 }
+                            },
+                            "damage_own_units": {
+                                "far": -1.0,
+                                "mid": -1.0,
+                                "near": -1.0
                             }
                         },
                         "behaviour": {
@@ -25139,7 +25462,13 @@
                             "min": 14.0,
                             "damage_type": "True Damage",
                             "allow_overkill": "False",
-                            "on_penetrated_state_trees": [],
+                            "on_penetrated_state_trees": [
+                                {
+                                    "container": {
+                                        "state_tree": "rifle_weapon_on_penetrate_wrapper"
+                                    }
+                                }
+                            ],
                             "on_deflected_state_trees": [],
                             "post_damage_state_trees": [],
                             "damage_target_requirement": "",
@@ -25247,7 +25576,7 @@
                             },
                             "require_reload_after_switch": "False",
                             "persistent_reloadticks": "False",
-                            "skip_reload_after_blueprint_convert": "False"
+                            "weapon_reload_behavior_on_blueprint_convert": "normal"
                         },
                         "scatter": {
                             "angle_scatter": 5.0,
@@ -25762,6 +26091,11 @@
                                     "name": "area_over_time_option",
                                     "value": ""
                                 }
+                            },
+                            "damage_own_units": {
+                                "far": -1.0,
+                                "mid": -1.0,
+                                "near": -1.0
                             }
                         },
                         "behaviour": {
@@ -25857,7 +26191,13 @@
                             "min": 14.0,
                             "damage_type": "True Damage",
                             "allow_overkill": "False",
-                            "on_penetrated_state_trees": [],
+                            "on_penetrated_state_trees": [
+                                {
+                                    "container": {
+                                        "state_tree": "rifle_weapon_on_penetrate_wrapper"
+                                    }
+                                }
+                            ],
                             "on_deflected_state_trees": [],
                             "post_damage_state_trees": [],
                             "damage_target_requirement": "",
@@ -25965,7 +26305,7 @@
                             },
                             "require_reload_after_switch": "False",
                             "persistent_reloadticks": "False",
-                            "skip_reload_after_blueprint_convert": "False"
+                            "weapon_reload_behavior_on_blueprint_convert": "normal"
                         },
                         "scatter": {
                             "angle_scatter": 5.0,
@@ -26480,6 +26820,11 @@
                                     "name": "area_over_time_option",
                                     "value": ""
                                 }
+                            },
+                            "damage_own_units": {
+                                "far": -1.0,
+                                "mid": -1.0,
+                                "near": -1.0
                             }
                         },
                         "behaviour": {
@@ -26575,7 +26920,13 @@
                             "min": 14.0,
                             "damage_type": "True Damage",
                             "allow_overkill": "False",
-                            "on_penetrated_state_trees": [],
+                            "on_penetrated_state_trees": [
+                                {
+                                    "container": {
+                                        "state_tree": "rifle_weapon_on_penetrate_wrapper"
+                                    }
+                                }
+                            ],
                             "on_deflected_state_trees": [],
                             "post_damage_state_trees": [],
                             "damage_target_requirement": "",
@@ -26683,7 +27034,7 @@
                             },
                             "require_reload_after_switch": "False",
                             "persistent_reloadticks": "False",
-                            "skip_reload_after_blueprint_convert": "False"
+                            "weapon_reload_behavior_on_blueprint_convert": "normal"
                         },
                         "scatter": {
                             "angle_scatter": 5.0,

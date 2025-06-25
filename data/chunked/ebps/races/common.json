@@ -166,7 +166,76 @@
                                 "must_be_in_line_of_sight": "False",
                                 "must_not_be_in_walkable_surfaces": "False",
                                 "must_be_on_strategic_point": "False",
-                                "requirements": [],
+                                "requirements": [
+                                    {
+                                        "requirement": {
+                                            "template_reference": {
+                                                "name": "requirement",
+                                                "value": "requirements\\required_not"
+                                            },
+                                            "reason": "usage",
+                                            "requirement_table": [
+                                                {
+                                                    "required": {
+                                                        "template_reference": {
+                                                            "name": "required",
+                                                            "value": "requirements\\required_near_entity"
+                                                        },
+                                                        "area_option": {
+                                                            "template_reference": {
+                                                                "name": "area_option",
+                                                                "value": "options\\area_info_options\\circle_area_option"
+                                                            },
+                                                            "dynamic_radius_type": "fixed",
+                                                            "inner_radius": 1.0,
+                                                            "is_two_dimensional": "True",
+                                                            "outer_radius": 1.0
+                                                        },
+                                                        "near_entity_requirement": [
+                                                            {
+                                                                "required": {
+                                                                    "template_reference": {
+                                                                        "name": "required",
+                                                                        "value": "requirements\\required_unit_type"
+                                                                    },
+                                                                    "qualify_option": {
+                                                                        "template_reference": {
+                                                                            "name": "qualify_option",
+                                                                            "value": "options\\none"
+                                                                        }
+                                                                    },
+                                                                    "reason": "usage",
+                                                                    "search_load_out": "False",
+                                                                    "ui_name": {
+                                                                        "locstring": {
+                                                                            "name": "ui_name",
+                                                                            "value": "0"
+                                                                        }
+                                                                    },
+                                                                    "unit_type": "mine"
+                                                                }
+                                                            }
+                                                        ],
+                                                        "nearby_collision_filter": "ally",
+                                                        "reason": "usage",
+                                                        "ui_name": {
+                                                            "locstring": {
+                                                                "name": "ui_name",
+                                                                "value": "0"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "ui_name": {
+                                                "locstring": {
+                                                    "name": "ui_name",
+                                                    "value": "0"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ],
                                 "spacing_distance": 0.0,
                                 "skip_impass_checks_and_ignore_immovable_entities": "False",
                                 "state_tree_conditions": "",
@@ -739,7 +808,8 @@
                             "initial_delay_seconds": 2.5,
                             "trigger_type": "",
                             "detonate_on_death": "True",
-                            "accept_target_conditions": "weapon_queries\\global_library\\mine_target_query"
+                            "accept_target_conditions": "weapon_queries\\global_library\\mine_target_query",
+                            "defuse_veterancy_reward": 150.0
                         }
                     },
                     {
@@ -1066,7 +1136,7 @@
                                 "value": "ebpextensions\\sight_ext"
                             },
                             "detect_camouflage": {
-                                "tp_global": -1.0,
+                                "tp_global": 10.0,
                                 "tp_mine": -1.0,
                                 "tp_unit": -1.0,
                                 "tp_democharge": -1.0
@@ -1923,7 +1993,7 @@
                                 "value": "ebpextensions\\sight_ext"
                             },
                             "detect_camouflage": {
-                                "tp_global": 12.5,
+                                "tp_global": 10.0,
                                 "tp_mine": -1.0,
                                 "tp_unit": -1.0,
                                 "tp_democharge": -1.0
@@ -1973,6 +2043,9 @@
                                 },
                                 {
                                     "unit_type": "emplacement"
+                                },
+                                {
+                                    "unit_type": "artillery_emplacement"
                                 }
                             ],
                             "weapon_targeting": "automatic",
@@ -3848,7 +3921,76 @@
                                 "must_be_in_line_of_sight": "False",
                                 "must_not_be_in_walkable_surfaces": "False",
                                 "must_be_on_strategic_point": "False",
-                                "requirements": [],
+                                "requirements": [
+                                    {
+                                        "requirement": {
+                                            "template_reference": {
+                                                "name": "requirement",
+                                                "value": "requirements\\required_not"
+                                            },
+                                            "reason": "usage",
+                                            "requirement_table": [
+                                                {
+                                                    "required": {
+                                                        "template_reference": {
+                                                            "name": "required",
+                                                            "value": "requirements\\required_near_entity"
+                                                        },
+                                                        "area_option": {
+                                                            "template_reference": {
+                                                                "name": "area_option",
+                                                                "value": "options\\area_info_options\\circle_area_option"
+                                                            },
+                                                            "dynamic_radius_type": "fixed",
+                                                            "inner_radius": 1.0,
+                                                            "is_two_dimensional": "True",
+                                                            "outer_radius": 1.0
+                                                        },
+                                                        "near_entity_requirement": [
+                                                            {
+                                                                "required": {
+                                                                    "template_reference": {
+                                                                        "name": "required",
+                                                                        "value": "requirements\\required_unit_type"
+                                                                    },
+                                                                    "qualify_option": {
+                                                                        "template_reference": {
+                                                                            "name": "qualify_option",
+                                                                            "value": "options\\none"
+                                                                        }
+                                                                    },
+                                                                    "reason": "usage",
+                                                                    "search_load_out": "False",
+                                                                    "ui_name": {
+                                                                        "locstring": {
+                                                                            "name": "ui_name",
+                                                                            "value": "0"
+                                                                        }
+                                                                    },
+                                                                    "unit_type": "mine"
+                                                                }
+                                                            }
+                                                        ],
+                                                        "nearby_collision_filter": "ally",
+                                                        "reason": "usage",
+                                                        "ui_name": {
+                                                            "locstring": {
+                                                                "name": "ui_name",
+                                                                "value": "0"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "ui_name": {
+                                                "locstring": {
+                                                    "name": "ui_name",
+                                                    "value": "0"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ],
                                 "spacing_distance": 0.0,
                                 "skip_impass_checks_and_ignore_immovable_entities": "False",
                                 "state_tree_conditions": "",
@@ -4421,7 +4563,8 @@
                             "initial_delay_seconds": 2.5,
                             "trigger_type": "",
                             "detonate_on_death": "True",
-                            "accept_target_conditions": "weapon_queries\\global_library\\mine_target_query"
+                            "accept_target_conditions": "weapon_queries\\global_library\\mine_target_query",
+                            "defuse_veterancy_reward": 150.0
                         }
                     },
                     {
@@ -6631,7 +6774,7 @@
                             "value": "ebpextensions\\sight_ext"
                         },
                         "detect_camouflage": {
-                            "tp_global": 12.5,
+                            "tp_global": 10.0,
                             "tp_mine": -1.0,
                             "tp_unit": -1.0,
                             "tp_democharge": -1.0
@@ -9201,7 +9344,7 @@
                             "value": "ebpextensions\\sight_ext"
                         },
                         "detect_camouflage": {
-                            "tp_global": 12.5,
+                            "tp_global": 10.0,
                             "tp_mine": -1.0,
                             "tp_unit": -1.0,
                             "tp_democharge": -1.0
@@ -14359,7 +14502,7 @@
                             "value": "ebpextensions\\sight_ext"
                         },
                         "detect_camouflage": {
-                            "tp_global": 12.5,
+                            "tp_global": 10.0,
                             "tp_mine": -1.0,
                             "tp_unit": -1.0,
                             "tp_democharge": -1.0
@@ -16353,7 +16496,7 @@
                             "value": "ebpextensions\\sight_ext"
                         },
                         "detect_camouflage": {
-                            "tp_global": 12.5,
+                            "tp_global": 10.0,
                             "tp_mine": -1.0,
                             "tp_unit": -1.0,
                             "tp_democharge": -1.0
@@ -18161,7 +18304,7 @@
                         "death_seconds": 0.0,
                         "delete_when_dead": "False",
                         "force_attacker_memory": "False",
-                        "hitpoints": 240.0,
+                        "hitpoints": 160.0,
                         "is_invincible": "False",
                         "is_salvagable_wreck": "False",
                         "rebuilt_entity": {
@@ -18295,7 +18438,7 @@
                             "value": "ebpextensions\\sight_ext"
                         },
                         "detect_camouflage": {
-                            "tp_global": 12.5,
+                            "tp_global": 10.0,
                             "tp_mine": -1.0,
                             "tp_unit": -1.0,
                             "tp_democharge": -1.0
@@ -20186,7 +20329,7 @@
                                 "value": "ebpextensions\\sight_ext"
                             },
                             "detect_camouflage": {
-                                "tp_global": 12.5,
+                                "tp_global": 10.0,
                                 "tp_mine": -1.0,
                                 "tp_unit": -1.0,
                                 "tp_democharge": -1.0

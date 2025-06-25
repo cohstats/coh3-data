@@ -41,7 +41,7 @@
                             }
                         },
                         "hotkey_name": "",
-                        "icon_name": "races/american/battlegroups/paratroopers_us",
+                        "icon_name": "races/american/battlegroups/paratroopers_us_icon_mipped",
                         "reveal_for_decryption": "False",
                         "screen_name": {
                             "locstring": {
@@ -1045,8 +1045,27 @@
                         "extra_text_formatter": {
                             "template_reference": {
                                 "name": "extra_text_formatter",
-                                "value": ""
-                            }
+                                "value": "ui_text_formatter"
+                            },
+                            "formatter": {
+                                "locstring": {
+                                    "name": "formatter",
+                                    "value": "11268752"
+                                }
+                            },
+                            "formatter_arguments": [
+                                {
+                                    "int_value": 40.0
+                                },
+                                {
+                                    "locstring_value": {
+                                        "locstring": {
+                                            "name": "locstring_value",
+                                            "value": "11229741"
+                                        }
+                                    }
+                                }
+                            ]
                         },
                         "help_text_formatter": {
                             "template_reference": {
@@ -4194,7 +4213,7 @@
                             }
                         },
                         "hotkey_name": "",
-                        "icon_name": "races/american/battlegroups/armored_us",
+                        "icon_name": "races/american/battlegroups/armored_us_icon_mipped",
                         "reveal_for_decryption": "False",
                         "screen_name": {
                             "locstring": {
@@ -7228,7 +7247,7 @@
                                     "locstring_value": {
                                         "locstring": {
                                             "name": "locstring_value",
-                                            "value": "11266194"
+                                            "value": "11268261"
                                         }
                                     }
                                 }
@@ -9225,7 +9244,7 @@
                             }
                         },
                         "hotkey_name": "",
-                        "icon_name": "races/american/battlegroups/infantry_us",
+                        "icon_name": "races/american/battlegroups/infantry_us_icon_mipped",
                         "reveal_for_decryption": "False",
                         "screen_name": {
                             "locstring": {
@@ -19344,7 +19363,7 @@
                         "extra_text": {
                             "locstring": {
                                 "name": "extra_text",
-                                "value": "0"
+                                "value": "11270093"
                             }
                         },
                         "help_text": {
@@ -24156,7 +24175,7 @@
                             }
                         },
                         "hotkey_name": "",
-                        "icon_name": "races/american/battlegroups/spec_ops_us",
+                        "icon_name": "races/american/battlegroups/spec_ops_us_icon_mipped",
                         "reveal_for_decryption": "False",
                         "screen_name": {
                             "locstring": {
@@ -28540,7 +28559,7 @@
                             }
                         },
                         "hotkey_name": "",
-                        "icon_name": "races/american/battlegroups/special_weapons_us",
+                        "icon_name": "races/american/battlegroups/special_weapons_us_icon_mipped",
                         "reveal_for_decryption": "False",
                         "screen_name": {
                             "locstring": {
@@ -29384,7 +29403,7 @@
                                         "name": "custom_float_property",
                                         "value": "custom_properties\\custom_float_property"
                                     },
-                                    "id": "WEAPON_COOLDOWN_MODIFIER",
+                                    "id": "WEAPON_RELOAD_MODIFIER",
                                     "value": 0.8
                                 }
                             },
@@ -29394,7 +29413,7 @@
                                         "name": "custom_float_property",
                                         "value": "custom_properties\\custom_float_property"
                                     },
-                                    "id": "WEAPON_RELOAD_MODIFIER",
+                                    "id": "WEAPON_COOLDOWN_MODIFIER",
                                     "value": 0.8
                                 }
                             }
@@ -29492,16 +29511,6 @@
                                         "name": "custom_float_property",
                                         "value": "custom_properties\\custom_float_property"
                                     },
-                                    "id": "WEAPON_RELOAD_MODIFIER",
-                                    "value": 0.5
-                                }
-                            },
-                            {
-                                "custom_float_property": {
-                                    "template_reference": {
-                                        "name": "custom_float_property",
-                                        "value": "custom_properties\\custom_float_property"
-                                    },
                                     "id": "WEAPON_COOLDOWN_MODIFIER",
                                     "value": 0.5
                                 }
@@ -29534,6 +29543,16 @@
                                     },
                                     "id": "ABILITY_RECHARGE_MODIFIER",
                                     "value": 0.0
+                                }
+                            },
+                            {
+                                "custom_float_property": {
+                                    "template_reference": {
+                                        "name": "custom_float_property",
+                                        "value": "custom_properties\\custom_float_property"
+                                    },
+                                    "id": "WEAPON_RELOAD_MODIFIER",
+                                    "value": 0.5
                                 }
                             }
                         ],
@@ -29606,16 +29625,6 @@
                                         "name": "custom_float_property",
                                         "value": "custom_properties\\custom_float_property"
                                     },
-                                    "id": "WEAPON_RANGE_MODIFIER",
-                                    "value": 7.5
-                                }
-                            },
-                            {
-                                "custom_float_property": {
-                                    "template_reference": {
-                                        "name": "custom_float_property",
-                                        "value": "custom_properties\\custom_float_property"
-                                    },
                                     "id": "WEAPON_ACCURACY_MODIFIER",
                                     "value": 1.25
                                 }
@@ -29628,6 +29637,16 @@
                                     },
                                     "id": "UNIT_SIGHT_MODIFIER",
                                     "value": 5.0
+                                }
+                            },
+                            {
+                                "custom_float_property": {
+                                    "template_reference": {
+                                        "name": "custom_float_property",
+                                        "value": "custom_properties\\custom_float_property"
+                                    },
+                                    "id": "WEAPON_RANGE_MODIFIER",
+                                    "value": 7.5
                                 }
                             }
                         ],
@@ -29804,7 +29823,7 @@
                     "extra_text": {
                         "locstring": {
                             "name": "extra_text",
-                            "value": "11243053"
+                            "value": "11242330"
                         }
                     },
                     "help_text": {
@@ -30114,7 +30133,7 @@
                     "extra_text": {
                         "locstring": {
                             "name": "extra_text",
-                            "value": "11250070"
+                            "value": "11248956"
                         }
                     },
                     "help_text": {
@@ -31534,6 +31553,104 @@
                                     "value": "11243752"
                                 }
                             }
+                        }
+                    },
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_any_in_list"
+                            },
+                            "reason": "usage",
+                            "ui_name": {
+                                "locstring": {
+                                    "name": "ui_name",
+                                    "value": "11204942"
+                                }
+                            },
+                            "requirements": [
+                                {
+                                    "requirement": {
+                                        "template_reference": {
+                                            "name": "requirement",
+                                            "value": "requirements\\required_player_upgrade"
+                                        },
+                                        "reason": "usage",
+                                        "ui_name": {
+                                            "locstring": {
+                                                "name": "ui_name",
+                                                "value": "0"
+                                            }
+                                        },
+                                        "is_present": "True",
+                                        "max_completed": 100.0,
+                                        "min_completed": 1.0,
+                                        "upgrade_name": {
+                                            "instance_reference": "upgrade/american/research/mechanized_support_center_us"
+                                        },
+                                        "include_completed": "True",
+                                        "include_queued": "False",
+                                        "include_pbg_parenting": {
+                                            "include_child_pbgs": "False",
+                                            "include_parent_pbgs": "False"
+                                        }
+                                    }
+                                },
+                                {
+                                    "requirement": {
+                                        "template_reference": {
+                                            "name": "requirement",
+                                            "value": "requirements\\required_player_upgrade"
+                                        },
+                                        "reason": "usage",
+                                        "ui_name": {
+                                            "locstring": {
+                                                "name": "ui_name",
+                                                "value": "0"
+                                            }
+                                        },
+                                        "is_present": "True",
+                                        "max_completed": 100.0,
+                                        "min_completed": 1.0,
+                                        "upgrade_name": {
+                                            "instance_reference": "upgrade/american/research/infantry_support_center_us"
+                                        },
+                                        "include_completed": "True",
+                                        "include_queued": "False",
+                                        "include_pbg_parenting": {
+                                            "include_child_pbgs": "False",
+                                            "include_parent_pbgs": "False"
+                                        }
+                                    }
+                                },
+                                {
+                                    "requirement": {
+                                        "template_reference": {
+                                            "name": "requirement",
+                                            "value": "requirements\\required_player_upgrade"
+                                        },
+                                        "reason": "usage",
+                                        "ui_name": {
+                                            "locstring": {
+                                                "name": "ui_name",
+                                                "value": "0"
+                                            }
+                                        },
+                                        "is_present": "True",
+                                        "max_completed": 100.0,
+                                        "min_completed": 1.0,
+                                        "upgrade_name": {
+                                            "instance_reference": "upgrade/american/research/air_support_center_us"
+                                        },
+                                        "include_completed": "True",
+                                        "include_queued": "False",
+                                        "include_pbg_parenting": {
+                                            "include_child_pbgs": "False",
+                                            "include_parent_pbgs": "False"
+                                        }
+                                    }
+                                }
+                            ]
                         }
                     }
                 ],
@@ -39147,6 +39264,96 @@
                 "custom_hash_key_properties": [],
                 "custom_reflected_enum_properties": []
             }
+        },
+        "buff": {
+            "captain_leadership_us": {
+                "custom_properties": {
+                    "template_reference": {
+                        "name": "custom_properties",
+                        "value": "custom_property_template"
+                    },
+                    "custom_bool_properties": [
+                        {
+                            "custom_bool_property": {
+                                "template_reference": {
+                                    "name": "custom_bool_property",
+                                    "value": "custom_properties\\custom_bool_property"
+                                },
+                                "value": "False"
+                            }
+                        }
+                    ],
+                    "custom_float_properties": [
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "value": 0.0
+                            }
+                        },
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "RECEIVED_VETERANCY_SQUAD_MODIFIER",
+                                "value": 1.25
+                            }
+                        }
+                    ]
+                },
+                "parent_pbg": {
+                    "instance_reference": "upgrade/dev/templates/status_upgrade"
+                },
+                "pbgid": 2166613.0
+            },
+            "captain_leadership_veteran_us": {
+                "custom_properties": {
+                    "template_reference": {
+                        "name": "custom_properties",
+                        "value": "custom_property_template"
+                    },
+                    "custom_bool_properties": [
+                        {
+                            "custom_bool_property": {
+                                "template_reference": {
+                                    "name": "custom_bool_property",
+                                    "value": "custom_properties\\custom_bool_property"
+                                },
+                                "value": "False"
+                            }
+                        }
+                    ],
+                    "custom_float_properties": [
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "value": 0.0
+                            }
+                        },
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "RECEIVED_VETERANCY_SQUAD_MODIFIER",
+                                "value": 1.75
+                            }
+                        }
+                    ]
+                },
+                "parent_pbg": {
+                    "instance_reference": "upgrade/dev/templates/status_upgrade"
+                },
+                "pbgid": 2166614.0
+            }
         }
     },
     "research": {
@@ -39197,7 +39404,7 @@
                     "brief_text": {
                         "locstring": {
                             "name": "brief_text",
-                            "value": "11250089"
+                            "value": "11270090"
                         }
                     },
                     "screen_name_short": {
@@ -41794,221 +42001,7 @@
                         "sound_alternative": "",
                         "symbol_icon_name": "common/upgrades/bar_riflemen_us"
                     },
-                    "requirements": [
-                        {
-                            "required": {
-                                "template_reference": {
-                                    "name": "required",
-                                    "value": "requirements\\required_any_in_list"
-                                },
-                                "reason": "usage",
-                                "ui_name": {
-                                    "locstring": {
-                                        "name": "ui_name",
-                                        "value": "0"
-                                    }
-                                },
-                                "requirements": [
-                                    {
-                                        "requirement": {
-                                            "template_reference": {
-                                                "name": "requirement",
-                                                "value": "requirements\\required_player_upgrade"
-                                            },
-                                            "reason": "usage",
-                                            "ui_name": {
-                                                "locstring": {
-                                                    "name": "ui_name",
-                                                    "value": "0"
-                                                }
-                                            },
-                                            "is_present": "True",
-                                            "max_completed": 100.0,
-                                            "min_completed": 1.0,
-                                            "upgrade_name": {
-                                                "instance_reference": "upgrade/campaign/missions/sp_generic_company_check"
-                                            },
-                                            "include_completed": "True",
-                                            "include_queued": "False",
-                                            "include_pbg_parenting": {
-                                                "include_child_pbgs": "False",
-                                                "include_parent_pbgs": "False"
-                                            }
-                                        }
-                                    },
-                                    {
-                                        "requirement": {
-                                            "template_reference": {
-                                                "name": "requirement",
-                                                "value": "requirements\\required_all_in_list"
-                                            },
-                                            "reason": "usage",
-                                            "ui_name": {
-                                                "locstring": {
-                                                    "name": "ui_name",
-                                                    "value": "11171857"
-                                                }
-                                            },
-                                            "requirements": [
-                                                {
-                                                    "requirement": {
-                                                        "template_reference": {
-                                                            "name": "requirement",
-                                                            "value": "requirements\\required_player_upgrade"
-                                                        },
-                                                        "reason": "usage",
-                                                        "ui_name": {
-                                                            "locstring": {
-                                                                "name": "ui_name",
-                                                                "value": "0"
-                                                            }
-                                                        },
-                                                        "is_present": "False",
-                                                        "max_completed": 100.0,
-                                                        "min_completed": 1.0,
-                                                        "upgrade_name": {
-                                                            "instance_reference": "upgrade/campaign/missions/sp_generic_company_check"
-                                                        },
-                                                        "include_completed": "True",
-                                                        "include_queued": "False",
-                                                        "include_pbg_parenting": {
-                                                            "include_child_pbgs": "False",
-                                                            "include_parent_pbgs": "False"
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "requirement": {
-                                                        "template_reference": {
-                                                            "name": "requirement",
-                                                            "value": "requirements\\required_any_in_list"
-                                                        },
-                                                        "reason": "usage",
-                                                        "ui_name": {
-                                                            "locstring": {
-                                                                "name": "ui_name",
-                                                                "value": "0"
-                                                            }
-                                                        },
-                                                        "requirements": [
-                                                            {
-                                                                "requirement": {
-                                                                    "template_reference": {
-                                                                        "name": "requirement",
-                                                                        "value": "requirements\\required_player_upgrade"
-                                                                    },
-                                                                    "reason": "usage",
-                                                                    "ui_name": {
-                                                                        "locstring": {
-                                                                            "name": "ui_name",
-                                                                            "value": "0"
-                                                                        }
-                                                                    },
-                                                                    "is_present": "True",
-                                                                    "max_completed": 100.0,
-                                                                    "min_completed": 1.0,
-                                                                    "upgrade_name": {
-                                                                        "instance_reference": "upgrade/american/research/mechanized_support_center_us"
-                                                                    },
-                                                                    "include_completed": "True",
-                                                                    "include_queued": "False",
-                                                                    "include_pbg_parenting": {
-                                                                        "include_child_pbgs": "False",
-                                                                        "include_parent_pbgs": "False"
-                                                                    }
-                                                                }
-                                                            },
-                                                            {
-                                                                "requirement": {
-                                                                    "template_reference": {
-                                                                        "name": "requirement",
-                                                                        "value": "requirements\\required_player_upgrade"
-                                                                    },
-                                                                    "reason": "usage",
-                                                                    "ui_name": {
-                                                                        "locstring": {
-                                                                            "name": "ui_name",
-                                                                            "value": "0"
-                                                                        }
-                                                                    },
-                                                                    "is_present": "True",
-                                                                    "max_completed": 100.0,
-                                                                    "min_completed": 1.0,
-                                                                    "upgrade_name": {
-                                                                        "instance_reference": "upgrade/american/research/infantry_support_center_us"
-                                                                    },
-                                                                    "include_completed": "True",
-                                                                    "include_queued": "False",
-                                                                    "include_pbg_parenting": {
-                                                                        "include_child_pbgs": "False",
-                                                                        "include_parent_pbgs": "False"
-                                                                    }
-                                                                }
-                                                            },
-                                                            {
-                                                                "requirement": {
-                                                                    "template_reference": {
-                                                                        "name": "requirement",
-                                                                        "value": "requirements\\required_player_upgrade"
-                                                                    },
-                                                                    "reason": "usage",
-                                                                    "ui_name": {
-                                                                        "locstring": {
-                                                                            "name": "ui_name",
-                                                                            "value": "0"
-                                                                        }
-                                                                    },
-                                                                    "is_present": "True",
-                                                                    "max_completed": 100.0,
-                                                                    "min_completed": 1.0,
-                                                                    "upgrade_name": {
-                                                                        "instance_reference": "upgrade/american/research/air_support_center_us"
-                                                                    },
-                                                                    "include_completed": "True",
-                                                                    "include_queued": "False",
-                                                                    "include_pbg_parenting": {
-                                                                        "include_child_pbgs": "False",
-                                                                        "include_parent_pbgs": "False"
-                                                                    }
-                                                                }
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    }
-                                ]
-                            }
-                        },
-                        {
-                            "required": {
-                                "template_reference": {
-                                    "name": "required",
-                                    "value": "requirements\\required_player_upgrade"
-                                },
-                                "reason": "usage_and_display",
-                                "ui_name": {
-                                    "locstring": {
-                                        "name": "ui_name",
-                                        "value": "0"
-                                    }
-                                },
-                                "is_present": "False",
-                                "max_completed": 100.0,
-                                "min_completed": 1.0,
-                                "upgrade_name": {
-                                    "instance_reference": "upgrade/american/campaign/company/special_operations/passive_unlocks/c_special_operations_special_arms_passive_us"
-                                },
-                                "include_completed": "True",
-                                "include_queued": "False",
-                                "include_pbg_parenting": {
-                                    "include_child_pbgs": "False",
-                                    "include_parent_pbgs": "False"
-                                }
-                            }
-                        }
-                    ],
+                    "requirements": [],
                     "ui_kicker_icon_name": "",
                     "ui_squad_name_override": {
                         "locstring": {
@@ -46104,6 +46097,372 @@
                     "custom_reflected_enum_properties": []
                 }
             },
+            "improved_vehicle_machine_guns_us": {
+                "upgrade_bag": {
+                    "enable_in_hold": "True",
+                    "global_max_limit": 1.0,
+                    "has_speech_code": "True",
+                    "local_max_limit": 0.0,
+                    "owner_type": "player",
+                    "time_cost": {
+                        "cost": {
+                            "action": 0.0,
+                            "popcap": 0.0,
+                            "command": 0.0,
+                            "fuel": 25.0,
+                            "munition": 0.0,
+                            "manpower": 125.0,
+                            "requisition": 0.0,
+                            "ultimate": 0.0
+                        },
+                        "time_seconds": 30.0
+                    },
+                    "ui_event_cue": "True",
+                    "ui_production_group": "command_panel",
+                    "ui_info": {
+                        "extra_text": {
+                            "locstring": {
+                                "name": "extra_text",
+                                "value": "0"
+                            }
+                        },
+                        "help_text": {
+                            "locstring": {
+                                "name": "help_text",
+                                "value": "11159402"
+                            }
+                        },
+                        "hotkey_name": "Q",
+                        "icon_name": "races/american/upgrades/fine_tuned_barrels",
+                        "reveal_for_decryption": "False",
+                        "screen_name": {
+                            "locstring": {
+                                "name": "screen_name",
+                                "value": "11268263"
+                            }
+                        },
+                        "brief_text": {
+                            "locstring": {
+                                "name": "brief_text",
+                                "value": "11268262"
+                            }
+                        },
+                        "screen_name_short": {
+                            "locstring": {
+                                "name": "screen_name_short",
+                                "value": "0"
+                            }
+                        },
+                        "debug_text": "",
+                        "tooltip_data_template": "",
+                        "ui_combine_type": "intersection",
+                        "brief_text_formatter": {
+                            "template_reference": {
+                                "name": "brief_text_formatter",
+                                "value": ""
+                            }
+                        },
+                        "extra_text_formatter": {
+                            "template_reference": {
+                                "name": "extra_text_formatter",
+                                "value": "ui_text_formatter"
+                            },
+                            "formatter_arguments": [
+                                {
+                                    "int_value": 5.0
+                                },
+                                {
+                                    "locstring_value": {
+                                        "locstring": {
+                                            "name": "locstring_value",
+                                            "value": "11264710"
+                                        }
+                                    }
+                                },
+                                {
+                                    "int_value": 25.0
+                                },
+                                {
+                                    "locstring_value": {
+                                        "locstring": {
+                                            "name": "locstring_value",
+                                            "value": "11266087"
+                                        }
+                                    }
+                                }
+                            ],
+                            "formatter": {
+                                "locstring": {
+                                    "name": "formatter",
+                                    "value": "11265396"
+                                }
+                            }
+                        },
+                        "help_text_formatter": {
+                            "template_reference": {
+                                "name": "help_text_formatter",
+                                "value": ""
+                            }
+                        },
+                        "screen_name_formatter": {
+                            "template_reference": {
+                                "name": "screen_name_formatter",
+                                "value": ""
+                            }
+                        },
+                        "screen_name_short_formatter": {
+                            "template_reference": {
+                                "name": "screen_name_short_formatter",
+                                "value": ""
+                            }
+                        },
+                        "screen_name_visibility": "visible",
+                        "sound": "",
+                        "sound_alternative": "",
+                        "symbol_icon_name": "races/american/upgrades/fine_tuned_barrels"
+                    },
+                    "requirements": [
+                        {
+                            "required": {
+                                "template_reference": {
+                                    "name": "required",
+                                    "value": "requirements\\required_structure"
+                                },
+                                "reason": "usage",
+                                "ui_name": {
+                                    "locstring": {
+                                        "name": "ui_name",
+                                        "value": "0"
+                                    }
+                                },
+                                "structure_name": {
+                                    "instance_reference": "ebps/races/american/buildings/production/mechanized_support_center_us"
+                                },
+                                "required_structure_count": 1.0,
+                                "check_team": "False",
+                                "require_construction_complete": "False",
+                                "include_pbg_parenting": {
+                                    "include_child_pbgs": "False",
+                                    "include_parent_pbgs": "False"
+                                }
+                            }
+                        },
+                        {
+                            "required": {
+                                "template_reference": {
+                                    "name": "required",
+                                    "value": "requirements\\required_player_upgrade"
+                                },
+                                "reason": "usage",
+                                "ui_name": {
+                                    "locstring": {
+                                        "name": "ui_name",
+                                        "value": "0"
+                                    }
+                                },
+                                "is_present": "False",
+                                "max_completed": 100.0,
+                                "min_completed": 1.0,
+                                "upgrade_name": {
+                                    "instance_reference": "upgrade/american/research/mechanized/improved_vehicle_machine_guns_us"
+                                },
+                                "include_completed": "True",
+                                "include_queued": "False",
+                                "include_pbg_parenting": {
+                                    "include_child_pbgs": "False",
+                                    "include_parent_pbgs": "False"
+                                }
+                            }
+                        }
+                    ],
+                    "ui_kicker_icon_name": "",
+                    "ui_squad_name_override": {
+                        "locstring": {
+                            "name": "ui_squad_name_override",
+                            "value": "0"
+                        }
+                    },
+                    "ui_squad_help_text_override": {
+                        "locstring": {
+                            "name": "ui_squad_help_text_override",
+                            "value": "0"
+                        }
+                    },
+                    "ui_squad_extra_text_override": {
+                        "locstring": {
+                            "name": "ui_squad_extra_text_override",
+                            "value": "0"
+                        }
+                    },
+                    "ui_preview": [],
+                    "speech_code": "",
+                    "ui_squad_portrait_icon_override": "",
+                    "ui_position": {
+                        "ui_position_row": 1.0,
+                        "ui_position_column": 2.0
+                    },
+                    "min_music_intensity": 0.0,
+                    "state_tree_references": {
+                        "on_begin_action_tree": {
+                            "template_reference": {
+                                "name": "on_begin_action_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "on_action_tree": {
+                            "template_reference": {
+                                "name": "on_action_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": "vehicle_mg_field_modifications_us"
+                        },
+                        "on_cancel_action_tree": {
+                            "template_reference": {
+                                "name": "on_cancel_action_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "on_action_entity_tree": {
+                            "template_reference": {
+                                "name": "on_action_entity_tree",
+                                "value": "state_tree_entity_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "on_action_squad_tree": {
+                            "template_reference": {
+                                "name": "on_action_squad_tree",
+                                "value": "state_tree_squad_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        }
+                    },
+                    "upgrade_type": [],
+                    "requirements_openingbranch": "",
+                    "ui_menu": {
+                        "instance_reference": ""
+                    },
+                    "is_progress_permanent": "False",
+                    "squad_cost": {
+                        "action": 0.0,
+                        "command": 0.0,
+                        "popcap": 0.0,
+                        "fuel": 0.0,
+                        "munition": 0.0,
+                        "manpower": 0.0,
+                        "requisition": 0.0,
+                        "ultimate": 0.0
+                    },
+                    "ui_codex_info": {
+                        "priority": 0.0,
+                        "exclusive": "False",
+                        "ui_position": {
+                            "ui_position_column": -1.0,
+                            "ui_position_row": -1.0
+                        }
+                    },
+                    "filter_conditions": {
+                        "apply_to_filter_condition_statetree_ref": "",
+                        "apply_to_target_type": "squad",
+                        "apply_to_unit_classes": [],
+                        "apply_to_application_type": "current_and_future_units",
+                        "apply_to_future_units": "current_and_future_units",
+                        "apply_to_squad_types": []
+                    },
+                    "duration_seconds": 0.0,
+                    "ui_squad_icon_override": "",
+                    "ui_squad_brief_text_override": {
+                        "locstring": {
+                            "name": "ui_squad_brief_text_override",
+                            "value": "0"
+                        }
+                    },
+                    "ui_squad_symbol_icon_name_override": "",
+                    "ui_squad_extra_help_text_override": {
+                        "locstring": {
+                            "name": "ui_squad_extra_help_text_override",
+                            "value": "0"
+                        }
+                    },
+                    "requirements_to_complete": [],
+                    "blueprint_convert_options": {
+                        "preserve_upgrade": "True",
+                        "continuous_statetree": "True"
+                    },
+                    "ui_squad_brief_text_override_formatter": {
+                        "template_reference": {
+                            "name": "ui_squad_brief_text_override_formatter",
+                            "value": ""
+                        }
+                    },
+                    "ui_squad_extra_help_text_override_formatter": {
+                        "template_reference": {
+                            "name": "ui_squad_extra_help_text_override_formatter",
+                            "value": ""
+                        }
+                    },
+                    "ui_squad_extra_text_override_formatter": {
+                        "template_reference": {
+                            "name": "ui_squad_extra_text_override_formatter",
+                            "value": ""
+                        }
+                    },
+                    "ui_squad_help_text_override_formatter": {
+                        "template_reference": {
+                            "name": "ui_squad_help_text_override_formatter",
+                            "value": ""
+                        }
+                    }
+                },
+                "pbgid": 2166459.0,
+                "parent_pbg": {
+                    "instance_reference": ""
+                },
+                "custom_properties": {
+                    "template_reference": {
+                        "name": "custom_properties",
+                        "value": "custom_property_template"
+                    },
+                    "custom_bool_properties": [],
+                    "custom_float_properties": [
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "WEAPON_BURST_RATE_OF_FIRE_MODIFIER",
+                                "value": 1.25
+                            }
+                        },
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "WEAPON_RANGE_MODIFIER",
+                                "value": 5.0
+                            }
+                        }
+                    ],
+                    "custom_int32_properties": [],
+                    "custom_vector3f_properties": [],
+                    "custom_pbgid_properties": [],
+                    "custom_loc_string_properties": [],
+                    "custom_entity_state_tree_reference_properties": [],
+                    "custom_deferred_entity_state_tree_reference_properties": [],
+                    "custom_physical_state_tree_reference_properties": [],
+                    "custom_global_state_tree_reference_properties": [],
+                    "custom_squad_state_tree_reference_properties": [],
+                    "custom_enum_properties": [],
+                    "child_custom_properties": [],
+                    "custom_hash_key_properties": [],
+                    "custom_reflected_enum_properties": []
+                }
+            },
             "improvised_armor_us": {
                 "upgrade_bag": {
                     "enable_in_hold": "True",
@@ -46818,21 +47177,13 @@
                             },
                             "formatter_arguments": [
                                 {
-                                    "locstring_value": {
-                                        "locstring": {
-                                            "name": "locstring_value",
-                                            "value": "11263030"
-                                        }
-                                    }
-                                },
-                                {
-                                    "float_value": 3.0
+                                    "int_value": 25.0
                                 }
                             ],
                             "formatter": {
                                 "locstring": {
                                     "name": "formatter",
-                                    "value": "11263182"
+                                    "value": "11268271"
                                 }
                             }
                         },
@@ -48862,7 +49213,7 @@
                         "time_seconds": 30.0
                     },
                     "ui_event_cue": "True",
-                    "ui_production_group": "command_panel",
+                    "ui_production_group": "unit_upgrade_panel",
                     "ui_position": {
                         "ui_position_row": 1.0,
                         "ui_position_column": 4.0
@@ -48881,7 +49232,7 @@
                             }
                         },
                         "hotkey_name": "F",
-                        "icon_name": "races/american/vehicles/sherman_76mm_us",
+                        "icon_name": "races/american/upgrades/sherman_76mm_conversion",
                         "reveal_for_decryption": "False",
                         "screen_name": {
                             "locstring": {
@@ -48948,34 +49299,9 @@
                         "sound": "",
                         "sound_alternative": "",
                         "screen_name_visibility": "visible",
-                        "symbol_icon_name": "races/american/vehicles/sherman_76mm_us"
+                        "symbol_icon_name": "races/american/upgrades/sherman_76mm_conversion"
                     },
                     "requirements": [
-                        {
-                            "required": {
-                                "template_reference": {
-                                    "name": "required",
-                                    "value": "requirements\\required_structure"
-                                },
-                                "reason": "usage",
-                                "ui_name": {
-                                    "locstring": {
-                                        "name": "ui_name",
-                                        "value": "0"
-                                    }
-                                },
-                                "structure_name": {
-                                    "instance_reference": "ebps/races/american/buildings/production/mechanized_support_center_us"
-                                },
-                                "required_structure_count": 1.0,
-                                "check_team": "False",
-                                "require_construction_complete": "False",
-                                "include_pbg_parenting": {
-                                    "include_child_pbgs": "False",
-                                    "include_parent_pbgs": "False"
-                                }
-                            }
-                        },
                         {
                             "required": {
                                 "template_reference": {
@@ -55620,7 +55946,7 @@
                     "extra_text": {
                         "locstring": {
                             "name": "extra_text",
-                            "value": "11243070"
+                            "value": "0"
                         }
                     },
                     "help_text": {
@@ -55630,7 +55956,7 @@
                         }
                     },
                     "hotkey_name": "T",
-                    "icon_name": "common/abilities/ability_british_tank_commander",
+                    "icon_name": "races/british/upgrades/tank_commander_uk",
                     "reveal_for_decryption": "False",
                     "screen_name": {
                         "locstring": {
@@ -55641,7 +55967,7 @@
                     "brief_text": {
                         "locstring": {
                             "name": "brief_text",
-                            "value": "11242858"
+                            "value": "11243143"
                         }
                     },
                     "screen_name_short": {
@@ -55662,8 +55988,25 @@
                     "extra_text_formatter": {
                         "template_reference": {
                             "name": "extra_text_formatter",
-                            "value": ""
-                        }
+                            "value": "ui_text_formatter"
+                        },
+                        "formatter": {
+                            "locstring": {
+                                "name": "formatter",
+                                "value": "11267920"
+                            }
+                        },
+                        "formatter_arguments": [
+                            {
+                                "int_value": 10.0
+                            },
+                            {
+                                "int_value": 20.0
+                            },
+                            {
+                                "int_value": 5.0
+                            }
+                        ]
                     },
                     "help_text_formatter": {
                         "template_reference": {

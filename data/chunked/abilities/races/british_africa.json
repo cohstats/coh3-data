@@ -689,7 +689,8 @@
                 "active_range_bonus": 0.0,
                 "ai_ability_intent": {
                     "instance_reference": ""
-                }
+                },
+                "ability_categories": []
             },
             "pbgid": 2037066.0,
             "parent_pbg": {
@@ -1381,7 +1382,8 @@
                 "active_range_bonus": 0.0,
                 "ai_ability_intent": {
                     "instance_reference": ""
-                }
+                },
+                "ability_categories": []
             },
             "pbgid": 2037068.0,
             "parent_pbg": {
@@ -2098,7 +2100,8 @@
                 "active_range_bonus": 0.0,
                 "ai_ability_intent": {
                     "instance_reference": ""
-                }
+                },
+                "ability_categories": []
             },
             "pbgid": 2037070.0,
             "parent_pbg": {
@@ -2501,7 +2504,8 @@
                 "active_range_bonus": 0.0,
                 "ai_ability_intent": {
                     "instance_reference": ""
-                }
+                },
+                "ability_categories": []
             },
             "pbgid": 2071664.0,
             "parent_pbg": {
@@ -2646,7 +2650,7 @@
                 "initial_recharge": "False",
                 "move_back": "False",
                 "move_back_distance": 10.0,
-                "range": 0.0,
+                "range": 11.5,
                 "range_ignore": "False",
                 "recharge_time": 0.0,
                 "refundable": "True",
@@ -2842,10 +2846,10 @@
                     "instance_reference": ""
                 },
                 "ui_reticule": {
-                    "instance_reference": ""
+                    "instance_reference": "ui_reticule/range_camouflage_detection"
                 },
-                "ui_reticule_radius_min": 1.0,
-                "ui_reticule_radius_max": 1.0,
+                "ui_reticule_radius_min": 11.5,
+                "ui_reticule_radius_max": 11.5,
                 "pending_ability_out_of_range_behaviour": "chase",
                 "ui_ability_group": "group_primary",
                 "ui_targetable_sm_key": "",
@@ -2964,7 +2968,7 @@
                 "ui_range_min": {
                     "instance_reference": ""
                 },
-                "ui_range_reticule_enable_team_color": "False",
+                "ui_range_reticule_enable_team_color": "True",
                 "terminal_command": "False",
                 "can_passive_ability_create_formation_squad_group": "False",
                 "can_cast_again_whilst_pending": "False",
@@ -3000,7 +3004,8 @@
                 "active_range_bonus": 0.0,
                 "ai_ability_intent": {
                     "instance_reference": ""
-                }
+                },
+                "ability_categories": []
             },
             "pbgid": 2163949.0,
             "parent_pbg": {
@@ -3030,7 +3035,7 @@
                                 "value": "custom_properties\\custom_float_property"
                             },
                             "id": "CAMOUFLAGE_DELAY",
-                            "value": 0.5
+                            "value": 0.0
                         }
                     },
                     {
@@ -3069,7 +3074,7 @@
                                 "name": "custom_float_property",
                                 "value": "custom_properties\\custom_float_property"
                             },
-                            "id": "WEAPON_COOLDOWN_MODIFIER",
+                            "id": "WEAPON_OVERALL_ATTACK_SPEED",
                             "value": 1.0
                         }
                     },
@@ -3086,7 +3091,32 @@
                 ],
                 "custom_int32_properties": [],
                 "custom_vector3f_properties": [],
-                "custom_pbgid_properties": [],
+                "custom_pbgid_properties": [
+                    {
+                        "custom_pbgid_property": {
+                            "template_reference": {
+                                "name": "custom_pbgid_property",
+                                "value": "custom_properties\\custom_pbgid_property"
+                            },
+                            "id": "SQUAD_STATUS_DECORATOR_PBG",
+                            "pbg": {
+                                "instance_reference": "squad_status/decorators/buffs/camouflage_cover_duration_4_buff"
+                            }
+                        }
+                    },
+                    {
+                        "custom_pbgid_property": {
+                            "template_reference": {
+                                "name": "custom_pbgid_property",
+                                "value": "custom_properties\\custom_pbgid_property"
+                            },
+                            "id": "SQUAD_STATUS_DECORATOR_PBG_2",
+                            "pbg": {
+                                "instance_reference": "squad_status/decorators/buffs/camouflage_first_strike_bonus"
+                            }
+                        }
+                    }
+                ],
                 "custom_loc_string_properties": [],
                 "custom_entity_state_tree_reference_properties": [],
                 "custom_deferred_entity_state_tree_reference_properties": [],
@@ -3162,7 +3192,7 @@
                 "initial_recharge": "False",
                 "move_back": "False",
                 "move_back_distance": 10.0,
-                "range": 0.0,
+                "range": 11.5,
                 "range_ignore": "False",
                 "recharge_time": 0.0,
                 "refundable": "True",
@@ -3358,10 +3388,10 @@
                     "instance_reference": ""
                 },
                 "ui_reticule": {
-                    "instance_reference": ""
+                    "instance_reference": "ui_reticule/range_camouflage_detection"
                 },
-                "ui_reticule_radius_min": 1.0,
-                "ui_reticule_radius_max": 1.0,
+                "ui_reticule_radius_min": 11.5,
+                "ui_reticule_radius_max": 11.5,
                 "pending_ability_out_of_range_behaviour": "chase",
                 "ui_ability_group": "group_primary",
                 "ui_targetable_sm_key": "",
@@ -3480,7 +3510,7 @@
                 "ui_range_min": {
                     "instance_reference": ""
                 },
-                "ui_range_reticule_enable_team_color": "False",
+                "ui_range_reticule_enable_team_color": "True",
                 "terminal_command": "False",
                 "can_passive_ability_create_formation_squad_group": "False",
                 "can_cast_again_whilst_pending": "False",
@@ -3516,7 +3546,8 @@
                 "active_range_bonus": 0.0,
                 "ai_ability_intent": {
                     "instance_reference": ""
-                }
+                },
+                "ability_categories": []
             },
             "pbgid": 2163950.0,
             "parent_pbg": {
@@ -3546,7 +3577,7 @@
                                 "value": "custom_properties\\custom_float_property"
                             },
                             "id": "CAMOUFLAGE_DELAY",
-                            "value": 0.5
+                            "value": 0.0
                         }
                     },
                     {
@@ -3585,7 +3616,7 @@
                                 "name": "custom_float_property",
                                 "value": "custom_properties\\custom_float_property"
                             },
-                            "id": "WEAPON_COOLDOWN_MODIFIER",
+                            "id": "WEAPON_OVERALL_ATTACK_SPEED",
                             "value": 1.0
                         }
                     },
@@ -3602,7 +3633,32 @@
                 ],
                 "custom_int32_properties": [],
                 "custom_vector3f_properties": [],
-                "custom_pbgid_properties": [],
+                "custom_pbgid_properties": [
+                    {
+                        "custom_pbgid_property": {
+                            "template_reference": {
+                                "name": "custom_pbgid_property",
+                                "value": "custom_properties\\custom_pbgid_property"
+                            },
+                            "id": "SQUAD_STATUS_DECORATOR_PBG",
+                            "pbg": {
+                                "instance_reference": "squad_status/decorators/buffs/camouflage_cover_duration_4_buff"
+                            }
+                        }
+                    },
+                    {
+                        "custom_pbgid_property": {
+                            "template_reference": {
+                                "name": "custom_pbgid_property",
+                                "value": "custom_properties\\custom_pbgid_property"
+                            },
+                            "id": "SQUAD_STATUS_DECORATOR_PBG_2",
+                            "pbg": {
+                                "instance_reference": "squad_status/decorators/buffs/camouflage_first_strike_bonus"
+                            }
+                        }
+                    }
+                ],
                 "custom_loc_string_properties": [],
                 "custom_entity_state_tree_reference_properties": [],
                 "custom_deferred_entity_state_tree_reference_properties": [],
@@ -3678,7 +3734,7 @@
                 "initial_recharge": "False",
                 "move_back": "False",
                 "move_back_distance": 10.0,
-                "range": 0.0,
+                "range": 11.5,
                 "range_ignore": "False",
                 "recharge_time": 0.0,
                 "refundable": "True",
@@ -3874,10 +3930,10 @@
                     "instance_reference": ""
                 },
                 "ui_reticule": {
-                    "instance_reference": ""
+                    "instance_reference": "ui_reticule/range_camouflage_detection"
                 },
-                "ui_reticule_radius_min": 1.0,
-                "ui_reticule_radius_max": 1.0,
+                "ui_reticule_radius_min": 11.5,
+                "ui_reticule_radius_max": 11.5,
                 "pending_ability_out_of_range_behaviour": "chase",
                 "ui_ability_group": "group_primary",
                 "ui_targetable_sm_key": "",
@@ -3996,7 +4052,7 @@
                 "ui_range_min": {
                     "instance_reference": ""
                 },
-                "ui_range_reticule_enable_team_color": "False",
+                "ui_range_reticule_enable_team_color": "True",
                 "terminal_command": "False",
                 "can_passive_ability_create_formation_squad_group": "False",
                 "can_cast_again_whilst_pending": "False",
@@ -4032,7 +4088,8 @@
                 "active_range_bonus": 0.0,
                 "ai_ability_intent": {
                     "instance_reference": ""
-                }
+                },
+                "ability_categories": []
             },
             "pbgid": 2165087.0,
             "parent_pbg": {
@@ -4101,7 +4158,7 @@
                                 "name": "custom_float_property",
                                 "value": "custom_properties\\custom_float_property"
                             },
-                            "id": "WEAPON_COOLDOWN_MODIFIER",
+                            "id": "WEAPON_OVERALL_ATTACK_SPEED",
                             "value": 1.0
                         }
                     },
@@ -4118,7 +4175,32 @@
                 ],
                 "custom_int32_properties": [],
                 "custom_vector3f_properties": [],
-                "custom_pbgid_properties": [],
+                "custom_pbgid_properties": [
+                    {
+                        "custom_pbgid_property": {
+                            "template_reference": {
+                                "name": "custom_pbgid_property",
+                                "value": "custom_properties\\custom_pbgid_property"
+                            },
+                            "id": "SQUAD_STATUS_DECORATOR_PBG",
+                            "pbg": {
+                                "instance_reference": "squad_status/decorators/buffs/camouflage_cover_duration_4_buff"
+                            }
+                        }
+                    },
+                    {
+                        "custom_pbgid_property": {
+                            "template_reference": {
+                                "name": "custom_pbgid_property",
+                                "value": "custom_properties\\custom_pbgid_property"
+                            },
+                            "id": "SQUAD_STATUS_DECORATOR_PBG_2",
+                            "pbg": {
+                                "instance_reference": "squad_status/decorators/buffs/camouflage_first_strike_bonus"
+                            }
+                        }
+                    }
+                ],
                 "custom_loc_string_properties": [],
                 "custom_entity_state_tree_reference_properties": [],
                 "custom_deferred_entity_state_tree_reference_properties": [],
@@ -4194,7 +4276,7 @@
                 "initial_recharge": "False",
                 "move_back": "False",
                 "move_back_distance": 10.0,
-                "range": 0.0,
+                "range": 11.5,
                 "range_ignore": "False",
                 "recharge_time": 0.0,
                 "refundable": "True",
@@ -4392,10 +4474,10 @@
                     "instance_reference": ""
                 },
                 "ui_reticule": {
-                    "instance_reference": ""
+                    "instance_reference": "ui_reticule/range_camouflage_detection"
                 },
-                "ui_reticule_radius_min": 1.0,
-                "ui_reticule_radius_max": 1.0,
+                "ui_reticule_radius_min": 11.5,
+                "ui_reticule_radius_max": 11.5,
                 "pending_ability_out_of_range_behaviour": "chase",
                 "ui_ability_group": "group_primary",
                 "ui_targetable_sm_key": "",
@@ -4514,7 +4596,7 @@
                 "ui_range_min": {
                     "instance_reference": ""
                 },
-                "ui_range_reticule_enable_team_color": "False",
+                "ui_range_reticule_enable_team_color": "True",
                 "terminal_command": "False",
                 "can_passive_ability_create_formation_squad_group": "False",
                 "can_cast_again_whilst_pending": "False",
@@ -4550,7 +4632,8 @@
                 "active_range_bonus": 0.0,
                 "ai_ability_intent": {
                     "instance_reference": ""
-                }
+                },
+                "ability_categories": []
             },
             "pbgid": 2164687.0,
             "parent_pbg": {
@@ -4580,7 +4663,7 @@
                                 "value": "custom_properties\\custom_float_property"
                             },
                             "id": "CAMOUFLAGE_DELAY",
-                            "value": 0.5
+                            "value": 0.0
                         }
                     },
                     {
@@ -4619,7 +4702,7 @@
                                 "name": "custom_float_property",
                                 "value": "custom_properties\\custom_float_property"
                             },
-                            "id": "WEAPON_COOLDOWN_MODIFIER",
+                            "id": "WEAPON_OVERALL_ATTACK_SPEED",
                             "value": 1.0
                         }
                     },
@@ -4636,7 +4719,32 @@
                 ],
                 "custom_int32_properties": [],
                 "custom_vector3f_properties": [],
-                "custom_pbgid_properties": [],
+                "custom_pbgid_properties": [
+                    {
+                        "custom_pbgid_property": {
+                            "template_reference": {
+                                "name": "custom_pbgid_property",
+                                "value": "custom_properties\\custom_pbgid_property"
+                            },
+                            "id": "SQUAD_STATUS_DECORATOR_PBG",
+                            "pbg": {
+                                "instance_reference": "squad_status/decorators/buffs/camouflage_cover_duration_4_buff"
+                            }
+                        }
+                    },
+                    {
+                        "custom_pbgid_property": {
+                            "template_reference": {
+                                "name": "custom_pbgid_property",
+                                "value": "custom_properties\\custom_pbgid_property"
+                            },
+                            "id": "SQUAD_STATUS_DECORATOR_PBG_2",
+                            "pbg": {
+                                "instance_reference": "squad_status/decorators/buffs/camouflage_first_strike_bonus"
+                            }
+                        }
+                    }
+                ],
                 "custom_loc_string_properties": [],
                 "custom_entity_state_tree_reference_properties": [],
                 "custom_deferred_entity_state_tree_reference_properties": [],
@@ -5093,7 +5201,11 @@
                 "statetree_node_prereq_entity_target_default_command_filter": "",
                 "can_restart_on_same_target_while_active": "False",
                 "active_range_bonus": 0.0,
-                "show_movement_node_pathing_preview": "True"
+                "show_movement_node_pathing_preview": "True",
+                "ai_ability_intent": {
+                    "instance_reference": ""
+                },
+                "ability_categories": []
             },
             "pbgid": 2164217.0,
             "parent_pbg": {
@@ -5534,7 +5646,11 @@
                 "statetree_node_prereq_entity_target_default_command_filter": "",
                 "can_restart_on_same_target_while_active": "False",
                 "active_range_bonus": 0.0,
-                "show_movement_node_pathing_preview": "True"
+                "show_movement_node_pathing_preview": "True",
+                "ai_ability_intent": {
+                    "instance_reference": ""
+                },
+                "ability_categories": []
             },
             "pbgid": 2164318.0,
             "parent_pbg": {
@@ -5975,7 +6091,11 @@
                 "statetree_node_prereq_entity_target_default_command_filter": "",
                 "can_restart_on_same_target_while_active": "False",
                 "active_range_bonus": 0.0,
-                "show_movement_node_pathing_preview": "True"
+                "show_movement_node_pathing_preview": "True",
+                "ai_ability_intent": {
+                    "instance_reference": ""
+                },
+                "ability_categories": []
             },
             "pbgid": 2164218.0,
             "parent_pbg": {
@@ -6465,7 +6585,11 @@
                 "use_concurrent_cast": "False",
                 "use_movement_node_positions": "False",
                 "use_simbox_to_simbox_range": "True",
-                "validate_actions": "True"
+                "validate_actions": "True",
+                "ai_ability_intent": {
+                    "instance_reference": ""
+                },
+                "ability_categories": []
             },
             "pbgid": 2164358.0,
             "parent_pbg": {
@@ -6955,7 +7079,11 @@
                 "use_concurrent_cast": "False",
                 "use_movement_node_positions": "False",
                 "use_simbox_to_simbox_range": "True",
-                "validate_actions": "True"
+                "validate_actions": "True",
+                "ai_ability_intent": {
+                    "instance_reference": ""
+                },
+                "ability_categories": []
             },
             "pbgid": 2164359.0,
             "parent_pbg": {
@@ -7445,7 +7573,11 @@
                 "use_concurrent_cast": "False",
                 "use_movement_node_positions": "False",
                 "use_simbox_to_simbox_range": "True",
-                "validate_actions": "True"
+                "validate_actions": "True",
+                "ai_ability_intent": {
+                    "instance_reference": ""
+                },
+                "ability_categories": []
             },
             "pbgid": 2166202.0,
             "parent_pbg": {
@@ -8018,7 +8150,11 @@
                 "use_concurrent_cast": "False",
                 "use_movement_node_positions": "False",
                 "use_simbox_to_simbox_range": "True",
-                "validate_actions": "True"
+                "validate_actions": "True",
+                "ai_ability_intent": {
+                    "instance_reference": ""
+                },
+                "ability_categories": []
             },
             "pbgid": 2164331.0,
             "parent_pbg": {
@@ -8565,7 +8701,11 @@
                 "use_concurrent_cast": "False",
                 "use_movement_node_positions": "False",
                 "use_simbox_to_simbox_range": "True",
-                "validate_actions": "True"
+                "validate_actions": "True",
+                "ai_ability_intent": {
+                    "instance_reference": ""
+                },
+                "ability_categories": []
             },
             "pbgid": 2164357.0,
             "parent_pbg": {
@@ -8976,7 +9116,11 @@
                 "statetree_node_prereq_entity_target_default_command_filter": "",
                 "can_restart_on_same_target_while_active": "True",
                 "show_movement_node_pathing_preview": "True",
-                "active_range_bonus": 0.0
+                "active_range_bonus": 0.0,
+                "ai_ability_intent": {
+                    "instance_reference": ""
+                },
+                "ability_categories": []
             },
             "pbgid": 2071880.0,
             "parent_pbg": {
@@ -9627,7 +9771,8 @@
                 "active_range_bonus": 0.0,
                 "ai_ability_intent": {
                     "instance_reference": ""
-                }
+                },
+                "ability_categories": []
             },
             "pbgid": 2071527.0,
             "parent_pbg": {
@@ -10349,7 +10494,8 @@
                 "active_range_bonus": 0.0,
                 "ai_ability_intent": {
                     "instance_reference": ""
-                }
+                },
+                "ability_categories": []
             },
             "pbgid": 2071535.0,
             "parent_pbg": {
@@ -10553,8 +10699,8 @@
                 "ui_reticule": {
                     "instance_reference": "ui_reticule/ability_reticule_attack"
                 },
-                "ui_reticule_radius_min": 7.75,
-                "ui_reticule_radius_max": 7.75,
+                "ui_reticule_radius_min": 8.25,
+                "ui_reticule_radius_max": 8.25,
                 "pending_ability_out_of_range_behaviour": "chase",
                 "ui_ability_group": "group_primary",
                 "ui_targetable_sm_key": "",
@@ -10700,7 +10846,8 @@
                 "active_range_bonus": 0.0,
                 "ai_ability_intent": {
                     "instance_reference": ""
-                }
+                },
+                "ability_categories": []
             },
             "pbgid": 2071762.0,
             "parent_pbg": {
@@ -11192,8 +11339,8 @@
                 "ui_reticule": {
                     "instance_reference": "ui_reticule/ability_reticule_attack"
                 },
-                "ui_reticule_radius_min": 7.75,
-                "ui_reticule_radius_max": 7.75,
+                "ui_reticule_radius_min": 8.25,
+                "ui_reticule_radius_max": 8.25,
                 "pending_ability_out_of_range_behaviour": "chase",
                 "ui_ability_group": "group_primary",
                 "ui_targetable_sm_key": "",
@@ -11339,7 +11486,8 @@
                 "active_range_bonus": 0.0,
                 "ai_ability_intent": {
                     "instance_reference": ""
-                }
+                },
+                "ability_categories": []
             },
             "pbgid": 2164339.0,
             "parent_pbg": {
@@ -11860,8 +12008,8 @@
                 "ui_reticule": {
                     "instance_reference": "ui_reticule/ability_reticule_attack"
                 },
-                "ui_reticule_radius_min": 5.5,
-                "ui_reticule_radius_max": 5.5,
+                "ui_reticule_radius_min": 6.0,
+                "ui_reticule_radius_max": 6.0,
                 "pending_ability_out_of_range_behaviour": "chase",
                 "ui_ability_group": "group_primary",
                 "ui_targetable_sm_key": "",
@@ -12007,7 +12155,8 @@
                 "active_range_bonus": 0.0,
                 "ai_ability_intent": {
                     "instance_reference": ""
-                }
+                },
+                "ability_categories": []
             },
             "pbgid": 2071666.0,
             "parent_pbg": {
@@ -13395,7 +13544,11 @@
                 "statetree_node_prereq_entity_target_default_command_filter": "squad_repair\\requirements\\default_command_filter",
                 "can_restart_on_same_target_while_active": "False",
                 "active_range_bonus": 3.5,
-                "show_movement_node_pathing_preview": "True"
+                "show_movement_node_pathing_preview": "True",
+                "ai_ability_intent": {
+                    "instance_reference": ""
+                },
+                "ability_categories": []
             },
             "pbgid": 2071748.0,
             "parent_pbg": {
@@ -13596,7 +13749,7 @@
                     "command": 0.0,
                     "popcap": 0.0,
                     "fuel": 0.0,
-                    "munition": 30.0,
+                    "munition": 35.0,
                     "manpower": 0.0,
                     "requisition": 0.0,
                     "ultimate": 0.0
@@ -13779,8 +13932,8 @@
                 "ui_reticule": {
                     "instance_reference": "ui_reticule/ability_reticule_attack"
                 },
-                "ui_reticule_radius_min": 5.5,
-                "ui_reticule_radius_max": 5.5,
+                "ui_reticule_radius_min": 4.0,
+                "ui_reticule_radius_max": 4.0,
                 "pending_ability_out_of_range_behaviour": "chase",
                 "ui_ability_group": "group_primary",
                 "ui_targetable_sm_key": "",
@@ -13861,7 +14014,7 @@
                 "squad_tree": "",
                 "hold_period": 0.0,
                 "clear_ability_on_blueprint_conversion": "True",
-                "min_range": 15.0,
+                "min_range": 12.5,
                 "ability_description": {
                     "instance_reference": ""
                 },
@@ -13926,7 +14079,8 @@
                 "active_range_bonus": 0.0,
                 "ai_ability_intent": {
                     "instance_reference": ""
-                }
+                },
+                "ability_categories": []
             },
             "pbgid": 2071517.0,
             "parent_pbg": {
@@ -14458,8 +14612,8 @@
                 "ui_reticule": {
                     "instance_reference": "ui_reticule/ability_reticule_barrage_smoke"
                 },
-                "ui_reticule_radius_min": 5.5,
-                "ui_reticule_radius_max": 5.5,
+                "ui_reticule_radius_min": 6.0,
+                "ui_reticule_radius_max": 6.0,
                 "pending_ability_out_of_range_behaviour": "chase",
                 "ui_ability_group": "group_primary",
                 "ui_targetable_sm_key": "",
@@ -14540,7 +14694,7 @@
                 "squad_tree": "",
                 "hold_period": 0.0,
                 "clear_ability_on_blueprint_conversion": "True",
-                "min_range": 15.0,
+                "min_range": 12.5,
                 "ability_description": {
                     "instance_reference": ""
                 },
@@ -14605,7 +14759,8 @@
                 "active_range_bonus": 0.0,
                 "ai_ability_intent": {
                     "instance_reference": ""
-                }
+                },
+                "ability_categories": []
             },
             "pbgid": 2071532.0,
             "parent_pbg": {
@@ -15151,7 +15306,11 @@
                 "statetree_node_prereq_entity_target_default_command_filter": "",
                 "can_restart_on_same_target_while_active": "True",
                 "show_movement_node_pathing_preview": "True",
-                "active_range_bonus": 0.0
+                "active_range_bonus": 0.0,
+                "ai_ability_intent": {
+                    "instance_reference": ""
+                },
+                "ability_categories": []
             },
             "pbgid": 2152307.0,
             "parent_pbg": {
@@ -15562,7 +15721,11 @@
                 "statetree_node_prereq_entity_target_default_command_filter": "",
                 "can_restart_on_same_target_while_active": "True",
                 "show_movement_node_pathing_preview": "True",
-                "active_range_bonus": 0.0
+                "active_range_bonus": 0.0,
+                "ai_ability_intent": {
+                    "instance_reference": ""
+                },
+                "ability_categories": []
             },
             "pbgid": 2073952.0,
             "parent_pbg": {
@@ -15938,7 +16101,11 @@
                 "statetree_node_prereq_entity_target_default_command_filter": "",
                 "can_restart_on_same_target_while_active": "True",
                 "show_movement_node_pathing_preview": "True",
-                "active_range_bonus": 0.0
+                "active_range_bonus": 0.0,
+                "ai_ability_intent": {
+                    "instance_reference": ""
+                },
+                "ability_categories": []
             },
             "pbgid": 2073856.0,
             "parent_pbg": {
@@ -16347,7 +16514,11 @@
                 "statetree_node_prereq_entity_target_default_command_filter": "",
                 "can_restart_on_same_target_while_active": "True",
                 "show_movement_node_pathing_preview": "True",
-                "active_range_bonus": 0.0
+                "active_range_bonus": 0.0,
+                "ai_ability_intent": {
+                    "instance_reference": ""
+                },
+                "ability_categories": []
             },
             "pbgid": 2073951.0,
             "parent_pbg": {
@@ -16756,7 +16927,11 @@
                 "statetree_node_prereq_entity_target_default_command_filter": "",
                 "can_restart_on_same_target_while_active": "True",
                 "show_movement_node_pathing_preview": "True",
-                "active_range_bonus": 0.0
+                "active_range_bonus": 0.0,
+                "ai_ability_intent": {
+                    "instance_reference": ""
+                },
+                "ability_categories": []
             },
             "pbgid": 2073947.0,
             "parent_pbg": {
@@ -17106,7 +17281,11 @@
                 "statetree_node_prereq_entity_target_default_command_filter": "",
                 "can_restart_on_same_target_while_active": "True",
                 "show_movement_node_pathing_preview": "True",
-                "active_range_bonus": 0.0
+                "active_range_bonus": 0.0,
+                "ai_ability_intent": {
+                    "instance_reference": ""
+                },
+                "ability_categories": []
             },
             "pbgid": 2151116.0,
             "parent_pbg": {
@@ -17812,7 +17991,11 @@
                 "statetree_node_prereq_entity_target_default_command_filter": "",
                 "can_restart_on_same_target_while_active": "True",
                 "active_range_bonus": 0.0,
-                "show_movement_node_pathing_preview": "True"
+                "show_movement_node_pathing_preview": "True",
+                "ai_ability_intent": {
+                    "instance_reference": ""
+                },
+                "ability_categories": []
             },
             "pbgid": 2161774.0,
             "parent_pbg": {
@@ -18166,7 +18349,11 @@
                 "statetree_node_prereq_entity_target_default_command_filter": "",
                 "can_restart_on_same_target_while_active": "True",
                 "active_range_bonus": 0.0,
-                "show_movement_node_pathing_preview": "True"
+                "show_movement_node_pathing_preview": "True",
+                "ai_ability_intent": {
+                    "instance_reference": ""
+                },
+                "ability_categories": []
             },
             "pbgid": 2161775.0,
             "parent_pbg": {
@@ -18739,7 +18926,11 @@
                 "use_concurrent_cast": "False",
                 "use_movement_node_positions": "False",
                 "use_simbox_to_simbox_range": "True",
-                "validate_actions": "True"
+                "validate_actions": "True",
+                "ai_ability_intent": {
+                    "instance_reference": ""
+                },
+                "ability_categories": []
             },
             "pbgid": 2164317.0,
             "parent_pbg": {
@@ -19144,7 +19335,11 @@
                 "statetree_node_prereq_entity_target_default_command_filter": "",
                 "can_restart_on_same_target_while_active": "True",
                 "show_movement_node_pathing_preview": "True",
-                "active_range_bonus": 0.0
+                "active_range_bonus": 0.0,
+                "ai_ability_intent": {
+                    "instance_reference": ""
+                },
+                "ability_categories": []
             },
             "pbgid": 2164281.0,
             "parent_pbg": {
@@ -19527,7 +19722,11 @@
                 "statetree_node_prereq_entity_target_default_command_filter": "",
                 "can_restart_on_same_target_while_active": "True",
                 "show_movement_node_pathing_preview": "True",
-                "active_range_bonus": 0.0
+                "active_range_bonus": 0.0,
+                "ai_ability_intent": {
+                    "instance_reference": ""
+                },
+                "ability_categories": []
             },
             "pbgid": 2165660.0,
             "parent_pbg": {
@@ -19944,7 +20143,8 @@
                     "active_range_bonus": 0.0,
                     "ai_ability_intent": {
                         "instance_reference": ""
-                    }
+                    },
+                    "ability_categories": []
                 },
                 "pbgid": 2163123.0,
                 "parent_pbg": {
@@ -20330,7 +20530,11 @@
                     "statetree_node_prereq_entity_target_default_command_filter": "",
                     "can_restart_on_same_target_while_active": "True",
                     "show_movement_node_pathing_preview": "True",
-                    "active_range_bonus": 0.0
+                    "active_range_bonus": 0.0,
+                    "ai_ability_intent": {
+                        "instance_reference": ""
+                    },
+                    "ability_categories": []
                 },
                 "pbgid": 2103013.0,
                 "parent_pbg": {

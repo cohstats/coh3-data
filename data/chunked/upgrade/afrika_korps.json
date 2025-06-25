@@ -826,16 +826,6 @@
                                         "name": "custom_float_property",
                                         "value": "custom_properties\\custom_float_property"
                                     },
-                                    "id": "ACCELERATION_MODIFIER",
-                                    "value": 1.25
-                                }
-                            },
-                            {
-                                "custom_float_property": {
-                                    "template_reference": {
-                                        "name": "custom_float_property",
-                                        "value": "custom_properties\\custom_float_property"
-                                    },
                                     "id": "UNIT_ROTATION_RATE_MODIFIER",
                                     "value": 1.33
                                 }
@@ -847,6 +837,16 @@
                                         "value": "custom_properties\\custom_float_property"
                                     },
                                     "id": "SPEED_MODIFIER",
+                                    "value": 1.25
+                                }
+                            },
+                            {
+                                "custom_float_property": {
+                                    "template_reference": {
+                                        "name": "custom_float_property",
+                                        "value": "custom_properties\\custom_float_property"
+                                    },
+                                    "id": "ACCELERATION_MODIFIER",
                                     "value": 1.25
                                 }
                             }
@@ -951,7 +951,7 @@
                             }
                         },
                         "hotkey_name": "",
-                        "icon_name": "races/afrika_corps/battlegroups/armored_ak",
+                        "icon_name": "races/afrika_corps/battlegroups/armored_ak_icon_mipped",
                         "reveal_for_decryption": "False",
                         "screen_name": {
                             "locstring": {
@@ -7970,7 +7970,7 @@
                             }
                         },
                         "hotkey_name": "",
-                        "icon_name": "races/afrika_corps/battlegroups/combined_arms_ak",
+                        "icon_name": "races/afrika_corps/battlegroups/combined_arms_ak_icon_mipped",
                         "reveal_for_decryption": "False",
                         "screen_name": {
                             "locstring": {
@@ -13400,8 +13400,24 @@
                             "extra_text_formatter": {
                                 "template_reference": {
                                     "name": "extra_text_formatter",
-                                    "value": ""
-                                }
+                                    "value": "ui_text_formatter"
+                                },
+                                "formatter": {
+                                    "locstring": {
+                                        "name": "formatter",
+                                        "value": "11265909"
+                                    }
+                                },
+                                "formatter_arguments": [
+                                    {
+                                        "locstring_value": {
+                                            "locstring": {
+                                                "name": "locstring_value",
+                                                "value": "11268310"
+                                            }
+                                        }
+                                    }
+                                ]
                             },
                             "help_text_formatter": {
                                 "template_reference": {
@@ -14460,7 +14476,7 @@
                             }
                         },
                         "hotkey_name": "",
-                        "icon_name": "races/afrika_corps/battlegroups/italian_infantry_ak",
+                        "icon_name": "races/afrika_corps/battlegroups/italian_infantry_ak_icon_mipped",
                         "reveal_for_decryption": "False",
                         "screen_name": {
                             "locstring": {
@@ -14959,7 +14975,7 @@
                                     },
                                     "resource": {
                                         "action": 0.0,
-                                        "command": 3.0,
+                                        "command": 2.0,
                                         "popcap": 0.0,
                                         "fuel": 0.0,
                                         "munition": 0.0,
@@ -15006,7 +15022,7 @@
                                     "name": "on_action_tree",
                                     "value": "state_tree_reference_info"
                                 },
-                                "ActionTree_OpeningBranch": "temporary_battlegroup_cost\\3"
+                                "ActionTree_OpeningBranch": "temporary_battlegroup_cost\\2"
                             },
                             "on_cancel_action_tree": {
                                 "template_reference": {
@@ -20978,7 +20994,7 @@
                             }
                         },
                         "hotkey_name": "",
-                        "icon_name": "races/afrika_corps/battlegroups/panzerjager_kommand_ak",
+                        "icon_name": "races/afrika_corps/battlegroups/panzerjager_kommand_ak_icon_mipped",
                         "reveal_for_decryption": "False",
                         "screen_name": {
                             "locstring": {
@@ -22501,7 +22517,7 @@
                             },
                             "formatter_arguments": [
                                 {
-                                    "int_value": 5.0
+                                    "int_value": 10.0
                                 },
                                 {
                                     "int_value": 25.0
@@ -25162,7 +25178,7 @@
                                         "value": "custom_properties\\custom_float_property"
                                     },
                                     "id": "UNIT_SIGHT_MODIFIER",
-                                    "value": 5.0
+                                    "value": 10.0
                                 }
                             }
                         ],
@@ -25434,17 +25450,6 @@
                                         "name": "custom_float_property",
                                         "value": "custom_properties\\custom_float_property"
                                     },
-                                    "id": "UNIT_SIGHT_MODIFIER_ENTITY",
-                                    "value": 25.0
-                                }
-                            },
-                            {
-                                "custom_float_property": {
-                                    "template_reference": {
-                                        "name": "custom_float_property",
-                                        "value": "custom_properties\\custom_float_property"
-                                    },
-                                    "id": "DURATION",
                                     "value": 0.0
                                 }
                             },
@@ -25456,6 +25461,16 @@
                                     },
                                     "id": "DETECTION_VISION_MODIFIER",
                                     "value": 12.5
+                                }
+                            },
+                            {
+                                "custom_float_property": {
+                                    "template_reference": {
+                                        "name": "custom_float_property",
+                                        "value": "custom_properties\\custom_float_property"
+                                    },
+                                    "id": "UNIT_SIGHT_MODIFIER_ENTITY",
+                                    "value": 25.0
                                 }
                             }
                         ],
@@ -25538,7 +25553,7 @@
                             }
                         },
                         "hotkey_name": "",
-                        "icon_name": "races/afrika_corps/battlegroups/dak_battlefield_ak_icon",
+                        "icon_name": "races/afrika_corps/battlegroups/dak_battlefield_ak_icon_mipped",
                         "reveal_for_decryption": "False",
                         "screen_name": {
                             "locstring": {
@@ -25790,6 +25805,270 @@
                     "child_custom_properties": [],
                     "custom_hash_key_properties": [],
                     "custom_reflected_enum_properties": []
+                }
+            },
+            "buffs": {
+                "camouflage_from_aura_upgrade_ak": {
+                    "custom_properties": {
+                        "template_reference": {
+                            "name": "custom_properties",
+                            "value": "custom_property_template"
+                        },
+                        "child_custom_properties": [],
+                        "custom_bool_properties": [],
+                        "custom_deferred_entity_state_tree_reference_properties": [],
+                        "custom_entity_state_tree_reference_properties": [],
+                        "custom_enum_properties": [],
+                        "custom_float_properties": [],
+                        "custom_global_state_tree_reference_properties": [],
+                        "custom_hash_key_properties": [],
+                        "custom_int32_properties": [],
+                        "custom_loc_string_properties": [],
+                        "custom_pbgid_properties": [],
+                        "custom_physical_state_tree_reference_properties": [],
+                        "custom_reflected_enum_properties": [],
+                        "custom_squad_state_tree_reference_properties": [],
+                        "custom_vector3f_properties": []
+                    },
+                    "parent_pbg": {
+                        "instance_reference": ""
+                    },
+                    "pbgid": 2166601.0,
+                    "upgrade_bag": {
+                        "blueprint_convert_options": {
+                            "preserve_upgrade": "True",
+                            "continuous_statetree": "True"
+                        },
+                        "duration_seconds": 0.0,
+                        "enable_in_hold": "False",
+                        "filter_conditions": {
+                            "apply_to_application_type": "current_and_future_units",
+                            "apply_to_filter_condition_statetree_ref": "",
+                            "apply_to_future_units": "current_and_future_units",
+                            "apply_to_squad_types": [],
+                            "apply_to_target_type": "squad",
+                            "apply_to_unit_classes": []
+                        },
+                        "global_max_limit": 0.0,
+                        "has_speech_code": "False",
+                        "is_progress_permanent": "False",
+                        "local_max_limit": 1.0,
+                        "min_music_intensity": 0.0,
+                        "owner_type": "self",
+                        "requirements": [],
+                        "requirements_openingbranch": "",
+                        "requirements_to_complete": [],
+                        "speech_code": "",
+                        "squad_cost": {
+                            "action": 0.0,
+                            "command": 0.0,
+                            "popcap": 0.0,
+                            "fuel": 0.0,
+                            "munition": 0.0,
+                            "manpower": 0.0,
+                            "requisition": 0.0,
+                            "ultimate": 0.0
+                        },
+                        "state_tree_references": {
+                            "on_action_entity_tree": {
+                                "template_reference": {
+                                    "name": "on_action_entity_tree",
+                                    "value": "state_tree_entity_reference_info"
+                                },
+                                "ActionTree_OpeningBranch": ""
+                            },
+                            "on_action_squad_tree": {
+                                "template_reference": {
+                                    "name": "on_action_squad_tree",
+                                    "value": "state_tree_squad_reference_info"
+                                },
+                                "ActionTree_OpeningBranch": ""
+                            },
+                            "on_action_tree": {
+                                "template_reference": {
+                                    "name": "on_action_tree",
+                                    "value": "state_tree_reference_info"
+                                },
+                                "ActionTree_OpeningBranch": ""
+                            },
+                            "on_begin_action_tree": {
+                                "template_reference": {
+                                    "name": "on_begin_action_tree",
+                                    "value": "state_tree_reference_info"
+                                },
+                                "ActionTree_OpeningBranch": ""
+                            },
+                            "on_cancel_action_tree": {
+                                "template_reference": {
+                                    "name": "on_cancel_action_tree",
+                                    "value": "state_tree_reference_info"
+                                },
+                                "ActionTree_OpeningBranch": ""
+                            }
+                        },
+                        "time_cost": {
+                            "cost": {
+                                "action": 0.0,
+                                "command": 0.0,
+                                "popcap": 0.0,
+                                "fuel": 0.0,
+                                "munition": 0.0,
+                                "manpower": 0.0,
+                                "requisition": 0.0,
+                                "ultimate": 0.0
+                            },
+                            "time_seconds": 0.0
+                        },
+                        "ui_codex_info": {
+                            "exclusive": "False",
+                            "priority": 0.0,
+                            "ui_position": {
+                                "ui_position_column": -1.0,
+                                "ui_position_row": -1.0
+                            }
+                        },
+                        "ui_event_cue": "False",
+                        "ui_info": {
+                            "brief_text": {
+                                "locstring": {
+                                    "name": "brief_text",
+                                    "value": "0"
+                                }
+                            },
+                            "brief_text_formatter": {
+                                "template_reference": {
+                                    "name": "brief_text_formatter",
+                                    "value": ""
+                                }
+                            },
+                            "debug_text": "",
+                            "extra_text": {
+                                "locstring": {
+                                    "name": "extra_text",
+                                    "value": "0"
+                                }
+                            },
+                            "extra_text_formatter": {
+                                "template_reference": {
+                                    "name": "extra_text_formatter",
+                                    "value": ""
+                                }
+                            },
+                            "help_text": {
+                                "locstring": {
+                                    "name": "help_text",
+                                    "value": "0"
+                                }
+                            },
+                            "help_text_formatter": {
+                                "template_reference": {
+                                    "name": "help_text_formatter",
+                                    "value": ""
+                                }
+                            },
+                            "hotkey_name": "",
+                            "icon_name": "",
+                            "reveal_for_decryption": "False",
+                            "screen_name": {
+                                "locstring": {
+                                    "name": "screen_name",
+                                    "value": "0"
+                                }
+                            },
+                            "screen_name_formatter": {
+                                "template_reference": {
+                                    "name": "screen_name_formatter",
+                                    "value": ""
+                                }
+                            },
+                            "screen_name_short": {
+                                "locstring": {
+                                    "name": "screen_name_short",
+                                    "value": "0"
+                                }
+                            },
+                            "screen_name_short_formatter": {
+                                "template_reference": {
+                                    "name": "screen_name_short_formatter",
+                                    "value": ""
+                                }
+                            },
+                            "screen_name_visibility": "visible",
+                            "sound": "",
+                            "sound_alternative": "",
+                            "symbol_icon_name": "",
+                            "tooltip_data_template": "",
+                            "ui_combine_type": "intersection"
+                        },
+                        "ui_kicker_icon_name": "",
+                        "ui_menu": {
+                            "instance_reference": ""
+                        },
+                        "ui_position": {
+                            "ui_position_column": -1.0,
+                            "ui_position_row": -1.0
+                        },
+                        "ui_preview": [],
+                        "ui_production_group": "command_panel",
+                        "ui_squad_brief_text_override": {
+                            "locstring": {
+                                "name": "ui_squad_brief_text_override",
+                                "value": "0"
+                            }
+                        },
+                        "ui_squad_brief_text_override_formatter": {
+                            "template_reference": {
+                                "name": "ui_squad_brief_text_override_formatter",
+                                "value": ""
+                            }
+                        },
+                        "ui_squad_extra_help_text_override": {
+                            "locstring": {
+                                "name": "ui_squad_extra_help_text_override",
+                                "value": "0"
+                            }
+                        },
+                        "ui_squad_extra_help_text_override_formatter": {
+                            "template_reference": {
+                                "name": "ui_squad_extra_help_text_override_formatter",
+                                "value": ""
+                            }
+                        },
+                        "ui_squad_extra_text_override": {
+                            "locstring": {
+                                "name": "ui_squad_extra_text_override",
+                                "value": "0"
+                            }
+                        },
+                        "ui_squad_extra_text_override_formatter": {
+                            "template_reference": {
+                                "name": "ui_squad_extra_text_override_formatter",
+                                "value": ""
+                            }
+                        },
+                        "ui_squad_help_text_override": {
+                            "locstring": {
+                                "name": "ui_squad_help_text_override",
+                                "value": "0"
+                            }
+                        },
+                        "ui_squad_help_text_override_formatter": {
+                            "template_reference": {
+                                "name": "ui_squad_help_text_override_formatter",
+                                "value": ""
+                            }
+                        },
+                        "ui_squad_icon_override": "",
+                        "ui_squad_name_override": {
+                            "locstring": {
+                                "name": "ui_squad_name_override",
+                                "value": "0"
+                            }
+                        },
+                        "ui_squad_portrait_icon_override": "",
+                        "ui_squad_symbol_icon_name_override": "",
+                        "upgrade_type": []
+                    }
                 }
             },
             "left": {
@@ -27108,9 +27387,6 @@
                                     "value": "ui_text_formatter"
                                 },
                                 "formatter_arguments": [
-                                    {
-                                        "int_value": 0.0
-                                    },
                                     {
                                         "int_value": 20.0
                                     },
@@ -30432,7 +30708,7 @@
                             "brief_text": {
                                 "locstring": {
                                     "name": "brief_text",
-                                    "value": "11261667"
+                                    "value": "11268815"
                                 }
                             },
                             "screen_name_short": {
@@ -30858,7 +31134,7 @@
                             "brief_text": {
                                 "locstring": {
                                     "name": "brief_text",
-                                    "value": "11261769"
+                                    "value": "11268826"
                                 }
                             },
                             "screen_name_short": {
@@ -30884,13 +31160,10 @@
                                 "formatter": {
                                     "locstring": {
                                         "name": "formatter",
-                                        "value": "11261768"
+                                        "value": "11268825"
                                     }
                                 },
                                 "formatter_arguments": [
-                                    {
-                                        "int_value": 67.0
-                                    },
                                     {
                                         "int_value": 50.0
                                     }
@@ -43915,7 +44188,7 @@
                     "brief_text": {
                         "locstring": {
                             "name": "brief_text",
-                            "value": "11242767"
+                            "value": "11268012"
                         }
                     },
                     "screen_name_short": {
@@ -45496,12 +45769,6 @@
                     }
                 },
                 "ui_info": {
-                    "extra_text": {
-                        "locstring": {
-                            "name": "extra_text",
-                            "value": "11242970"
-                        }
-                    },
                     "hotkey_name": "F",
                     "icon_name": "races/german/upgrades/grb39_grenade_launcher_ger",
                     "screen_name": {
@@ -49029,6 +49296,84 @@
                         }
                     }
                 ]
+            }
+        },
+        "buff": {
+            "sprint_team_weapon_ak": {
+                "custom_properties": {
+                    "template_reference": {
+                        "name": "custom_properties",
+                        "value": "custom_property_template"
+                    },
+                    "custom_float_properties": [
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "value": 7.0
+                            }
+                        },
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "WEAPON_SET_UP_MODIFIER",
+                                "value": 0.67
+                            }
+                        },
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "WEAPON_TEARDOWN_MODIFIER",
+                                "value": 0.67
+                            }
+                        },
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "SPEED_MODIFIER",
+                                "value": 1.5
+                            }
+                        },
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "RECEIVED_ACCURACY_MODIFIER",
+                                "value": 1.5
+                            }
+                        }
+                    ],
+                    "custom_pbgid_properties": [
+                        {
+                            "custom_pbgid_property": {
+                                "template_reference": {
+                                    "name": "custom_pbgid_property",
+                                    "value": "custom_properties\\custom_pbgid_property"
+                                },
+                                "pbg": {
+                                    "instance_reference": "squad_status/decorators/status/afrika_korp/weapon_team_sprint_ak"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "parent_pbg": {
+                    "instance_reference": "upgrade/dev/templates/status_upgrade"
+                },
+                "pbgid": 2166474.0
             }
         }
     },
@@ -66959,8 +67304,24 @@
                 "ui_squad_extra_text_override_formatter": {
                     "template_reference": {
                         "name": "ui_squad_extra_text_override_formatter",
-                        "value": ""
-                    }
+                        "value": "ui_text_formatter"
+                    },
+                    "formatter": {
+                        "locstring": {
+                            "name": "formatter",
+                            "value": "11265909"
+                        }
+                    },
+                    "formatter_arguments": [
+                        {
+                            "locstring_value": {
+                                "locstring": {
+                                    "name": "locstring_value",
+                                    "value": "11266182"
+                                }
+                            }
+                        }
+                    ]
                 },
                 "ui_squad_help_text_override_formatter": {
                     "template_reference": {
@@ -67563,6 +67924,289 @@
                 }
             },
             "pbgid": 2074278.0,
+            "parent_pbg": {
+                "instance_reference": ""
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "custom_bool_properties": [],
+                "custom_float_properties": [],
+                "custom_int32_properties": [],
+                "custom_vector3f_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "child_custom_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_reflected_enum_properties": []
+            }
+        },
+        "m13_40_hull_mg_ak": {
+            "upgrade_bag": {
+                "enable_in_hold": "True",
+                "global_max_limit": 0.0,
+                "has_speech_code": "True",
+                "local_max_limit": 1.0,
+                "owner_type": "entity_in_squad",
+                "time_cost": {
+                    "cost": {
+                        "action": 0.0,
+                        "popcap": 0.0,
+                        "command": 0.0,
+                        "fuel": 0.0,
+                        "munition": 50.0,
+                        "manpower": 0.0,
+                        "requisition": 0.0,
+                        "ultimate": 0.0
+                    },
+                    "time_seconds": 30.0
+                },
+                "ui_event_cue": "True",
+                "ui_production_group": "unit_upgrade_panel",
+                "ui_info": {
+                    "extra_text": {
+                        "locstring": {
+                            "name": "extra_text",
+                            "value": "11245566"
+                        }
+                    },
+                    "help_text": {
+                        "locstring": {
+                            "name": "help_text",
+                            "value": "11242585"
+                        }
+                    },
+                    "hotkey_name": "F",
+                    "icon_name": "races/afrika_corps/upgrades/m13_40_breda",
+                    "reveal_for_decryption": "False",
+                    "screen_name": {
+                        "locstring": {
+                            "name": "screen_name",
+                            "value": "11268310"
+                        }
+                    },
+                    "brief_text": {
+                        "locstring": {
+                            "name": "brief_text",
+                            "value": "11268311"
+                        }
+                    },
+                    "screen_name_short": {
+                        "locstring": {
+                            "name": "screen_name_short",
+                            "value": "0"
+                        }
+                    },
+                    "debug_text": "",
+                    "tooltip_data_template": "",
+                    "ui_combine_type": "intersection",
+                    "brief_text_formatter": {
+                        "template_reference": {
+                            "name": "brief_text_formatter",
+                            "value": ""
+                        }
+                    },
+                    "extra_text_formatter": {
+                        "template_reference": {
+                            "name": "extra_text_formatter",
+                            "value": ""
+                        }
+                    },
+                    "help_text_formatter": {
+                        "template_reference": {
+                            "name": "help_text_formatter",
+                            "value": ""
+                        }
+                    },
+                    "screen_name_formatter": {
+                        "template_reference": {
+                            "name": "screen_name_formatter",
+                            "value": ""
+                        }
+                    },
+                    "screen_name_short_formatter": {
+                        "template_reference": {
+                            "name": "screen_name_short_formatter",
+                            "value": ""
+                        }
+                    },
+                    "screen_name_visibility": "visible",
+                    "sound": "",
+                    "sound_alternative": "",
+                    "symbol_icon_name": "races/afrika_corps/upgrades/m13_40_breda"
+                },
+                "requirements": [
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_in_territory"
+                            },
+                            "reason": "usage",
+                            "ui_name": {
+                                "locstring": {
+                                    "name": "ui_name",
+                                    "value": "0"
+                                }
+                            },
+                            "in_supply": "True",
+                            "is_secured": "False",
+                            "is_secured_by_checkpoint": "False",
+                            "not_in_transition": "False",
+                            "relative_to_caster": "False"
+                        }
+                    }
+                ],
+                "ui_kicker_icon_name": "",
+                "ui_squad_name_override": {
+                    "locstring": {
+                        "name": "ui_squad_name_override",
+                        "value": "0"
+                    }
+                },
+                "ui_squad_help_text_override": {
+                    "locstring": {
+                        "name": "ui_squad_help_text_override",
+                        "value": "0"
+                    }
+                },
+                "ui_squad_extra_text_override": {
+                    "locstring": {
+                        "name": "ui_squad_extra_text_override",
+                        "value": "0"
+                    }
+                },
+                "ui_preview": [],
+                "speech_code": "mg_upgrade",
+                "ui_squad_portrait_icon_override": "",
+                "ui_position": {
+                    "ui_position_row": 1.0,
+                    "ui_position_column": 1.0
+                },
+                "min_music_intensity": 0.0,
+                "state_tree_references": {
+                    "on_begin_action_tree": {
+                        "template_reference": {
+                            "name": "on_begin_action_tree",
+                            "value": "state_tree_reference_info"
+                        },
+                        "ActionTree_OpeningBranch": ""
+                    },
+                    "on_action_tree": {
+                        "template_reference": {
+                            "name": "on_action_tree",
+                            "value": "state_tree_reference_info"
+                        },
+                        "ActionTree_OpeningBranch": "m13_40_hull_gun_ak"
+                    },
+                    "on_cancel_action_tree": {
+                        "template_reference": {
+                            "name": "on_cancel_action_tree",
+                            "value": "state_tree_reference_info"
+                        },
+                        "ActionTree_OpeningBranch": ""
+                    },
+                    "on_action_entity_tree": {
+                        "template_reference": {
+                            "name": "on_action_entity_tree",
+                            "value": "state_tree_entity_reference_info"
+                        },
+                        "ActionTree_OpeningBranch": ""
+                    },
+                    "on_action_squad_tree": {
+                        "template_reference": {
+                            "name": "on_action_squad_tree",
+                            "value": "state_tree_squad_reference_info"
+                        },
+                        "ActionTree_OpeningBranch": ""
+                    }
+                },
+                "upgrade_type": [],
+                "requirements_openingbranch": "",
+                "ui_menu": {
+                    "instance_reference": ""
+                },
+                "is_progress_permanent": "False",
+                "squad_cost": {
+                    "action": 0.0,
+                    "command": 0.0,
+                    "popcap": 0.0,
+                    "fuel": 0.0,
+                    "munition": 0.0,
+                    "manpower": 0.0,
+                    "requisition": 0.0,
+                    "ultimate": 0.0
+                },
+                "ui_codex_info": {
+                    "priority": 0.0,
+                    "exclusive": "False",
+                    "ui_position": {
+                        "ui_position_column": -1.0,
+                        "ui_position_row": -1.0
+                    }
+                },
+                "filter_conditions": {
+                    "apply_to_filter_condition_statetree_ref": "",
+                    "apply_to_target_type": "entity",
+                    "apply_to_unit_classes": [],
+                    "apply_to_application_type": "current_and_future_units",
+                    "apply_to_future_units": "current_and_future_units",
+                    "apply_to_squad_types": []
+                },
+                "duration_seconds": 0.0,
+                "ui_squad_icon_override": "",
+                "ui_squad_brief_text_override": {
+                    "locstring": {
+                        "name": "ui_squad_brief_text_override",
+                        "value": "0"
+                    }
+                },
+                "ui_squad_symbol_icon_name_override": "",
+                "ui_squad_extra_help_text_override": {
+                    "locstring": {
+                        "name": "ui_squad_extra_help_text_override",
+                        "value": "0"
+                    }
+                },
+                "requirements_to_complete": [],
+                "blueprint_convert_options": {
+                    "preserve_upgrade": "Default",
+                    "continuous_statetree": "Default"
+                },
+                "ui_squad_brief_text_override_formatter": {
+                    "template_reference": {
+                        "name": "ui_squad_brief_text_override_formatter",
+                        "value": ""
+                    }
+                },
+                "ui_squad_extra_help_text_override_formatter": {
+                    "template_reference": {
+                        "name": "ui_squad_extra_help_text_override_formatter",
+                        "value": ""
+                    }
+                },
+                "ui_squad_extra_text_override_formatter": {
+                    "template_reference": {
+                        "name": "ui_squad_extra_text_override_formatter",
+                        "value": ""
+                    }
+                },
+                "ui_squad_help_text_override_formatter": {
+                    "template_reference": {
+                        "name": "ui_squad_help_text_override_formatter",
+                        "value": ""
+                    }
+                }
+            },
+            "pbgid": 2166485.0,
             "parent_pbg": {
                 "instance_reference": ""
             },
@@ -71934,6 +72578,224 @@
             }
         },
         "buff": {
+            "8rad_commander_buff_ak": {
+                "pbgid": 2166470.0,
+                "parent_pbg": {
+                    "instance_reference": "upgrade/dev/templates/status_upgrade"
+                },
+                "custom_properties": {
+                    "template_reference": {
+                        "name": "custom_properties",
+                        "value": "custom_property_template"
+                    },
+                    "custom_float_properties": [
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "value": 0.0
+                            }
+                        },
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "WEAPON_OVERALL_ATTACK_SPEED",
+                                "value": 0.8
+                            }
+                        },
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "UNIT_SIGHT_MODIFIER_MULTIPLICATION",
+                                "value": 1.4
+                            }
+                        }
+                    ],
+                    "custom_pbgid_properties": [
+                        {
+                            "custom_pbgid_property": {
+                                "template_reference": {
+                                    "name": "custom_pbgid_property",
+                                    "value": "custom_properties\\custom_pbgid_property"
+                                },
+                                "pbg": {
+                                    "instance_reference": "squad_status/decorators/buffs/afrika_korp/8_rad_commander_aura_buff"
+                                }
+                            }
+                        }
+                    ],
+                    "custom_bool_properties": [
+                        {
+                            "custom_bool_property": {
+                                "template_reference": {
+                                    "name": "custom_bool_property",
+                                    "value": "custom_properties\\custom_bool_property"
+                                },
+                                "value": "True"
+                            }
+                        },
+                        {
+                            "custom_bool_property": {
+                                "template_reference": {
+                                    "name": "custom_bool_property",
+                                    "value": "custom_properties\\custom_bool_property"
+                                },
+                                "value": "True"
+                            }
+                        }
+                    ]
+                }
+            },
+            "8rad_commander_buff_veteran_ak": {
+                "pbgid": 2166611.0,
+                "parent_pbg": {
+                    "instance_reference": "upgrade/afrika_korps/vehicle/buff/8rad_commander_buff_ak"
+                },
+                "custom_properties": {
+                    "template_reference": {
+                        "name": "custom_properties",
+                        "value": "custom_property_template"
+                    },
+                    "custom_float_properties": [
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "value": 0.0
+                            }
+                        },
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "WEAPON_OVERALL_ATTACK_SPEED",
+                                "value": 0.6
+                            }
+                        },
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "UNIT_SIGHT_MODIFIER_MULTIPLICATION",
+                                "value": 1.6
+                            }
+                        }
+                    ],
+                    "custom_pbgid_properties": [
+                        {
+                            "custom_pbgid_property": {
+                                "template_reference": {
+                                    "name": "custom_pbgid_property",
+                                    "value": "custom_properties\\custom_pbgid_property"
+                                },
+                                "pbg": {
+                                    "instance_reference": "squad_status/decorators/buffs/afrika_korp/8_rad_commander_aura_veteran_buff"
+                                }
+                            }
+                        }
+                    ],
+                    "custom_bool_properties": [
+                        {
+                            "custom_bool_property": {
+                                "template_reference": {
+                                    "name": "custom_bool_property",
+                                    "value": "custom_properties\\custom_bool_property"
+                                },
+                                "value": "True"
+                            }
+                        },
+                        {
+                            "custom_bool_property": {
+                                "template_reference": {
+                                    "name": "custom_bool_property",
+                                    "value": "custom_properties\\custom_bool_property"
+                                },
+                                "value": "True"
+                            }
+                        }
+                    ]
+                }
+            },
+            "m13_40_desperate_struggle_buff_ak": {
+                "pbgid": 2166487.0,
+                "parent_pbg": {
+                    "instance_reference": "upgrade/dev/templates/status_upgrade"
+                },
+                "custom_properties": {
+                    "template_reference": {
+                        "name": "custom_properties",
+                        "value": "custom_property_template"
+                    },
+                    "custom_float_properties": [
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "value": 0.0
+                            }
+                        },
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "WEAPON_OVERALL_ATTACK_SPEED",
+                                "value": 0.8
+                            }
+                        }
+                    ],
+                    "custom_pbgid_properties": [
+                        {
+                            "custom_pbgid_property": {
+                                "template_reference": {
+                                    "name": "custom_pbgid_property",
+                                    "value": "custom_properties\\custom_pbgid_property"
+                                },
+                                "pbg": {
+                                    "instance_reference": "squad_status/decorators/buffs/afrika_korp/m13_40_desperate_struggle_buff_ak"
+                                }
+                            }
+                        }
+                    ],
+                    "custom_bool_properties": [
+                        {
+                            "custom_bool_property": {
+                                "template_reference": {
+                                    "name": "custom_bool_property",
+                                    "value": "custom_properties\\custom_bool_property"
+                                },
+                                "value": "True"
+                            }
+                        },
+                        {
+                            "custom_bool_property": {
+                                "template_reference": {
+                                    "name": "custom_bool_property",
+                                    "value": "custom_properties\\custom_bool_property"
+                                },
+                                "value": "True"
+                            }
+                        }
+                    ]
+                }
+            },
             "panzer_iii_rapid_fire_buff_ger": {
                 "pbgid": 2165767.0,
                 "parent_pbg": {
@@ -71960,7 +72822,7 @@
                                     "name": "custom_float_property",
                                     "value": "custom_properties\\custom_float_property"
                                 },
-                                "id": "WEAPON_RELOAD_MODIFIER",
+                                "id": "WEAPON_COOLDOWN_MODIFIER",
                                 "value": 0.6
                             }
                         },
@@ -71970,7 +72832,7 @@
                                     "name": "custom_float_property",
                                     "value": "custom_properties\\custom_float_property"
                                 },
-                                "id": "WEAPON_COOLDOWN_MODIFIER",
+                                "id": "WEAPON_RELOAD_MODIFIER",
                                 "value": 0.6
                             }
                         }
@@ -72049,7 +72911,7 @@
                                     "name": "custom_float_property",
                                     "value": "custom_properties\\custom_float_property"
                                 },
-                                "id": "WEAPON_RELOAD_MODIFIER",
+                                "id": "WEAPON_COOLDOWN_MODIFIER",
                                 "value": 1.5
                             }
                         },
@@ -72059,7 +72921,7 @@
                                     "name": "custom_float_property",
                                     "value": "custom_properties\\custom_float_property"
                                 },
-                                "id": "WEAPON_COOLDOWN_MODIFIER",
+                                "id": "WEAPON_RELOAD_MODIFIER",
                                 "value": 1.5
                             }
                         }

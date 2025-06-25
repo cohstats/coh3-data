@@ -124,6 +124,8 @@ jobs:
             @{sga="LocaleTraditionalChinese.sga"; out="locale/zh-hant/anvil.zh-hant.ucs"},
             @{sga="LocaleTurkish.sga"; out="locale/tr/anvil.tr.ucs"},
             @{sga="LocaleCzech.sga"; out="locale/cs/anvil.cs.ucs"}
+            @{sga="LocaleUkrainian.sga"; out="locale/uk-ua/anvil.uk-ua.ucs"}
+            @{sga="LocaleRussian.sga"; out="locale/ru/anvil.ru.ucs"}           
           )
           
           foreach ($locale in $localeFiles) {
@@ -156,7 +158,9 @@ jobs:
             "es",
             "zh-hant",
             "tr",
-            "cs"
+            "cs",
+            "uk-ua",
+            "ru"
           )
           
           foreach ($locale in $locales) {

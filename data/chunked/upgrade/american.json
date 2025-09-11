@@ -3245,7 +3245,7 @@
                                 "name": "on_action_tree",
                                 "value": "state_tree_reference_info"
                             },
-                            "ActionTree_OpeningBranch": ""
+                            "ActionTree_OpeningBranch": "battlegroup_ability_cooldown_on_game_start"
                         },
                         "on_cancel_action_tree": {
                             "template_reference": {
@@ -3360,10 +3360,34 @@
                         "value": "custom_property_template"
                     },
                     "custom_bool_properties": [],
-                    "custom_float_properties": [],
+                    "custom_float_properties": [
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "COOLDOWN",
+                                "value": 30.0
+                            }
+                        }
+                    ],
                     "custom_int32_properties": [],
                     "custom_vector3f_properties": [],
-                    "custom_pbgid_properties": [],
+                    "custom_pbgid_properties": [
+                        {
+                            "custom_pbgid_property": {
+                                "template_reference": {
+                                    "name": "custom_pbgid_property",
+                                    "value": "custom_properties\\custom_pbgid_property"
+                                },
+                                "id": "ABILITY_PBG",
+                                "pbg": {
+                                    "instance_reference": "abilities/races/american/battlegroups/airborne/airborne_right_1b_paradrop_hmg_us"
+                                }
+                            }
+                        }
+                    ],
                     "custom_loc_string_properties": [],
                     "custom_entity_state_tree_reference_properties": [],
                     "custom_deferred_entity_state_tree_reference_properties": [],
@@ -6159,7 +6183,7 @@
                                 },
                                 "resource": {
                                     "action": 0.0,
-                                    "command": 3.0,
+                                    "command": 4.0,
                                     "popcap": 0.0,
                                     "fuel": 0.0,
                                     "munition": 0.0,
@@ -6304,7 +6328,7 @@
                                 "name": "on_action_tree",
                                 "value": "state_tree_reference_info"
                             },
-                            "ActionTree_OpeningBranch": "temporary_battlegroup_cost\\3"
+                            "ActionTree_OpeningBranch": "temporary_battlegroup_cost\\4"
                         },
                         "on_cancel_action_tree": {
                             "template_reference": {
@@ -53169,7 +53193,7 @@
                         "popcap": 0.0,
                         "command": 0.0,
                         "fuel": 0.0,
-                        "munition": 60.0,
+                        "munition": 75.0,
                         "manpower": 0.0,
                         "requisition": 0.0,
                         "ultimate": 0.0
@@ -53841,12 +53865,12 @@
                         "popcap": 0.0,
                         "command": 0.0,
                         "fuel": 0.0,
-                        "munition": 60.0,
+                        "munition": 75.0,
                         "manpower": 0.0,
                         "requisition": 0.0,
                         "ultimate": 0.0
                     },
-                    "time_seconds": 30.0
+                    "time_seconds": 40.0
                 },
                 "ui_event_cue": "True",
                 "ui_production_group": "unit_upgrade_panel",
@@ -56029,7 +56053,7 @@
                     "screen_name_visibility": "visible",
                     "sound": "",
                     "sound_alternative": "",
-                    "symbol_icon_name": "common/abilities/ability_british_tank_commander"
+                    "symbol_icon_name": "races/british/upgrades/tank_commander_uk"
                 },
                 "requirements": [
                     {

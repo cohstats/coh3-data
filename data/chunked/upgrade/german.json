@@ -18239,7 +18239,7 @@
                                 "name": "on_action_tree",
                                 "value": "state_tree_reference_info"
                             },
-                            "ActionTree_OpeningBranch": ""
+                            "ActionTree_OpeningBranch": "battlegroup_ability_cooldown_on_game_start"
                         },
                         "on_cancel_action_tree": {
                             "template_reference": {
@@ -18354,10 +18354,34 @@
                         "value": "custom_property_template"
                     },
                     "custom_bool_properties": [],
-                    "custom_float_properties": [],
+                    "custom_float_properties": [
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "COOLDOWN",
+                                "value": 30.0
+                            }
+                        }
+                    ],
                     "custom_int32_properties": [],
                     "custom_vector3f_properties": [],
-                    "custom_pbgid_properties": [],
+                    "custom_pbgid_properties": [
+                        {
+                            "custom_pbgid_property": {
+                                "template_reference": {
+                                    "name": "custom_pbgid_property",
+                                    "value": "custom_properties\\custom_pbgid_property"
+                                },
+                                "id": "ABILITY_PBG",
+                                "pbg": {
+                                    "instance_reference": "abilities/races/german/battlegroups/luftwaffe/luftwaffe_left_1b_fallschirmpioneers_ger"
+                                }
+                            }
+                        }
+                    ],
                     "custom_loc_string_properties": [],
                     "custom_entity_state_tree_reference_properties": [],
                     "custom_deferred_entity_state_tree_reference_properties": [],
@@ -44098,7 +44122,7 @@
                         "command": 0.0,
                         "fuel": 0.0,
                         "munition": 0.0,
-                        "manpower": 150.0,
+                        "manpower": 200.0,
                         "requisition": 0.0,
                         "ultimate": 0.0
                     },
@@ -56033,7 +56057,7 @@
                         "popcap": 0.0,
                         "command": 0.0,
                         "fuel": 0.0,
-                        "munition": 35.0,
+                        "munition": 50.0,
                         "manpower": 0.0,
                         "requisition": 0.0,
                         "ultimate": 0.0

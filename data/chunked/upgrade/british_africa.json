@@ -16,7 +16,9 @@
                         "munition": 0.0,
                         "manpower": 0.0,
                         "requisition": 0.0,
-                        "ultimate": 0.0
+                        "ultimate": 0.0,
+                        "ability_resource_1": 0.0,
+                        "ability_resource_2": 0.0
                     },
                     "time_seconds": 0.0
                 },
@@ -212,7 +214,9 @@
                     "munition": 0.0,
                     "manpower": 0.0,
                     "requisition": 0.0,
-                    "ultimate": 0.0
+                    "ultimate": 0.0,
+                    "ability_resource_1": 0.0,
+                    "ability_resource_2": 0.0
                 },
                 "duration_seconds": 45.0,
                 "ui_squad_icon_override": "",
@@ -301,7 +305,9 @@
                         "munition": 0.0,
                         "manpower": 0.0,
                         "requisition": 0.0,
-                        "ultimate": 0.0
+                        "ultimate": 0.0,
+                        "ability_resource_1": 0.0,
+                        "ability_resource_2": 0.0
                     },
                     "time_seconds": 0.0
                 },
@@ -493,7 +499,9 @@
                     "munition": 0.0,
                     "manpower": 0.0,
                     "requisition": 0.0,
-                    "ultimate": 0.0
+                    "ultimate": 0.0,
+                    "ability_resource_1": 0.0,
+                    "ability_resource_2": 0.0
                 },
                 "duration_seconds": 45.0,
                 "ui_squad_icon_override": "",
@@ -566,6 +574,43 @@
                 "custom_reflected_enum_properties": []
             }
         },
+        "naval_blockade_africa_uk": {
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "custom_float_properties": [
+                    {
+                        "custom_float_property": {
+                            "template_reference": {
+                                "name": "custom_float_property",
+                                "value": "custom_properties\\custom_float_property"
+                            },
+                            "id": "CAPTURE_TIME_MODIFIER",
+                            "value": 9999.0
+                        }
+                    }
+                ],
+                "custom_pbgid_properties": [
+                    {
+                        "custom_pbgid_property": {
+                            "template_reference": {
+                                "name": "custom_pbgid_property",
+                                "value": "custom_properties\\custom_pbgid_property"
+                            },
+                            "pbg": {
+                                "instance_reference": "squad_status/decorators/status/british/naval_blockade"
+                            }
+                        }
+                    }
+                ]
+            },
+            "parent_pbg": {
+                "instance_reference": "upgrade/dev/templates/status_upgrade"
+            },
+            "pbgid": 2167872.0
+        },
         "tripwire_flare_territory_africa_uk": {
             "upgrade_bag": {
                 "enable_in_hold": "False",
@@ -582,7 +627,9 @@
                         "munition": 0.0,
                         "manpower": 0.0,
                         "requisition": 0.0,
-                        "ultimate": 0.0
+                        "ultimate": 0.0,
+                        "ability_resource_1": 0.0,
+                        "ability_resource_2": 0.0
                     },
                     "time_seconds": 0.0
                 },
@@ -755,7 +802,9 @@
                     "munition": 0.0,
                     "manpower": 0.0,
                     "requisition": 0.0,
-                    "ultimate": 0.0
+                    "ultimate": 0.0,
+                    "ability_resource_1": 0.0,
+                    "ability_resource_2": 0.0
                 },
                 "duration_seconds": 0.0,
                 "ui_squad_icon_override": "",
@@ -846,7 +895,9 @@
                         "munition": 0.0,
                         "manpower": 150.0,
                         "requisition": 0.0,
-                        "ultimate": 0.0
+                        "ultimate": 0.0,
+                        "ability_resource_1": 0.0,
+                        "ability_resource_2": 0.0
                     },
                     "time_seconds": 15.0
                 },
@@ -1034,7 +1085,8 @@
                                                 "value": "options\\area_info_options\\sector_area_option"
                                             }
                                         },
-                                        "nearby_collision_filter": "building"
+                                        "nearby_collision_filter": "building",
+                                        "entity_inclusion_criteria": "default"
                                     }
                                 }
                             ]
@@ -1115,7 +1167,9 @@
                     "munition": 0.0,
                     "manpower": 0.0,
                     "requisition": 0.0,
-                    "ultimate": 0.0
+                    "ultimate": 0.0,
+                    "ability_resource_1": 0.0,
+                    "ability_resource_2": 0.0
                 },
                 "ui_codex_info": {
                     "priority": 0.0,
@@ -1220,7 +1274,9 @@
                         "munition": 0.0,
                         "manpower": 150.0,
                         "requisition": 0.0,
-                        "ultimate": 0.0
+                        "ultimate": 0.0,
+                        "ability_resource_1": 0.0,
+                        "ability_resource_2": 0.0
                     },
                     "time_seconds": 25.0
                 },
@@ -1408,7 +1464,8 @@
                                                 "value": "options\\area_info_options\\sector_area_option"
                                             }
                                         },
-                                        "nearby_collision_filter": "building"
+                                        "nearby_collision_filter": "building",
+                                        "entity_inclusion_criteria": "default"
                                     }
                                 }
                             ]
@@ -1489,7 +1546,9 @@
                     "munition": 0.0,
                     "manpower": 0.0,
                     "requisition": 0.0,
-                    "ultimate": 0.0
+                    "ultimate": 0.0,
+                    "ability_resource_1": 0.0,
+                    "ability_resource_2": 0.0
                 },
                 "ui_codex_info": {
                     "priority": 0.0,
@@ -1580,6 +1639,158 @@
         }
     },
     "infantry": {
+        "boys_anti_tank_rifles_polish_africa_uk": {
+            "upgrade_bag": {
+                "time_cost": {
+                    "cost": {
+                        "munition": 50.0
+                    }
+                },
+                "ui_info": {
+                    "hotkey_name": "B",
+                    "icon_name": "legacy/upgrades/icon_upgrade_boys_at_gun",
+                    "symbol_icon_name": "legacy/upgrades/icon_upgrade_boys_at_gun"
+                },
+                "requirements": [
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_squad_upgrade"
+                            },
+                            "reason": "usage",
+                            "ui_name": {
+                                "locstring": {
+                                    "name": "ui_name",
+                                    "value": "0"
+                                }
+                            },
+                            "include_completed": "True",
+                            "include_queued": "True",
+                            "is_present": "False",
+                            "upgrade_name": {
+                                "instance_reference": "upgrade/british_africa/infantry/lmg_bren_tommy_africa_uk"
+                            },
+                            "min_completed": 1.0,
+                            "max_completed": 100.0,
+                            "include_pbg_parenting": {
+                                "include_child_pbgs": "False",
+                                "include_parent_pbgs": "False"
+                            }
+                        }
+                    },
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_squad_upgrade"
+                            },
+                            "reason": "usage",
+                            "ui_name": {
+                                "locstring": {
+                                    "name": "ui_name",
+                                    "value": "0"
+                                }
+                            },
+                            "include_completed": "True",
+                            "include_queued": "True",
+                            "is_present": "False",
+                            "upgrade_name": {
+                                "instance_reference": "upgrade/british_africa/infantry/recon_package_tommy_africa_uk"
+                            },
+                            "min_completed": 1.0,
+                            "max_completed": 100.0,
+                            "include_pbg_parenting": {
+                                "include_child_pbgs": "False",
+                                "include_parent_pbgs": "False"
+                            }
+                        }
+                    },
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_inventory_capacity"
+                            },
+                            "ebps_name": {
+                                "instance_reference": "ebps/races/british_africa/weapons/ballistic_weapons/infantry_anti_tank_weapon/w_boys_anti_tank_rifle_africa_uk"
+                            },
+                            "reason": "usage",
+                            "ui_name": {
+                                "locstring": {
+                                    "name": "ui_name",
+                                    "value": "0"
+                                }
+                            },
+                            "count": 1.0
+                        }
+                    }
+                ],
+                "speech_code": "boys_at_upgrade",
+                "ui_position": {
+                    "ui_position_row": 2.0
+                },
+                "requirements_to_complete": [
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_inventory_capacity"
+                            },
+                            "ebps_name": {
+                                "instance_reference": "ebps/races/british_africa/weapons/ballistic_weapons/infantry_anti_tank_weapon/w_boys_anti_tank_rifle_africa_uk"
+                            },
+                            "count": 1.0
+                        }
+                    }
+                ]
+            },
+            "pbgid": 2167195.0,
+            "parent_pbg": {
+                "instance_reference": "upgrade/dev/templates/weapon_upgrade"
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "custom_int32_properties": [
+                    {
+                        "custom_int32_property": {
+                            "template_reference": {
+                                "name": "custom_int32_property",
+                                "value": "custom_properties\\custom_int32_property"
+                            },
+                            "value": 2.0
+                        }
+                    }
+                ],
+                "custom_pbgid_properties": [
+                    {
+                        "custom_pbgid_property": {
+                            "template_reference": {
+                                "name": "custom_pbgid_property",
+                                "value": "custom_properties\\custom_pbgid_property"
+                            },
+                            "pbg": {
+                                "instance_reference": "ebps/races/british_africa/weapons/ballistic_weapons/infantry_anti_tank_weapon/w_boys_anti_tank_rifle_polish_africa_uk"
+                            }
+                        }
+                    }
+                ],
+                "custom_float_properties": [
+                    {
+                        "custom_float_property": {
+                            "template_reference": {
+                                "name": "custom_float_property",
+                                "value": "custom_properties\\custom_float_property"
+                            },
+                            "value": 25.0
+                        }
+                    }
+                ]
+            }
+        },
         "boys_anti_tank_rifles_tommy_africa_uk": {
             "upgrade_bag": {
                 "time_cost": {
@@ -1761,7 +1972,9 @@
                         "fuel": 0.0,
                         "manpower": 0.0,
                         "requisition": 0.0,
-                        "ultimate": 0.0
+                        "ultimate": 0.0,
+                        "ability_resource_1": 0.0,
+                        "ability_resource_2": 0.0
                     },
                     "time_seconds": 30.0
                 },
@@ -2037,7 +2250,9 @@
                     "munition": 0.0,
                     "manpower": 0.0,
                     "requisition": 0.0,
-                    "ultimate": 0.0
+                    "ultimate": 0.0,
+                    "ability_resource_1": 0.0,
+                    "ability_resource_2": 0.0
                 },
                 "state_tree_references": {
                     "on_action_entity_tree": {
@@ -2478,7 +2693,7 @@
                         }
                     },
                     "hotkey_name": "F",
-                    "icon_name": "legacy/upgrades/icon_upgrade_british_bren",
+                    "icon_name": "races/british/upgrades/bren",
                     "screen_name": {
                         "locstring": {
                             "name": "screen_name",
@@ -2491,7 +2706,7 @@
                             "value": "11242908"
                         }
                     },
-                    "symbol_icon_name": "legacy/upgrades/icon_upgrade_british_bren"
+                    "symbol_icon_name": "races/british/upgrades/bren"
                 },
                 "requirements": [
                     {
@@ -2621,7 +2836,9 @@
                         "fuel": 0.0,
                         "manpower": 0.0,
                         "requisition": 0.0,
-                        "ultimate": 0.0
+                        "ultimate": 0.0,
+                        "ability_resource_1": 0.0,
+                        "ability_resource_2": 0.0
                     },
                     "time_seconds": 30.0
                 },
@@ -2800,7 +3017,9 @@
                     "munition": 0.0,
                     "manpower": 0.0,
                     "requisition": 0.0,
-                    "ultimate": 0.0
+                    "ultimate": 0.0,
+                    "ability_resource_1": 0.0,
+                    "ability_resource_2": 0.0
                 },
                 "state_tree_references": {
                     "on_action_entity_tree": {
@@ -3873,7 +4092,9 @@
                         "munition": 65.0,
                         "manpower": 0.0,
                         "requisition": 0.0,
-                        "ultimate": 0.0
+                        "ultimate": 0.0,
+                        "ability_resource_1": 0.0,
+                        "ability_resource_2": 0.0
                     },
                     "time_seconds": 30.0
                 },
@@ -3893,7 +4114,7 @@
                         }
                     },
                     "hotkey_name": "B",
-                    "icon_name": "common/abilities/ability_pilfer",
+                    "icon_name": "races/british/upgrades/thompson",
                     "reveal_for_decryption": "False",
                     "screen_name": {
                         "locstring": {
@@ -3949,7 +4170,7 @@
                     "screen_name_visibility": "visible",
                     "sound": "",
                     "sound_alternative": "",
-                    "symbol_icon_name": "common/abilities/ability_pilfer"
+                    "symbol_icon_name": "races/british/upgrades/thompson"
                 },
                 "requirements": [
                     {
@@ -4078,7 +4299,9 @@
                     "munition": 0.0,
                     "manpower": 0.0,
                     "requisition": 0.0,
-                    "ultimate": 0.0
+                    "ultimate": 0.0,
+                    "ability_resource_1": 0.0,
+                    "ability_resource_2": 0.0
                 },
                 "ui_codex_info": {
                     "priority": 0.0,
@@ -4183,7 +4406,9 @@
                         "munition": 30.0,
                         "manpower": 0.0,
                         "requisition": 0.0,
-                        "ultimate": 0.0
+                        "ultimate": 0.0,
+                        "ability_resource_1": 0.0,
+                        "ability_resource_2": 0.0
                     },
                     "time_seconds": 10.0
                 },
@@ -4506,7 +4731,9 @@
                     "munition": 0.0,
                     "manpower": 0.0,
                     "requisition": 0.0,
-                    "ultimate": 0.0
+                    "ultimate": 0.0,
+                    "ability_resource_1": 0.0,
+                    "ability_resource_2": 0.0
                 },
                 "ui_codex_info": {
                     "priority": 0.0,
@@ -4625,7 +4852,9 @@
                             "munition": 0.0,
                             "manpower": 125.0,
                             "requisition": 0.0,
-                            "ultimate": 0.0
+                            "ultimate": 0.0,
+                            "ability_resource_1": 0.0,
+                            "ability_resource_2": 0.0
                         },
                         "time_seconds": 25.0
                     },
@@ -4782,7 +5011,9 @@
                         "munition": 0.0,
                         "manpower": 0.0,
                         "requisition": 0.0,
-                        "ultimate": 0.0
+                        "ultimate": 0.0,
+                        "ability_resource_1": 0.0,
+                        "ability_resource_2": 0.0
                     },
                     "ui_codex_info": {
                         "priority": 0.0,
@@ -4887,7 +5118,9 @@
                             "munition": 0.0,
                             "manpower": 125.0,
                             "requisition": 0.0,
-                            "ultimate": 0.0
+                            "ultimate": 0.0,
+                            "ability_resource_1": 0.0,
+                            "ability_resource_2": 0.0
                         },
                         "time_seconds": 25.0
                     },
@@ -5044,7 +5277,9 @@
                         "munition": 0.0,
                         "manpower": 0.0,
                         "requisition": 0.0,
-                        "ultimate": 0.0
+                        "ultimate": 0.0,
+                        "ability_resource_1": 0.0,
+                        "ability_resource_2": 0.0
                     },
                     "ui_codex_info": {
                         "priority": 0.0,
@@ -5151,7 +5386,9 @@
                             "munition": 0.0,
                             "manpower": 200.0,
                             "requisition": 0.0,
-                            "ultimate": 0.0
+                            "ultimate": 0.0,
+                            "ability_resource_1": 0.0,
+                            "ability_resource_2": 0.0
                         },
                         "time_seconds": 25.0
                     },
@@ -5381,7 +5618,9 @@
                         "munition": 0.0,
                         "manpower": 0.0,
                         "requisition": 0.0,
-                        "ultimate": 0.0
+                        "ultimate": 0.0,
+                        "ability_resource_1": 0.0,
+                        "ability_resource_2": 0.0
                     },
                     "ui_codex_info": {
                         "priority": 0.0,
@@ -5490,7 +5729,9 @@
                             "munition": 0.0,
                             "manpower": 150.0,
                             "requisition": 0.0,
-                            "ultimate": 0.0
+                            "ultimate": 0.0,
+                            "ability_resource_1": 0.0,
+                            "ability_resource_2": 0.0
                         },
                         "time_seconds": 25.0
                     },
@@ -5717,7 +5958,9 @@
                         "munition": 0.0,
                         "manpower": 0.0,
                         "requisition": 0.0,
-                        "ultimate": 0.0
+                        "ultimate": 0.0,
+                        "ability_resource_1": 0.0,
+                        "ability_resource_2": 0.0
                     },
                     "ui_codex_info": {
                         "priority": 0.0,
@@ -5829,7 +6072,9 @@
                             "munition": 0.0,
                             "manpower": 200.0,
                             "requisition": 0.0,
-                            "ultimate": 0.0
+                            "ultimate": 0.0,
+                            "ability_resource_1": 0.0,
+                            "ability_resource_2": 0.0
                         },
                         "time_seconds": 25.0
                     },
@@ -6059,7 +6304,9 @@
                         "munition": 0.0,
                         "manpower": 0.0,
                         "requisition": 0.0,
-                        "ultimate": 0.0
+                        "ultimate": 0.0,
+                        "ability_resource_1": 0.0,
+                        "ability_resource_2": 0.0
                     },
                     "ui_codex_info": {
                         "priority": 0.0,
@@ -6171,7 +6418,9 @@
                             "munition": 0.0,
                             "manpower": 150.0,
                             "requisition": 0.0,
-                            "ultimate": 0.0
+                            "ultimate": 0.0,
+                            "ability_resource_1": 0.0,
+                            "ability_resource_2": 0.0
                         },
                         "time_seconds": 25.0
                     },
@@ -6404,7 +6653,9 @@
                         "munition": 0.0,
                         "manpower": 0.0,
                         "requisition": 0.0,
-                        "ultimate": 0.0
+                        "ultimate": 0.0,
+                        "ability_resource_1": 0.0,
+                        "ability_resource_2": 0.0
                     },
                     "ui_codex_info": {
                         "priority": 0.0,
@@ -6516,7 +6767,9 @@
                             "munition": 0.0,
                             "manpower": 125.0,
                             "requisition": 0.0,
-                            "ultimate": 0.0
+                            "ultimate": 0.0,
+                            "ability_resource_1": 0.0,
+                            "ability_resource_2": 0.0
                         },
                         "time_seconds": 15.0
                     },
@@ -6701,7 +6954,9 @@
                         "munition": 0.0,
                         "manpower": 0.0,
                         "requisition": 0.0,
-                        "ultimate": 0.0
+                        "ultimate": 0.0,
+                        "ability_resource_1": 0.0,
+                        "ability_resource_2": 0.0
                     },
                     "ui_codex_info": {
                         "priority": 0.0,
@@ -6809,7 +7064,9 @@
                         "munition": 60.0,
                         "manpower": 0.0,
                         "requisition": 0.0,
-                        "ultimate": 0.0
+                        "ultimate": 0.0,
+                        "ability_resource_1": 0.0,
+                        "ability_resource_2": 0.0
                     },
                     "time_seconds": 30.0
                 },
@@ -7058,7 +7315,9 @@
                     "munition": 0.0,
                     "manpower": 0.0,
                     "requisition": 0.0,
-                    "ultimate": 0.0
+                    "ultimate": 0.0,
+                    "ability_resource_1": 0.0,
+                    "ability_resource_2": 0.0
                 },
                 "ui_codex_info": {
                     "priority": 0.0,
@@ -7147,6 +7406,634 @@
                 "custom_reflected_enum_properties": []
             }
         },
+        "vehicle_tulips_africa_uk": {
+            "upgrade_bag": {
+                "enable_in_hold": "True",
+                "global_max_limit": 0.0,
+                "has_speech_code": "True",
+                "local_max_limit": 1.0,
+                "owner_type": "self",
+                "time_cost": {
+                    "cost": {
+                        "action": 0.0,
+                        "command": 0.0,
+                        "popcap": 0.0,
+                        "fuel": 0.0,
+                        "munition": 70.0,
+                        "manpower": 0.0,
+                        "requisition": 0.0,
+                        "ultimate": 0.0,
+                        "ability_resource_1": 0.0,
+                        "ability_resource_2": 0.0
+                    },
+                    "time_seconds": 30.0
+                },
+                "ui_event_cue": "True",
+                "ui_production_group": "unit_upgrade_panel",
+                "ui_position": {
+                    "ui_position_row": 3.0,
+                    "ui_position_column": 1.0
+                },
+                "ui_info": {
+                    "extra_text": {
+                        "locstring": {
+                            "name": "extra_text",
+                            "value": "0"
+                        }
+                    },
+                    "help_text": {
+                        "locstring": {
+                            "name": "help_text",
+                            "value": "11229813"
+                        }
+                    },
+                    "hotkey_name": "T",
+                    "icon_name": "races/british/upgrades/tulip_rockets",
+                    "reveal_for_decryption": "False",
+                    "screen_name": {
+                        "locstring": {
+                            "name": "screen_name",
+                            "value": "11271760"
+                        }
+                    },
+                    "brief_text": {
+                        "locstring": {
+                            "name": "brief_text",
+                            "value": "11271761"
+                        }
+                    },
+                    "screen_name_short": {
+                        "locstring": {
+                            "name": "screen_name_short",
+                            "value": "0"
+                        }
+                    },
+                    "debug_text": "",
+                    "tooltip_data_template": "",
+                    "ui_combine_type": "intersection",
+                    "brief_text_formatter": {
+                        "template_reference": {
+                            "name": "brief_text_formatter",
+                            "value": ""
+                        }
+                    },
+                    "extra_text_formatter": {
+                        "template_reference": {
+                            "name": "extra_text_formatter",
+                            "value": ""
+                        }
+                    },
+                    "help_text_formatter": {
+                        "template_reference": {
+                            "name": "help_text_formatter",
+                            "value": ""
+                        }
+                    },
+                    "screen_name_formatter": {
+                        "template_reference": {
+                            "name": "screen_name_formatter",
+                            "value": ""
+                        }
+                    },
+                    "screen_name_short_formatter": {
+                        "template_reference": {
+                            "name": "screen_name_short_formatter",
+                            "value": ""
+                        }
+                    },
+                    "screen_name_visibility": "visible",
+                    "sound": "",
+                    "sound_alternative": "",
+                    "symbol_icon_name": "races/british/upgrades/tulip_rockets"
+                },
+                "requirements": [
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_in_territory"
+                            },
+                            "reason": "usage",
+                            "ui_name": {
+                                "locstring": {
+                                    "name": "ui_name",
+                                    "value": "0"
+                                }
+                            },
+                            "in_supply": "True",
+                            "is_secured": "False",
+                            "is_secured_by_checkpoint": "False",
+                            "not_in_transition": "False",
+                            "relative_to_caster": "False"
+                        }
+                    },
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_player_upgrade"
+                            },
+                            "include_completed": "True",
+                            "include_pbg_parenting": {
+                                "include_child_pbgs": "False",
+                                "include_parent_pbgs": "False"
+                            },
+                            "include_queued": "False",
+                            "is_present": "True",
+                            "max_completed": 100.0,
+                            "min_completed": 1.0,
+                            "reason": "usage_and_display",
+                            "ui_name": {
+                                "locstring": {
+                                    "name": "ui_name",
+                                    "value": "0"
+                                }
+                            },
+                            "upgrade_name": {
+                                "instance_reference": "upgrade/british/battlegroups/polish_cavalry/polish_cavalry_tulip_rockets_uk"
+                            }
+                        }
+                    }
+                ],
+                "ui_kicker_icon_name": "",
+                "ui_squad_name_override": {
+                    "locstring": {
+                        "name": "ui_squad_name_override",
+                        "value": "0"
+                    }
+                },
+                "ui_squad_help_text_override": {
+                    "locstring": {
+                        "name": "ui_squad_help_text_override",
+                        "value": "0"
+                    }
+                },
+                "ui_squad_extra_text_override": {
+                    "locstring": {
+                        "name": "ui_squad_extra_text_override",
+                        "value": "0"
+                    }
+                },
+                "ui_preview": [],
+                "speech_code": "",
+                "ui_squad_portrait_icon_override": "",
+                "min_music_intensity": 0.0,
+                "state_tree_references": {
+                    "on_begin_action_tree": {
+                        "template_reference": {
+                            "name": "on_begin_action_tree",
+                            "value": "state_tree_reference_info"
+                        },
+                        "ActionTree_OpeningBranch": ""
+                    },
+                    "on_action_tree": {
+                        "template_reference": {
+                            "name": "on_action_tree",
+                            "value": "state_tree_reference_info"
+                        },
+                        "ActionTree_OpeningBranch": ""
+                    },
+                    "on_cancel_action_tree": {
+                        "template_reference": {
+                            "name": "on_cancel_action_tree",
+                            "value": "state_tree_reference_info"
+                        },
+                        "ActionTree_OpeningBranch": ""
+                    },
+                    "on_action_entity_tree": {
+                        "template_reference": {
+                            "name": "on_action_entity_tree",
+                            "value": "state_tree_entity_reference_info"
+                        },
+                        "ActionTree_OpeningBranch": "add_tulip_rocket_vehicle_uk"
+                    },
+                    "on_action_squad_tree": {
+                        "template_reference": {
+                            "name": "on_action_squad_tree",
+                            "value": "state_tree_squad_reference_info"
+                        },
+                        "ActionTree_OpeningBranch": ""
+                    }
+                },
+                "upgrade_type": [],
+                "requirements_openingbranch": "",
+                "ui_menu": {
+                    "instance_reference": ""
+                },
+                "is_progress_permanent": "False",
+                "squad_cost": {
+                    "action": 0.0,
+                    "command": 0.0,
+                    "popcap": 0.0,
+                    "fuel": 0.0,
+                    "munition": 0.0,
+                    "manpower": 0.0,
+                    "requisition": 0.0,
+                    "ultimate": 0.0,
+                    "ability_resource_1": 0.0,
+                    "ability_resource_2": 0.0
+                },
+                "ui_codex_info": {
+                    "priority": 0.0,
+                    "exclusive": "False",
+                    "ui_position": {
+                        "ui_position_column": -1.0,
+                        "ui_position_row": -1.0
+                    }
+                },
+                "filter_conditions": {
+                    "apply_to_filter_condition_statetree_ref": "",
+                    "apply_to_target_type": "entity",
+                    "apply_to_unit_classes": [],
+                    "apply_to_application_type": "current_and_future_units",
+                    "apply_to_future_units": "current_and_future_units",
+                    "apply_to_squad_types": []
+                },
+                "duration_seconds": 0.0,
+                "ui_squad_icon_override": "",
+                "ui_squad_brief_text_override": {
+                    "locstring": {
+                        "name": "ui_squad_brief_text_override",
+                        "value": "0"
+                    }
+                },
+                "ui_squad_symbol_icon_name_override": "",
+                "ui_squad_extra_help_text_override": {
+                    "locstring": {
+                        "name": "ui_squad_extra_help_text_override",
+                        "value": "0"
+                    }
+                },
+                "requirements_to_complete": [],
+                "blueprint_convert_options": {
+                    "preserve_upgrade": "Default",
+                    "continuous_statetree": "Default"
+                },
+                "ui_squad_brief_text_override_formatter": {
+                    "template_reference": {
+                        "name": "ui_squad_brief_text_override_formatter",
+                        "value": ""
+                    }
+                },
+                "ui_squad_extra_help_text_override_formatter": {
+                    "template_reference": {
+                        "name": "ui_squad_extra_help_text_override_formatter",
+                        "value": ""
+                    }
+                },
+                "ui_squad_extra_text_override_formatter": {
+                    "template_reference": {
+                        "name": "ui_squad_extra_text_override_formatter",
+                        "value": ""
+                    }
+                },
+                "ui_squad_help_text_override_formatter": {
+                    "template_reference": {
+                        "name": "ui_squad_help_text_override_formatter",
+                        "value": ""
+                    }
+                }
+            },
+            "pbgid": 2167242.0,
+            "parent_pbg": {
+                "instance_reference": ""
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "custom_bool_properties": [],
+                "custom_float_properties": [],
+                "custom_int32_properties": [],
+                "custom_vector3f_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "child_custom_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_reflected_enum_properties": []
+            }
+        },
+        "vehicle_tulips_firefly_africa_uk": {
+            "upgrade_bag": {
+                "enable_in_hold": "True",
+                "global_max_limit": 0.0,
+                "has_speech_code": "True",
+                "local_max_limit": 1.0,
+                "owner_type": "self",
+                "time_cost": {
+                    "cost": {
+                        "action": 0.0,
+                        "command": 0.0,
+                        "popcap": 0.0,
+                        "fuel": 0.0,
+                        "munition": 140.0,
+                        "manpower": 0.0,
+                        "requisition": 0.0,
+                        "ultimate": 0.0,
+                        "ability_resource_1": 0.0,
+                        "ability_resource_2": 0.0
+                    },
+                    "time_seconds": 30.0
+                },
+                "ui_event_cue": "True",
+                "ui_production_group": "unit_upgrade_panel",
+                "ui_position": {
+                    "ui_position_row": 3.0,
+                    "ui_position_column": 1.0
+                },
+                "ui_info": {
+                    "extra_text": {
+                        "locstring": {
+                            "name": "extra_text",
+                            "value": "0"
+                        }
+                    },
+                    "help_text": {
+                        "locstring": {
+                            "name": "help_text",
+                            "value": "11229813"
+                        }
+                    },
+                    "hotkey_name": "T",
+                    "icon_name": "races/british/upgrades/tulip_rockets",
+                    "reveal_for_decryption": "False",
+                    "screen_name": {
+                        "locstring": {
+                            "name": "screen_name",
+                            "value": "11272522"
+                        }
+                    },
+                    "brief_text": {
+                        "locstring": {
+                            "name": "brief_text",
+                            "value": "11272521"
+                        }
+                    },
+                    "screen_name_short": {
+                        "locstring": {
+                            "name": "screen_name_short",
+                            "value": "0"
+                        }
+                    },
+                    "debug_text": "",
+                    "tooltip_data_template": "",
+                    "ui_combine_type": "intersection",
+                    "brief_text_formatter": {
+                        "template_reference": {
+                            "name": "brief_text_formatter",
+                            "value": ""
+                        }
+                    },
+                    "extra_text_formatter": {
+                        "template_reference": {
+                            "name": "extra_text_formatter",
+                            "value": ""
+                        }
+                    },
+                    "help_text_formatter": {
+                        "template_reference": {
+                            "name": "help_text_formatter",
+                            "value": ""
+                        }
+                    },
+                    "screen_name_formatter": {
+                        "template_reference": {
+                            "name": "screen_name_formatter",
+                            "value": ""
+                        }
+                    },
+                    "screen_name_short_formatter": {
+                        "template_reference": {
+                            "name": "screen_name_short_formatter",
+                            "value": ""
+                        }
+                    },
+                    "screen_name_visibility": "visible",
+                    "sound": "",
+                    "sound_alternative": "",
+                    "symbol_icon_name": "races/british/upgrades/tulip_rockets"
+                },
+                "requirements": [
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_in_territory"
+                            },
+                            "reason": "usage",
+                            "ui_name": {
+                                "locstring": {
+                                    "name": "ui_name",
+                                    "value": "0"
+                                }
+                            },
+                            "in_supply": "True",
+                            "is_secured": "False",
+                            "is_secured_by_checkpoint": "False",
+                            "not_in_transition": "False",
+                            "relative_to_caster": "False"
+                        }
+                    },
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_player_upgrade"
+                            },
+                            "include_completed": "True",
+                            "include_pbg_parenting": {
+                                "include_child_pbgs": "False",
+                                "include_parent_pbgs": "False"
+                            },
+                            "include_queued": "False",
+                            "is_present": "True",
+                            "max_completed": 100.0,
+                            "min_completed": 1.0,
+                            "reason": "usage_and_display",
+                            "ui_name": {
+                                "locstring": {
+                                    "name": "ui_name",
+                                    "value": "0"
+                                }
+                            },
+                            "upgrade_name": {
+                                "instance_reference": "upgrade/british/battlegroups/polish_cavalry/polish_cavalry_tulip_rockets_uk"
+                            }
+                        }
+                    }
+                ],
+                "ui_kicker_icon_name": "",
+                "ui_squad_name_override": {
+                    "locstring": {
+                        "name": "ui_squad_name_override",
+                        "value": "0"
+                    }
+                },
+                "ui_squad_help_text_override": {
+                    "locstring": {
+                        "name": "ui_squad_help_text_override",
+                        "value": "0"
+                    }
+                },
+                "ui_squad_extra_text_override": {
+                    "locstring": {
+                        "name": "ui_squad_extra_text_override",
+                        "value": "0"
+                    }
+                },
+                "ui_preview": [],
+                "speech_code": "",
+                "ui_squad_portrait_icon_override": "",
+                "min_music_intensity": 0.0,
+                "state_tree_references": {
+                    "on_begin_action_tree": {
+                        "template_reference": {
+                            "name": "on_begin_action_tree",
+                            "value": "state_tree_reference_info"
+                        },
+                        "ActionTree_OpeningBranch": ""
+                    },
+                    "on_action_tree": {
+                        "template_reference": {
+                            "name": "on_action_tree",
+                            "value": "state_tree_reference_info"
+                        },
+                        "ActionTree_OpeningBranch": ""
+                    },
+                    "on_cancel_action_tree": {
+                        "template_reference": {
+                            "name": "on_cancel_action_tree",
+                            "value": "state_tree_reference_info"
+                        },
+                        "ActionTree_OpeningBranch": ""
+                    },
+                    "on_action_entity_tree": {
+                        "template_reference": {
+                            "name": "on_action_entity_tree",
+                            "value": "state_tree_entity_reference_info"
+                        },
+                        "ActionTree_OpeningBranch": "add_tulip_rocket_vehicle_uk"
+                    },
+                    "on_action_squad_tree": {
+                        "template_reference": {
+                            "name": "on_action_squad_tree",
+                            "value": "state_tree_squad_reference_info"
+                        },
+                        "ActionTree_OpeningBranch": ""
+                    }
+                },
+                "upgrade_type": [],
+                "requirements_openingbranch": "",
+                "ui_menu": {
+                    "instance_reference": ""
+                },
+                "is_progress_permanent": "False",
+                "squad_cost": {
+                    "action": 0.0,
+                    "command": 0.0,
+                    "popcap": 0.0,
+                    "fuel": 0.0,
+                    "munition": 0.0,
+                    "manpower": 0.0,
+                    "requisition": 0.0,
+                    "ultimate": 0.0,
+                    "ability_resource_1": 0.0,
+                    "ability_resource_2": 0.0
+                },
+                "ui_codex_info": {
+                    "priority": 0.0,
+                    "exclusive": "False",
+                    "ui_position": {
+                        "ui_position_column": -1.0,
+                        "ui_position_row": -1.0
+                    }
+                },
+                "filter_conditions": {
+                    "apply_to_filter_condition_statetree_ref": "",
+                    "apply_to_target_type": "entity",
+                    "apply_to_unit_classes": [],
+                    "apply_to_application_type": "current_and_future_units",
+                    "apply_to_future_units": "current_and_future_units",
+                    "apply_to_squad_types": []
+                },
+                "duration_seconds": 0.0,
+                "ui_squad_icon_override": "",
+                "ui_squad_brief_text_override": {
+                    "locstring": {
+                        "name": "ui_squad_brief_text_override",
+                        "value": "0"
+                    }
+                },
+                "ui_squad_symbol_icon_name_override": "",
+                "ui_squad_extra_help_text_override": {
+                    "locstring": {
+                        "name": "ui_squad_extra_help_text_override",
+                        "value": "0"
+                    }
+                },
+                "requirements_to_complete": [],
+                "blueprint_convert_options": {
+                    "preserve_upgrade": "Default",
+                    "continuous_statetree": "Default"
+                },
+                "ui_squad_brief_text_override_formatter": {
+                    "template_reference": {
+                        "name": "ui_squad_brief_text_override_formatter",
+                        "value": ""
+                    }
+                },
+                "ui_squad_extra_help_text_override_formatter": {
+                    "template_reference": {
+                        "name": "ui_squad_extra_help_text_override_formatter",
+                        "value": ""
+                    }
+                },
+                "ui_squad_extra_text_override_formatter": {
+                    "template_reference": {
+                        "name": "ui_squad_extra_text_override_formatter",
+                        "value": ""
+                    }
+                },
+                "ui_squad_help_text_override_formatter": {
+                    "template_reference": {
+                        "name": "ui_squad_help_text_override_formatter",
+                        "value": ""
+                    }
+                }
+            },
+            "pbgid": 2168378.0,
+            "parent_pbg": {
+                "instance_reference": "upgrade/british_africa/vehicle/vehicle_tulips_africa_uk"
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "custom_bool_properties": [],
+                "custom_float_properties": [],
+                "custom_int32_properties": [],
+                "custom_vector3f_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "child_custom_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_reflected_enum_properties": []
+            }
+        },
         "weapon_57mm_crusader_africa_uk": {
             "upgrade_bag": {
                 "enable_in_hold": "True",
@@ -7163,7 +8050,9 @@
                         "munition": 45.0,
                         "manpower": 0.0,
                         "requisition": 0.0,
-                        "ultimate": 0.0
+                        "ultimate": 0.0,
+                        "ability_resource_1": 0.0,
+                        "ability_resource_2": 0.0
                     },
                     "time_seconds": 30.0
                 },
@@ -7183,7 +8072,7 @@
                         }
                     },
                     "hotkey_name": "B",
-                    "icon_name": "common/abilities/ability_main_gun",
+                    "icon_name": "races/british/upgrades/crusader_6_pounder",
                     "reveal_for_decryption": "False",
                     "screen_name": {
                         "locstring": {
@@ -7259,7 +8148,7 @@
                     "screen_name_visibility": "visible",
                     "sound": "",
                     "sound_alternative": "",
-                    "symbol_icon_name": "common/abilities/ability_main_gun"
+                    "symbol_icon_name": "races/british/upgrades/crusader_6_pounder"
                 },
                 "requirements": [
                     {
@@ -7361,7 +8250,9 @@
                     "munition": 0.0,
                     "manpower": 0.0,
                     "requisition": 0.0,
-                    "ultimate": 0.0
+                    "ultimate": 0.0,
+                    "ability_resource_1": 0.0,
+                    "ability_resource_2": 0.0
                 },
                 "ui_codex_info": {
                     "priority": 0.0,

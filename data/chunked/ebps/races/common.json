@@ -330,12 +330,26 @@
                                     "munition": 0.0,
                                     "manpower": 0.0,
                                     "requisition": 0.0,
-                                    "ultimate": 0.0
+                                    "ultimate": 0.0,
+                                    "ability_resource_1": 0.0,
+                                    "ability_resource_2": 0.0
                                 },
                                 "time_seconds": 3.0,
                                 "time_turns": 0.0,
                                 "builder_cost": {
                                     "action_points": 0.0
+                                },
+                                "squad_cost": {
+                                    "action": 0.0,
+                                    "command": 0.0,
+                                    "popcap": 0.0,
+                                    "fuel": 0.0,
+                                    "munition": 0.0,
+                                    "manpower": 0.0,
+                                    "requisition": 0.0,
+                                    "ultimate": 0.0,
+                                    "ability_resource_1": 0.0,
+                                    "ability_resource_2": 0.0
                                 }
                             }
                         }
@@ -537,7 +551,10 @@
                             "turn_in_place_distance": 0.0,
                             "bandbox_selection_priority_override": "",
                             "decorator_visibility_statetree_node_condition": "",
-                            "selection_ui_visibility_statetree_node_condition": ""
+                            "selection_ui_visibility_statetree_node_condition": "",
+                            "global_unit_control_row": -1.0,
+                            "global_unit_control_row_special": -1.0,
+                            "disable_UI_if_garrison_disabled": "True"
                         }
                     }
                 ],
@@ -729,7 +746,8 @@
                                                                 "name": "ui_name",
                                                                 "value": "0"
                                                             }
-                                                        }
+                                                        },
+                                                        "entity_inclusion_criteria": "default"
                                                     }
                                                 }
                                             ],
@@ -1020,7 +1038,10 @@
                             "turn_in_place_distance": 0.0,
                             "bandbox_selection_priority_override": "lowest",
                             "decorator_visibility_statetree_node_condition": "",
-                            "selection_ui_visibility_statetree_node_condition": ""
+                            "selection_ui_visibility_statetree_node_condition": "",
+                            "global_unit_control_row": -1.0,
+                            "global_unit_control_row_special": -1.0,
+                            "disable_UI_if_garrison_disabled": "True"
                         }
                     },
                     {
@@ -1038,12 +1059,26 @@
                                     "munition": 50.0,
                                     "manpower": 0.0,
                                     "requisition": 0.0,
-                                    "ultimate": 0.0
+                                    "ultimate": 0.0,
+                                    "ability_resource_1": 0.0,
+                                    "ability_resource_2": 0.0
                                 },
                                 "time_seconds": 10.0,
                                 "time_turns": 0.0,
                                 "builder_cost": {
                                     "action_points": 0.0
+                                },
+                                "squad_cost": {
+                                    "action": 0.0,
+                                    "command": 0.0,
+                                    "popcap": 0.0,
+                                    "fuel": 0.0,
+                                    "munition": 0.0,
+                                    "manpower": 0.0,
+                                    "requisition": 0.0,
+                                    "ultimate": 0.0,
+                                    "ability_resource_1": 0.0,
+                                    "ability_resource_2": 0.0
                                 }
                             }
                         }
@@ -1151,12 +1186,6 @@
                                                                 "receive_parent_death": "False"
                                                             }
                                                         }
-                                                    },
-                                                    "non_entity_weapon_wrapper": {
-                                                        "template_reference": {
-                                                            "name": "non_entity_weapon_wrapper",
-                                                            "value": ""
-                                                        }
                                                     }
                                                 }
                                             }
@@ -1171,16 +1200,11 @@
                                 }
                             ],
                             "sight_hardpoint": -1.0,
-                            "block_frontal_arc": 0.0,
                             "attack_move": {
-                                "attack_move_targeting_range": 30.0,
-                                "attack_move_priority_per_distance_meter": -1.0
+                                "attack_move_targeting_range": 30.0
                             },
                             "idle_targeting": {
-                                "idle_priority_per_angle_degree": -1.5,
-                                "idle_priority_per_distance_meter": -1.0,
-                                "idle_targeting_range": 15.0,
-                                "idle_priority_per_distance_unit_angle_multiplier": 0.0
+                                "idle_targeting_range": 15.0
                             },
                             "kill_action_tree": {
                                 "template_reference": {
@@ -1189,34 +1213,7 @@
                                 },
                                 "ActionTree_OpeningBranch": "demo_charge_us_global\\explode"
                             },
-                            "combat_choice_tree": "",
-                            "block_melee_blocks_per_sequence": 0.0,
-                            "block_melee_incoming_attack_sequence_length": 1.0,
-                            "block_ranged_blocks_per_sequence": 0.0,
-                            "block_ranged_incoming_attack_sequence_length": 1.0,
-                            "block_projectile_incoming_attack_sequence_length": 1.0,
-                            "block_projectile_blocks_per_sequence": 0.0,
                             "unequip_weapons_on_death": "True",
-                            "scan_interval_cached_target_invalid": 2.0,
-                            "scan_interval_cached_target_valid": 2.0,
-                            "combat_scan_intervals": {
-                                "attack_move_scan_intervals": {
-                                    "interval_with_invalid_target": 1.0,
-                                    "interval_with_valid_target": 2.0,
-                                    "interval_with_valid_target_frequent": 0.5,
-                                    "frequent_scan_radius": 0.0
-                                },
-                                "forced_engagement_scan_intervals": {
-                                    "interval_with_invalid_target": 0.375,
-                                    "interval_with_valid_target": 2.0
-                                },
-                                "idle_scan_intervals": {
-                                    "interval_with_invalid_target": 1.0,
-                                    "interval_with_valid_target": 2.0,
-                                    "interval_with_valid_target_frequent": 0.5,
-                                    "frequent_scan_radius": 0.0
-                                }
-                            },
                             "ui_show_most_progressed_weapon_reload": "False"
                         }
                     },
@@ -1626,11 +1623,25 @@
                                     "munition": 0.0,
                                     "manpower": 150.0,
                                     "requisition": 0.0,
-                                    "ultimate": 0.0
+                                    "ultimate": 0.0,
+                                    "ability_resource_1": 0.0,
+                                    "ability_resource_2": 0.0
                                 },
                                 "time_turns": 0.0,
                                 "builder_cost": {
                                     "action_points": 0.0
+                                },
+                                "squad_cost": {
+                                    "action": 0.0,
+                                    "command": 0.0,
+                                    "popcap": 0.0,
+                                    "fuel": 0.0,
+                                    "munition": 0.0,
+                                    "manpower": 0.0,
+                                    "requisition": 0.0,
+                                    "ultimate": 0.0,
+                                    "ability_resource_1": 0.0,
+                                    "ability_resource_2": 0.0
                                 }
                             }
                         }
@@ -1868,7 +1879,10 @@
                             "bandbox_selection_priority_override": "",
                             "turn_in_place_distance": 0.0,
                             "decorator_visibility_statetree_node_condition": "",
-                            "selection_ui_visibility_statetree_node_condition": ""
+                            "selection_ui_visibility_statetree_node_condition": "",
+                            "global_unit_control_row": -1.0,
+                            "global_unit_control_row_special": -1.0,
+                            "disable_UI_if_garrison_disabled": "True"
                         }
                     },
                     {
@@ -2277,7 +2291,10 @@
                             "turn_in_place_distance": 0.0,
                             "bandbox_selection_priority_override": "",
                             "decorator_visibility_statetree_node_condition": "",
-                            "selection_ui_visibility_statetree_node_condition": ""
+                            "selection_ui_visibility_statetree_node_condition": "",
+                            "global_unit_control_row": -1.0,
+                            "global_unit_control_row_special": -1.0,
+                            "disable_UI_if_garrison_disabled": "True"
                         }
                     },
                     {
@@ -2340,12 +2357,6 @@
                                                                 "receive_parent_death": "False"
                                                             }
                                                         }
-                                                    },
-                                                    "non_entity_weapon_wrapper": {
-                                                        "template_reference": {
-                                                            "name": "non_entity_weapon_wrapper",
-                                                            "value": ""
-                                                        }
                                                     }
                                                 }
                                             }
@@ -2360,16 +2371,11 @@
                                 }
                             ],
                             "sight_hardpoint": -1.0,
-                            "block_frontal_arc": 0.0,
                             "attack_move": {
-                                "attack_move_targeting_range": 30.0,
-                                "attack_move_priority_per_distance_meter": -1.0
+                                "attack_move_targeting_range": 30.0
                             },
                             "idle_targeting": {
-                                "idle_priority_per_angle_degree": -1.5,
-                                "idle_priority_per_distance_meter": -1.0,
-                                "idle_targeting_range": 15.0,
-                                "idle_priority_per_distance_unit_angle_multiplier": 0.0
+                                "idle_targeting_range": 15.0
                             },
                             "kill_action_tree": {
                                 "template_reference": {
@@ -2378,34 +2384,7 @@
                                 },
                                 "ActionTree_OpeningBranch": ""
                             },
-                            "combat_choice_tree": "",
-                            "block_melee_blocks_per_sequence": 0.0,
-                            "block_melee_incoming_attack_sequence_length": 1.0,
-                            "block_ranged_blocks_per_sequence": 0.0,
-                            "block_ranged_incoming_attack_sequence_length": 1.0,
-                            "block_projectile_incoming_attack_sequence_length": 1.0,
-                            "block_projectile_blocks_per_sequence": 0.0,
                             "unequip_weapons_on_death": "True",
-                            "scan_interval_cached_target_invalid": 2.0,
-                            "scan_interval_cached_target_valid": 2.0,
-                            "combat_scan_intervals": {
-                                "attack_move_scan_intervals": {
-                                    "interval_with_invalid_target": 1.0,
-                                    "interval_with_valid_target": 2.0,
-                                    "interval_with_valid_target_frequent": 0.5,
-                                    "frequent_scan_radius": 0.0
-                                },
-                                "forced_engagement_scan_intervals": {
-                                    "interval_with_invalid_target": 0.375,
-                                    "interval_with_valid_target": 2.0
-                                },
-                                "idle_scan_intervals": {
-                                    "interval_with_invalid_target": 1.0,
-                                    "interval_with_valid_target": 2.0,
-                                    "interval_with_valid_target_frequent": 0.5,
-                                    "frequent_scan_radius": 0.0
-                                }
-                            },
                             "ui_show_most_progressed_weapon_reload": "False"
                         }
                     },
@@ -2606,12 +2585,26 @@
                                     "munition": 0.0,
                                     "manpower": 400.0,
                                     "requisition": 0.0,
-                                    "ultimate": 0.0
+                                    "ultimate": 0.0,
+                                    "ability_resource_1": 0.0,
+                                    "ability_resource_2": 0.0
                                 },
                                 "time_seconds": 40.0,
                                 "time_turns": 0.0,
                                 "builder_cost": {
                                     "action_points": 0.0
+                                },
+                                "squad_cost": {
+                                    "action": 0.0,
+                                    "command": 0.0,
+                                    "popcap": 0.0,
+                                    "fuel": 0.0,
+                                    "munition": 0.0,
+                                    "manpower": 0.0,
+                                    "requisition": 0.0,
+                                    "ultimate": 0.0,
+                                    "ability_resource_1": 0.0,
+                                    "ability_resource_2": 0.0
                                 }
                             }
                         }
@@ -2676,7 +2669,9 @@
                                 "munition": 0.0,
                                 "manpower": 1.0,
                                 "requisition": 0.0,
-                                "ultimate": 0.0
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
                             }
                         }
                     },
@@ -4484,7 +4479,8 @@
                                                                 "name": "ui_name",
                                                                 "value": "0"
                                                             }
-                                                        }
+                                                        },
+                                                        "entity_inclusion_criteria": "default"
                                                     }
                                                 }
                                             ],
@@ -4775,7 +4771,10 @@
                             "turn_in_place_distance": 0.0,
                             "bandbox_selection_priority_override": "",
                             "decorator_visibility_statetree_node_condition": "",
-                            "selection_ui_visibility_statetree_node_condition": ""
+                            "selection_ui_visibility_statetree_node_condition": "",
+                            "global_unit_control_row": -1.0,
+                            "global_unit_control_row_special": -1.0,
+                            "disable_UI_if_garrison_disabled": "True"
                         }
                     },
                     {
@@ -4793,12 +4792,26 @@
                                     "munition": 30.0,
                                     "manpower": 0.0,
                                     "requisition": 0.0,
-                                    "ultimate": 0.0
+                                    "ultimate": 0.0,
+                                    "ability_resource_1": 0.0,
+                                    "ability_resource_2": 0.0
                                 },
                                 "time_seconds": 10.0,
                                 "time_turns": 0.0,
                                 "builder_cost": {
                                     "action_points": 0.0
+                                },
+                                "squad_cost": {
+                                    "action": 0.0,
+                                    "command": 0.0,
+                                    "popcap": 0.0,
+                                    "fuel": 0.0,
+                                    "munition": 0.0,
+                                    "manpower": 0.0,
+                                    "requisition": 0.0,
+                                    "ultimate": 0.0,
+                                    "ability_resource_1": 0.0,
+                                    "ability_resource_2": 0.0
                                 }
                             }
                         }
@@ -4906,12 +4919,6 @@
                                                                 "receive_parent_death": "False"
                                                             }
                                                         }
-                                                    },
-                                                    "non_entity_weapon_wrapper": {
-                                                        "template_reference": {
-                                                            "name": "non_entity_weapon_wrapper",
-                                                            "value": ""
-                                                        }
                                                     }
                                                 }
                                             }
@@ -4926,16 +4933,11 @@
                                 }
                             ],
                             "sight_hardpoint": -1.0,
-                            "block_frontal_arc": 0.0,
                             "attack_move": {
-                                "attack_move_targeting_range": 30.0,
-                                "attack_move_priority_per_distance_meter": -1.0
+                                "attack_move_targeting_range": 30.0
                             },
                             "idle_targeting": {
-                                "idle_priority_per_angle_degree": -1.5,
-                                "idle_priority_per_distance_meter": -1.0,
-                                "idle_targeting_range": 15.0,
-                                "idle_priority_per_distance_unit_angle_multiplier": 0.0
+                                "idle_targeting_range": 15.0
                             },
                             "kill_action_tree": {
                                 "template_reference": {
@@ -4944,34 +4946,7 @@
                                 },
                                 "ActionTree_OpeningBranch": ""
                             },
-                            "combat_choice_tree": "",
-                            "block_melee_blocks_per_sequence": 0.0,
-                            "block_melee_incoming_attack_sequence_length": 1.0,
-                            "block_ranged_blocks_per_sequence": 0.0,
-                            "block_ranged_incoming_attack_sequence_length": 1.0,
-                            "block_projectile_incoming_attack_sequence_length": 1.0,
-                            "block_projectile_blocks_per_sequence": 0.0,
                             "unequip_weapons_on_death": "True",
-                            "scan_interval_cached_target_invalid": 2.0,
-                            "scan_interval_cached_target_valid": 2.0,
-                            "combat_scan_intervals": {
-                                "attack_move_scan_intervals": {
-                                    "interval_with_invalid_target": 1.0,
-                                    "interval_with_valid_target": 2.0,
-                                    "interval_with_valid_target_frequent": 0.5,
-                                    "frequent_scan_radius": 0.0
-                                },
-                                "forced_engagement_scan_intervals": {
-                                    "interval_with_invalid_target": 0.375,
-                                    "interval_with_valid_target": 2.0
-                                },
-                                "idle_scan_intervals": {
-                                    "interval_with_invalid_target": 1.0,
-                                    "interval_with_valid_target": 2.0,
-                                    "interval_with_valid_target_frequent": 0.5,
-                                    "frequent_scan_radius": 0.0
-                                }
-                            },
                             "ui_show_most_progressed_weapon_reload": "False"
                         }
                     },
@@ -5252,12 +5227,26 @@
                                     "munition": 0.0,
                                     "manpower": 200.0,
                                     "requisition": 0.0,
-                                    "ultimate": 0.0
+                                    "ultimate": 0.0,
+                                    "ability_resource_1": 0.0,
+                                    "ability_resource_2": 0.0
                                 },
                                 "time_seconds": 20.0,
                                 "time_turns": 0.0,
                                 "builder_cost": {
                                     "action_points": 0.0
+                                },
+                                "squad_cost": {
+                                    "action": 0.0,
+                                    "command": 0.0,
+                                    "popcap": 0.0,
+                                    "fuel": 0.0,
+                                    "munition": 0.0,
+                                    "manpower": 0.0,
+                                    "requisition": 0.0,
+                                    "ultimate": 0.0,
+                                    "ability_resource_1": 0.0,
+                                    "ability_resource_2": 0.0
                                 }
                             }
                         }
@@ -5415,12 +5404,15 @@
                                     },
                                     {
                                         "int_value": 50.0
+                                    },
+                                    {
+                                        "int_value": 20.0
                                     }
                                 ],
                                 "formatter": {
                                     "locstring": {
                                         "name": "formatter",
-                                        "value": "11261647"
+                                        "value": "11272099"
                                     }
                                 }
                             },
@@ -5473,7 +5465,10 @@
                             "turn_in_place_distance": 0.0,
                             "bandbox_selection_priority_override": "",
                             "decorator_visibility_statetree_node_condition": "",
-                            "selection_ui_visibility_statetree_node_condition": ""
+                            "selection_ui_visibility_statetree_node_condition": "",
+                            "global_unit_control_row": -1.0,
+                            "global_unit_control_row_special": -1.0,
+                            "disable_UI_if_garrison_disabled": "True"
                         }
                     },
                     {
@@ -5786,7 +5781,9 @@
                                 "munition": 0.0,
                                 "manpower": 0.0,
                                 "requisition": 0.0,
-                                "ultimate": 0.0
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
                             },
                             "total_amount_of_resources": {
                                 "action": 0.0,
@@ -5796,7 +5793,9 @@
                                 "munition": 0.0,
                                 "manpower": 0.0,
                                 "requisition": 0.0,
-                                "ultimate": 0.0
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
                             },
                             "resources_divided_by_team_size": "False",
                             "enable_sector_linked_resourcing": "False",
@@ -5816,7 +5815,9 @@
                                 "munition": 0.0,
                                 "manpower": 0.0,
                                 "requisition": 0.0,
-                                "ultimate": 0.0
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
                             }
                         }
                     },
@@ -5865,21 +5866,12 @@
                             "reject_attack_command": "False",
                             "hardpoints": [],
                             "sight_hardpoint": -1.0,
-                            "block_frontal_arc": 0.0,
-                            "block_melee_blocks_per_sequence": 0.0,
-                            "block_melee_incoming_attack_sequence_length": 1.0,
                             "attack_move": {
-                                "attack_move_targeting_range": 30.0,
-                                "attack_move_priority_per_distance_meter": -1.0
+                                "attack_move_targeting_range": 30.0
                             },
                             "idle_targeting": {
-                                "idle_priority_per_angle_degree": -1.5,
-                                "idle_priority_per_distance_meter": -1.0,
-                                "idle_targeting_range": 15.0,
-                                "idle_priority_per_distance_unit_angle_multiplier": 0.0
+                                "idle_targeting_range": 15.0
                             },
-                            "scan_interval_cached_target_invalid": 2.0,
-                            "scan_interval_cached_target_valid": 2.0,
                             "kill_action_tree": {
                                 "template_reference": {
                                     "name": "kill_action_tree",
@@ -5887,30 +5879,7 @@
                                 },
                                 "ActionTree_OpeningBranch": ""
                             },
-                            "combat_choice_tree": "",
-                            "block_ranged_blocks_per_sequence": 0.0,
-                            "block_ranged_incoming_attack_sequence_length": 1.0,
-                            "block_projectile_incoming_attack_sequence_length": 1.0,
-                            "block_projectile_blocks_per_sequence": 0.0,
                             "unequip_weapons_on_death": "True",
-                            "combat_scan_intervals": {
-                                "attack_move_scan_intervals": {
-                                    "interval_with_invalid_target": 1.0,
-                                    "interval_with_valid_target": 2.0,
-                                    "interval_with_valid_target_frequent": 0.5,
-                                    "frequent_scan_radius": 0.0
-                                },
-                                "forced_engagement_scan_intervals": {
-                                    "interval_with_invalid_target": 0.375,
-                                    "interval_with_valid_target": 2.0
-                                },
-                                "idle_scan_intervals": {
-                                    "interval_with_invalid_target": 1.0,
-                                    "interval_with_valid_target": 2.0,
-                                    "interval_with_valid_target_frequent": 0.5,
-                                    "frequent_scan_radius": 0.0
-                                }
-                            },
                             "ui_show_most_progressed_weapon_reload": "False"
                         }
                     },
@@ -5924,6 +5893,11 @@
                                 {
                                     "ability": {
                                         "instance_reference": "abilities/races/common/buildings/retreat_point_mobile_toggle_ui_31_upgrade"
+                                    }
+                                },
+                                {
+                                    "ability": {
+                                        "instance_reference": "abilities/races/common/buildings/salvage_resource_cache_common"
                                     }
                                 }
                             ]
@@ -6049,12 +6023,26 @@
                                     "munition": 0.0,
                                     "manpower": 0.0,
                                     "requisition": 0.0,
-                                    "ultimate": 0.0
+                                    "ultimate": 0.0,
+                                    "ability_resource_1": 0.0,
+                                    "ability_resource_2": 0.0
                                 },
-                                "time_seconds": 5.0,
+                                "time_seconds": 6.0,
                                 "time_turns": 0.0,
                                 "builder_cost": {
                                     "action_points": 0.0
+                                },
+                                "squad_cost": {
+                                    "action": 0.0,
+                                    "command": 0.0,
+                                    "popcap": 0.0,
+                                    "fuel": 0.0,
+                                    "munition": 0.0,
+                                    "manpower": 0.0,
+                                    "requisition": 0.0,
+                                    "ultimate": 0.0,
+                                    "ability_resource_1": 0.0,
+                                    "ability_resource_2": 0.0
                                 }
                             }
                         }
@@ -6256,7 +6244,10 @@
                             "turn_in_place_distance": 0.0,
                             "bandbox_selection_priority_override": "",
                             "decorator_visibility_statetree_node_condition": "",
-                            "selection_ui_visibility_statetree_node_condition": ""
+                            "selection_ui_visibility_statetree_node_condition": "",
+                            "global_unit_control_row": -1.0,
+                            "global_unit_control_row_special": -1.0,
+                            "disable_UI_if_garrison_disabled": "True"
                         }
                     },
                     {
@@ -6781,12 +6772,26 @@
                                     "munition": 0.0,
                                     "manpower": 0.0,
                                     "requisition": 0.0,
-                                    "ultimate": 0.0
+                                    "ultimate": 0.0,
+                                    "ability_resource_1": 0.0,
+                                    "ability_resource_2": 0.0
                                 },
                                 "time_seconds": 9.0,
                                 "time_turns": 0.0,
                                 "builder_cost": {
                                     "action_points": 0.0
+                                },
+                                "squad_cost": {
+                                    "action": 0.0,
+                                    "command": 0.0,
+                                    "popcap": 0.0,
+                                    "fuel": 0.0,
+                                    "munition": 0.0,
+                                    "manpower": 0.0,
+                                    "requisition": 0.0,
+                                    "ultimate": 0.0,
+                                    "ability_resource_1": 0.0,
+                                    "ability_resource_2": 0.0
                                 }
                             }
                         }
@@ -6988,7 +6993,10 @@
                             "turn_in_place_distance": 0.0,
                             "bandbox_selection_priority_override": "",
                             "decorator_visibility_statetree_node_condition": "",
-                            "selection_ui_visibility_statetree_node_condition": ""
+                            "selection_ui_visibility_statetree_node_condition": "",
+                            "global_unit_control_row": -1.0,
+                            "global_unit_control_row_special": -1.0,
+                            "disable_UI_if_garrison_disabled": "True"
                         }
                     },
                     {
@@ -7121,12 +7129,6 @@
                                                             "receive_parent_death": "False"
                                                         }
                                                     }
-                                                },
-                                                "non_entity_weapon_wrapper": {
-                                                    "template_reference": {
-                                                        "name": "non_entity_weapon_wrapper",
-                                                        "value": ""
-                                                    }
                                                 }
                                             }
                                         }
@@ -7141,16 +7143,11 @@
                             }
                         ],
                         "sight_hardpoint": -1.0,
-                        "block_frontal_arc": 0.0,
                         "attack_move": {
-                            "attack_move_targeting_range": 30.0,
-                            "attack_move_priority_per_distance_meter": -1.0
+                            "attack_move_targeting_range": 30.0
                         },
                         "idle_targeting": {
-                            "idle_priority_per_angle_degree": -1.5,
-                            "idle_priority_per_distance_meter": -1.0,
-                            "idle_targeting_range": 15.0,
-                            "idle_priority_per_distance_unit_angle_multiplier": 0.0
+                            "idle_targeting_range": 15.0
                         },
                         "kill_action_tree": {
                             "template_reference": {
@@ -7159,34 +7156,7 @@
                             },
                             "ActionTree_OpeningBranch": ""
                         },
-                        "combat_choice_tree": "",
-                        "block_melee_blocks_per_sequence": 0.0,
-                        "block_melee_incoming_attack_sequence_length": 1.0,
-                        "block_ranged_blocks_per_sequence": 0.0,
-                        "block_ranged_incoming_attack_sequence_length": 1.0,
-                        "block_projectile_incoming_attack_sequence_length": 1.0,
-                        "block_projectile_blocks_per_sequence": 0.0,
                         "unequip_weapons_on_death": "True",
-                        "scan_interval_cached_target_invalid": 2.0,
-                        "scan_interval_cached_target_valid": 2.0,
-                        "combat_scan_intervals": {
-                            "attack_move_scan_intervals": {
-                                "interval_with_invalid_target": 1.0,
-                                "interval_with_valid_target": 2.0,
-                                "interval_with_valid_target_frequent": 0.5,
-                                "frequent_scan_radius": 0.0
-                            },
-                            "forced_engagement_scan_intervals": {
-                                "interval_with_invalid_target": 0.375,
-                                "interval_with_valid_target": 2.0
-                            },
-                            "idle_scan_intervals": {
-                                "interval_with_invalid_target": 1.0,
-                                "interval_with_valid_target": 2.0,
-                                "interval_with_valid_target_frequent": 0.5,
-                                "frequent_scan_radius": 0.0
-                            }
-                        },
                         "ui_show_most_progressed_weapon_reload": "False"
                     }
                 },
@@ -7552,7 +7522,10 @@
                         "turn_in_place_distance": 0.0,
                         "bandbox_selection_priority_override": "",
                         "decorator_visibility_statetree_node_condition": "",
-                        "selection_ui_visibility_statetree_node_condition": ""
+                        "selection_ui_visibility_statetree_node_condition": "",
+                        "global_unit_control_row": -1.0,
+                        "global_unit_control_row_special": -1.0,
+                        "disable_UI_if_garrison_disabled": "True"
                     }
                 },
                 {
@@ -7584,12 +7557,26 @@
                                 "munition": 0.0,
                                 "manpower": 200.0,
                                 "requisition": 0.0,
-                                "ultimate": 0.0
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
                             },
                             "time_seconds": 40.0,
                             "time_turns": 0.0,
                             "builder_cost": {
                                 "action_points": 0.0
+                            },
+                            "squad_cost": {
+                                "action": 0.0,
+                                "command": 0.0,
+                                "popcap": 0.0,
+                                "fuel": 0.0,
+                                "munition": 0.0,
+                                "manpower": 0.0,
+                                "requisition": 0.0,
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
                             }
                         }
                     }
@@ -7654,7 +7641,9 @@
                             "munition": 0.0,
                             "manpower": 1.0,
                             "requisition": 0.0,
-                            "ultimate": 0.0
+                            "ultimate": 0.0,
+                            "ability_resource_1": 0.0,
+                            "ability_resource_2": 0.0
                         }
                     }
                 },
@@ -9418,12 +9407,6 @@
                                                             "receive_parent_death": "False"
                                                         }
                                                     }
-                                                },
-                                                "non_entity_weapon_wrapper": {
-                                                    "template_reference": {
-                                                        "name": "non_entity_weapon_wrapper",
-                                                        "value": ""
-                                                    }
                                                 }
                                             }
                                         },
@@ -9474,12 +9457,6 @@
                                                             "receive_parent_animations": "False",
                                                             "receive_parent_death": "False"
                                                         }
-                                                    }
-                                                },
-                                                "non_entity_weapon_wrapper": {
-                                                    "template_reference": {
-                                                        "name": "non_entity_weapon_wrapper",
-                                                        "value": ""
                                                     }
                                                 }
                                             }
@@ -9532,12 +9509,6 @@
                                                             "receive_parent_death": "False"
                                                         }
                                                     }
-                                                },
-                                                "non_entity_weapon_wrapper": {
-                                                    "template_reference": {
-                                                        "name": "non_entity_weapon_wrapper",
-                                                        "value": ""
-                                                    }
                                                 }
                                             }
                                         },
@@ -9589,12 +9560,6 @@
                                                             "receive_parent_death": "False"
                                                         }
                                                     }
-                                                },
-                                                "non_entity_weapon_wrapper": {
-                                                    "template_reference": {
-                                                        "name": "non_entity_weapon_wrapper",
-                                                        "value": ""
-                                                    }
                                                 }
                                             }
                                         }
@@ -9609,16 +9574,11 @@
                             }
                         ],
                         "sight_hardpoint": -1.0,
-                        "block_frontal_arc": 0.0,
                         "attack_move": {
-                            "attack_move_targeting_range": 30.0,
-                            "attack_move_priority_per_distance_meter": -1.0
+                            "attack_move_targeting_range": 30.0
                         },
                         "idle_targeting": {
-                            "idle_priority_per_angle_degree": -1.5,
-                            "idle_priority_per_distance_meter": -1.0,
-                            "idle_targeting_range": 15.0,
-                            "idle_priority_per_distance_unit_angle_multiplier": 0.0
+                            "idle_targeting_range": 15.0
                         },
                         "kill_action_tree": {
                             "template_reference": {
@@ -9627,34 +9587,7 @@
                             },
                             "ActionTree_OpeningBranch": ""
                         },
-                        "combat_choice_tree": "",
-                        "block_melee_blocks_per_sequence": 0.0,
-                        "block_melee_incoming_attack_sequence_length": 1.0,
-                        "block_ranged_blocks_per_sequence": 0.0,
-                        "block_ranged_incoming_attack_sequence_length": 1.0,
-                        "block_projectile_incoming_attack_sequence_length": 1.0,
-                        "block_projectile_blocks_per_sequence": 0.0,
                         "unequip_weapons_on_death": "True",
-                        "scan_interval_cached_target_invalid": 2.0,
-                        "scan_interval_cached_target_valid": 2.0,
-                        "combat_scan_intervals": {
-                            "attack_move_scan_intervals": {
-                                "interval_with_invalid_target": 1.0,
-                                "interval_with_valid_target": 2.0,
-                                "interval_with_valid_target_frequent": 0.5,
-                                "frequent_scan_radius": 0.0
-                            },
-                            "forced_engagement_scan_intervals": {
-                                "interval_with_invalid_target": 0.375,
-                                "interval_with_valid_target": 2.0
-                            },
-                            "idle_scan_intervals": {
-                                "interval_with_invalid_target": 1.0,
-                                "interval_with_valid_target": 2.0,
-                                "interval_with_valid_target_frequent": 0.5,
-                                "frequent_scan_radius": 0.0
-                            }
-                        },
                         "ui_show_most_progressed_weapon_reload": "False"
                     }
                 },
@@ -10110,7 +10043,10 @@
                         "turn_in_place_distance": 0.0,
                         "bandbox_selection_priority_override": "",
                         "decorator_visibility_statetree_node_condition": "",
-                        "selection_ui_visibility_statetree_node_condition": ""
+                        "selection_ui_visibility_statetree_node_condition": "",
+                        "global_unit_control_row": -1.0,
+                        "global_unit_control_row_special": -1.0,
+                        "disable_UI_if_garrison_disabled": "True"
                     }
                 },
                 {
@@ -10142,12 +10078,26 @@
                                 "munition": 0.0,
                                 "manpower": 43.34,
                                 "requisition": 0.0,
-                                "ultimate": 0.0
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
                             },
                             "time_seconds": 6.0,
                             "time_turns": 0.0,
                             "builder_cost": {
                                 "action_points": 0.0
+                            },
+                            "squad_cost": {
+                                "action": 0.0,
+                                "command": 0.0,
+                                "popcap": 0.0,
+                                "fuel": 0.0,
+                                "munition": 0.0,
+                                "manpower": 0.0,
+                                "requisition": 0.0,
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
                             }
                         }
                     }
@@ -10221,7 +10171,9 @@
                             "munition": 0.0,
                             "manpower": 0.0,
                             "requisition": 0.0,
-                            "ultimate": 0.0
+                            "ultimate": 0.0,
+                            "ability_resource_1": 0.0,
+                            "ability_resource_2": 0.0
                         }
                     }
                 },
@@ -10558,12 +10510,26 @@
                                     "munition": 0.0,
                                     "manpower": 160.0,
                                     "requisition": 0.0,
-                                    "ultimate": 0.0
+                                    "ultimate": 0.0,
+                                    "ability_resource_1": 0.0,
+                                    "ability_resource_2": 0.0
                                 },
                                 "time_seconds": 70.0,
                                 "time_turns": 0.0,
                                 "builder_cost": {
                                     "action_points": 0.0
+                                },
+                                "squad_cost": {
+                                    "action": 0.0,
+                                    "command": 0.0,
+                                    "popcap": 0.0,
+                                    "fuel": 0.0,
+                                    "munition": 0.0,
+                                    "manpower": 0.0,
+                                    "requisition": 0.0,
+                                    "ultimate": 0.0,
+                                    "ability_resource_1": 0.0,
+                                    "ability_resource_2": 0.0
                                 }
                             }
                         }
@@ -10870,7 +10836,10 @@
                             "turn_in_place_distance": 0.0,
                             "bandbox_selection_priority_override": "",
                             "decorator_visibility_statetree_node_condition": "",
-                            "selection_ui_visibility_statetree_node_condition": ""
+                            "selection_ui_visibility_statetree_node_condition": "",
+                            "global_unit_control_row": -1.0,
+                            "global_unit_control_row_special": -1.0,
+                            "disable_UI_if_garrison_disabled": "True"
                         }
                     },
                     {
@@ -10952,7 +10921,9 @@
                                 "munition": 0.0,
                                 "manpower": 0.0,
                                 "requisition": 0.0,
-                                "ultimate": 0.0
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
                             },
                             "shared_with_other_same_type_units": "False",
                             "use_building_target_scan_radius": "True",
@@ -10994,7 +10965,8 @@
                             "unload_seconds_per_entity": 0.25,
                             "allow_allies_to_occupy": "False",
                             "has_internal_entrances": "False",
-                            "ignore_stationable_combat_slot_markers": "False"
+                            "ignore_stationable_combat_slot_markers": "False",
+                            "hold_selection_on_load_type": "hold"
                         }
                     },
                     {
@@ -11280,12 +11252,26 @@
                                     "munition": 0.0,
                                     "manpower": 100.0,
                                     "requisition": 0.0,
-                                    "ultimate": 0.0
+                                    "ultimate": 0.0,
+                                    "ability_resource_1": 0.0,
+                                    "ability_resource_2": 0.0
                                 },
                                 "time_seconds": 60.0,
                                 "time_turns": 0.0,
                                 "builder_cost": {
                                     "action_points": 0.0
+                                },
+                                "squad_cost": {
+                                    "action": 0.0,
+                                    "command": 0.0,
+                                    "popcap": 0.0,
+                                    "fuel": 0.0,
+                                    "munition": 0.0,
+                                    "manpower": 0.0,
+                                    "requisition": 0.0,
+                                    "ultimate": 0.0,
+                                    "ability_resource_1": 0.0,
+                                    "ability_resource_2": 0.0
                                 }
                             }
                         }
@@ -11533,12 +11519,6 @@
                                                                 "receive_parent_death": "False"
                                                             }
                                                         }
-                                                    },
-                                                    "non_entity_weapon_wrapper": {
-                                                        "template_reference": {
-                                                            "name": "non_entity_weapon_wrapper",
-                                                            "value": ""
-                                                        }
                                                     }
                                                 }
                                             },
@@ -11589,12 +11569,6 @@
                                                                 "receive_parent_animations": "False",
                                                                 "receive_parent_death": "False"
                                                             }
-                                                        }
-                                                    },
-                                                    "non_entity_weapon_wrapper": {
-                                                        "template_reference": {
-                                                            "name": "non_entity_weapon_wrapper",
-                                                            "value": ""
                                                         }
                                                     }
                                                 }
@@ -11660,12 +11634,6 @@
                                                                 "receive_parent_death": "False"
                                                             }
                                                         }
-                                                    },
-                                                    "non_entity_weapon_wrapper": {
-                                                        "template_reference": {
-                                                            "name": "non_entity_weapon_wrapper",
-                                                            "value": ""
-                                                        }
                                                     }
                                                 }
                                             }
@@ -11729,12 +11697,6 @@
                                                                 "receive_parent_animations": "False",
                                                                 "receive_parent_death": "False"
                                                             }
-                                                        }
-                                                    },
-                                                    "non_entity_weapon_wrapper": {
-                                                        "template_reference": {
-                                                            "name": "non_entity_weapon_wrapper",
-                                                            "value": ""
                                                         }
                                                     }
                                                 }
@@ -11812,12 +11774,6 @@
                                                                 "receive_parent_death": "False"
                                                             }
                                                         }
-                                                    },
-                                                    "non_entity_weapon_wrapper": {
-                                                        "template_reference": {
-                                                            "name": "non_entity_weapon_wrapper",
-                                                            "value": ""
-                                                        }
                                                     }
                                                 }
                                             }
@@ -11832,16 +11788,11 @@
                                 }
                             ],
                             "sight_hardpoint": -1.0,
-                            "block_frontal_arc": 0.0,
                             "attack_move": {
-                                "attack_move_targeting_range": 30.0,
-                                "attack_move_priority_per_distance_meter": -1.0
+                                "attack_move_targeting_range": 30.0
                             },
                             "idle_targeting": {
-                                "idle_priority_per_angle_degree": -1.5,
-                                "idle_priority_per_distance_meter": -1.0,
-                                "idle_targeting_range": 15.0,
-                                "idle_priority_per_distance_unit_angle_multiplier": 0.0
+                                "idle_targeting_range": 15.0
                             },
                             "kill_action_tree": {
                                 "template_reference": {
@@ -11850,34 +11801,7 @@
                                 },
                                 "ActionTree_OpeningBranch": ""
                             },
-                            "combat_choice_tree": "",
-                            "block_melee_blocks_per_sequence": 0.0,
-                            "block_melee_incoming_attack_sequence_length": 1.0,
-                            "block_ranged_blocks_per_sequence": 0.0,
-                            "block_ranged_incoming_attack_sequence_length": 1.0,
-                            "block_projectile_incoming_attack_sequence_length": 1.0,
-                            "block_projectile_blocks_per_sequence": 0.0,
                             "unequip_weapons_on_death": "False",
-                            "scan_interval_cached_target_invalid": 2.0,
-                            "scan_interval_cached_target_valid": 2.0,
-                            "combat_scan_intervals": {
-                                "attack_move_scan_intervals": {
-                                    "interval_with_invalid_target": 1.0,
-                                    "interval_with_valid_target": 2.0,
-                                    "interval_with_valid_target_frequent": 0.5,
-                                    "frequent_scan_radius": 0.0
-                                },
-                                "forced_engagement_scan_intervals": {
-                                    "interval_with_invalid_target": 0.375,
-                                    "interval_with_valid_target": 2.0
-                                },
-                                "idle_scan_intervals": {
-                                    "interval_with_invalid_target": 1.0,
-                                    "interval_with_valid_target": 2.0,
-                                    "interval_with_valid_target_frequent": 0.5,
-                                    "frequent_scan_radius": 0.0
-                                }
-                            },
                             "ui_show_most_progressed_weapon_reload": "False"
                         }
                     },
@@ -11928,7 +11852,9 @@
                                 "munition": 0.0,
                                 "manpower": 0.0,
                                 "requisition": 0.0,
-                                "ultimate": 0.0
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
                             },
                             "shared_with_other_same_type_units": "False",
                             "unload_seconds_total": 4.0,
@@ -11970,7 +11896,8 @@
                             "unload_seconds_per_entity": 0.0,
                             "allow_allies_to_occupy": "False",
                             "has_internal_entrances": "True",
-                            "ignore_stationable_combat_slot_markers": "False"
+                            "ignore_stationable_combat_slot_markers": "False",
+                            "hold_selection_on_load_type": "hold"
                         }
                     },
                     {
@@ -12024,7 +11951,8 @@
                                 "can_path_through_allies": "True",
                                 "path_blocking_priority": 255.0,
                                 "right_of_way_evacuate_in_combat_allies": "True",
-                                "right_of_way_allies_time_in_combat_seconds": 5.0
+                                "right_of_way_allies_time_in_combat_seconds": 5.0,
+                                "ignore_entity_collision": "False"
                             },
                             "motion_tree_strafing_anim": "False",
                             "speed_levels": {
@@ -12346,12 +12274,26 @@
                                     "munition": 0.0,
                                     "manpower": 100.0,
                                     "requisition": 0.0,
-                                    "ultimate": 0.0
+                                    "ultimate": 0.0,
+                                    "ability_resource_1": 0.0,
+                                    "ability_resource_2": 0.0
                                 },
                                 "time_seconds": 60.0,
                                 "time_turns": 0.0,
                                 "builder_cost": {
                                     "action_points": 0.0
+                                },
+                                "squad_cost": {
+                                    "action": 0.0,
+                                    "command": 0.0,
+                                    "popcap": 0.0,
+                                    "fuel": 0.0,
+                                    "munition": 0.0,
+                                    "manpower": 0.0,
+                                    "requisition": 0.0,
+                                    "ultimate": 0.0,
+                                    "ability_resource_1": 0.0,
+                                    "ability_resource_2": 0.0
                                 }
                             }
                         }
@@ -12599,12 +12541,6 @@
                                                                 "receive_parent_death": "False"
                                                             }
                                                         }
-                                                    },
-                                                    "non_entity_weapon_wrapper": {
-                                                        "template_reference": {
-                                                            "name": "non_entity_weapon_wrapper",
-                                                            "value": ""
-                                                        }
                                                     }
                                                 }
                                             },
@@ -12655,12 +12591,6 @@
                                                                 "receive_parent_animations": "False",
                                                                 "receive_parent_death": "False"
                                                             }
-                                                        }
-                                                    },
-                                                    "non_entity_weapon_wrapper": {
-                                                        "template_reference": {
-                                                            "name": "non_entity_weapon_wrapper",
-                                                            "value": ""
                                                         }
                                                     }
                                                 }
@@ -12726,12 +12656,6 @@
                                                                 "receive_parent_death": "False"
                                                             }
                                                         }
-                                                    },
-                                                    "non_entity_weapon_wrapper": {
-                                                        "template_reference": {
-                                                            "name": "non_entity_weapon_wrapper",
-                                                            "value": ""
-                                                        }
                                                     }
                                                 }
                                             }
@@ -12795,12 +12719,6 @@
                                                                 "receive_parent_animations": "False",
                                                                 "receive_parent_death": "False"
                                                             }
-                                                        }
-                                                    },
-                                                    "non_entity_weapon_wrapper": {
-                                                        "template_reference": {
-                                                            "name": "non_entity_weapon_wrapper",
-                                                            "value": ""
                                                         }
                                                     }
                                                 }
@@ -12878,12 +12796,6 @@
                                                                 "receive_parent_death": "False"
                                                             }
                                                         }
-                                                    },
-                                                    "non_entity_weapon_wrapper": {
-                                                        "template_reference": {
-                                                            "name": "non_entity_weapon_wrapper",
-                                                            "value": ""
-                                                        }
                                                     }
                                                 }
                                             }
@@ -12898,16 +12810,11 @@
                                 }
                             ],
                             "sight_hardpoint": -1.0,
-                            "block_frontal_arc": 0.0,
                             "attack_move": {
-                                "attack_move_targeting_range": 30.0,
-                                "attack_move_priority_per_distance_meter": -1.0
+                                "attack_move_targeting_range": 30.0
                             },
                             "idle_targeting": {
-                                "idle_priority_per_angle_degree": -1.5,
-                                "idle_priority_per_distance_meter": -1.0,
-                                "idle_targeting_range": 15.0,
-                                "idle_priority_per_distance_unit_angle_multiplier": 0.0
+                                "idle_targeting_range": 15.0
                             },
                             "kill_action_tree": {
                                 "template_reference": {
@@ -12916,34 +12823,7 @@
                                 },
                                 "ActionTree_OpeningBranch": ""
                             },
-                            "combat_choice_tree": "",
-                            "block_melee_blocks_per_sequence": 0.0,
-                            "block_melee_incoming_attack_sequence_length": 1.0,
-                            "block_ranged_blocks_per_sequence": 0.0,
-                            "block_ranged_incoming_attack_sequence_length": 1.0,
-                            "block_projectile_incoming_attack_sequence_length": 1.0,
-                            "block_projectile_blocks_per_sequence": 0.0,
                             "unequip_weapons_on_death": "False",
-                            "scan_interval_cached_target_invalid": 2.0,
-                            "scan_interval_cached_target_valid": 2.0,
-                            "combat_scan_intervals": {
-                                "attack_move_scan_intervals": {
-                                    "interval_with_invalid_target": 1.0,
-                                    "interval_with_valid_target": 2.0,
-                                    "interval_with_valid_target_frequent": 0.5,
-                                    "frequent_scan_radius": 0.0
-                                },
-                                "forced_engagement_scan_intervals": {
-                                    "interval_with_invalid_target": 0.375,
-                                    "interval_with_valid_target": 2.0
-                                },
-                                "idle_scan_intervals": {
-                                    "interval_with_invalid_target": 1.0,
-                                    "interval_with_valid_target": 2.0,
-                                    "interval_with_valid_target_frequent": 0.5,
-                                    "frequent_scan_radius": 0.0
-                                }
-                            },
                             "ui_show_most_progressed_weapon_reload": "False"
                         }
                     },
@@ -12994,7 +12874,9 @@
                                 "munition": 0.0,
                                 "manpower": 0.0,
                                 "requisition": 0.0,
-                                "ultimate": 0.0
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
                             },
                             "shared_with_other_same_type_units": "False",
                             "unload_seconds_total": 4.0,
@@ -13036,7 +12918,8 @@
                             "unload_seconds_per_entity": 0.0,
                             "allow_allies_to_occupy": "False",
                             "has_internal_entrances": "True",
-                            "ignore_stationable_combat_slot_markers": "False"
+                            "ignore_stationable_combat_slot_markers": "False",
+                            "hold_selection_on_load_type": "hold"
                         }
                     },
                     {
@@ -13090,7 +12973,8 @@
                                 "can_path_through_allies": "True",
                                 "path_blocking_priority": 255.0,
                                 "right_of_way_evacuate_in_combat_allies": "True",
-                                "right_of_way_allies_time_in_combat_seconds": 5.0
+                                "right_of_way_allies_time_in_combat_seconds": 5.0,
+                                "ignore_entity_collision": "False"
                             },
                             "motion_tree_strafing_anim": "False",
                             "speed_levels": {
@@ -13282,12 +13166,26 @@
                                     "munition": 0.0,
                                     "manpower": 380.0,
                                     "requisition": 0.0,
-                                    "ultimate": 0.0
+                                    "ultimate": 0.0,
+                                    "ability_resource_1": 0.0,
+                                    "ability_resource_2": 0.0
                                 },
                                 "time_seconds": 45.0,
                                 "time_turns": 0.0,
                                 "builder_cost": {
                                     "action_points": 0.0
+                                },
+                                "squad_cost": {
+                                    "action": 0.0,
+                                    "command": 0.0,
+                                    "popcap": 0.0,
+                                    "fuel": 0.0,
+                                    "munition": 0.0,
+                                    "manpower": 0.0,
+                                    "requisition": 0.0,
+                                    "ultimate": 0.0,
+                                    "ability_resource_1": 0.0,
+                                    "ability_resource_2": 0.0
                                 }
                             }
                         }
@@ -13583,7 +13481,10 @@
                             "turn_in_place_distance": 0.0,
                             "bandbox_selection_priority_override": "",
                             "decorator_visibility_statetree_node_condition": "",
-                            "selection_ui_visibility_statetree_node_condition": ""
+                            "selection_ui_visibility_statetree_node_condition": "",
+                            "global_unit_control_row": -1.0,
+                            "global_unit_control_row_special": -1.0,
+                            "disable_UI_if_garrison_disabled": "True"
                         }
                     },
                     {
@@ -13651,7 +13552,8 @@
                                 "can_path_through_allies": "False",
                                 "path_blocking_priority": 255.0,
                                 "right_of_way_evacuate_in_combat_allies": "True",
-                                "right_of_way_allies_time_in_combat_seconds": 5.0
+                                "right_of_way_allies_time_in_combat_seconds": 5.0,
+                                "ignore_entity_collision": "False"
                             },
                             "motion_tree_strafing_anim": "False",
                             "speed_levels": {
@@ -13761,12 +13663,6 @@
                                                                 "receive_parent_death": "False"
                                                             }
                                                         }
-                                                    },
-                                                    "non_entity_weapon_wrapper": {
-                                                        "template_reference": {
-                                                            "name": "non_entity_weapon_wrapper",
-                                                            "value": ""
-                                                        }
                                                     }
                                                 }
                                             },
@@ -13817,12 +13713,6 @@
                                                                 "receive_parent_animations": "False",
                                                                 "receive_parent_death": "False"
                                                             }
-                                                        }
-                                                    },
-                                                    "non_entity_weapon_wrapper": {
-                                                        "template_reference": {
-                                                            "name": "non_entity_weapon_wrapper",
-                                                            "value": ""
                                                         }
                                                     }
                                                 }
@@ -13888,12 +13778,6 @@
                                                                 "receive_parent_death": "False"
                                                             }
                                                         }
-                                                    },
-                                                    "non_entity_weapon_wrapper": {
-                                                        "template_reference": {
-                                                            "name": "non_entity_weapon_wrapper",
-                                                            "value": ""
-                                                        }
                                                     }
                                                 }
                                             }
@@ -13957,12 +13841,6 @@
                                                                 "receive_parent_animations": "False",
                                                                 "receive_parent_death": "False"
                                                             }
-                                                        }
-                                                    },
-                                                    "non_entity_weapon_wrapper": {
-                                                        "template_reference": {
-                                                            "name": "non_entity_weapon_wrapper",
-                                                            "value": ""
                                                         }
                                                     }
                                                 }
@@ -14040,12 +13918,6 @@
                                                                 "receive_parent_death": "False"
                                                             }
                                                         }
-                                                    },
-                                                    "non_entity_weapon_wrapper": {
-                                                        "template_reference": {
-                                                            "name": "non_entity_weapon_wrapper",
-                                                            "value": ""
-                                                        }
                                                     }
                                                 }
                                             }
@@ -14060,16 +13932,11 @@
                                 }
                             ],
                             "sight_hardpoint": -1.0,
-                            "block_frontal_arc": 0.0,
                             "attack_move": {
-                                "attack_move_targeting_range": 30.0,
-                                "attack_move_priority_per_distance_meter": -1.0
+                                "attack_move_targeting_range": 30.0
                             },
                             "idle_targeting": {
-                                "idle_priority_per_angle_degree": -1.5,
-                                "idle_priority_per_distance_meter": -1.0,
-                                "idle_targeting_range": 15.0,
-                                "idle_priority_per_distance_unit_angle_multiplier": 0.0
+                                "idle_targeting_range": 15.0
                             },
                             "kill_action_tree": {
                                 "template_reference": {
@@ -14078,34 +13945,7 @@
                                 },
                                 "ActionTree_OpeningBranch": ""
                             },
-                            "combat_choice_tree": "",
-                            "block_melee_blocks_per_sequence": 0.0,
-                            "block_melee_incoming_attack_sequence_length": 1.0,
-                            "block_ranged_blocks_per_sequence": 0.0,
-                            "block_ranged_incoming_attack_sequence_length": 1.0,
-                            "block_projectile_incoming_attack_sequence_length": 1.0,
-                            "block_projectile_blocks_per_sequence": 0.0,
                             "unequip_weapons_on_death": "False",
-                            "scan_interval_cached_target_invalid": 2.0,
-                            "scan_interval_cached_target_valid": 2.0,
-                            "combat_scan_intervals": {
-                                "attack_move_scan_intervals": {
-                                    "interval_with_invalid_target": 1.0,
-                                    "interval_with_valid_target": 2.0,
-                                    "interval_with_valid_target_frequent": 0.5,
-                                    "frequent_scan_radius": 0.0
-                                },
-                                "forced_engagement_scan_intervals": {
-                                    "interval_with_invalid_target": 0.375,
-                                    "interval_with_valid_target": 2.0
-                                },
-                                "idle_scan_intervals": {
-                                    "interval_with_invalid_target": 1.0,
-                                    "interval_with_valid_target": 2.0,
-                                    "interval_with_valid_target_frequent": 0.5,
-                                    "frequent_scan_radius": 0.0
-                                }
-                            },
                             "ui_show_most_progressed_weapon_reload": "False"
                         }
                     },
@@ -14126,7 +13966,9 @@
                                 "munition": 0.0,
                                 "manpower": 1.4,
                                 "requisition": 0.0,
-                                "ultimate": 0.0
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
                             }
                         }
                     },
@@ -14622,7 +14464,7 @@
                             "load_seconds": 1.0,
                             "max_load_seconds": 1.0,
                             "min_hold_seconds": 1.0,
-                            "num_slots": 6.0,
+                            "num_slots": 8.0,
                             "num_squad_slots": 1.0,
                             "percent_unload_on_death": 0.0,
                             "revert_ownership": "False",
@@ -14635,7 +14477,9 @@
                                 "munition": 0.0,
                                 "manpower": 0.0,
                                 "requisition": 0.0,
-                                "ultimate": 0.0
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
                             },
                             "shared_with_other_same_type_units": "False",
                             "use_building_target_scan_radius": "False",
@@ -14702,7 +14546,8 @@
                             "unload_seconds_per_entity": 0.0,
                             "allow_allies_to_occupy": "False",
                             "has_internal_entrances": "False",
-                            "ignore_stationable_combat_slot_markers": "False"
+                            "ignore_stationable_combat_slot_markers": "False",
+                            "hold_selection_on_load_type": "hold"
                         }
                     },
                     {
@@ -14767,16 +14612,11 @@
                             }
                         ],
                         "sight_hardpoint": -1.0,
-                        "block_frontal_arc": 0.0,
                         "attack_move": {
-                            "attack_move_targeting_range": 30.0,
-                            "attack_move_priority_per_distance_meter": -1.0
+                            "attack_move_targeting_range": 30.0
                         },
                         "idle_targeting": {
-                            "idle_priority_per_angle_degree": -1.5,
-                            "idle_priority_per_distance_meter": -1.0,
-                            "idle_targeting_range": 15.0,
-                            "idle_priority_per_distance_unit_angle_multiplier": 0.0
+                            "idle_targeting_range": 15.0
                         },
                         "kill_action_tree": {
                             "template_reference": {
@@ -14785,34 +14625,7 @@
                             },
                             "ActionTree_OpeningBranch": ""
                         },
-                        "combat_choice_tree": "",
-                        "block_melee_blocks_per_sequence": 0.0,
-                        "block_melee_incoming_attack_sequence_length": 1.0,
-                        "block_ranged_blocks_per_sequence": 0.0,
-                        "block_ranged_incoming_attack_sequence_length": 1.0,
-                        "block_projectile_incoming_attack_sequence_length": 1.0,
-                        "block_projectile_blocks_per_sequence": 0.0,
                         "unequip_weapons_on_death": "True",
-                        "scan_interval_cached_target_invalid": 2.0,
-                        "scan_interval_cached_target_valid": 2.0,
-                        "combat_scan_intervals": {
-                            "attack_move_scan_intervals": {
-                                "interval_with_invalid_target": 1.0,
-                                "interval_with_valid_target": 2.0,
-                                "interval_with_valid_target_frequent": 0.5,
-                                "frequent_scan_radius": 0.0
-                            },
-                            "forced_engagement_scan_intervals": {
-                                "interval_with_invalid_target": 0.375,
-                                "interval_with_valid_target": 2.0
-                            },
-                            "idle_scan_intervals": {
-                                "interval_with_invalid_target": 1.0,
-                                "interval_with_valid_target": 2.0,
-                                "interval_with_valid_target_frequent": 0.5,
-                                "frequent_scan_radius": 0.0
-                            }
-                        },
                         "ui_show_most_progressed_weapon_reload": "False"
                     }
                 },
@@ -15268,7 +15081,10 @@
                         "turn_in_place_distance": 0.0,
                         "bandbox_selection_priority_override": "",
                         "decorator_visibility_statetree_node_condition": "",
-                        "selection_ui_visibility_statetree_node_condition": ""
+                        "selection_ui_visibility_statetree_node_condition": "",
+                        "global_unit_control_row": -1.0,
+                        "global_unit_control_row_special": -1.0,
+                        "disable_UI_if_garrison_disabled": "True"
                     }
                 },
                 {
@@ -15300,12 +15116,26 @@
                                 "munition": 0.0,
                                 "manpower": 43.34,
                                 "requisition": 0.0,
-                                "ultimate": 0.0
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
                             },
                             "time_seconds": 5.0,
                             "time_turns": 0.0,
                             "builder_cost": {
                                 "action_points": 0.0
+                            },
+                            "squad_cost": {
+                                "action": 0.0,
+                                "command": 0.0,
+                                "popcap": 0.0,
+                                "fuel": 0.0,
+                                "munition": 0.0,
+                                "manpower": 0.0,
+                                "requisition": 0.0,
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
                             }
                         }
                     }
@@ -15379,7 +15209,9 @@
                             "munition": 0.0,
                             "manpower": 0.0,
                             "requisition": 0.0,
-                            "ultimate": 0.0
+                            "ultimate": 0.0,
+                            "ability_resource_1": 0.0,
+                            "ability_resource_2": 0.0
                         }
                     }
                 },
@@ -15839,7 +15671,10 @@
                         "turn_in_place_distance": 0.0,
                         "bandbox_selection_priority_override": "",
                         "decorator_visibility_statetree_node_condition": "",
-                        "selection_ui_visibility_statetree_node_condition": ""
+                        "selection_ui_visibility_statetree_node_condition": "",
+                        "global_unit_control_row": -1.0,
+                        "global_unit_control_row_special": -1.0,
+                        "disable_UI_if_garrison_disabled": "True"
                     }
                 },
                 {
@@ -16010,12 +15845,6 @@
                                                             "receive_parent_death": "False"
                                                         }
                                                     }
-                                                },
-                                                "non_entity_weapon_wrapper": {
-                                                    "template_reference": {
-                                                        "name": "non_entity_weapon_wrapper",
-                                                        "value": ""
-                                                    }
                                                 }
                                             }
                                         }
@@ -16030,16 +15859,11 @@
                             }
                         ],
                         "sight_hardpoint": -1.0,
-                        "block_frontal_arc": 0.0,
                         "attack_move": {
-                            "attack_move_targeting_range": 30.0,
-                            "attack_move_priority_per_distance_meter": -1.0
+                            "attack_move_targeting_range": 30.0
                         },
                         "idle_targeting": {
-                            "idle_priority_per_angle_degree": -1.5,
-                            "idle_priority_per_distance_meter": -1.0,
-                            "idle_targeting_range": 15.0,
-                            "idle_priority_per_distance_unit_angle_multiplier": 0.0
+                            "idle_targeting_range": 15.0
                         },
                         "kill_action_tree": {
                             "template_reference": {
@@ -16048,34 +15872,7 @@
                             },
                             "ActionTree_OpeningBranch": ""
                         },
-                        "combat_choice_tree": "",
-                        "block_melee_blocks_per_sequence": 0.0,
-                        "block_melee_incoming_attack_sequence_length": 1.0,
-                        "block_ranged_blocks_per_sequence": 0.0,
-                        "block_ranged_incoming_attack_sequence_length": 1.0,
-                        "block_projectile_incoming_attack_sequence_length": 1.0,
-                        "block_projectile_blocks_per_sequence": 0.0,
                         "unequip_weapons_on_death": "True",
-                        "scan_interval_cached_target_invalid": 2.0,
-                        "scan_interval_cached_target_valid": 2.0,
-                        "combat_scan_intervals": {
-                            "attack_move_scan_intervals": {
-                                "interval_with_invalid_target": 1.0,
-                                "interval_with_valid_target": 2.0,
-                                "interval_with_valid_target_frequent": 0.5,
-                                "frequent_scan_radius": 0.0
-                            },
-                            "forced_engagement_scan_intervals": {
-                                "interval_with_invalid_target": 0.375,
-                                "interval_with_valid_target": 2.0
-                            },
-                            "idle_scan_intervals": {
-                                "interval_with_invalid_target": 1.0,
-                                "interval_with_valid_target": 2.0,
-                                "interval_with_valid_target_frequent": 0.5,
-                                "frequent_scan_radius": 0.0
-                            }
-                        },
                         "ui_show_most_progressed_weapon_reload": "False"
                     }
                 },
@@ -16137,12 +15934,26 @@
                                 "munition": 0.0,
                                 "manpower": 280.0,
                                 "requisition": 0.0,
-                                "ultimate": 0.0
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
                             },
                             "time_seconds": 45.0,
                             "time_turns": 0.0,
                             "builder_cost": {
                                 "action_points": 0.0
+                            },
+                            "squad_cost": {
+                                "action": 0.0,
+                                "command": 0.0,
+                                "popcap": 0.0,
+                                "fuel": 0.0,
+                                "munition": 0.0,
+                                "manpower": 0.0,
+                                "requisition": 0.0,
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
                             }
                         }
                     }
@@ -16535,7 +16346,10 @@
                         "turn_in_place_distance": 0.0,
                         "bandbox_selection_priority_override": "",
                         "decorator_visibility_statetree_node_condition": "",
-                        "selection_ui_visibility_statetree_node_condition": ""
+                        "selection_ui_visibility_statetree_node_condition": "",
+                        "global_unit_control_row": -1.0,
+                        "global_unit_control_row_special": -1.0,
+                        "disable_UI_if_garrison_disabled": "True"
                     }
                 },
                 {
@@ -16706,12 +16520,6 @@
                                                             "receive_parent_death": "False"
                                                         }
                                                     }
-                                                },
-                                                "non_entity_weapon_wrapper": {
-                                                    "template_reference": {
-                                                        "name": "non_entity_weapon_wrapper",
-                                                        "value": ""
-                                                    }
                                                 }
                                             }
                                         }
@@ -16726,16 +16534,11 @@
                             }
                         ],
                         "sight_hardpoint": -1.0,
-                        "block_frontal_arc": 0.0,
                         "attack_move": {
-                            "attack_move_targeting_range": 30.0,
-                            "attack_move_priority_per_distance_meter": -1.0
+                            "attack_move_targeting_range": 30.0
                         },
                         "idle_targeting": {
-                            "idle_priority_per_angle_degree": -1.5,
-                            "idle_priority_per_distance_meter": -1.0,
-                            "idle_targeting_range": 15.0,
-                            "idle_priority_per_distance_unit_angle_multiplier": 0.0
+                            "idle_targeting_range": 15.0
                         },
                         "kill_action_tree": {
                             "template_reference": {
@@ -16744,34 +16547,7 @@
                             },
                             "ActionTree_OpeningBranch": ""
                         },
-                        "combat_choice_tree": "",
-                        "block_melee_blocks_per_sequence": 0.0,
-                        "block_melee_incoming_attack_sequence_length": 1.0,
-                        "block_ranged_blocks_per_sequence": 0.0,
-                        "block_ranged_incoming_attack_sequence_length": 1.0,
-                        "block_projectile_incoming_attack_sequence_length": 1.0,
-                        "block_projectile_blocks_per_sequence": 0.0,
                         "unequip_weapons_on_death": "True",
-                        "scan_interval_cached_target_invalid": 2.0,
-                        "scan_interval_cached_target_valid": 2.0,
-                        "combat_scan_intervals": {
-                            "attack_move_scan_intervals": {
-                                "interval_with_invalid_target": 1.0,
-                                "interval_with_valid_target": 2.0,
-                                "interval_with_valid_target_frequent": 0.5,
-                                "frequent_scan_radius": 0.0
-                            },
-                            "forced_engagement_scan_intervals": {
-                                "interval_with_invalid_target": 0.375,
-                                "interval_with_valid_target": 2.0
-                            },
-                            "idle_scan_intervals": {
-                                "interval_with_invalid_target": 1.0,
-                                "interval_with_valid_target": 2.0,
-                                "interval_with_valid_target_frequent": 0.5,
-                                "frequent_scan_radius": 0.0
-                            }
-                        },
                         "ui_show_most_progressed_weapon_reload": "False"
                     }
                 },
@@ -16833,12 +16609,26 @@
                                 "munition": 0.0,
                                 "manpower": 280.0,
                                 "requisition": 0.0,
-                                "ultimate": 0.0
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
                             },
                             "time_seconds": 45.0,
                             "time_turns": 0.0,
                             "builder_cost": {
                                 "action_points": 0.0
+                            },
+                            "squad_cost": {
+                                "action": 0.0,
+                                "command": 0.0,
+                                "popcap": 0.0,
+                                "fuel": 0.0,
+                                "munition": 0.0,
+                                "manpower": 0.0,
+                                "requisition": 0.0,
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
                             }
                         }
                     }
@@ -16985,12 +16775,26 @@
                                 "munition": 0.0,
                                 "manpower": 0.0,
                                 "requisition": 0.0,
-                                "ultimate": 0.0
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
                             },
                             "time_seconds": 0.0,
                             "time_turns": 0.0,
                             "builder_cost": {
                                 "action_points": 0.0
+                            },
+                            "squad_cost": {
+                                "action": 0.0,
+                                "command": 0.0,
+                                "popcap": 0.0,
+                                "fuel": 0.0,
+                                "munition": 0.0,
+                                "manpower": 0.0,
+                                "requisition": 0.0,
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
                             }
                         }
                     }
@@ -17265,7 +17069,10 @@
                         "turn_in_place_distance": 0.0,
                         "bandbox_selection_priority_override": "medium",
                         "decorator_visibility_statetree_node_condition": "",
-                        "selection_ui_visibility_statetree_node_condition": ""
+                        "selection_ui_visibility_statetree_node_condition": "",
+                        "global_unit_control_row": -1.0,
+                        "global_unit_control_row_special": -1.0,
+                        "disable_UI_if_garrison_disabled": "True"
                     }
                 },
                 {
@@ -17333,7 +17140,8 @@
                             "can_path_through_allies": "False",
                             "path_blocking_priority": 255.0,
                             "right_of_way_evacuate_in_combat_allies": "True",
-                            "right_of_way_allies_time_in_combat_seconds": 5.0
+                            "right_of_way_allies_time_in_combat_seconds": 5.0,
+                            "ignore_entity_collision": "False"
                         },
                         "motion_tree_strafing_anim": "False",
                         "speed_levels": {
@@ -17392,16 +17200,11 @@
                         "reject_attack_command": "False",
                         "hardpoints": [],
                         "sight_hardpoint": -1.0,
-                        "block_frontal_arc": 0.0,
                         "attack_move": {
-                            "attack_move_targeting_range": 30.0,
-                            "attack_move_priority_per_distance_meter": -1.0
+                            "attack_move_targeting_range": 30.0
                         },
                         "idle_targeting": {
-                            "idle_priority_per_angle_degree": -1.5,
-                            "idle_priority_per_distance_meter": -1.0,
-                            "idle_targeting_range": 15.0,
-                            "idle_priority_per_distance_unit_angle_multiplier": 0.0
+                            "idle_targeting_range": 15.0
                         },
                         "kill_action_tree": {
                             "template_reference": {
@@ -17410,34 +17213,7 @@
                             },
                             "ActionTree_OpeningBranch": ""
                         },
-                        "combat_choice_tree": "",
-                        "block_melee_blocks_per_sequence": 0.0,
-                        "block_melee_incoming_attack_sequence_length": 1.0,
-                        "block_ranged_blocks_per_sequence": 0.0,
-                        "block_ranged_incoming_attack_sequence_length": 1.0,
-                        "block_projectile_incoming_attack_sequence_length": 1.0,
-                        "block_projectile_blocks_per_sequence": 0.0,
                         "unequip_weapons_on_death": "False",
-                        "scan_interval_cached_target_invalid": 2.0,
-                        "scan_interval_cached_target_valid": 2.0,
-                        "combat_scan_intervals": {
-                            "attack_move_scan_intervals": {
-                                "interval_with_invalid_target": 1.0,
-                                "interval_with_valid_target": 2.0,
-                                "interval_with_valid_target_frequent": 0.5,
-                                "frequent_scan_radius": 0.0
-                            },
-                            "forced_engagement_scan_intervals": {
-                                "interval_with_invalid_target": 0.375,
-                                "interval_with_valid_target": 2.0
-                            },
-                            "idle_scan_intervals": {
-                                "interval_with_invalid_target": 1.0,
-                                "interval_with_valid_target": 2.0,
-                                "interval_with_valid_target_frequent": 0.5,
-                                "frequent_scan_radius": 0.0
-                            }
-                        },
                         "ui_show_most_progressed_weapon_reload": "False"
                     }
                 },
@@ -17458,7 +17234,9 @@
                             "munition": 0.0,
                             "manpower": 1.5,
                             "requisition": 0.0,
-                            "ultimate": 0.0
+                            "ultimate": 0.0,
+                            "ability_resource_1": 0.0,
+                            "ability_resource_2": 0.0
                         }
                     }
                 },
@@ -17659,12 +17437,6 @@
                                                             "receive_parent_death": "False"
                                                         }
                                                     }
-                                                },
-                                                "non_entity_weapon_wrapper": {
-                                                    "template_reference": {
-                                                        "name": "non_entity_weapon_wrapper",
-                                                        "value": ""
-                                                    }
                                                 }
                                             }
                                         },
@@ -17716,12 +17488,6 @@
                                                             "receive_parent_death": "False"
                                                         }
                                                     }
-                                                },
-                                                "non_entity_weapon_wrapper": {
-                                                    "template_reference": {
-                                                        "name": "non_entity_weapon_wrapper",
-                                                        "value": ""
-                                                    }
                                                 }
                                             }
                                         }
@@ -17736,16 +17502,11 @@
                             }
                         ],
                         "sight_hardpoint": -1.0,
-                        "block_frontal_arc": 0.0,
                         "attack_move": {
-                            "attack_move_targeting_range": 30.0,
-                            "attack_move_priority_per_distance_meter": -1.0
+                            "attack_move_targeting_range": 30.0
                         },
                         "idle_targeting": {
-                            "idle_priority_per_angle_degree": -1.5,
-                            "idle_priority_per_distance_meter": -1.0,
-                            "idle_targeting_range": 15.0,
-                            "idle_priority_per_distance_unit_angle_multiplier": 0.0
+                            "idle_targeting_range": 15.0
                         },
                         "kill_action_tree": {
                             "template_reference": {
@@ -17754,34 +17515,7 @@
                             },
                             "ActionTree_OpeningBranch": ""
                         },
-                        "combat_choice_tree": "",
-                        "block_melee_blocks_per_sequence": 0.0,
-                        "block_melee_incoming_attack_sequence_length": 1.0,
-                        "block_ranged_blocks_per_sequence": 0.0,
-                        "block_ranged_incoming_attack_sequence_length": 1.0,
-                        "block_projectile_incoming_attack_sequence_length": 1.0,
-                        "block_projectile_blocks_per_sequence": 0.0,
                         "unequip_weapons_on_death": "True",
-                        "scan_interval_cached_target_invalid": 2.0,
-                        "scan_interval_cached_target_valid": 2.0,
-                        "combat_scan_intervals": {
-                            "attack_move_scan_intervals": {
-                                "interval_with_invalid_target": 1.0,
-                                "interval_with_valid_target": 2.0,
-                                "interval_with_valid_target_frequent": 0.5,
-                                "frequent_scan_radius": 0.0
-                            },
-                            "forced_engagement_scan_intervals": {
-                                "interval_with_invalid_target": 0.375,
-                                "interval_with_valid_target": 2.0
-                            },
-                            "idle_scan_intervals": {
-                                "interval_with_invalid_target": 1.0,
-                                "interval_with_valid_target": 2.0,
-                                "interval_with_valid_target_frequent": 0.5,
-                                "frequent_scan_radius": 0.0
-                            }
-                        },
                         "ui_show_most_progressed_weapon_reload": "False"
                     }
                 },
@@ -17919,7 +17653,8 @@
                             "can_path_through_allies": "False",
                             "path_blocking_priority": 255.0,
                             "right_of_way_evacuate_in_combat_allies": "True",
-                            "right_of_way_allies_time_in_combat_seconds": 5.0
+                            "right_of_way_allies_time_in_combat_seconds": 5.0,
+                            "ignore_entity_collision": "False"
                         },
                         "motion_tree_strafing_anim": "False",
                         "speed_levels": {
@@ -18239,7 +17974,10 @@
                         "turn_in_place_distance": 3.0,
                         "bandbox_selection_priority_override": "",
                         "decorator_visibility_statetree_node_condition": "",
-                        "selection_ui_visibility_statetree_node_condition": ""
+                        "selection_ui_visibility_statetree_node_condition": "",
+                        "global_unit_control_row": -1.0,
+                        "global_unit_control_row_special": -1.0,
+                        "disable_UI_if_garrison_disabled": "True"
                     }
                 },
                 {
@@ -18269,14 +18007,28 @@
                                 "popcap": 0.0,
                                 "fuel": 0.0,
                                 "munition": 0.0,
-                                "manpower": 70.0,
+                                "manpower": 20.0,
                                 "requisition": 0.0,
-                                "ultimate": 0.0
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
                             },
                             "time_seconds": 20.0,
                             "time_turns": 0.0,
                             "builder_cost": {
                                 "action_points": 0.0
+                            },
+                            "squad_cost": {
+                                "action": 0.0,
+                                "command": 0.0,
+                                "popcap": 0.0,
+                                "fuel": 0.0,
+                                "munition": 0.0,
+                                "manpower": 0.0,
+                                "requisition": 0.0,
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
                             }
                         }
                     }
@@ -18341,7 +18093,9 @@
                             "munition": 0.0,
                             "manpower": 1.0,
                             "requisition": 0.0,
-                            "ultimate": 0.0
+                            "ultimate": 0.0,
+                            "ability_resource_1": 0.0,
+                            "ability_resource_2": 0.0
                         }
                     }
                 },
@@ -18510,7 +18264,7 @@
                                         "max_capture_crew_size": 2.0,
                                         "min_capture_crew_size": 2.0,
                                         "abandon_animation_seconds": 0.0,
-                                        "recrew_max_squad_size": 4.0,
+                                        "recrew_max_squad_size": 5.0,
                                         "abandoned_allows_pass_through": "False",
                                         "driver_death_chance_on_entity_death": 1.0,
                                         "driver_squad_blueprint": {
@@ -18536,7 +18290,7 @@
                                         "max_capture_crew_size": 2.0,
                                         "min_capture_crew_size": 2.0,
                                         "abandon_animation_seconds": 0.0,
-                                        "recrew_max_squad_size": 4.0,
+                                        "recrew_max_squad_size": 5.0,
                                         "abandoned_allows_pass_through": "False",
                                         "driver_death_chance_on_entity_death": 1.0,
                                         "driver_squad_blueprint": {
@@ -18562,7 +18316,7 @@
                                         "max_capture_crew_size": 2.0,
                                         "min_capture_crew_size": 2.0,
                                         "abandon_animation_seconds": 0.0,
-                                        "recrew_max_squad_size": 4.0,
+                                        "recrew_max_squad_size": 5.0,
                                         "abandoned_allows_pass_through": "False",
                                         "driver_death_chance_on_entity_death": 1.0,
                                         "driver_squad_blueprint": {
@@ -18588,7 +18342,7 @@
                                         "max_capture_crew_size": 2.0,
                                         "min_capture_crew_size": 2.0,
                                         "abandon_animation_seconds": 0.0,
-                                        "recrew_max_squad_size": 4.0,
+                                        "recrew_max_squad_size": 5.0,
                                         "abandoned_allows_pass_through": "False",
                                         "driver_death_chance_on_entity_death": 1.0,
                                         "driver_squad_blueprint": {
@@ -18614,7 +18368,7 @@
                                         "max_capture_crew_size": 2.0,
                                         "min_capture_crew_size": 2.0,
                                         "abandon_animation_seconds": 0.0,
-                                        "recrew_max_squad_size": 4.0,
+                                        "recrew_max_squad_size": 5.0,
                                         "abandoned_allows_pass_through": "False",
                                         "driver_death_chance_on_entity_death": 1.0,
                                         "driver_squad_blueprint": {
@@ -18927,12 +18681,26 @@
                                 "munition": 0.0,
                                 "manpower": 320.0,
                                 "requisition": 0.0,
-                                "ultimate": 0.0
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
                             },
                             "time_seconds": 45.0,
                             "time_turns": 0.0,
                             "builder_cost": {
                                 "action_points": 0.0
+                            },
+                            "squad_cost": {
+                                "action": 0.0,
+                                "command": 0.0,
+                                "popcap": 0.0,
+                                "fuel": 0.0,
+                                "munition": 0.0,
+                                "manpower": 0.0,
+                                "requisition": 0.0,
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
                             }
                         }
                     }
@@ -19216,7 +18984,10 @@
                         "turn_in_place_distance": 0.0,
                         "bandbox_selection_priority_override": "medium",
                         "decorator_visibility_statetree_node_condition": "",
-                        "selection_ui_visibility_statetree_node_condition": ""
+                        "selection_ui_visibility_statetree_node_condition": "",
+                        "global_unit_control_row": -1.0,
+                        "global_unit_control_row_special": -1.0,
+                        "disable_UI_if_garrison_disabled": "True"
                     }
                 },
                 {
@@ -19284,7 +19055,8 @@
                             "can_path_through_allies": "False",
                             "path_blocking_priority": 255.0,
                             "right_of_way_evacuate_in_combat_allies": "True",
-                            "right_of_way_allies_time_in_combat_seconds": 5.0
+                            "right_of_way_allies_time_in_combat_seconds": 5.0,
+                            "ignore_entity_collision": "False"
                         },
                         "motion_tree_strafing_anim": "False",
                         "speed_levels": {
@@ -19394,12 +19166,6 @@
                                                             "receive_parent_death": "False"
                                                         }
                                                     }
-                                                },
-                                                "non_entity_weapon_wrapper": {
-                                                    "template_reference": {
-                                                        "name": "non_entity_weapon_wrapper",
-                                                        "value": ""
-                                                    }
                                                 }
                                             }
                                         }
@@ -19414,16 +19180,11 @@
                             }
                         ],
                         "sight_hardpoint": -1.0,
-                        "block_frontal_arc": 0.0,
                         "attack_move": {
-                            "attack_move_targeting_range": 30.0,
-                            "attack_move_priority_per_distance_meter": -1.0
+                            "attack_move_targeting_range": 30.0
                         },
                         "idle_targeting": {
-                            "idle_priority_per_angle_degree": -1.5,
-                            "idle_priority_per_distance_meter": -1.0,
-                            "idle_targeting_range": 15.0,
-                            "idle_priority_per_distance_unit_angle_multiplier": 0.0
+                            "idle_targeting_range": 15.0
                         },
                         "kill_action_tree": {
                             "template_reference": {
@@ -19432,34 +19193,7 @@
                             },
                             "ActionTree_OpeningBranch": ""
                         },
-                        "combat_choice_tree": "",
-                        "block_melee_blocks_per_sequence": 0.0,
-                        "block_melee_incoming_attack_sequence_length": 1.0,
-                        "block_ranged_blocks_per_sequence": 0.0,
-                        "block_ranged_incoming_attack_sequence_length": 1.0,
-                        "block_projectile_incoming_attack_sequence_length": 1.0,
-                        "block_projectile_blocks_per_sequence": 0.0,
                         "unequip_weapons_on_death": "False",
-                        "scan_interval_cached_target_invalid": 2.0,
-                        "scan_interval_cached_target_valid": 2.0,
-                        "combat_scan_intervals": {
-                            "attack_move_scan_intervals": {
-                                "interval_with_invalid_target": 1.0,
-                                "interval_with_valid_target": 2.0,
-                                "interval_with_valid_target_frequent": 0.5,
-                                "frequent_scan_radius": 0.0
-                            },
-                            "forced_engagement_scan_intervals": {
-                                "interval_with_invalid_target": 0.375,
-                                "interval_with_valid_target": 2.0
-                            },
-                            "idle_scan_intervals": {
-                                "interval_with_invalid_target": 1.0,
-                                "interval_with_valid_target": 2.0,
-                                "interval_with_valid_target_frequent": 0.5,
-                                "frequent_scan_radius": 0.0
-                            }
-                        },
                         "ui_show_most_progressed_weapon_reload": "False"
                     }
                 },
@@ -19480,7 +19214,9 @@
                             "munition": 0.0,
                             "manpower": 1.5,
                             "requisition": 0.0,
-                            "ultimate": 0.0
+                            "ultimate": 0.0,
+                            "ability_resource_1": 0.0,
+                            "ability_resource_2": 0.0
                         }
                     }
                 },
@@ -20590,16 +20326,11 @@
                                 }
                             ],
                             "sight_hardpoint": -1.0,
-                            "block_frontal_arc": 0.0,
                             "attack_move": {
-                                "attack_move_targeting_range": 30.0,
-                                "attack_move_priority_per_distance_meter": -1.0
+                                "attack_move_targeting_range": 30.0
                             },
                             "idle_targeting": {
-                                "idle_priority_per_angle_degree": -1.5,
-                                "idle_priority_per_distance_meter": -1.0,
-                                "idle_targeting_range": 15.0,
-                                "idle_priority_per_distance_unit_angle_multiplier": 0.0
+                                "idle_targeting_range": 15.0
                             },
                             "kill_action_tree": {
                                 "template_reference": {
@@ -20608,34 +20339,7 @@
                                 },
                                 "ActionTree_OpeningBranch": ""
                             },
-                            "combat_choice_tree": "",
-                            "block_melee_blocks_per_sequence": 0.0,
-                            "block_melee_incoming_attack_sequence_length": 1.0,
-                            "block_ranged_blocks_per_sequence": 0.0,
-                            "block_ranged_incoming_attack_sequence_length": 1.0,
-                            "block_projectile_incoming_attack_sequence_length": 1.0,
-                            "block_projectile_blocks_per_sequence": 0.0,
                             "unequip_weapons_on_death": "True",
-                            "scan_interval_cached_target_invalid": 2.0,
-                            "scan_interval_cached_target_valid": 2.0,
-                            "combat_scan_intervals": {
-                                "attack_move_scan_intervals": {
-                                    "interval_with_invalid_target": 1.0,
-                                    "interval_with_valid_target": 2.0,
-                                    "interval_with_valid_target_frequent": 0.5,
-                                    "frequent_scan_radius": 0.0
-                                },
-                                "forced_engagement_scan_intervals": {
-                                    "interval_with_invalid_target": 0.375,
-                                    "interval_with_valid_target": 2.0
-                                },
-                                "idle_scan_intervals": {
-                                    "interval_with_invalid_target": 1.0,
-                                    "interval_with_valid_target": 2.0,
-                                    "interval_with_valid_target_frequent": 0.5,
-                                    "frequent_scan_radius": 0.0
-                                }
-                            },
                             "ui_show_most_progressed_weapon_reload": "False"
                         }
                     },
@@ -20781,7 +20485,8 @@
                                 "can_path_through_allies": "False",
                                 "path_blocking_priority": 255.0,
                                 "right_of_way_evacuate_in_combat_allies": "True",
-                                "right_of_way_allies_time_in_combat_seconds": 5.0
+                                "right_of_way_allies_time_in_combat_seconds": 5.0,
+                                "ignore_entity_collision": "False"
                             },
                             "motion_tree_strafing_anim": "False",
                             "speed_levels": {
@@ -21095,7 +20800,10 @@
                             "turn_in_place_distance": 0.0,
                             "bandbox_selection_priority_override": "",
                             "decorator_visibility_statetree_node_condition": "",
-                            "selection_ui_visibility_statetree_node_condition": ""
+                            "selection_ui_visibility_statetree_node_condition": "",
+                            "global_unit_control_row": -1.0,
+                            "global_unit_control_row_special": -1.0,
+                            "disable_UI_if_garrison_disabled": "True"
                         }
                     },
                     {
@@ -21127,12 +20835,26 @@
                                     "munition": 0.0,
                                     "manpower": 0.0,
                                     "requisition": 0.0,
-                                    "ultimate": 0.0
+                                    "ultimate": 0.0,
+                                    "ability_resource_1": 0.0,
+                                    "ability_resource_2": 0.0
                                 },
                                 "time_seconds": 1.0,
                                 "time_turns": 0.0,
                                 "builder_cost": {
                                     "action_points": 0.0
+                                },
+                                "squad_cost": {
+                                    "action": 0.0,
+                                    "command": 0.0,
+                                    "popcap": 0.0,
+                                    "fuel": 0.0,
+                                    "munition": 0.0,
+                                    "manpower": 0.0,
+                                    "requisition": 0.0,
+                                    "ultimate": 0.0,
+                                    "ability_resource_1": 0.0,
+                                    "ability_resource_2": 0.0
                                 }
                             }
                         }
@@ -21206,7 +20928,9 @@
                                 "munition": 0.0,
                                 "manpower": 0.0,
                                 "requisition": 0.0,
-                                "ultimate": 0.0
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
                             }
                         }
                     },
@@ -21734,7 +21458,10 @@
                         "turn_in_place_distance": 0.0,
                         "bandbox_selection_priority_override": "",
                         "decorator_visibility_statetree_node_condition": "",
-                        "selection_ui_visibility_statetree_node_condition": ""
+                        "selection_ui_visibility_statetree_node_condition": "",
+                        "global_unit_control_row": -1.0,
+                        "global_unit_control_row_special": -1.0,
+                        "disable_UI_if_garrison_disabled": "True"
                     }
                 },
                 {
@@ -21752,12 +21479,26 @@
                                 "munition": 0.0,
                                 "manpower": 80.0,
                                 "requisition": 0.0,
-                                "ultimate": 0.0
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
                             },
                             "time_seconds": 5.0,
                             "time_turns": 0.0,
                             "builder_cost": {
                                 "action_points": 0.0
+                            },
+                            "squad_cost": {
+                                "action": 0.0,
+                                "command": 0.0,
+                                "popcap": 0.0,
+                                "fuel": 0.0,
+                                "munition": 0.0,
+                                "manpower": 0.0,
+                                "requisition": 0.0,
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
                             }
                         }
                     }

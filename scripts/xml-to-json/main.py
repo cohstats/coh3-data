@@ -84,7 +84,8 @@ def main():
         ('abilities', ''),
         ('daily_challenges_store_release', 'challenges\\challenge\\'),
         ('weekly_challenges_store_release', 'challenges\\challenge\\'),
-        ('army_upgrade')
+        # Disable army upgrade until we have a better understanding of the data
+        # ('army_upgrade')
     ]
 
     futures = []

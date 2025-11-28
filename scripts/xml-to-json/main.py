@@ -83,7 +83,8 @@ def main():
         ('battlegroup', 'tech_tree\\'),
         ('abilities', ''),
         ('daily_challenges_store_release', 'challenges\\challenge\\'),
-        ('weekly_challenges_store_release', 'challenges\\challenge\\')
+        ('weekly_challenges_store_release', 'challenges\\challenge\\'),
+        ('army_upgrade')
     ]
 
     futures = []

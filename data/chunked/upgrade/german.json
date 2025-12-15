@@ -57566,11 +57566,12 @@
                             "name": "ui_squad_help_text_override_formatter",
                             "value": ""
                         }
-                    }
+                    },
+                    "state_tree_only_run_on_first_stack": "False"
                 },
                 "pbgid": 2161617.0,
                 "parent_pbg": {
-                    "instance_reference": ""
+                    "instance_reference": "upgrade/german/research/officer_quarters/infanterie_kompanie_vet_ger"
                 },
                 "custom_properties": {
                     "template_reference": {
@@ -57578,7 +57579,18 @@
                         "value": "custom_property_template"
                     },
                     "custom_bool_properties": [],
-                    "custom_float_properties": [],
+                    "custom_float_properties": [
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "RECEIVED_VETERANCY_SQUAD_MODIFIER",
+                                "value": 1.25
+                            }
+                        }
+                    ],
                     "custom_int32_properties": [],
                     "custom_vector3f_properties": [],
                     "custom_pbgid_properties": [],

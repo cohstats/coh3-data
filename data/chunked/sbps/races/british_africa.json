@@ -1037,6 +1037,11 @@
                                 "ability": {
                                     "instance_reference": "abilities/toggle_aa_mode"
                                 }
+                            },
+                            {
+                                "ability": {
+                                    "instance_reference": "abilities/races/common/buildings/salvage_emplacement_common"
+                                }
                             }
                         ],
                         "ui_combine_priority": 0.0,
@@ -1385,7 +1390,7 @@
                                                             "value": "11153313"
                                                         }
                                                     },
-                                                    "veterancy_value": 1200.0,
+                                                    "veterancy_value": 900.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -1460,7 +1465,7 @@
                                                             "value": "11153314"
                                                         }
                                                     },
-                                                    "veterancy_value": 3600.0,
+                                                    "veterancy_value": 2700.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -1546,7 +1551,7 @@
                                                             "value": "11153315"
                                                         }
                                                     },
-                                                    "veterancy_value": 7200.0,
+                                                    "veterancy_value": 5400.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -3694,7 +3699,7 @@
                                                             "value": "11153313"
                                                         }
                                                     },
-                                                    "veterancy_value": 1200.0,
+                                                    "veterancy_value": 1500.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -3777,7 +3782,7 @@
                                                             "value": "11153314"
                                                         }
                                                     },
-                                                    "veterancy_value": 2400.0,
+                                                    "veterancy_value": 4500.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -3863,7 +3868,7 @@
                                                             "value": "11153315"
                                                         }
                                                     },
-                                                    "veterancy_value": 4800.0,
+                                                    "veterancy_value": 9000.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -13549,7 +13554,7 @@
                                                             "value": "11153313"
                                                         }
                                                     },
-                                                    "veterancy_value": 800.0,
+                                                    "veterancy_value": 650.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -13632,7 +13637,7 @@
                                                             "value": "11153314"
                                                         }
                                                     },
-                                                    "veterancy_value": 2400.0,
+                                                    "veterancy_value": 1950.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -13715,7 +13720,7 @@
                                                             "value": "11153315"
                                                         }
                                                     },
-                                                    "veterancy_value": 4800.0,
+                                                    "veterancy_value": 3900.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -15877,7 +15882,7 @@
                         },
                         "time_cost_percentage": {
                             "cost_percentage": 0.615385,
-                            "time_percentage": 0.9,
+                            "time_percentage": 1.125,
                             "upgrade_cost_percentage": 0.0
                         },
                         "ui_info": {
@@ -16340,7 +16345,7 @@
                                                                 }
                                                             },
                                                             {
-                                                                "int_value": 15.0
+                                                                "int_value": 10.0
                                                             },
                                                             {
                                                                 "locstring_value": {
@@ -17186,7 +17191,90 @@
                                                             "value": "11153313"
                                                         }
                                                     },
-                                                    "veterancy_value": 1000.0,
+                                                    "veterancy_value": 1800.0,
+                                                    "state_tree_references": {
+                                                        "squad_action_tree": {
+                                                            "template_reference": {
+                                                                "name": "squad_action_tree",
+                                                                "value": "state_tree_reference_info"
+                                                            },
+                                                            "ActionTree_OpeningBranch": "veterancy_level_up\\level_up"
+                                                        },
+                                                        "squad_entity_action_tree": {
+                                                            "template_reference": {
+                                                                "name": "squad_entity_action_tree",
+                                                                "value": "state_tree_reference_info"
+                                                            },
+                                                            "ActionTree_OpeningBranch": ""
+                                                        },
+                                                        "action_non_leader_action_tree": {
+                                                            "template_reference": {
+                                                                "name": "action_non_leader_action_tree",
+                                                                "value": "state_tree_reference_info"
+                                                            },
+                                                            "ActionTree_OpeningBranch": ""
+                                                        },
+                                                        "action_leader_action_tree": {
+                                                            "template_reference": {
+                                                                "name": "action_leader_action_tree",
+                                                                "value": "state_tree_reference_info"
+                                                            },
+                                                            "ActionTree_OpeningBranch": ""
+                                                        }
+                                                    },
+                                                    "abilities": [],
+                                                    "brief_text": {
+                                                        "locstring": {
+                                                            "name": "brief_text",
+                                                            "value": "0"
+                                                        }
+                                                    },
+                                                    "brief_text_formatter": {
+                                                        "template_reference": {
+                                                            "name": "brief_text_formatter",
+                                                            "value": "ui_text_formatter"
+                                                        },
+                                                        "formatter": {
+                                                            "locstring": {
+                                                                "name": "formatter",
+                                                                "value": "11266072"
+                                                            }
+                                                        },
+                                                        "formatter_arguments": [
+                                                            {
+                                                                "locstring_value": {
+                                                                    "locstring": {
+                                                                        "name": "locstring_value",
+                                                                        "value": "11266000"
+                                                                    }
+                                                                }
+                                                            },
+                                                            {
+                                                                "int_value": 15.0
+                                                            },
+                                                            {
+                                                                "locstring_value": {
+                                                                    "locstring": {
+                                                                        "name": "locstring_value",
+                                                                        "value": "11265771"
+                                                                    }
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    "requirements": []
+                                                }
+                                            },
+                                            {
+                                                "veterancy_rank": {
+                                                    "hide_ingame_veterancy_art": "False",
+                                                    "screen_name": {
+                                                        "locstring": {
+                                                            "name": "screen_name",
+                                                            "value": "11153314"
+                                                        }
+                                                    },
+                                                    "veterancy_value": 5400.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -17237,16 +17325,9 @@
                                                         },
                                                         "formatter_arguments": [
                                                             {
-                                                                "locstring_value": {
-                                                                    "locstring": {
-                                                                        "name": "locstring_value",
-                                                                        "value": "11266000"
-                                                                    }
-                                                                },
                                                                 "int_value": 30.0
                                                             },
                                                             {
-                                                                "int_value": 15.0,
                                                                 "locstring_value": {
                                                                     "locstring": {
                                                                         "name": "locstring_value",
@@ -17255,12 +17336,6 @@
                                                                 }
                                                             },
                                                             {
-                                                                "locstring_value": {
-                                                                    "locstring": {
-                                                                        "name": "locstring_value",
-                                                                        "value": "11265771"
-                                                                    }
-                                                                },
                                                                 "int_value": 25.0
                                                             },
                                                             {
@@ -17282,10 +17357,10 @@
                                                     "screen_name": {
                                                         "locstring": {
                                                             "name": "screen_name",
-                                                            "value": "11153314"
+                                                            "value": "11153315"
                                                         }
                                                     },
-                                                    "veterancy_value": 3000.0,
+                                                    "veterancy_value": 10800.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -17365,103 +17440,6 @@
                                                                     "locstring": {
                                                                         "name": "locstring_value",
                                                                         "value": "11264942"
-                                                                    }
-                                                                }
-                                                            }
-                                                        ]
-                                                    },
-                                                    "requirements": []
-                                                }
-                                            },
-                                            {
-                                                "veterancy_rank": {
-                                                    "hide_ingame_veterancy_art": "False",
-                                                    "screen_name": {
-                                                        "locstring": {
-                                                            "name": "screen_name",
-                                                            "value": "11153315"
-                                                        }
-                                                    },
-                                                    "veterancy_value": 6000.0,
-                                                    "state_tree_references": {
-                                                        "squad_action_tree": {
-                                                            "template_reference": {
-                                                                "name": "squad_action_tree",
-                                                                "value": "state_tree_reference_info"
-                                                            },
-                                                            "ActionTree_OpeningBranch": "veterancy_level_up\\level_up"
-                                                        },
-                                                        "squad_entity_action_tree": {
-                                                            "template_reference": {
-                                                                "name": "squad_entity_action_tree",
-                                                                "value": "state_tree_reference_info"
-                                                            },
-                                                            "ActionTree_OpeningBranch": ""
-                                                        },
-                                                        "action_non_leader_action_tree": {
-                                                            "template_reference": {
-                                                                "name": "action_non_leader_action_tree",
-                                                                "value": "state_tree_reference_info"
-                                                            },
-                                                            "ActionTree_OpeningBranch": ""
-                                                        },
-                                                        "action_leader_action_tree": {
-                                                            "template_reference": {
-                                                                "name": "action_leader_action_tree",
-                                                                "value": "state_tree_reference_info"
-                                                            },
-                                                            "ActionTree_OpeningBranch": ""
-                                                        }
-                                                    },
-                                                    "abilities": [],
-                                                    "brief_text": {
-                                                        "locstring": {
-                                                            "name": "brief_text",
-                                                            "value": "0"
-                                                        }
-                                                    },
-                                                    "brief_text_formatter": {
-                                                        "template_reference": {
-                                                            "name": "brief_text_formatter",
-                                                            "value": "ui_text_formatter"
-                                                        },
-                                                        "formatter": {
-                                                            "locstring": {
-                                                                "name": "formatter",
-                                                                "value": "11266113"
-                                                            }
-                                                        },
-                                                        "formatter_arguments": [
-                                                            {
-                                                                "int_value": 20.0
-                                                            },
-                                                            {
-                                                                "locstring_value": {
-                                                                    "locstring": {
-                                                                        "name": "locstring_value",
-                                                                        "value": "11265500"
-                                                                    }
-                                                                }
-                                                            },
-                                                            {
-                                                                "int_value": 30.0
-                                                            },
-                                                            {
-                                                                "locstring_value": {
-                                                                    "locstring": {
-                                                                        "name": "locstring_value",
-                                                                        "value": "11264545"
-                                                                    }
-                                                                }
-                                                            },
-                                                            {
-                                                                "int_value": 100.0
-                                                            },
-                                                            {
-                                                                "locstring_value": {
-                                                                    "locstring": {
-                                                                        "name": "locstring_value",
-                                                                        "value": "11266089"
                                                                     }
                                                                 }
                                                             }
@@ -21780,7 +21758,7 @@
                                                                 }
                                                             },
                                                             {
-                                                                "int_value": 30.0
+                                                                "int_value": 40.0
                                                             },
                                                             {
                                                                 "locstring_value": {
@@ -23020,7 +22998,7 @@
                                                             "value": "11153313"
                                                         }
                                                     },
-                                                    "veterancy_value": 500.0,
+                                                    "veterancy_value": 700.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -23104,7 +23082,7 @@
                                                             "value": "11153314"
                                                         }
                                                     },
-                                                    "veterancy_value": 1500.0,
+                                                    "veterancy_value": 2100.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -23166,7 +23144,7 @@
                                                                 }
                                                             },
                                                             {
-                                                                "int_value": 30.0
+                                                                "int_value": 40.0
                                                             },
                                                             {
                                                                 "locstring_value": {
@@ -23190,7 +23168,7 @@
                                                             "value": "11153315"
                                                         }
                                                     },
-                                                    "veterancy_value": 3000.0,
+                                                    "veterancy_value": 4200.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -24406,7 +24384,7 @@
                                                             "value": "11153313"
                                                         }
                                                     },
-                                                    "veterancy_value": 500.0,
+                                                    "veterancy_value": 700.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -24490,7 +24468,7 @@
                                                             "value": "11153314"
                                                         }
                                                     },
-                                                    "veterancy_value": 1500.0,
+                                                    "veterancy_value": 2100.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -24552,7 +24530,7 @@
                                                                 }
                                                             },
                                                             {
-                                                                "int_value": 30.0
+                                                                "int_value": 40.0
                                                             },
                                                             {
                                                                 "locstring_value": {
@@ -24576,7 +24554,7 @@
                                                             "value": "11153315"
                                                         }
                                                     },
-                                                    "veterancy_value": 3000.0,
+                                                    "veterancy_value": 4200.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -26881,7 +26859,7 @@
                                                                 "int_value": 20.0
                                                             },
                                                             {
-                                                                "int_value": 15.0,
+                                                                "int_value": 10.0,
                                                                 "locstring_value": {
                                                                     "locstring": {
                                                                         "name": "locstring_value",
@@ -26893,7 +26871,7 @@
                                                                 "locstring_value": {
                                                                     "locstring": {
                                                                         "name": "locstring_value",
-                                                                        "value": "11265771"
+                                                                        "value": "11264545"
                                                                     }
                                                                 },
                                                                 "int_value": 25.0
@@ -26982,13 +26960,13 @@
                                                         },
                                                         "formatter_arguments": [
                                                             {
-                                                                "int_value": 25.0
+                                                                "int_value": 10.0
                                                             },
                                                             {
                                                                 "locstring_value": {
                                                                     "locstring": {
                                                                         "name": "locstring_value",
-                                                                        "value": "11266112"
+                                                                        "value": "11264942"
                                                                     }
                                                                 }
                                                             },
@@ -28406,7 +28384,7 @@
                                                             "value": "11153313"
                                                         }
                                                     },
-                                                    "veterancy_value": 1000.0,
+                                                    "veterancy_value": 750.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -28466,7 +28444,7 @@
                                                                 "int_value": 20.0
                                                             },
                                                             {
-                                                                "int_value": 15.0,
+                                                                "int_value": 10.0,
                                                                 "locstring_value": {
                                                                     "locstring": {
                                                                         "name": "locstring_value",
@@ -28478,7 +28456,7 @@
                                                                 "locstring_value": {
                                                                     "locstring": {
                                                                         "name": "locstring_value",
-                                                                        "value": "11265771"
+                                                                        "value": "11264545"
                                                                     }
                                                                 },
                                                                 "int_value": 25.0
@@ -28516,7 +28494,7 @@
                                                             "value": "11153314"
                                                         }
                                                     },
-                                                    "veterancy_value": 3000.0,
+                                                    "veterancy_value": 2250.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -28567,13 +28545,13 @@
                                                         },
                                                         "formatter_arguments": [
                                                             {
-                                                                "int_value": 25.0
+                                                                "int_value": 10.0
                                                             },
                                                             {
                                                                 "locstring_value": {
                                                                     "locstring": {
                                                                         "name": "locstring_value",
-                                                                        "value": "11266112"
+                                                                        "value": "11264942"
                                                                     }
                                                                 }
                                                             },
@@ -28602,7 +28580,7 @@
                                                             "value": "11153315"
                                                         }
                                                     },
-                                                    "veterancy_value": 6000.0,
+                                                    "veterancy_value": 4500.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -29221,7 +29199,7 @@
                                                             "value": "11153313"
                                                         }
                                                     },
-                                                    "veterancy_value": 1300.0,
+                                                    "veterancy_value": 850.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -29304,7 +29282,7 @@
                                                             "value": "11153314"
                                                         }
                                                     },
-                                                    "veterancy_value": 3900.0,
+                                                    "veterancy_value": 2550.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -29390,7 +29368,7 @@
                                                             "value": "11153315"
                                                         }
                                                     },
-                                                    "veterancy_value": 7800.0,
+                                                    "veterancy_value": 5100.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -30018,7 +29996,7 @@
                                                             "value": "11153313"
                                                         }
                                                     },
-                                                    "veterancy_value": 1300.0,
+                                                    "veterancy_value": 850.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -30112,7 +30090,7 @@
                                                             "value": "11153314"
                                                         }
                                                     },
-                                                    "veterancy_value": 3900.0,
+                                                    "veterancy_value": 2550.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -30209,7 +30187,7 @@
                                                             "value": "11153315"
                                                         }
                                                     },
-                                                    "veterancy_value": 7800.0,
+                                                    "veterancy_value": 5100.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -33654,13 +33632,13 @@
                                                                 }
                                                             },
                                                             {
-                                                                "int_value": 25.0
+                                                                "int_value": 20.0
                                                             },
                                                             {
                                                                 "locstring_value": {
                                                                     "locstring": {
                                                                         "name": "locstring_value",
-                                                                        "value": "11266098"
+                                                                        "value": "11264546"
                                                                     }
                                                                 }
                                                             }
@@ -33751,13 +33729,13 @@
                                                                 }
                                                             },
                                                             {
-                                                                "int_value": 15.0
+                                                                "int_value": 25.0
                                                             },
                                                             {
                                                                 "locstring_value": {
                                                                     "locstring": {
                                                                         "name": "locstring_value",
-                                                                        "value": "11264546"
+                                                                        "value": "11266112"
                                                                     }
                                                                 }
                                                             }
@@ -33832,18 +33810,18 @@
                                                         "formatter": {
                                                             "locstring": {
                                                                 "name": "formatter",
-                                                                "value": "11266113"
+                                                                "value": "11266316"
                                                             }
                                                         },
                                                         "formatter_arguments": [
                                                             {
-                                                                "int_value": 30.0
+                                                                "int_value": 80.0
                                                             },
                                                             {
                                                                 "locstring_value": {
                                                                     "locstring": {
                                                                         "name": "locstring_value",
-                                                                        "value": "11264546"
+                                                                        "value": "11266094"
                                                                     }
                                                                 }
                                                             },

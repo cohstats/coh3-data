@@ -2260,8 +2260,7 @@
                             "name": "ui_squad_help_text_override_formatter",
                             "value": ""
                         }
-                    },
-                    "state_tree_only_run_on_first_stack": "False"
+                    }
                 },
                 "pbgid": 198658.0,
                 "parent_pbg": {
@@ -18804,6 +18803,9 @@
                                 },
                                 {
                                     "int_value": 20.0
+                                },
+                                {
+                                    "int_value": 15.0
                                 }
                             ]
                         },
@@ -24123,7 +24125,7 @@
                         "brief_text": {
                             "locstring": {
                                 "name": "brief_text",
-                                "value": "11240756"
+                                "value": "0"
                             }
                         },
                         "screen_name_short": {
@@ -24138,8 +24140,19 @@
                         "brief_text_formatter": {
                             "template_reference": {
                                 "name": "brief_text_formatter",
-                                "value": ""
-                            }
+                                "value": "ui_text_formatter"
+                            },
+                            "formatter": {
+                                "locstring": {
+                                    "name": "formatter",
+                                    "value": "11240756"
+                                }
+                            },
+                            "formatter_arguments": [
+                                {
+                                    "int_value": 20.0
+                                }
+                            ]
                         },
                         "extra_text_formatter": {
                             "template_reference": {
@@ -24484,7 +24497,18 @@
                         "value": "custom_property_template"
                     },
                     "custom_bool_properties": [],
-                    "custom_float_properties": [],
+                    "custom_float_properties": [
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "REINFORCE_COST_MODIFIER",
+                                "value": 0.8
+                            }
+                        }
+                    ],
                     "custom_int32_properties": [],
                     "custom_vector3f_properties": [],
                     "custom_pbgid_properties": [],
@@ -30663,7 +30687,7 @@
                                 },
                                 "resource": {
                                     "action": 0.0,
-                                    "command": 1.0,
+                                    "command": 2.0,
                                     "popcap": 0.0,
                                     "fuel": 0.0,
                                     "munition": 0.0,
@@ -30837,7 +30861,7 @@
                                 "name": "on_action_tree",
                                 "value": "state_tree_reference_info"
                             },
-                            "ActionTree_OpeningBranch": "temporary_battlegroup_cost\\1"
+                            "ActionTree_OpeningBranch": "temporary_battlegroup_cost\\2"
                         },
                         "on_cancel_action_tree": {
                             "template_reference": {
@@ -36912,7 +36936,7 @@
                             },
                             "formatter_arguments": [
                                 {
-                                    "int_value": 50.0
+                                    "int_value": 25.0
                                 },
                                 {
                                     "int_value": 20.0
@@ -40777,7 +40801,7 @@
                     "brief_text": {
                         "locstring": {
                             "name": "brief_text",
-                            "value": "11260618"
+                            "value": "11273406"
                         }
                     },
                     "screen_name_short": {
@@ -48879,6 +48903,17 @@
                             "pbg": {
                                 "instance_reference": "ebps/races/german/weapons/ballistic_weapon/infantry_anti_tank_weapon/w_panzerschrek_stormtrooper_ger"
                             }
+                        }
+                    }
+                ],
+                "custom_global_state_tree_reference_properties": [
+                    {
+                        "custom_global_state_tree_reference_property": {
+                            "template_reference": {
+                                "name": "custom_global_state_tree_reference_property",
+                                "value": "custom_properties\\custom_global_state_tree_reference_property"
+                            },
+                            "nodepath": "weapon_upgrade\\extra_payload_library\\add_infantry_prioritize_vehicle"
                         }
                     }
                 ]
@@ -57566,8 +57601,7 @@
                             "name": "ui_squad_help_text_override_formatter",
                             "value": ""
                         }
-                    },
-                    "state_tree_only_run_on_first_stack": "False"
+                    }
                 },
                 "pbgid": 2161617.0,
                 "parent_pbg": {
@@ -57848,8 +57882,7 @@
                             "name": "ui_squad_help_text_override_formatter",
                             "value": ""
                         }
-                    },
-                    "state_tree_only_run_on_first_stack": "False"
+                    }
                 },
                 "pbgid": 2081885.0,
                 "parent_pbg": {
@@ -58130,8 +58163,7 @@
                             "name": "ui_squad_help_text_override_formatter",
                             "value": ""
                         }
-                    },
-                    "state_tree_only_run_on_first_stack": "False"
+                    }
                 },
                 "pbgid": 2081887.0,
                 "parent_pbg": {
@@ -58412,8 +58444,7 @@
                             "name": "ui_squad_help_text_override_formatter",
                             "value": ""
                         }
-                    },
-                    "state_tree_only_run_on_first_stack": "False"
+                    }
                 },
                 "pbgid": 2081886.0,
                 "parent_pbg": {
@@ -58694,8 +58725,7 @@
                             "name": "ui_squad_help_text_override_formatter",
                             "value": ""
                         }
-                    },
-                    "state_tree_only_run_on_first_stack": "False"
+                    }
                 },
                 "pbgid": 2081888.0,
                 "parent_pbg": {
@@ -61360,32 +61390,7 @@
         },
         "hulldown_upgrade_vet_ger": {
             "upgrade_bag": {
-                "enable_in_hold": "False",
-                "global_max_limit": 0.0,
-                "has_speech_code": "False",
                 "local_max_limit": 0.0,
-                "owner_type": "self",
-                "time_cost": {
-                    "cost": {
-                        "action": 0.0,
-                        "command": 0.0,
-                        "popcap": 0.0,
-                        "fuel": 0.0,
-                        "munition": 0.0,
-                        "manpower": 0.0,
-                        "requisition": 0.0,
-                        "ultimate": 0.0,
-                        "ability_resource_1": 0.0,
-                        "ability_resource_2": 0.0
-                    },
-                    "time_seconds": 0.0
-                },
-                "ui_event_cue": "False",
-                "ui_production_group": "command_panel",
-                "ui_position": {
-                    "ui_position_row": -1.0,
-                    "ui_position_column": -1.0
-                },
                 "ui_info": {
                     "extra_text": {
                         "locstring": {
@@ -61393,214 +61398,21 @@
                             "value": "11218238"
                         }
                     },
-                    "help_text": {
-                        "locstring": {
-                            "name": "help_text",
-                            "value": "0"
-                        }
-                    },
-                    "hotkey_name": "",
-                    "icon_name": "",
-                    "reveal_for_decryption": "False",
-                    "screen_name": {
-                        "locstring": {
-                            "name": "screen_name",
-                            "value": "0"
-                        }
-                    },
-                    "brief_text": {
-                        "locstring": {
-                            "name": "brief_text",
-                            "value": "0"
-                        }
-                    },
-                    "screen_name_short": {
-                        "locstring": {
-                            "name": "screen_name_short",
-                            "value": "0"
-                        }
-                    },
-                    "debug_text": "",
-                    "tooltip_data_template": "",
-                    "ui_combine_type": "intersection",
-                    "brief_text_formatter": {
-                        "template_reference": {
-                            "name": "brief_text_formatter",
-                            "value": ""
-                        }
-                    },
-                    "extra_text_formatter": {
-                        "template_reference": {
-                            "name": "extra_text_formatter",
-                            "value": ""
-                        }
-                    },
-                    "help_text_formatter": {
-                        "template_reference": {
-                            "name": "help_text_formatter",
-                            "value": ""
-                        }
-                    },
-                    "screen_name_formatter": {
-                        "template_reference": {
-                            "name": "screen_name_formatter",
-                            "value": ""
-                        }
-                    },
-                    "screen_name_short_formatter": {
-                        "template_reference": {
-                            "name": "screen_name_short_formatter",
-                            "value": ""
-                        }
-                    },
-                    "sound": "",
-                    "sound_alternative": "",
-                    "screen_name_visibility": "visible",
-                    "symbol_icon_name": ""
+                    "icon_name": ""
                 },
-                "requirements": [],
-                "ui_kicker_icon_name": "",
-                "ui_squad_name_override": {
-                    "locstring": {
-                        "name": "ui_squad_name_override",
-                        "value": "0"
-                    }
-                },
-                "ui_squad_help_text_override": {
-                    "locstring": {
-                        "name": "ui_squad_help_text_override",
-                        "value": "0"
-                    }
-                },
-                "ui_squad_extra_text_override": {
-                    "locstring": {
-                        "name": "ui_squad_extra_text_override",
-                        "value": "0"
-                    }
-                },
-                "ui_preview": [],
-                "speech_code": "",
-                "ui_squad_portrait_icon_override": "",
-                "min_music_intensity": 0.0,
                 "state_tree_references": {
-                    "on_begin_action_tree": {
-                        "template_reference": {
-                            "name": "on_begin_action_tree",
-                            "value": "state_tree_reference_info"
-                        },
-                        "ActionTree_OpeningBranch": ""
-                    },
                     "on_action_tree": {
                         "template_reference": {
                             "name": "on_action_tree",
                             "value": "state_tree_reference_info"
                         },
                         "ActionTree_OpeningBranch": "hulldown_upgrade_modifiers_ger"
-                    },
-                    "on_cancel_action_tree": {
-                        "template_reference": {
-                            "name": "on_cancel_action_tree",
-                            "value": "state_tree_reference_info"
-                        },
-                        "ActionTree_OpeningBranch": ""
-                    },
-                    "on_action_entity_tree": {
-                        "template_reference": {
-                            "name": "on_action_entity_tree",
-                            "value": "state_tree_entity_reference_info"
-                        },
-                        "ActionTree_OpeningBranch": ""
-                    },
-                    "on_action_squad_tree": {
-                        "template_reference": {
-                            "name": "on_action_squad_tree",
-                            "value": "state_tree_squad_reference_info"
-                        },
-                        "ActionTree_OpeningBranch": ""
-                    }
-                },
-                "upgrade_type": [],
-                "requirements_openingbranch": "",
-                "ui_menu": {
-                    "instance_reference": ""
-                },
-                "is_progress_permanent": "False",
-                "ui_codex_info": {
-                    "priority": 0.0,
-                    "exclusive": "False",
-                    "ui_position": {
-                        "ui_position_column": -1.0,
-                        "ui_position_row": -1.0
-                    }
-                },
-                "filter_conditions": {
-                    "apply_to_filter_condition_statetree_ref": "",
-                    "apply_to_target_type": "squad",
-                    "apply_to_unit_classes": [],
-                    "apply_to_application_type": "current_and_future_units",
-                    "apply_to_future_units": "current_and_future_units",
-                    "apply_to_squad_types": []
-                },
-                "squad_cost": {
-                    "action": 0.0,
-                    "command": 0.0,
-                    "popcap": 0.0,
-                    "fuel": 0.0,
-                    "munition": 0.0,
-                    "manpower": 0.0,
-                    "requisition": 0.0,
-                    "ultimate": 0.0,
-                    "ability_resource_1": 0.0,
-                    "ability_resource_2": 0.0
-                },
-                "duration_seconds": 0.0,
-                "ui_squad_icon_override": "",
-                "ui_squad_brief_text_override": {
-                    "locstring": {
-                        "name": "ui_squad_brief_text_override",
-                        "value": "0"
-                    }
-                },
-                "ui_squad_symbol_icon_name_override": "",
-                "ui_squad_extra_help_text_override": {
-                    "locstring": {
-                        "name": "ui_squad_extra_help_text_override",
-                        "value": "0"
-                    }
-                },
-                "requirements_to_complete": [],
-                "blueprint_convert_options": {
-                    "preserve_upgrade": "Default",
-                    "continuous_statetree": "Default"
-                },
-                "ui_squad_brief_text_override_formatter": {
-                    "template_reference": {
-                        "name": "ui_squad_brief_text_override_formatter",
-                        "value": ""
-                    }
-                },
-                "ui_squad_extra_help_text_override_formatter": {
-                    "template_reference": {
-                        "name": "ui_squad_extra_help_text_override_formatter",
-                        "value": ""
-                    }
-                },
-                "ui_squad_extra_text_override_formatter": {
-                    "template_reference": {
-                        "name": "ui_squad_extra_text_override_formatter",
-                        "value": ""
-                    }
-                },
-                "ui_squad_help_text_override_formatter": {
-                    "template_reference": {
-                        "name": "ui_squad_help_text_override_formatter",
-                        "value": ""
                     }
                 }
             },
             "pbgid": 2059909.0,
             "parent_pbg": {
-                "instance_reference": ""
+                "instance_reference": "upgrade/dev/templates/status_upgrade"
             },
             "custom_properties": {
                 "template_reference": {
@@ -61609,19 +61421,33 @@
                 },
                 "custom_bool_properties": [],
                 "custom_float_properties": [],
-                "custom_int32_properties": [],
-                "custom_vector3f_properties": [],
-                "custom_pbgid_properties": [],
-                "custom_loc_string_properties": [],
-                "custom_entity_state_tree_reference_properties": [],
-                "custom_deferred_entity_state_tree_reference_properties": [],
-                "custom_physical_state_tree_reference_properties": [],
-                "custom_global_state_tree_reference_properties": [],
-                "custom_squad_state_tree_reference_properties": [],
-                "custom_enum_properties": [],
-                "child_custom_properties": [],
-                "custom_hash_key_properties": [],
-                "custom_reflected_enum_properties": []
+                "custom_pbgid_properties": [
+                    {
+                        "custom_pbgid_property": {
+                            "template_reference": {
+                                "name": "custom_pbgid_property",
+                                "value": "custom_properties\\custom_pbgid_property"
+                            },
+                            "id": "UPGRADE_PBG_1",
+                            "pbg": {
+                                "instance_reference": "upgrade/german/vehicle/buff/hulldown_buff_turreted_ger"
+                            }
+                        }
+                    },
+                    {
+                        "custom_pbgid_property": {
+                            "template_reference": {
+                                "name": "custom_pbgid_property",
+                                "value": "custom_properties\\custom_pbgid_property"
+                            },
+                            "id": "UPGRADE_PBG_2",
+                            "pbg": {
+                                "instance_reference": "upgrade/german/vehicle/buff/hulldown_buff_casemates_ger"
+                            }
+                        }
+                    }
+                ],
+                "custom_global_state_tree_reference_properties": []
             }
         },
         "immobilize_and_fortify_upgrade_ger": {
@@ -61649,49 +61475,8 @@
                     "name": "custom_properties",
                     "value": "custom_property_template"
                 },
-                "custom_bool_properties": [
-                    {
-                        "custom_bool_property": {
-                            "template_reference": {
-                                "name": "custom_bool_property",
-                                "value": "custom_properties\\custom_bool_property"
-                            },
-                            "value": "False"
-                        }
-                    }
-                ],
-                "custom_float_properties": [
-                    {
-                        "custom_float_property": {
-                            "template_reference": {
-                                "name": "custom_float_property",
-                                "value": "custom_properties\\custom_float_property"
-                            },
-                            "id": "RECEIVED_DAMAGE_MODIFIER",
-                            "value": 0.75
-                        }
-                    },
-                    {
-                        "custom_float_property": {
-                            "template_reference": {
-                                "name": "custom_float_property",
-                                "value": "custom_properties\\custom_float_property"
-                            },
-                            "id": "WEAPON_OVERALL_ATTACK_SPEED",
-                            "value": 0.8
-                        }
-                    },
-                    {
-                        "custom_float_property": {
-                            "template_reference": {
-                                "name": "custom_float_property",
-                                "value": "custom_properties\\custom_float_property"
-                            },
-                            "id": "WEAPON_RANGE_MODIFIER",
-                            "value": 12.5
-                        }
-                    }
-                ],
+                "custom_bool_properties": [],
+                "custom_float_properties": [],
                 "custom_pbgid_properties": [
                     {
                         "custom_pbgid_property": {
@@ -61700,8 +61485,21 @@
                                 "value": "custom_properties\\custom_pbgid_property"
                             },
                             "pbg": {
-                                "instance_reference": "squad_status/decorators/buffs/german/immobilize_and_fortify_ger"
-                            }
+                                "instance_reference": "upgrade/german/vehicle/buff/immobilize_fortify_buff_turreted_ger"
+                            },
+                            "id": "UPGRADE_PBG_1"
+                        }
+                    },
+                    {
+                        "custom_pbgid_property": {
+                            "template_reference": {
+                                "name": "custom_pbgid_property",
+                                "value": "custom_properties\\custom_pbgid_property"
+                            },
+                            "pbg": {
+                                "instance_reference": "upgrade/german/vehicle/buff/immobilize_fortify_casemates_ger"
+                            },
+                            "id": "UPGRADE_PBG_2"
                         }
                     }
                 ]
@@ -66202,6 +66000,364 @@
             }
         },
         "buff": {
+            "hulldown_buff_casemates_ger": {
+                "upgrade_bag": {
+                    "local_max_limit": 1.0,
+                    "ui_info": {
+                        "extra_text": {
+                            "locstring": {
+                                "name": "extra_text",
+                                "value": "0"
+                            }
+                        },
+                        "icon_name": ""
+                    }
+                },
+                "pbgid": 2169792.0,
+                "parent_pbg": {
+                    "instance_reference": "upgrade/german/vehicle/buff/hulldown_buff_turreted_ger"
+                },
+                "custom_properties": {
+                    "template_reference": {
+                        "name": "custom_properties",
+                        "value": "custom_property_template"
+                    },
+                    "custom_float_properties": [
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "RECEIVED_DAMAGE_MODIFIER",
+                                "value": 0.75
+                            }
+                        },
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "WEAPON_OVERALL_ATTACK_SPEED",
+                                "value": 0.7
+                            }
+                        },
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "WEAPON_RANGE_MODIFIER",
+                                "value": 10.0
+                            }
+                        },
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "UNIT_SIGHT_MODIFIER",
+                                "value": 5.0
+                            }
+                        },
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "WEAPON_CONE_HORIZONTAL_MODIFIER",
+                                "value": 10.0
+                            }
+                        },
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "WEAPON_HORIZONTAL_TRAVERSE_MODIFIER",
+                                "value": 5.0
+                            }
+                        }
+                    ],
+                    "custom_pbgid_properties": [
+                        {
+                            "custom_pbgid_property": {
+                                "template_reference": {
+                                    "name": "custom_pbgid_property",
+                                    "value": "custom_properties\\custom_pbgid_property"
+                                },
+                                "pbg": {
+                                    "instance_reference": "squad_status/decorators/buffs/german/hulldown_ger"
+                                }
+                            }
+                        }
+                    ],
+                    "custom_global_state_tree_reference_properties": [
+                        {
+                            "custom_global_state_tree_reference_property": {
+                                "template_reference": {
+                                    "name": "custom_global_state_tree_reference_property",
+                                    "value": "custom_properties\\custom_global_state_tree_reference_property"
+                                },
+                                "nodepath": "weapon_show_facing"
+                            }
+                        }
+                    ]
+                }
+            },
+            "hulldown_buff_turreted_ger": {
+                "upgrade_bag": {
+                    "local_max_limit": 1.0,
+                    "ui_info": {
+                        "extra_text": {
+                            "locstring": {
+                                "name": "extra_text",
+                                "value": "0"
+                            }
+                        },
+                        "icon_name": ""
+                    }
+                },
+                "pbgid": 2169791.0,
+                "parent_pbg": {
+                    "instance_reference": "upgrade/dev/templates/status_upgrade"
+                },
+                "custom_properties": {
+                    "template_reference": {
+                        "name": "custom_properties",
+                        "value": "custom_property_template"
+                    },
+                    "custom_float_properties": [
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "RECEIVED_DAMAGE_MODIFIER",
+                                "value": 0.75
+                            }
+                        },
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "WEAPON_OVERALL_ATTACK_SPEED",
+                                "value": 0.7
+                            }
+                        },
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "WEAPON_RANGE_MODIFIER",
+                                "value": 5.0
+                            }
+                        },
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "UNIT_SIGHT_MODIFIER",
+                                "value": 5.0
+                            }
+                        }
+                    ],
+                    "custom_pbgid_properties": [
+                        {
+                            "custom_pbgid_property": {
+                                "template_reference": {
+                                    "name": "custom_pbgid_property",
+                                    "value": "custom_properties\\custom_pbgid_property"
+                                },
+                                "pbg": {
+                                    "instance_reference": "squad_status/decorators/buffs/german/hulldown_ger"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "immobilize_fortify_buff_turreted_ger": {
+                "upgrade_bag": {
+                    "local_max_limit": 1.0,
+                    "ui_info": {
+                        "extra_text": {
+                            "locstring": {
+                                "name": "extra_text",
+                                "value": "0"
+                            }
+                        },
+                        "icon_name": ""
+                    }
+                },
+                "pbgid": 2169799.0,
+                "parent_pbg": {
+                    "instance_reference": "upgrade/dev/templates/status_upgrade"
+                },
+                "custom_properties": {
+                    "template_reference": {
+                        "name": "custom_properties",
+                        "value": "custom_property_template"
+                    },
+                    "custom_float_properties": [
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "RECEIVED_DAMAGE_MODIFIER",
+                                "value": 0.75
+                            }
+                        },
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "WEAPON_OVERALL_ATTACK_SPEED",
+                                "value": 0.8
+                            }
+                        },
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "WEAPON_RANGE_MODIFIER",
+                                "value": 12.5
+                            }
+                        }
+                    ],
+                    "custom_pbgid_properties": [
+                        {
+                            "custom_pbgid_property": {
+                                "template_reference": {
+                                    "name": "custom_pbgid_property",
+                                    "value": "custom_properties\\custom_pbgid_property"
+                                },
+                                "pbg": {
+                                    "instance_reference": "squad_status/decorators/buffs/german/immobilize_and_fortify_ger"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "immobilize_fortify_casemates_ger": {
+                "upgrade_bag": {
+                    "local_max_limit": 1.0,
+                    "ui_info": {
+                        "extra_text": {
+                            "locstring": {
+                                "name": "extra_text",
+                                "value": "0"
+                            }
+                        },
+                        "icon_name": ""
+                    }
+                },
+                "pbgid": 2169798.0,
+                "parent_pbg": {
+                    "instance_reference": "upgrade/german/vehicle/buff/hulldown_buff_turreted_ger"
+                },
+                "custom_properties": {
+                    "template_reference": {
+                        "name": "custom_properties",
+                        "value": "custom_property_template"
+                    },
+                    "custom_float_properties": [
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "RECEIVED_DAMAGE_MODIFIER",
+                                "value": 0.75
+                            }
+                        },
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "WEAPON_OVERALL_ATTACK_SPEED",
+                                "value": 0.8
+                            }
+                        },
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "WEAPON_RANGE_MODIFIER",
+                                "value": 12.5
+                            }
+                        },
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "WEAPON_CONE_HORIZONTAL_MODIFIER",
+                                "value": 10.0
+                            }
+                        },
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "WEAPON_HORIZONTAL_TRAVERSE_MODIFIER",
+                                "value": 5.0
+                            }
+                        }
+                    ],
+                    "custom_pbgid_properties": [
+                        {
+                            "custom_pbgid_property": {
+                                "template_reference": {
+                                    "name": "custom_pbgid_property",
+                                    "value": "custom_properties\\custom_pbgid_property"
+                                },
+                                "pbg": {
+                                    "instance_reference": "squad_status/decorators/buffs/german/immobilize_and_fortify_ger"
+                                }
+                            }
+                        }
+                    ],
+                    "custom_global_state_tree_reference_properties": [
+                        {
+                            "custom_global_state_tree_reference_property": {
+                                "template_reference": {
+                                    "name": "custom_global_state_tree_reference_property",
+                                    "value": "custom_properties\\custom_global_state_tree_reference_property"
+                                },
+                                "nodepath": "weapon_show_facing"
+                            }
+                        }
+                    ]
+                }
+            },
             "panzer_iv_focus_fire_buff_ger": {
                 "pbgid": 2165757.0,
                 "parent_pbg": {

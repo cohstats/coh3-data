@@ -849,7 +849,7 @@
                                         "value": "custom_properties\\custom_float_property"
                                     },
                                     "id": "SPEED_MODIFIER",
-                                    "value": 1.25
+                                    "value": 1.4
                                 }
                             },
                             {
@@ -2133,7 +2133,7 @@
                                     },
                                     "resource": {
                                         "action": 0.0,
-                                        "command": 1.0,
+                                        "command": 3.0,
                                         "popcap": 0.0,
                                         "fuel": 0.0,
                                         "munition": 0.0,
@@ -2182,7 +2182,7 @@
                                     "name": "on_action_tree",
                                     "value": "state_tree_reference_info"
                                 },
-                                "ActionTree_OpeningBranch": "temporary_battlegroup_cost\\1"
+                                "ActionTree_OpeningBranch": "temporary_battlegroup_cost\\3"
                             },
                             "on_cancel_action_tree": {
                                 "template_reference": {
@@ -5468,7 +5468,7 @@
                                 },
                                 "formatter_arguments": [
                                     {
-                                        "int_value": 100.0
+                                        "int_value": 50.0
                                     },
                                     {
                                         "int_value": 50.0
@@ -25358,7 +25358,7 @@
                             },
                             "formatter_arguments": [
                                 {
-                                    "int_value": 1.0
+                                    "int_value": 2.0
                                 }
                             ]
                         },
@@ -40781,7 +40781,7 @@
                                 "int_value": 50.0
                             },
                             {
-                                "int_value": 20.0
+                                "int_value": 15.0
                             }
                         ]
                     },
@@ -40961,7 +40961,28 @@
                 "local_max_limit": 1.0,
                 "min_music_intensity": 0.0,
                 "owner_type": "self",
-                "requirements": [],
+                "requirements": [
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_in_territory"
+                            },
+                            "reason": "usage",
+                            "ui_name": {
+                                "locstring": {
+                                    "name": "ui_name",
+                                    "value": "0"
+                                }
+                            },
+                            "in_supply": "True",
+                            "is_secured": "False",
+                            "is_secured_by_checkpoint": "False",
+                            "not_in_transition": "False",
+                            "relative_to_caster": "False"
+                        }
+                    }
+                ],
                 "requirements_openingbranch": "",
                 "requirements_to_complete": [],
                 "speech_code": "hardpoint_upgrade",
@@ -54286,7 +54307,7 @@
                 "time_cost": {
                     "cost": {
                         "fuel": 0.0,
-                        "munition": 100.0,
+                        "munition": 90.0,
                         "manpower": 0.0
                     },
                     "time_seconds": 30.0
@@ -54562,7 +54583,7 @@
                 "time_cost": {
                     "cost": {
                         "fuel": 0.0,
-                        "munition": 100.0,
+                        "munition": 90.0,
                         "manpower": 0.0
                     },
                     "time_seconds": 30.0
@@ -66546,7 +66567,7 @@
                                     }
                                 },
                                 {
-                                    "int_value": 25.0
+                                    "int_value": 20.0
                                 },
                                 {
                                     "locstring_value": {

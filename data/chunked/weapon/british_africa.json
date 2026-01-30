@@ -16,8 +16,8 @@
                         "post_firing_aim_time_seconds": 1.25,
                         "post_firing_cooldown_interval_seconds": 0.0,
                         "ready_aim_time": {
-                            "max": 1.0,
-                            "min": 0.5
+                            "max": 1.25,
+                            "min": 1.0
                         },
                         "aim_time_multiplier": {
                             "near": 0.85,
@@ -249,7 +249,7 @@
                     },
                     "icon_name": "common/weapons/weapon_m9_bazooka",
                     "moving": {
-                        "accuracy_multiplier": 0.5,
+                        "accuracy_multiplier": 0.35,
                         "burst_multiplier": 1.0,
                         "cooldown_multiplier": 1.0,
                         "can_fire_while_moving": "False",
@@ -351,8 +351,8 @@
                             }
                         },
                         "distance_guaranteed_before_hit_percentage": 0.0,
-                        "movement_scatter_angle_multiplier": 1.25,
-                        "movement_scatter_distance_multiplier": 1.25,
+                        "movement_scatter_angle_multiplier": 1.5,
+                        "movement_scatter_distance_multiplier": 1.5,
                         "min_distance_collision_height_offset": 1.0
                     },
                     "setup": {
@@ -2374,7 +2374,7 @@
                     },
                     "icon_name": "common/weapons/weapon_boys_at_gun",
                     "moving": {
-                        "accuracy_multiplier": 0.5,
+                        "accuracy_multiplier": 0.35,
                         "burst_multiplier": 1.0,
                         "cooldown_multiplier": 1.0,
                         "can_fire_while_moving": "False",
@@ -2476,8 +2476,8 @@
                             }
                         },
                         "distance_guaranteed_before_hit_percentage": 0.3,
-                        "movement_scatter_angle_multiplier": 1.0,
-                        "movement_scatter_distance_multiplier": 1.0,
+                        "movement_scatter_angle_multiplier": 1.5,
+                        "movement_scatter_distance_multiplier": 1.5,
                         "min_distance_collision_height_offset": 0.0
                     },
                     "setup": {
@@ -3127,7 +3127,7 @@
                     },
                     "icon_name": "common/weapons/weapon_boys_at_gun",
                     "moving": {
-                        "accuracy_multiplier": 0.5,
+                        "accuracy_multiplier": 0.35,
                         "burst_multiplier": 1.0,
                         "cooldown_multiplier": 1.0,
                         "can_fire_while_moving": "False",
@@ -3229,8 +3229,8 @@
                             }
                         },
                         "distance_guaranteed_before_hit_percentage": 0.3,
-                        "movement_scatter_angle_multiplier": 1.0,
-                        "movement_scatter_distance_multiplier": 1.0,
+                        "movement_scatter_angle_multiplier": 1.5,
+                        "movement_scatter_distance_multiplier": 1.5,
                         "min_distance_collision_height_offset": 0.0
                     },
                     "setup": {
@@ -4556,7 +4556,7 @@
                     },
                     "icon_name": "common/weapons/weapon_piat",
                     "moving": {
-                        "accuracy_multiplier": 0.5,
+                        "accuracy_multiplier": 0.35,
                         "burst_multiplier": 1.0,
                         "cooldown_multiplier": 1.0,
                         "can_fire_while_moving": "False",
@@ -4658,8 +4658,8 @@
                             }
                         },
                         "distance_guaranteed_before_hit_percentage": 0.0,
-                        "movement_scatter_angle_multiplier": 1.0,
-                        "movement_scatter_distance_multiplier": 1.0,
+                        "movement_scatter_angle_multiplier": 1.5,
+                        "movement_scatter_distance_multiplier": 1.5,
                         "min_distance_collision_height_offset": 1.5
                     },
                     "setup": {
@@ -21925,7 +21925,7 @@
                                 "name": "area_info",
                                 "value": "options\\area_info_options\\circle_area_option"
                             },
-                            "outer_radius": 5.0,
+                            "outer_radius": 8.0,
                             "inner_radius": 0.0,
                             "is_two_dimensional": "True",
                             "dynamic_radius_type": "fixed"
@@ -21963,11 +21963,11 @@
                                 "name": "aoe_penetration",
                                 "value": "tables\\range_table"
                             },
-                            "far": 1000.0,
-                            "mid": 1000.0,
-                            "near": 1000.0
+                            "far": 5.0,
+                            "mid": 5.0,
+                            "near": 5.0
                         },
-                        "damage_max_members_per_squad": 1.0,
+                        "damage_max_members_per_squad": 2.0,
                         "aoe_origin_and_direction": "hit_position_and_direction",
                         "fx": {
                             "exponential_distribution_lambda": 0.0,
@@ -22074,8 +22074,8 @@
                         "persistent_cooldownticks": "False"
                     },
                     "damage": {
-                        "max": 0.0,
-                        "min": 0.0,
+                        "max": 40.0,
+                        "min": 40.0,
                         "damage_type": "explosive",
                         "allow_overkill": "False",
                         "on_penetrated_state_trees": [
@@ -22307,10 +22307,35 @@
                             "value": "options\\none"
                         }
                     },
-                    "weapon_class": "rifle",
+                    "weapon_class": "mine",
                     "fx_aoe_munition_name": "",
                     "speech_code": "",
-                    "target_type_table": [],
+                    "target_type_table": [
+                        {
+                            "target_unit_type_multipliers": {
+                                "base_damage_modifier": 0.0,
+                                "unit_type": "vehicle",
+                                "weapon_multipliers": {
+                                    "accuracy_multiplier": 1.0,
+                                    "damage_multiplier": 0.5,
+                                    "penetration_multiplier": 1.0,
+                                    "suppression_multiplier": 1.0
+                                }
+                            }
+                        },
+                        {
+                            "target_unit_type_multipliers": {
+                                "base_damage_modifier": 0.0,
+                                "unit_type": "mine",
+                                "weapon_multipliers": {
+                                    "accuracy_multiplier": 1.0,
+                                    "damage_multiplier": 0.0,
+                                    "penetration_multiplier": 0.0,
+                                    "suppression_multiplier": 1.0
+                                }
+                            }
+                        }
+                    ],
                     "cover_table": {
                         "tp_defcover": {
                             "template_reference": {
@@ -22348,7 +22373,7 @@
                                 "value": "weapon_cover_info"
                             },
                             "accuracy_multiplier": 1.0,
-                            "damage_multiplier": 1.25,
+                            "damage_multiplier": 1.0,
                             "penetration_multiplier": 1.0,
                             "suppression_multiplier": 1.5
                         },
@@ -22462,8 +22487,8 @@
                         "low_height_threshold": 0.0
                     },
                     "fog_of_war": {
-                        "reveal_self_on_attack": "True",
-                        "reveal_target_on_hit": "True"
+                        "reveal_self_on_attack": "False",
+                        "reveal_target_on_hit": "False"
                     },
                     "kill_unit_types_on_hit": [],
                     "avoid_blockers_of_relationship": {
@@ -24786,7 +24811,7 @@
                     "weapon_bag": {
                         "accuracy": {
                             "near": 0.805,
-                            "far": 0.432,
+                            "far": 0.497,
                             "mid": 0.575
                         },
                         "aim": {
@@ -24795,8 +24820,8 @@
                                 "min": 0.125
                             },
                             "ready_aim_time": {
-                                "max": 0.25,
-                                "min": 0.25
+                                "max": 0.125,
+                                "min": 0.125
                             },
                             "aim_time_multiplier": {
                                 "near": 1.0,
@@ -24983,7 +25008,13 @@
                             "min": 5.0,
                             "damage_type": "True Damage",
                             "allow_overkill": "False",
-                            "on_penetrated_state_trees": [],
+                            "on_penetrated_state_trees": [
+                                {
+                                    "container": {
+                                        "state_tree": "tracer_fire_hmg_us"
+                                    }
+                                }
+                            ],
                             "on_deflected_state_trees": [],
                             "post_damage_state_trees": [],
                             "damage_target_requirement": "",
@@ -25126,7 +25157,7 @@
                             "min_distance_collision_height_offset": 0.0
                         },
                         "setup": {
-                            "duration": 3.0,
+                            "duration": 3.5,
                             "has_instant_setup": "False",
                             "can_interrupt_setup": "False",
                             "attach_duration": 0.65,
@@ -25933,8 +25964,8 @@
                                     "name": "tp_heavy_cover",
                                     "value": "weapon_cover_info"
                                 },
-                                "accuracy_multiplier": 0.55,
-                                "damage_multiplier": 0.7,
+                                "accuracy_multiplier": 0.5,
+                                "damage_multiplier": 0.6,
                                 "penetration_multiplier": 1.0,
                                 "suppression_multiplier": 0.1
                             },
@@ -25984,7 +26015,7 @@
                                     "value": "weapon_cover_info"
                                 },
                                 "accuracy_multiplier": 0.55,
-                                "damage_multiplier": 0.7,
+                                "damage_multiplier": 0.6,
                                 "penetration_multiplier": 1.0,
                                 "suppression_multiplier": 0.0
                             },
@@ -26578,8 +26609,8 @@
                                     "name": "tp_heavy_cover",
                                     "value": "weapon_cover_info"
                                 },
-                                "accuracy_multiplier": 0.55,
-                                "damage_multiplier": 0.7,
+                                "accuracy_multiplier": 0.5,
+                                "damage_multiplier": 0.6,
                                 "penetration_multiplier": 1.0,
                                 "suppression_multiplier": 0.1
                             },
@@ -26629,7 +26660,7 @@
                                     "value": "weapon_cover_info"
                                 },
                                 "accuracy_multiplier": 0.55,
-                                "damage_multiplier": 0.7,
+                                "damage_multiplier": 0.6,
                                 "penetration_multiplier": 1.0,
                                 "suppression_multiplier": 0.0
                             },

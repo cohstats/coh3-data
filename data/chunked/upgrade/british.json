@@ -3312,7 +3312,7 @@
                                 },
                                 "resource": {
                                     "action": 0.0,
-                                    "command": 1.0,
+                                    "command": 2.0,
                                     "popcap": 0.0,
                                     "fuel": 0.0,
                                     "munition": 0.0,
@@ -3388,7 +3388,7 @@
                                 "name": "on_action_tree",
                                 "value": "state_tree_reference_info"
                             },
-                            "ActionTree_OpeningBranch": "temporary_battlegroup_cost\\1"
+                            "ActionTree_OpeningBranch": "temporary_battlegroup_cost\\2"
                         },
                         "on_cancel_action_tree": {
                             "template_reference": {
@@ -23953,6 +23953,100 @@
                     "custom_reflected_enum_properties": []
                 }
             },
+            "buffs": {
+                "indian_artillery_buff_war_cry_uk": {
+                    "pbgid": 2169716.0,
+                    "parent_pbg": {
+                        "instance_reference": "upgrade/dev/templates/status_upgrade_player_filter_squads"
+                    },
+                    "custom_properties": {
+                        "template_reference": {
+                            "name": "custom_properties",
+                            "value": "custom_property_template"
+                        },
+                        "custom_float_properties": [
+                            {
+                                "custom_float_property": {
+                                    "template_reference": {
+                                        "name": "custom_float_property",
+                                        "value": "custom_properties\\custom_float_property"
+                                    },
+                                    "value": 15.0
+                                }
+                            },
+                            {
+                                "custom_float_property": {
+                                    "template_reference": {
+                                        "name": "custom_float_property",
+                                        "value": "custom_properties\\custom_float_property"
+                                    },
+                                    "id": "SPEED_MODIFIER",
+                                    "value": 1.4
+                                }
+                            },
+                            {
+                                "custom_float_property": {
+                                    "template_reference": {
+                                        "name": "custom_float_property",
+                                        "value": "custom_properties\\custom_float_property"
+                                    },
+                                    "id": "WEAPON_OVERALL_ATTACK_SPEED",
+                                    "value": 0.5
+                                }
+                            }
+                        ],
+                        "custom_pbgid_properties": [
+                            {
+                                "custom_pbgid_property": {
+                                    "template_reference": {
+                                        "name": "custom_pbgid_property",
+                                        "value": "custom_properties\\custom_pbgid_property"
+                                    },
+                                    "pbg": {
+                                        "instance_reference": "squad_status/decorators/buffs/british/war_cry_uk"
+                                    }
+                                }
+                            }
+                        ],
+                        "custom_global_state_tree_reference_properties": [
+                            {
+                                "custom_global_state_tree_reference_property": {
+                                    "template_reference": {
+                                        "name": "custom_global_state_tree_reference_property",
+                                        "value": "custom_properties\\custom_global_state_tree_reference_property"
+                                    },
+                                    "nodepath": "artillery_war_cry_uk"
+                                }
+                            }
+                        ]
+                    },
+                    "upgrade_bag": {
+                        "filter_conditions": {
+                            "apply_to_squad_types": [
+                                {
+                                    "squad_type": "infantry"
+                                }
+                            ]
+                        },
+                        "state_tree_references": {
+                            "on_action_squad_tree": {
+                                "template_reference": {
+                                    "name": "on_action_squad_tree",
+                                    "value": "state_tree_squad_reference_info"
+                                },
+                                "ActionTree_OpeningBranch": "status_upgrade_system\\timed_status_upgrade_player_filter_wrappers\\squad_owner"
+                            },
+                            "on_action_tree": {
+                                "template_reference": {
+                                    "name": "on_action_tree",
+                                    "value": "state_tree_reference_info"
+                                },
+                                "ActionTree_OpeningBranch": ""
+                            }
+                        }
+                    }
+                }
+            },
             "left": {
                 "artillery_gurkhas_uk": {
                     "upgrade_bag": {
@@ -25220,7 +25314,7 @@
                                 },
                                 "formatter_arguments": [
                                     {
-                                        "int_value": 25.0
+                                        "int_value": 20.0
                                     }
                                 ]
                             },
@@ -25523,7 +25617,28 @@
                             "value": "custom_property_template"
                         },
                         "custom_bool_properties": [],
-                        "custom_float_properties": [],
+                        "custom_float_properties": [
+                            {
+                                "custom_float_property": {
+                                    "template_reference": {
+                                        "name": "custom_float_property",
+                                        "value": "custom_properties\\custom_float_property"
+                                    },
+                                    "id": "REINFORCE_COST_MODIFIER",
+                                    "value": 0.8
+                                }
+                            },
+                            {
+                                "custom_float_property": {
+                                    "template_reference": {
+                                        "name": "custom_float_property",
+                                        "value": "custom_properties\\custom_float_property"
+                                    },
+                                    "id": "REINFORCE_TIME_MODIFIER",
+                                    "value": 0.8
+                                }
+                            }
+                        ],
                         "custom_int32_properties": [],
                         "custom_vector3f_properties": [],
                         "custom_pbgid_properties": [],

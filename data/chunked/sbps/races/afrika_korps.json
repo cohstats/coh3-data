@@ -4036,7 +4036,7 @@
                                         "extra_text": {
                                             "locstring": {
                                                 "name": "extra_text",
-                                                "value": "11158242"
+                                                "value": "0"
                                             }
                                         },
                                         "help_text": {
@@ -4067,7 +4067,7 @@
                                         "brief_text": {
                                             "locstring": {
                                                 "name": "brief_text",
-                                                "value": "11158242"
+                                                "value": "0"
                                             }
                                         },
                                         "screen_name_short": {
@@ -8384,6 +8384,11 @@
                                 "ability": {
                                     "instance_reference": "abilities/races/afrika_korps/infantry/infantry_combined_arms_entrenchment_ak"
                                 }
+                            },
+                            {
+                                "ability": {
+                                    "instance_reference": "abilities/races/afrika_korps/infantry/grenade_rifle_panzergrenadier_ak"
+                                }
                             }
                         ],
                         "ui_combine_priority": 0.0,
@@ -9775,7 +9780,7 @@
                                         "brief_text": {
                                             "locstring": {
                                                 "name": "brief_text",
-                                                "value": "11266274"
+                                                "value": "11274318"
                                             }
                                         },
                                         "screen_name_short": {
@@ -9860,7 +9865,7 @@
                                                     "locstring_value": {
                                                         "locstring": {
                                                             "name": "locstring_value",
-                                                            "value": "11265984"
+                                                            "value": "11274319"
                                                         }
                                                     }
                                                 }
@@ -17768,12 +17773,12 @@
                             },
                             {
                                 "ability": {
-                                    "instance_reference": "abilities/races/afrika_korps/vehicles/veterancy_abilities/commander_mode_8_rad_ak"
+                                    "instance_reference": "abilities/races/common/hold_fire"
                                 }
                             },
                             {
                                 "ability": {
-                                    "instance_reference": "abilities/races/common/hold_fire"
+                                    "instance_reference": "abilities/races/afrika_korps/vehicles/veterancy_abilities/commander_mode_8_rad_ak"
                                 }
                             },
                             {
@@ -18565,7 +18570,17 @@
                             },
                             {
                                 "ability": {
+                                    "instance_reference": "abilities/races/afrika_korps/vehicles/vehicle_awareness_ak"
+                                }
+                            },
+                            {
+                                "ability": {
                                     "instance_reference": "abilities/races/afrika_korps/vehicles/vehicle_territory_capture_dummy_ak"
+                                }
+                            },
+                            {
+                                "ability": {
+                                    "instance_reference": "abilities/races/common/hold_fire"
                                 }
                             },
                             {
@@ -18580,7 +18595,7 @@
                                 "available": "True"
                             },
                             "attack_ground": {
-                                "available": "False"
+                                "available": "True"
                             },
                             "attack_move": {
                                 "available": "True"
@@ -18754,19 +18769,19 @@
                                         "extra_text": {
                                             "locstring": {
                                                 "name": "extra_text",
-                                                "value": "11241770"
+                                                "value": "0"
                                             }
                                         },
                                         "help_text": {
                                             "locstring": {
                                                 "name": "help_text",
-                                                "value": "11222651"
+                                                "value": "0"
                                             }
                                         },
                                         "hotkey_name": "A",
-                                        "icon_name": "common/units/icons/armored_car_sdkfz_222_ger",
+                                        "icon_name": "icons_dev_abilities_template_ability_placeholder",
                                         "minimap_team_only": "False",
-                                        "minimap_texture": "common/units/symbols/vehicle_medium_symbol",
+                                        "minimap_texture": "icons_dev_abilities_template_ability_placeholder",
                                         "modal_ability": {
                                             "instance_reference": ""
                                         },
@@ -18780,12 +18795,12 @@
                                         "selection_group": "8_rad_ak",
                                         "ui_priority": 27.0,
                                         "use_random_entity_speaker": "False",
-                                        "portrait_name": "",
+                                        "portrait_name": "icons_dev_abilities_template_ability_placeholder",
                                         "minimap_texture_scale": 0.5,
                                         "brief_text": {
                                             "locstring": {
                                                 "name": "brief_text",
-                                                "value": "11158242"
+                                                "value": "11273287"
                                             }
                                         },
                                         "screen_name_short": {
@@ -18796,7 +18811,7 @@
                                         },
                                         "map_rotation_type_override": "heading",
                                         "show_in_build_log": "True",
-                                        "symbol_icon_name": "common/units/symbols/armored_car_sdkfz_222_ger",
+                                        "symbol_icon_name": "icons_dev_abilities_template_ability_placeholder",
                                         "cover_level_icon_postfix": "",
                                         "hide_ucs": "False",
                                         "decorator_visibility": "visible",
@@ -18847,8 +18862,32 @@
                                         "help_text_formatter": {
                                             "template_reference": {
                                                 "name": "help_text_formatter",
-                                                "value": ""
-                                            }
+                                                "value": "ui_text_formatter"
+                                            },
+                                            "formatter": {
+                                                "locstring": {
+                                                    "name": "formatter",
+                                                    "value": "11265170"
+                                                }
+                                            },
+                                            "formatter_arguments": [
+                                                {
+                                                    "locstring_value": {
+                                                        "locstring": {
+                                                            "name": "locstring_value",
+                                                            "value": "11265471"
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "locstring_value": {
+                                                        "locstring": {
+                                                            "name": "locstring_value",
+                                                            "value": "11241992"
+                                                        }
+                                                    }
+                                                }
+                                            ]
                                         },
                                         "screen_name_formatter": {
                                             "template_reference": {
@@ -19012,8 +19051,35 @@
                                                     "brief_text_formatter": {
                                                         "template_reference": {
                                                             "name": "brief_text_formatter",
-                                                            "value": ""
-                                                        }
+                                                            "value": "ui_text_formatter"
+                                                        },
+                                                        "formatter": {
+                                                            "locstring": {
+                                                                "name": "formatter",
+                                                                "value": "11265944"
+                                                            }
+                                                        },
+                                                        "formatter_arguments": [
+                                                            {
+                                                                "locstring_value": {
+                                                                    "locstring": {
+                                                                        "name": "locstring_value",
+                                                                        "value": "11266000"
+                                                                    }
+                                                                }
+                                                            },
+                                                            {
+                                                                "int_value": 25.0
+                                                            },
+                                                            {
+                                                                "locstring_value": {
+                                                                    "locstring": {
+                                                                        "name": "locstring_value",
+                                                                        "value": "11266098"
+                                                                    }
+                                                                }
+                                                            }
+                                                        ]
                                                     },
                                                     "requirements": []
                                                 }
@@ -19068,8 +19134,38 @@
                                                     "brief_text_formatter": {
                                                         "template_reference": {
                                                             "name": "brief_text_formatter",
-                                                            "value": ""
-                                                        }
+                                                            "value": "ui_text_formatter"
+                                                        },
+                                                        "formatter": {
+                                                            "locstring": {
+                                                                "name": "formatter",
+                                                                "value": "11265946"
+                                                            }
+                                                        },
+                                                        "formatter_arguments": [
+                                                            {
+                                                                "int_value": 25.0
+                                                            },
+                                                            {
+                                                                "locstring_value": {
+                                                                    "locstring": {
+                                                                        "name": "locstring_value",
+                                                                        "value": "11265952"
+                                                                    }
+                                                                }
+                                                            },
+                                                            {
+                                                                "int_value": 25.0
+                                                            },
+                                                            {
+                                                                "locstring_value": {
+                                                                    "locstring": {
+                                                                        "name": "locstring_value",
+                                                                        "value": "11264546"
+                                                                    }
+                                                                }
+                                                            }
+                                                        ]
                                                     },
                                                     "requirements": []
                                                 }
@@ -19124,8 +19220,49 @@
                                                     "brief_text_formatter": {
                                                         "template_reference": {
                                                             "name": "brief_text_formatter",
-                                                            "value": ""
-                                                        }
+                                                            "value": "ui_text_formatter"
+                                                        },
+                                                        "formatter": {
+                                                            "locstring": {
+                                                                "name": "formatter",
+                                                                "value": "11265948"
+                                                            }
+                                                        },
+                                                        "formatter_arguments": [
+                                                            {
+                                                                "int_value": 80.0
+                                                            },
+                                                            {
+                                                                "locstring_value": {
+                                                                    "locstring": {
+                                                                        "name": "locstring_value",
+                                                                        "value": "11266094"
+                                                                    }
+                                                                }
+                                                            },
+                                                            {
+                                                                "int_value": 35.0
+                                                            },
+                                                            {
+                                                                "locstring_value": {
+                                                                    "locstring": {
+                                                                        "name": "locstring_value",
+                                                                        "value": "11264545"
+                                                                    }
+                                                                }
+                                                            },
+                                                            {
+                                                                "int_value": 75.0
+                                                            },
+                                                            {
+                                                                "locstring_value": {
+                                                                    "locstring": {
+                                                                        "name": "locstring_value",
+                                                                        "value": "11266130"
+                                                                    }
+                                                                }
+                                                            }
+                                                        ]
                                                     },
                                                     "requirements": []
                                                 }
@@ -20634,7 +20771,7 @@
                                 "squad_type": "vehicle_support"
                             },
                             {
-                                "squad_type": "vehicle_anti_tank"
+                                "squad_type": "veterancy_on_capture"
                             }
                         ],
                         "squad_race_type_list": [
@@ -21447,7 +21584,7 @@
                                 "squad_type": "vehicle_support"
                             },
                             {
-                                "squad_type": "vehicle_anti_tank"
+                                "squad_type": "veterancy_on_capture"
                             }
                         ],
                         "squad_race_type_list": [
@@ -27220,7 +27357,7 @@
                                         "extra_text": {
                                             "locstring": {
                                                 "name": "extra_text",
-                                                "value": "11158242"
+                                                "value": "0"
                                             }
                                         },
                                         "help_text": {
@@ -27251,7 +27388,7 @@
                                         "brief_text": {
                                             "locstring": {
                                                 "name": "brief_text",
-                                                "value": "11158242"
+                                                "value": "0"
                                             }
                                         },
                                         "screen_name_short": {
@@ -29225,6 +29362,9 @@
                             },
                             {
                                 "squad_type": "vehicle_support"
+                            },
+                            {
+                                "squad_type": "veterancy_on_capture"
                             }
                         ],
                         "squad_race_type_list": [
@@ -30354,7 +30494,7 @@
                                         "brief_text": {
                                             "locstring": {
                                                 "name": "brief_text",
-                                                "value": "11158242"
+                                                "value": "0"
                                             }
                                         },
                                         "screen_name_short": {
@@ -31883,7 +32023,7 @@
                                         "brief_text": {
                                             "locstring": {
                                                 "name": "brief_text",
-                                                "value": "11158242"
+                                                "value": "0"
                                             }
                                         },
                                         "screen_name_short": {
@@ -34291,7 +34431,7 @@
                                                             "value": "11153313"
                                                         }
                                                     },
-                                                    "veterancy_value": 1200.0,
+                                                    "veterancy_value": 750.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -34374,7 +34514,7 @@
                                                             "value": "11153314"
                                                         }
                                                     },
-                                                    "veterancy_value": 3600.0,
+                                                    "veterancy_value": 2250.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -34449,7 +34589,7 @@
                                                             "value": "11153315"
                                                         }
                                                     },
-                                                    "veterancy_value": 7200.0,
+                                                    "veterancy_value": 4500.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -43082,11 +43222,6 @@
                             },
                             {
                                 "ability": {
-                                    "instance_reference": "abilities/races/afrika_korps/vehicles/smoke_barrage_panzer_iii_ak"
-                                }
-                            },
-                            {
-                                "ability": {
                                     "instance_reference": "abilities/races/afrika_korps/vehicles/blitz_upgrade_ak"
                                 }
                             },
@@ -43123,6 +43258,11 @@
                             {
                                 "ability": {
                                     "instance_reference": "abilities/races/afrika_korps/battlegroups/subterfuge/infiltration_right_1_silent_running_toggle_ak"
+                                }
+                            },
+                            {
+                                "ability": {
+                                    "instance_reference": "abilities/races/afrika_korps/vehicles/smoke_discharge_8rad_ak"
                                 }
                             }
                         ],
@@ -49963,7 +50103,7 @@
                                 "required": {
                                     "template_reference": {
                                         "name": "required",
-                                        "value": "requirements\\required_player_upgrade"
+                                        "value": "requirements\\required_any_in_list"
                                     },
                                     "reason": "usage",
                                     "ui_name": {
@@ -49972,18 +50112,85 @@
                                             "value": "0"
                                         }
                                     },
-                                    "is_present": "True",
-                                    "max_completed": 100.0,
-                                    "min_completed": 1.0,
-                                    "upgrade_name": {
-                                        "instance_reference": "upgrade/german/research/advanced_tactics/adv_mech_assault_tactics_ger"
+                                    "requirements": [
+                                        {
+                                            "requirement": {
+                                                "template_reference": {
+                                                    "name": "requirement",
+                                                    "value": "requirements\\required_player_upgrade"
+                                                },
+                                                "reason": "usage",
+                                                "ui_name": {
+                                                    "locstring": {
+                                                        "name": "ui_name",
+                                                        "value": "0"
+                                                    }
+                                                },
+                                                "is_present": "True",
+                                                "max_completed": 100.0,
+                                                "min_completed": 1.0,
+                                                "upgrade_name": {
+                                                    "instance_reference": "upgrade/afrika_korps/research/t1/t1_unit_unlock_ak"
+                                                },
+                                                "include_completed": "True",
+                                                "include_queued": "False",
+                                                "include_pbg_parenting": {
+                                                    "include_child_pbgs": "False",
+                                                    "include_parent_pbgs": "False"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "requirement": {
+                                                "template_reference": {
+                                                    "name": "requirement",
+                                                    "value": "requirements\\required_entity"
+                                                },
+                                                "entity_blueprint_name": {
+                                                    "instance_reference": "ebps/races/afrika_korps/buildings/production/mechanized_kompanie_ak"
+                                                },
+                                                "entity_type": "",
+                                                "include_pbg_parenting": {
+                                                    "include_child_pbgs": "False",
+                                                    "include_parent_pbgs": "False"
+                                                },
+                                                "reason": "usage",
+                                                "ui_name": {
+                                                    "locstring": {
+                                                        "name": "ui_name",
+                                                        "value": "0"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "required": {
+                                    "template_reference": {
+                                        "name": "required",
+                                        "value": "requirements\\required_player_upgrade"
                                     },
-                                    "include_queued": "False",
+                                    "include_completed": "True",
                                     "include_pbg_parenting": {
                                         "include_child_pbgs": "False",
                                         "include_parent_pbgs": "False"
                                     },
-                                    "include_completed": "True"
+                                    "include_queued": "False",
+                                    "is_present": "True",
+                                    "max_completed": 100.0,
+                                    "min_completed": 1.0,
+                                    "reason": "usage_and_display",
+                                    "ui_name": {
+                                        "locstring": {
+                                            "name": "ui_name",
+                                            "value": "0"
+                                        }
+                                    },
+                                    "upgrade_name": {
+                                        "instance_reference": "upgrade/afrika_korps/battlegroups/italian_combined_arms/right/italian_combined_arms_semovente_ak"
+                                    }
                                 }
                             }
                         ],
@@ -50256,7 +50463,7 @@
                                                             "value": "11153313"
                                                         }
                                                     },
-                                                    "veterancy_value": 1600.0,
+                                                    "veterancy_value": 1300.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -50339,7 +50546,7 @@
                                                             "value": "11153314"
                                                         }
                                                     },
-                                                    "veterancy_value": 4800.0,
+                                                    "veterancy_value": 3900.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -50425,7 +50632,7 @@
                                                             "value": "11153315"
                                                         }
                                                     },
-                                                    "veterancy_value": 9600.0,
+                                                    "veterancy_value": 7800.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -51154,7 +51361,7 @@
                                                             "value": "11153313"
                                                         }
                                                     },
-                                                    "veterancy_value": 1500.0,
+                                                    "veterancy_value": 1300.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -51237,7 +51444,7 @@
                                                             "value": "11153314"
                                                         }
                                                     },
-                                                    "veterancy_value": 4500.0,
+                                                    "veterancy_value": 3900.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -51323,7 +51530,7 @@
                                                             "value": "11153315"
                                                         }
                                                     },
-                                                    "veterancy_value": 9000.0,
+                                                    "veterancy_value": 7800.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -52020,7 +52227,7 @@
                                                             "value": "11153313"
                                                         }
                                                     },
-                                                    "veterancy_value": 1000.0,
+                                                    "veterancy_value": 1300.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -52103,7 +52310,7 @@
                                                             "value": "11153314"
                                                         }
                                                     },
-                                                    "veterancy_value": 3000.0,
+                                                    "veterancy_value": 3900.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -52189,7 +52396,7 @@
                                                             "value": "11153315"
                                                         }
                                                     },
-                                                    "veterancy_value": 6000.0,
+                                                    "veterancy_value": 7800.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -52405,11 +52612,6 @@
                             {
                                 "ability": {
                                     "instance_reference": "abilities/races/afrika_korps/battlegroups/subterfuge/infiltration_right_1_silent_running_toggle_ak"
-                                }
-                            },
-                            {
-                                "ability": {
-                                    "instance_reference": "abilities/races/german/vehicles/tiger_range_bonus_ger"
                                 }
                             }
                         ],
@@ -53693,7 +53895,7 @@
                                                             "value": "11153313"
                                                         }
                                                     },
-                                                    "veterancy_value": 1200.0,
+                                                    "veterancy_value": 750.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -53776,7 +53978,7 @@
                                                             "value": "11153314"
                                                         }
                                                     },
-                                                    "veterancy_value": 3600.0,
+                                                    "veterancy_value": 2250.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -53851,7 +54053,7 @@
                                                             "value": "11153315"
                                                         }
                                                     },
-                                                    "veterancy_value": 7200.0,
+                                                    "veterancy_value": 4500.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -54555,7 +54757,7 @@
                                                             "value": "11243733"
                                                         }
                                                     },
-                                                    "veterancy_value": 1200.0,
+                                                    "veterancy_value": 750.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -54638,7 +54840,7 @@
                                                             "value": "11243734"
                                                         }
                                                     },
-                                                    "veterancy_value": 3600.0,
+                                                    "veterancy_value": 2250.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {
@@ -54724,7 +54926,7 @@
                                                             "value": "11153315"
                                                         }
                                                     },
-                                                    "veterancy_value": 7200.0,
+                                                    "veterancy_value": 4500.0,
                                                     "state_tree_references": {
                                                         "squad_action_tree": {
                                                             "template_reference": {

@@ -261,7 +261,8 @@
                         "name": "ui_squad_help_text_override_formatter",
                         "value": ""
                     }
-                }
+                },
+                "state_tree_only_run_on_first_stack": "False"
             },
             "pbgid": 2151318.0,
             "parent_pbg": {
@@ -546,7 +547,8 @@
                         "name": "ui_squad_help_text_override_formatter",
                         "value": ""
                     }
-                }
+                },
+                "state_tree_only_run_on_first_stack": "False"
             },
             "pbgid": 2151288.0,
             "parent_pbg": {
@@ -849,7 +851,8 @@
                         "name": "ui_squad_help_text_override_formatter",
                         "value": ""
                     }
-                }
+                },
+                "state_tree_only_run_on_first_stack": "False"
             },
             "pbgid": 2152306.0,
             "parent_pbg": {
@@ -1230,7 +1233,8 @@
                         "name": "ui_squad_help_text_override_formatter",
                         "value": ""
                     }
-                }
+                },
+                "state_tree_only_run_on_first_stack": "False"
             },
             "pbgid": 2089977.0,
             "parent_pbg": {
@@ -1609,7 +1613,8 @@
                         "name": "ui_squad_help_text_override_formatter",
                         "value": ""
                     }
-                }
+                },
+                "state_tree_only_run_on_first_stack": "False"
             },
             "pbgid": 2089975.0,
             "parent_pbg": {
@@ -2382,7 +2387,8 @@
                         "name": "ui_squad_help_text_override_formatter",
                         "value": ""
                     }
-                }
+                },
+                "state_tree_only_run_on_first_stack": "False"
             },
             "pbgid": 2164338.0,
             "parent_pbg": {
@@ -2693,7 +2699,7 @@
             "upgrade_bag": {
                 "time_cost": {
                     "cost": {
-                        "munition": 100.0
+                        "munition": 90.0
                     }
                 },
                 "ui_info": {
@@ -3149,7 +3155,8 @@
                         "name": "ui_squad_help_text_override_formatter",
                         "value": ""
                     }
-                }
+                },
+                "state_tree_only_run_on_first_stack": "False"
             },
             "pbgid": 2164297.0,
             "parent_pbg": {
@@ -3476,7 +3483,7 @@
                     "help_text": {
                         "locstring": {
                             "name": "help_text",
-                            "value": "11158242"
+                            "value": "0"
                         }
                     },
                     "hotkey_name": "G",
@@ -3721,10 +3728,10 @@
                         },
                         "formatter_arguments": [
                             {
-                                "int_value": 5.0
+                                "float_value": 7.5
                             },
                             {
-                                "int_value": 25.0
+                                "int_value": 35.0
                             },
                             {
                                 "int_value": 25.0
@@ -3845,7 +3852,37 @@
                             "count": 1.0
                         }
                     }
-                ]
+                ],
+                "ui_squad_help_text_override_formatter": {
+                    "template_reference": {
+                        "name": "ui_squad_help_text_override_formatter",
+                        "value": "ui_text_formatter"
+                    },
+                    "formatter": {
+                        "locstring": {
+                            "name": "formatter",
+                            "value": "11265170"
+                        }
+                    },
+                    "formatter_arguments": [
+                        {
+                            "locstring_value": {
+                                "locstring": {
+                                    "name": "locstring_value",
+                                    "value": "11265949"
+                                }
+                            }
+                        },
+                        {
+                            "locstring_value": {
+                                "locstring": {
+                                    "name": "locstring_value",
+                                    "value": "11266176"
+                                }
+                            }
+                        }
+                    ]
+                }
             },
             "pbgid": 2071692.0,
             "parent_pbg": {
@@ -3899,6 +3936,124 @@
                                 "value": "custom_properties\\custom_float_property"
                             },
                             "value": 22.0
+                        }
+                    },
+                    {
+                        "custom_float_property": {
+                            "template_reference": {
+                                "name": "custom_float_property",
+                                "value": "custom_properties\\custom_float_property"
+                            },
+                            "id": "UNIT_SIGHT_MODIFIER",
+                            "value": 7.5
+                        }
+                    },
+                    {
+                        "custom_float_property": {
+                            "template_reference": {
+                                "name": "custom_float_property",
+                                "value": "custom_properties\\custom_float_property"
+                            },
+                            "id": "DETECTION_VISION_MODIFIER_SQUAD",
+                            "value": 25.0
+                        }
+                    }
+                ]
+            }
+        },
+        "scoped_boys_anti_tank_rifle_ssb_sniper_uk": {
+            "upgrade_bag": {
+                "time_cost": {
+                    "cost": {
+                        "munition": 50.0
+                    }
+                },
+                "ui_info": {
+                    "hotkey_name": "B",
+                    "icon_name": "legacy/upgrades/icon_upgrade_boys_at_gun",
+                    "symbol_icon_name": "legacy/upgrades/icon_upgrade_boys_at_gun"
+                },
+                "requirements": [
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_inventory_capacity"
+                            },
+                            "ebps_name": {
+                                "instance_reference": "ebps/races/british_africa/weapons/ballistic_weapons/infantry_anti_tank_weapon/w_boys_anti_tank_rifle_scoped_africa_uk"
+                            },
+                            "reason": "usage",
+                            "ui_name": {
+                                "locstring": {
+                                    "name": "ui_name",
+                                    "value": "0"
+                                }
+                            },
+                            "count": 1.0
+                        }
+                    }
+                ],
+                "speech_code": "boys_at_upgrade",
+                "ui_position": {
+                    "ui_position_row": 2.0
+                },
+                "requirements_to_complete": [
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_inventory_capacity"
+                            },
+                            "ebps_name": {
+                                "instance_reference": "ebps/races/british_africa/weapons/ballistic_weapons/infantry_anti_tank_weapon/w_boys_anti_tank_rifle_scoped_africa_uk"
+                            },
+                            "count": 1.0
+                        }
+                    }
+                ]
+            },
+            "pbgid": 2169391.0,
+            "parent_pbg": {
+                "instance_reference": "upgrade/dev/templates/weapon_upgrade"
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "custom_int32_properties": [
+                    {
+                        "custom_int32_property": {
+                            "template_reference": {
+                                "name": "custom_int32_property",
+                                "value": "custom_properties\\custom_int32_property"
+                            },
+                            "value": 1.0
+                        }
+                    }
+                ],
+                "custom_pbgid_properties": [
+                    {
+                        "custom_pbgid_property": {
+                            "template_reference": {
+                                "name": "custom_pbgid_property",
+                                "value": "custom_properties\\custom_pbgid_property"
+                            },
+                            "pbg": {
+                                "instance_reference": "ebps/races/british_africa/weapons/ballistic_weapons/infantry_anti_tank_weapon/w_boys_anti_tank_rifle_scoped_africa_uk"
+                            }
+                        }
+                    }
+                ],
+                "custom_float_properties": [
+                    {
+                        "custom_float_property": {
+                            "template_reference": {
+                                "name": "custom_float_property",
+                                "value": "custom_properties\\custom_float_property"
+                            },
+                            "value": 25.0
                         }
                     }
                 ]
@@ -4121,7 +4276,7 @@
                     "help_text": {
                         "locstring": {
                             "name": "help_text",
-                            "value": "11158242"
+                            "value": "0"
                         }
                     },
                     "hotkey_name": "B",
@@ -4373,7 +4528,8 @@
                         "name": "ui_squad_help_text_override_formatter",
                         "value": ""
                     }
-                }
+                },
+                "state_tree_only_run_on_first_stack": "False"
             },
             "pbgid": 2071850.0,
             "parent_pbg": {
@@ -4439,7 +4595,7 @@
                         }
                     },
                     "hotkey_name": "F",
-                    "icon_name": "common/upgrades/utility_engineer_us",
+                    "icon_name": "races/common/upgrade/hazard_removal_package",
                     "reveal_for_decryption": "False",
                     "screen_name": {
                         "locstring": {
@@ -4506,7 +4662,7 @@
                     "screen_name_visibility": "visible",
                     "sound": "",
                     "sound_alternative": "",
-                    "symbol_icon_name": "common/upgrades/utility_engineer_us"
+                    "symbol_icon_name": "races/common/upgrade/hazard_removal_package"
                 },
                 "requirements": [
                     {
@@ -4805,7 +4961,8 @@
                         "name": "ui_squad_help_text_override_formatter",
                         "value": ""
                     }
-                }
+                },
+                "state_tree_only_run_on_first_stack": "False"
             },
             "pbgid": 2071670.0,
             "parent_pbg": {
@@ -4842,6 +4999,52 @@
                 "child_custom_properties": [],
                 "custom_hash_key_properties": [],
                 "custom_reflected_enum_properties": []
+            }
+        },
+        "buff": {
+            "commando_ambush_veteran_speed_buff": {
+                "pbgid": 2171174.0,
+                "parent_pbg": {
+                    "instance_reference": "upgrade/dev/templates/status_upgrade"
+                },
+                "custom_properties": {
+                    "template_reference": {
+                        "name": "custom_properties",
+                        "value": "custom_property_template"
+                    },
+                    "custom_float_properties": [
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "value": 5.0
+                            }
+                        },
+                        {
+                            "custom_float_property": {
+                                "template_reference": {
+                                    "name": "custom_float_property",
+                                    "value": "custom_properties\\custom_float_property"
+                                },
+                                "id": "SPEED_MODIFIER",
+                                "value": 1.5
+                            }
+                        }
+                    ],
+                    "custom_bool_properties": [
+                        {
+                            "custom_bool_property": {
+                                "template_reference": {
+                                    "name": "custom_bool_property",
+                                    "value": "custom_properties\\custom_bool_property"
+                                },
+                                "value": "False"
+                            }
+                        }
+                    ]
+                }
             }
         }
     },
@@ -5085,7 +5288,8 @@
                             "name": "ui_squad_help_text_override_formatter",
                             "value": ""
                         }
-                    }
+                    },
+                    "state_tree_only_run_on_first_stack": "False"
                 },
                 "pbgid": 2073880.0,
                 "parent_pbg": {
@@ -5351,7 +5555,8 @@
                             "name": "ui_squad_help_text_override_formatter",
                             "value": ""
                         }
-                    }
+                    },
+                    "state_tree_only_run_on_first_stack": "False"
                 },
                 "pbgid": 2073725.0,
                 "parent_pbg": {
@@ -5696,7 +5901,8 @@
                             "name": "ui_squad_help_text_override_formatter",
                             "value": ""
                         }
-                    }
+                    },
+                    "state_tree_only_run_on_first_stack": "False"
                 },
                 "pbgid": 2082737.0,
                 "parent_pbg": {
@@ -6039,7 +6245,8 @@
                             "name": "ui_squad_help_text_override_formatter",
                             "value": ""
                         }
-                    }
+                    },
+                    "state_tree_only_run_on_first_stack": "False"
                 },
                 "pbgid": 2082739.0,
                 "parent_pbg": {
@@ -6385,7 +6592,8 @@
                             "name": "ui_squad_help_text_override_formatter",
                             "value": ""
                         }
-                    }
+                    },
+                    "state_tree_only_run_on_first_stack": "False"
                 },
                 "pbgid": 2082740.0,
                 "parent_pbg": {
@@ -6734,7 +6942,8 @@
                             "name": "ui_squad_help_text_override_formatter",
                             "value": ""
                         }
-                    }
+                    },
+                    "state_tree_only_run_on_first_stack": "False"
                 },
                 "pbgid": 2082738.0,
                 "parent_pbg": {
@@ -7028,7 +7237,8 @@
                             "name": "ui_squad_help_text_override_formatter",
                             "value": ""
                         }
-                    }
+                    },
+                    "state_tree_only_run_on_first_stack": "False"
                 },
                 "pbgid": 2073721.0,
                 "parent_pbg": {
@@ -7389,7 +7599,8 @@
                         "name": "ui_squad_help_text_override_formatter",
                         "value": ""
                     }
-                }
+                },
+                "state_tree_only_run_on_first_stack": "False"
             },
             "pbgid": 2102909.0,
             "parent_pbg": {
@@ -7703,7 +7914,8 @@
                         "name": "ui_squad_help_text_override_formatter",
                         "value": ""
                     }
-                }
+                },
+                "state_tree_only_run_on_first_stack": "False"
             },
             "pbgid": 2167242.0,
             "parent_pbg": {
@@ -8017,7 +8229,8 @@
                         "name": "ui_squad_help_text_override_formatter",
                         "value": ""
                     }
-                }
+                },
+                "state_tree_only_run_on_first_stack": "False"
             },
             "pbgid": 2168378.0,
             "parent_pbg": {
@@ -8324,7 +8537,8 @@
                         "name": "ui_squad_help_text_override_formatter",
                         "value": ""
                     }
-                }
+                },
+                "state_tree_only_run_on_first_stack": "False"
             },
             "pbgid": 2074154.0,
             "parent_pbg": {

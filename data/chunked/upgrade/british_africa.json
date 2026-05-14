@@ -3728,19 +3728,16 @@
                         },
                         "formatter_arguments": [
                             {
-                                "float_value": 7.5
-                            },
-                            {
-                                "int_value": 35.0
-                            },
-                            {
                                 "int_value": 25.0
+                            },
+                            {
+                                "int_value": 7.0
                             }
                         ],
                         "formatter": {
                             "locstring": {
                                 "name": "formatter",
-                                "value": "11258698"
+                                "value": "11275257"
                             }
                         }
                     },
@@ -3753,12 +3750,15 @@
                         "formatter_arguments": [
                             {
                                 "int_value": 2.0
+                            },
+                            {
+                                "int_value": 3.0
                             }
                         ],
                         "formatter": {
                             "locstring": {
                                 "name": "formatter",
-                                "value": "11262932"
+                                "value": "11275564"
                             }
                         }
                     }
@@ -3852,37 +3852,7 @@
                             "count": 1.0
                         }
                     }
-                ],
-                "ui_squad_help_text_override_formatter": {
-                    "template_reference": {
-                        "name": "ui_squad_help_text_override_formatter",
-                        "value": "ui_text_formatter"
-                    },
-                    "formatter": {
-                        "locstring": {
-                            "name": "formatter",
-                            "value": "11265170"
-                        }
-                    },
-                    "formatter_arguments": [
-                        {
-                            "locstring_value": {
-                                "locstring": {
-                                    "name": "locstring_value",
-                                    "value": "11265949"
-                                }
-                            }
-                        },
-                        {
-                            "locstring_value": {
-                                "locstring": {
-                                    "name": "locstring_value",
-                                    "value": "11266176"
-                                }
-                            }
-                        }
-                    ]
-                }
+                ]
             },
             "pbgid": 2071692.0,
             "parent_pbg": {
@@ -3915,6 +3885,18 @@
                                 "instance_reference": "ebps/races/british_africa/weapons/small_arms/single_fire/rifle/w_scoped_lee_enfield_tommy_africa_uk"
                             }
                         }
+                    },
+                    {
+                        "custom_pbgid_property": {
+                            "template_reference": {
+                                "name": "custom_pbgid_property",
+                                "value": "custom_properties\\custom_pbgid_property"
+                            },
+                            "id": "ABILITY_PBG",
+                            "pbg": {
+                                "instance_reference": "abilities/races/common/infantry/stationary_vision_bonus_common"
+                            }
+                        }
                     }
                 ],
                 "custom_global_state_tree_reference_properties": [
@@ -3924,7 +3906,7 @@
                                 "name": "custom_global_state_tree_reference_property",
                                 "value": "custom_properties\\custom_global_state_tree_reference_property"
                             },
-                            "nodepath": "weapon_upgrade\\extra_payload_library\\increase_sight_radius_large"
+                            "nodepath": "add_ability"
                         }
                     }
                 ],
@@ -3946,16 +3928,6 @@
                             },
                             "id": "UNIT_SIGHT_MODIFIER",
                             "value": 7.5
-                        }
-                    },
-                    {
-                        "custom_float_property": {
-                            "template_reference": {
-                                "name": "custom_float_property",
-                                "value": "custom_properties\\custom_float_property"
-                            },
-                            "id": "DETECTION_VISION_MODIFIER_SQUAD",
-                            "value": 25.0
                         }
                     }
                 ]
@@ -3994,7 +3966,7 @@
                         }
                     }
                 ],
-                "speech_code": "boys_at_upgrade",
+                "speech_code": "boys_at_upgrade_ssb",
                 "ui_position": {
                     "ui_position_row": 2.0
                 },
@@ -4089,7 +4061,7 @@
                         },
                         "formatter_arguments": [
                             {
-                                "int_value": 5.0
+                                "int_value": 7.0
                             },
                             {
                                 "int_value": 25.0
@@ -4117,12 +4089,15 @@
                         "formatter_arguments": [
                             {
                                 "int_value": 3.0
+                            },
+                            {
+                                "int_value": 3.0
                             }
                         ],
                         "formatter": {
                             "locstring": {
                                 "name": "formatter",
-                                "value": "11262747"
+                                "value": "11275565"
                             }
                         }
                     }
@@ -4227,6 +4202,18 @@
                                 "instance_reference": "ebps/races/british/weapons/small_arms/single_fire/rifle/w_scoped_lee_enfield_australian_uk"
                             }
                         }
+                    },
+                    {
+                        "custom_pbgid_property": {
+                            "template_reference": {
+                                "name": "custom_pbgid_property",
+                                "value": "custom_properties\\custom_pbgid_property"
+                            },
+                            "id": "ABILITY_PBG",
+                            "pbg": {
+                                "instance_reference": "abilities/races/common/infantry/stationary_vision_bonus_common"
+                            }
+                        }
                     }
                 ],
                 "custom_global_state_tree_reference_properties": [
@@ -4236,7 +4223,7 @@
                                 "name": "custom_global_state_tree_reference_property",
                                 "value": "custom_properties\\custom_global_state_tree_reference_property"
                             },
-                            "nodepath": "weapon_upgrade\\extra_payload_library\\british\\increase_sight_radius_australian"
+                            "nodepath": "add_ability"
                         }
                     }
                 ]
@@ -4557,37 +4544,370 @@
                 "custom_reflected_enum_properties": []
             }
         },
+        "special_services_commando_firepower_bolster_uk": {
+            "upgrade_bag": {
+                "time_cost": {
+                    "cost": {
+                        "munition": 90.0
+                    }
+                },
+                "ui_info": {
+                    "hotkey_name": "F",
+                    "icon_name": "races/british/upgrades/best_of_the_worst_commando",
+                    "symbol_icon_name": "races/british/upgrades/best_of_the_worst_commando",
+                    "brief_text_formatter": {
+                        "template_reference": {
+                            "name": "brief_text_formatter",
+                            "value": "ui_text_formatter"
+                        },
+                        "formatter": {
+                            "locstring": {
+                                "name": "formatter",
+                                "value": "11273021"
+                            }
+                        },
+                        "formatter_arguments": [
+                            {
+                                "int_value": 2.0
+                            }
+                        ]
+                    },
+                    "help_text": {
+                        "locstring": {
+                            "name": "help_text",
+                            "value": "11242557"
+                        }
+                    },
+                    "screen_name": {
+                        "locstring": {
+                            "name": "screen_name",
+                            "value": "11273022"
+                        }
+                    }
+                },
+                "requirements": [
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_player_upgrade"
+                            },
+                            "include_completed": "True",
+                            "include_pbg_parenting": {
+                                "include_child_pbgs": "False",
+                                "include_parent_pbgs": "False"
+                            },
+                            "include_queued": "False",
+                            "is_present": "True",
+                            "max_completed": 100.0,
+                            "min_completed": 1.0,
+                            "reason": "usage",
+                            "ui_name": {
+                                "locstring": {
+                                    "name": "ui_name",
+                                    "value": "0"
+                                }
+                            },
+                            "upgrade_name": {
+                                "instance_reference": "upgrade/british/battlegroups/special_services/special_services_best_of_the_worst_uk"
+                            }
+                        }
+                    },
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_player_upgrade"
+                            },
+                            "include_completed": "True",
+                            "include_pbg_parenting": {
+                                "include_child_pbgs": "False",
+                                "include_parent_pbgs": "False"
+                            },
+                            "include_queued": "False",
+                            "is_present": "False",
+                            "max_completed": 100.0,
+                            "min_completed": 1.0,
+                            "reason": "display",
+                            "ui_name": {
+                                "locstring": {
+                                    "name": "ui_name",
+                                    "value": "0"
+                                }
+                            },
+                            "upgrade_name": {
+                                "instance_reference": "upgrade/british/battlegroups/special_services/special_services_directed_air_support_uk"
+                            }
+                        }
+                    }
+                ],
+                "speech_code": "ssb_bolster_upgrade",
+                "requirements_to_complete": [],
+                "blueprint_convert_options": {
+                    "preserve_upgrade": "True",
+                    "continuous_statetree": "True"
+                }
+            },
+            "pbgid": 2169298.0,
+            "parent_pbg": {
+                "instance_reference": "upgrade/dev/templates/weapon_upgrade"
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "custom_pbgid_properties": [
+                    {
+                        "custom_pbgid_property": {
+                            "template_reference": {
+                                "name": "custom_pbgid_property",
+                                "value": "custom_properties\\custom_pbgid_property"
+                            },
+                            "pbg": {
+                                "instance_reference": "ebps/races/british/weapons/small_arms/machine_guns/light_machine_gun/w_vickers_k_lmg_ssb_uk"
+                            }
+                        }
+                    }
+                ],
+                "custom_global_state_tree_reference_properties": [
+                    {
+                        "custom_global_state_tree_reference_property": {
+                            "template_reference": {
+                                "name": "custom_global_state_tree_reference_property",
+                                "value": "custom_properties\\custom_global_state_tree_reference_property"
+                            },
+                            "nodepath": "weapon_upgrade\\extra_payload_library\\increased_squad_size"
+                        }
+                    }
+                ],
+                "custom_int32_properties": [
+                    {
+                        "custom_int32_property": {
+                            "template_reference": {
+                                "name": "custom_int32_property",
+                                "value": "custom_properties\\custom_int32_property"
+                            },
+                            "value": 0.0
+                        }
+                    },
+                    {
+                        "custom_int32_property": {
+                            "template_reference": {
+                                "name": "custom_int32_property",
+                                "value": "custom_properties\\custom_int32_property"
+                            },
+                            "id": "SQUAD_MEMBERS",
+                            "value": 2.0
+                        }
+                    }
+                ]
+            }
+        },
+        "special_services_sniper_spotter_bolster_uk": {
+            "upgrade_bag": {
+                "time_cost": {
+                    "cost": {
+                        "munition": 50.0
+                    },
+                    "time_seconds": 30.0
+                },
+                "ui_info": {
+                    "hotkey_name": "F",
+                    "icon_name": "races/british/upgrades/best_of_the_worst_sniper",
+                    "symbol_icon_name": "races/british/upgrades/best_of_the_worst_sniper",
+                    "brief_text_formatter": {
+                        "template_reference": {
+                            "name": "brief_text_formatter",
+                            "value": "ui_text_formatter"
+                        },
+                        "formatter": {
+                            "locstring": {
+                                "name": "formatter",
+                                "value": "11273133"
+                            }
+                        },
+                        "formatter_arguments": [
+                            {
+                                "float_value": 7.5
+                            }
+                        ]
+                    },
+                    "help_text": {
+                        "locstring": {
+                            "name": "help_text",
+                            "value": "11242754"
+                        }
+                    },
+                    "screen_name": {
+                        "locstring": {
+                            "name": "screen_name",
+                            "value": "11273132"
+                        }
+                    }
+                },
+                "requirements": [
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_in_territory"
+                            },
+                            "reason": "usage",
+                            "ui_name": {
+                                "locstring": {
+                                    "name": "ui_name",
+                                    "value": "0"
+                                }
+                            },
+                            "in_supply": "True",
+                            "is_secured": "False",
+                            "is_secured_by_checkpoint": "False",
+                            "not_in_transition": "False",
+                            "relative_to_caster": "False"
+                        }
+                    },
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_player_upgrade"
+                            },
+                            "include_completed": "True",
+                            "include_pbg_parenting": {
+                                "include_child_pbgs": "False",
+                                "include_parent_pbgs": "False"
+                            },
+                            "include_queued": "False",
+                            "is_present": "True",
+                            "max_completed": 100.0,
+                            "min_completed": 1.0,
+                            "reason": "usage",
+                            "ui_name": {
+                                "locstring": {
+                                    "name": "ui_name",
+                                    "value": "0"
+                                }
+                            },
+                            "upgrade_name": {
+                                "instance_reference": "upgrade/british/battlegroups/special_services/special_services_best_of_the_worst_uk"
+                            }
+                        }
+                    },
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_player_upgrade"
+                            },
+                            "include_completed": "True",
+                            "include_pbg_parenting": {
+                                "include_child_pbgs": "False",
+                                "include_parent_pbgs": "False"
+                            },
+                            "include_queued": "False",
+                            "is_present": "False",
+                            "max_completed": 100.0,
+                            "min_completed": 1.0,
+                            "reason": "display",
+                            "ui_name": {
+                                "locstring": {
+                                    "name": "ui_name",
+                                    "value": "0"
+                                }
+                            },
+                            "upgrade_name": {
+                                "instance_reference": "upgrade/british/battlegroups/special_services/special_services_directed_air_support_uk"
+                            }
+                        }
+                    }
+                ],
+                "speech_code": "urban_assault_upgrade",
+                "enable_in_hold": "True",
+                "has_speech_code": "True",
+                "ui_event_cue": "True",
+                "ui_position": {
+                    "ui_position_column": 1.0,
+                    "ui_position_row": 1.0
+                },
+                "ui_production_group": "unit_upgrade_panel"
+            },
+            "pbgid": 2169378.0,
+            "parent_pbg": {
+                "instance_reference": "upgrade/dev/templates/status_upgrade"
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "custom_bool_properties": [
+                    {
+                        "custom_bool_property": {
+                            "template_reference": {
+                                "name": "custom_bool_property",
+                                "value": "custom_properties\\custom_bool_property"
+                            },
+                            "value": "False"
+                        }
+                    }
+                ],
+                "custom_float_properties": [
+                    {
+                        "custom_float_property": {
+                            "template_reference": {
+                                "name": "custom_float_property",
+                                "value": "custom_properties\\custom_float_property"
+                            },
+                            "value": 0.0
+                        }
+                    },
+                    {
+                        "custom_float_property": {
+                            "template_reference": {
+                                "name": "custom_float_property",
+                                "value": "custom_properties\\custom_float_property"
+                            },
+                            "id": "WEAPON_PENETRATION_MODIFIER",
+                            "value": 1000.0
+                        }
+                    },
+                    {
+                        "custom_float_property": {
+                            "template_reference": {
+                                "name": "custom_float_property",
+                                "value": "custom_properties\\custom_float_property"
+                            },
+                            "id": "DETECTION_VISION_MODIFIER",
+                            "value": 7.5
+                        }
+                    },
+                    {
+                        "custom_float_property": {
+                            "template_reference": {
+                                "name": "custom_float_property",
+                                "value": "custom_properties\\custom_float_property"
+                            },
+                            "id": "UNIT_SIGHT_MODIFIER",
+                            "value": 7.5
+                        }
+                    }
+                ]
+            }
+        },
         "utility_sapper_africa_uk": {
             "upgrade_bag": {
                 "enable_in_hold": "True",
-                "global_max_limit": 0.0,
                 "has_speech_code": "True",
-                "local_max_limit": 1.0,
-                "owner_type": "self",
                 "time_cost": {
                     "cost": {
-                        "action": 0.0,
-                        "popcap": 0.0,
-                        "command": 0.0,
-                        "fuel": 0.0,
-                        "munition": 30.0,
-                        "manpower": 0.0,
-                        "requisition": 0.0,
-                        "ultimate": 0.0,
-                        "ability_resource_1": 0.0,
-                        "ability_resource_2": 0.0
+                        "munition": 30.0
                     },
                     "time_seconds": 10.0
                 },
                 "ui_event_cue": "True",
                 "ui_production_group": "unit_upgrade_panel",
                 "ui_info": {
-                    "extra_text": {
-                        "locstring": {
-                            "name": "extra_text",
-                            "value": "0"
-                        }
-                    },
                     "help_text": {
                         "locstring": {
                             "name": "help_text",
@@ -4596,7 +4916,6 @@
                     },
                     "hotkey_name": "F",
                     "icon_name": "races/common/upgrade/hazard_removal_package",
-                    "reveal_for_decryption": "False",
                     "screen_name": {
                         "locstring": {
                             "name": "screen_name",
@@ -4609,21 +4928,6 @@
                             "value": "11256361"
                         }
                     },
-                    "screen_name_short": {
-                        "locstring": {
-                            "name": "screen_name_short",
-                            "value": "0"
-                        }
-                    },
-                    "debug_text": "",
-                    "tooltip_data_template": "",
-                    "ui_combine_type": "intersection",
-                    "brief_text_formatter": {
-                        "template_reference": {
-                            "name": "brief_text_formatter",
-                            "value": ""
-                        }
-                    },
                     "extra_text_formatter": {
                         "template_reference": {
                             "name": "extra_text_formatter",
@@ -4631,37 +4935,19 @@
                         },
                         "formatter_arguments": [
                             {
-                                "float_value": 2.5
+                                "float_value": 4.0
+                            },
+                            {
+                                "int_value": 35.0
                             }
                         ],
                         "formatter": {
                             "locstring": {
                                 "name": "formatter",
-                                "value": "11258629"
+                                "value": "11274320"
                             }
                         }
                     },
-                    "help_text_formatter": {
-                        "template_reference": {
-                            "name": "help_text_formatter",
-                            "value": ""
-                        }
-                    },
-                    "screen_name_formatter": {
-                        "template_reference": {
-                            "name": "screen_name_formatter",
-                            "value": ""
-                        }
-                    },
-                    "screen_name_short_formatter": {
-                        "template_reference": {
-                            "name": "screen_name_short_formatter",
-                            "value": ""
-                        }
-                    },
-                    "screen_name_visibility": "visible",
-                    "sound": "",
-                    "sound_alternative": "",
                     "symbol_icon_name": "races/common/upgrade/hazard_removal_package"
                 },
                 "requirements": [
@@ -4820,161 +5106,92 @@
                         }
                     }
                 ],
-                "ui_kicker_icon_name": "",
-                "ui_squad_name_override": {
-                    "locstring": {
-                        "name": "ui_squad_name_override",
-                        "value": "0"
-                    }
-                },
-                "ui_squad_help_text_override": {
-                    "locstring": {
-                        "name": "ui_squad_help_text_override",
-                        "value": "0"
-                    }
-                },
-                "ui_squad_extra_text_override": {
-                    "locstring": {
-                        "name": "ui_squad_extra_text_override",
-                        "value": "0"
-                    }
-                },
-                "ui_preview": [],
                 "speech_code": "hazard_package_upgrade",
-                "ui_squad_portrait_icon_override": "",
                 "ui_position": {
                     "ui_position_row": 1.0,
                     "ui_position_column": 2.0
                 },
-                "min_music_intensity": 0.0,
-                "state_tree_references": {
-                    "on_begin_action_tree": {
-                        "template_reference": {
-                            "name": "on_begin_action_tree",
-                            "value": "state_tree_reference_info"
-                        },
-                        "ActionTree_OpeningBranch": ""
-                    },
-                    "on_action_tree": {
-                        "template_reference": {
-                            "name": "on_action_tree",
-                            "value": "state_tree_reference_info"
-                        },
-                        "ActionTree_OpeningBranch": "utility_engineer_us"
-                    },
-                    "on_cancel_action_tree": {
-                        "template_reference": {
-                            "name": "on_cancel_action_tree",
-                            "value": "state_tree_reference_info"
-                        },
-                        "ActionTree_OpeningBranch": ""
-                    },
-                    "on_action_entity_tree": {
-                        "template_reference": {
-                            "name": "on_action_entity_tree",
-                            "value": "state_tree_entity_reference_info"
-                        },
-                        "ActionTree_OpeningBranch": ""
-                    },
-                    "on_action_squad_tree": {
-                        "template_reference": {
-                            "name": "on_action_squad_tree",
-                            "value": "state_tree_squad_reference_info"
-                        },
-                        "ActionTree_OpeningBranch": ""
-                    }
-                },
-                "upgrade_type": [],
-                "requirements_openingbranch": "",
-                "ui_menu": {
-                    "instance_reference": ""
-                },
-                "is_progress_permanent": "False",
-                "squad_cost": {
-                    "action": 0.0,
-                    "command": 0.0,
-                    "popcap": 0.0,
-                    "fuel": 0.0,
-                    "munition": 0.0,
-                    "manpower": 0.0,
-                    "requisition": 0.0,
-                    "ultimate": 0.0,
-                    "ability_resource_1": 0.0,
-                    "ability_resource_2": 0.0
-                },
-                "ui_codex_info": {
-                    "priority": 0.0,
-                    "exclusive": "False",
-                    "ui_position": {
-                        "ui_position_column": -1.0,
-                        "ui_position_row": -1.0
-                    }
-                },
-                "filter_conditions": {
-                    "apply_to_filter_condition_statetree_ref": "",
-                    "apply_to_target_type": "entity",
-                    "apply_to_unit_classes": [],
-                    "apply_to_application_type": "current_and_future_units",
-                    "apply_to_future_units": "current_and_future_units",
-                    "apply_to_squad_types": []
-                },
-                "duration_seconds": 0.0,
-                "ui_squad_icon_override": "",
-                "ui_squad_brief_text_override": {
-                    "locstring": {
-                        "name": "ui_squad_brief_text_override",
-                        "value": "0"
-                    }
-                },
-                "ui_squad_symbol_icon_name_override": "",
-                "ui_squad_extra_help_text_override": {
-                    "locstring": {
-                        "name": "ui_squad_extra_help_text_override",
-                        "value": "0"
-                    }
-                },
-                "requirements_to_complete": [],
-                "blueprint_convert_options": {
-                    "preserve_upgrade": "Default",
-                    "continuous_statetree": "Default"
-                },
-                "ui_squad_brief_text_override_formatter": {
-                    "template_reference": {
-                        "name": "ui_squad_brief_text_override_formatter",
-                        "value": ""
-                    }
-                },
-                "ui_squad_extra_help_text_override_formatter": {
-                    "template_reference": {
-                        "name": "ui_squad_extra_help_text_override_formatter",
-                        "value": ""
-                    }
-                },
-                "ui_squad_extra_text_override_formatter": {
-                    "template_reference": {
-                        "name": "ui_squad_extra_text_override_formatter",
-                        "value": ""
-                    }
-                },
                 "ui_squad_help_text_override_formatter": {
                     "template_reference": {
                         "name": "ui_squad_help_text_override_formatter",
-                        "value": ""
-                    }
-                },
-                "state_tree_only_run_on_first_stack": "False"
+                        "value": "ui_text_formatter"
+                    },
+                    "formatter": {
+                        "locstring": {
+                            "name": "formatter",
+                            "value": "11265170"
+                        }
+                    },
+                    "formatter_arguments": [
+                        {
+                            "locstring_value": {
+                                "locstring": {
+                                    "name": "locstring_value",
+                                    "value": "11265171"
+                                }
+                            }
+                        },
+                        {
+                            "locstring_value": {
+                                "locstring": {
+                                    "name": "locstring_value",
+                                    "value": "11274317"
+                                }
+                            }
+                        }
+                    ]
+                }
             },
             "pbgid": 2071670.0,
             "parent_pbg": {
-                "instance_reference": ""
+                "instance_reference": "upgrade/dev/templates/status_upgrade"
             },
             "custom_properties": {
                 "template_reference": {
                     "name": "custom_properties",
                     "value": "custom_property_template"
                 },
-                "custom_bool_properties": [],
+                "custom_bool_properties": [
+                    {
+                        "custom_bool_property": {
+                            "template_reference": {
+                                "name": "custom_bool_property",
+                                "value": "custom_properties\\custom_bool_property"
+                            },
+                            "value": "True"
+                        }
+                    },
+                    {
+                        "custom_bool_property": {
+                            "template_reference": {
+                                "name": "custom_bool_property",
+                                "value": "custom_properties\\custom_bool_property"
+                            },
+                            "value": "False"
+                        }
+                    }
+                ],
                 "custom_float_properties": [
+                    {
+                        "custom_float_property": {
+                            "template_reference": {
+                                "name": "custom_float_property",
+                                "value": "custom_properties\\custom_float_property"
+                            },
+                            "value": 0.0,
+                            "id": "DURATION"
+                        }
+                    },
+                    {
+                        "custom_float_property": {
+                            "template_reference": {
+                                "name": "custom_float_property",
+                                "value": "custom_properties\\custom_float_property"
+                            },
+                            "id": "UI_TIMER_DELAY",
+                            "value": 0.0
+                        }
+                    },
                     {
                         "custom_float_property": {
                             "template_reference": {
@@ -4984,21 +5201,127 @@
                             "id": "REPAIR_UPGRADE_BONUS",
                             "value": 2.5
                         }
+                    },
+                    {
+                        "custom_float_property": {
+                            "template_reference": {
+                                "name": "custom_float_property",
+                                "value": "custom_properties\\custom_float_property"
+                            },
+                            "id": "DETECTION_VISION_MODIFIER_SQUAD",
+                            "value": 25.0
+                        }
                     }
                 ],
-                "custom_int32_properties": [],
-                "custom_vector3f_properties": [],
-                "custom_pbgid_properties": [],
-                "custom_loc_string_properties": [],
-                "custom_entity_state_tree_reference_properties": [],
-                "custom_deferred_entity_state_tree_reference_properties": [],
-                "custom_physical_state_tree_reference_properties": [],
-                "custom_global_state_tree_reference_properties": [],
-                "custom_squad_state_tree_reference_properties": [],
-                "custom_enum_properties": [],
-                "child_custom_properties": [],
-                "custom_hash_key_properties": [],
-                "custom_reflected_enum_properties": []
+                "custom_global_state_tree_reference_properties": [
+                    {
+                        "custom_global_state_tree_reference_property": {
+                            "template_reference": {
+                                "name": "custom_global_state_tree_reference_property",
+                                "value": "custom_properties\\custom_global_state_tree_reference_property"
+                            },
+                            "nodepath": "utility_engineer_us"
+                        }
+                    }
+                ]
+            }
+        },
+        "vickers_k_lmg_special_services_uk": {
+            "upgrade_bag": {
+                "time_cost": {
+                    "cost": {
+                        "munition": 50.0
+                    }
+                },
+                "ui_info": {
+                    "hotkey_name": "B",
+                    "icon_name": "legacy/upgrades/icon_upgrade_boys_at_gun",
+                    "symbol_icon_name": "legacy/upgrades/icon_upgrade_boys_at_gun"
+                },
+                "requirements": [
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_inventory_capacity"
+                            },
+                            "ebps_name": {
+                                "instance_reference": "ebps/races/british/weapons/small_arms/machine_guns/light_machine_gun/w_vickers_k_lmg_uk"
+                            },
+                            "reason": "usage",
+                            "ui_name": {
+                                "locstring": {
+                                    "name": "ui_name",
+                                    "value": "0"
+                                }
+                            },
+                            "count": 1.0
+                        }
+                    }
+                ],
+                "speech_code": "",
+                "ui_position": {
+                    "ui_position_row": 2.0
+                },
+                "requirements_to_complete": [
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_inventory_capacity"
+                            },
+                            "ebps_name": {
+                                "instance_reference": "ebps/races/british/weapons/small_arms/machine_guns/light_machine_gun/w_vickers_k_lmg_uk"
+                            },
+                            "count": 1.0
+                        }
+                    }
+                ]
+            },
+            "pbgid": 2169277.0,
+            "parent_pbg": {
+                "instance_reference": "upgrade/dev/templates/weapon_upgrade"
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "custom_int32_properties": [
+                    {
+                        "custom_int32_property": {
+                            "template_reference": {
+                                "name": "custom_int32_property",
+                                "value": "custom_properties\\custom_int32_property"
+                            },
+                            "value": 1.0
+                        }
+                    }
+                ],
+                "custom_pbgid_properties": [
+                    {
+                        "custom_pbgid_property": {
+                            "template_reference": {
+                                "name": "custom_pbgid_property",
+                                "value": "custom_properties\\custom_pbgid_property"
+                            },
+                            "pbg": {
+                                "instance_reference": "ebps/races/british/weapons/small_arms/machine_guns/light_machine_gun/w_vickers_k_lmg_ssb_uk"
+                            }
+                        }
+                    }
+                ],
+                "custom_float_properties": [
+                    {
+                        "custom_float_property": {
+                            "template_reference": {
+                                "name": "custom_float_property",
+                                "value": "custom_properties\\custom_float_property"
+                            },
+                            "value": 25.0
+                        }
+                    }
+                ]
             }
         },
         "buff": {

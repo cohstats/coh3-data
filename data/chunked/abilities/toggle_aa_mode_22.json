@@ -41,7 +41,7 @@
         "shared_timer_player_wide": "False",
         "squad_caster": "one_entity",
         "target": "tp_any",
-        "toggled_recharge_time_off": 30.0,
+        "toggled_recharge_time_off": 15.0,
         "toggled_recharge_time_on": 5.0,
         "ui_cursor": {
             "cursor_bad": "",
@@ -112,15 +112,34 @@
                 },
                 "formatter_arguments": [
                     {
-                        "int_value": 200.0
+                        "int_value": 225.0
                     }
                 ]
             },
             "extra_text_formatter": {
                 "template_reference": {
                     "name": "extra_text_formatter",
-                    "value": ""
-                }
+                    "value": "ui_text_formatter"
+                },
+                "formatter": {
+                    "locstring": {
+                        "name": "formatter",
+                        "value": "11267213"
+                    }
+                },
+                "formatter_arguments": [
+                    {
+                        "int_value": 75.0
+                    },
+                    {
+                        "locstring_value": {
+                            "locstring": {
+                                "name": "locstring_value",
+                                "value": "11266099"
+                            }
+                        }
+                    }
+                ]
             },
             "help_text_formatter": {
                 "template_reference": {
@@ -352,7 +371,8 @@
             "caster_must_be_selected": "False"
         },
         "ui_range_preview_minimap_blip_template": "",
-        "ui_reticule_directional_position_offset": 0.0
+        "ui_reticule_directional_position_offset": 0.0,
+        "clear_ability_on_squad_split": "True"
     },
     "pbgid": 2160720.0,
     "parent_pbg": {
@@ -383,7 +403,7 @@
                         "value": "custom_properties\\custom_float_property"
                     },
                     "id": "WEAPON_AA_RANGE_MODIFIER",
-                    "value": 3.0
+                    "value": 3.25
                 }
             },
             {
@@ -394,6 +414,16 @@
                     },
                     "id": "ENABLE_ATTACK_GROUND_MODIFIER",
                     "value": -1.0
+                }
+            },
+            {
+                "custom_float_property": {
+                    "template_reference": {
+                        "name": "custom_float_property",
+                        "value": "custom_properties\\custom_float_property"
+                    },
+                    "id": "WEAPON_HORIZONTAL_SPEED_MODIFIER",
+                    "value": 1.75
                 }
             }
         ],

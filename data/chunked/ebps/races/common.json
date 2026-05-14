@@ -5707,7 +5707,7 @@
                             },
                             "min_music_intensity": 0.0,
                             "tooltip_data_template": "",
-                            "placement_set_facing_style": "two_clicks",
+                            "placement_set_facing_style": "click_and_drag",
                             "facing_quadrants": {
                                 "search_radius_metres": 0.0,
                                 "radius_metres": 0.0,
@@ -7335,7 +7335,7 @@
                         "ap_loss_kicker": "True",
                         "decorator_height": -1.0,
                         "extra_text_deprecated": "",
-                        "ghost_enable": "False",
+                        "ghost_enable": "True",
                         "help_text": {
                             "locstring": {
                                 "name": "help_text",
@@ -15399,7 +15399,7 @@
                             "value": "ebpextensions\\sight_ext"
                         },
                         "detect_camouflage": {
-                            "tp_global": 10.0,
+                            "tp_global": -1.0,
                             "tp_mine": -1.0,
                             "tp_unit": -1.0,
                             "tp_democharge": -1.0
@@ -16074,7 +16074,7 @@
                             "value": "ebpextensions\\sight_ext"
                         },
                         "detect_camouflage": {
-                            "tp_global": 10.0,
+                            "tp_global": -1.0,
                             "tp_mine": -1.0,
                             "tp_unit": -1.0,
                             "tp_democharge": -1.0
@@ -22288,6 +22288,74 @@
                 }
             ],
             "pbgid": 2164917.0,
+            "parent_pbg": {
+                "instance_reference": ""
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "child_custom_properties": [],
+                "custom_bool_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "custom_float_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_int32_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_reflected_enum_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_vector3f_properties": []
+            }
+        },
+        "w_construction_mle_1936_french_mine": {
+            "extensions": [
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\weapon_ext"
+                        },
+                        "weapon": {
+                            "instance_reference": "weapon/common/dummy_construction_landmine"
+                        }
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\attachment_child_ext"
+                        },
+                        "on_attach": {
+                            "template_reference": {
+                                "name": "on_attach",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": "weapon_attach"
+                        },
+                        "on_detach": {
+                            "template_reference": {
+                                "name": "on_detach",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": "weapon_detach"
+                        },
+                        "requires_attachment_dynamics": "False",
+                        "tracking_affects_transformation_when_setup": "True",
+                        "rotation_rate_degrees_per_second_signed_dca_key": "",
+                        "output_dca_to_parent": "False",
+                        "dca_vertical_degrees_offset": 0.0,
+                        "horizontal_angle_limits_only_apply_when_setup": "False"
+                    }
+                }
+            ],
+            "pbgid": 2169690.0,
             "parent_pbg": {
                 "instance_reference": ""
             },

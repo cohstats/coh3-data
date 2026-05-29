@@ -224,7 +224,7 @@ jobs:
           # Run XML to JSON conversion
           Write-Host "Converting XML to JSON..."
           Push-Location -Path "scripts/xml-to-json"
-          python main.py
+          python main.py -no_bl
           Pop-Location
         shell: pwsh
 

@@ -5,21 +5,131 @@ import copy
 import re
 import sys
 
-def string_num(input_string: str):
-    """
-    Convert a string to a float if possible, otherwise return the original string.
+LIST_META_PREFIX = "__list_meta__"
+LIST_ITEM_META_KEY = "__list_item_meta"
+OVERRIDE_PARENT_META_KEY = "__override_parent"
 
-    Args:
-        input_string (str): A string to be converted to a float.
+def is_truthy(value):
+    if isinstance(value, bool):
+        return value
 
-    Returns:
-        Union[float, str]: If inputString can be converted to a float, returns the float value.
-        Otherwise, returns the original inputString.
-    """
+    if value is None:
+        return False
+
+    return str(value).strip().lower() == "true"
+
+def node_overrides_parent(node):
+    return isinstance(node, dict) and is_truthy(node.get(OVERRIDE_PARENT_META_KEY))
+
+def list_overrides_parent(overwrite_list_meta):
+    return isinstance(overwrite_list_meta, dict) and is_truthy(
+        overwrite_list_meta.get(OVERRIDE_PARENT_META_KEY)
+    )
+
+def is_internal_list_meta_key(key):
+    return isinstance(key, str) and key.startswith(LIST_META_PREFIX)
+
+
+def get_list_meta_key(list_name):
+    return f"{LIST_META_PREFIX}{list_name}"
+
+
+def get_payload_key(list_item):
+    for key in list_item:
+        if key != LIST_ITEM_META_KEY:
+            return key
+
+    return None
+
+
+def get_item_meta(list_item):
+    if isinstance(list_item, dict):
+        return list_item.get(LIST_ITEM_META_KEY, {})
+
+    return {}
+
+
+def get_item_id(list_item):
+    return get_item_meta(list_item).get("item_id")
+
+
+def get_parent_item_id(list_item):
+    return get_item_meta(list_item).get("parent_item_id")
+
+
+def get_list_action(list_item):
+    return get_item_meta(list_item).get("action")
+
+
+def item_matches_removed_id(list_item, removed_id):
+    return removed_id in {
+        get_item_id(list_item),
+        get_parent_item_id(list_item),
+    }
+
+
+def find_base_item_index(base, overwrite_item):
+    overwrite_meta = get_item_meta(overwrite_item)
+
+    # ParentItemID is the important one for "override this inherited item".
+    match_id = overwrite_meta.get("parent_item_id") or overwrite_meta.get("item_id")
+
+    if not match_id:
+        return None
+
+    for index, base_item in enumerate(base):
+        if get_item_id(base_item) == match_id:
+            return index
+
+    return None
+
+
+def resolve_list_item(base_item, overwrite_item):
+    base_key = get_payload_key(base_item)
+    overwrite_key = get_payload_key(overwrite_item)
+
+    if overwrite_key is None:
+        return base_item
+
+    # Usually the keys should match, e.g. squadexts -> squadexts.
+    # If they do not, trust the explicit overwrite item.
+    if base_key != overwrite_key:
+        result = copy.deepcopy(overwrite_item)
+        return result
+
+    result = copy.deepcopy(base_item)
+
+    result[base_key] = resolve_inheritance_node(
+        result[base_key],
+        overwrite_item[overwrite_key],
+    )
+
+    # Keep the child metadata after merge, because later children may refer to it.
+    if LIST_ITEM_META_KEY in overwrite_item:
+        result[LIST_ITEM_META_KEY] = copy.deepcopy(overwrite_item[LIST_ITEM_META_KEY])
+
+    return result
+
+def string_num(input_value):
+    if input_value is None:
+        return None
+
+    if isinstance(input_value, (int, float)):
+        return input_value
+
+    if not isinstance(input_value, str):
+        return input_value
+
+    stripped_value = input_value.strip()
+
+    # Important: explicit value="" is different from missing value.
+    if stripped_value == "":
+        return input_value
+
     try:
-        return float(input_string)
+        return float(stripped_value)
     except ValueError:
-        return input_string
+        return input_value
 
 def get_nth_level_parent(current_dir: str, n: int) -> str:
     """
@@ -103,6 +213,12 @@ def get_attribute(element: ET.Element, preferred_attribute: str = "value") -> st
             return element.attrib["value"]
         
     return ""
+
+def get_optional_value(element: ET.Element):
+    if "value" not in element.attrib:
+        return None
+
+    return element.attrib["value"]
 
 
 def has_children(element: ET.Element) -> bool:
@@ -453,18 +569,35 @@ def resolve_inheritance_node(base,overwrite):
     if type (overwrite) is str: 
         return base
     
+    if node_overrides_parent(overwrite):
+        return copy.deepcopy(overwrite)
+    
     for prop in overwrite:
+        if is_internal_list_meta_key(prop):
+            continue
 
         if prop not in base:
-            base[prop] = overwrite[prop]
+            if overwrite[prop] is not None:
+                base[prop] = overwrite[prop]
+
+                meta_key = get_list_meta_key(prop)
+                if isinstance(overwrite[prop], list) and meta_key in overwrite:
+                    base[meta_key] = copy.deepcopy(overwrite[meta_key])
+
             continue
 
-        if prop == 'extensions':
-            base[prop] = resolve_extensions(base[prop],overwrite[prop])
-            continue
+        if isinstance(overwrite[prop], list):
+            meta_key = get_list_meta_key(prop)
 
-        if type(overwrite[prop]) is list:
-            base[prop] = resolve_list(base[prop],overwrite[prop])
+            base[prop] = resolve_list(
+                base[prop],
+                overwrite[prop],
+                overwrite.get(meta_key),
+            )
+
+            if meta_key in overwrite:
+                base[meta_key] = copy.deepcopy(overwrite[meta_key])
+
             continue
 
         base[prop] = resolve_inheritance_node(base[prop],overwrite[prop])
@@ -500,22 +633,54 @@ def resolve_extensions(base,overwrite):
     
     return base
 
-def resolve_list(base,overwrite):
+def resolve_list(base, overwrite, overwrite_list_meta=None):
     """
-    Resolves inheritance for lists 
-    
-    Args:
-        base Dict:       the base node containing all values from parent
-        overwrite Dict:  the overwriting node 
-    
-    Returns:
-        Dict - Resolved dictionary including inherited values
-    """ 
-    for i in range(len(overwrite)):
-        if i >= len(base) :
-            base.append(overwrite[i])
+    Resolve inherited lists using game list metadata.
+
+    Rules:
+    - removedIds removes inherited base entries.
+    - List.ListAction="Append" always appends.
+    - List.ParentItemID overrides the inherited item with that List.ItemID.
+    - List.ItemID is used as a fallback match.
+    - If there is no usable metadata, append instead of index-merging.
+    """
+
+    if base is None:
+        base = []
+
+    if overwrite is None:
+        return base
+
+    if list_overrides_parent(overwrite_list_meta):
+        return copy.deepcopy(overwrite)
+
+    base = copy.deepcopy(base)
+
+    removed_ids = []
+    if overwrite_list_meta:
+        removed_ids = overwrite_list_meta.get("removed_ids", [])
+
+    if removed_ids:
+        base = [
+            item
+            for item in base
+            if not any(item_matches_removed_id(item, removed_id) for removed_id in removed_ids)
+        ]
+
+    for overwrite_item in overwrite:
+        action = get_list_action(overwrite_item)
+
+        if action == "Append":
+            base.append(copy.deepcopy(overwrite_item))
             continue
-        base[i] = resolve_inheritance_node(base[i],overwrite[i]) 
+
+        base_index = find_base_item_index(base, overwrite_item)
+
+        if base_index is None:
+            base.append(copy.deepcopy(overwrite_item))
+            continue
+
+        base[base_index] = resolve_list_item(base[base_index], overwrite_item)
 
     return base
     

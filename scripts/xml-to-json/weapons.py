@@ -1,7 +1,36 @@
 import os
 import json
 import xml.etree.ElementTree as ET
-from scriptUtils import get_nth_level_parent, get_attribute, has_children, string_num
+from scriptUtils import get_nth_level_parent, get_attribute, has_children, string_num, get_optional_value
+
+LIST_META_PREFIX = "__list_meta__"
+LIST_ITEM_META_KEY = "__list_item_meta"
+OVERRIDE_PARENT_META_KEY = "__override_parent"
+
+def parse_removed_ids(value):
+    if not value:
+        return []
+
+    return [item.strip() for item in value.split(",") if item.strip()]
+
+
+def get_list_meta_key(list_name):
+    return f"{LIST_META_PREFIX}{list_name}"
+
+
+def get_list_item_meta(element: ET.Element):
+    meta = {}
+
+    if "List.ItemID" in element.attrib:
+        meta["item_id"] = element.attrib["List.ItemID"]
+
+    if "List.ParentItemID" in element.attrib:
+        meta["parent_item_id"] = element.attrib["List.ParentItemID"]
+
+    if "List.ListAction" in element.attrib:
+        meta["action"] = element.attrib["List.ListAction"]
+
+    return meta
 
 def parse_weapon_xml_data(element: ET.Element,blacklist:list = []) -> dict:
     """Parses XML data from a given ElementTree element and returns a dictionary.
@@ -24,7 +53,13 @@ def parse_weapon_xml_data(element: ET.Element,blacklist:list = []) -> dict:
 
     # add tag metadata for certain tag types
     if element.tag == 'template_reference':
-        result[element.tag] = {'name':get_attribute(element,"name"), 'value':get_attribute(element,"value")}
+        result[element.tag] = {
+            'name': get_attribute(element, "name"),
+            'value': get_attribute(element, "value"),
+        }
+
+        if element.attrib.get("overrideParent", "").strip().lower() == "true":
+            result[OVERRIDE_PARENT_META_KEY] = True
         
         ## check for blacklisting extensions -> don't export
         #extName = os.path.splitext(os.path.basename(result[element.tag]['value']))[0]
@@ -38,14 +73,36 @@ def parse_weapon_xml_data(element: ET.Element,blacklist:list = []) -> dict:
     if has_children(element):
         for child in element:
             if child.tag == "list":
-                # create a list
-                result[child.attrib["name"]] = []
-                # for all children of a list node
+                list_name = get_attribute(child, "name")
+
+                result[list_name] = []
+
+                list_meta = {}
+
+                removed_ids = parse_removed_ids(child.attrib.get("removedIds"))
+                if removed_ids:
+                    list_meta["removed_ids"] = removed_ids
+
+                if child.attrib.get("overrideParent", "").strip().lower() == "true":
+                    list_meta[OVERRIDE_PARENT_META_KEY] = True
+
+                if list_meta:
+                    result[get_list_meta_key(list_name)] = list_meta
+
                 for item in child:
-                    listItem = {}
-                    listItem[get_attribute(item,"name")] = parse_weapon_xml_data(item,blacklist)
-                    if listItem[get_attribute(item,"name")]  is not None:
-                        result[get_attribute(child,"name")].append(listItem)
+                    item_name = get_attribute(item, "name")
+                    parsed_item = parse_weapon_xml_data(item, blacklist)
+
+                    if parsed_item is not None:
+                        list_item = {
+                            item_name: parsed_item,
+                        }
+
+                        item_meta = get_list_item_meta(item)
+                        if item_meta:
+                            list_item[LIST_ITEM_META_KEY] = item_meta
+
+                        result[list_name].append(list_item)
             else:
                 try:
                     value = parse_weapon_xml_data(child,blacklist)
@@ -69,7 +126,9 @@ def parse_weapon_xml_data(element: ET.Element,blacklist:list = []) -> dict:
             result = formated_path 
         else:
             # else xml element doesn't have any children, return the value.
-            result = string_num(get_attribute(element,"value"))
+            # Normal leaf stat.
+            # Missing value means "no override"; inheritance should keep the parent value.
+            result = string_num(get_optional_value(element))
 
     return result
 

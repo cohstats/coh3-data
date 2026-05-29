@@ -1,10 +1,14 @@
 import os
 from scriptUtils import mod_overwrite, resolve_inheritance_dic, get_nth_level_parent, build_files_dictionary, \
-    save_dict_to_json, get_path_as_string, resolve_dict_value_by_path, create_locstring_dictionary
+    save_dict_to_json, get_path_as_string, resolve_dict_value_by_path, create_locstring_dictionary, is_internal_list_meta_key
 from weapons import parse_weapon_xml_data
 import sys
 import concurrent.futures
 import time
+
+LIST_META_PREFIX = "__list_meta__"
+LIST_ITEM_META_KEY = "__list_item_meta"
+OVERRIDE_PARENT_META_KEY = "__override_parent"
 
 # Program parameter : -no_bl = no blacklist
 #CONST_EXPORT_DIR = 'tempexported'  # this is gitignored
@@ -13,6 +17,19 @@ CONST_EXPORT_DIR = 'data'  # this is not gitignored
 # xml folder must be 2 level upwards in the folder hierarchy
 PROJECT_ROOT_DIR = os.path.dirname(os.path.abspath(__file__ + "/../.."))
 
+def strip_internal_list_metadata(obj):
+    if isinstance(obj, dict):
+        for key in list(obj.keys()):
+            if key == LIST_ITEM_META_KEY or key == OVERRIDE_PARENT_META_KEY or is_internal_list_meta_key(key):
+                del obj[key]
+            else:
+                strip_internal_list_metadata(obj[key])
+
+    elif isinstance(obj, list):
+        for item in obj:
+            strip_internal_list_metadata(item)
+
+    return obj
 
 def export_by_type(type: str, prefix="", script_root_dir="", xml_data_dir="", const_export_dir=""):
     output = []  # List to collect the print outputs
@@ -30,6 +47,7 @@ def export_by_type(type: str, prefix="", script_root_dir="", xml_data_dir="", co
     output.append('- Resolving inheritance....')
     result = resolve_inheritance_dic(result, result)
     resolved_dic = resolve_dict_value_by_path(result, get_path_as_string(src_dir))
+    resolved_dic = strip_internal_list_metadata(resolved_dic)
 
     output.append('- Writing to file....')
     exported_dir = os.path.join(script_root_dir, f'{const_export_dir}')

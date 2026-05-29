@@ -1304,21 +1304,6 @@
                         "exts": {
                             "template_reference": {
                                 "name": "exts",
-                                "value": "ebpextensions\\mine_ext"
-                            },
-                            "defuse_seconds": 2.0,
-                            "detonate_radius": 3.5,
-                            "initial_delay_seconds": 2.5,
-                            "trigger_type": "",
-                            "detonate_on_death": "True",
-                            "accept_target_conditions": "weapon_queries\\global_library\\mine_target_query",
-                            "defuse_veterancy_reward": 150.0
-                        }
-                    },
-                    {
-                        "exts": {
-                            "template_reference": {
-                                "name": "exts",
                                 "value": "ebpextensions\\sight_ext"
                             },
                             "detect_camouflage": {
@@ -9788,7 +9773,7 @@
                         "sight_package": {
                             "inner_height": 2.5,
                             "inner_radius": 0.0,
-                            "outer_height": "outer_height",
+                            "outer_height": 0.0,
                             "outer_radius": 35.0,
                             "cone_angle": 360.0,
                             "cone_start_radius": 0.0
@@ -9813,6 +9798,9 @@
                             "value": "ebpextensions\\type_ext"
                         },
                         "unit_type_list": [
+                            {
+                                "unit_type": "infantry"
+                            },
                             {
                                 "unit_type": "rapid_response"
                             }
@@ -11007,141 +10995,6 @@
                         "exts": {
                             "template_reference": {
                                 "name": "exts",
-                                "value": "ebpextensions\\construction_ext"
-                            },
-                            "automatic_fit_on_placement": "True",
-                            "cancel_refund_percentage": 100.0,
-                            "construction_state_name": "ability_construction_state",
-                            "construction_transition_time": 1.36667,
-                            "force_construction": "False",
-                            "max_engineers": 0.0,
-                            "on_construction_squad": {
-                                "instance_reference": ""
-                            },
-                            "orientation": 0.0,
-                            "placement_type": "tp_structure",
-                            "prefer_spots_on_side_with_leader": "False",
-                            "query_abilities_for_range_ui": "True",
-                            "random_rotation": "False",
-                            "replace_ghost_distance": 5.0,
-                            "self_construct": "False",
-                            "field_placement_info": {
-                                "border_entity": {
-                                    "instance_reference": ""
-                                },
-                                "replace_entity": {
-                                    "instance_reference": ""
-                                },
-                                "replace_count": 0.0,
-                                "replace_retry_distance": 0.0,
-                                "column_count": 2.0,
-                                "row_count": 2.0
-                            },
-                            "placement_valid": {
-                                "instance_reference": ""
-                            },
-                            "placement_invalid": {
-                                "instance_reference": ""
-                            },
-                            "ui_range": {
-                                "instance_reference": ""
-                            },
-                            "ui_range_radius": 20.0,
-                            "ui_setfacing": {
-                                "instance_reference": ""
-                            },
-                            "query_weapon_for_range_ui": "True",
-                            "squad_ignore_pathfinding": "False",
-                            "placement_requirements": {
-                                "must_be_in_line_of_sight": "False",
-                                "must_not_be_in_walkable_surfaces": "False",
-                                "must_be_on_strategic_point": "False",
-                                "requirements": [],
-                                "spacing_distance": 0.0,
-                                "skip_impass_checks_and_ignore_immovable_entities": "False",
-                                "state_tree_conditions": "",
-                                "must_be_in_explored_area": "False",
-                                "must_be_on_movement_node": "False",
-                                "placement_requirement_options": [],
-                                "ui_usage_txt": {
-                                    "locstring": {
-                                        "name": "ui_usage_txt",
-                                        "value": "0"
-                                    }
-                                }
-                            },
-                            "can_be_cancelled": "True",
-                            "construction_health_option": {
-                                "template_reference": {
-                                    "name": "construction_health_option",
-                                    "value": "options\\none"
-                                }
-                            },
-                            "min_music_intensity": 0.0,
-                            "tooltip_data_template": "",
-                            "placement_set_facing_style": "disabled",
-                            "facing_quadrants": {
-                                "search_radius_metres": 0.0,
-                                "radius_metres": 0.0,
-                                "quadrants": {
-                                    "front": "None",
-                                    "rear": "None",
-                                    "left": "None",
-                                    "right": "None"
-                                }
-                            },
-                            "facing_surface_normal": "False",
-                            "fixed_rotation_impass_avoidance": {
-                                "minimum_search_radius_cells": 5.0,
-                                "use_impass_avoidance": "False"
-                            },
-                            "on_construction_complete_state_tree_refs": {
-                                "on_construction_complete_entity_state_tree_ref": "",
-                                "on_construction_complete_physical_state_tree_ref": "",
-                                "on_construction_complete_squad_state_tree_ref": "",
-                                "on_construction_plan_complete_global_state_tree_ref": "",
-                                "while_construction_complete_entity_state_tree_ref": "",
-                                "while_construction_complete_physical_state_tree_ref": ""
-                            },
-                            "can_be_cancelled_state_tree_conditions": "",
-                            "query_movement_node_modifier_for_range_ui": "True",
-                            "construction_site_erase_inactive": "True",
-                            "entity_placement_class": "",
-                            "show_ability_range_in_construction_item_preview": "False",
-                            "preview_upgrade_effects": {
-                                "statemachine_key": "",
-                                "on_key": "",
-                                "off_key": "",
-                                "unit_type": "",
-                                "reticule": {
-                                    "instance_reference": ""
-                                },
-                                "reticule_radius": 0.0,
-                                "area_info": {
-                                    "template_reference": {
-                                        "name": "area_info",
-                                        "value": ""
-                                    }
-                                }
-                            },
-                            "placement_position_ignores_walkable_surfaces": "False",
-                            "construction_site_erase_inactive_in_progress": "False",
-                            "max_fence_placement_count": 0.0,
-                            "placement_weapon": {
-                                "instance_reference": ""
-                            },
-                            "started_and_inactive_max_duration_seconds": 0.0,
-                            "started_and_inactive_max_distance_from_builders": 0.0,
-                            "too_light_to_destroy_built_over_entities": "False",
-                            "default_facing_mode": "towards_enemy_base",
-                            "random_rotation_step": 0.0,
-                            "block_pathing_only_on_construction_complete": "False"
-                        }
-                    },
-                    {
-                        "exts": {
-                            "template_reference": {
-                                "name": "exts",
                                 "value": "ebpextensions\\health_ext"
                             },
                             "can_repair": "True",
@@ -11235,122 +11088,6 @@
                         "exts": {
                             "template_reference": {
                                 "name": "exts",
-                                "value": "ebpextensions\\cost_ext"
-                            },
-                            "time_cost": {
-                                "cost": {
-                                    "action": 0.0,
-                                    "command": 0.0,
-                                    "popcap": 0.0,
-                                    "fuel": 0.0,
-                                    "munition": 0.0,
-                                    "manpower": 100.0,
-                                    "requisition": 0.0,
-                                    "ultimate": 0.0,
-                                    "ability_resource_1": 0.0,
-                                    "ability_resource_2": 0.0
-                                },
-                                "time_seconds": 60.0,
-                                "time_turns": 0.0,
-                                "builder_cost": {
-                                    "action_points": 0.0
-                                },
-                                "squad_cost": {
-                                    "action": 0.0,
-                                    "command": 0.0,
-                                    "popcap": 0.0,
-                                    "fuel": 0.0,
-                                    "munition": 0.0,
-                                    "manpower": 0.0,
-                                    "requisition": 0.0,
-                                    "ultimate": 0.0,
-                                    "ability_resource_1": 0.0,
-                                    "ability_resource_2": 0.0
-                                }
-                            }
-                        }
-                    },
-                    {
-                        "exts": {
-                            "template_reference": {
-                                "name": "exts",
-                                "value": "ebpextensions\\sight_ext"
-                            },
-                            "detect_camouflage": {
-                                "tp_global": 10.0,
-                                "tp_mine": -1.0,
-                                "tp_unit": -1.0,
-                                "tp_democharge": -1.0
-                            },
-                            "extended_sight": "False",
-                            "extended_sight_radius": 70.0,
-                            "reveal_area_on_death_time": 1.5,
-                            "sight_package": {
-                                "inner_height": 2.5,
-                                "inner_radius": 0.0,
-                                "outer_height": 0.0,
-                                "outer_radius": 35.0,
-                                "cone_angle": 360.0,
-                                "cone_start_radius": 0.0
-                            },
-                            "specific_detector_actions": [],
-                            "vertical_truesight": {
-                                "enable": "True",
-                                "tolerance": 1.0,
-                                "eye_height": 2.5
-                            },
-                            "camouflage_detection_enabled": "True",
-                            "blockers_check_bounding_box": "True",
-                            "reveal_area_on_death_radius": 0.0,
-                            "camouflage_detection_respects_fog_of_war_vision": "True",
-                            "camouflage_detection_respects_shot_blockers": "True"
-                        }
-                    },
-                    {
-                        "exts": {
-                            "template_reference": {
-                                "name": "exts",
-                                "value": "ebpextensions\\spawner_ext"
-                            },
-                            "must_be_in_supply": "False",
-                            "reinforce_radius": 0.0,
-                            "spawn_items": [],
-                            "bonus_xp_from_hold_list": [],
-                            "reinforce_requirements": [],
-                            "spawn_to_hold_try_first": "False",
-                            "queue_requirements": [],
-                            "can_rally": "True",
-                            "animated_spawn_option": {
-                                "template_reference": {
-                                    "name": "animated_spawn_option",
-                                    "value": "options\\none"
-                                }
-                            },
-                            "max_queue_size_override": -1.0,
-                            "queue_requirements_openingbranch": "",
-                            "reinforce_requirements_openingbranch": "",
-                            "production_item_completed_openingbranch": "",
-                            "enforce_minimum_clearance_at_spawn_positions": "False",
-                            "enforce_minimum_clearance_if_entities_blocking": "True",
-                            "enforce_minimum_clearance_at_spawn_positions_search_range": 0.0,
-                            "rally_pass_type": {
-                                "instance_reference": ""
-                            },
-                            "parallel_production_count": 1.0,
-                            "default_rally_point_offset": {
-                                "template_reference": {
-                                    "name": "default_rally_point_offset",
-                                    "value": ""
-                                }
-                            },
-                            "always_paradrop_spawn": "False",
-                            "shared_team_production": "False"
-                        }
-                    },
-                    {
-                        "exts": {
-                            "template_reference": {
-                                "name": "exts",
                                 "value": "ebpextensions\\type_ext"
                             },
                             "unit_type_list": [
@@ -11400,47 +11137,6 @@
                         "exts": {
                             "template_reference": {
                                 "name": "exts",
-                                "value": "ebpextensions\\upgrade_ext"
-                            },
-                            "must_be_in_supply": "False",
-                            "number_of_standard_slots": -1.0,
-                            "standard_upgrades": [],
-                            "max_queue_size_override": -1.0,
-                            "production_item_completed_openingbranch": "",
-                            "shared_team_production": "False"
-                        }
-                    },
-                    {
-                        "exts": {
-                            "template_reference": {
-                                "name": "exts",
-                                "value": "ebpextensions\\walkable_surface_ext"
-                            },
-                            "cover_type": "",
-                            "seconds_after_death": 0.0,
-                            "animator_dgm_name": "art/armies/american/vehicles/higgins_boat/higgins_boat",
-                            "remove_on_death": "True",
-                            "start_active": "True",
-                            "impass_override": {
-                                "template_reference": {
-                                    "name": "impass_override",
-                                    "value": "options\\ebpextensions\\walkablesurfaceext\\impass_override"
-                                },
-                                "block_path": [],
-                                "cant_build": "True"
-                            },
-                            "should_rasterize_partial_cells": "False",
-                            "stackable": "True",
-                            "walkable_surface_on_remove_action": "kill_entities",
-                            "walkable_surface_terrain_type": "",
-                            "remove_on_death_meshes": [],
-                            "only_override_above_terrain": "False"
-                        }
-                    },
-                    {
-                        "exts": {
-                            "template_reference": {
-                                "name": "exts",
                                 "value": "ebpextensions\\entity_inventory_ext"
                             },
                             "category_capacity": {
@@ -11451,362 +11147,6 @@
                                 "vehicle_wreck": 0.0,
                                 "hold_weapon": 0.0
                             }
-                        }
-                    },
-                    {
-                        "exts": {
-                            "template_reference": {
-                                "name": "exts",
-                                "value": "ebpextensions\\combat_ext"
-                            },
-                            "reject_attack_command": "False",
-                            "hardpoints": [
-                                {
-                                    "hardpoint": {
-                                        "parent_hardpoint": -1.0,
-                                        "weapon_table": [
-                                            {
-                                                "weapon": {
-                                                    "heading": {
-                                                        "x": 0.0,
-                                                        "y": 0.0,
-                                                        "z": 1.0
-                                                    },
-                                                    "length": 3.0,
-                                                    "origin": {
-                                                        "x": 0.0,
-                                                        "y": 0.0,
-                                                        "z": 0.0
-                                                    },
-                                                    "type": "default",
-                                                    "weapon_entity_attachment": {
-                                                        "template_reference": {
-                                                            "name": "weapon_entity_attachment",
-                                                            "value": "options\\attachment_types\\entity_create_attachment"
-                                                        },
-                                                        "entity_attach_data": {
-                                                            "template_reference": {
-                                                                "name": "entity_attach_data",
-                                                                "value": "attachments\\attach_data_entity"
-                                                            },
-                                                            "attach_data": {
-                                                                "template_reference": {
-                                                                    "name": "attach_data",
-                                                                    "value": "attachments\\attach_data"
-                                                                },
-                                                                "marker_name_parent": "",
-                                                                "parent_rigidbody_target_name": "",
-                                                                "game_object_attachment_type": "scenegraph"
-                                                            },
-                                                            "ebp": {
-                                                                "instance_reference": "ebps/races/american/weapons/ballistic_weapon/tank_gun/w_75mm_sherman_us"
-                                                            },
-                                                            "attachment_flags": {
-                                                                "sim_only": "False",
-                                                                "no_pathfinding": "True",
-                                                                "not_snappable": "False",
-                                                                "restore_snap_to_ground_on_detach": "False",
-                                                                "no_sim_update": "False",
-                                                                "join_parent_squad": "False",
-                                                                "redirect_damage_to_parent_entity": "True",
-                                                                "receive_parent_animations": "False",
-                                                                "receive_parent_death": "False"
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            },
-                                            {
-                                                "weapon": {
-                                                    "heading": {
-                                                        "x": 0.0,
-                                                        "y": 0.0,
-                                                        "z": 1.0
-                                                    },
-                                                    "length": 3.0,
-                                                    "origin": {
-                                                        "x": 0.0,
-                                                        "y": 0.0,
-                                                        "z": 0.0
-                                                    },
-                                                    "type": "default",
-                                                    "weapon_entity_attachment": {
-                                                        "template_reference": {
-                                                            "name": "weapon_entity_attachment",
-                                                            "value": "options\\attachment_types\\entity_create_attachment"
-                                                        },
-                                                        "entity_attach_data": {
-                                                            "template_reference": {
-                                                                "name": "entity_attach_data",
-                                                                "value": "attachments\\attach_data_entity"
-                                                            },
-                                                            "attach_data": {
-                                                                "template_reference": {
-                                                                    "name": "attach_data",
-                                                                    "value": "attachments\\attach_data"
-                                                                },
-                                                                "marker_name_parent": "",
-                                                                "parent_rigidbody_target_name": "",
-                                                                "game_object_attachment_type": "scenegraph"
-                                                            },
-                                                            "ebp": {
-                                                                "instance_reference": "ebps/races/american/weapons/ballistic_weapon/tank_gun/w_75mm_white_phosphorous_sherman_us"
-                                                            },
-                                                            "attachment_flags": {
-                                                                "sim_only": "False",
-                                                                "no_pathfinding": "True",
-                                                                "not_snappable": "False",
-                                                                "restore_snap_to_ground_on_detach": "False",
-                                                                "no_sim_update": "False",
-                                                                "join_parent_squad": "False",
-                                                                "redirect_damage_to_parent_entity": "True",
-                                                                "receive_parent_animations": "False",
-                                                                "receive_parent_death": "False"
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        ],
-                                        "receives_attack_commands": "True",
-                                        "base_marker": "loc_turret",
-                                        "preferred_inventory_item_categories": [],
-                                        "firing_offset_markers": [],
-                                        "offhand_marker": "",
-                                        "initialize_weapons_on_creation": "True"
-                                    }
-                                },
-                                {
-                                    "hardpoint": {
-                                        "parent_hardpoint": 1.0,
-                                        "weapon_table": [
-                                            {
-                                                "weapon": {
-                                                    "heading": {
-                                                        "x": 0.0,
-                                                        "y": 0.0,
-                                                        "z": 1.0
-                                                    },
-                                                    "length": 0.0,
-                                                    "origin": {
-                                                        "x": 0.0,
-                                                        "y": 0.0,
-                                                        "z": 0.0
-                                                    },
-                                                    "type": "default",
-                                                    "weapon_entity_attachment": {
-                                                        "template_reference": {
-                                                            "name": "weapon_entity_attachment",
-                                                            "value": "options\\attachment_types\\entity_create_attachment"
-                                                        },
-                                                        "entity_attach_data": {
-                                                            "template_reference": {
-                                                                "name": "entity_attach_data",
-                                                                "value": "attachments\\attach_data_entity"
-                                                            },
-                                                            "attach_data": {
-                                                                "template_reference": {
-                                                                    "name": "attach_data",
-                                                                    "value": "attachments\\attach_data"
-                                                                },
-                                                                "marker_name_parent": "",
-                                                                "parent_rigidbody_target_name": "",
-                                                                "game_object_attachment_type": "scenegraph"
-                                                            },
-                                                            "ebp": {
-                                                                "instance_reference": "ebps/races/american/weapons/small_arms/machine_guns/light_machine_gun/w_30cal_coaxial_sherman_us"
-                                                            },
-                                                            "attachment_flags": {
-                                                                "sim_only": "False",
-                                                                "no_pathfinding": "True",
-                                                                "not_snappable": "False",
-                                                                "restore_snap_to_ground_on_detach": "False",
-                                                                "no_sim_update": "False",
-                                                                "join_parent_squad": "False",
-                                                                "redirect_damage_to_parent_entity": "True",
-                                                                "receive_parent_animations": "False",
-                                                                "receive_parent_death": "False"
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        ],
-                                        "receives_attack_commands": "False",
-                                        "base_marker": "loc_coaxial_hmg",
-                                        "preferred_inventory_item_categories": [],
-                                        "firing_offset_markers": [],
-                                        "offhand_marker": "",
-                                        "initialize_weapons_on_creation": "True"
-                                    }
-                                },
-                                {
-                                    "hardpoint": {
-                                        "parent_hardpoint": -1.0,
-                                        "weapon_table": [
-                                            {
-                                                "weapon": {
-                                                    "heading": {
-                                                        "x": 0.0,
-                                                        "y": 0.0,
-                                                        "z": 0.05
-                                                    },
-                                                    "length": 0.0,
-                                                    "origin": {
-                                                        "x": 0.0,
-                                                        "y": 0.0,
-                                                        "z": 0.0
-                                                    },
-                                                    "type": "default",
-                                                    "weapon_entity_attachment": {
-                                                        "template_reference": {
-                                                            "name": "weapon_entity_attachment",
-                                                            "value": "options\\attachment_types\\entity_create_attachment"
-                                                        },
-                                                        "entity_attach_data": {
-                                                            "template_reference": {
-                                                                "name": "entity_attach_data",
-                                                                "value": "attachments\\attach_data_entity"
-                                                            },
-                                                            "attach_data": {
-                                                                "template_reference": {
-                                                                    "name": "attach_data",
-                                                                    "value": "attachments\\attach_data"
-                                                                },
-                                                                "marker_name_parent": "",
-                                                                "parent_rigidbody_target_name": "",
-                                                                "game_object_attachment_type": "scenegraph"
-                                                            },
-                                                            "ebp": {
-                                                                "instance_reference": "ebps/races/american/weapons/small_arms/machine_guns/light_machine_gun/w_30cal_hull"
-                                                            },
-                                                            "attachment_flags": {
-                                                                "sim_only": "False",
-                                                                "no_pathfinding": "True",
-                                                                "not_snappable": "False",
-                                                                "restore_snap_to_ground_on_detach": "False",
-                                                                "no_sim_update": "False",
-                                                                "join_parent_squad": "False",
-                                                                "redirect_damage_to_parent_entity": "True",
-                                                                "receive_parent_animations": "False",
-                                                                "receive_parent_death": "False"
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        ],
-                                        "receives_attack_commands": "False",
-                                        "base_marker": "loc_hull_hmg",
-                                        "preferred_inventory_item_categories": [],
-                                        "firing_offset_markers": [],
-                                        "offhand_marker": "",
-                                        "initialize_weapons_on_creation": "True"
-                                    }
-                                },
-                                {
-                                    "hardpoint": {
-                                        "parent_hardpoint": 1.0,
-                                        "weapon_table": [],
-                                        "receives_attack_commands": "True",
-                                        "base_marker": "loc_cupola",
-                                        "preferred_inventory_item_categories": [],
-                                        "firing_offset_markers": [],
-                                        "offhand_marker": "",
-                                        "initialize_weapons_on_creation": "True"
-                                    }
-                                },
-                                {
-                                    "hardpoint": {
-                                        "parent_hardpoint": 1.0,
-                                        "weapon_table": [
-                                            {
-                                                "weapon": {
-                                                    "heading": {
-                                                        "x": 0.0,
-                                                        "y": 0.0,
-                                                        "z": 1.0
-                                                    },
-                                                    "length": 0.0,
-                                                    "origin": {
-                                                        "x": 0.0,
-                                                        "y": 0.0,
-                                                        "z": 0.0
-                                                    },
-                                                    "type": "default",
-                                                    "weapon_entity_attachment": {
-                                                        "template_reference": {
-                                                            "name": "weapon_entity_attachment",
-                                                            "value": "options\\attachment_types\\entity_create_attachment"
-                                                        },
-                                                        "entity_attach_data": {
-                                                            "template_reference": {
-                                                                "name": "entity_attach_data",
-                                                                "value": "attachments\\attach_data_entity"
-                                                            },
-                                                            "attach_data": {
-                                                                "template_reference": {
-                                                                    "name": "attach_data",
-                                                                    "value": "attachments\\attach_data"
-                                                                },
-                                                                "marker_name_parent": "loc_smoke_launcher",
-                                                                "parent_rigidbody_target_name": "",
-                                                                "game_object_attachment_type": "scenegraph"
-                                                            },
-                                                            "ebp": {
-                                                                "instance_reference": "ebps/races/american/weapons/explosive_weapons/mortar/w_2inch_mortar_smoke_sherman_us"
-                                                            },
-                                                            "attachment_flags": {
-                                                                "sim_only": "False",
-                                                                "no_pathfinding": "True",
-                                                                "not_snappable": "False",
-                                                                "restore_snap_to_ground_on_detach": "False",
-                                                                "no_sim_update": "False",
-                                                                "join_parent_squad": "False",
-                                                                "redirect_damage_to_parent_entity": "True",
-                                                                "receive_parent_animations": "False",
-                                                                "receive_parent_death": "False"
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        ],
-                                        "receives_attack_commands": "False",
-                                        "base_marker": "loc_attachment_01",
-                                        "preferred_inventory_item_categories": [],
-                                        "firing_offset_markers": [],
-                                        "offhand_marker": "",
-                                        "initialize_weapons_on_creation": "True"
-                                    }
-                                }
-                            ],
-                            "sight_hardpoint": -1.0,
-                            "attack_move": {
-                                "attack_move_targeting_range": 30.0
-                            },
-                            "idle_targeting": {
-                                "idle_targeting_range": 15.0
-                            },
-                            "kill_action_tree": {
-                                "template_reference": {
-                                    "name": "kill_action_tree",
-                                    "value": "state_tree_reference_info"
-                                },
-                                "ActionTree_OpeningBranch": ""
-                            },
-                            "unequip_weapons_on_death": "False",
-                            "ui_show_most_progressed_weapon_reload": "False"
-                        }
-                    },
-                    {
-                        "exts": {
-                            "template_reference": {
-                                "name": "exts",
-                                "value": "ebpextensions\\presentation_override_ext"
-                            },
-                            "only_after_repossession": "True",
-                            "race_mapping_list": []
                         }
                     },
                     {
@@ -11990,7 +11330,6 @@
                                     "name": "start_move_speed_option",
                                     "value": "options\\ebpextensions\\movingext\\start_move_speed_option"
                                 },
-                                "speed": "speed",
                                 "max_frame_ticks_from_stopped": 5.0,
                                 "rotation_rate_multiplier": 1.3
                             }
@@ -12029,141 +11368,6 @@
                         "exts": {
                             "template_reference": {
                                 "name": "exts",
-                                "value": "ebpextensions\\construction_ext"
-                            },
-                            "automatic_fit_on_placement": "True",
-                            "cancel_refund_percentage": 100.0,
-                            "construction_state_name": "ability_construction_state",
-                            "construction_transition_time": 1.36667,
-                            "force_construction": "False",
-                            "max_engineers": 0.0,
-                            "on_construction_squad": {
-                                "instance_reference": ""
-                            },
-                            "orientation": 0.0,
-                            "placement_type": "tp_structure",
-                            "prefer_spots_on_side_with_leader": "False",
-                            "query_abilities_for_range_ui": "True",
-                            "random_rotation": "False",
-                            "replace_ghost_distance": 5.0,
-                            "self_construct": "False",
-                            "field_placement_info": {
-                                "border_entity": {
-                                    "instance_reference": ""
-                                },
-                                "replace_entity": {
-                                    "instance_reference": ""
-                                },
-                                "replace_count": 0.0,
-                                "replace_retry_distance": 0.0,
-                                "column_count": 2.0,
-                                "row_count": 2.0
-                            },
-                            "placement_valid": {
-                                "instance_reference": ""
-                            },
-                            "placement_invalid": {
-                                "instance_reference": ""
-                            },
-                            "ui_range": {
-                                "instance_reference": ""
-                            },
-                            "ui_range_radius": 20.0,
-                            "ui_setfacing": {
-                                "instance_reference": ""
-                            },
-                            "query_weapon_for_range_ui": "True",
-                            "squad_ignore_pathfinding": "False",
-                            "placement_requirements": {
-                                "must_be_in_line_of_sight": "False",
-                                "must_not_be_in_walkable_surfaces": "False",
-                                "must_be_on_strategic_point": "False",
-                                "requirements": [],
-                                "spacing_distance": 0.0,
-                                "skip_impass_checks_and_ignore_immovable_entities": "False",
-                                "state_tree_conditions": "",
-                                "must_be_in_explored_area": "False",
-                                "must_be_on_movement_node": "False",
-                                "placement_requirement_options": [],
-                                "ui_usage_txt": {
-                                    "locstring": {
-                                        "name": "ui_usage_txt",
-                                        "value": "0"
-                                    }
-                                }
-                            },
-                            "can_be_cancelled": "True",
-                            "construction_health_option": {
-                                "template_reference": {
-                                    "name": "construction_health_option",
-                                    "value": "options\\none"
-                                }
-                            },
-                            "min_music_intensity": 0.0,
-                            "tooltip_data_template": "",
-                            "placement_set_facing_style": "disabled",
-                            "facing_quadrants": {
-                                "search_radius_metres": 0.0,
-                                "radius_metres": 0.0,
-                                "quadrants": {
-                                    "front": "None",
-                                    "rear": "None",
-                                    "left": "None",
-                                    "right": "None"
-                                }
-                            },
-                            "facing_surface_normal": "False",
-                            "fixed_rotation_impass_avoidance": {
-                                "minimum_search_radius_cells": 5.0,
-                                "use_impass_avoidance": "False"
-                            },
-                            "on_construction_complete_state_tree_refs": {
-                                "on_construction_complete_entity_state_tree_ref": "",
-                                "on_construction_complete_physical_state_tree_ref": "",
-                                "on_construction_complete_squad_state_tree_ref": "",
-                                "on_construction_plan_complete_global_state_tree_ref": "",
-                                "while_construction_complete_entity_state_tree_ref": "",
-                                "while_construction_complete_physical_state_tree_ref": ""
-                            },
-                            "can_be_cancelled_state_tree_conditions": "",
-                            "query_movement_node_modifier_for_range_ui": "True",
-                            "construction_site_erase_inactive": "True",
-                            "entity_placement_class": "",
-                            "show_ability_range_in_construction_item_preview": "False",
-                            "preview_upgrade_effects": {
-                                "statemachine_key": "",
-                                "on_key": "",
-                                "off_key": "",
-                                "unit_type": "",
-                                "reticule": {
-                                    "instance_reference": ""
-                                },
-                                "reticule_radius": 0.0,
-                                "area_info": {
-                                    "template_reference": {
-                                        "name": "area_info",
-                                        "value": ""
-                                    }
-                                }
-                            },
-                            "placement_position_ignores_walkable_surfaces": "False",
-                            "construction_site_erase_inactive_in_progress": "False",
-                            "max_fence_placement_count": 0.0,
-                            "placement_weapon": {
-                                "instance_reference": ""
-                            },
-                            "started_and_inactive_max_duration_seconds": 0.0,
-                            "started_and_inactive_max_distance_from_builders": 0.0,
-                            "too_light_to_destroy_built_over_entities": "False",
-                            "default_facing_mode": "towards_enemy_base",
-                            "random_rotation_step": 0.0,
-                            "block_pathing_only_on_construction_complete": "False"
-                        }
-                    },
-                    {
-                        "exts": {
-                            "template_reference": {
-                                "name": "exts",
                                 "value": "ebpextensions\\health_ext"
                             },
                             "can_repair": "True",
@@ -12257,136 +11461,11 @@
                         "exts": {
                             "template_reference": {
                                 "name": "exts",
-                                "value": "ebpextensions\\cost_ext"
-                            },
-                            "time_cost": {
-                                "cost": {
-                                    "action": 0.0,
-                                    "command": 0.0,
-                                    "popcap": 0.0,
-                                    "fuel": 0.0,
-                                    "munition": 0.0,
-                                    "manpower": 100.0,
-                                    "requisition": 0.0,
-                                    "ultimate": 0.0,
-                                    "ability_resource_1": 0.0,
-                                    "ability_resource_2": 0.0
-                                },
-                                "time_seconds": 60.0,
-                                "time_turns": 0.0,
-                                "builder_cost": {
-                                    "action_points": 0.0
-                                },
-                                "squad_cost": {
-                                    "action": 0.0,
-                                    "command": 0.0,
-                                    "popcap": 0.0,
-                                    "fuel": 0.0,
-                                    "munition": 0.0,
-                                    "manpower": 0.0,
-                                    "requisition": 0.0,
-                                    "ultimate": 0.0,
-                                    "ability_resource_1": 0.0,
-                                    "ability_resource_2": 0.0
-                                }
-                            }
-                        }
-                    },
-                    {
-                        "exts": {
-                            "template_reference": {
-                                "name": "exts",
-                                "value": "ebpextensions\\sight_ext"
-                            },
-                            "detect_camouflage": {
-                                "tp_global": 10.0,
-                                "tp_mine": -1.0,
-                                "tp_unit": -1.0,
-                                "tp_democharge": -1.0
-                            },
-                            "extended_sight": "False",
-                            "extended_sight_radius": 70.0,
-                            "reveal_area_on_death_time": 1.5,
-                            "sight_package": {
-                                "inner_height": 2.5,
-                                "inner_radius": 0.0,
-                                "outer_height": 0.0,
-                                "outer_radius": 35.0,
-                                "cone_angle": 360.0,
-                                "cone_start_radius": 0.0
-                            },
-                            "specific_detector_actions": [],
-                            "vertical_truesight": {
-                                "enable": "True",
-                                "tolerance": 1.0,
-                                "eye_height": 2.5
-                            },
-                            "camouflage_detection_enabled": "True",
-                            "blockers_check_bounding_box": "True",
-                            "reveal_area_on_death_radius": 0.0,
-                            "camouflage_detection_respects_fog_of_war_vision": "True",
-                            "camouflage_detection_respects_shot_blockers": "True"
-                        }
-                    },
-                    {
-                        "exts": {
-                            "template_reference": {
-                                "name": "exts",
-                                "value": "ebpextensions\\spawner_ext"
-                            },
-                            "must_be_in_supply": "False",
-                            "reinforce_radius": 0.0,
-                            "spawn_items": [],
-                            "bonus_xp_from_hold_list": [],
-                            "reinforce_requirements": [],
-                            "spawn_to_hold_try_first": "False",
-                            "queue_requirements": [],
-                            "can_rally": "True",
-                            "animated_spawn_option": {
-                                "template_reference": {
-                                    "name": "animated_spawn_option",
-                                    "value": "options\\none"
-                                }
-                            },
-                            "max_queue_size_override": -1.0,
-                            "queue_requirements_openingbranch": "",
-                            "reinforce_requirements_openingbranch": "",
-                            "production_item_completed_openingbranch": "",
-                            "enforce_minimum_clearance_at_spawn_positions": "False",
-                            "enforce_minimum_clearance_if_entities_blocking": "True",
-                            "enforce_minimum_clearance_at_spawn_positions_search_range": 0.0,
-                            "rally_pass_type": {
-                                "instance_reference": ""
-                            },
-                            "parallel_production_count": 1.0,
-                            "default_rally_point_offset": {
-                                "template_reference": {
-                                    "name": "default_rally_point_offset",
-                                    "value": ""
-                                }
-                            },
-                            "always_paradrop_spawn": "False",
-                            "shared_team_production": "False"
-                        }
-                    },
-                    {
-                        "exts": {
-                            "template_reference": {
-                                "name": "exts",
                                 "value": "ebpextensions\\type_ext"
                             },
                             "unit_type_list": [
                                 {
-                                    "unit_type": "vehicle"
-                                },
-                                {
-                                    "unit_type": "light_vehicle"
-                                },
-                                {
                                     "unit_type": "american"
-                                },
-                                {
-                                    "unit_type": "cover_object"
                                 },
                                 {
                                     "unit_type": "rideable_vehicle"
@@ -12422,47 +11501,6 @@
                         "exts": {
                             "template_reference": {
                                 "name": "exts",
-                                "value": "ebpextensions\\upgrade_ext"
-                            },
-                            "must_be_in_supply": "False",
-                            "number_of_standard_slots": -1.0,
-                            "standard_upgrades": [],
-                            "max_queue_size_override": -1.0,
-                            "production_item_completed_openingbranch": "",
-                            "shared_team_production": "False"
-                        }
-                    },
-                    {
-                        "exts": {
-                            "template_reference": {
-                                "name": "exts",
-                                "value": "ebpextensions\\walkable_surface_ext"
-                            },
-                            "cover_type": "",
-                            "seconds_after_death": 0.0,
-                            "animator_dgm_name": "art/armies/american/vehicles/higgins_boat/higgins_boat",
-                            "remove_on_death": "True",
-                            "start_active": "True",
-                            "impass_override": {
-                                "template_reference": {
-                                    "name": "impass_override",
-                                    "value": "options\\ebpextensions\\walkablesurfaceext\\impass_override"
-                                },
-                                "block_path": [],
-                                "cant_build": "True"
-                            },
-                            "should_rasterize_partial_cells": "False",
-                            "stackable": "True",
-                            "walkable_surface_on_remove_action": "kill_entities",
-                            "walkable_surface_terrain_type": "",
-                            "remove_on_death_meshes": [],
-                            "only_override_above_terrain": "False"
-                        }
-                    },
-                    {
-                        "exts": {
-                            "template_reference": {
-                                "name": "exts",
                                 "value": "ebpextensions\\entity_inventory_ext"
                             },
                             "category_capacity": {
@@ -12473,362 +11511,6 @@
                                 "vehicle_wreck": 0.0,
                                 "hold_weapon": 0.0
                             }
-                        }
-                    },
-                    {
-                        "exts": {
-                            "template_reference": {
-                                "name": "exts",
-                                "value": "ebpextensions\\combat_ext"
-                            },
-                            "reject_attack_command": "False",
-                            "hardpoints": [
-                                {
-                                    "hardpoint": {
-                                        "parent_hardpoint": -1.0,
-                                        "weapon_table": [
-                                            {
-                                                "weapon": {
-                                                    "heading": {
-                                                        "x": 0.0,
-                                                        "y": 0.0,
-                                                        "z": 1.0
-                                                    },
-                                                    "length": 3.0,
-                                                    "origin": {
-                                                        "x": 0.0,
-                                                        "y": 0.0,
-                                                        "z": 0.0
-                                                    },
-                                                    "type": "default",
-                                                    "weapon_entity_attachment": {
-                                                        "template_reference": {
-                                                            "name": "weapon_entity_attachment",
-                                                            "value": "options\\attachment_types\\entity_create_attachment"
-                                                        },
-                                                        "entity_attach_data": {
-                                                            "template_reference": {
-                                                                "name": "entity_attach_data",
-                                                                "value": "attachments\\attach_data_entity"
-                                                            },
-                                                            "attach_data": {
-                                                                "template_reference": {
-                                                                    "name": "attach_data",
-                                                                    "value": "attachments\\attach_data"
-                                                                },
-                                                                "marker_name_parent": "",
-                                                                "parent_rigidbody_target_name": "",
-                                                                "game_object_attachment_type": "scenegraph"
-                                                            },
-                                                            "ebp": {
-                                                                "instance_reference": "ebps/races/american/weapons/ballistic_weapon/tank_gun/w_75mm_sherman_us"
-                                                            },
-                                                            "attachment_flags": {
-                                                                "sim_only": "False",
-                                                                "no_pathfinding": "True",
-                                                                "not_snappable": "False",
-                                                                "restore_snap_to_ground_on_detach": "False",
-                                                                "no_sim_update": "False",
-                                                                "join_parent_squad": "False",
-                                                                "redirect_damage_to_parent_entity": "True",
-                                                                "receive_parent_animations": "False",
-                                                                "receive_parent_death": "False"
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            },
-                                            {
-                                                "weapon": {
-                                                    "heading": {
-                                                        "x": 0.0,
-                                                        "y": 0.0,
-                                                        "z": 1.0
-                                                    },
-                                                    "length": 3.0,
-                                                    "origin": {
-                                                        "x": 0.0,
-                                                        "y": 0.0,
-                                                        "z": 0.0
-                                                    },
-                                                    "type": "default",
-                                                    "weapon_entity_attachment": {
-                                                        "template_reference": {
-                                                            "name": "weapon_entity_attachment",
-                                                            "value": "options\\attachment_types\\entity_create_attachment"
-                                                        },
-                                                        "entity_attach_data": {
-                                                            "template_reference": {
-                                                                "name": "entity_attach_data",
-                                                                "value": "attachments\\attach_data_entity"
-                                                            },
-                                                            "attach_data": {
-                                                                "template_reference": {
-                                                                    "name": "attach_data",
-                                                                    "value": "attachments\\attach_data"
-                                                                },
-                                                                "marker_name_parent": "",
-                                                                "parent_rigidbody_target_name": "",
-                                                                "game_object_attachment_type": "scenegraph"
-                                                            },
-                                                            "ebp": {
-                                                                "instance_reference": "ebps/races/american/weapons/ballistic_weapon/tank_gun/w_75mm_white_phosphorous_sherman_us"
-                                                            },
-                                                            "attachment_flags": {
-                                                                "sim_only": "False",
-                                                                "no_pathfinding": "True",
-                                                                "not_snappable": "False",
-                                                                "restore_snap_to_ground_on_detach": "False",
-                                                                "no_sim_update": "False",
-                                                                "join_parent_squad": "False",
-                                                                "redirect_damage_to_parent_entity": "True",
-                                                                "receive_parent_animations": "False",
-                                                                "receive_parent_death": "False"
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        ],
-                                        "receives_attack_commands": "True",
-                                        "base_marker": "loc_turret",
-                                        "preferred_inventory_item_categories": [],
-                                        "firing_offset_markers": [],
-                                        "offhand_marker": "",
-                                        "initialize_weapons_on_creation": "True"
-                                    }
-                                },
-                                {
-                                    "hardpoint": {
-                                        "parent_hardpoint": 1.0,
-                                        "weapon_table": [
-                                            {
-                                                "weapon": {
-                                                    "heading": {
-                                                        "x": 0.0,
-                                                        "y": 0.0,
-                                                        "z": 1.0
-                                                    },
-                                                    "length": 0.0,
-                                                    "origin": {
-                                                        "x": 0.0,
-                                                        "y": 0.0,
-                                                        "z": 0.0
-                                                    },
-                                                    "type": "default",
-                                                    "weapon_entity_attachment": {
-                                                        "template_reference": {
-                                                            "name": "weapon_entity_attachment",
-                                                            "value": "options\\attachment_types\\entity_create_attachment"
-                                                        },
-                                                        "entity_attach_data": {
-                                                            "template_reference": {
-                                                                "name": "entity_attach_data",
-                                                                "value": "attachments\\attach_data_entity"
-                                                            },
-                                                            "attach_data": {
-                                                                "template_reference": {
-                                                                    "name": "attach_data",
-                                                                    "value": "attachments\\attach_data"
-                                                                },
-                                                                "marker_name_parent": "",
-                                                                "parent_rigidbody_target_name": "",
-                                                                "game_object_attachment_type": "scenegraph"
-                                                            },
-                                                            "ebp": {
-                                                                "instance_reference": "ebps/races/american/weapons/small_arms/machine_guns/light_machine_gun/w_30cal_coaxial_sherman_us"
-                                                            },
-                                                            "attachment_flags": {
-                                                                "sim_only": "False",
-                                                                "no_pathfinding": "True",
-                                                                "not_snappable": "False",
-                                                                "restore_snap_to_ground_on_detach": "False",
-                                                                "no_sim_update": "False",
-                                                                "join_parent_squad": "False",
-                                                                "redirect_damage_to_parent_entity": "True",
-                                                                "receive_parent_animations": "False",
-                                                                "receive_parent_death": "False"
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        ],
-                                        "receives_attack_commands": "False",
-                                        "base_marker": "loc_coaxial_hmg",
-                                        "preferred_inventory_item_categories": [],
-                                        "firing_offset_markers": [],
-                                        "offhand_marker": "",
-                                        "initialize_weapons_on_creation": "True"
-                                    }
-                                },
-                                {
-                                    "hardpoint": {
-                                        "parent_hardpoint": -1.0,
-                                        "weapon_table": [
-                                            {
-                                                "weapon": {
-                                                    "heading": {
-                                                        "x": 0.0,
-                                                        "y": 0.0,
-                                                        "z": 0.05
-                                                    },
-                                                    "length": 0.0,
-                                                    "origin": {
-                                                        "x": 0.0,
-                                                        "y": 0.0,
-                                                        "z": 0.0
-                                                    },
-                                                    "type": "default",
-                                                    "weapon_entity_attachment": {
-                                                        "template_reference": {
-                                                            "name": "weapon_entity_attachment",
-                                                            "value": "options\\attachment_types\\entity_create_attachment"
-                                                        },
-                                                        "entity_attach_data": {
-                                                            "template_reference": {
-                                                                "name": "entity_attach_data",
-                                                                "value": "attachments\\attach_data_entity"
-                                                            },
-                                                            "attach_data": {
-                                                                "template_reference": {
-                                                                    "name": "attach_data",
-                                                                    "value": "attachments\\attach_data"
-                                                                },
-                                                                "marker_name_parent": "",
-                                                                "parent_rigidbody_target_name": "",
-                                                                "game_object_attachment_type": "scenegraph"
-                                                            },
-                                                            "ebp": {
-                                                                "instance_reference": "ebps/races/american/weapons/small_arms/machine_guns/light_machine_gun/w_30cal_hull"
-                                                            },
-                                                            "attachment_flags": {
-                                                                "sim_only": "False",
-                                                                "no_pathfinding": "True",
-                                                                "not_snappable": "False",
-                                                                "restore_snap_to_ground_on_detach": "False",
-                                                                "no_sim_update": "False",
-                                                                "join_parent_squad": "False",
-                                                                "redirect_damage_to_parent_entity": "True",
-                                                                "receive_parent_animations": "False",
-                                                                "receive_parent_death": "False"
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        ],
-                                        "receives_attack_commands": "False",
-                                        "base_marker": "loc_hull_hmg",
-                                        "preferred_inventory_item_categories": [],
-                                        "firing_offset_markers": [],
-                                        "offhand_marker": "",
-                                        "initialize_weapons_on_creation": "True"
-                                    }
-                                },
-                                {
-                                    "hardpoint": {
-                                        "parent_hardpoint": 1.0,
-                                        "weapon_table": [],
-                                        "receives_attack_commands": "True",
-                                        "base_marker": "loc_cupola",
-                                        "preferred_inventory_item_categories": [],
-                                        "firing_offset_markers": [],
-                                        "offhand_marker": "",
-                                        "initialize_weapons_on_creation": "True"
-                                    }
-                                },
-                                {
-                                    "hardpoint": {
-                                        "parent_hardpoint": 1.0,
-                                        "weapon_table": [
-                                            {
-                                                "weapon": {
-                                                    "heading": {
-                                                        "x": 0.0,
-                                                        "y": 0.0,
-                                                        "z": 1.0
-                                                    },
-                                                    "length": 0.0,
-                                                    "origin": {
-                                                        "x": 0.0,
-                                                        "y": 0.0,
-                                                        "z": 0.0
-                                                    },
-                                                    "type": "default",
-                                                    "weapon_entity_attachment": {
-                                                        "template_reference": {
-                                                            "name": "weapon_entity_attachment",
-                                                            "value": "options\\attachment_types\\entity_create_attachment"
-                                                        },
-                                                        "entity_attach_data": {
-                                                            "template_reference": {
-                                                                "name": "entity_attach_data",
-                                                                "value": "attachments\\attach_data_entity"
-                                                            },
-                                                            "attach_data": {
-                                                                "template_reference": {
-                                                                    "name": "attach_data",
-                                                                    "value": "attachments\\attach_data"
-                                                                },
-                                                                "marker_name_parent": "loc_smoke_launcher",
-                                                                "parent_rigidbody_target_name": "",
-                                                                "game_object_attachment_type": "scenegraph"
-                                                            },
-                                                            "ebp": {
-                                                                "instance_reference": "ebps/races/american/weapons/explosive_weapons/mortar/w_2inch_mortar_smoke_sherman_us"
-                                                            },
-                                                            "attachment_flags": {
-                                                                "sim_only": "False",
-                                                                "no_pathfinding": "True",
-                                                                "not_snappable": "False",
-                                                                "restore_snap_to_ground_on_detach": "False",
-                                                                "no_sim_update": "False",
-                                                                "join_parent_squad": "False",
-                                                                "redirect_damage_to_parent_entity": "True",
-                                                                "receive_parent_animations": "False",
-                                                                "receive_parent_death": "False"
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        ],
-                                        "receives_attack_commands": "False",
-                                        "base_marker": "loc_attachment_01",
-                                        "preferred_inventory_item_categories": [],
-                                        "firing_offset_markers": [],
-                                        "offhand_marker": "",
-                                        "initialize_weapons_on_creation": "True"
-                                    }
-                                }
-                            ],
-                            "sight_hardpoint": -1.0,
-                            "attack_move": {
-                                "attack_move_targeting_range": 30.0
-                            },
-                            "idle_targeting": {
-                                "idle_targeting_range": 15.0
-                            },
-                            "kill_action_tree": {
-                                "template_reference": {
-                                    "name": "kill_action_tree",
-                                    "value": "state_tree_reference_info"
-                                },
-                                "ActionTree_OpeningBranch": ""
-                            },
-                            "unequip_weapons_on_death": "False",
-                            "ui_show_most_progressed_weapon_reload": "False"
-                        }
-                    },
-                    {
-                        "exts": {
-                            "template_reference": {
-                                "name": "exts",
-                                "value": "ebpextensions\\presentation_override_ext"
-                            },
-                            "only_after_repossession": "True",
-                            "race_mapping_list": []
                         }
                     },
                     {
@@ -12920,102 +11602,27 @@
                         "exts": {
                             "template_reference": {
                                 "name": "exts",
-                                "value": "ebpextensions\\moving_ext"
+                                "value": "ebpextensions\\walkable_surface_ext"
                             },
-                            "acceleration": 3.0,
-                            "deceleration": 5.5,
-                            "high_path_look_ahead_max_dist": 35.0,
-                            "orient_to_terrain": "True",
-                            "pass_type": {
-                                "instance_reference": "pass_types/navy"
-                            },
-                            "rotation_rate": 32.0,
-                            "turn_plan": {
-                                "instance_reference": "turn_plan/tank_i"
-                            },
-                            "on_land_overturn_scale": 0.1,
-                            "motion_tree_movement_direction_count": 4.0,
-                            "right_of_way_priority": 100.0,
-                            "use_prediction": "False",
-                            "reduce_clipping_by_slowing_other": "False",
-                            "walker_option": {
+                            "cover_type": "",
+                            "seconds_after_death": 0.0,
+                            "animator_dgm_name": "art/armies/american/vehicles/higgins_boat/higgins_boat",
+                            "remove_on_death": "True",
+                            "start_active": "True",
+                            "impass_override": {
                                 "template_reference": {
-                                    "name": "walker_option",
-                                    "value": "options\\none"
-                                }
-                            },
-                            "motion_tree_pivot_animations_count": 0.0,
-                            "motion_tree_atomic_pivot_anim": "False",
-                            "skimmer_option": {
-                                "template_reference": {
-                                    "name": "skimmer_option",
-                                    "value": "options\\none"
-                                }
-                            },
-                            "can_path_into_blocked_cover": "False",
-                            "convertible_dynamics_option": {
-                                "template_reference": {
-                                    "name": "convertible_dynamics_option",
-                                    "value": "options\\none"
-                                }
-                            },
-                            "pathfinding_option": {
-                                "template_reference": {
-                                    "name": "pathfinding_option",
-                                    "value": "options\\ebpextensions\\movingext\\pathfinding_option"
+                                    "name": "impass_override",
+                                    "value": "options\\ebpextensions\\walkablesurfaceext\\impass_override"
                                 },
-                                "can_path_through_allies": "True",
-                                "path_blocking_priority": 255.0,
-                                "right_of_way_evacuate_in_combat_allies": "True",
-                                "right_of_way_allies_time_in_combat_seconds": 5.0,
-                                "ignore_entity_collision": "False"
+                                "block_path": [],
+                                "cant_build": "True"
                             },
-                            "motion_tree_strafing_anim": "False",
-                            "speed_levels": {
-                                "speed_level_0": 7.0,
-                                "speed_level_1": 7.0,
-                                "speed_level_2": 7.0,
-                                "speed_level_3": 7.0,
-                                "speed_level_4": 7.0
-                            },
-                            "melee_move_tolerance": 0.0,
-                            "navigation_agent_info": {
-                                "instance_reference": ""
-                            },
-                            "can_evacuate_enemy_unit": "True",
-                            "pass_type_destination": {
-                                "instance_reference": "pass_types/navy"
-                            },
-                            "speed_scaling_table": {
-                                "min_speed": 0.0,
-                                "default_speed": 7.0,
-                                "max_speed": 7.0,
-                                "reverse_max_speed": 0.0
-                            },
-                            "snap_to_surface_type": "Water",
-                            "reverse_acceleration": 0.0,
-                            "reverse_deceleration": 0.0,
-                            "pivot_rate": 0.0,
-                            "portal_to_portal_cost_exponent": 1.0,
-                            "smooth_path_option": {
-                                "template_reference": {
-                                    "name": "smooth_path_option",
-                                    "value": "options\\ebpextensions\\movingext\\cover_and_blockers_smoothing_option"
-                                },
-                                "ignore_num_cells_at_start": 3.0,
-                                "ignore_num_cells_worse_cost": 3.0,
-                                "with_cost_speed_multiplier": 0.4
-                            },
-                            "direct_path_look_ahead_max_dist": 71.0,
-                            "start_move_speed_option": {
-                                "template_reference": {
-                                    "name": "start_move_speed_option",
-                                    "value": "options\\ebpextensions\\movingext\\start_move_speed_option"
-                                },
-                                "speed": "speed",
-                                "max_frame_ticks_from_stopped": 5.0,
-                                "rotation_rate_multiplier": 1.3
-                            }
+                            "should_rasterize_partial_cells": "False",
+                            "stackable": "True",
+                            "walkable_surface_on_remove_action": "kill_entities",
+                            "walkable_surface_terrain_type": "",
+                            "remove_on_death_meshes": [],
+                            "only_override_above_terrain": "False"
                         }
                     }
                 ],
@@ -13218,6 +11825,47 @@
                             "reveal_area_on_death_radius": 0.0,
                             "camouflage_detection_respects_fog_of_war_vision": "True",
                             "camouflage_detection_respects_shot_blockers": "True"
+                        }
+                    },
+                    {
+                        "exts": {
+                            "template_reference": {
+                                "name": "exts",
+                                "value": "ebpextensions\\spawner_ext"
+                            },
+                            "must_be_in_supply": "False",
+                            "reinforce_radius": 0.0,
+                            "spawn_items": [],
+                            "bonus_xp_from_hold_list": [],
+                            "reinforce_requirements": [],
+                            "spawn_to_hold_try_first": "False",
+                            "queue_requirements": [],
+                            "can_rally": "True",
+                            "animated_spawn_option": {
+                                "template_reference": {
+                                    "name": "animated_spawn_option",
+                                    "value": "options\\none"
+                                }
+                            },
+                            "max_queue_size_override": -1.0,
+                            "queue_requirements_openingbranch": "",
+                            "reinforce_requirements_openingbranch": "",
+                            "production_item_completed_openingbranch": "",
+                            "enforce_minimum_clearance_at_spawn_positions": "False",
+                            "enforce_minimum_clearance_if_entities_blocking": "True",
+                            "enforce_minimum_clearance_at_spawn_positions_search_range": 0.0,
+                            "rally_pass_type": {
+                                "instance_reference": ""
+                            },
+                            "parallel_production_count": 1.0,
+                            "default_rally_point_offset": {
+                                "template_reference": {
+                                    "name": "default_rally_point_offset",
+                                    "value": ""
+                                }
+                            },
+                            "always_paradrop_spawn": "False",
+                            "shared_team_production": "False"
                         }
                     },
                     {
@@ -13590,10 +12238,7 @@
                                 "template_reference": {
                                     "name": "start_move_speed_option",
                                     "value": "options\\none"
-                                },
-                                "speed": "speed",
-                                "max_frame_ticks_from_stopped": 2.0,
-                                "rotation_rate_multiplier": 1.3
+                                }
                             }
                         }
                     },
@@ -14100,204 +12745,6 @@
                                             "add_attachment_dynamics_to_crew_and_apply_root_motion": "False"
                                         }
                                     }
-                                },
-                                {
-                                    "race_data": {
-                                        "ext_key": {
-                                            "instance_reference": "racebps/americans"
-                                        },
-                                        "info": {
-                                            "role_list": [
-                                                {
-                                                    "role": {
-                                                        "name": "gunner",
-                                                        "spawn_crew_on_create": "False",
-                                                        "entity_attach_data": {
-                                                            "template_reference": {
-                                                                "name": "entity_attach_data",
-                                                                "value": "attachments\\attach_data_entity"
-                                                            },
-                                                            "attach_data": {
-                                                                "template_reference": {
-                                                                    "name": "attach_data",
-                                                                    "value": "attachments\\attach_data"
-                                                                },
-                                                                "marker_name_parent": "loc_cupola_gunner",
-                                                                "parent_rigidbody_target_name": "",
-                                                                "game_object_attachment_type": "scenegraph"
-                                                            },
-                                                            "ebp": {
-                                                                "instance_reference": "ebps/races/american/vehicles/crew/vehicle_crew_us"
-                                                            },
-                                                            "attachment_flags": {
-                                                                "sim_only": "False",
-                                                                "no_pathfinding": "True",
-                                                                "not_snappable": "True",
-                                                                "restore_snap_to_ground_on_detach": "False",
-                                                                "no_sim_update": "False",
-                                                                "join_parent_squad": "False",
-                                                                "redirect_damage_to_parent_entity": "False",
-                                                                "receive_parent_animations": "True",
-                                                                "receive_parent_death": "False"
-                                                            }
-                                                        },
-                                                        "animation_role": {
-                                                            "instance_reference": "animation_role/vehicle_turret/us_sherman/vt_sherman_75mm_cupola_gunner"
-                                                        },
-                                                        "parent_inventory_slot": "hard_point_3",
-                                                        "invulnerable": "True",
-                                                        "weapon_override": {
-                                                            "template_reference": {
-                                                                "name": "weapon_override",
-                                                                "value": ""
-                                                            }
-                                                        },
-                                                        "setup_marker_override": "",
-                                                        "can_ragdoll": "True"
-                                                    }
-                                                }
-                                            ],
-                                            "additional_crew_option": {
-                                                "template_reference": {
-                                                    "name": "additional_crew_option",
-                                                    "value": "options\\none"
-                                                }
-                                            },
-                                            "add_attachment_dynamics_to_crew_and_apply_root_motion": "False"
-                                        }
-                                    }
-                                },
-                                {
-                                    "race_data": {
-                                        "ext_key": {
-                                            "instance_reference": "racebps/germans"
-                                        },
-                                        "info": {
-                                            "role_list": [
-                                                {
-                                                    "role": {
-                                                        "name": "gunner",
-                                                        "spawn_crew_on_create": "False",
-                                                        "entity_attach_data": {
-                                                            "template_reference": {
-                                                                "name": "entity_attach_data",
-                                                                "value": "attachments\\attach_data_entity"
-                                                            },
-                                                            "attach_data": {
-                                                                "template_reference": {
-                                                                    "name": "attach_data",
-                                                                    "value": "attachments\\attach_data"
-                                                                },
-                                                                "marker_name_parent": "loc_cupola_gunner",
-                                                                "parent_rigidbody_target_name": "",
-                                                                "game_object_attachment_type": "scenegraph"
-                                                            },
-                                                            "ebp": {
-                                                                "instance_reference": "ebps/races/german/vehicles/crew/vehicle_crew_ger"
-                                                            },
-                                                            "attachment_flags": {
-                                                                "sim_only": "False",
-                                                                "no_pathfinding": "True",
-                                                                "not_snappable": "True",
-                                                                "restore_snap_to_ground_on_detach": "False",
-                                                                "no_sim_update": "False",
-                                                                "join_parent_squad": "False",
-                                                                "redirect_damage_to_parent_entity": "False",
-                                                                "receive_parent_animations": "True",
-                                                                "receive_parent_death": "False"
-                                                            }
-                                                        },
-                                                        "animation_role": {
-                                                            "instance_reference": "animation_role/vehicle_turret/us_sherman/vt_sherman_75mm_cupola_gunner"
-                                                        },
-                                                        "parent_inventory_slot": "hard_point_3",
-                                                        "invulnerable": "True",
-                                                        "weapon_override": {
-                                                            "template_reference": {
-                                                                "name": "weapon_override",
-                                                                "value": ""
-                                                            }
-                                                        },
-                                                        "setup_marker_override": "",
-                                                        "can_ragdoll": "True"
-                                                    }
-                                                }
-                                            ],
-                                            "additional_crew_option": {
-                                                "template_reference": {
-                                                    "name": "additional_crew_option",
-                                                    "value": "options\\none"
-                                                }
-                                            },
-                                            "add_attachment_dynamics_to_crew_and_apply_root_motion": "False"
-                                        }
-                                    }
-                                },
-                                {
-                                    "race_data": {
-                                        "ext_key": {
-                                            "instance_reference": "racebps/afrika_korps"
-                                        },
-                                        "info": {
-                                            "role_list": [
-                                                {
-                                                    "role": {
-                                                        "name": "gunner",
-                                                        "spawn_crew_on_create": "False",
-                                                        "entity_attach_data": {
-                                                            "template_reference": {
-                                                                "name": "entity_attach_data",
-                                                                "value": "attachments\\attach_data_entity"
-                                                            },
-                                                            "attach_data": {
-                                                                "template_reference": {
-                                                                    "name": "attach_data",
-                                                                    "value": "attachments\\attach_data"
-                                                                },
-                                                                "marker_name_parent": "loc_cupola_gunner",
-                                                                "parent_rigidbody_target_name": "",
-                                                                "game_object_attachment_type": "scenegraph"
-                                                            },
-                                                            "ebp": {
-                                                                "instance_reference": "ebps/races/afrika_korps/vehicles/crew/crew_vehicle_ak"
-                                                            },
-                                                            "attachment_flags": {
-                                                                "sim_only": "False",
-                                                                "no_pathfinding": "True",
-                                                                "not_snappable": "True",
-                                                                "restore_snap_to_ground_on_detach": "False",
-                                                                "no_sim_update": "False",
-                                                                "join_parent_squad": "False",
-                                                                "redirect_damage_to_parent_entity": "False",
-                                                                "receive_parent_animations": "True",
-                                                                "receive_parent_death": "False"
-                                                            }
-                                                        },
-                                                        "animation_role": {
-                                                            "instance_reference": "animation_role/vehicle_turret/us_sherman/vt_sherman_75mm_cupola_gunner"
-                                                        },
-                                                        "parent_inventory_slot": "hard_point_3",
-                                                        "invulnerable": "True",
-                                                        "weapon_override": {
-                                                            "template_reference": {
-                                                                "name": "weapon_override",
-                                                                "value": ""
-                                                            }
-                                                        },
-                                                        "setup_marker_override": "",
-                                                        "can_ragdoll": "True"
-                                                    }
-                                                }
-                                            ],
-                                            "additional_crew_option": {
-                                                "template_reference": {
-                                                    "name": "additional_crew_option",
-                                                    "value": "options\\none"
-                                                }
-                                            },
-                                            "add_attachment_dynamics_to_crew_and_apply_root_motion": "False"
-                                        }
-                                    }
                                 }
                             ]
                         }
@@ -14325,110 +12772,6 @@
                                 "vehicle_wreck": 0.0,
                                 "hold_weapon": 0.0
                             }
-                        }
-                    },
-                    {
-                        "exts": {
-                            "template_reference": {
-                                "name": "exts",
-                                "value": "ebpextensions\\presentation_override_ext"
-                            },
-                            "only_after_repossession": "True",
-                            "race_mapping_list": [
-                                {
-                                    "race_mapping": {
-                                        "race_key": {
-                                            "instance_reference": "racebps/americans"
-                                        },
-                                        "presentation_entity_override": {
-                                            "instance_reference": "ebps/races/american/vehicles/sherman_us"
-                                        },
-                                        "presentation_squad_override": {
-                                            "instance_reference": "sbps/races/american/vehicles/sherman_us"
-                                        }
-                                    }
-                                },
-                                {
-                                    "race_mapping": {
-                                        "race_key": {
-                                            "instance_reference": "racebps/british_africa"
-                                        },
-                                        "presentation_entity_override": {
-                                            "instance_reference": "ebps/races/british_africa/vehicles/bishop_africa_uk"
-                                        },
-                                        "presentation_squad_override": {
-                                            "instance_reference": "sbps/races/british_africa/vehicles/bishop_africa_uk"
-                                        }
-                                    }
-                                },
-                                {
-                                    "race_mapping": {
-                                        "race_key": {
-                                            "instance_reference": "racebps/germans"
-                                        },
-                                        "presentation_entity_override": {
-                                            "instance_reference": "ebps/races/german/vehicles/panzer_iv_ger"
-                                        },
-                                        "presentation_squad_override": {
-                                            "instance_reference": "sbps/races/german/vehicles/panzer_iv_ger"
-                                        }
-                                    }
-                                },
-                                {
-                                    "race_mapping": {
-                                        "race_key": {
-                                            "instance_reference": "racebps/afrika_korps"
-                                        },
-                                        "presentation_entity_override": {
-                                            "instance_reference": "ebps/races/afrika_korps/vehicles/panzer_iii_37mm_ak"
-                                        },
-                                        "presentation_squad_override": {
-                                            "instance_reference": "sbps/races/afrika_korps/vehicles/panzer_iii_37mm_ak"
-                                        }
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "exts": {
-                            "template_reference": {
-                                "name": "exts",
-                                "value": "ebpextensions\\spawner_ext"
-                            },
-                            "must_be_in_supply": "False",
-                            "reinforce_radius": 0.0,
-                            "spawn_items": [],
-                            "bonus_xp_from_hold_list": [],
-                            "reinforce_requirements": [],
-                            "spawn_to_hold_try_first": "False",
-                            "queue_requirements": [],
-                            "can_rally": "True",
-                            "animated_spawn_option": {
-                                "template_reference": {
-                                    "name": "animated_spawn_option",
-                                    "value": "options\\none"
-                                }
-                            },
-                            "max_queue_size_override": -1.0,
-                            "queue_requirements_openingbranch": "",
-                            "reinforce_requirements_openingbranch": "",
-                            "production_item_completed_openingbranch": "",
-                            "enforce_minimum_clearance_at_spawn_positions": "False",
-                            "enforce_minimum_clearance_if_entities_blocking": "True",
-                            "enforce_minimum_clearance_at_spawn_positions_search_range": 0.0,
-                            "rally_pass_type": {
-                                "instance_reference": ""
-                            },
-                            "parallel_production_count": 1.0,
-                            "default_rally_point_offset": {
-                                "template_reference": {
-                                    "name": "default_rally_point_offset",
-                                    "value": ""
-                                }
-                            },
-                            "always_paradrop_spawn": "False",
-                            "shared_team_production": "False"
                         }
                     },
                     {
@@ -14542,14 +12885,6 @@
                             "has_internal_entrances": "False",
                             "ignore_stationable_combat_slot_markers": "False",
                             "hold_selection_on_load_type": "hold"
-                        }
-                    },
-                    {
-                        "exts": {
-                            "template_reference": {
-                                "name": "exts",
-                                "value": "ebpextensions\\trench_crossing_ext"
-                            }
                         }
                     }
                 ],
@@ -17179,7 +15514,6 @@
                                 "name": "start_move_speed_option",
                                 "value": "options\\ebpextensions\\movingext\\start_move_speed_option"
                             },
-                            "speed": "speed",
                             "max_frame_ticks_from_stopped": 2.0,
                             "rotation_rate_multiplier": 1.3
                         }
@@ -18743,6 +17077,12 @@
                         },
                         "unit_type_list": [
                             {
+                                "unit_type": "vehicle"
+                            },
+                            {
+                                "unit_type": "cover_object"
+                            },
+                            {
                                 "unit_type": "tank"
                             },
                             {
@@ -19094,7 +17434,6 @@
                                 "name": "start_move_speed_option",
                                 "value": "options\\ebpextensions\\movingext\\start_move_speed_option"
                             },
-                            "speed": "speed",
                             "max_frame_ticks_from_stopped": 2.0,
                             "rotation_rate_multiplier": 1.3
                         }
@@ -19255,25 +17594,6 @@
                             "ActionTree_OpeningBranch": ""
                         },
                         "on_observed_wear_off_seconds": 2.0
-                    }
-                },
-                {
-                    "exts": {
-                        "template_reference": {
-                            "name": "exts",
-                            "value": "ebpextensions\\line_of_sight_ext"
-                        },
-                        "blocking_box": {
-                            "x": 0.01,
-                            "y": 0.01,
-                            "z": 0.01
-                        },
-                        "is_shot_blocking": "False",
-                        "use_blocking_box": "False",
-                        "does_block_line_of_sight": "Never",
-                        "reveal_center_when_outside_is_visible": "True",
-                        "disable_shot_blocking_on_death": "False",
-                        "blocks_ground_targeting_if_shot_block": "False"
                     }
                 },
                 {
@@ -20531,58 +18851,12 @@
                         "exts": {
                             "template_reference": {
                                 "name": "exts",
-                                "value": "ebpextensions\\sight_ext"
-                            },
-                            "detect_camouflage": {
-                                "tp_global": 10.0,
-                                "tp_mine": -1.0,
-                                "tp_unit": -1.0,
-                                "tp_democharge": -1.0
-                            },
-                            "extended_sight": "False",
-                            "extended_sight_radius": 90.0,
-                            "reveal_area_on_death_time": 3.0,
-                            "sight_package": {
-                                "inner_height": 2.5,
-                                "inner_radius": 0.0,
-                                "outer_height": 0.0,
-                                "outer_radius": 35.0,
-                                "cone_angle": 360.0,
-                                "cone_start_radius": 0.0
-                            },
-                            "specific_detector_actions": [],
-                            "vertical_truesight": {
-                                "enable": "True",
-                                "tolerance": 1.0,
-                                "eye_height": 2.0
-                            },
-                            "camouflage_detection_enabled": "True",
-                            "blockers_check_bounding_box": "True",
-                            "reveal_area_on_death_radius": 3.0,
-                            "camouflage_detection_respects_fog_of_war_vision": "True",
-                            "camouflage_detection_respects_shot_blockers": "True"
-                        }
-                    },
-                    {
-                        "exts": {
-                            "template_reference": {
-                                "name": "exts",
                                 "value": "ebpextensions\\type_ext"
                             },
-                            "unit_type_list": [
-                                {
-                                    "unit_type": "infantry"
-                                }
-                            ],
+                            "unit_type_list": [],
                             "weapon_targeting": "no_targeting",
                             "intersection_testing": "True",
-                            "race_type_list": [
-                                {
-                                    "race_type": {
-                                        "instance_reference": ""
-                                    }
-                                }
-                            ],
+                            "race_type_list": [],
                             "attack_target_restriction_on_attacker": [],
                             "attack_target_restriction_on_victim": [],
                             "weapon_category_targeting_filter": {
@@ -20595,209 +18869,6 @@
                                 "7single_cast_ability": "True",
                                 "8dummy": "True"
                             }
-                        }
-                    },
-                    {
-                        "exts": {
-                            "template_reference": {
-                                "name": "exts",
-                                "value": "ebpextensions\\ui_ext"
-                            },
-                            "ap_killed_kicker": "True",
-                            "ap_loss_kicker": "True",
-                            "decorator_height": -1.0,
-                            "extra_text_deprecated": "",
-                            "ghost_enable": "False",
-                            "help_text": {
-                                "locstring": {
-                                    "name": "help_text",
-                                    "value": "0"
-                                }
-                            },
-                            "hotkey_name": "",
-                            "icon_name": "",
-                            "kill_type": "infantry",
-                            "minimap_color": "*",
-                            "minimap_enable": "True",
-                            "minimap_team_only": "False",
-                            "minimap_teamcolor": "False",
-                            "overlay_name": "",
-                            "reveal_for_decryption": "False",
-                            "screen_name": {
-                                "locstring": {
-                                    "name": "screen_name",
-                                    "value": "0"
-                                }
-                            },
-                            "selection_name": "soldier",
-                            "selection_scale": 0.8,
-                            "selection_type": "squad_select",
-                            "tooltip_txt": {
-                                "locstring": {
-                                    "name": "tooltip_txt",
-                                    "value": "0"
-                                }
-                            },
-                            "ui_priority": 0.0,
-                            "minimap_icon": "",
-                            "minimap_icon_scale": 1.0,
-                            "brief_text": {
-                                "locstring": {
-                                    "name": "brief_text",
-                                    "value": "0"
-                                }
-                            },
-                            "extra_text": {
-                                "locstring": {
-                                    "name": "extra_text",
-                                    "value": "0"
-                                }
-                            },
-                            "screen_name_short": {
-                                "locstring": {
-                                    "name": "screen_name_short",
-                                    "value": "0"
-                                }
-                            },
-                            "show_in_build_log": "True",
-                            "show_entity_appearance": "True",
-                            "screen_name_world": {
-                                "locstring": {
-                                    "name": "screen_name_world",
-                                    "value": "0"
-                                }
-                            },
-                            "help_text_world": {
-                                "locstring": {
-                                    "name": "help_text_world",
-                                    "value": "0"
-                                }
-                            },
-                            "extra_text_world": {
-                                "locstring": {
-                                    "name": "extra_text_world",
-                                    "value": "0"
-                                }
-                            },
-                            "map_rotation_type_override": "no_override",
-                            "symbol_icon_name": "",
-                            "occlusion_state": "can_be_occluded",
-                            "decorator_visibility": "default",
-                            "skin_pack_override": "False",
-                            "skin_summer": "",
-                            "skin_winter": "",
-                            "targeting_and_bandbox_selection_priority": "medium",
-                            "selection_method": "dynamic_obb",
-                            "terrain_info_display_offset": {
-                                "x": 0.0,
-                                "y": 0.0
-                            },
-                            "decorator_ledger_key": "",
-                            "decorator_ledger_bar_style": {
-                                "instance_reference": ""
-                            },
-                            "selection_name_squad_override": "",
-                            "selection_grouping_ledger_key": "",
-                            "debug_text": "",
-                            "selection_datatemplate": "",
-                            "use_construction_range_on_selection": "False",
-                            "use_combat_range_on_selection": "True",
-                            "is_armoured": "False",
-                            "decorator_data_template": "",
-                            "ui_combine_type": "intersection",
-                            "spotted_on_spawn": "False",
-                            "district_info": {
-                                "instance_reference": ""
-                            },
-                            "force_facing_and_range_visual_to_center_on_entity": "False",
-                            "is_unique_to_race": "False",
-                            "kicker_offset": 0.0,
-                            "portrait_name": "",
-                            "selection_secondary_bounds_scale": {
-                                "x": 1.0,
-                                "y": 1.0,
-                                "z": 1.0
-                            },
-                            "decorator": "",
-                            "map_layer": 0.0,
-                            "map_mark": "",
-                            "portrait_icon": "",
-                            "ui_codex_info": {
-                                "priority": 0.0,
-                                "exclusive": "False",
-                                "ui_position": {
-                                    "ui_position_column": -1.0,
-                                    "ui_position_row": -1.0
-                                }
-                            },
-                            "custom_selection_obbs": [],
-                            "ui_extra_infos": [],
-                            "screen_name_visibility": "visible",
-                            "help_text_formatter": {
-                                "template_reference": {
-                                    "name": "help_text_formatter",
-                                    "value": ""
-                                }
-                            },
-                            "extra_text_formatter": {
-                                "template_reference": {
-                                    "name": "extra_text_formatter",
-                                    "value": ""
-                                }
-                            },
-                            "extra_text_world_formatter": {
-                                "template_reference": {
-                                    "name": "extra_text_world_formatter",
-                                    "value": ""
-                                }
-                            },
-                            "help_text_world_formatter": {
-                                "template_reference": {
-                                    "name": "help_text_world_formatter",
-                                    "value": ""
-                                }
-                            },
-                            "screen_name_formatter": {
-                                "template_reference": {
-                                    "name": "screen_name_formatter",
-                                    "value": ""
-                                }
-                            },
-                            "screen_name_short_formatter": {
-                                "template_reference": {
-                                    "name": "screen_name_short_formatter",
-                                    "value": ""
-                                }
-                            },
-                            "screen_name_world_formatter": {
-                                "template_reference": {
-                                    "name": "screen_name_world_formatter",
-                                    "value": ""
-                                }
-                            },
-                            "brief_text_formatter": {
-                                "template_reference": {
-                                    "name": "brief_text_formatter",
-                                    "value": ""
-                                }
-                            },
-                            "sound": "",
-                            "sound_alternative": "",
-                            "telemetry_name": "",
-                            "selectable_in_non_interactive_area": "True",
-                            "selection_obb_size": {
-                                "x": 1.0,
-                                "y": 1.0,
-                                "z": 1.0
-                            },
-                            "target_selection_priority_by_owner": "none",
-                            "turn_in_place_distance": 0.0,
-                            "bandbox_selection_priority_override": "",
-                            "decorator_visibility_statetree_node_condition": "",
-                            "selection_ui_visibility_statetree_node_condition": "",
-                            "global_unit_control_row": -1.0,
-                            "global_unit_control_row_special": -1.0,
-                            "disable_UI_if_garrison_disabled": "True"
                         }
                     },
                     {
@@ -20903,89 +18974,6 @@
                                 "value": "ebpextensions\\ability_ext"
                             },
                             "abilities": []
-                        }
-                    },
-                    {
-                        "exts": {
-                            "template_reference": {
-                                "name": "exts",
-                                "value": "ebpextensions\\population_ext"
-                            },
-                            "medic_pop": 0.0,
-                            "personnel_pop": 1.0,
-                            "vehicle_pop": 0.0,
-                            "upkeep_per_pop_per_minute_override": {
-                                "action": 0.0,
-                                "command": 0.0,
-                                "popcap": 0.0,
-                                "fuel": 0.0,
-                                "munition": 0.0,
-                                "manpower": 0.0,
-                                "requisition": 0.0,
-                                "ultimate": 0.0,
-                                "ability_resource_1": 0.0,
-                                "ability_resource_2": 0.0
-                            }
-                        }
-                    },
-                    {
-                        "exts": {
-                            "template_reference": {
-                                "name": "exts",
-                                "value": "ebpextensions\\entity_inventory_ext"
-                            },
-                            "category_capacity": {
-                                "special": 1.0,
-                                "default": -1.0,
-                                "upgrade": 0.0,
-                                "casualty": 0.0,
-                                "vehicle_wreck": 0.0,
-                                "hold_weapon": 1.0
-                            }
-                        }
-                    },
-                    {
-                        "exts": {
-                            "template_reference": {
-                                "name": "exts",
-                                "value": "ebpextensions\\paradrop_ext"
-                            },
-                            "make_dead_on_drop": "False",
-                            "reserve_sparse_grid_entry": "True",
-                            "sight_start_height": -1.0,
-                            "drop_height": 66.0,
-                            "on_landing_action_tree": {
-                                "template_reference": {
-                                    "name": "on_landing_action_tree",
-                                    "value": "state_tree_global_reference_info"
-                                },
-                                "ActionTree_OpeningBranch": "airborne_paradrop_util\\on_landing"
-                            },
-                            "on_landed_action_tree": {
-                                "template_reference": {
-                                    "name": "on_landed_action_tree",
-                                    "value": "state_tree_global_reference_info"
-                                },
-                                "ActionTree_OpeningBranch": "airborne_paradrop_util\\detach_parachute"
-                            },
-                            "on_start_paradropping_action_tree": {
-                                "template_reference": {
-                                    "name": "on_start_paradropping_action_tree",
-                                    "value": "state_tree_global_reference_info"
-                                },
-                                "ActionTree_OpeningBranch": ""
-                            },
-                            "travel_distance": 1.0,
-                            "cord_length": 3.0,
-                            "swing_speed": 0.005,
-                            "steering_duration": 1.0,
-                            "parachute_ebp": {
-                                "instance_reference": "ebps/races/american/props/parachute"
-                            },
-                            "descent_speed": 10.0,
-                            "landing_sequence_seconds": 4.0,
-                            "animated_motion": "True",
-                            "kill_if_landing_on_impass": "True"
                         }
                     },
                     {

@@ -10424,7 +10424,7 @@
                                 "value": "custom_properties\\custom_bool_property"
                             },
                             "id": "CONVERT_WEAPON",
-                            "value": "False"
+                            "value": "True"
                         }
                     },
                     {
@@ -10891,7 +10891,7 @@
                                 "value": "custom_properties\\custom_bool_property"
                             },
                             "id": "CONVERT_WEAPON",
-                            "value": "False"
+                            "value": "True"
                         }
                     },
                     {
@@ -15182,16 +15182,6 @@
                                 "name": "custom_bool_property",
                                 "value": "custom_properties\\custom_bool_property"
                             },
-                            "id": "ABILITY_USE_DEFAULT_WEAPON_HARDPOINT",
-                            "value": "False"
-                        }
-                    },
-                    {
-                        "custom_bool_property": {
-                            "template_reference": {
-                                "name": "custom_bool_property",
-                                "value": "custom_properties\\custom_bool_property"
-                            },
                             "id": "DENY_REFUND_COST",
                             "value": "True"
                         }
@@ -15215,8 +15205,8 @@
                                 "name": "custom_int32_property",
                                 "value": "custom_properties\\custom_int32_property"
                             },
-                            "id": "HARDPOINT_INDEX",
-                            "value": 0.0
+                            "id": "NUM_SHOTS",
+                            "value": 1.0
                         }
                     },
                     {
@@ -15251,20 +15241,7 @@
                     }
                 ],
                 "custom_vector3f_properties": [],
-                "custom_pbgid_properties": [
-                    {
-                        "custom_pbgid_property": {
-                            "template_reference": {
-                                "name": "custom_pbgid_property",
-                                "value": "custom_properties\\custom_pbgid_property"
-                            },
-                            "id": "WEAPON_PBG_1",
-                            "pbg": {
-                                "instance_reference": "ebps/races/american/weapons/explosive_weapons/grenade/w_grenade_rifleman_us"
-                            }
-                        }
-                    }
-                ],
+                "custom_pbgid_properties": [],
                 "custom_loc_string_properties": [],
                 "custom_entity_state_tree_reference_properties": [],
                 "custom_deferred_entity_state_tree_reference_properties": [],
@@ -16729,7 +16706,7 @@
                                     "name": "custom_bool_property",
                                     "value": "custom_properties\\custom_bool_property"
                                 },
-                                "id": "USE_CHANNEL_TIME",
+                                "id": "VULNERABLE_DURING_MOVE",
                                 "value": "True"
                             }
                         },
@@ -16751,6 +16728,16 @@
                                 },
                                 "id": "KEEP_ALIVE_INTERACTION",
                                 "value": "False"
+                            }
+                        },
+                        {
+                            "custom_bool_property": {
+                                "template_reference": {
+                                    "name": "custom_bool_property",
+                                    "value": "custom_properties\\custom_bool_property"
+                                },
+                                "id": "USE_CHANNEL_TIME",
+                                "value": "True"
                             }
                         }
                     ],
@@ -24661,17 +24648,6 @@
                             "template_reference": {
                                 "name": "extra_text_formatter",
                                 "value": ""
-                            },
-                            "formatter_arguments": [
-                                {
-                                    "int_value": 15.0
-                                }
-                            ],
-                            "formatter": {
-                                "locstring": {
-                                    "name": "formatter",
-                                    "value": "11260713"
-                                }
                             }
                         },
                         "help_text_formatter": {
@@ -24716,35 +24692,7 @@
                         }
                     },
                     "validate_actions": "True",
-                    "requirements": [
-                        {
-                            "required": {
-                                "template_reference": {
-                                    "name": "required",
-                                    "value": "requirements\\required_player_upgrade"
-                                },
-                                "reason": "usage_and_display",
-                                "ui_name": {
-                                    "locstring": {
-                                        "name": "ui_name",
-                                        "value": "0"
-                                    }
-                                },
-                                "is_present": "True",
-                                "max_completed": 100.0,
-                                "min_completed": 1.0,
-                                "upgrade_name": {
-                                    "instance_reference": "upgrade/american/battlegroups/special_operations/special_operations_right_1a_raiding_flares_us"
-                                },
-                                "include_completed": "True",
-                                "include_queued": "False",
-                                "include_pbg_parenting": {
-                                    "include_child_pbgs": "False",
-                                    "include_parent_pbgs": "False"
-                                }
-                            }
-                        }
-                    ],
+                    "requirements": [],
                     "ability_super": "tp_none",
                     "ui_position": {
                         "ui_position_row": 1.0,
@@ -27858,13 +27806,7 @@
                         "template_reference": {
                             "name": "channeling",
                             "value": "options\\none"
-                        },
-                        "channeling_time_second": 5.0,
-                        "channeling_stop_self_requirement": [],
-                        "channeling_stop_target_requirement": [],
-                        "can_be_cancelled": "False",
-                        "statetree_node_prereq_stop_self_requirement": "",
-                        "statetree_node_prereq_stop_target_requirement": ""
+                        }
                     },
                     "can_be_interrupted": "False",
                     "casting_option": {
@@ -38274,16 +38216,24 @@
                         "required": {
                             "template_reference": {
                                 "name": "required",
-                                "value": "requirements\\required_entity_upgrade"
+                                "value": "requirements\\required_constructionstate"
                             },
-                            "reason": "usage_and_display",
+                            "reason": "usage",
                             "ui_name": {
                                 "locstring": {
                                     "name": "ui_name",
                                     "value": "0"
                                 }
                             },
-                            "do_construction_completion_check": "True",
+                            "do_construction_completion_check": "True"
+                        }
+                    },
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_entity_upgrade"
+                            },
                             "include_completed": "True",
                             "include_pbg_parenting": {
                                 "include_child_pbgs": "False",
@@ -38293,6 +38243,13 @@
                             "is_present": "True",
                             "max_completed": 100.0,
                             "min_completed": 1.0,
+                            "reason": "usage_and_display",
+                            "ui_name": {
+                                "locstring": {
+                                    "name": "ui_name",
+                                    "value": "0"
+                                }
+                            },
                             "upgrade_name": {
                                 "instance_reference": "upgrade/american/defense/french_tourelle_forward_medical_point_unlock_us"
                             }
@@ -38978,7 +38935,7 @@
                     "initial_recharge": "False",
                     "move_back": "False",
                     "move_back_distance": 10.0,
-                    "range": "range",
+                    "range": 100.0,
                     "range_ignore": "True",
                     "recharge_time": 0.1,
                     "refundable": "True",
@@ -39240,26 +39197,7 @@
                         "template_reference": {
                             "name": "proxy_range_option",
                             "value": "options\\none"
-                        },
-                        "proxy_requirements": [
-                            {
-                                "required": {
-                                    "template_reference": {
-                                        "name": "required",
-                                        "value": "requirements\\required_ownership"
-                                    },
-                                    "ownership_type": "self",
-                                    "reason": "usage",
-                                    "ui_name": {
-                                        "locstring": {
-                                            "name": "ui_name",
-                                            "value": "0"
-                                        }
-                                    }
-                                }
-                            }
-                        ],
-                        "statetree_node_prereq_proxy_requirement": ""
+                        }
                     },
                     "ability_category": {
                         "instance_reference": ""
@@ -39571,6 +39509,22 @@
                             "required": {
                                 "template_reference": {
                                     "name": "required",
+                                    "value": "requirements\\required_constructionstate"
+                                },
+                                "reason": "usage",
+                                "ui_name": {
+                                    "locstring": {
+                                        "name": "ui_name",
+                                        "value": "0"
+                                    }
+                                },
+                                "do_construction_completion_check": "True"
+                            }
+                        },
+                        {
+                            "required": {
+                                "template_reference": {
+                                    "name": "required",
                                     "value": "requirements\\required_player_upgrade"
                                 },
                                 "reason": "usage_and_display",
@@ -39580,7 +39534,6 @@
                                         "value": "0"
                                     }
                                 },
-                                "do_construction_completion_check": "True",
                                 "is_present": "True",
                                 "max_completed": 100.0,
                                 "min_completed": 1.0,
@@ -41355,200 +41308,7 @@
                     }
                 },
                 "validate_actions": "True",
-                "requirements": [
-                    {
-                        "required": {
-                            "template_reference": {
-                                "name": "required",
-                                "value": "requirements\\required_all_in_list"
-                            },
-                            "reason": "usage",
-                            "ui_name": {
-                                "locstring": {
-                                    "name": "ui_name",
-                                    "value": "11230848"
-                                }
-                            },
-                            "requirements": [
-                                {
-                                    "requirement": {
-                                        "template_reference": {
-                                            "name": "requirement",
-                                            "value": "requirements\\required_not"
-                                        },
-                                        "reason": "usage",
-                                        "ui_name": {
-                                            "locstring": {
-                                                "name": "ui_name",
-                                                "value": "0"
-                                            }
-                                        },
-                                        "requirement_table": [
-                                            {
-                                                "required": {
-                                                    "template_reference": {
-                                                        "name": "required",
-                                                        "value": "requirements\\required_in_state"
-                                                    },
-                                                    "reason": "usage",
-                                                    "ui_name": {
-                                                        "locstring": {
-                                                            "name": "ui_name",
-                                                            "value": "0"
-                                                        }
-                                                    },
-                                                    "was_attacked_within_seconds": -1.0,
-                                                    "check_states": [
-                                                        {
-                                                            "state_requirement_type": "suppressed"
-                                                        }
-                                                    ],
-                                                    "was_attacking_within_seconds": -1.0
-                                                }
-                                            }
-                                        ]
-                                    }
-                                },
-                                {
-                                    "requirement": {
-                                        "template_reference": {
-                                            "name": "requirement",
-                                            "value": "requirements\\required_not"
-                                        },
-                                        "reason": "usage",
-                                        "ui_name": {
-                                            "locstring": {
-                                                "name": "ui_name",
-                                                "value": "0"
-                                            }
-                                        },
-                                        "requirement_table": [
-                                            {
-                                                "required": {
-                                                    "template_reference": {
-                                                        "name": "required",
-                                                        "value": "requirements\\required_in_state"
-                                                    },
-                                                    "reason": "usage",
-                                                    "ui_name": {
-                                                        "locstring": {
-                                                            "name": "ui_name",
-                                                            "value": "0"
-                                                        }
-                                                    },
-                                                    "was_attacked_within_seconds": -1.0,
-                                                    "check_states": [
-                                                        {
-                                                            "state_requirement_type": "pinned"
-                                                        }
-                                                    ],
-                                                    "was_attacking_within_seconds": -1.0
-                                                }
-                                            }
-                                        ]
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "required": {
-                            "template_reference": {
-                                "name": "required",
-                                "value": "requirements\\required_any_in_list"
-                            },
-                            "reason": "usage",
-                            "ui_name": {
-                                "locstring": {
-                                    "name": "ui_name",
-                                    "value": "11243714"
-                                }
-                            },
-                            "requirements": [
-                                {
-                                    "requirement": {
-                                        "template_reference": {
-                                            "name": "requirement",
-                                            "value": "requirements\\required_player_upgrade"
-                                        },
-                                        "reason": "usage",
-                                        "ui_name": {
-                                            "locstring": {
-                                                "name": "ui_name",
-                                                "value": "0"
-                                            }
-                                        },
-                                        "is_present": "True",
-                                        "max_completed": 100.0,
-                                        "min_completed": 1.0,
-                                        "upgrade_name": {
-                                            "instance_reference": "upgrade/american/research/barracks/grenade_riflemen_us"
-                                        },
-                                        "include_completed": "True",
-                                        "include_queued": "False",
-                                        "include_pbg_parenting": {
-                                            "include_child_pbgs": "False",
-                                            "include_parent_pbgs": "False"
-                                        }
-                                    }
-                                },
-                                {
-                                    "requirement": {
-                                        "template_reference": {
-                                            "name": "requirement",
-                                            "value": "requirements\\required_race"
-                                        },
-                                        "reason": "usage",
-                                        "ui_name": {
-                                            "locstring": {
-                                                "name": "ui_name",
-                                                "value": "0"
-                                            }
-                                        },
-                                        "race": {
-                                            "instance_reference": "racebps/germans"
-                                        }
-                                    }
-                                },
-                                {
-                                    "requirement": {
-                                        "template_reference": {
-                                            "name": "requirement",
-                                            "value": "requirements\\required_race"
-                                        },
-                                        "reason": "usage",
-                                        "ui_name": {
-                                            "locstring": {
-                                                "name": "ui_name",
-                                                "value": "0"
-                                            }
-                                        },
-                                        "race": {
-                                            "instance_reference": "racebps/germans_campaign"
-                                        }
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "required": {
-                            "template_reference": {
-                                "name": "required",
-                                "value": "requirements\\required_number_of_squad_members"
-                            },
-                            "reason": "usage",
-                            "ui_name": {
-                                "locstring": {
-                                    "name": "ui_name",
-                                    "value": "11268370"
-                                }
-                            },
-                            "comparison": "greater_than_or_equal_to",
-                            "number_of_members": 2.0
-                        }
-                    }
-                ],
+                "requirements": [],
                 "ability_super": "tp_none",
                 "ui_position": {
                     "ui_position_row": 2.0,
@@ -45557,23 +45317,6 @@
                         "template_reference": {
                             "name": "extra_text_formatter",
                             "value": ""
-                        },
-                        "formatter_arguments": [
-                            {
-                                "int_value": 25.0
-                            },
-                            {
-                                "int_value": 40.0
-                            },
-                            {
-                                "int_value": 5.0
-                            }
-                        ],
-                        "formatter": {
-                            "locstring": {
-                                "name": "formatter",
-                                "value": "11258610"
-                            }
                         }
                     },
                     "help_text_formatter": {
@@ -46110,23 +45853,6 @@
                         "template_reference": {
                             "name": "extra_text_formatter",
                             "value": ""
-                        },
-                        "formatter_arguments": [
-                            {
-                                "int_value": 25.0
-                            },
-                            {
-                                "int_value": 40.0
-                            },
-                            {
-                                "int_value": 5.0
-                            }
-                        ],
-                        "formatter": {
-                            "locstring": {
-                                "name": "formatter",
-                                "value": "11258610"
-                            }
                         }
                     },
                     "help_text_formatter": {
@@ -46178,33 +45904,14 @@
                                 "name": "required",
                                 "value": "requirements\\required_squad_veterancy"
                             },
+                            "match_exact_rank": "False",
                             "reason": "usage_and_display",
-                            "requirement_table": [
-                                {
-                                    "required": {
-                                        "template_reference": {
-                                            "name": "required",
-                                            "value": "requirements\\required_squad_veterancy"
-                                        },
-                                        "match_exact_rank": "False",
-                                        "reason": "usage",
-                                        "ui_name": {
-                                            "locstring": {
-                                                "name": "ui_name",
-                                                "value": "0"
-                                            }
-                                        },
-                                        "veterancy_rank": 2.0
-                                    }
-                                }
-                            ],
                             "ui_name": {
                                 "locstring": {
                                     "name": "ui_name",
                                     "value": "0"
                                 }
                             },
-                            "match_exact_rank": "False",
                             "veterancy_rank": 2.0
                         }
                     }
@@ -46665,23 +46372,6 @@
                         "template_reference": {
                             "name": "extra_text_formatter",
                             "value": ""
-                        },
-                        "formatter_arguments": [
-                            {
-                                "int_value": 25.0
-                            },
-                            {
-                                "int_value": 40.0
-                            },
-                            {
-                                "int_value": 5.0
-                            }
-                        ],
-                        "formatter": {
-                            "locstring": {
-                                "name": "formatter",
-                                "value": "11258610"
-                            }
                         }
                     },
                     "help_text_formatter": {
@@ -46733,33 +46423,14 @@
                                 "name": "required",
                                 "value": "requirements\\required_squad_veterancy"
                             },
+                            "match_exact_rank": "False",
                             "reason": "usage_and_display",
-                            "requirement_table": [
-                                {
-                                    "required": {
-                                        "template_reference": {
-                                            "name": "required",
-                                            "value": "requirements\\required_squad_veterancy"
-                                        },
-                                        "match_exact_rank": "False",
-                                        "reason": "usage",
-                                        "ui_name": {
-                                            "locstring": {
-                                                "name": "ui_name",
-                                                "value": "0"
-                                            }
-                                        },
-                                        "veterancy_rank": 2.0
-                                    }
-                                }
-                            ],
                             "ui_name": {
                                 "locstring": {
                                     "name": "ui_name",
                                     "value": "0"
                                 }
                             },
-                            "match_exact_rank": "False",
                             "veterancy_rank": 2.0
                         }
                     },
@@ -47255,23 +46926,20 @@
                             "name": "extra_text_formatter",
                             "value": "ui_text_formatter"
                         },
+                        "formatter": {
+                            "locstring": {
+                                "name": "formatter",
+                                "value": "11266076"
+                            }
+                        },
                         "formatter_arguments": [
                             {
                                 "int_value": 50.0
                             },
                             {
                                 "int_value": 5.0
-                            },
-                            {
-                                "int_value": 5.0
                             }
-                        ],
-                        "formatter": {
-                            "locstring": {
-                                "name": "formatter",
-                                "value": "11266076"
-                            }
-                        }
+                        ]
                     },
                     "help_text_formatter": {
                         "template_reference": {
@@ -47322,68 +46990,15 @@
                                 "name": "required",
                                 "value": "requirements\\required_squad_veterancy"
                             },
-                            "reason": "usage_and_display",
-                            "requirement_table": [
-                                {
-                                    "required": {
-                                        "template_reference": {
-                                            "name": "required",
-                                            "value": "requirements\\required_squad_veterancy"
-                                        },
-                                        "match_exact_rank": "False",
-                                        "reason": "usage",
-                                        "ui_name": {
-                                            "locstring": {
-                                                "name": "ui_name",
-                                                "value": "0"
-                                            }
-                                        },
-                                        "veterancy_rank": 2.0
-                                    }
-                                }
-                            ],
-                            "ui_name": {
-                                "locstring": {
-                                    "name": "ui_name",
-                                    "value": "0"
-                                }
-                            },
                             "match_exact_rank": "False",
-                            "veterancy_rank": 3.0
-                        }
-                    },
-                    {
-                        "required": {
-                            "template_reference": {
-                                "name": "required",
-                                "value": "requirements\\required_not"
-                            },
                             "reason": "usage_and_display",
-                            "requirement_table": [
-                                {
-                                    "required": {
-                                        "template_reference": {
-                                            "name": "required",
-                                            "value": "requirements\\required_squad_veterancy"
-                                        },
-                                        "match_exact_rank": "False",
-                                        "reason": "usage_and_display",
-                                        "ui_name": {
-                                            "locstring": {
-                                                "name": "ui_name",
-                                                "value": "0"
-                                            }
-                                        },
-                                        "veterancy_rank": 3.0
-                                    }
-                                }
-                            ],
                             "ui_name": {
                                 "locstring": {
                                     "name": "ui_name",
                                     "value": "0"
                                 }
-                            }
+                            },
+                            "veterancy_rank": 3.0
                         }
                     }
                 ],
@@ -47616,7 +47231,7 @@
                                 "value": "custom_properties\\custom_float_property"
                             },
                             "id": "CAMOUFLAGE_DELAY",
-                            "value": 1.0
+                            "value": 0.0
                         }
                     },
                     {
@@ -47635,8 +47250,8 @@
                                 "name": "custom_float_property",
                                 "value": "custom_properties\\custom_float_property"
                             },
-                            "id": "WEAPON_OVERALL_ATTACK_SPEED",
-                            "value": 0.5
+                            "id": "WEAPON_ACCURACY_MODIFIER",
+                            "value": 1.0
                         }
                     },
                     {
@@ -47647,6 +47262,16 @@
                             },
                             "id": "FIRST_STRIKE_DURATION",
                             "value": 5.0
+                        }
+                    },
+                    {
+                        "custom_float_property": {
+                            "template_reference": {
+                                "name": "custom_float_property",
+                                "value": "custom_properties\\custom_float_property"
+                            },
+                            "id": "WEAPON_OVERALL_ATTACK_SPEED",
+                            "value": 0.5
                         }
                     }
                 ],
@@ -47661,7 +47286,7 @@
                             },
                             "id": "SQUAD_STATUS_DECORATOR_PBG",
                             "pbg": {
-                                "instance_reference": "squad_status/decorators/buffs/german/camouflage_first_strike_sniper"
+                                "instance_reference": "squad_status/decorators/buffs/camouflage_cover_duration_6_buff"
                             }
                         }
                     },
@@ -47673,7 +47298,7 @@
                             },
                             "id": "SQUAD_STATUS_DECORATOR_PBG_2",
                             "pbg": {
-                                "instance_reference": "squad_status/decorators/buffs/camouflage_first_strike_bonus"
+                                "instance_reference": "squad_status/decorators/buffs/german/camouflage_first_strike_sniper"
                             }
                         }
                     }
@@ -49534,19 +49159,13 @@
                         },
                         "formatter_arguments": [
                             {
-                                "int_value": 25.0,
-                                "locstring_value": {
-                                    "locstring": {
-                                        "name": "locstring_value",
-                                        "value": "0"
-                                    }
-                                }
+                                "int_value": 25.0
                             },
                             {
                                 "locstring_value": {
                                     "locstring": {
                                         "name": "locstring_value",
-                                        "value": "11265500"
+                                        "value": "0"
                                     }
                                 }
                             }
@@ -56202,7 +55821,7 @@
                                 "value": "custom_properties\\custom_bool_property"
                             },
                             "id": "ABILITY_USE_DEFAULT_WEAPON_HARDPOINT",
-                            "value": "True"
+                            "value": "False"
                         }
                     },
                     {
@@ -56242,7 +55861,7 @@
                                 "value": "custom_properties\\custom_bool_property"
                             },
                             "id": "USE_WEAPON_RANGE_FOR_ABILITY_CHASE",
-                            "value": "False"
+                            "value": "True"
                         }
                     },
                     {
@@ -59600,7 +59219,7 @@
                                     "value": "custom_properties\\custom_bool_property"
                                 },
                                 "id": "ABILITY_USE_DEFAULT_WEAPON_HARDPOINT",
-                                "value": "True"
+                                "value": "False"
                             }
                         },
                         {
@@ -59640,7 +59259,7 @@
                                     "value": "custom_properties\\custom_bool_property"
                                 },
                                 "id": "USE_WEAPON_RANGE_FOR_ABILITY_CHASE",
-                                "value": "False"
+                                "value": "True"
                             }
                         },
                         {
@@ -60089,7 +59708,7 @@
                                     "value": "custom_properties\\custom_bool_property"
                                 },
                                 "id": "ABILITY_USE_DEFAULT_WEAPON_HARDPOINT",
-                                "value": "True"
+                                "value": "False"
                             }
                         },
                         {
@@ -60129,7 +59748,7 @@
                                     "value": "custom_properties\\custom_bool_property"
                                 },
                                 "id": "USE_WEAPON_RANGE_FOR_ABILITY_CHASE",
-                                "value": "False"
+                                "value": "True"
                             }
                         },
                         {
@@ -60567,7 +60186,7 @@
                                     "value": "custom_properties\\custom_bool_property"
                                 },
                                 "id": "ABILITY_USE_DEFAULT_WEAPON_HARDPOINT",
-                                "value": "True"
+                                "value": "False"
                             }
                         },
                         {
@@ -60607,7 +60226,7 @@
                                     "value": "custom_properties\\custom_bool_property"
                                 },
                                 "id": "USE_WEAPON_RANGE_FOR_ABILITY_CHASE",
-                                "value": "False"
+                                "value": "True"
                             }
                         },
                         {

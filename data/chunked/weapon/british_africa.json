@@ -212,6 +212,11 @@
                                 "container": {
                                     "state_tree": "anti_tank_weapon_on_penetrate_wrapper"
                                 }
+                            },
+                            {
+                                "container": {
+                                    "state_tree": "anti_tank_weapon_on_penetrate_wrapper"
+                                }
                             }
                         ],
                         "on_deflected_state_trees": [],
@@ -344,7 +349,7 @@
                         "max_tilt_angle": 0.0,
                         "min_tilt_angle": 0.0,
                         "tilt_max_distance": 0.0,
-                        "tilt_scatter_chance": "tilt_scatter_chance",
+                        "tilt_scatter_chance": 0.0,
                         "area_scatter_option": {
                             "template_reference": {
                                 "name": "area_scatter_option",
@@ -459,6 +464,30 @@
                                     "accuracy_multiplier": 10.0,
                                     "damage_multiplier": 1.0,
                                     "penetration_multiplier": 10.0,
+                                    "suppression_multiplier": 1.0
+                                },
+                                "base_damage_modifier": 0.0
+                            }
+                        },
+                        {
+                            "target_unit_type_multipliers": {
+                                "unit_type": "infantry",
+                                "weapon_multipliers": {
+                                    "accuracy_multiplier": 0.01,
+                                    "damage_multiplier": 0.5,
+                                    "penetration_multiplier": 1.0,
+                                    "suppression_multiplier": 1.0
+                                },
+                                "base_damage_modifier": 0.0
+                            }
+                        },
+                        {
+                            "target_unit_type_multipliers": {
+                                "unit_type": "building",
+                                "weapon_multipliers": {
+                                    "accuracy_multiplier": 10.0,
+                                    "damage_multiplier": 1.0,
+                                    "penetration_multiplier": 1.0,
                                     "suppression_multiplier": 1.0
                                 },
                                 "base_damage_modifier": 0.0
@@ -688,6 +717,33 @@
                                 "flat_damage_modifier_pre_multiplier": 0.0,
                                 "flat_damage_modifier_post_multiplier": 0.0,
                                 "requirements": [
+                                    {
+                                        "requirement": {
+                                            "template_reference": {
+                                                "name": "requirement",
+                                                "value": "requirements\\required_squad_upgrade"
+                                            },
+                                            "include_completed": "True",
+                                            "include_pbg_parenting": {
+                                                "include_child_pbgs": "False",
+                                                "include_parent_pbgs": "False"
+                                            },
+                                            "include_queued": "False",
+                                            "is_present": "True",
+                                            "max_completed": 100.0,
+                                            "min_completed": 1.0,
+                                            "reason": "usage",
+                                            "ui_name": {
+                                                "locstring": {
+                                                    "name": "ui_name",
+                                                    "value": "0"
+                                                }
+                                            },
+                                            "upgrade_name": {
+                                                "instance_reference": "upgrade/american/vehicle/improvised_armor_buff_us"
+                                            }
+                                        }
+                                    },
                                     {
                                         "requirement": {
                                             "template_reference": {
@@ -2255,11 +2311,7 @@
                             "template_reference": {
                                 "name": "area_info",
                                 "value": "options\\area_info_options\\point_area_option"
-                            },
-                            "outer_radius": 3.0,
-                            "inner_radius": 0.0,
-                            "is_two_dimensional": "True",
-                            "dynamic_radius_type": "fixed"
+                            }
                         },
                         "damage": {
                             "far": 0.025,
@@ -2547,7 +2599,7 @@
                         "max_tilt_angle": 0.0,
                         "min_tilt_angle": 0.0,
                         "tilt_max_distance": 0.0,
-                        "tilt_scatter_chance": "tilt_scatter_chance",
+                        "tilt_scatter_chance": 0.0,
                         "area_scatter_option": {
                             "template_reference": {
                                 "name": "area_scatter_option",
@@ -2895,13 +2947,7 @@
                         "reveal_target_on_hit": "True"
                     },
                     "kill_unit_types_on_hit": [],
-                    "weapon_tags": [
-                        {
-                            "tag": {
-                                "weapon_tag": "anti_tank"
-                            }
-                        }
-                    ],
+                    "weapon_tags": [],
                     "building_charring_settings": {
                         "instance_reference": ""
                     },
@@ -3036,11 +3082,7 @@
                             "template_reference": {
                                 "name": "area_info",
                                 "value": "options\\area_info_options\\point_area_option"
-                            },
-                            "outer_radius": 3.0,
-                            "inner_radius": 0.0,
-                            "is_two_dimensional": "True",
-                            "dynamic_radius_type": "fixed"
+                            }
                         },
                         "damage": {
                             "far": 0.025,
@@ -3328,7 +3370,7 @@
                         "max_tilt_angle": 0.0,
                         "min_tilt_angle": 0.0,
                         "tilt_max_distance": 0.0,
-                        "tilt_scatter_chance": "tilt_scatter_chance",
+                        "tilt_scatter_chance": 0.0,
                         "area_scatter_option": {
                             "template_reference": {
                                 "name": "area_scatter_option",
@@ -3664,13 +3706,7 @@
                         "reveal_target_on_hit": "True"
                     },
                     "kill_unit_types_on_hit": [],
-                    "weapon_tags": [
-                        {
-                            "tag": {
-                                "weapon_tag": "anti_tank"
-                            }
-                        }
-                    ],
+                    "weapon_tags": [],
                     "building_charring_settings": {
                         "instance_reference": ""
                     },
@@ -4093,7 +4129,7 @@
                         "max_tilt_angle": 5.0,
                         "min_tilt_angle": 2.0,
                         "tilt_max_distance": 20.0,
-                        "tilt_scatter_chance": "tilt_scatter_chance",
+                        "tilt_scatter_chance": 0.5,
                         "area_scatter_option": {
                             "template_reference": {
                                 "name": "area_scatter_option",
@@ -4191,18 +4227,6 @@
                     "target_type_table": [
                         {
                             "target_unit_type_multipliers": {
-                                "unit_type": "vehicle",
-                                "weapon_multipliers": {
-                                    "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 0.5,
-                                    "penetration_multiplier": 1.0,
-                                    "suppression_multiplier": 1.0
-                                },
-                                "base_damage_modifier": 0.0
-                            }
-                        },
-                        {
-                            "target_unit_type_multipliers": {
                                 "unit_type": "building",
                                 "weapon_multipliers": {
                                     "accuracy_multiplier": 1.0,
@@ -4218,7 +4242,7 @@
                                 "unit_type": "emplacement",
                                 "weapon_multipliers": {
                                     "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 0.0,
+                                    "damage_multiplier": 0.5,
                                     "penetration_multiplier": 1.0,
                                     "suppression_multiplier": 1.0
                                 },
@@ -4377,115 +4401,9 @@
                                                     }
                                                 ]
                                             }
-                                        },
-                                        {
-                                            "squad_member": {
-                                                "animation_variants": [
-                                                    {
-                                                        "animation_role": {
-                                                            "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_german_g43_gunner_down"
-                                                        }
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "squad_member": {
-                                                "animation_variants": [
-                                                    {
-                                                        "animation_role": {
-                                                            "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_german_g43_gunner_up"
-                                                        }
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "squad_member": {
-                                                "animation_variants": [
-                                                    {
-                                                        "animation_role": {
-                                                            "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_german_g43_gunner_1hand"
-                                                        }
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "squad_member": {
-                                                "animation_variants": [
-                                                    {
-                                                        "animation_role": {
-                                                            "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_german_g43_gunner_wide"
-                                                        }
-                                                    }
-                                                ]
-                                            }
                                         }
                                     ],
                                     "key": "british"
-                                }
-                            },
-                            {
-                                "flavour": {
-                                    "squad_contents": [
-                                        {
-                                            "squad_member": {
-                                                "animation_variants": [
-                                                    {
-                                                        "animation_role": {
-                                                            "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_german_g43_gunner_mid"
-                                                        }
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "squad_member": {
-                                                "animation_variants": [
-                                                    {
-                                                        "animation_role": {
-                                                            "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_german_g43_gunner_down"
-                                                        }
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "squad_member": {
-                                                "animation_variants": [
-                                                    {
-                                                        "animation_role": {
-                                                            "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_german_g43_gunner_up"
-                                                        }
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "squad_member": {
-                                                "animation_variants": [
-                                                    {
-                                                        "animation_role": {
-                                                            "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_german_g43_gunner_1hand"
-                                                        }
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "squad_member": {
-                                                "animation_variants": [
-                                                    {
-                                                        "animation_role": {
-                                                            "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_german_g43_gunner_wide"
-                                                        }
-                                                    }
-                                                ]
-                                            }
-                                        }
-                                    ],
-                                    "key": "wehrmacht"
                                 }
                             }
                         ]
@@ -4961,7 +4879,7 @@
                         "max_tilt_angle": 5.0,
                         "min_tilt_angle": 2.0,
                         "tilt_max_distance": 20.0,
-                        "tilt_scatter_chance": "tilt_scatter_chance",
+                        "tilt_scatter_chance": 0.5,
                         "area_scatter_option": {
                             "template_reference": {
                                 "name": "area_scatter_option",
@@ -5059,18 +4977,6 @@
                     "target_type_table": [
                         {
                             "target_unit_type_multipliers": {
-                                "unit_type": "vehicle",
-                                "weapon_multipliers": {
-                                    "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 0.5,
-                                    "penetration_multiplier": 1.0,
-                                    "suppression_multiplier": 1.0
-                                },
-                                "base_damage_modifier": 0.0
-                            }
-                        },
-                        {
-                            "target_unit_type_multipliers": {
                                 "unit_type": "building",
                                 "weapon_multipliers": {
                                     "accuracy_multiplier": 1.0,
@@ -5086,7 +4992,7 @@
                                 "unit_type": "emplacement",
                                 "weapon_multipliers": {
                                     "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 0.0,
+                                    "damage_multiplier": 0.5,
                                     "penetration_multiplier": 1.0,
                                     "suppression_multiplier": 1.0
                                 },
@@ -5245,115 +5151,9 @@
                                                     }
                                                 ]
                                             }
-                                        },
-                                        {
-                                            "squad_member": {
-                                                "animation_variants": [
-                                                    {
-                                                        "animation_role": {
-                                                            "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_german_g43_gunner_down"
-                                                        }
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "squad_member": {
-                                                "animation_variants": [
-                                                    {
-                                                        "animation_role": {
-                                                            "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_german_g43_gunner_up"
-                                                        }
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "squad_member": {
-                                                "animation_variants": [
-                                                    {
-                                                        "animation_role": {
-                                                            "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_german_g43_gunner_1hand"
-                                                        }
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "squad_member": {
-                                                "animation_variants": [
-                                                    {
-                                                        "animation_role": {
-                                                            "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_german_g43_gunner_wide"
-                                                        }
-                                                    }
-                                                ]
-                                            }
                                         }
                                     ],
                                     "key": "british"
-                                }
-                            },
-                            {
-                                "flavour": {
-                                    "squad_contents": [
-                                        {
-                                            "squad_member": {
-                                                "animation_variants": [
-                                                    {
-                                                        "animation_role": {
-                                                            "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_german_g43_gunner_mid"
-                                                        }
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "squad_member": {
-                                                "animation_variants": [
-                                                    {
-                                                        "animation_role": {
-                                                            "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_german_g43_gunner_down"
-                                                        }
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "squad_member": {
-                                                "animation_variants": [
-                                                    {
-                                                        "animation_role": {
-                                                            "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_german_g43_gunner_up"
-                                                        }
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "squad_member": {
-                                                "animation_variants": [
-                                                    {
-                                                        "animation_role": {
-                                                            "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_german_g43_gunner_1hand"
-                                                        }
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "squad_member": {
-                                                "animation_variants": [
-                                                    {
-                                                        "animation_role": {
-                                                            "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_german_g43_gunner_wide"
-                                                        }
-                                                    }
-                                                ]
-                                            }
-                                        }
-                                    ],
-                                    "key": "wehrmacht"
                                 }
                             }
                         ]
@@ -6540,7 +6340,7 @@
                         "max_tilt_angle": 0.0,
                         "min_tilt_angle": 0.0,
                         "tilt_max_distance": 0.0,
-                        "tilt_scatter_chance": "tilt_scatter_chance",
+                        "tilt_scatter_chance": 0.0,
                         "area_scatter_option": {
                             "template_reference": {
                                 "name": "area_scatter_option",
@@ -6650,10 +6450,10 @@
                         },
                         {
                             "target_unit_type_multipliers": {
-                                "unit_type": "infantry",
+                                "unit_type": "bunker",
                                 "weapon_multipliers": {
-                                    "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 0.5,
+                                    "accuracy_multiplier": 10.0,
+                                    "damage_multiplier": 1.0,
                                     "penetration_multiplier": 10.0,
                                     "suppression_multiplier": 1.0
                                 },
@@ -6662,14 +6462,26 @@
                         },
                         {
                             "target_unit_type_multipliers": {
+                                "unit_type": "infantry",
+                                "weapon_multipliers": {
+                                    "accuracy_multiplier": 1.0,
+                                    "damage_multiplier": 0.5,
+                                    "penetration_multiplier": 1.0,
+                                    "suppression_multiplier": 1.0
+                                },
+                                "base_damage_modifier": 0.0
+                            }
+                        },
+                        {
+                            "target_unit_type_multipliers": {
+                                "base_damage_modifier": 0.0,
                                 "unit_type": "destructible_object",
                                 "weapon_multipliers": {
                                     "accuracy_multiplier": 1.0,
                                     "damage_multiplier": 2.0,
                                     "penetration_multiplier": 1.0,
                                     "suppression_multiplier": 1.0
-                                },
-                                "base_damage_modifier": 0.0
+                                }
                             }
                         }
                     ],
@@ -7297,7 +7109,7 @@
                         "max_tilt_angle": 0.0,
                         "min_tilt_angle": 0.0,
                         "tilt_max_distance": 0.0,
-                        "tilt_scatter_chance": "tilt_scatter_chance",
+                        "tilt_scatter_chance": 0.0,
                         "area_scatter_option": {
                             "template_reference": {
                                 "name": "area_scatter_option",
@@ -9454,30 +9266,6 @@
                     "target_type_table": [
                         {
                             "target_unit_type_multipliers": {
-                                "unit_type": "building",
-                                "weapon_multipliers": {
-                                    "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 0.75,
-                                    "penetration_multiplier": 1.0,
-                                    "suppression_multiplier": 1.0
-                                },
-                                "base_damage_modifier": 0.0
-                            }
-                        },
-                        {
-                            "target_unit_type_multipliers": {
-                                "unit_type": "emplacement",
-                                "weapon_multipliers": {
-                                    "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 0.75,
-                                    "penetration_multiplier": 1.0,
-                                    "suppression_multiplier": 1.0
-                                },
-                                "base_damage_modifier": 0.0
-                            }
-                        },
-                        {
-                            "target_unit_type_multipliers": {
                                 "base_damage_modifier": 0.0,
                                 "unit_type": "sandbag",
                                 "weapon_multipliers": {
@@ -10255,30 +10043,6 @@
                     "fx_aoe_munition_name": "flamethrower_aoe",
                     "speech_code": "",
                     "target_type_table": [
-                        {
-                            "target_unit_type_multipliers": {
-                                "unit_type": "building",
-                                "weapon_multipliers": {
-                                    "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 0.75,
-                                    "penetration_multiplier": 1.0,
-                                    "suppression_multiplier": 1.0
-                                },
-                                "base_damage_modifier": 0.0
-                            }
-                        },
-                        {
-                            "target_unit_type_multipliers": {
-                                "unit_type": "emplacement",
-                                "weapon_multipliers": {
-                                    "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 0.75,
-                                    "penetration_multiplier": 1.0,
-                                    "suppression_multiplier": 1.0
-                                },
-                                "base_damage_modifier": 0.0
-                            }
-                        },
                         {
                             "target_unit_type_multipliers": {
                                 "base_damage_modifier": 0.0,
@@ -11060,30 +10824,6 @@
                     "target_type_table": [
                         {
                             "target_unit_type_multipliers": {
-                                "unit_type": "building",
-                                "weapon_multipliers": {
-                                    "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 0.75,
-                                    "penetration_multiplier": 1.0,
-                                    "suppression_multiplier": 1.0
-                                },
-                                "base_damage_modifier": 0.0
-                            }
-                        },
-                        {
-                            "target_unit_type_multipliers": {
-                                "unit_type": "emplacement",
-                                "weapon_multipliers": {
-                                    "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 0.75,
-                                    "penetration_multiplier": 1.0,
-                                    "suppression_multiplier": 1.0
-                                },
-                                "base_damage_modifier": 0.0
-                            }
-                        },
-                        {
-                            "target_unit_type_multipliers": {
                                 "base_damage_modifier": 0.0,
                                 "unit_type": "sandbag",
                                 "weapon_multipliers": {
@@ -11861,30 +11601,6 @@
                     "fx_aoe_munition_name": "",
                     "speech_code": "",
                     "target_type_table": [
-                        {
-                            "target_unit_type_multipliers": {
-                                "unit_type": "building",
-                                "weapon_multipliers": {
-                                    "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 0.75,
-                                    "penetration_multiplier": 1.0,
-                                    "suppression_multiplier": 1.0
-                                },
-                                "base_damage_modifier": 0.0
-                            }
-                        },
-                        {
-                            "target_unit_type_multipliers": {
-                                "unit_type": "emplacement",
-                                "weapon_multipliers": {
-                                    "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 0.75,
-                                    "penetration_multiplier": 1.0,
-                                    "suppression_multiplier": 1.0
-                                },
-                                "base_damage_modifier": 0.0
-                            }
-                        },
                         {
                             "target_unit_type_multipliers": {
                                 "base_damage_modifier": 0.0,
@@ -12666,30 +12382,6 @@
                     "target_type_table": [
                         {
                             "target_unit_type_multipliers": {
-                                "unit_type": "building",
-                                "weapon_multipliers": {
-                                    "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 0.75,
-                                    "penetration_multiplier": 1.0,
-                                    "suppression_multiplier": 1.0
-                                },
-                                "base_damage_modifier": 0.0
-                            }
-                        },
-                        {
-                            "target_unit_type_multipliers": {
-                                "unit_type": "emplacement",
-                                "weapon_multipliers": {
-                                    "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 0.75,
-                                    "penetration_multiplier": 1.0,
-                                    "suppression_multiplier": 1.0
-                                },
-                                "base_damage_modifier": 0.0
-                            }
-                        },
-                        {
-                            "target_unit_type_multipliers": {
                                 "base_damage_modifier": 0.0,
                                 "unit_type": "sandbag",
                                 "weapon_multipliers": {
@@ -13467,30 +13159,6 @@
                     "fx_aoe_munition_name": "flamethrower_aoe",
                     "speech_code": "",
                     "target_type_table": [
-                        {
-                            "target_unit_type_multipliers": {
-                                "unit_type": "building",
-                                "weapon_multipliers": {
-                                    "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 0.75,
-                                    "penetration_multiplier": 1.0,
-                                    "suppression_multiplier": 1.0
-                                },
-                                "base_damage_modifier": 0.0
-                            }
-                        },
-                        {
-                            "target_unit_type_multipliers": {
-                                "unit_type": "emplacement",
-                                "weapon_multipliers": {
-                                    "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 0.75,
-                                    "penetration_multiplier": 1.0,
-                                    "suppression_multiplier": 1.0
-                                },
-                                "base_damage_modifier": 0.0
-                            }
-                        },
                         {
                             "target_unit_type_multipliers": {
                                 "base_damage_modifier": 0.0,
@@ -16678,68 +16346,7 @@
                     "weapon_class": "grenade",
                     "fx_aoe_munition_name": "",
                     "speech_code": "",
-                    "target_type_table": [
-                        {
-                            "target_unit_type_multipliers": {
-                                "unit_type": "building",
-                                "weapon_multipliers": {
-                                    "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 0.75,
-                                    "penetration_multiplier": 1.0,
-                                    "suppression_multiplier": 1.0
-                                },
-                                "base_damage_modifier": 0.0
-                            }
-                        },
-                        {
-                            "target_unit_type_multipliers": {
-                                "unit_type": "emplacement",
-                                "weapon_multipliers": {
-                                    "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 0.75,
-                                    "penetration_multiplier": 1.0,
-                                    "suppression_multiplier": 1.0
-                                },
-                                "base_damage_modifier": 0.0
-                            }
-                        },
-                        {
-                            "target_unit_type_multipliers": {
-                                "base_damage_modifier": 0.0,
-                                "unit_type": "sandbag",
-                                "weapon_multipliers": {
-                                    "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 3.75,
-                                    "penetration_multiplier": 1.0,
-                                    "suppression_multiplier": 1.0
-                                }
-                            }
-                        },
-                        {
-                            "target_unit_type_multipliers": {
-                                "base_damage_modifier": 0.0,
-                                "unit_type": "barbed_wire",
-                                "weapon_multipliers": {
-                                    "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 2.5,
-                                    "penetration_multiplier": 1.0,
-                                    "suppression_multiplier": 1.0
-                                }
-                            }
-                        },
-                        {
-                            "target_unit_type_multipliers": {
-                                "unit_type": "mine",
-                                "weapon_multipliers": {
-                                    "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 2.0,
-                                    "penetration_multiplier": 2.0,
-                                    "suppression_multiplier": 1.0
-                                },
-                                "base_damage_modifier": 0.0
-                            }
-                        }
-                    ],
+                    "target_type_table": [],
                     "cover_table": {
                         "tp_defcover": {
                             "template_reference": {
@@ -16939,84 +16546,7 @@
                         "suppress_under_fire_callout": "False"
                     },
                     "weapon_impact_modifier": 0.0,
-                    "conditional_table": [
-                        {
-                            "conditional_multipliers": {
-                                "flat_damage_modifier_pre_multiplier": 0.0,
-                                "flat_damage_modifier_post_multiplier": 0.0,
-                                "requirements": [
-                                    {
-                                        "requirement": {
-                                            "template_reference": {
-                                                "name": "requirement",
-                                                "value": "requirements\\required_any_in_list"
-                                            },
-                                            "reason": "usage",
-                                            "requirements": [
-                                                {
-                                                    "requirement": {
-                                                        "template_reference": {
-                                                            "name": "requirement",
-                                                            "value": "requirements\\required_is_entity_pbg"
-                                                        },
-                                                        "include_pbg_parenting": {
-                                                            "include_child_pbgs": "False",
-                                                            "include_parent_pbgs": "False"
-                                                        },
-                                                        "is_entity_pbg": {
-                                                            "instance_reference": "ebps/races/afrika_korps/buildings/defensive/point_fortification_cache_ak"
-                                                        },
-                                                        "reason": "usage",
-                                                        "ui_name": {
-                                                            "locstring": {
-                                                                "name": "ui_name",
-                                                                "value": "0"
-                                                            }
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "requirement": {
-                                                        "template_reference": {
-                                                            "name": "requirement",
-                                                            "value": "requirements\\required_is_entity_pbg"
-                                                        },
-                                                        "include_pbg_parenting": {
-                                                            "include_child_pbgs": "False",
-                                                            "include_parent_pbgs": "False"
-                                                        },
-                                                        "is_entity_pbg": {
-                                                            "instance_reference": "ebps/races/afrika_korps/buildings/defensive/point_fortification_cache_20mm_aa_ak"
-                                                        },
-                                                        "reason": "usage",
-                                                        "ui_name": {
-                                                            "locstring": {
-                                                                "name": "ui_name",
-                                                                "value": "0"
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            ],
-                                            "ui_name": {
-                                                "locstring": {
-                                                    "name": "ui_name",
-                                                    "value": "0"
-                                                }
-                                            }
-                                        }
-                                    }
-                                ],
-                                "statetree_condition": "",
-                                "weapon_multipliers": {
-                                    "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 2.5,
-                                    "penetration_ multiplier": 1.0,
-                                    "suppression_multiplier": 1.0
-                                }
-                            }
-                        }
-                    ],
+                    "conditional_table": [],
                     "always_calculate_cover_from_shooting_position": "False",
                     "directional_modifier": {
                         "ignore_directional_damage_bonus": "False",
@@ -20324,68 +19854,7 @@
                     "weapon_class": "rifle_grenade",
                     "fx_aoe_munition_name": "",
                     "speech_code": "",
-                    "target_type_table": [
-                        {
-                            "target_unit_type_multipliers": {
-                                "unit_type": "building",
-                                "weapon_multipliers": {
-                                    "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 0.75,
-                                    "penetration_multiplier": 1.0,
-                                    "suppression_multiplier": 1.0
-                                },
-                                "base_damage_modifier": 0.0
-                            }
-                        },
-                        {
-                            "target_unit_type_multipliers": {
-                                "unit_type": "emplacement",
-                                "weapon_multipliers": {
-                                    "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 0.75,
-                                    "penetration_multiplier": 1.0,
-                                    "suppression_multiplier": 1.0
-                                },
-                                "base_damage_modifier": 0.0
-                            }
-                        },
-                        {
-                            "target_unit_type_multipliers": {
-                                "base_damage_modifier": 0.0,
-                                "unit_type": "sandbag",
-                                "weapon_multipliers": {
-                                    "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 2.5,
-                                    "penetration_multiplier": 1.0,
-                                    "suppression_multiplier": 1.0
-                                }
-                            }
-                        },
-                        {
-                            "target_unit_type_multipliers": {
-                                "base_damage_modifier": 0.0,
-                                "unit_type": "barbed_wire",
-                                "weapon_multipliers": {
-                                    "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 2.5,
-                                    "penetration_multiplier": 1.0,
-                                    "suppression_multiplier": 1.0
-                                }
-                            }
-                        },
-                        {
-                            "target_unit_type_multipliers": {
-                                "unit_type": "mine",
-                                "weapon_multipliers": {
-                                    "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 2.0,
-                                    "penetration_multiplier": 2.0,
-                                    "suppression_multiplier": 1.0
-                                },
-                                "base_damage_modifier": 0.0
-                            }
-                        }
-                    ],
+                    "target_type_table": [],
                     "cover_table": {
                         "tp_defcover": {
                             "template_reference": {
@@ -21058,7 +20527,7 @@
                                 "unit_type": "sniper",
                                 "weapon_multipliers": {
                                     "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 1.5,
+                                    "damage_multiplier": 0.8,
                                     "penetration_multiplier": 1.0,
                                     "suppression_multiplier": 1.0
                                 },
@@ -21082,7 +20551,7 @@
                                 "unit_type": "emplacement",
                                 "weapon_multipliers": {
                                     "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 0.5,
+                                    "damage_multiplier": 1.5,
                                     "penetration_multiplier": 2.0,
                                     "suppression_multiplier": 1.0
                                 },
@@ -21280,60 +20749,6 @@
                                         }
                                     ],
                                     "key": "afrika_korps"
-                                }
-                            },
-                            {
-                                "flavour": {
-                                    "squad_contents": [
-                                        {
-                                            "squad_member": {
-                                                "animation_variants": [
-                                                    {
-                                                        "animation_role": {
-                                                            "instance_reference": "animation_role/soldier/mortar_variants/ger_mortar_gunner"
-                                                        }
-                                                    }
-                                                ]
-                                            }
-                                        }
-                                    ],
-                                    "key": "afrika_korps"
-                                }
-                            },
-                            {
-                                "flavour": {
-                                    "squad_contents": [
-                                        {
-                                            "squad_member": {
-                                                "animation_variants": [
-                                                    {
-                                                        "animation_role": {
-                                                            "instance_reference": "animation_role/soldier/mortar_variants/ger_mortar_gunner"
-                                                        }
-                                                    }
-                                                ]
-                                            }
-                                        }
-                                    ],
-                                    "key": "american"
-                                }
-                            },
-                            {
-                                "flavour": {
-                                    "squad_contents": [
-                                        {
-                                            "squad_member": {
-                                                "animation_variants": [
-                                                    {
-                                                        "animation_role": {
-                                                            "instance_reference": "animation_role/soldier/mortar_variants/ger_mortar_gunner"
-                                                        }
-                                                    }
-                                                ]
-                                            }
-                                        }
-                                    ],
-                                    "key": "british"
                                 }
                             }
                         ]
@@ -21850,7 +21265,7 @@
                                 "unit_type": "sniper",
                                 "weapon_multipliers": {
                                     "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 1.5,
+                                    "damage_multiplier": 0.8,
                                     "penetration_multiplier": 1.0,
                                     "suppression_multiplier": 1.0
                                 },
@@ -21874,7 +21289,7 @@
                                 "unit_type": "emplacement",
                                 "weapon_multipliers": {
                                     "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 0.5,
+                                    "damage_multiplier": 1.5,
                                     "penetration_multiplier": 2.0,
                                     "suppression_multiplier": 1.0
                                 },
@@ -22072,60 +21487,6 @@
                                         }
                                     ],
                                     "key": "afrika_korps"
-                                }
-                            },
-                            {
-                                "flavour": {
-                                    "squad_contents": [
-                                        {
-                                            "squad_member": {
-                                                "animation_variants": [
-                                                    {
-                                                        "animation_role": {
-                                                            "instance_reference": "animation_role/soldier/mortar_variants/ger_mortar_gunner"
-                                                        }
-                                                    }
-                                                ]
-                                            }
-                                        }
-                                    ],
-                                    "key": "afrika_korps"
-                                }
-                            },
-                            {
-                                "flavour": {
-                                    "squad_contents": [
-                                        {
-                                            "squad_member": {
-                                                "animation_variants": [
-                                                    {
-                                                        "animation_role": {
-                                                            "instance_reference": "animation_role/soldier/mortar_variants/ger_mortar_gunner"
-                                                        }
-                                                    }
-                                                ]
-                                            }
-                                        }
-                                    ],
-                                    "key": "american"
-                                }
-                            },
-                            {
-                                "flavour": {
-                                    "squad_contents": [
-                                        {
-                                            "squad_member": {
-                                                "animation_variants": [
-                                                    {
-                                                        "animation_role": {
-                                                            "instance_reference": "animation_role/soldier/mortar_variants/ger_mortar_gunner"
-                                                        }
-                                                    }
-                                                ]
-                                            }
-                                        }
-                                    ],
-                                    "key": "british"
                                 }
                             }
                         ]
@@ -24505,13 +23866,7 @@
                         "min": 40.0,
                         "damage_type": "explosive",
                         "allow_overkill": "False",
-                        "on_penetrated_state_trees": [
-                            {
-                                "container": {
-                                    "state_tree": "trigger_critical\\vehicle\\engine_damage"
-                                }
-                            }
-                        ],
+                        "on_penetrated_state_trees": [],
                         "on_deflected_state_trees": [],
                         "post_damage_state_trees": [],
                         "damage_target_requirement": "",
@@ -25115,10 +24470,6 @@
                             "name": "area_info",
                             "value": "options\\area_info_options\\circle_area_option"
                         },
-                        "outer_length": 5.0,
-                        "inner_length": 0.0,
-                        "width": 4.0,
-                        "dynamic_length_type": "fixed",
                         "dynamic_radius_type": "fixed",
                         "inner_radius": 0.0,
                         "is_two_dimensional": "True",
@@ -25296,7 +24647,7 @@
                     "has_deflection_damage": "False"
                 },
                 "fire": {
-                    "wind_down": "wind_down",
+                    "wind_down": 1.375,
                     "wind_up": 0.25,
                     "advanced": {
                         "wind_up_overtime": 0.125,
@@ -25310,8 +24661,8 @@
                 "fx_always_visible": "True",
                 "fx_building_hit_delay": 0.0,
                 "fx_delay_in_building": 0.0,
-                "fx_munition_name": "fx_munition_name",
-                "fx_tracer_name": "fx_tracer_name",
+                "fx_munition_name": "flamethrower",
+                "fx_tracer_name": "",
                 "fx_tracer_speed": 80.0,
                 "fx_use_building_panel_normal": "True",
                 "help_text": {
@@ -25509,7 +24860,7 @@
                     }
                 },
                 "weapon_class": "flame",
-                "fx_aoe_munition_name": "fx_aoe_munition_name",
+                "fx_aoe_munition_name": "flamethrower_aoe",
                 "speech_code": "",
                 "target_type_table": [
                     {
@@ -25526,23 +24877,11 @@
                     },
                     {
                         "target_unit_type_multipliers": {
-                            "unit_type": "destructible_object",
+                            "unit_type": "folliage",
                             "weapon_multipliers": {
                                 "accuracy_multiplier": 1.0,
                                 "damage_multiplier": 1.0,
                                 "penetration_multiplier": 1000.0,
-                                "suppression_multiplier": 1.0
-                            },
-                            "base_damage_modifier": 0.0
-                        }
-                    },
-                    {
-                        "target_unit_type_multipliers": {
-                            "unit_type": "bunker",
-                            "weapon_multipliers": {
-                                "accuracy_multiplier": 1.0,
-                                "damage_multiplier": 2.5,
-                                "penetration_multiplier": 20.0,
                                 "suppression_multiplier": 1.0
                             },
                             "base_damage_modifier": 0.0
@@ -25566,18 +24905,6 @@
                             "weapon_multipliers": {
                                 "accuracy_multiplier": 1.0,
                                 "damage_multiplier": 2.0,
-                                "penetration_multiplier": 20.0,
-                                "suppression_multiplier": 1.0
-                            },
-                            "base_damage_modifier": 0.0
-                        }
-                    },
-                    {
-                        "target_unit_type_multipliers": {
-                            "unit_type": "emplacement",
-                            "weapon_multipliers": {
-                                "accuracy_multiplier": 1.0,
-                                "damage_multiplier": 2.5,
                                 "penetration_multiplier": 20.0,
                                 "suppression_multiplier": 1.0
                             },
@@ -25749,45 +25076,7 @@
                     "template_reference": {
                         "name": "animation_role_option",
                         "value": "options\\none"
-                    },
-                    "squad_animation_roles": [
-                        {
-                            "flavour": {
-                                "squad_contents": [
-                                    {
-                                        "squad_member": {
-                                            "animation_variants": [
-                                                {
-                                                    "animation_role": {
-                                                        "instance_reference": "animation_role/soldier/s_flamer_guastatori_gunner"
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    }
-                                ],
-                                "key": "wehrmacht"
-                            }
-                        },
-                        {
-                            "flavour": {
-                                "squad_contents": [
-                                    {
-                                        "squad_member": {
-                                            "animation_variants": [
-                                                {
-                                                    "animation_role": {
-                                                        "instance_reference": "animation_role/soldier/s_flamer_guastatori_gunner"
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    }
-                                ],
-                                "key": "american"
-                            }
-                        }
-                    ]
+                    }
                 },
                 "fog_of_war": {
                     "reveal_self_on_attack": "True",
@@ -26078,7 +25367,7 @@
                 "fx_always_visible": "True",
                 "fx_building_hit_delay": 0.0,
                 "fx_delay_in_building": 0.0,
-                "fx_munition_name": "fx_munition_name",
+                "fx_munition_name": "flamethrower",
                 "fx_tracer_name": "",
                 "fx_tracer_speed": 0.0,
                 "fx_use_building_panel_normal": "True",
@@ -26277,7 +25566,7 @@
                     }
                 },
                 "weapon_class": "flame",
-                "fx_aoe_munition_name": "fx_aoe_munition_name",
+                "fx_aoe_munition_name": "flamethrower_aoe",
                 "speech_code": "",
                 "target_type_table": [
                     {
@@ -26294,23 +25583,11 @@
                     },
                     {
                         "target_unit_type_multipliers": {
-                            "unit_type": "destructible_object",
+                            "unit_type": "folliage",
                             "weapon_multipliers": {
                                 "accuracy_multiplier": 1.0,
                                 "damage_multiplier": 1.0,
                                 "penetration_multiplier": 1000.0,
-                                "suppression_multiplier": 1.0
-                            },
-                            "base_damage_modifier": 0.0
-                        }
-                    },
-                    {
-                        "target_unit_type_multipliers": {
-                            "unit_type": "bunker",
-                            "weapon_multipliers": {
-                                "accuracy_multiplier": 1.0,
-                                "damage_multiplier": 2.5,
-                                "penetration_multiplier": 20.0,
                                 "suppression_multiplier": 1.0
                             },
                             "base_damage_modifier": 0.0
@@ -26517,45 +25794,7 @@
                     "template_reference": {
                         "name": "animation_role_option",
                         "value": "options\\none"
-                    },
-                    "squad_animation_roles": [
-                        {
-                            "flavour": {
-                                "squad_contents": [
-                                    {
-                                        "squad_member": {
-                                            "animation_variants": [
-                                                {
-                                                    "animation_role": {
-                                                        "instance_reference": "animation_role/soldier/s_flamer_guastatori_gunner"
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    }
-                                ],
-                                "key": "wehrmacht"
-                            }
-                        },
-                        {
-                            "flavour": {
-                                "squad_contents": [
-                                    {
-                                        "squad_member": {
-                                            "animation_variants": [
-                                                {
-                                                    "animation_role": {
-                                                        "instance_reference": "animation_role/soldier/s_flamer_guastatori_gunner"
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    }
-                                ],
-                                "key": "american"
-                            }
-                        }
-                    ]
+                    }
                 },
                 "fog_of_war": {
                     "reveal_self_on_attack": "True",
@@ -26832,7 +26071,7 @@
                     "has_deflection_damage": "False"
                 },
                 "fire": {
-                    "wind_down": "wind_down",
+                    "wind_down": 1.375,
                     "wind_up": 0.25,
                     "advanced": {
                         "wind_up_overtime": 0.125,
@@ -26846,8 +26085,8 @@
                 "fx_always_visible": "False",
                 "fx_building_hit_delay": 0.0,
                 "fx_delay_in_building": 0.0,
-                "fx_munition_name": "fx_munition_name",
-                "fx_tracer_name": "fx_tracer_name",
+                "fx_munition_name": "flamethrower",
+                "fx_tracer_name": "",
                 "fx_tracer_speed": 80.0,
                 "fx_use_building_panel_normal": "True",
                 "help_text": {
@@ -27045,7 +26284,7 @@
                     }
                 },
                 "weapon_class": "flame",
-                "fx_aoe_munition_name": "fx_aoe_munition_name",
+                "fx_aoe_munition_name": "flamethrower_aoe",
                 "speech_code": "",
                 "target_type_table": [
                     {
@@ -27304,24 +26543,6 @@
                                 ],
                                 "key": "british"
                             }
-                        },
-                        {
-                            "flavour": {
-                                "squad_contents": [
-                                    {
-                                        "squad_member": {
-                                            "animation_variants": [
-                                                {
-                                                    "animation_role": {
-                                                        "instance_reference": "animation_role/soldier/s_flamer_guastatori_gunner"
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    }
-                                ],
-                                "key": "american"
-                            }
                         }
                     ]
                 },
@@ -27577,13 +26798,7 @@
                             "min": 5.0,
                             "damage_type": "True Damage",
                             "allow_overkill": "False",
-                            "on_penetrated_state_trees": [
-                                {
-                                    "container": {
-                                        "state_tree": "tracer_fire_hmg_us"
-                                    }
-                                }
-                            ],
+                            "on_penetrated_state_trees": [],
                             "on_deflected_state_trees": [],
                             "post_damage_state_trees": [],
                             "damage_target_requirement": "",
@@ -30060,28 +29275,6 @@
                                                         }
                                                     ]
                                                 }
-                                            },
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/mp40_gunner_variants/s_greasegun_gunner_up"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/mp40_gunner_variants/s_greasegun_gunner_wide"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
                                             }
                                         ],
                                         "key": "british"
@@ -30761,28 +29954,6 @@
                                                         {
                                                             "animation_role": {
                                                                 "instance_reference": "animation_role/soldier/smg_gunner_variants/s_smg_sten_mk2_gunner_up"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/mp40_gunner_variants/s_greasegun_gunner_up"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/mp40_gunner_variants/s_greasegun_gunner_wide"
                                                             }
                                                         }
                                                     ]
@@ -32916,68 +32087,6 @@
                                         ],
                                         "key": "british"
                                     }
-                                },
-                                {
-                                    "flavour": {
-                                        "squad_contents": [
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_garand_m1_gunner_mid"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_garand_m1_gunner_down"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_garand_m1_gunner_up"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_garand_m1_gunner_1hand"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_garand_m1_gunner_wide"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            }
-                                        ],
-                                        "key": "wehrmacht"
-                                    }
                                 }
                             ]
                         },
@@ -33688,68 +32797,6 @@
                                             }
                                         ],
                                         "key": "british"
-                                    }
-                                },
-                                {
-                                    "flavour": {
-                                        "squad_contents": [
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_garand_m1_gunner_mid"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_garand_m1_gunner_down"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_garand_m1_gunner_up"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_garand_m1_gunner_1hand"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_garand_m1_gunner_wide"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            }
-                                        ],
-                                        "key": "wehrmacht"
                                     }
                                 }
                             ]
@@ -34462,68 +33509,6 @@
                                         ],
                                         "key": "british"
                                     }
-                                },
-                                {
-                                    "flavour": {
-                                        "squad_contents": [
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_garand_m1_gunner_mid"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_garand_m1_gunner_down"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_garand_m1_gunner_up"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_garand_m1_gunner_1hand"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_garand_m1_gunner_wide"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            }
-                                        ],
-                                        "key": "wehrmacht"
-                                    }
                                 }
                             ]
                         },
@@ -35234,68 +34219,6 @@
                                             }
                                         ],
                                         "key": "british"
-                                    }
-                                },
-                                {
-                                    "flavour": {
-                                        "squad_contents": [
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_garand_m1_gunner_mid"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_garand_m1_gunner_down"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_garand_m1_gunner_up"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_garand_m1_gunner_1hand"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_garand_m1_gunner_wide"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            }
-                                        ],
-                                        "key": "wehrmacht"
                                     }
                                 }
                             ]
@@ -36008,68 +34931,6 @@
                                         ],
                                         "key": "british"
                                     }
-                                },
-                                {
-                                    "flavour": {
-                                        "squad_contents": [
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_garand_m1_gunner_mid"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_garand_m1_gunner_down"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_garand_m1_gunner_up"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_garand_m1_gunner_1hand"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_garand_m1_gunner_wide"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            }
-                                        ],
-                                        "key": "wehrmacht"
-                                    }
                                 }
                             ]
                         },
@@ -36780,68 +35641,6 @@
                                             }
                                         ],
                                         "key": "british"
-                                    }
-                                },
-                                {
-                                    "flavour": {
-                                        "squad_contents": [
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_garand_m1_gunner_mid"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_garand_m1_gunner_down"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_garand_m1_gunner_up"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_garand_m1_gunner_1hand"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            },
-                                            {
-                                                "squad_member": {
-                                                    "animation_variants": [
-                                                        {
-                                                            "animation_role": {
-                                                                "instance_reference": "animation_role/soldier/rifle_gunner_variants/s_rifle_garand_m1_gunner_wide"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            }
-                                        ],
-                                        "key": "wehrmacht"
                                     }
                                 }
                             ]

@@ -2625,7 +2625,7 @@
                                 "value": "custom_properties\\custom_bool_property"
                             },
                             "id": "ABILITY_USE_DEFAULT_WEAPON_HARDPOINT",
-                            "value": "True"
+                            "value": "False"
                         }
                     },
                     {
@@ -2665,7 +2665,7 @@
                                 "value": "custom_properties\\custom_bool_property"
                             },
                             "id": "USE_WEAPON_RANGE_FOR_ABILITY_CHASE",
-                            "value": "False"
+                            "value": "True"
                         }
                     },
                     {
@@ -3252,7 +3252,7 @@
                                 "value": "custom_properties\\custom_squad_state_tree_reference_property"
                             },
                             "id": "TARGET_CONDITION_1",
-                            "nodepath": "camouflage_global_tree\\requirements\\not_paradropping"
+                            "nodepath": "camouflage_global_tree\\requirements\\light_and_heavy_cover"
                         }
                     },
                     {
@@ -3262,7 +3262,7 @@
                                 "value": "custom_properties\\custom_squad_state_tree_reference_property"
                             },
                             "id": "TARGET_CONDITION_2",
-                            "nodepath": "camouflage_global_tree\\requirements\\does_not_require_cover_no_requirement"
+                            "nodepath": "camouflage_global_tree\\requirements\\not_paradropping"
                         }
                     },
                     {
@@ -3407,13 +3407,13 @@
                         },
                         "formatter_arguments": [
                             {
-                                "int_value": 10.0
+                                "int_value": 25.0
                             },
                             {
                                 "int_value": 40.0
                             },
                             {
-                                "int_value": 5.0
+                                "int_value": 10.0
                             }
                         ],
                         "formatter": {
@@ -3720,7 +3720,7 @@
                                 "value": "custom_properties\\custom_float_property"
                             },
                             "id": "TIME_CAMOUFLAGE_DISABLES_AFTER_LEAVING_COVER",
-                            "value": 10.0
+                            "value": 4.0
                         }
                     },
                     {
@@ -3760,7 +3760,7 @@
                                 "value": "custom_properties\\custom_float_property"
                             },
                             "id": "FIRST_STRIKE_DURATION",
-                            "value": 5.0
+                            "value": 10.0
                         }
                     }
                 ],
@@ -3805,7 +3805,7 @@
                                 "value": "custom_properties\\custom_squad_state_tree_reference_property"
                             },
                             "id": "TARGET_CONDITION_1",
-                            "nodepath": "camouflage_global_tree\\requirements\\not_paradropping"
+                            "nodepath": "camouflage_global_tree\\requirements\\light_and_heavy_cover"
                         }
                     },
                     {
@@ -3815,7 +3815,7 @@
                                 "value": "custom_properties\\custom_squad_state_tree_reference_property"
                             },
                             "id": "TARGET_CONDITION_2",
-                            "nodepath": "camouflage_global_tree\\requirements\\does_not_require_cover_no_requirement"
+                            "nodepath": "camouflage_global_tree\\requirements\\not_paradropping"
                         }
                     },
                     {
@@ -3960,13 +3960,13 @@
                         },
                         "formatter_arguments": [
                             {
-                                "int_value": 10.0
+                                "int_value": 25.0
                             },
                             {
                                 "int_value": 40.0
                             },
                             {
-                                "int_value": 5.0
+                                "int_value": 10.0
                             }
                         ],
                         "formatter": {
@@ -4273,7 +4273,7 @@
                                 "value": "custom_properties\\custom_float_property"
                             },
                             "id": "TIME_CAMOUFLAGE_DISABLES_AFTER_LEAVING_COVER",
-                            "value": 10.0
+                            "value": 4.0
                         }
                     },
                     {
@@ -4313,7 +4313,7 @@
                                 "value": "custom_properties\\custom_float_property"
                             },
                             "id": "FIRST_STRIKE_DURATION",
-                            "value": 5.0
+                            "value": 10.0
                         }
                     }
                 ],
@@ -4326,9 +4326,9 @@
                                 "name": "custom_pbgid_property",
                                 "value": "custom_properties\\custom_pbgid_property"
                             },
-                            "id": "UPGRADE_PBG_1",
+                            "id": "SQUAD_STATUS_DECORATOR_PBG",
                             "pbg": {
-                                "instance_reference": "upgrade/british_africa/infantry/buff/commando_ambush_veteran_speed_buff"
+                                "instance_reference": "squad_status/decorators/buffs/camouflage_cover_duration_4_buff"
                             }
                         }
                     },
@@ -4341,6 +4341,18 @@
                             "id": "SQUAD_STATUS_DECORATOR_PBG_2",
                             "pbg": {
                                 "instance_reference": "squad_status/decorators/buffs/camouflage_first_strike_bonus"
+                            }
+                        }
+                    },
+                    {
+                        "custom_pbgid_property": {
+                            "template_reference": {
+                                "name": "custom_pbgid_property",
+                                "value": "custom_properties\\custom_pbgid_property"
+                            },
+                            "id": "UPGRADE_PBG_1",
+                            "pbg": {
+                                "instance_reference": "upgrade/british_africa/infantry/buff/commando_ambush_veteran_speed_buff"
                             }
                         }
                     }
@@ -4358,7 +4370,7 @@
                                 "value": "custom_properties\\custom_squad_state_tree_reference_property"
                             },
                             "id": "TARGET_CONDITION_1",
-                            "nodepath": "camouflage_global_tree\\requirements\\not_paradropping"
+                            "nodepath": "camouflage_global_tree\\requirements\\light_and_heavy_cover"
                         }
                     },
                     {
@@ -4368,7 +4380,7 @@
                                 "value": "custom_properties\\custom_squad_state_tree_reference_property"
                             },
                             "id": "TARGET_CONDITION_2",
-                            "nodepath": "camouflage_global_tree\\requirements\\does_not_require_cover_no_requirement"
+                            "nodepath": "camouflage_global_tree\\requirements\\not_paradropping"
                         }
                     },
                     {
@@ -4578,33 +4590,14 @@
                                 "name": "required",
                                 "value": "requirements\\required_squad_veterancy"
                             },
+                            "match_exact_rank": "False",
                             "reason": "usage_and_display",
-                            "requirement_table": [
-                                {
-                                    "required": {
-                                        "template_reference": {
-                                            "name": "required",
-                                            "value": "requirements\\required_squad_veterancy"
-                                        },
-                                        "match_exact_rank": "False",
-                                        "reason": "usage_and_display",
-                                        "ui_name": {
-                                            "locstring": {
-                                                "name": "ui_name",
-                                                "value": "0"
-                                            }
-                                        },
-                                        "veterancy_rank": 3.0
-                                    }
-                                }
-                            ],
                             "ui_name": {
                                 "locstring": {
                                     "name": "ui_name",
                                     "value": "0"
                                 }
                             },
-                            "match_exact_rank": "False",
                             "veterancy_rank": 3.0
                         }
                     }
@@ -4881,9 +4874,9 @@
                                 "name": "custom_pbgid_property",
                                 "value": "custom_properties\\custom_pbgid_property"
                             },
-                            "id": "UPGRADE_PBG_1",
+                            "id": "SQUAD_STATUS_DECORATOR_PBG",
                             "pbg": {
-                                "instance_reference": "upgrade/british_africa/infantry/buff/commando_ambush_veteran_speed_buff"
+                                "instance_reference": "squad_status/decorators/buffs/camouflage_cover_duration_4_buff"
                             }
                         }
                     },
@@ -4896,6 +4889,18 @@
                             "id": "SQUAD_STATUS_DECORATOR_PBG_2",
                             "pbg": {
                                 "instance_reference": "squad_status/decorators/buffs/camouflage_first_strike_bonus"
+                            }
+                        }
+                    },
+                    {
+                        "custom_pbgid_property": {
+                            "template_reference": {
+                                "name": "custom_pbgid_property",
+                                "value": "custom_properties\\custom_pbgid_property"
+                            },
+                            "id": "UPGRADE_PBG_1",
+                            "pbg": {
+                                "instance_reference": "upgrade/british_africa/infantry/buff/commando_ambush_veteran_speed_buff"
                             }
                         }
                     }
@@ -4913,7 +4918,7 @@
                                 "value": "custom_properties\\custom_squad_state_tree_reference_property"
                             },
                             "id": "TARGET_CONDITION_1",
-                            "nodepath": "camouflage_global_tree\\requirements\\not_paradropping"
+                            "nodepath": "camouflage_global_tree\\requirements\\light_and_heavy_cover"
                         }
                     },
                     {
@@ -4923,7 +4928,7 @@
                                 "value": "custom_properties\\custom_squad_state_tree_reference_property"
                             },
                             "id": "TARGET_CONDITION_2",
-                            "nodepath": "camouflage_global_tree\\requirements\\does_not_require_cover_no_requirement"
+                            "nodepath": "camouflage_global_tree\\requirements\\not_paradropping"
                         }
                     },
                     {
@@ -5346,7 +5351,7 @@
                                 "value": "custom_properties\\custom_float_property"
                             },
                             "id": "TIME_CAMOUFLAGE_DISABLES_AFTER_LEAVING_COVER",
-                            "value": 1.4
+                            "value": 4.0
                         }
                     },
                     {
@@ -5356,7 +5361,7 @@
                                 "value": "custom_properties\\custom_float_property"
                             },
                             "id": "CAMOUFLAGE_DELAY",
-                            "value": 1.75
+                            "value": 0.0
                         }
                     },
                     {
@@ -5366,7 +5371,7 @@
                                 "value": "custom_properties\\custom_float_property"
                             },
                             "id": "WEAPON_DAMAGE_MODIFIER",
-                            "value": 1.25
+                            "value": 1.4
                         }
                     },
                     {
@@ -5376,7 +5381,7 @@
                                 "value": "custom_properties\\custom_float_property"
                             },
                             "id": "WEAPON_ACCURACY_MODIFIER",
-                            "value": 1.4
+                            "value": 1.75
                         }
                     },
                     {
@@ -5401,7 +5406,7 @@
                             },
                             "id": "SQUAD_STATUS_DECORATOR_PBG",
                             "pbg": {
-                                "instance_reference": "squad_status/decorators/buffs/camouflage_first_strike_ssb_bonus"
+                                "instance_reference": "squad_status/decorators/buffs/camouflage_cover_duration_4_buff"
                             }
                         }
                     },
@@ -5413,7 +5418,7 @@
                             },
                             "id": "SQUAD_STATUS_DECORATOR_PBG_2",
                             "pbg": {
-                                "instance_reference": "squad_status/decorators/buffs/camouflage_first_strike_bonus"
+                                "instance_reference": "squad_status/decorators/buffs/camouflage_first_strike_ssb_bonus"
                             }
                         }
                     }
@@ -5431,7 +5436,7 @@
                                 "value": "custom_properties\\custom_squad_state_tree_reference_property"
                             },
                             "id": "TARGET_CONDITION_1",
-                            "nodepath": "camouflage_global_tree\\requirements\\not_paradropping"
+                            "nodepath": "camouflage_global_tree\\requirements\\light_and_heavy_cover"
                         }
                     },
                     {
@@ -5441,7 +5446,7 @@
                                 "value": "custom_properties\\custom_squad_state_tree_reference_property"
                             },
                             "id": "TARGET_CONDITION_2",
-                            "nodepath": "camouflage_global_tree\\requirements\\does_not_require_cover_no_requirement"
+                            "nodepath": "camouflage_global_tree\\requirements\\not_paradropping"
                         }
                     },
                     {
@@ -9052,7 +9057,7 @@
                         "required": {
                             "template_reference": {
                                 "name": "required",
-                                "value": "requirements\\required_any_in_list"
+                                "value": "requirements\\required_player_upgrade"
                             },
                             "include_completed": "True",
                             "include_pbg_parenting": {
@@ -9063,16 +9068,52 @@
                             "is_present": "True",
                             "max_completed": 100.0,
                             "min_completed": 1.0,
-                            "reason": "usage",
+                            "reason": "display",
                             "ui_name": {
                                 "locstring": {
                                     "name": "ui_name",
-                                    "value": "11265789"
+                                    "value": "0"
                                 }
                             },
                             "upgrade_name": {
                                 "instance_reference": "upgrade/british/battlegroups/canadian_shock/canadian_shock"
+                            }
+                        }
+                    },
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_player_upgrade"
                             },
+                            "include_completed": "True",
+                            "include_pbg_parenting": {
+                                "include_child_pbgs": "False",
+                                "include_parent_pbgs": "False"
+                            },
+                            "include_queued": "False",
+                            "is_present": "True",
+                            "max_completed": 100.0,
+                            "min_completed": 1.0,
+                            "reason": "usage_and_display",
+                            "ui_name": {
+                                "locstring": {
+                                    "name": "ui_name",
+                                    "value": "0"
+                                }
+                            },
+                            "upgrade_name": {
+                                "instance_reference": "upgrade/british/battlegroups/canadian_shock/canadian_shock_pyrotechnics_uk"
+                            }
+                        }
+                    },
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_any_in_list"
+                            },
+                            "reason": "usage",
                             "requirements": [
                                 {
                                     "requirement": {
@@ -9155,60 +9196,12 @@
                                         }
                                     }
                                 }
-                            ]
-                        }
-                    },
-                    {
-                        "required": {
-                            "template_reference": {
-                                "name": "required",
-                                "value": "requirements\\required_player_upgrade"
-                            },
-                            "include_completed": "True",
-                            "include_pbg_parenting": {
-                                "include_child_pbgs": "False",
-                                "include_parent_pbgs": "False"
-                            },
-                            "include_queued": "False",
-                            "is_present": "True",
-                            "max_completed": 100.0,
-                            "min_completed": 1.0,
-                            "reason": "usage_and_display",
+                            ],
                             "ui_name": {
                                 "locstring": {
                                     "name": "ui_name",
-                                    "value": "0"
+                                    "value": "11265789"
                                 }
-                            },
-                            "upgrade_name": {
-                                "instance_reference": "upgrade/british/battlegroups/canadian_shock/canadian_shock_pyrotechnics_uk"
-                            }
-                        }
-                    },
-                    {
-                        "required": {
-                            "template_reference": {
-                                "name": "required",
-                                "value": "requirements\\required_player_upgrade"
-                            },
-                            "include_completed": "True",
-                            "include_pbg_parenting": {
-                                "include_child_pbgs": "False",
-                                "include_parent_pbgs": "False"
-                            },
-                            "include_queued": "False",
-                            "is_present": "True",
-                            "max_completed": 100.0,
-                            "min_completed": 1.0,
-                            "reason": "usage",
-                            "ui_name": {
-                                "locstring": {
-                                    "name": "ui_name",
-                                    "value": "0"
-                                }
-                            },
-                            "upgrade_name": {
-                                "instance_reference": "upgrade/british/battlegroups/canadian_shock/canadian_shock_incendiary_munitions_uk"
                             }
                         }
                     }
@@ -12255,7 +12248,7 @@
                                 "name": "custom_bool_property",
                                 "value": "custom_properties\\custom_bool_property"
                             },
-                            "id": "SHOW_RETICULE",
+                            "id": "ABILITY_USE_DEFAULT_WEAPON_HARDPOINT",
                             "value": "False"
                         }
                     },
@@ -12285,7 +12278,7 @@
                                 "name": "custom_bool_property",
                                 "value": "custom_properties\\custom_bool_property"
                             },
-                            "id": "CONVERT_WEAPON",
+                            "id": "SHOW_RETICULE",
                             "value": "False"
                         }
                     },
@@ -12296,7 +12289,7 @@
                                 "value": "custom_properties\\custom_bool_property"
                             },
                             "id": "REQUIRE_ALL_PREVIOUS_UPGRADES",
-                            "value": "False"
+                            "value": "True"
                         }
                     },
                     {
@@ -12418,7 +12411,7 @@
                             },
                             "id": "REQUIRED_UPGRADE_2",
                             "pbg": {
-                                "instance_reference": "ebps/races/british_africa/weapons/explosive_weapons/grenade/w_gammon_bomb_guards_pyrotechnics_africa_uk"
+                                "instance_reference": "upgrade/british/battlegroups/canadian_shock/canadian_shock_incendiary_munitions_uk"
                             }
                         }
                     },
@@ -12430,7 +12423,7 @@
                             },
                             "id": "UPGRADE_OWNER_2",
                             "pbg": {
-                                "instance_reference": "upgrade/british/battlegroups/canadian_shock/canadian_shock_pyrotechnics_uk"
+                                "instance_reference": "custom_property_container/common_enums/target_types/player"
                             }
                         }
                     },
@@ -12440,9 +12433,9 @@
                                 "name": "custom_pbgid_property",
                                 "value": "custom_properties\\custom_pbgid_property"
                             },
-                            "id": "ABILITY_AURA_PBG_1",
+                            "id": "WEAPON_PBG_3",
                             "pbg": {
-                                "instance_reference": "custom_property_container/dynamic_aura/abilities/british/canadian_shock_uk/aura_canadian_shock_incendiary_munitions_aoe_uk"
+                                "instance_reference": "ebps/races/british_africa/weapons/explosive_weapons/grenade/w_gammon_bomb_guards_pyrotechnics_africa_uk"
                             }
                         }
                     },
@@ -12467,6 +12460,18 @@
                             "id": "UPGRADE_OWNER_3",
                             "pbg": {
                                 "instance_reference": "custom_property_container/common_enums/target_types/player"
+                            }
+                        }
+                    },
+                    {
+                        "custom_pbgid_property": {
+                            "template_reference": {
+                                "name": "custom_pbgid_property",
+                                "value": "custom_properties\\custom_pbgid_property"
+                            },
+                            "id": "ABILITY_AURA_PBG_1",
+                            "pbg": {
+                                "instance_reference": "custom_property_container/dynamic_aura/abilities/british/canadian_shock_uk/aura_canadian_shock_incendiary_munitions_aoe_uk"
                             }
                         }
                     }
@@ -12915,7 +12920,7 @@
                                 "name": "custom_bool_property",
                                 "value": "custom_properties\\custom_bool_property"
                             },
-                            "id": "SHOW_RETICULE",
+                            "id": "ABILITY_USE_DEFAULT_WEAPON_HARDPOINT",
                             "value": "False"
                         }
                     },
@@ -12945,7 +12950,7 @@
                                 "name": "custom_bool_property",
                                 "value": "custom_properties\\custom_bool_property"
                             },
-                            "id": "CONVERT_WEAPON",
+                            "id": "SHOW_RETICULE",
                             "value": "False"
                         }
                     },
@@ -12956,7 +12961,7 @@
                                 "value": "custom_properties\\custom_bool_property"
                             },
                             "id": "REQUIRE_ALL_PREVIOUS_UPGRADES",
-                            "value": "False"
+                            "value": "True"
                         }
                     },
                     {
@@ -13078,7 +13083,7 @@
                             },
                             "id": "REQUIRED_UPGRADE_2",
                             "pbg": {
-                                "instance_reference": "ebps/races/british_africa/weapons/explosive_weapons/grenade/w_gammon_bomb_sapper_pyrotechnics_africa_uk"
+                                "instance_reference": "upgrade/british/battlegroups/canadian_shock/canadian_shock_incendiary_munitions_uk"
                             }
                         }
                     },
@@ -13090,7 +13095,7 @@
                             },
                             "id": "UPGRADE_OWNER_2",
                             "pbg": {
-                                "instance_reference": "upgrade/british/battlegroups/canadian_shock/canadian_shock_pyrotechnics_uk"
+                                "instance_reference": "custom_property_container/common_enums/target_types/player"
                             }
                         }
                     },
@@ -13100,9 +13105,9 @@
                                 "name": "custom_pbgid_property",
                                 "value": "custom_properties\\custom_pbgid_property"
                             },
-                            "id": "ABILITY_AURA_PBG_1",
+                            "id": "WEAPON_PBG_3",
                             "pbg": {
-                                "instance_reference": "custom_property_container/dynamic_aura/abilities/british/canadian_shock_uk/aura_canadian_shock_incendiary_munitions_aoe_uk"
+                                "instance_reference": "ebps/races/british_africa/weapons/explosive_weapons/grenade/w_gammon_bomb_sapper_pyrotechnics_africa_uk"
                             }
                         }
                     },
@@ -13127,6 +13132,18 @@
                             "id": "UPGRADE_OWNER_3",
                             "pbg": {
                                 "instance_reference": "custom_property_container/common_enums/target_types/player"
+                            }
+                        }
+                    },
+                    {
+                        "custom_pbgid_property": {
+                            "template_reference": {
+                                "name": "custom_pbgid_property",
+                                "value": "custom_properties\\custom_pbgid_property"
+                            },
+                            "id": "ABILITY_AURA_PBG_1",
+                            "pbg": {
+                                "instance_reference": "custom_property_container/dynamic_aura/abilities/british/canadian_shock_uk/aura_canadian_shock_incendiary_munitions_aoe_uk"
                             }
                         }
                     }
@@ -13605,7 +13622,7 @@
                                 "value": "custom_properties\\custom_bool_property"
                             },
                             "id": "ABILITY_USE_DEFAULT_WEAPON_HARDPOINT",
-                            "value": "True"
+                            "value": "False"
                         }
                     },
                     {
@@ -13614,8 +13631,8 @@
                                 "name": "custom_bool_property",
                                 "value": "custom_properties\\custom_bool_property"
                             },
-                            "id": "SHOW_RETICULE",
-                            "value": "False"
+                            "id": "DENY_REFUND_COST",
+                            "value": "True"
                         }
                     },
                     {
@@ -13645,7 +13662,7 @@
                                 "value": "custom_properties\\custom_bool_property"
                             },
                             "id": "REQUIRE_ALL_PREVIOUS_UPGRADES",
-                            "value": "False"
+                            "value": "True"
                         }
                     },
                     {
@@ -13665,6 +13682,16 @@
                                 "value": "custom_properties\\custom_bool_property"
                             },
                             "id": "PRESERVE_VISUAL",
+                            "value": "False"
+                        }
+                    },
+                    {
+                        "custom_bool_property": {
+                            "template_reference": {
+                                "name": "custom_bool_property",
+                                "value": "custom_properties\\custom_bool_property"
+                            },
+                            "id": "SHOW_RETICULE",
                             "value": "False"
                         }
                     }
@@ -15230,7 +15257,7 @@
                                 "value": "custom_properties\\custom_bool_property"
                             },
                             "id": "ABILITY_USE_DEFAULT_WEAPON_HARDPOINT",
-                            "value": "True"
+                            "value": "False"
                         }
                     },
                     {
@@ -15270,7 +15297,7 @@
                                 "value": "custom_properties\\custom_bool_property"
                             },
                             "id": "USE_WEAPON_RANGE_FOR_ABILITY_CHASE",
-                            "value": "False"
+                            "value": "True"
                         }
                     },
                     {
@@ -15530,7 +15557,7 @@
                         "required": {
                             "template_reference": {
                                 "name": "required",
-                                "value": "requirements\\required_player_upgrade"
+                                "value": "requirements\\required_not"
                             },
                             "reason": "usage",
                             "ui_name": {
@@ -15562,23 +15589,20 @@
                                         "was_attacking_within_seconds": -1.0
                                     }
                                 }
-                            ],
-                            "upgrade_name": {
-                                "instance_reference": "upgrade/british/battlegroups/polish_cavalry/polish_cavalry_uk"
-                            }
+                            ]
                         }
                     },
                     {
                         "required": {
                             "template_reference": {
                                 "name": "required",
-                                "value": "requirements\\required_player_upgrade"
+                                "value": "requirements\\required_not"
                             },
-                            "reason": "usage_and_display",
+                            "reason": "usage",
                             "ui_name": {
                                 "locstring": {
                                     "name": "ui_name",
-                                    "value": "11268201"
+                                    "value": "11223245"
                                 }
                             },
                             "requirement_table": [
@@ -15604,90 +15628,60 @@
                                         "was_attacking_within_seconds": -1.0
                                     }
                                 }
-                            ],
+                            ]
+                        }
+                    },
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_player_upgrade"
+                            },
+                            "include_completed": "True",
+                            "include_pbg_parenting": {
+                                "include_child_pbgs": "False",
+                                "include_parent_pbgs": "False"
+                            },
+                            "include_queued": "False",
+                            "is_present": "True",
+                            "max_completed": 100.0,
+                            "min_completed": 1.0,
+                            "reason": "display",
+                            "ui_name": {
+                                "locstring": {
+                                    "name": "ui_name",
+                                    "value": "0"
+                                }
+                            },
+                            "upgrade_name": {
+                                "instance_reference": "upgrade/british/battlegroups/polish_cavalry/polish_cavalry_uk"
+                            }
+                        }
+                    },
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_player_upgrade"
+                            },
+                            "include_completed": "True",
+                            "include_pbg_parenting": {
+                                "include_child_pbgs": "False",
+                                "include_parent_pbgs": "False"
+                            },
+                            "include_queued": "False",
+                            "is_present": "True",
+                            "max_completed": 100.0,
+                            "min_completed": 1.0,
+                            "reason": "usage_and_display",
+                            "ui_name": {
+                                "locstring": {
+                                    "name": "ui_name",
+                                    "value": "11268201"
+                                }
+                            },
                             "upgrade_name": {
                                 "instance_reference": "upgrade/british/battlegroups/polish_cavalry/polish_cavalry_no_man_left_behind_uk"
-                            }
-                        }
-                    },
-                    {
-                        "required": {
-                            "template_reference": {
-                                "name": "required",
-                                "value": "requirements\\required_player_upgrade"
-                            },
-                            "include_completed": "True",
-                            "include_pbg_parenting": {
-                                "include_child_pbgs": "False",
-                                "include_parent_pbgs": "False"
-                            },
-                            "include_queued": "False",
-                            "is_present": "True",
-                            "max_completed": 100.0,
-                            "min_completed": 1.0,
-                            "reason": "display",
-                            "ui_name": {
-                                "locstring": {
-                                    "name": "ui_name",
-                                    "value": "0"
-                                }
-                            },
-                            "upgrade_name": {
-                                "instance_reference": "upgrade/german/battlegroups/terror/terror_ger"
-                            }
-                        }
-                    },
-                    {
-                        "required": {
-                            "template_reference": {
-                                "name": "required",
-                                "value": "requirements\\required_player_upgrade"
-                            },
-                            "include_completed": "True",
-                            "include_pbg_parenting": {
-                                "include_child_pbgs": "False",
-                                "include_parent_pbgs": "False"
-                            },
-                            "include_queued": "False",
-                            "is_present": "False",
-                            "max_completed": 100.0,
-                            "min_completed": 1.0,
-                            "reason": "display",
-                            "ui_name": {
-                                "locstring": {
-                                    "name": "ui_name",
-                                    "value": "0"
-                                }
-                            },
-                            "upgrade_name": {
-                                "instance_reference": "upgrade/german/battlegroups/terror/terror_contempt_for_the_weak_ger"
-                            }
-                        }
-                    },
-                    {
-                        "required": {
-                            "template_reference": {
-                                "name": "required",
-                                "value": "requirements\\required_player_upgrade"
-                            },
-                            "include_completed": "True",
-                            "include_pbg_parenting": {
-                                "include_child_pbgs": "False",
-                                "include_parent_pbgs": "False"
-                            },
-                            "include_queued": "False",
-                            "is_present": "True",
-                            "max_completed": 100.0,
-                            "min_completed": 1.0,
-                            "reason": "usage",
-                            "ui_name": {
-                                "locstring": {
-                                    "name": "ui_name",
-                                    "value": "11265402"
-                                }
-                            },
-                            "upgrade_name": {
-                                "instance_reference": "upgrade/german/battlegroups/terror/terror_interrogate_ger"
                             }
                         }
                     }
@@ -15977,7 +15971,7 @@
                                 "name": "custom_bool_property",
                                 "value": "custom_properties\\custom_bool_property"
                             },
-                            "id": "USE_CHANNEL_TIME",
+                            "id": "VULNERABLE_DURING_MOVE",
                             "value": "True"
                         }
                     },
@@ -16000,9 +15994,49 @@
                             "id": "KEEP_ALIVE_INTERACTION",
                             "value": "False"
                         }
+                    },
+                    {
+                        "custom_bool_property": {
+                            "template_reference": {
+                                "name": "custom_bool_property",
+                                "value": "custom_properties\\custom_bool_property"
+                            },
+                            "id": "USE_CHANNEL_TIME",
+                            "value": "True"
+                        }
                     }
                 ],
                 "custom_float_properties": [
+                    {
+                        "custom_float_property": {
+                            "template_reference": {
+                                "name": "custom_float_property",
+                                "value": "custom_properties\\custom_float_property"
+                            },
+                            "id": "ABILITY_CHANNEL_START_DURATION_SEC",
+                            "value": 0.0
+                        }
+                    },
+                    {
+                        "custom_float_property": {
+                            "template_reference": {
+                                "name": "custom_float_property",
+                                "value": "custom_properties\\custom_float_property"
+                            },
+                            "id": "ABILITY_CHANNEL_BODY_DURATION_SEC",
+                            "value": 0.0
+                        }
+                    },
+                    {
+                        "custom_float_property": {
+                            "template_reference": {
+                                "name": "custom_float_property",
+                                "value": "custom_properties\\custom_float_property"
+                            },
+                            "id": "ABILITY_CHANNEL_END_DURATION_SEC",
+                            "value": 0.0
+                        }
+                    },
                     {
                         "custom_float_property": {
                             "template_reference": {
@@ -16255,7 +16289,7 @@
                         "required": {
                             "template_reference": {
                                 "name": "required",
-                                "value": "requirements\\required_player_upgrade"
+                                "value": "requirements\\required_not"
                             },
                             "reason": "usage",
                             "ui_name": {
@@ -16287,23 +16321,20 @@
                                         "was_attacking_within_seconds": -1.0
                                     }
                                 }
-                            ],
-                            "upgrade_name": {
-                                "instance_reference": "upgrade/british/battlegroups/polish_cavalry/polish_cavalry_uk"
-                            }
+                            ]
                         }
                     },
                     {
                         "required": {
                             "template_reference": {
                                 "name": "required",
-                                "value": "requirements\\required_player_upgrade"
+                                "value": "requirements\\required_not"
                             },
-                            "reason": "usage_and_display",
+                            "reason": "usage",
                             "ui_name": {
                                 "locstring": {
                                     "name": "ui_name",
-                                    "value": "11268201"
+                                    "value": "11223245"
                                 }
                             },
                             "requirement_table": [
@@ -16329,90 +16360,60 @@
                                         "was_attacking_within_seconds": -1.0
                                     }
                                 }
-                            ],
+                            ]
+                        }
+                    },
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_player_upgrade"
+                            },
+                            "include_completed": "True",
+                            "include_pbg_parenting": {
+                                "include_child_pbgs": "False",
+                                "include_parent_pbgs": "False"
+                            },
+                            "include_queued": "False",
+                            "is_present": "True",
+                            "max_completed": 100.0,
+                            "min_completed": 1.0,
+                            "reason": "display",
+                            "ui_name": {
+                                "locstring": {
+                                    "name": "ui_name",
+                                    "value": "0"
+                                }
+                            },
+                            "upgrade_name": {
+                                "instance_reference": "upgrade/british/battlegroups/polish_cavalry/polish_cavalry_uk"
+                            }
+                        }
+                    },
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_player_upgrade"
+                            },
+                            "include_completed": "True",
+                            "include_pbg_parenting": {
+                                "include_child_pbgs": "False",
+                                "include_parent_pbgs": "False"
+                            },
+                            "include_queued": "False",
+                            "is_present": "True",
+                            "max_completed": 100.0,
+                            "min_completed": 1.0,
+                            "reason": "usage_and_display",
+                            "ui_name": {
+                                "locstring": {
+                                    "name": "ui_name",
+                                    "value": "11268201"
+                                }
+                            },
                             "upgrade_name": {
                                 "instance_reference": "upgrade/british/battlegroups/polish_cavalry/polish_cavalry_no_man_left_behind_uk"
-                            }
-                        }
-                    },
-                    {
-                        "required": {
-                            "template_reference": {
-                                "name": "required",
-                                "value": "requirements\\required_player_upgrade"
-                            },
-                            "include_completed": "True",
-                            "include_pbg_parenting": {
-                                "include_child_pbgs": "False",
-                                "include_parent_pbgs": "False"
-                            },
-                            "include_queued": "False",
-                            "is_present": "True",
-                            "max_completed": 100.0,
-                            "min_completed": 1.0,
-                            "reason": "display",
-                            "ui_name": {
-                                "locstring": {
-                                    "name": "ui_name",
-                                    "value": "0"
-                                }
-                            },
-                            "upgrade_name": {
-                                "instance_reference": "upgrade/german/battlegroups/terror/terror_ger"
-                            }
-                        }
-                    },
-                    {
-                        "required": {
-                            "template_reference": {
-                                "name": "required",
-                                "value": "requirements\\required_player_upgrade"
-                            },
-                            "include_completed": "True",
-                            "include_pbg_parenting": {
-                                "include_child_pbgs": "False",
-                                "include_parent_pbgs": "False"
-                            },
-                            "include_queued": "False",
-                            "is_present": "False",
-                            "max_completed": 100.0,
-                            "min_completed": 1.0,
-                            "reason": "display",
-                            "ui_name": {
-                                "locstring": {
-                                    "name": "ui_name",
-                                    "value": "0"
-                                }
-                            },
-                            "upgrade_name": {
-                                "instance_reference": "upgrade/german/battlegroups/terror/terror_contempt_for_the_weak_ger"
-                            }
-                        }
-                    },
-                    {
-                        "required": {
-                            "template_reference": {
-                                "name": "required",
-                                "value": "requirements\\required_player_upgrade"
-                            },
-                            "include_completed": "True",
-                            "include_pbg_parenting": {
-                                "include_child_pbgs": "False",
-                                "include_parent_pbgs": "False"
-                            },
-                            "include_queued": "False",
-                            "is_present": "True",
-                            "max_completed": 100.0,
-                            "min_completed": 1.0,
-                            "reason": "usage",
-                            "ui_name": {
-                                "locstring": {
-                                    "name": "ui_name",
-                                    "value": "11265402"
-                                }
-                            },
-                            "upgrade_name": {
-                                "instance_reference": "upgrade/german/battlegroups/terror/terror_interrogate_ger"
                             }
                         }
                     }
@@ -16702,7 +16703,7 @@
                                 "name": "custom_bool_property",
                                 "value": "custom_properties\\custom_bool_property"
                             },
-                            "id": "USE_CHANNEL_TIME",
+                            "id": "VULNERABLE_DURING_MOVE",
                             "value": "True"
                         }
                     },
@@ -16725,9 +16726,49 @@
                             "id": "KEEP_ALIVE_INTERACTION",
                             "value": "False"
                         }
+                    },
+                    {
+                        "custom_bool_property": {
+                            "template_reference": {
+                                "name": "custom_bool_property",
+                                "value": "custom_properties\\custom_bool_property"
+                            },
+                            "id": "USE_CHANNEL_TIME",
+                            "value": "True"
+                        }
                     }
                 ],
                 "custom_float_properties": [
+                    {
+                        "custom_float_property": {
+                            "template_reference": {
+                                "name": "custom_float_property",
+                                "value": "custom_properties\\custom_float_property"
+                            },
+                            "id": "ABILITY_CHANNEL_START_DURATION_SEC",
+                            "value": 0.0
+                        }
+                    },
+                    {
+                        "custom_float_property": {
+                            "template_reference": {
+                                "name": "custom_float_property",
+                                "value": "custom_properties\\custom_float_property"
+                            },
+                            "id": "ABILITY_CHANNEL_BODY_DURATION_SEC",
+                            "value": 0.0
+                        }
+                    },
+                    {
+                        "custom_float_property": {
+                            "template_reference": {
+                                "name": "custom_float_property",
+                                "value": "custom_properties\\custom_float_property"
+                            },
+                            "id": "ABILITY_CHANNEL_END_DURATION_SEC",
+                            "value": 0.0
+                        }
+                    },
                     {
                         "custom_float_property": {
                             "template_reference": {
@@ -17127,52 +17168,6 @@
                                             }
                                         },
                                         "unit_type": "defence_building",
-                                        "qualify_option": {
-                                            "template_reference": {
-                                                "name": "qualify_option",
-                                                "value": "options\\none"
-                                            }
-                                        },
-                                        "search_load_out": "False"
-                                    }
-                                },
-                                {
-                                    "requirement": {
-                                        "template_reference": {
-                                            "name": "requirement",
-                                            "value": "requirements\\required_unit_type"
-                                        },
-                                        "reason": "usage",
-                                        "ui_name": {
-                                            "locstring": {
-                                                "name": "ui_name",
-                                                "value": "0"
-                                            }
-                                        },
-                                        "unit_type": "vehicle",
-                                        "qualify_option": {
-                                            "template_reference": {
-                                                "name": "qualify_option",
-                                                "value": "options\\none"
-                                            }
-                                        },
-                                        "search_load_out": "False"
-                                    }
-                                },
-                                {
-                                    "requirement": {
-                                        "template_reference": {
-                                            "name": "requirement",
-                                            "value": "requirements\\required_unit_type"
-                                        },
-                                        "reason": "usage",
-                                        "ui_name": {
-                                            "locstring": {
-                                                "name": "ui_name",
-                                                "value": "0"
-                                            }
-                                        },
-                                        "unit_type": "team_weapon",
                                         "qualify_option": {
                                             "template_reference": {
                                                 "name": "qualify_option",
@@ -18013,7 +18008,7 @@
                                 "value": "custom_properties\\custom_float_property"
                             },
                             "id": "AMOUNT",
-                            "value": 6.0
+                            "value": 0.0
                         }
                     },
                     {
@@ -18023,7 +18018,7 @@
                                 "value": "custom_properties\\custom_float_property"
                             },
                             "id": "AMOUNT_HEAL_PER_TICK",
-                            "value": 0.0
+                            "value": 6.0
                         }
                     },
                     {
@@ -18043,7 +18038,7 @@
                                 "value": "custom_properties\\custom_float_property"
                             },
                             "id": "VETERANCY_BONUS_2",
-                            "value": 3.0
+                            "value": 0.0
                         }
                     },
                     {
@@ -19441,7 +19436,7 @@
                                 "value": "custom_properties\\custom_float_property"
                             },
                             "id": "AMOUNT_HEAL_PER_TICK",
-                            "value": 3.0
+                            "value": 8.0
                         }
                     },
                     {
@@ -19451,26 +19446,6 @@
                                 "value": "custom_properties\\custom_float_property"
                             },
                             "id": "VETERANCY_BONUS",
-                            "value": 2.5
-                        }
-                    },
-                    {
-                        "custom_float_property": {
-                            "template_reference": {
-                                "name": "custom_float_property",
-                                "value": "custom_properties\\custom_float_property"
-                            },
-                            "id": "VETERANCY_BONUS_2",
-                            "value": 3.0
-                        }
-                    },
-                    {
-                        "custom_float_property": {
-                            "template_reference": {
-                                "name": "custom_float_property",
-                                "value": "custom_properties\\custom_float_property"
-                            },
-                            "id": "VETERANCY_BONUS_3",
                             "value": 0.0
                         }
                     },
@@ -19480,8 +19455,28 @@
                                 "name": "custom_float_property",
                                 "value": "custom_properties\\custom_float_property"
                             },
+                            "id": "VETERANCY_BONUS_2",
+                            "value": 0.0
+                        }
+                    },
+                    {
+                        "custom_float_property": {
+                            "template_reference": {
+                                "name": "custom_float_property",
+                                "value": "custom_properties\\custom_float_property"
+                            },
+                            "id": "VETERANCY_BONUS_3",
+                            "value": 3.0
+                        }
+                    },
+                    {
+                        "custom_float_property": {
+                            "template_reference": {
+                                "name": "custom_float_property",
+                                "value": "custom_properties\\custom_float_property"
+                            },
                             "id": "SQUAD_UPGRADE_BONUS",
-                            "value": 2.0
+                            "value": 2.5
                         }
                     },
                     {
@@ -20023,7 +20018,7 @@
                                 "value": "custom_properties\\custom_bool_property"
                             },
                             "id": "ABILITY_USE_DEFAULT_WEAPON_HARDPOINT",
-                            "value": "True"
+                            "value": "False"
                         }
                     },
                     {
@@ -20032,8 +20027,8 @@
                                 "name": "custom_bool_property",
                                 "value": "custom_properties\\custom_bool_property"
                             },
-                            "id": "SHOW_RETICULE",
-                            "value": "False"
+                            "id": "DENY_REFUND_COST",
+                            "value": "True"
                         }
                     },
                     {
@@ -20063,7 +20058,7 @@
                                 "value": "custom_properties\\custom_bool_property"
                             },
                             "id": "REQUIRE_ALL_PREVIOUS_UPGRADES",
-                            "value": "False"
+                            "value": "True"
                         }
                     },
                     {
@@ -20083,6 +20078,16 @@
                                 "value": "custom_properties\\custom_bool_property"
                             },
                             "id": "PRESERVE_VISUAL",
+                            "value": "False"
+                        }
+                    },
+                    {
+                        "custom_bool_property": {
+                            "template_reference": {
+                                "name": "custom_bool_property",
+                                "value": "custom_properties\\custom_bool_property"
+                            },
+                            "id": "SHOW_RETICULE",
                             "value": "False"
                         }
                     }
@@ -20185,7 +20190,7 @@
                             },
                             "id": "REQUIRED_UPGRADE_2",
                             "pbg": {
-                                "instance_reference": "ebps/races/british_africa/weapons/explosive_weapons/grenade/w_rifle_grenade_tommy_incendiary_africa_uk"
+                                "instance_reference": "upgrade/british/battlegroups/canadian_shock/canadian_shock_incendiary_munitions_uk"
                             }
                         }
                     },
@@ -20197,7 +20202,7 @@
                             },
                             "id": "UPGRADE_OWNER_2",
                             "pbg": {
-                                "instance_reference": "upgrade/british/battlegroups/canadian_shock/canadian_shock_pyrotechnics_uk"
+                                "instance_reference": "custom_property_container/common_enums/target_types/player"
                             }
                         }
                     },
@@ -20207,9 +20212,9 @@
                                 "name": "custom_pbgid_property",
                                 "value": "custom_properties\\custom_pbgid_property"
                             },
-                            "id": "ABILITY_AURA_PBG_1",
+                            "id": "WEAPON_PBG_3",
                             "pbg": {
-                                "instance_reference": "custom_property_container/dynamic_aura/abilities/british/canadian_shock_uk/aura_canadian_shock_incendiary_munitions_aoe_uk"
+                                "instance_reference": "ebps/races/british_africa/weapons/explosive_weapons/grenade/w_rifle_grenade_tommy_incendiary_africa_uk"
                             }
                         }
                     },
@@ -20234,6 +20239,18 @@
                             "id": "UPGRADE_OWNER_3",
                             "pbg": {
                                 "instance_reference": "custom_property_container/common_enums/target_types/player"
+                            }
+                        }
+                    },
+                    {
+                        "custom_pbgid_property": {
+                            "template_reference": {
+                                "name": "custom_pbgid_property",
+                                "value": "custom_properties\\custom_pbgid_property"
+                            },
+                            "id": "ABILITY_AURA_PBG_1",
+                            "pbg": {
+                                "instance_reference": "custom_property_container/dynamic_aura/abilities/british/canadian_shock_uk/aura_canadian_shock_incendiary_munitions_aoe_uk"
                             }
                         }
                     }
@@ -20560,13 +20577,7 @@
                     "template_reference": {
                         "name": "channeling",
                         "value": "options\\none"
-                    },
-                    "channeling_time_second": 5.0,
-                    "channeling_stop_self_requirement": [],
-                    "channeling_stop_target_requirement": [],
-                    "can_be_cancelled": "False",
-                    "statetree_node_prereq_stop_self_requirement": "",
-                    "statetree_node_prereq_stop_target_requirement": ""
+                    }
                 },
                 "can_be_interrupted": "False",
                 "casting_option": {
@@ -21438,11 +21449,7 @@
                                 "value": "11272997"
                             }
                         },
-                        "formatter_arguments": [
-                            {
-                                "int_value": 230.0
-                            }
-                        ]
+                        "formatter_arguments": []
                     },
                     "extra_text_formatter": {
                         "template_reference": {
@@ -21458,9 +21465,6 @@
                         "formatter_arguments": [
                             {
                                 "int_value": 10.0
-                            },
-                            {
-                                "int_value": 100.0
                             }
                         ]
                     },
@@ -21510,7 +21514,7 @@
                         "required": {
                             "template_reference": {
                                 "name": "required",
-                                "value": "requirements\\required_player_upgrade"
+                                "value": "requirements\\required_not"
                             },
                             "reason": "usage",
                             "ui_name": {
@@ -21542,23 +21546,20 @@
                                         "was_attacking_within_seconds": -1.0
                                     }
                                 }
-                            ],
-                            "upgrade_name": {
-                                "instance_reference": "upgrade/british/battlegroups/special_services/special_services_uk"
-                            }
+                            ]
                         }
                     },
                     {
                         "required": {
                             "template_reference": {
                                 "name": "required",
-                                "value": "requirements\\required_any_in_list"
+                                "value": "requirements\\required_not"
                             },
                             "reason": "usage",
                             "ui_name": {
                                 "locstring": {
                                     "name": "ui_name",
-                                    "value": "0"
+                                    "value": "11223245"
                                 }
                             },
                             "requirement_table": [
@@ -21584,7 +21585,43 @@
                                         "was_attacking_within_seconds": -1.0
                                     }
                                 }
-                            ],
+                            ]
+                        }
+                    },
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_player_upgrade"
+                            },
+                            "include_completed": "True",
+                            "include_pbg_parenting": {
+                                "include_child_pbgs": "False",
+                                "include_parent_pbgs": "False"
+                            },
+                            "include_queued": "False",
+                            "is_present": "True",
+                            "max_completed": 100.0,
+                            "min_completed": 1.0,
+                            "reason": "display",
+                            "ui_name": {
+                                "locstring": {
+                                    "name": "ui_name",
+                                    "value": "0"
+                                }
+                            },
+                            "upgrade_name": {
+                                "instance_reference": "upgrade/british/battlegroups/special_services/special_services_uk"
+                            }
+                        }
+                    },
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_any_in_list"
+                            },
+                            "reason": "usage",
                             "requirements": [
                                 {
                                     "requirement": {
@@ -21630,7 +21667,13 @@
                                         }
                                     }
                                 }
-                            ]
+                            ],
+                            "ui_name": {
+                                "locstring": {
+                                    "name": "ui_name",
+                                    "value": "0"
+                                }
+                            }
                         }
                     },
                     {
@@ -21639,30 +21682,18 @@
                                 "name": "required",
                                 "value": "requirements\\required_ability_state"
                             },
-                            "include_completed": "True",
-                            "include_pbg_parenting": {
-                                "include_child_pbgs": "False",
-                                "include_parent_pbgs": "False"
+                            "ability_active_prereq_owner_type": "squad",
+                            "ability_name": {
+                                "instance_reference": "abilities/races/british_africa/infantry/special_services_ssb_escape_retreat_uk"
                             },
-                            "include_queued": "False",
-                            "is_present": "True",
-                            "max_completed": 100.0,
-                            "min_completed": 1.0,
+                            "is_active": "False",
                             "reason": "usage",
                             "ui_name": {
                                 "locstring": {
                                     "name": "ui_name",
                                     "value": "11275167"
                                 }
-                            },
-                            "upgrade_name": {
-                                "instance_reference": "upgrade/german/battlegroups/terror/terror_ger"
-                            },
-                            "ability_active_prereq_owner_type": "squad",
-                            "ability_name": {
-                                "instance_reference": "abilities/races/british_africa/infantry/special_services_ssb_escape_retreat_uk"
-                            },
-                            "is_active": "False"
+                            }
                         }
                     },
                     {
@@ -21671,25 +21702,7 @@
                                 "name": "required",
                                 "value": "requirements\\required_not"
                             },
-                            "include_completed": "True",
-                            "include_pbg_parenting": {
-                                "include_child_pbgs": "False",
-                                "include_parent_pbgs": "False"
-                            },
-                            "include_queued": "False",
-                            "is_present": "False",
-                            "max_completed": 100.0,
-                            "min_completed": 1.0,
                             "reason": "usage_and_display",
-                            "ui_name": {
-                                "locstring": {
-                                    "name": "ui_name",
-                                    "value": "0"
-                                }
-                            },
-                            "upgrade_name": {
-                                "instance_reference": "upgrade/german/battlegroups/terror/terror_contempt_for_the_weak_ger"
-                            },
                             "requirement_table": [
                                 {
                                     "required": {
@@ -21708,33 +21721,12 @@
                                         "veterancy_rank": 3.0
                                     }
                                 }
-                            ]
-                        }
-                    },
-                    {
-                        "required": {
-                            "template_reference": {
-                                "name": "required",
-                                "value": "requirements\\required_player_upgrade"
-                            },
-                            "include_completed": "True",
-                            "include_pbg_parenting": {
-                                "include_child_pbgs": "False",
-                                "include_parent_pbgs": "False"
-                            },
-                            "include_queued": "False",
-                            "is_present": "True",
-                            "max_completed": 100.0,
-                            "min_completed": 1.0,
-                            "reason": "usage",
+                            ],
                             "ui_name": {
                                 "locstring": {
                                     "name": "ui_name",
-                                    "value": "11265402"
+                                    "value": "0"
                                 }
-                            },
-                            "upgrade_name": {
-                                "instance_reference": "upgrade/german/battlegroups/terror/terror_interrogate_ger"
                             }
                         }
                     }
@@ -21952,6 +21944,36 @@
                                 "name": "custom_bool_property",
                                 "value": "custom_properties\\custom_bool_property"
                             },
+                            "id": "VULNERABLE_DURING_MOVE",
+                            "value": "True"
+                        }
+                    },
+                    {
+                        "custom_bool_property": {
+                            "template_reference": {
+                                "name": "custom_bool_property",
+                                "value": "custom_properties\\custom_bool_property"
+                            },
+                            "id": "VULNERABLE_DURING_PAYLOAD",
+                            "value": "True"
+                        }
+                    },
+                    {
+                        "custom_bool_property": {
+                            "template_reference": {
+                                "name": "custom_bool_property",
+                                "value": "custom_properties\\custom_bool_property"
+                            },
+                            "id": "KEEP_ALIVE_INTERACTION",
+                            "value": "False"
+                        }
+                    },
+                    {
+                        "custom_bool_property": {
+                            "template_reference": {
+                                "name": "custom_bool_property",
+                                "value": "custom_properties\\custom_bool_property"
+                            },
                             "id": "USE_CHANNEL_TIME",
                             "value": "True"
                         }
@@ -21963,16 +21985,6 @@
                                 "value": "custom_properties\\custom_bool_property"
                             },
                             "id": "SHOW_RETICULE",
-                            "value": "False"
-                        }
-                    },
-                    {
-                        "custom_bool_property": {
-                            "template_reference": {
-                                "name": "custom_bool_property",
-                                "value": "custom_properties\\custom_bool_property"
-                            },
-                            "id": "KEEP_ALIVE_INTERACTION",
                             "value": "False"
                         }
                     }
@@ -22221,11 +22233,7 @@
                                 "value": "11272997"
                             }
                         },
-                        "formatter_arguments": [
-                            {
-                                "int_value": 230.0
-                            }
-                        ]
+                        "formatter_arguments": []
                     },
                     "extra_text_formatter": {
                         "template_reference": {
@@ -22241,9 +22249,6 @@
                         "formatter_arguments": [
                             {
                                 "int_value": 5.0
-                            },
-                            {
-                                "int_value": 100.0
                             }
                         ]
                     },
@@ -22293,9 +22298,9 @@
                         "required": {
                             "template_reference": {
                                 "name": "required",
-                                "value": "requirements\\required_any_in_list"
+                                "value": "requirements\\required_not"
                             },
-                            "reason": "usage_and_display",
+                            "reason": "usage",
                             "ui_name": {
                                 "locstring": {
                                     "name": "ui_name",
@@ -22325,26 +22330,6 @@
                                         "was_attacking_within_seconds": -1.0
                                     }
                                 }
-                            ],
-                            "upgrade_name": {
-                                "instance_reference": "upgrade/british/battlegroups/special_services/special_services_uk"
-                            },
-                            "requirements": [
-                                {
-                                    "requirement": {
-                                        "template_reference": {
-                                            "name": "requirement",
-                                            "value": "requirements\\required_squad_veterancy"
-                                        },
-                                        "ui_name": {
-                                            "locstring": {
-                                                "name": "ui_name",
-                                                "value": "11243735"
-                                            }
-                                        },
-                                        "veterancy_rank": 3.0
-                                    }
-                                }
                             ]
                         }
                     },
@@ -22352,13 +22337,13 @@
                         "required": {
                             "template_reference": {
                                 "name": "required",
-                                "value": "requirements\\required_any_in_list"
+                                "value": "requirements\\required_not"
                             },
                             "reason": "usage",
                             "ui_name": {
                                 "locstring": {
                                     "name": "ui_name",
-                                    "value": "0"
+                                    "value": "11223245"
                                 }
                             },
                             "requirement_table": [
@@ -22384,130 +22369,6 @@
                                         "was_attacking_within_seconds": -1.0
                                     }
                                 }
-                            ],
-                            "requirements": [
-                                {
-                                    "requirement": {
-                                        "template_reference": {
-                                            "name": "requirement",
-                                            "value": "requirements\\required_squad_veterancy"
-                                        },
-                                        "match_exact_rank": "False",
-                                        "reason": "usage",
-                                        "ui_name": {
-                                            "locstring": {
-                                                "name": "ui_name",
-                                                "value": "11230557"
-                                            }
-                                        },
-                                        "veterancy_rank": 1.0
-                                    }
-                                },
-                                {
-                                    "requirement": {
-                                        "template_reference": {
-                                            "name": "requirement",
-                                            "value": "requirements\\required_player_upgrade"
-                                        },
-                                        "include_completed": "True",
-                                        "include_pbg_parenting": {
-                                            "include_child_pbgs": "False",
-                                            "include_parent_pbgs": "False"
-                                        },
-                                        "include_queued": "False",
-                                        "is_present": "True",
-                                        "max_completed": 100.0,
-                                        "min_completed": 1.0,
-                                        "reason": "usage",
-                                        "ui_name": {
-                                            "locstring": {
-                                                "name": "ui_name",
-                                                "value": "0"
-                                            }
-                                        },
-                                        "upgrade_name": {
-                                            "instance_reference": "upgrade/british/battlegroups/special_services/special_services_rear_havoc_uk"
-                                        }
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "required": {
-                            "template_reference": {
-                                "name": "required",
-                                "value": "requirements\\required_ability_state"
-                            },
-                            "include_completed": "True",
-                            "include_pbg_parenting": {
-                                "include_child_pbgs": "False",
-                                "include_parent_pbgs": "False"
-                            },
-                            "include_queued": "False",
-                            "is_present": "True",
-                            "max_completed": 100.0,
-                            "min_completed": 1.0,
-                            "reason": "usage",
-                            "ui_name": {
-                                "locstring": {
-                                    "name": "ui_name",
-                                    "value": "11275167"
-                                }
-                            },
-                            "upgrade_name": {
-                                "instance_reference": "upgrade/german/battlegroups/terror/terror_ger"
-                            },
-                            "ability_active_prereq_owner_type": "squad",
-                            "ability_name": {
-                                "instance_reference": "abilities/races/british_africa/infantry/special_services_ssb_escape_retreat_uk"
-                            },
-                            "is_active": "False"
-                        }
-                    },
-                    {
-                        "required": {
-                            "template_reference": {
-                                "name": "required",
-                                "value": "requirements\\required_not"
-                            },
-                            "include_completed": "True",
-                            "include_pbg_parenting": {
-                                "include_child_pbgs": "False",
-                                "include_parent_pbgs": "False"
-                            },
-                            "include_queued": "False",
-                            "is_present": "False",
-                            "max_completed": 100.0,
-                            "min_completed": 1.0,
-                            "reason": "usage_and_display",
-                            "ui_name": {
-                                "locstring": {
-                                    "name": "ui_name",
-                                    "value": "0"
-                                }
-                            },
-                            "upgrade_name": {
-                                "instance_reference": "upgrade/german/battlegroups/terror/terror_contempt_for_the_weak_ger"
-                            },
-                            "requirement_table": [
-                                {
-                                    "required": {
-                                        "template_reference": {
-                                            "name": "required",
-                                            "value": "requirements\\required_squad_veterancy"
-                                        },
-                                        "match_exact_rank": "False",
-                                        "reason": "usage_and_display",
-                                        "ui_name": {
-                                            "locstring": {
-                                                "name": "ui_name",
-                                                "value": "0"
-                                            }
-                                        },
-                                        "veterancy_rank": 3.0
-                                    }
-                                }
                             ]
                         }
                     },
@@ -22526,15 +22387,69 @@
                             "is_present": "True",
                             "max_completed": 100.0,
                             "min_completed": 1.0,
+                            "reason": "display",
+                            "ui_name": {
+                                "locstring": {
+                                    "name": "ui_name",
+                                    "value": "0"
+                                }
+                            },
+                            "upgrade_name": {
+                                "instance_reference": "upgrade/british/battlegroups/special_services/special_services_uk"
+                            }
+                        }
+                    },
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_any_in_list"
+                            },
+                            "reason": "usage_and_display",
+                            "requirements": [
+                                {
+                                    "requirement": {
+                                        "template_reference": {
+                                            "name": "requirement",
+                                            "value": "requirements\\required_squad_veterancy"
+                                        },
+                                        "match_exact_rank": "False",
+                                        "reason": "usage",
+                                        "ui_name": {
+                                            "locstring": {
+                                                "name": "ui_name",
+                                                "value": "11243735"
+                                            }
+                                        },
+                                        "veterancy_rank": 3.0
+                                    }
+                                }
+                            ],
+                            "ui_name": {
+                                "locstring": {
+                                    "name": "ui_name",
+                                    "value": "0"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_ability_state"
+                            },
+                            "ability_active_prereq_owner_type": "squad",
+                            "ability_name": {
+                                "instance_reference": "abilities/races/british_africa/infantry/special_services_ssb_escape_retreat_uk"
+                            },
+                            "is_active": "False",
                             "reason": "usage",
                             "ui_name": {
                                 "locstring": {
                                     "name": "ui_name",
-                                    "value": "11265402"
+                                    "value": "11275167"
                                 }
-                            },
-                            "upgrade_name": {
-                                "instance_reference": "upgrade/german/battlegroups/terror/terror_interrogate_ger"
                             }
                         }
                     }
@@ -22752,6 +22667,36 @@
                                 "name": "custom_bool_property",
                                 "value": "custom_properties\\custom_bool_property"
                             },
+                            "id": "VULNERABLE_DURING_MOVE",
+                            "value": "True"
+                        }
+                    },
+                    {
+                        "custom_bool_property": {
+                            "template_reference": {
+                                "name": "custom_bool_property",
+                                "value": "custom_properties\\custom_bool_property"
+                            },
+                            "id": "VULNERABLE_DURING_PAYLOAD",
+                            "value": "True"
+                        }
+                    },
+                    {
+                        "custom_bool_property": {
+                            "template_reference": {
+                                "name": "custom_bool_property",
+                                "value": "custom_properties\\custom_bool_property"
+                            },
+                            "id": "KEEP_ALIVE_INTERACTION",
+                            "value": "False"
+                        }
+                    },
+                    {
+                        "custom_bool_property": {
+                            "template_reference": {
+                                "name": "custom_bool_property",
+                                "value": "custom_properties\\custom_bool_property"
+                            },
                             "id": "USE_CHANNEL_TIME",
                             "value": "True"
                         }
@@ -22763,16 +22708,6 @@
                                 "value": "custom_properties\\custom_bool_property"
                             },
                             "id": "SHOW_RETICULE",
-                            "value": "False"
-                        }
-                    },
-                    {
-                        "custom_bool_property": {
-                            "template_reference": {
-                                "name": "custom_bool_property",
-                                "value": "custom_properties\\custom_bool_property"
-                            },
-                            "id": "KEEP_ALIVE_INTERACTION",
                             "value": "False"
                         }
                     }
@@ -23021,11 +22956,7 @@
                                 "value": "11272997"
                             }
                         },
-                        "formatter_arguments": [
-                            {
-                                "int_value": 230.0
-                            }
-                        ]
+                        "formatter_arguments": []
                     },
                     "extra_text_formatter": {
                         "template_reference": {
@@ -23041,9 +22972,6 @@
                         "formatter_arguments": [
                             {
                                 "int_value": 6.0
-                            },
-                            {
-                                "int_value": 100.0
                             }
                         ]
                     },
@@ -23093,7 +23021,7 @@
                         "required": {
                             "template_reference": {
                                 "name": "required",
-                                "value": "requirements\\required_player_upgrade"
+                                "value": "requirements\\required_not"
                             },
                             "reason": "usage",
                             "ui_name": {
@@ -23125,23 +23053,20 @@
                                         "was_attacking_within_seconds": -1.0
                                     }
                                 }
-                            ],
-                            "upgrade_name": {
-                                "instance_reference": "upgrade/british/battlegroups/special_services/special_services_uk"
-                            }
+                            ]
                         }
                     },
                     {
                         "required": {
                             "template_reference": {
                                 "name": "required",
-                                "value": "requirements\\required_any_in_list"
+                                "value": "requirements\\required_not"
                             },
                             "reason": "usage",
                             "ui_name": {
                                 "locstring": {
                                     "name": "ui_name",
-                                    "value": "0"
+                                    "value": "11223245"
                                 }
                             },
                             "requirement_table": [
@@ -23167,7 +23092,43 @@
                                         "was_attacking_within_seconds": -1.0
                                     }
                                 }
-                            ],
+                            ]
+                        }
+                    },
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_player_upgrade"
+                            },
+                            "include_completed": "True",
+                            "include_pbg_parenting": {
+                                "include_child_pbgs": "False",
+                                "include_parent_pbgs": "False"
+                            },
+                            "include_queued": "False",
+                            "is_present": "True",
+                            "max_completed": 100.0,
+                            "min_completed": 1.0,
+                            "reason": "display",
+                            "ui_name": {
+                                "locstring": {
+                                    "name": "ui_name",
+                                    "value": "0"
+                                }
+                            },
+                            "upgrade_name": {
+                                "instance_reference": "upgrade/british/battlegroups/special_services/special_services_uk"
+                            }
+                        }
+                    },
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_any_in_list"
+                            },
+                            "reason": "usage",
                             "requirements": [
                                 {
                                     "requirement": {
@@ -23213,7 +23174,13 @@
                                         }
                                     }
                                 }
-                            ]
+                            ],
+                            "ui_name": {
+                                "locstring": {
+                                    "name": "ui_name",
+                                    "value": "0"
+                                }
+                            }
                         }
                     },
                     {
@@ -23222,102 +23189,17 @@
                                 "name": "required",
                                 "value": "requirements\\required_ability_state"
                             },
-                            "include_completed": "True",
-                            "include_pbg_parenting": {
-                                "include_child_pbgs": "False",
-                                "include_parent_pbgs": "False"
+                            "ability_active_prereq_owner_type": "squad",
+                            "ability_name": {
+                                "instance_reference": "abilities/races/british_africa/infantry/special_services_ssb_escape_retreat_uk"
                             },
-                            "include_queued": "False",
-                            "is_present": "True",
-                            "max_completed": 100.0,
-                            "min_completed": 1.0,
+                            "is_active": "False",
                             "reason": "usage",
                             "ui_name": {
                                 "locstring": {
                                     "name": "ui_name",
                                     "value": "11275167"
                                 }
-                            },
-                            "upgrade_name": {
-                                "instance_reference": "upgrade/german/battlegroups/terror/terror_ger"
-                            },
-                            "ability_active_prereq_owner_type": "squad",
-                            "ability_name": {
-                                "instance_reference": "abilities/races/british_africa/infantry/special_services_ssb_escape_retreat_uk"
-                            },
-                            "is_active": "False"
-                        }
-                    },
-                    {
-                        "required": {
-                            "template_reference": {
-                                "name": "required",
-                                "value": "requirements\\required_not"
-                            },
-                            "include_completed": "True",
-                            "include_pbg_parenting": {
-                                "include_child_pbgs": "False",
-                                "include_parent_pbgs": "False"
-                            },
-                            "include_queued": "False",
-                            "is_present": "False",
-                            "max_completed": 100.0,
-                            "min_completed": 1.0,
-                            "reason": "usage_and_display",
-                            "ui_name": {
-                                "locstring": {
-                                    "name": "ui_name",
-                                    "value": "0"
-                                }
-                            },
-                            "upgrade_name": {
-                                "instance_reference": "upgrade/german/battlegroups/terror/terror_contempt_for_the_weak_ger"
-                            },
-                            "requirement_table": [
-                                {
-                                    "required": {
-                                        "template_reference": {
-                                            "name": "required",
-                                            "value": "requirements\\required_squad_veterancy"
-                                        },
-                                        "match_exact_rank": "False",
-                                        "reason": "usage_and_display",
-                                        "ui_name": {
-                                            "locstring": {
-                                                "name": "ui_name",
-                                                "value": "0"
-                                            }
-                                        },
-                                        "veterancy_rank": 3.0
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "required": {
-                            "template_reference": {
-                                "name": "required",
-                                "value": "requirements\\required_player_upgrade"
-                            },
-                            "include_completed": "True",
-                            "include_pbg_parenting": {
-                                "include_child_pbgs": "False",
-                                "include_parent_pbgs": "False"
-                            },
-                            "include_queued": "False",
-                            "is_present": "True",
-                            "max_completed": 100.0,
-                            "min_completed": 1.0,
-                            "reason": "usage",
-                            "ui_name": {
-                                "locstring": {
-                                    "name": "ui_name",
-                                    "value": "11265402"
-                                }
-                            },
-                            "upgrade_name": {
-                                "instance_reference": "upgrade/german/battlegroups/terror/terror_interrogate_ger"
                             }
                         }
                     }
@@ -23535,6 +23417,36 @@
                                 "name": "custom_bool_property",
                                 "value": "custom_properties\\custom_bool_property"
                             },
+                            "id": "VULNERABLE_DURING_MOVE",
+                            "value": "True"
+                        }
+                    },
+                    {
+                        "custom_bool_property": {
+                            "template_reference": {
+                                "name": "custom_bool_property",
+                                "value": "custom_properties\\custom_bool_property"
+                            },
+                            "id": "VULNERABLE_DURING_PAYLOAD",
+                            "value": "True"
+                        }
+                    },
+                    {
+                        "custom_bool_property": {
+                            "template_reference": {
+                                "name": "custom_bool_property",
+                                "value": "custom_properties\\custom_bool_property"
+                            },
+                            "id": "KEEP_ALIVE_INTERACTION",
+                            "value": "False"
+                        }
+                    },
+                    {
+                        "custom_bool_property": {
+                            "template_reference": {
+                                "name": "custom_bool_property",
+                                "value": "custom_properties\\custom_bool_property"
+                            },
                             "id": "USE_CHANNEL_TIME",
                             "value": "True"
                         }
@@ -23546,16 +23458,6 @@
                                 "value": "custom_properties\\custom_bool_property"
                             },
                             "id": "SHOW_RETICULE",
-                            "value": "False"
-                        }
-                    },
-                    {
-                        "custom_bool_property": {
-                            "template_reference": {
-                                "name": "custom_bool_property",
-                                "value": "custom_properties\\custom_bool_property"
-                            },
-                            "id": "KEEP_ALIVE_INTERACTION",
                             "value": "False"
                         }
                     }
@@ -26769,7 +26671,7 @@
                                 "name": "custom_bool_property",
                                 "value": "custom_properties\\custom_bool_property"
                             },
-                            "id": "id",
+                            "id": "ABILITY_USE_DEFAULT_WEAPON_HARDPOINT",
                             "value": "True"
                         }
                     },
@@ -26800,7 +26702,7 @@
                                 "value": "custom_properties\\custom_bool_property"
                             },
                             "id": "CONVERT_WEAPON",
-                            "value": "False"
+                            "value": "True"
                         }
                     },
                     {
@@ -26830,7 +26732,7 @@
                                 "value": "custom_properties\\custom_bool_property"
                             },
                             "id": "PRESERVE_VISUAL",
-                            "value": "False"
+                            "value": "True"
                         }
                     }
                 ],
@@ -26885,7 +26787,7 @@
                                 "name": "custom_pbgid_property",
                                 "value": "custom_properties\\custom_pbgid_property"
                             },
-                            "id": "id",
+                            "id": "WEAPON_PBG_1",
                             "pbg": {
                                 "instance_reference": "ebps/races/british_africa/weapons/explosive_weapons/light_artillery/w_rocket_land_mattress_africa_uk"
                             }
@@ -27398,7 +27300,7 @@
                                 "name": "custom_bool_property",
                                 "value": "custom_properties\\custom_bool_property"
                             },
-                            "id": "id",
+                            "id": "ABILITY_USE_DEFAULT_WEAPON_HARDPOINT",
                             "value": "True"
                         }
                     },
@@ -27429,7 +27331,7 @@
                                 "value": "custom_properties\\custom_bool_property"
                             },
                             "id": "CONVERT_WEAPON",
-                            "value": "False"
+                            "value": "True"
                         }
                     },
                     {
@@ -27459,7 +27361,7 @@
                                 "value": "custom_properties\\custom_bool_property"
                             },
                             "id": "PRESERVE_VISUAL",
-                            "value": "False"
+                            "value": "True"
                         }
                     }
                 ],
@@ -27514,7 +27416,7 @@
                                 "name": "custom_pbgid_property",
                                 "value": "custom_properties\\custom_pbgid_property"
                             },
-                            "id": "id",
+                            "id": "WEAPON_PBG_1",
                             "pbg": {
                                 "instance_reference": "ebps/races/british_africa/weapons/explosive_weapons/light_artillery/w_suppression_rocket_land_mattress_africa_uk"
                             }
@@ -27540,7 +27442,7 @@
                             },
                             "id": "REQUIRED_UPGRADE_2",
                             "pbg": {
-                                "instance_reference": "ebps/races/british_africa/weapons/explosive_weapons/light_artillery/w_suppression_rocket_land_mattress_africa_uk"
+                                "instance_reference": "upgrade/common/veterancy/veterancy_3"
                             }
                         }
                     },
@@ -27564,7 +27466,7 @@
                             },
                             "id": "WEAPON_PBG_3",
                             "pbg": {
-                                "instance_reference": "ebps/races/british_africa/weapons/explosive_weapons/light_artillery/w_rocket_land_mattress_africa_uk"
+                                "instance_reference": "ebps/races/british_africa/weapons/explosive_weapons/light_artillery/w_suppression_rocket_land_mattress_africa_uk"
                             }
                         }
                     },
@@ -29822,7 +29724,7 @@
                         "required": {
                             "template_reference": {
                                 "name": "required",
-                                "value": "requirements\\required_any_in_list"
+                                "value": "requirements\\required_player_upgrade"
                             },
                             "include_completed": "True",
                             "include_pbg_parenting": {
@@ -29833,99 +29735,16 @@
                             "is_present": "True",
                             "max_completed": 100.0,
                             "min_completed": 1.0,
-                            "reason": "usage",
+                            "reason": "display",
                             "ui_name": {
                                 "locstring": {
                                     "name": "ui_name",
-                                    "value": "11265789"
+                                    "value": "0"
                                 }
                             },
                             "upgrade_name": {
                                 "instance_reference": "upgrade/british/battlegroups/canadian_shock/canadian_shock"
-                            },
-                            "requirements": [
-                                {
-                                    "requirement": {
-                                        "template_reference": {
-                                            "name": "requirement",
-                                            "value": "requirements\\required_squad_upgrade"
-                                        },
-                                        "include_completed": "True",
-                                        "include_pbg_parenting": {
-                                            "include_child_pbgs": "False",
-                                            "include_parent_pbgs": "False"
-                                        },
-                                        "include_queued": "False",
-                                        "is_present": "True",
-                                        "max_completed": 100.0,
-                                        "min_completed": 1.0,
-                                        "reason": "usage",
-                                        "ui_name": {
-                                            "locstring": {
-                                                "name": "ui_name",
-                                                "value": "0"
-                                            }
-                                        },
-                                        "upgrade_name": {
-                                            "instance_reference": "upgrade/british_africa/infantry/flamethrower_sapper_africa_uk"
-                                        }
-                                    }
-                                },
-                                {
-                                    "requirement": {
-                                        "template_reference": {
-                                            "name": "requirement",
-                                            "value": "requirements\\required_squad_upgrade"
-                                        },
-                                        "include_completed": "True",
-                                        "include_pbg_parenting": {
-                                            "include_child_pbgs": "False",
-                                            "include_parent_pbgs": "False"
-                                        },
-                                        "include_queued": "False",
-                                        "is_present": "True",
-                                        "max_completed": 100.0,
-                                        "min_completed": 1.0,
-                                        "reason": "usage",
-                                        "ui_name": {
-                                            "locstring": {
-                                                "name": "ui_name",
-                                                "value": "0"
-                                            }
-                                        },
-                                        "upgrade_name": {
-                                            "instance_reference": "upgrade/british/infantry/flamethrower_sapper_uk"
-                                        }
-                                    }
-                                },
-                                {
-                                    "requirement": {
-                                        "template_reference": {
-                                            "name": "requirement",
-                                            "value": "requirements\\required_player_upgrade"
-                                        },
-                                        "include_completed": "True",
-                                        "include_pbg_parenting": {
-                                            "include_child_pbgs": "False",
-                                            "include_parent_pbgs": "False"
-                                        },
-                                        "include_queued": "False",
-                                        "is_present": "True",
-                                        "max_completed": 100.0,
-                                        "min_completed": 1.0,
-                                        "reason": "usage",
-                                        "ui_name": {
-                                            "locstring": {
-                                                "name": "ui_name",
-                                                "value": "0"
-                                            }
-                                        },
-                                        "upgrade_name": {
-                                            "instance_reference": "upgrade/british/battlegroups/canadian_shock/canadian_shock_incendiary_munitions_uk"
-                                        }
-                                    }
-                                }
-                            ]
+                            }
                         }
                     },
                     {
@@ -29952,33 +29771,6 @@
                             },
                             "upgrade_name": {
                                 "instance_reference": "upgrade/british/battlegroups/canadian_shock/canadian_shock_pyrotechnics_uk"
-                            }
-                        }
-                    },
-                    {
-                        "required": {
-                            "template_reference": {
-                                "name": "required",
-                                "value": "requirements\\required_player_upgrade"
-                            },
-                            "include_completed": "True",
-                            "include_pbg_parenting": {
-                                "include_child_pbgs": "False",
-                                "include_parent_pbgs": "False"
-                            },
-                            "include_queued": "False",
-                            "is_present": "True",
-                            "max_completed": 100.0,
-                            "min_completed": 1.0,
-                            "reason": "usage",
-                            "ui_name": {
-                                "locstring": {
-                                    "name": "ui_name",
-                                    "value": "0"
-                                }
-                            },
-                            "upgrade_name": {
-                                "instance_reference": "upgrade/british/battlegroups/canadian_shock/canadian_shock_incendiary_munitions_uk"
                             }
                         }
                     }
@@ -31583,7 +31375,7 @@
                             },
                             "id": "UPGRADE_OWNER_2",
                             "pbg": {
-                                "instance_reference": "ebps/races/british_africa/weapons/explosive_weapons/light_artillery/w_tulip_rocket_coaxial_humber_panzerbane_uk"
+                                "instance_reference": "custom_property_container/common_enums/target_types/player"
                             }
                         }
                     },
@@ -31595,7 +31387,7 @@
                             },
                             "id": "WEAPON_PBG_3",
                             "pbg": {
-                                "instance_reference": "upgrade/british/battlegroups/polish_cavalry/polish_cavalry_panzerbane_uk"
+                                "instance_reference": "ebps/races/british_africa/weapons/explosive_weapons/light_artillery/w_tulip_rocket_coaxial_humber_panzerbane_uk"
                             }
                         }
                     },
@@ -31607,7 +31399,7 @@
                             },
                             "id": "REQUIRED_UPGRADE_3",
                             "pbg": {
-                                "instance_reference": "upgrade/british/battlegroups/canadian_shock/canadian_shock_pyrotechnics_uk"
+                                "instance_reference": "upgrade/british/battlegroups/polish_cavalry/polish_cavalry_panzerbane_uk"
                             }
                         }
                     },
@@ -32129,16 +31921,6 @@
                                 "name": "custom_bool_property",
                                 "value": "custom_properties\\custom_bool_property"
                             },
-                            "id": "ABILITY_USE_DEFAULT_WEAPON_HARDPOINT",
-                            "value": "False"
-                        }
-                    },
-                    {
-                        "custom_bool_property": {
-                            "template_reference": {
-                                "name": "custom_bool_property",
-                                "value": "custom_properties\\custom_bool_property"
-                            },
                             "id": "DENY_REFUND_COST",
                             "value": "True"
                         }
@@ -32162,7 +31944,7 @@
                                 "name": "custom_int32_property",
                                 "value": "custom_properties\\custom_int32_property"
                             },
-                            "id": "HARDPOINT_INDEX",
+                            "id": "NUM_SHOTS",
                             "value": 1.0
                         }
                     },
@@ -32198,20 +31980,7 @@
                     }
                 ],
                 "custom_vector3f_properties": [],
-                "custom_pbgid_properties": [
-                    {
-                        "custom_pbgid_property": {
-                            "template_reference": {
-                                "name": "custom_pbgid_property",
-                                "value": "custom_properties\\custom_pbgid_property"
-                            },
-                            "id": "WEAPON_PBG_1",
-                            "pbg": {
-                                "instance_reference": "ebps/races/american/weapons/explosive_weapons/grenade/w_grenade_rifleman_us"
-                            }
-                        }
-                    }
-                ],
+                "custom_pbgid_properties": [],
                 "custom_loc_string_properties": [],
                 "custom_entity_state_tree_reference_properties": [],
                 "custom_deferred_entity_state_tree_reference_properties": [],
@@ -32810,7 +32579,7 @@
                             },
                             "id": "UPGRADE_OWNER_2",
                             "pbg": {
-                                "instance_reference": "ebps/races/british_africa/weapons/explosive_weapons/light_artillery/w_tulip_rocket_coaxial_stuart_panzerbane_uk"
+                                "instance_reference": "custom_property_container/common_enums/target_types/player"
                             }
                         }
                     },
@@ -32822,7 +32591,7 @@
                             },
                             "id": "WEAPON_PBG_3",
                             "pbg": {
-                                "instance_reference": "upgrade/british/battlegroups/polish_cavalry/polish_cavalry_panzerbane_uk"
+                                "instance_reference": "ebps/races/british_africa/weapons/explosive_weapons/light_artillery/w_tulip_rocket_coaxial_stuart_panzerbane_uk"
                             }
                         }
                     },
@@ -32834,7 +32603,7 @@
                             },
                             "id": "REQUIRED_UPGRADE_3",
                             "pbg": {
-                                "instance_reference": "upgrade/british/battlegroups/canadian_shock/canadian_shock_pyrotechnics_uk"
+                                "instance_reference": "upgrade/british/battlegroups/polish_cavalry/polish_cavalry_panzerbane_uk"
                             }
                         }
                     },
@@ -33006,11 +32775,7 @@
                                 "value": "11272997"
                             }
                         },
-                        "formatter_arguments": [
-                            {
-                                "int_value": 230.0
-                            }
-                        ]
+                        "formatter_arguments": []
                     },
                     "extra_text_formatter": {
                         "template_reference": {
@@ -33026,9 +32791,6 @@
                         "formatter_arguments": [
                             {
                                 "int_value": 15.0
-                            },
-                            {
-                                "int_value": 100.0
                             }
                         ]
                     },
@@ -33080,37 +32842,22 @@
                                 "name": "required",
                                 "value": "requirements\\required_player_upgrade"
                             },
-                            "reason": "usage",
+                            "include_completed": "True",
+                            "include_pbg_parenting": {
+                                "include_child_pbgs": "False",
+                                "include_parent_pbgs": "False"
+                            },
+                            "include_queued": "False",
+                            "is_present": "True",
+                            "max_completed": 100.0,
+                            "min_completed": 1.0,
+                            "reason": "display",
                             "ui_name": {
                                 "locstring": {
                                     "name": "ui_name",
-                                    "value": "11223246"
+                                    "value": "0"
                                 }
                             },
-                            "requirement_table": [
-                                {
-                                    "required": {
-                                        "template_reference": {
-                                            "name": "required",
-                                            "value": "requirements\\required_in_state"
-                                        },
-                                        "reason": "usage",
-                                        "ui_name": {
-                                            "locstring": {
-                                                "name": "ui_name",
-                                                "value": "0"
-                                            }
-                                        },
-                                        "was_attacked_within_seconds": -1.0,
-                                        "check_states": [
-                                            {
-                                                "state_requirement_type": "pinned"
-                                            }
-                                        ],
-                                        "was_attacking_within_seconds": -1.0
-                                    }
-                                }
-                            ],
                             "upgrade_name": {
                                 "instance_reference": "upgrade/british/battlegroups/special_services/special_services_uk"
                             }
@@ -33123,36 +32870,6 @@
                                 "value": "requirements\\required_any_in_list"
                             },
                             "reason": "usage",
-                            "ui_name": {
-                                "locstring": {
-                                    "name": "ui_name",
-                                    "value": "0"
-                                }
-                            },
-                            "requirement_table": [
-                                {
-                                    "required": {
-                                        "template_reference": {
-                                            "name": "required",
-                                            "value": "requirements\\required_in_state"
-                                        },
-                                        "reason": "usage",
-                                        "ui_name": {
-                                            "locstring": {
-                                                "name": "ui_name",
-                                                "value": "0"
-                                            }
-                                        },
-                                        "was_attacked_within_seconds": -1.0,
-                                        "check_states": [
-                                            {
-                                                "state_requirement_type": "suppressed"
-                                            }
-                                        ],
-                                        "was_attacking_within_seconds": -1.0
-                                    }
-                                }
-                            ],
                             "requirements": [
                                 {
                                     "requirement": {
@@ -33198,7 +32915,13 @@
                                         }
                                     }
                                 }
-                            ]
+                            ],
+                            "ui_name": {
+                                "locstring": {
+                                    "name": "ui_name",
+                                    "value": "0"
+                                }
+                            }
                         }
                     },
                     {
@@ -33207,102 +32930,17 @@
                                 "name": "required",
                                 "value": "requirements\\required_ability_state"
                             },
-                            "include_completed": "True",
-                            "include_pbg_parenting": {
-                                "include_child_pbgs": "False",
-                                "include_parent_pbgs": "False"
+                            "ability_active_prereq_owner_type": "squad",
+                            "ability_name": {
+                                "instance_reference": "abilities/races/british_africa/infantry/special_services_ssb_escape_retreat_uk"
                             },
-                            "include_queued": "False",
-                            "is_present": "True",
-                            "max_completed": 100.0,
-                            "min_completed": 1.0,
+                            "is_active": "False",
                             "reason": "usage",
                             "ui_name": {
                                 "locstring": {
                                     "name": "ui_name",
                                     "value": "11275167"
                                 }
-                            },
-                            "upgrade_name": {
-                                "instance_reference": "upgrade/german/battlegroups/terror/terror_ger"
-                            },
-                            "ability_active_prereq_owner_type": "squad",
-                            "ability_name": {
-                                "instance_reference": "abilities/races/british_africa/infantry/special_services_ssb_escape_retreat_uk"
-                            },
-                            "is_active": "False"
-                        }
-                    },
-                    {
-                        "required": {
-                            "template_reference": {
-                                "name": "required",
-                                "value": "requirements\\required_not"
-                            },
-                            "include_completed": "True",
-                            "include_pbg_parenting": {
-                                "include_child_pbgs": "False",
-                                "include_parent_pbgs": "False"
-                            },
-                            "include_queued": "False",
-                            "is_present": "False",
-                            "max_completed": 100.0,
-                            "min_completed": 1.0,
-                            "reason": "usage_and_display",
-                            "ui_name": {
-                                "locstring": {
-                                    "name": "ui_name",
-                                    "value": "0"
-                                }
-                            },
-                            "upgrade_name": {
-                                "instance_reference": "upgrade/german/battlegroups/terror/terror_contempt_for_the_weak_ger"
-                            },
-                            "requirement_table": [
-                                {
-                                    "required": {
-                                        "template_reference": {
-                                            "name": "required",
-                                            "value": "requirements\\required_squad_veterancy"
-                                        },
-                                        "match_exact_rank": "False",
-                                        "reason": "usage_and_display",
-                                        "ui_name": {
-                                            "locstring": {
-                                                "name": "ui_name",
-                                                "value": "0"
-                                            }
-                                        },
-                                        "veterancy_rank": 3.0
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "required": {
-                            "template_reference": {
-                                "name": "required",
-                                "value": "requirements\\required_player_upgrade"
-                            },
-                            "include_completed": "True",
-                            "include_pbg_parenting": {
-                                "include_child_pbgs": "False",
-                                "include_parent_pbgs": "False"
-                            },
-                            "include_queued": "False",
-                            "is_present": "True",
-                            "max_completed": 100.0,
-                            "min_completed": 1.0,
-                            "reason": "usage",
-                            "ui_name": {
-                                "locstring": {
-                                    "name": "ui_name",
-                                    "value": "11265402"
-                                }
-                            },
-                            "upgrade_name": {
-                                "instance_reference": "upgrade/german/battlegroups/terror/terror_interrogate_ger"
                             }
                         }
                     }
@@ -33520,6 +33158,36 @@
                                 "name": "custom_bool_property",
                                 "value": "custom_properties\\custom_bool_property"
                             },
+                            "id": "VULNERABLE_DURING_MOVE",
+                            "value": "True"
+                        }
+                    },
+                    {
+                        "custom_bool_property": {
+                            "template_reference": {
+                                "name": "custom_bool_property",
+                                "value": "custom_properties\\custom_bool_property"
+                            },
+                            "id": "VULNERABLE_DURING_PAYLOAD",
+                            "value": "True"
+                        }
+                    },
+                    {
+                        "custom_bool_property": {
+                            "template_reference": {
+                                "name": "custom_bool_property",
+                                "value": "custom_properties\\custom_bool_property"
+                            },
+                            "id": "KEEP_ALIVE_INTERACTION",
+                            "value": "False"
+                        }
+                    },
+                    {
+                        "custom_bool_property": {
+                            "template_reference": {
+                                "name": "custom_bool_property",
+                                "value": "custom_properties\\custom_bool_property"
+                            },
                             "id": "USE_CHANNEL_TIME",
                             "value": "True"
                         }
@@ -33531,16 +33199,6 @@
                                 "value": "custom_properties\\custom_bool_property"
                             },
                             "id": "SHOW_RETICULE",
-                            "value": "False"
-                        }
-                    },
-                    {
-                        "custom_bool_property": {
-                            "template_reference": {
-                                "name": "custom_bool_property",
-                                "value": "custom_properties\\custom_bool_property"
-                            },
-                            "id": "KEEP_ALIVE_INTERACTION",
                             "value": "False"
                         }
                     }
@@ -34528,7 +34186,7 @@
                                     "value": "custom_properties\\custom_bool_property"
                                 },
                                 "id": "ABILITY_USE_DEFAULT_WEAPON_HARDPOINT",
-                                "value": "True"
+                                "value": "False"
                             }
                         },
                         {
@@ -34558,7 +34216,7 @@
                                     "value": "custom_properties\\custom_bool_property"
                                 },
                                 "id": "CONVERT_WEAPON",
-                                "value": "False"
+                                "value": "True"
                             }
                         },
                         {
@@ -34568,7 +34226,7 @@
                                     "value": "custom_properties\\custom_bool_property"
                                 },
                                 "id": "USE_WEAPON_RANGE_FOR_ABILITY_CHASE",
-                                "value": "False"
+                                "value": "True"
                             }
                         },
                         {
@@ -34578,7 +34236,7 @@
                                     "value": "custom_properties\\custom_bool_property"
                                 },
                                 "id": "PRESERVE_VISUAL",
-                                "value": "False"
+                                "value": "True"
                             }
                         }
                     ],
@@ -34613,7 +34271,7 @@
                                     "name": "custom_pbgid_property",
                                     "value": "custom_properties\\custom_pbgid_property"
                                 },
-                                "id": "id",
+                                "id": "WEAPON_PBG_1",
                                 "pbg": {
                                     "instance_reference": "ebps/races/british_africa/weapons/ballistic_weapons/tank_gun/w_17pdr_firefly_sabot_africa_uk"
                                 }

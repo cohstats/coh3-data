@@ -57,29 +57,6 @@ def setup_browser(playwright):
     return browser, context
 
 
-def extract_post_data(post_data):
-    """Extract relevant fields from a Reddit post."""
-    try:
-        return {
-            'title': post_data.get('title', ''),
-            'author': post_data.get('author', '[deleted]'),
-            'score': post_data.get('score', 0),
-            'upvote_ratio': post_data.get('upvote_ratio', 0),
-            'num_comments': post_data.get('num_comments', 0),
-            'created_utc': post_data.get('created_utc', 0),
-            'created_date': datetime.fromtimestamp(post_data.get('created_utc', 0)).isoformat(),
-            'permalink': f"https://www.reddit.com{post_data.get('permalink', '')}",
-            'url': post_data.get('url', ''),
-            'selftext': post_data.get('selftext', ''),
-            'is_self': post_data.get('is_self', False),
-            'link_flair_text': post_data.get('link_flair_text', ''),
-            'id': post_data.get('id', ''),
-        }
-    except Exception as e:
-        print(f"⚠️  Error extracting post data: {e}")
-        return None
-
-
 def scrape_reddit():
     """Main scraping function."""
     print(f"📡 Starting Reddit CoH3 scraper...")
@@ -93,23 +70,37 @@ def scrape_reddit():
         try:
             # Step 1: Visit Reddit homepage to establish session
             print("🌐 Visiting Reddit homepage to establish session...")
-            page.goto(REDDIT_BASE_URL, wait_until='domcontentloaded', timeout=30000)
-            
+            response1 = page.goto(REDDIT_BASE_URL, wait_until='domcontentloaded', timeout=30000)
+            print(f"✅ Homepage response status: {response1.status}")
+
             # Random delay to mimic human behavior
             delay = random.uniform(2.0, 4.0)
             print(f"⏳ Waiting {delay:.1f}s to mimic human behavior...")
             time.sleep(delay)
-            
+
             # Step 2: Navigate to JSON API endpoint
             print("📥 Fetching JSON data from search endpoint...")
-            page.goto(REDDIT_SEARCH_URL, wait_until='domcontentloaded', timeout=30000)
-            
+            response2 = page.goto(REDDIT_SEARCH_URL, wait_until='domcontentloaded', timeout=30000)
+            print(f"✅ Search endpoint response status: {response2.status}")
+
             # Get page content
             content = page.content()
-            
-            # Check if we got JSON or HTML (bot detection)
-            if '<html' in content.lower():
-                print("❌ ERROR: Received HTML instead of JSON - likely bot detection!")
+
+            # Extract JSON from the page (Playwright wraps JSON in HTML)
+            # Try to get the text content from the body/pre tag
+            print("🔍 Extracting JSON data...")
+            try:
+                # First, try to get innerText from body which should contain the raw JSON
+                json_text = page.evaluate('document.body.innerText')
+            except Exception as e:
+                print(f"⚠️  Could not extract via innerText, trying content parsing: {e}")
+                json_text = content
+
+            # Check if we got actual JSON or an error page
+            # Valid Reddit JSON should start with '{' and contain "kind" and "data"
+            json_text = json_text.strip()
+            if not json_text.startswith('{'):
+                print("❌ ERROR: Response doesn't start with JSON - likely bot detection or error!")
                 print("💡 This might be Cloudflare or Reddit's bot protection.")
                 # Save error page for debugging
                 error_file = f"data/reddit_error_{datetime.now().strftime('%Y%m%d_%H%M%S')}.html"
@@ -117,40 +108,26 @@ def scrape_reddit():
                 with open(error_file, 'w', encoding='utf-8') as f:
                     f.write(content)
                 print(f"📄 Error page saved to: {error_file}")
+                print(f"📄 First 500 chars: {json_text[:500]}")
                 sys.exit(1)
-            
-            # Parse JSON response
-            print("🔍 Parsing JSON response...")
-            json_data = json.loads(page.evaluate('document.body.innerText'))
-            
-            # Extract posts
-            posts = []
+
+            # Validate JSON response
+            print("🔍 Validating JSON response...")
+            json_data = json.loads(json_text)
+
+            # Count posts if available
+            post_count = 0
             if 'data' in json_data and 'children' in json_data['data']:
-                for child in json_data['data']['children']:
-                    if child.get('kind') == 't3':  # t3 = post/link
-                        post_data = extract_post_data(child['data'])
-                        if post_data:
-                            posts.append(post_data)
-            
-            print(f"✅ Successfully extracted {len(posts)} posts")
-            
-            # Prepare output
-            output = {
-                'metadata': {
-                    'scrape_timestamp': datetime.now().isoformat(),
-                    'scrape_timestamp_utc': datetime.utcnow().isoformat() + 'Z',
-                    'query_url': REDDIT_SEARCH_URL,
-                    'total_posts': len(posts),
-                },
-                'posts': posts
-            }
-            
-            # Save to file
+                post_count = len(json_data['data']['children'])
+
+            print(f"✅ Successfully retrieved JSON with {post_count} posts")
+
+            # Save raw JSON to file
             Path("data").mkdir(exist_ok=True)
             with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
-                json.dump(output, f, indent=2, ensure_ascii=False)
-            
-            print(f"💾 Data saved to: {OUTPUT_FILE}")
+                json.dump(json_data, f, indent=2, ensure_ascii=False)
+
+            print(f"💾 Raw JSON data saved to: {OUTPUT_FILE}")
             return True
             
         except PlaywrightTimeout as e:

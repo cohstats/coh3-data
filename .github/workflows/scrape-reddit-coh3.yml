@@ -31,12 +31,9 @@ jobs:
         run: |
           echo "📦 Installing Playwright and stealth plugin..."
           pip install playwright==1.44.0 playwright-stealth==2.0.3
-          
-          echo "🌐 Installing Chromium browser..."
-          playwright install chromium
-          
-          echo "📚 Installing system dependencies for Chromium..."
-          playwright install-deps chromium
+
+          echo "🌐 Installing Chromium browser with system dependencies..."
+          playwright install --with-deps chromium
 
       - name: Run Reddit Scraper
         run: |

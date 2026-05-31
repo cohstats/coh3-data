@@ -17,7 +17,7 @@ import random
 from datetime import datetime
 from pathlib import Path
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeout
-from playwright_stealth import stealth_sync
+from playwright_stealth import Stealth
 
 
 # Configuration
@@ -33,7 +33,7 @@ USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTM
 def setup_browser(playwright):
     """Initialize browser with stealth configuration."""
     print("🚀 Launching browser with stealth configuration...")
-    
+
     browser = playwright.chromium.launch(
         headless=True,
         args=[
@@ -43,8 +43,9 @@ def setup_browser(playwright):
             '--disable-setuid-sandbox',
         ]
     )
-    
+
     # Create context with realistic settings
+    # Note: Stealth is automatically applied via Stealth().use_sync() wrapper in scrape_reddit()
     context = browser.new_context(
         viewport={'width': 1920, 'height': 1080},
         user_agent=USER_AGENT,
@@ -52,10 +53,7 @@ def setup_browser(playwright):
         timezone_id='America/New_York',
         color_scheme='dark',
     )
-    
-    # Apply stealth patches
-    stealth_sync(context)
-    
+
     return browser, context
 
 
@@ -86,8 +84,9 @@ def scrape_reddit():
     """Main scraping function."""
     print(f"📡 Starting Reddit CoH3 scraper...")
     print(f"🎯 Target URL: {REDDIT_SEARCH_URL}")
-    
-    with sync_playwright() as p:
+
+    # Use Stealth wrapper - automatically applies stealth to all pages/contexts
+    with Stealth().use_sync(sync_playwright()) as p:
         browser, context = setup_browser(p)
         page = context.new_page()
         

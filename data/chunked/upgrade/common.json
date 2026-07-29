@@ -1,4 +1,274 @@
 {
+    "allow_squad_to_overrepair": {
+        "custom_properties": {
+            "template_reference": {
+                "name": "custom_properties",
+                "value": "custom_property_template"
+            },
+            "child_custom_properties": [],
+            "custom_bool_properties": [],
+            "custom_deferred_entity_state_tree_reference_properties": [],
+            "custom_entity_state_tree_reference_properties": [],
+            "custom_enum_properties": [],
+            "custom_float_properties": [],
+            "custom_global_state_tree_reference_properties": [],
+            "custom_hash_key_properties": [],
+            "custom_int32_properties": [],
+            "custom_loc_string_properties": [],
+            "custom_pbgid_properties": [],
+            "custom_physical_state_tree_reference_properties": [],
+            "custom_reflected_enum_properties": [],
+            "custom_squad_state_tree_reference_properties": [],
+            "custom_vector3f_properties": []
+        },
+        "parent_pbg": {
+            "instance_reference": ""
+        },
+        "pbgid": 2173958.0,
+        "upgrade_bag": {
+            "blueprint_convert_options": {
+                "preserve_upgrade": "Default",
+                "continuous_statetree": "Default"
+            },
+            "duration_seconds": 0.0,
+            "enable_in_hold": "False",
+            "filter_conditions": {
+                "apply_to_application_type": "current_and_future_units",
+                "apply_to_filter_condition_statetree_ref": "",
+                "apply_to_future_units": "current_and_future_units",
+                "apply_to_squad_types": [],
+                "apply_to_target_type": "entity",
+                "apply_to_unit_classes": [],
+                "undo_payload_if_disqualified_after_property_change": "True",
+                "undo_payload_on_upgrade_removal": "False",
+                "on_property_change_behavior": "reapply_only_if_stopped"
+            },
+            "global_max_limit": 0.0,
+            "has_speech_code": "False",
+            "is_progress_permanent": "False",
+            "local_max_limit": 0.0,
+            "min_music_intensity": 0.0,
+            "owner_type": "self",
+            "requirements": [],
+            "requirements_openingbranch": "",
+            "requirements_to_complete": [],
+            "speech_code": "",
+            "squad_cost": {
+                "action": 0.0,
+                "command": 0.0,
+                "popcap": 0.0,
+                "fuel": 0.0,
+                "munition": 0.0,
+                "manpower": 0.0,
+                "requisition": 0.0,
+                "ultimate": 0.0,
+                "ability_resource_1": 0.0,
+                "ability_resource_2": 0.0
+            },
+            "state_tree_only_run_on_first_stack": "False",
+            "state_tree_references": {
+                "on_action_entity_tree": {
+                    "template_reference": {
+                        "name": "on_action_entity_tree",
+                        "value": "state_tree_entity_reference_info"
+                    },
+                    "ActionTree_OpeningBranch": ""
+                },
+                "on_action_squad_tree": {
+                    "template_reference": {
+                        "name": "on_action_squad_tree",
+                        "value": "state_tree_squad_reference_info"
+                    },
+                    "ActionTree_OpeningBranch": ""
+                },
+                "on_action_tree": {
+                    "template_reference": {
+                        "name": "on_action_tree",
+                        "value": "state_tree_reference_info"
+                    },
+                    "ActionTree_OpeningBranch": ""
+                },
+                "on_begin_action_tree": {
+                    "template_reference": {
+                        "name": "on_begin_action_tree",
+                        "value": "state_tree_reference_info"
+                    },
+                    "ActionTree_OpeningBranch": ""
+                },
+                "on_cancel_action_tree": {
+                    "template_reference": {
+                        "name": "on_cancel_action_tree",
+                        "value": "state_tree_reference_info"
+                    },
+                    "ActionTree_OpeningBranch": ""
+                }
+            },
+            "time_cost": {
+                "cost": {
+                    "action": 0.0,
+                    "command": 0.0,
+                    "popcap": 0.0,
+                    "fuel": 0.0,
+                    "munition": 0.0,
+                    "manpower": 0.0,
+                    "requisition": 0.0,
+                    "ultimate": 0.0,
+                    "ability_resource_1": 0.0,
+                    "ability_resource_2": 0.0
+                },
+                "time_seconds": 0.0
+            },
+            "ui_codex_info": {
+                "exclusive": "False",
+                "priority": 0.0,
+                "ui_position": {
+                    "ui_position_column": -1.0,
+                    "ui_position_row": -1.0
+                }
+            },
+            "ui_event_cue": "False",
+            "ui_info": {
+                "brief_text": {
+                    "locstring": {
+                        "name": "brief_text",
+                        "value": "0"
+                    }
+                },
+                "brief_text_formatter": {
+                    "template_reference": {
+                        "name": "brief_text_formatter",
+                        "value": ""
+                    }
+                },
+                "debug_text": "",
+                "extra_text": {
+                    "locstring": {
+                        "name": "extra_text",
+                        "value": "0"
+                    }
+                },
+                "extra_text_formatter": {
+                    "template_reference": {
+                        "name": "extra_text_formatter",
+                        "value": ""
+                    }
+                },
+                "help_text": {
+                    "locstring": {
+                        "name": "help_text",
+                        "value": "0"
+                    }
+                },
+                "help_text_formatter": {
+                    "template_reference": {
+                        "name": "help_text_formatter",
+                        "value": ""
+                    }
+                },
+                "hotkey_name": "",
+                "icon_name": "",
+                "reveal_for_decryption": "False",
+                "screen_name": {
+                    "locstring": {
+                        "name": "screen_name",
+                        "value": "0"
+                    }
+                },
+                "screen_name_formatter": {
+                    "template_reference": {
+                        "name": "screen_name_formatter",
+                        "value": ""
+                    }
+                },
+                "screen_name_short": {
+                    "locstring": {
+                        "name": "screen_name_short",
+                        "value": "0"
+                    }
+                },
+                "screen_name_short_formatter": {
+                    "template_reference": {
+                        "name": "screen_name_short_formatter",
+                        "value": ""
+                    }
+                },
+                "screen_name_visibility": "visible",
+                "sound": "",
+                "sound_alternative": "",
+                "symbol_icon_name": "",
+                "tooltip_data_template": "",
+                "ui_combine_type": "intersection"
+            },
+            "ui_kicker_icon_name": "",
+            "ui_menu": {
+                "instance_reference": ""
+            },
+            "ui_position": {
+                "ui_position_column": -1.0,
+                "ui_position_row": -1.0
+            },
+            "ui_preview": [],
+            "ui_production_group": "command_panel",
+            "ui_squad_brief_text_override": {
+                "locstring": {
+                    "name": "ui_squad_brief_text_override",
+                    "value": "0"
+                }
+            },
+            "ui_squad_brief_text_override_formatter": {
+                "template_reference": {
+                    "name": "ui_squad_brief_text_override_formatter",
+                    "value": ""
+                }
+            },
+            "ui_squad_extra_help_text_override": {
+                "locstring": {
+                    "name": "ui_squad_extra_help_text_override",
+                    "value": "0"
+                }
+            },
+            "ui_squad_extra_help_text_override_formatter": {
+                "template_reference": {
+                    "name": "ui_squad_extra_help_text_override_formatter",
+                    "value": ""
+                }
+            },
+            "ui_squad_extra_text_override": {
+                "locstring": {
+                    "name": "ui_squad_extra_text_override",
+                    "value": "0"
+                }
+            },
+            "ui_squad_extra_text_override_formatter": {
+                "template_reference": {
+                    "name": "ui_squad_extra_text_override_formatter",
+                    "value": ""
+                }
+            },
+            "ui_squad_help_text_override": {
+                "locstring": {
+                    "name": "ui_squad_help_text_override",
+                    "value": "0"
+                }
+            },
+            "ui_squad_help_text_override_formatter": {
+                "template_reference": {
+                    "name": "ui_squad_help_text_override_formatter",
+                    "value": ""
+                }
+            },
+            "ui_squad_icon_override": "",
+            "ui_squad_name_override": {
+                "locstring": {
+                    "name": "ui_squad_name_override",
+                    "value": "0"
+                }
+            },
+            "ui_squad_portrait_icon_override": "",
+            "ui_squad_symbol_icon_name_override": "",
+            "upgrade_type": []
+        }
+    },
     "blueprint_conversion_limiter": {
         "custom_properties": {
             "template_reference": {
@@ -38,7 +308,10 @@
                 "apply_to_future_units": "current_units_only",
                 "apply_to_squad_types": [],
                 "apply_to_target_type": "entity",
-                "apply_to_unit_classes": []
+                "apply_to_unit_classes": [],
+                "undo_payload_if_disqualified_after_property_change": "True",
+                "undo_payload_on_upgrade_removal": "False",
+                "on_property_change_behavior": "reapply_only_if_stopped"
             },
             "global_max_limit": 0.0,
             "has_speech_code": "False",
@@ -447,7 +720,10 @@
                 "apply_to_unit_classes": [],
                 "apply_to_application_type": "current_and_future_units",
                 "apply_to_future_units": "current_and_future_units",
-                "apply_to_squad_types": []
+                "apply_to_squad_types": [],
+                "undo_payload_if_disqualified_after_property_change": "True",
+                "undo_payload_on_upgrade_removal": "False",
+                "on_property_change_behavior": "reapply_only_if_stopped"
             },
             "squad_cost": {
                 "action": 0.0,
@@ -662,6 +938,276 @@
             "custom_reflected_enum_properties": []
         }
     },
+    "ignore_squad_repair_in_combat_penalty": {
+        "custom_properties": {
+            "template_reference": {
+                "name": "custom_properties",
+                "value": "custom_property_template"
+            },
+            "child_custom_properties": [],
+            "custom_bool_properties": [],
+            "custom_deferred_entity_state_tree_reference_properties": [],
+            "custom_entity_state_tree_reference_properties": [],
+            "custom_enum_properties": [],
+            "custom_float_properties": [],
+            "custom_global_state_tree_reference_properties": [],
+            "custom_hash_key_properties": [],
+            "custom_int32_properties": [],
+            "custom_loc_string_properties": [],
+            "custom_pbgid_properties": [],
+            "custom_physical_state_tree_reference_properties": [],
+            "custom_reflected_enum_properties": [],
+            "custom_squad_state_tree_reference_properties": [],
+            "custom_vector3f_properties": []
+        },
+        "parent_pbg": {
+            "instance_reference": ""
+        },
+        "pbgid": 2173928.0,
+        "upgrade_bag": {
+            "blueprint_convert_options": {
+                "preserve_upgrade": "Default",
+                "continuous_statetree": "Default"
+            },
+            "duration_seconds": 0.0,
+            "enable_in_hold": "False",
+            "filter_conditions": {
+                "apply_to_application_type": "current_and_future_units",
+                "apply_to_filter_condition_statetree_ref": "",
+                "apply_to_future_units": "current_and_future_units",
+                "apply_to_squad_types": [],
+                "apply_to_target_type": "entity",
+                "apply_to_unit_classes": [],
+                "undo_payload_if_disqualified_after_property_change": "True",
+                "undo_payload_on_upgrade_removal": "False",
+                "on_property_change_behavior": "reapply_only_if_stopped"
+            },
+            "global_max_limit": 0.0,
+            "has_speech_code": "False",
+            "is_progress_permanent": "False",
+            "local_max_limit": 0.0,
+            "min_music_intensity": 0.0,
+            "owner_type": "self",
+            "requirements": [],
+            "requirements_openingbranch": "",
+            "requirements_to_complete": [],
+            "speech_code": "",
+            "squad_cost": {
+                "action": 0.0,
+                "command": 0.0,
+                "popcap": 0.0,
+                "fuel": 0.0,
+                "munition": 0.0,
+                "manpower": 0.0,
+                "requisition": 0.0,
+                "ultimate": 0.0,
+                "ability_resource_1": 0.0,
+                "ability_resource_2": 0.0
+            },
+            "state_tree_only_run_on_first_stack": "False",
+            "state_tree_references": {
+                "on_action_entity_tree": {
+                    "template_reference": {
+                        "name": "on_action_entity_tree",
+                        "value": "state_tree_entity_reference_info"
+                    },
+                    "ActionTree_OpeningBranch": ""
+                },
+                "on_action_squad_tree": {
+                    "template_reference": {
+                        "name": "on_action_squad_tree",
+                        "value": "state_tree_squad_reference_info"
+                    },
+                    "ActionTree_OpeningBranch": ""
+                },
+                "on_action_tree": {
+                    "template_reference": {
+                        "name": "on_action_tree",
+                        "value": "state_tree_reference_info"
+                    },
+                    "ActionTree_OpeningBranch": ""
+                },
+                "on_begin_action_tree": {
+                    "template_reference": {
+                        "name": "on_begin_action_tree",
+                        "value": "state_tree_reference_info"
+                    },
+                    "ActionTree_OpeningBranch": ""
+                },
+                "on_cancel_action_tree": {
+                    "template_reference": {
+                        "name": "on_cancel_action_tree",
+                        "value": "state_tree_reference_info"
+                    },
+                    "ActionTree_OpeningBranch": ""
+                }
+            },
+            "time_cost": {
+                "cost": {
+                    "action": 0.0,
+                    "command": 0.0,
+                    "popcap": 0.0,
+                    "fuel": 0.0,
+                    "munition": 0.0,
+                    "manpower": 0.0,
+                    "requisition": 0.0,
+                    "ultimate": 0.0,
+                    "ability_resource_1": 0.0,
+                    "ability_resource_2": 0.0
+                },
+                "time_seconds": 0.0
+            },
+            "ui_codex_info": {
+                "exclusive": "False",
+                "priority": 0.0,
+                "ui_position": {
+                    "ui_position_column": -1.0,
+                    "ui_position_row": -1.0
+                }
+            },
+            "ui_event_cue": "False",
+            "ui_info": {
+                "brief_text": {
+                    "locstring": {
+                        "name": "brief_text",
+                        "value": "0"
+                    }
+                },
+                "brief_text_formatter": {
+                    "template_reference": {
+                        "name": "brief_text_formatter",
+                        "value": ""
+                    }
+                },
+                "debug_text": "",
+                "extra_text": {
+                    "locstring": {
+                        "name": "extra_text",
+                        "value": "0"
+                    }
+                },
+                "extra_text_formatter": {
+                    "template_reference": {
+                        "name": "extra_text_formatter",
+                        "value": ""
+                    }
+                },
+                "help_text": {
+                    "locstring": {
+                        "name": "help_text",
+                        "value": "0"
+                    }
+                },
+                "help_text_formatter": {
+                    "template_reference": {
+                        "name": "help_text_formatter",
+                        "value": ""
+                    }
+                },
+                "hotkey_name": "",
+                "icon_name": "",
+                "reveal_for_decryption": "False",
+                "screen_name": {
+                    "locstring": {
+                        "name": "screen_name",
+                        "value": "0"
+                    }
+                },
+                "screen_name_formatter": {
+                    "template_reference": {
+                        "name": "screen_name_formatter",
+                        "value": ""
+                    }
+                },
+                "screen_name_short": {
+                    "locstring": {
+                        "name": "screen_name_short",
+                        "value": "0"
+                    }
+                },
+                "screen_name_short_formatter": {
+                    "template_reference": {
+                        "name": "screen_name_short_formatter",
+                        "value": ""
+                    }
+                },
+                "screen_name_visibility": "visible",
+                "sound": "",
+                "sound_alternative": "",
+                "symbol_icon_name": "",
+                "tooltip_data_template": "",
+                "ui_combine_type": "intersection"
+            },
+            "ui_kicker_icon_name": "",
+            "ui_menu": {
+                "instance_reference": ""
+            },
+            "ui_position": {
+                "ui_position_column": -1.0,
+                "ui_position_row": -1.0
+            },
+            "ui_preview": [],
+            "ui_production_group": "command_panel",
+            "ui_squad_brief_text_override": {
+                "locstring": {
+                    "name": "ui_squad_brief_text_override",
+                    "value": "0"
+                }
+            },
+            "ui_squad_brief_text_override_formatter": {
+                "template_reference": {
+                    "name": "ui_squad_brief_text_override_formatter",
+                    "value": ""
+                }
+            },
+            "ui_squad_extra_help_text_override": {
+                "locstring": {
+                    "name": "ui_squad_extra_help_text_override",
+                    "value": "0"
+                }
+            },
+            "ui_squad_extra_help_text_override_formatter": {
+                "template_reference": {
+                    "name": "ui_squad_extra_help_text_override_formatter",
+                    "value": ""
+                }
+            },
+            "ui_squad_extra_text_override": {
+                "locstring": {
+                    "name": "ui_squad_extra_text_override",
+                    "value": "0"
+                }
+            },
+            "ui_squad_extra_text_override_formatter": {
+                "template_reference": {
+                    "name": "ui_squad_extra_text_override_formatter",
+                    "value": ""
+                }
+            },
+            "ui_squad_help_text_override": {
+                "locstring": {
+                    "name": "ui_squad_help_text_override",
+                    "value": "0"
+                }
+            },
+            "ui_squad_help_text_override_formatter": {
+                "template_reference": {
+                    "name": "ui_squad_help_text_override_formatter",
+                    "value": ""
+                }
+            },
+            "ui_squad_icon_override": "",
+            "ui_squad_name_override": {
+                "locstring": {
+                    "name": "ui_squad_name_override",
+                    "value": "0"
+                }
+            },
+            "ui_squad_portrait_icon_override": "",
+            "ui_squad_symbol_icon_name_override": "",
+            "upgrade_type": []
+        }
+    },
     "battlegroups": {
         "battlegroup_template": {
             "upgrade_bag": {
@@ -848,7 +1394,10 @@
                     "apply_to_unit_classes": [],
                     "apply_to_application_type": "current_and_future_units",
                     "apply_to_future_units": "current_and_future_units",
-                    "apply_to_squad_types": []
+                    "apply_to_squad_types": [],
+                    "undo_payload_if_disqualified_after_property_change": "True",
+                    "undo_payload_on_upgrade_removal": "False",
+                    "on_property_change_behavior": "reapply_only_if_stopped"
                 },
                 "squad_cost": {
                     "action": 0.0,
@@ -1147,7 +1696,10 @@
                     "apply_to_unit_classes": [],
                     "apply_to_application_type": "current_and_future_units",
                     "apply_to_future_units": "current_and_future_units",
-                    "apply_to_squad_types": []
+                    "apply_to_squad_types": [],
+                    "undo_payload_if_disqualified_after_property_change": "True",
+                    "undo_payload_on_upgrade_removal": "False",
+                    "on_property_change_behavior": "reapply_only_if_stopped"
                 },
                 "squad_cost": {
                     "action": 0.0,
@@ -1571,7 +2123,10 @@
                     "apply_to_unit_classes": [],
                     "apply_to_application_type": "current_and_future_units",
                     "apply_to_future_units": "current_and_future_units",
-                    "apply_to_squad_types": []
+                    "apply_to_squad_types": [],
+                    "undo_payload_if_disqualified_after_property_change": "True",
+                    "undo_payload_on_upgrade_removal": "False",
+                    "on_property_change_behavior": "reapply_only_if_stopped"
                 },
                 "squad_cost": {
                     "action": 0.0,
@@ -1913,7 +2468,10 @@
                             "apply_to_unit_classes": [],
                             "apply_to_application_type": "current_and_future_units",
                             "apply_to_future_units": "current_and_future_units",
-                            "apply_to_squad_types": []
+                            "apply_to_squad_types": [],
+                            "undo_payload_if_disqualified_after_property_change": "True",
+                            "undo_payload_on_upgrade_removal": "False",
+                            "on_property_change_behavior": "reapply_only_if_stopped"
                         },
                         "squad_cost": {
                             "action": 0.0,
@@ -2310,7 +2868,10 @@
                             "apply_to_unit_classes": [],
                             "apply_to_application_type": "current_and_future_units",
                             "apply_to_future_units": "current_and_future_units",
-                            "apply_to_squad_types": []
+                            "apply_to_squad_types": [],
+                            "undo_payload_if_disqualified_after_property_change": "True",
+                            "undo_payload_on_upgrade_removal": "False",
+                            "on_property_change_behavior": "reapply_only_if_stopped"
                         },
                         "squad_cost": {
                             "action": 0.0,
@@ -2721,7 +3282,10 @@
                             "apply_to_unit_classes": [],
                             "apply_to_application_type": "current_and_future_units",
                             "apply_to_future_units": "current_and_future_units",
-                            "apply_to_squad_types": []
+                            "apply_to_squad_types": [],
+                            "undo_payload_if_disqualified_after_property_change": "True",
+                            "undo_payload_on_upgrade_removal": "False",
+                            "on_property_change_behavior": "reapply_only_if_stopped"
                         },
                         "squad_cost": {
                             "action": 0.0,
@@ -3145,7 +3709,10 @@
                             "apply_to_unit_classes": [],
                             "apply_to_application_type": "current_and_future_units",
                             "apply_to_future_units": "current_and_future_units",
-                            "apply_to_squad_types": []
+                            "apply_to_squad_types": [],
+                            "undo_payload_if_disqualified_after_property_change": "True",
+                            "undo_payload_on_upgrade_removal": "False",
+                            "on_property_change_behavior": "reapply_only_if_stopped"
                         },
                         "squad_cost": {
                             "action": 0.0,
@@ -3605,7 +4172,10 @@
                             "apply_to_unit_classes": [],
                             "apply_to_application_type": "current_and_future_units",
                             "apply_to_future_units": "current_and_future_units",
-                            "apply_to_squad_types": []
+                            "apply_to_squad_types": [],
+                            "undo_payload_if_disqualified_after_property_change": "True",
+                            "undo_payload_on_upgrade_removal": "False",
+                            "on_property_change_behavior": "reapply_only_if_stopped"
                         },
                         "duration_seconds": 0.0,
                         "ui_squad_icon_override": "",
@@ -3942,7 +4512,10 @@
                             "apply_to_unit_classes": [],
                             "apply_to_application_type": "current_and_future_units",
                             "apply_to_future_units": "current_and_future_units",
-                            "apply_to_squad_types": []
+                            "apply_to_squad_types": [],
+                            "undo_payload_if_disqualified_after_property_change": "True",
+                            "undo_payload_on_upgrade_removal": "False",
+                            "on_property_change_behavior": "reapply_only_if_stopped"
                         },
                         "duration_seconds": 0.0,
                         "ui_squad_icon_override": "",
@@ -4327,7 +4900,10 @@
                             "apply_to_unit_classes": [],
                             "apply_to_application_type": "current_and_future_units",
                             "apply_to_future_units": "current_and_future_units",
-                            "apply_to_squad_types": []
+                            "apply_to_squad_types": [],
+                            "undo_payload_if_disqualified_after_property_change": "True",
+                            "undo_payload_on_upgrade_removal": "False",
+                            "on_property_change_behavior": "reapply_only_if_stopped"
                         },
                         "squad_cost": {
                             "action": 0.0,
@@ -4740,7 +5316,10 @@
                             ],
                             "apply_to_application_type": "current_and_future_units",
                             "apply_to_future_units": "current_and_future_units",
-                            "apply_to_squad_types": []
+                            "apply_to_squad_types": [],
+                            "undo_payload_if_disqualified_after_property_change": "True",
+                            "undo_payload_on_upgrade_removal": "False",
+                            "on_property_change_behavior": "reapply_only_if_stopped"
                         },
                         "duration_seconds": 0.0,
                         "ui_squad_icon_override": "",
@@ -5178,7 +5757,10 @@
                             "apply_to_unit_classes": [],
                             "apply_to_application_type": "current_and_future_units",
                             "apply_to_future_units": "current_and_future_units",
-                            "apply_to_squad_types": []
+                            "apply_to_squad_types": [],
+                            "undo_payload_if_disqualified_after_property_change": "True",
+                            "undo_payload_on_upgrade_removal": "False",
+                            "on_property_change_behavior": "reapply_only_if_stopped"
                         },
                         "duration_seconds": 0.0,
                         "ui_squad_icon_override": "",
@@ -5601,7 +6183,10 @@
                             "apply_to_unit_classes": [],
                             "apply_to_application_type": "current_and_future_units",
                             "apply_to_future_units": "current_and_future_units",
-                            "apply_to_squad_types": []
+                            "apply_to_squad_types": [],
+                            "undo_payload_if_disqualified_after_property_change": "True",
+                            "undo_payload_on_upgrade_removal": "False",
+                            "on_property_change_behavior": "reapply_only_if_stopped"
                         },
                         "squad_cost": {
                             "action": 0.0,
@@ -5900,7 +6485,10 @@
                             "apply_to_unit_classes": [],
                             "apply_to_application_type": "current_and_future_units",
                             "apply_to_future_units": "current_and_future_units",
-                            "apply_to_squad_types": []
+                            "apply_to_squad_types": [],
+                            "undo_payload_if_disqualified_after_property_change": "True",
+                            "undo_payload_on_upgrade_removal": "False",
+                            "on_property_change_behavior": "reapply_only_if_stopped"
                         },
                         "squad_cost": {
                             "action": 0.0,
@@ -6281,7 +6869,10 @@
                             "apply_to_unit_classes": [],
                             "apply_to_application_type": "current_and_future_units",
                             "apply_to_future_units": "current_and_future_units",
-                            "apply_to_squad_types": []
+                            "apply_to_squad_types": [],
+                            "undo_payload_if_disqualified_after_property_change": "True",
+                            "undo_payload_on_upgrade_removal": "False",
+                            "on_property_change_behavior": "reapply_only_if_stopped"
                         },
                         "duration_seconds": 0.0,
                         "ui_squad_icon_override": "",
@@ -6651,7 +7242,10 @@
                             "apply_to_unit_classes": [],
                             "apply_to_application_type": "current_and_future_units",
                             "apply_to_future_units": "current_and_future_units",
-                            "apply_to_squad_types": []
+                            "apply_to_squad_types": [],
+                            "undo_payload_if_disqualified_after_property_change": "True",
+                            "undo_payload_on_upgrade_removal": "False",
+                            "on_property_change_behavior": "reapply_only_if_stopped"
                         },
                         "duration_seconds": 0.0,
                         "ui_squad_icon_override": "",
@@ -7083,7 +7677,10 @@
                             "apply_to_unit_classes": [],
                             "apply_to_application_type": "current_and_future_units",
                             "apply_to_future_units": "current_and_future_units",
-                            "apply_to_squad_types": []
+                            "apply_to_squad_types": [],
+                            "undo_payload_if_disqualified_after_property_change": "True",
+                            "undo_payload_on_upgrade_removal": "False",
+                            "on_property_change_behavior": "reapply_only_if_stopped"
                         },
                         "duration_seconds": 0.0,
                         "ui_squad_icon_override": "",
@@ -7483,7 +8080,10 @@
                             "apply_to_unit_classes": [],
                             "apply_to_application_type": "current_and_future_units",
                             "apply_to_future_units": "current_and_future_units",
-                            "apply_to_squad_types": []
+                            "apply_to_squad_types": [],
+                            "undo_payload_if_disqualified_after_property_change": "True",
+                            "undo_payload_on_upgrade_removal": "False",
+                            "on_property_change_behavior": "reapply_only_if_stopped"
                         },
                         "duration_seconds": 0.0,
                         "ui_squad_icon_override": "",
@@ -7874,7 +8474,10 @@
                             "apply_to_unit_classes": [],
                             "apply_to_application_type": "current_and_future_units",
                             "apply_to_future_units": "current_and_future_units",
-                            "apply_to_squad_types": []
+                            "apply_to_squad_types": [],
+                            "undo_payload_if_disqualified_after_property_change": "True",
+                            "undo_payload_on_upgrade_removal": "False",
+                            "on_property_change_behavior": "reapply_only_if_stopped"
                         },
                         "duration_seconds": 0.0,
                         "ui_squad_icon_override": "",
@@ -8238,7 +8841,10 @@
                             "apply_to_unit_classes": [],
                             "apply_to_application_type": "current_and_future_units",
                             "apply_to_future_units": "current_and_future_units",
-                            "apply_to_squad_types": []
+                            "apply_to_squad_types": [],
+                            "undo_payload_if_disqualified_after_property_change": "True",
+                            "undo_payload_on_upgrade_removal": "False",
+                            "on_property_change_behavior": "reapply_only_if_stopped"
                         },
                         "duration_seconds": 0.0,
                         "ui_squad_icon_override": "",
@@ -8634,7 +9240,10 @@
                             "apply_to_unit_classes": [],
                             "apply_to_application_type": "current_and_future_units",
                             "apply_to_future_units": "current_and_future_units",
-                            "apply_to_squad_types": []
+                            "apply_to_squad_types": [],
+                            "undo_payload_if_disqualified_after_property_change": "True",
+                            "undo_payload_on_upgrade_removal": "False",
+                            "on_property_change_behavior": "reapply_only_if_stopped"
                         },
                         "duration_seconds": 0.0,
                         "ui_squad_icon_override": "",
@@ -9111,7 +9720,10 @@
                             "apply_to_unit_classes": [],
                             "apply_to_application_type": "current_and_future_units",
                             "apply_to_future_units": "current_and_future_units",
-                            "apply_to_squad_types": []
+                            "apply_to_squad_types": [],
+                            "undo_payload_if_disqualified_after_property_change": "True",
+                            "undo_payload_on_upgrade_removal": "False",
+                            "on_property_change_behavior": "reapply_only_if_stopped"
                         },
                         "duration_seconds": 0.0,
                         "ui_squad_icon_override": "",
@@ -9502,7 +10114,10 @@
                             "apply_to_unit_classes": [],
                             "apply_to_application_type": "current_and_future_units",
                             "apply_to_future_units": "current_and_future_units",
-                            "apply_to_squad_types": []
+                            "apply_to_squad_types": [],
+                            "undo_payload_if_disqualified_after_property_change": "True",
+                            "undo_payload_on_upgrade_removal": "False",
+                            "on_property_change_behavior": "reapply_only_if_stopped"
                         },
                         "duration_seconds": 0.0,
                         "ui_squad_icon_override": "",
@@ -9906,7 +10521,10 @@
                             "apply_to_unit_classes": [],
                             "apply_to_application_type": "current_and_future_units",
                             "apply_to_future_units": "current_and_future_units",
-                            "apply_to_squad_types": []
+                            "apply_to_squad_types": [],
+                            "undo_payload_if_disqualified_after_property_change": "True",
+                            "undo_payload_on_upgrade_removal": "False",
+                            "on_property_change_behavior": "reapply_only_if_stopped"
                         },
                         "duration_seconds": 0.0,
                         "ui_squad_icon_override": "",
@@ -10193,7 +10811,10 @@
                             "apply_to_unit_classes": [],
                             "apply_to_application_type": "current_and_future_units",
                             "apply_to_future_units": "current_and_future_units",
-                            "apply_to_squad_types": []
+                            "apply_to_squad_types": [],
+                            "undo_payload_if_disqualified_after_property_change": "True",
+                            "undo_payload_on_upgrade_removal": "False",
+                            "on_property_change_behavior": "reapply_only_if_stopped"
                         },
                         "squad_cost": {
                             "action": 0.0,
@@ -10283,6 +10904,1111 @@
         }
     },
     "buffs": {
+        "light_artillery_scatter_zeroing": {
+            "upgrade_bag": {
+                "enable_in_hold": "False",
+                "global_max_limit": 0.0,
+                "has_speech_code": "False",
+                "local_max_limit": 8.0,
+                "owner_type": "self",
+                "time_cost": {
+                    "cost": {
+                        "action": 0.0,
+                        "command": 0.0,
+                        "popcap": 0.0,
+                        "fuel": 0.0,
+                        "munition": 0.0,
+                        "manpower": 0.0,
+                        "requisition": 0.0,
+                        "ultimate": 0.0,
+                        "ability_resource_1": 0.0,
+                        "ability_resource_2": 0.0
+                    },
+                    "time_seconds": 0.0
+                },
+                "ui_event_cue": "False",
+                "ui_production_group": "command_panel",
+                "ui_position": {
+                    "ui_position_row": -1.0,
+                    "ui_position_column": -1.0
+                },
+                "ui_info": {
+                    "extra_text": {
+                        "locstring": {
+                            "name": "extra_text",
+                            "value": "0"
+                        }
+                    },
+                    "help_text": {
+                        "locstring": {
+                            "name": "help_text",
+                            "value": "0"
+                        }
+                    },
+                    "hotkey_name": "",
+                    "icon_name": "",
+                    "reveal_for_decryption": "False",
+                    "screen_name": {
+                        "locstring": {
+                            "name": "screen_name",
+                            "value": "0"
+                        }
+                    },
+                    "brief_text": {
+                        "locstring": {
+                            "name": "brief_text",
+                            "value": "0"
+                        }
+                    },
+                    "screen_name_short": {
+                        "locstring": {
+                            "name": "screen_name_short",
+                            "value": "0"
+                        }
+                    },
+                    "debug_text": "",
+                    "tooltip_data_template": "",
+                    "ui_combine_type": "intersection",
+                    "brief_text_formatter": {
+                        "template_reference": {
+                            "name": "brief_text_formatter",
+                            "value": ""
+                        }
+                    },
+                    "extra_text_formatter": {
+                        "template_reference": {
+                            "name": "extra_text_formatter",
+                            "value": ""
+                        }
+                    },
+                    "help_text_formatter": {
+                        "template_reference": {
+                            "name": "help_text_formatter",
+                            "value": ""
+                        }
+                    },
+                    "screen_name_formatter": {
+                        "template_reference": {
+                            "name": "screen_name_formatter",
+                            "value": ""
+                        }
+                    },
+                    "screen_name_short_formatter": {
+                        "template_reference": {
+                            "name": "screen_name_short_formatter",
+                            "value": ""
+                        }
+                    },
+                    "sound": "",
+                    "sound_alternative": "",
+                    "screen_name_visibility": "visible",
+                    "symbol_icon_name": ""
+                },
+                "requirements": [],
+                "ui_kicker_icon_name": "",
+                "ui_squad_name_override": {
+                    "locstring": {
+                        "name": "ui_squad_name_override",
+                        "value": "0"
+                    }
+                },
+                "ui_squad_help_text_override": {
+                    "locstring": {
+                        "name": "ui_squad_help_text_override",
+                        "value": "0"
+                    }
+                },
+                "ui_squad_extra_text_override": {
+                    "locstring": {
+                        "name": "ui_squad_extra_text_override",
+                        "value": "0"
+                    }
+                },
+                "ui_preview": [],
+                "speech_code": "",
+                "ui_squad_portrait_icon_override": "",
+                "min_music_intensity": 0.0,
+                "state_tree_references": {
+                    "on_begin_action_tree": {
+                        "template_reference": {
+                            "name": "on_begin_action_tree",
+                            "value": "state_tree_reference_info"
+                        },
+                        "ActionTree_OpeningBranch": ""
+                    },
+                    "on_action_tree": {
+                        "template_reference": {
+                            "name": "on_action_tree",
+                            "value": "state_tree_reference_info"
+                        },
+                        "ActionTree_OpeningBranch": "status_upgrade_system\\timed_status_upgrade"
+                    },
+                    "on_cancel_action_tree": {
+                        "template_reference": {
+                            "name": "on_cancel_action_tree",
+                            "value": "state_tree_reference_info"
+                        },
+                        "ActionTree_OpeningBranch": ""
+                    },
+                    "on_action_entity_tree": {
+                        "template_reference": {
+                            "name": "on_action_entity_tree",
+                            "value": "state_tree_entity_reference_info"
+                        },
+                        "ActionTree_OpeningBranch": ""
+                    },
+                    "on_action_squad_tree": {
+                        "template_reference": {
+                            "name": "on_action_squad_tree",
+                            "value": "state_tree_squad_reference_info"
+                        },
+                        "ActionTree_OpeningBranch": ""
+                    }
+                },
+                "upgrade_type": [],
+                "requirements_openingbranch": "",
+                "ui_menu": {
+                    "instance_reference": ""
+                },
+                "is_progress_permanent": "False",
+                "ui_codex_info": {
+                    "priority": 0.0,
+                    "exclusive": "False",
+                    "ui_position": {
+                        "ui_position_column": -1.0,
+                        "ui_position_row": -1.0
+                    }
+                },
+                "filter_conditions": {
+                    "apply_to_filter_condition_statetree_ref": "",
+                    "apply_to_target_type": "squad",
+                    "apply_to_unit_classes": [],
+                    "apply_to_application_type": "current_and_future_units",
+                    "apply_to_future_units": "current_and_future_units",
+                    "apply_to_squad_types": [],
+                    "undo_payload_if_disqualified_after_property_change": "True",
+                    "undo_payload_on_upgrade_removal": "False",
+                    "on_property_change_behavior": "reapply_only_if_stopped"
+                },
+                "squad_cost": {
+                    "action": 0.0,
+                    "command": 0.0,
+                    "popcap": 0.0,
+                    "fuel": 0.0,
+                    "munition": 0.0,
+                    "manpower": 0.0,
+                    "requisition": 0.0,
+                    "ultimate": 0.0,
+                    "ability_resource_1": 0.0,
+                    "ability_resource_2": 0.0
+                },
+                "duration_seconds": 0.0,
+                "ui_squad_icon_override": "",
+                "ui_squad_brief_text_override": {
+                    "locstring": {
+                        "name": "ui_squad_brief_text_override",
+                        "value": "0"
+                    }
+                },
+                "ui_squad_symbol_icon_name_override": "",
+                "ui_squad_extra_help_text_override": {
+                    "locstring": {
+                        "name": "ui_squad_extra_help_text_override",
+                        "value": "0"
+                    }
+                },
+                "requirements_to_complete": [],
+                "blueprint_convert_options": {
+                    "preserve_upgrade": "True",
+                    "continuous_statetree": "True"
+                },
+                "ui_squad_brief_text_override_formatter": {
+                    "template_reference": {
+                        "name": "ui_squad_brief_text_override_formatter",
+                        "value": ""
+                    }
+                },
+                "ui_squad_extra_help_text_override_formatter": {
+                    "template_reference": {
+                        "name": "ui_squad_extra_help_text_override_formatter",
+                        "value": ""
+                    }
+                },
+                "ui_squad_extra_text_override_formatter": {
+                    "template_reference": {
+                        "name": "ui_squad_extra_text_override_formatter",
+                        "value": ""
+                    }
+                },
+                "ui_squad_help_text_override_formatter": {
+                    "template_reference": {
+                        "name": "ui_squad_help_text_override_formatter",
+                        "value": ""
+                    }
+                },
+                "state_tree_only_run_on_first_stack": "False"
+            },
+            "pbgid": 2174375.0,
+            "parent_pbg": {
+                "instance_reference": "upgrade/dev/templates/status_upgrade"
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "custom_bool_properties": [
+                    {
+                        "custom_bool_property": {
+                            "template_reference": {
+                                "name": "custom_bool_property",
+                                "value": "custom_properties\\custom_bool_property"
+                            },
+                            "id": "AUTO_APPLY_MODIFIERS",
+                            "value": "True"
+                        }
+                    },
+                    {
+                        "custom_bool_property": {
+                            "template_reference": {
+                                "name": "custom_bool_property",
+                                "value": "custom_properties\\custom_bool_property"
+                            },
+                            "id": "AUTO_APPLY_STATUS_DECORATOR",
+                            "value": "False"
+                        }
+                    },
+                    {
+                        "custom_bool_property": {
+                            "template_reference": {
+                                "name": "custom_bool_property",
+                                "value": "custom_properties\\custom_bool_property"
+                            },
+                            "id": "IS_DECAYING",
+                            "value": "False"
+                        }
+                    }
+                ],
+                "custom_float_properties": [
+                    {
+                        "custom_float_property": {
+                            "template_reference": {
+                                "name": "custom_float_property",
+                                "value": "custom_properties\\custom_float_property"
+                            },
+                            "id": "DURATION",
+                            "value": 0.0
+                        }
+                    },
+                    {
+                        "custom_float_property": {
+                            "template_reference": {
+                                "name": "custom_float_property",
+                                "value": "custom_properties\\custom_float_property"
+                            },
+                            "id": "UI_TIMER_DELAY",
+                            "value": 0.0
+                        }
+                    },
+                    {
+                        "custom_float_property": {
+                            "template_reference": {
+                                "name": "custom_float_property",
+                                "value": "custom_properties\\custom_float_property"
+                            },
+                            "value": 0.67,
+                            "id": "WEAPON_SCATTER"
+                        }
+                    }
+                ],
+                "custom_int32_properties": [],
+                "custom_vector3f_properties": [],
+                "custom_pbgid_properties": [
+                    {
+                        "custom_pbgid_property": {
+                            "template_reference": {
+                                "name": "custom_pbgid_property",
+                                "value": "custom_properties\\custom_pbgid_property"
+                            },
+                            "id": "SQUAD_STATUS_DECORATOR_PBG",
+                            "pbg": {
+                                "instance_reference": "squad_status/decorators/buffs/british/battlegroups/canadian_shock/point_assault_uk"
+                            }
+                        }
+                    }
+                ],
+                "custom_loc_string_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_global_state_tree_reference_properties": [
+                    {
+                        "custom_global_state_tree_reference_property": {
+                            "template_reference": {
+                                "name": "custom_global_state_tree_reference_property",
+                                "value": "custom_properties\\custom_global_state_tree_reference_property"
+                            },
+                            "id": "CUSTOM_PAYLOAD",
+                            "nodepath": ""
+                        }
+                    },
+                    {
+                        "custom_global_state_tree_reference_property": {
+                            "template_reference": {
+                                "name": "custom_global_state_tree_reference_property",
+                                "value": "custom_properties\\custom_global_state_tree_reference_property"
+                            },
+                            "id": "POST_ACTION_PAYLOAD",
+                            "nodepath": ""
+                        }
+                    },
+                    {
+                        "custom_global_state_tree_reference_property": {
+                            "template_reference": {
+                                "name": "custom_global_state_tree_reference_property",
+                                "value": "custom_properties\\custom_global_state_tree_reference_property"
+                            },
+                            "id": "EXIT_CONDITION",
+                            "nodepath": ""
+                        }
+                    }
+                ],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "child_custom_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_reflected_enum_properties": []
+            }
+        },
+        "mortar_scatter_zeroing": {
+            "upgrade_bag": {
+                "enable_in_hold": "False",
+                "global_max_limit": 0.0,
+                "has_speech_code": "False",
+                "local_max_limit": 8.0,
+                "owner_type": "self",
+                "time_cost": {
+                    "cost": {
+                        "action": 0.0,
+                        "command": 0.0,
+                        "popcap": 0.0,
+                        "fuel": 0.0,
+                        "munition": 0.0,
+                        "manpower": 0.0,
+                        "requisition": 0.0,
+                        "ultimate": 0.0,
+                        "ability_resource_1": 0.0,
+                        "ability_resource_2": 0.0
+                    },
+                    "time_seconds": 0.0
+                },
+                "ui_event_cue": "False",
+                "ui_production_group": "command_panel",
+                "ui_position": {
+                    "ui_position_row": -1.0,
+                    "ui_position_column": -1.0
+                },
+                "ui_info": {
+                    "extra_text": {
+                        "locstring": {
+                            "name": "extra_text",
+                            "value": "0"
+                        }
+                    },
+                    "help_text": {
+                        "locstring": {
+                            "name": "help_text",
+                            "value": "0"
+                        }
+                    },
+                    "hotkey_name": "",
+                    "icon_name": "",
+                    "reveal_for_decryption": "False",
+                    "screen_name": {
+                        "locstring": {
+                            "name": "screen_name",
+                            "value": "0"
+                        }
+                    },
+                    "brief_text": {
+                        "locstring": {
+                            "name": "brief_text",
+                            "value": "0"
+                        }
+                    },
+                    "screen_name_short": {
+                        "locstring": {
+                            "name": "screen_name_short",
+                            "value": "0"
+                        }
+                    },
+                    "debug_text": "",
+                    "tooltip_data_template": "",
+                    "ui_combine_type": "intersection",
+                    "brief_text_formatter": {
+                        "template_reference": {
+                            "name": "brief_text_formatter",
+                            "value": ""
+                        }
+                    },
+                    "extra_text_formatter": {
+                        "template_reference": {
+                            "name": "extra_text_formatter",
+                            "value": ""
+                        }
+                    },
+                    "help_text_formatter": {
+                        "template_reference": {
+                            "name": "help_text_formatter",
+                            "value": ""
+                        }
+                    },
+                    "screen_name_formatter": {
+                        "template_reference": {
+                            "name": "screen_name_formatter",
+                            "value": ""
+                        }
+                    },
+                    "screen_name_short_formatter": {
+                        "template_reference": {
+                            "name": "screen_name_short_formatter",
+                            "value": ""
+                        }
+                    },
+                    "sound": "",
+                    "sound_alternative": "",
+                    "screen_name_visibility": "visible",
+                    "symbol_icon_name": ""
+                },
+                "requirements": [],
+                "ui_kicker_icon_name": "",
+                "ui_squad_name_override": {
+                    "locstring": {
+                        "name": "ui_squad_name_override",
+                        "value": "0"
+                    }
+                },
+                "ui_squad_help_text_override": {
+                    "locstring": {
+                        "name": "ui_squad_help_text_override",
+                        "value": "0"
+                    }
+                },
+                "ui_squad_extra_text_override": {
+                    "locstring": {
+                        "name": "ui_squad_extra_text_override",
+                        "value": "0"
+                    }
+                },
+                "ui_preview": [],
+                "speech_code": "",
+                "ui_squad_portrait_icon_override": "",
+                "min_music_intensity": 0.0,
+                "state_tree_references": {
+                    "on_begin_action_tree": {
+                        "template_reference": {
+                            "name": "on_begin_action_tree",
+                            "value": "state_tree_reference_info"
+                        },
+                        "ActionTree_OpeningBranch": ""
+                    },
+                    "on_action_tree": {
+                        "template_reference": {
+                            "name": "on_action_tree",
+                            "value": "state_tree_reference_info"
+                        },
+                        "ActionTree_OpeningBranch": "status_upgrade_system\\timed_status_upgrade"
+                    },
+                    "on_cancel_action_tree": {
+                        "template_reference": {
+                            "name": "on_cancel_action_tree",
+                            "value": "state_tree_reference_info"
+                        },
+                        "ActionTree_OpeningBranch": ""
+                    },
+                    "on_action_entity_tree": {
+                        "template_reference": {
+                            "name": "on_action_entity_tree",
+                            "value": "state_tree_entity_reference_info"
+                        },
+                        "ActionTree_OpeningBranch": ""
+                    },
+                    "on_action_squad_tree": {
+                        "template_reference": {
+                            "name": "on_action_squad_tree",
+                            "value": "state_tree_squad_reference_info"
+                        },
+                        "ActionTree_OpeningBranch": ""
+                    }
+                },
+                "upgrade_type": [],
+                "requirements_openingbranch": "",
+                "ui_menu": {
+                    "instance_reference": ""
+                },
+                "is_progress_permanent": "False",
+                "ui_codex_info": {
+                    "priority": 0.0,
+                    "exclusive": "False",
+                    "ui_position": {
+                        "ui_position_column": -1.0,
+                        "ui_position_row": -1.0
+                    }
+                },
+                "filter_conditions": {
+                    "apply_to_filter_condition_statetree_ref": "",
+                    "apply_to_target_type": "squad",
+                    "apply_to_unit_classes": [],
+                    "apply_to_application_type": "current_and_future_units",
+                    "apply_to_future_units": "current_and_future_units",
+                    "apply_to_squad_types": [],
+                    "undo_payload_if_disqualified_after_property_change": "True",
+                    "undo_payload_on_upgrade_removal": "False",
+                    "on_property_change_behavior": "reapply_only_if_stopped"
+                },
+                "squad_cost": {
+                    "action": 0.0,
+                    "command": 0.0,
+                    "popcap": 0.0,
+                    "fuel": 0.0,
+                    "munition": 0.0,
+                    "manpower": 0.0,
+                    "requisition": 0.0,
+                    "ultimate": 0.0,
+                    "ability_resource_1": 0.0,
+                    "ability_resource_2": 0.0
+                },
+                "duration_seconds": 0.0,
+                "ui_squad_icon_override": "",
+                "ui_squad_brief_text_override": {
+                    "locstring": {
+                        "name": "ui_squad_brief_text_override",
+                        "value": "0"
+                    }
+                },
+                "ui_squad_symbol_icon_name_override": "",
+                "ui_squad_extra_help_text_override": {
+                    "locstring": {
+                        "name": "ui_squad_extra_help_text_override",
+                        "value": "0"
+                    }
+                },
+                "requirements_to_complete": [],
+                "blueprint_convert_options": {
+                    "preserve_upgrade": "True",
+                    "continuous_statetree": "True"
+                },
+                "ui_squad_brief_text_override_formatter": {
+                    "template_reference": {
+                        "name": "ui_squad_brief_text_override_formatter",
+                        "value": ""
+                    }
+                },
+                "ui_squad_extra_help_text_override_formatter": {
+                    "template_reference": {
+                        "name": "ui_squad_extra_help_text_override_formatter",
+                        "value": ""
+                    }
+                },
+                "ui_squad_extra_text_override_formatter": {
+                    "template_reference": {
+                        "name": "ui_squad_extra_text_override_formatter",
+                        "value": ""
+                    }
+                },
+                "ui_squad_help_text_override_formatter": {
+                    "template_reference": {
+                        "name": "ui_squad_help_text_override_formatter",
+                        "value": ""
+                    }
+                },
+                "state_tree_only_run_on_first_stack": "False"
+            },
+            "pbgid": 2173057.0,
+            "parent_pbg": {
+                "instance_reference": "upgrade/dev/templates/status_upgrade"
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "custom_bool_properties": [
+                    {
+                        "custom_bool_property": {
+                            "template_reference": {
+                                "name": "custom_bool_property",
+                                "value": "custom_properties\\custom_bool_property"
+                            },
+                            "id": "AUTO_APPLY_MODIFIERS",
+                            "value": "True"
+                        }
+                    },
+                    {
+                        "custom_bool_property": {
+                            "template_reference": {
+                                "name": "custom_bool_property",
+                                "value": "custom_properties\\custom_bool_property"
+                            },
+                            "id": "AUTO_APPLY_STATUS_DECORATOR",
+                            "value": "False"
+                        }
+                    },
+                    {
+                        "custom_bool_property": {
+                            "template_reference": {
+                                "name": "custom_bool_property",
+                                "value": "custom_properties\\custom_bool_property"
+                            },
+                            "id": "IS_DECAYING",
+                            "value": "False"
+                        }
+                    }
+                ],
+                "custom_float_properties": [
+                    {
+                        "custom_float_property": {
+                            "template_reference": {
+                                "name": "custom_float_property",
+                                "value": "custom_properties\\custom_float_property"
+                            },
+                            "id": "DURATION",
+                            "value": 0.0
+                        }
+                    },
+                    {
+                        "custom_float_property": {
+                            "template_reference": {
+                                "name": "custom_float_property",
+                                "value": "custom_properties\\custom_float_property"
+                            },
+                            "id": "UI_TIMER_DELAY",
+                            "value": 0.0
+                        }
+                    },
+                    {
+                        "custom_float_property": {
+                            "template_reference": {
+                                "name": "custom_float_property",
+                                "value": "custom_properties\\custom_float_property"
+                            },
+                            "value": 0.8,
+                            "id": "WEAPON_SCATTER"
+                        }
+                    }
+                ],
+                "custom_int32_properties": [],
+                "custom_vector3f_properties": [],
+                "custom_pbgid_properties": [
+                    {
+                        "custom_pbgid_property": {
+                            "template_reference": {
+                                "name": "custom_pbgid_property",
+                                "value": "custom_properties\\custom_pbgid_property"
+                            },
+                            "id": "SQUAD_STATUS_DECORATOR_PBG",
+                            "pbg": {
+                                "instance_reference": "squad_status/decorators/buffs/british/battlegroups/canadian_shock/point_assault_uk"
+                            }
+                        }
+                    }
+                ],
+                "custom_loc_string_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_global_state_tree_reference_properties": [
+                    {
+                        "custom_global_state_tree_reference_property": {
+                            "template_reference": {
+                                "name": "custom_global_state_tree_reference_property",
+                                "value": "custom_properties\\custom_global_state_tree_reference_property"
+                            },
+                            "id": "CUSTOM_PAYLOAD",
+                            "nodepath": ""
+                        }
+                    },
+                    {
+                        "custom_global_state_tree_reference_property": {
+                            "template_reference": {
+                                "name": "custom_global_state_tree_reference_property",
+                                "value": "custom_properties\\custom_global_state_tree_reference_property"
+                            },
+                            "id": "POST_ACTION_PAYLOAD",
+                            "nodepath": ""
+                        }
+                    },
+                    {
+                        "custom_global_state_tree_reference_property": {
+                            "template_reference": {
+                                "name": "custom_global_state_tree_reference_property",
+                                "value": "custom_properties\\custom_global_state_tree_reference_property"
+                            },
+                            "id": "EXIT_CONDITION",
+                            "nodepath": ""
+                        }
+                    }
+                ],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "child_custom_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_reflected_enum_properties": []
+            }
+        },
+        "recently_attacking_from_camouflage_buff": {
+            "upgrade_bag": {
+                "enable_in_hold": "False",
+                "global_max_limit": 0.0,
+                "has_speech_code": "False",
+                "local_max_limit": 1.0,
+                "owner_type": "self",
+                "time_cost": {
+                    "cost": {
+                        "action": 0.0,
+                        "command": 0.0,
+                        "popcap": 0.0,
+                        "fuel": 0.0,
+                        "munition": 0.0,
+                        "manpower": 0.0,
+                        "requisition": 0.0,
+                        "ultimate": 0.0,
+                        "ability_resource_1": 0.0,
+                        "ability_resource_2": 0.0
+                    },
+                    "time_seconds": 0.0
+                },
+                "ui_event_cue": "False",
+                "ui_production_group": "command_panel",
+                "ui_position": {
+                    "ui_position_row": -1.0,
+                    "ui_position_column": -1.0
+                },
+                "ui_info": {
+                    "extra_text": {
+                        "locstring": {
+                            "name": "extra_text",
+                            "value": "0"
+                        }
+                    },
+                    "help_text": {
+                        "locstring": {
+                            "name": "help_text",
+                            "value": "0"
+                        }
+                    },
+                    "hotkey_name": "",
+                    "icon_name": "legacy/abilities/ability_aef_distribute_medical_supplies",
+                    "reveal_for_decryption": "False",
+                    "screen_name": {
+                        "locstring": {
+                            "name": "screen_name",
+                            "value": "0"
+                        }
+                    },
+                    "brief_text": {
+                        "locstring": {
+                            "name": "brief_text",
+                            "value": "0"
+                        }
+                    },
+                    "screen_name_short": {
+                        "locstring": {
+                            "name": "screen_name_short",
+                            "value": "0"
+                        }
+                    },
+                    "debug_text": "",
+                    "tooltip_data_template": "",
+                    "ui_combine_type": "intersection",
+                    "brief_text_formatter": {
+                        "template_reference": {
+                            "name": "brief_text_formatter",
+                            "value": ""
+                        }
+                    },
+                    "extra_text_formatter": {
+                        "template_reference": {
+                            "name": "extra_text_formatter",
+                            "value": ""
+                        }
+                    },
+                    "help_text_formatter": {
+                        "template_reference": {
+                            "name": "help_text_formatter",
+                            "value": ""
+                        }
+                    },
+                    "screen_name_formatter": {
+                        "template_reference": {
+                            "name": "screen_name_formatter",
+                            "value": ""
+                        }
+                    },
+                    "screen_name_short_formatter": {
+                        "template_reference": {
+                            "name": "screen_name_short_formatter",
+                            "value": ""
+                        }
+                    },
+                    "sound": "",
+                    "sound_alternative": "",
+                    "screen_name_visibility": "visible",
+                    "symbol_icon_name": ""
+                },
+                "requirements": [],
+                "ui_kicker_icon_name": "",
+                "ui_squad_name_override": {
+                    "locstring": {
+                        "name": "ui_squad_name_override",
+                        "value": "0"
+                    }
+                },
+                "ui_squad_help_text_override": {
+                    "locstring": {
+                        "name": "ui_squad_help_text_override",
+                        "value": "0"
+                    }
+                },
+                "ui_squad_extra_text_override": {
+                    "locstring": {
+                        "name": "ui_squad_extra_text_override",
+                        "value": "0"
+                    }
+                },
+                "ui_preview": [],
+                "speech_code": "",
+                "ui_squad_portrait_icon_override": "",
+                "min_music_intensity": 0.0,
+                "state_tree_references": {
+                    "on_begin_action_tree": {
+                        "template_reference": {
+                            "name": "on_begin_action_tree",
+                            "value": "state_tree_reference_info"
+                        },
+                        "ActionTree_OpeningBranch": ""
+                    },
+                    "on_action_tree": {
+                        "template_reference": {
+                            "name": "on_action_tree",
+                            "value": "state_tree_reference_info"
+                        },
+                        "ActionTree_OpeningBranch": "status_upgrade_system\\timed_status_upgrade"
+                    },
+                    "on_cancel_action_tree": {
+                        "template_reference": {
+                            "name": "on_cancel_action_tree",
+                            "value": "state_tree_reference_info"
+                        },
+                        "ActionTree_OpeningBranch": ""
+                    },
+                    "on_action_entity_tree": {
+                        "template_reference": {
+                            "name": "on_action_entity_tree",
+                            "value": "state_tree_entity_reference_info"
+                        },
+                        "ActionTree_OpeningBranch": ""
+                    },
+                    "on_action_squad_tree": {
+                        "template_reference": {
+                            "name": "on_action_squad_tree",
+                            "value": "state_tree_squad_reference_info"
+                        },
+                        "ActionTree_OpeningBranch": ""
+                    }
+                },
+                "upgrade_type": [],
+                "requirements_openingbranch": "",
+                "ui_menu": {
+                    "instance_reference": ""
+                },
+                "is_progress_permanent": "False",
+                "ui_codex_info": {
+                    "priority": 0.0,
+                    "exclusive": "False",
+                    "ui_position": {
+                        "ui_position_column": -1.0,
+                        "ui_position_row": -1.0
+                    }
+                },
+                "filter_conditions": {
+                    "apply_to_filter_condition_statetree_ref": "",
+                    "apply_to_target_type": "squad",
+                    "apply_to_unit_classes": [],
+                    "apply_to_application_type": "current_and_future_units",
+                    "apply_to_future_units": "current_and_future_units",
+                    "apply_to_squad_types": [],
+                    "undo_payload_if_disqualified_after_property_change": "True",
+                    "undo_payload_on_upgrade_removal": "False",
+                    "on_property_change_behavior": "reapply_only_if_stopped"
+                },
+                "squad_cost": {
+                    "action": 0.0,
+                    "command": 0.0,
+                    "popcap": 0.0,
+                    "fuel": 0.0,
+                    "munition": 0.0,
+                    "manpower": 0.0,
+                    "requisition": 0.0,
+                    "ultimate": 0.0,
+                    "ability_resource_1": 0.0,
+                    "ability_resource_2": 0.0
+                },
+                "duration_seconds": 0.0,
+                "ui_squad_icon_override": "",
+                "ui_squad_brief_text_override": {
+                    "locstring": {
+                        "name": "ui_squad_brief_text_override",
+                        "value": "0"
+                    }
+                },
+                "ui_squad_symbol_icon_name_override": "",
+                "ui_squad_extra_help_text_override": {
+                    "locstring": {
+                        "name": "ui_squad_extra_help_text_override",
+                        "value": "0"
+                    }
+                },
+                "requirements_to_complete": [],
+                "blueprint_convert_options": {
+                    "preserve_upgrade": "True",
+                    "continuous_statetree": "True"
+                },
+                "ui_squad_brief_text_override_formatter": {
+                    "template_reference": {
+                        "name": "ui_squad_brief_text_override_formatter",
+                        "value": ""
+                    }
+                },
+                "ui_squad_extra_help_text_override_formatter": {
+                    "template_reference": {
+                        "name": "ui_squad_extra_help_text_override_formatter",
+                        "value": ""
+                    }
+                },
+                "ui_squad_extra_text_override_formatter": {
+                    "template_reference": {
+                        "name": "ui_squad_extra_text_override_formatter",
+                        "value": ""
+                    }
+                },
+                "ui_squad_help_text_override_formatter": {
+                    "template_reference": {
+                        "name": "ui_squad_help_text_override_formatter",
+                        "value": ""
+                    }
+                },
+                "state_tree_only_run_on_first_stack": "False"
+            },
+            "pbgid": 2174314.0,
+            "parent_pbg": {
+                "instance_reference": "upgrade/dev/templates/status_upgrade"
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "custom_bool_properties": [
+                    {
+                        "custom_bool_property": {
+                            "template_reference": {
+                                "name": "custom_bool_property",
+                                "value": "custom_properties\\custom_bool_property"
+                            },
+                            "id": "AUTO_APPLY_MODIFIERS",
+                            "value": "False"
+                        }
+                    },
+                    {
+                        "custom_bool_property": {
+                            "template_reference": {
+                                "name": "custom_bool_property",
+                                "value": "custom_properties\\custom_bool_property"
+                            },
+                            "id": "AUTO_APPLY_STATUS_DECORATOR",
+                            "value": "False"
+                        }
+                    },
+                    {
+                        "custom_bool_property": {
+                            "template_reference": {
+                                "name": "custom_bool_property",
+                                "value": "custom_properties\\custom_bool_property"
+                            },
+                            "id": "IS_DECAYING",
+                            "value": "False"
+                        }
+                    }
+                ],
+                "custom_float_properties": [
+                    {
+                        "custom_float_property": {
+                            "template_reference": {
+                                "name": "custom_float_property",
+                                "value": "custom_properties\\custom_float_property"
+                            },
+                            "id": "DURATION",
+                            "value": 4.0
+                        }
+                    },
+                    {
+                        "custom_float_property": {
+                            "template_reference": {
+                                "name": "custom_float_property",
+                                "value": "custom_properties\\custom_float_property"
+                            },
+                            "id": "UI_TIMER_DELAY",
+                            "value": 0.0
+                        }
+                    }
+                ],
+                "custom_int32_properties": [],
+                "custom_vector3f_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_global_state_tree_reference_properties": [
+                    {
+                        "custom_global_state_tree_reference_property": {
+                            "template_reference": {
+                                "name": "custom_global_state_tree_reference_property",
+                                "value": "custom_properties\\custom_global_state_tree_reference_property"
+                            },
+                            "id": "CUSTOM_PAYLOAD",
+                            "nodepath": ""
+                        }
+                    },
+                    {
+                        "custom_global_state_tree_reference_property": {
+                            "template_reference": {
+                                "name": "custom_global_state_tree_reference_property",
+                                "value": "custom_properties\\custom_global_state_tree_reference_property"
+                            },
+                            "id": "POST_ACTION_PAYLOAD",
+                            "nodepath": ""
+                        }
+                    },
+                    {
+                        "custom_global_state_tree_reference_property": {
+                            "template_reference": {
+                                "name": "custom_global_state_tree_reference_property",
+                                "value": "custom_properties\\custom_global_state_tree_reference_property"
+                            },
+                            "id": "EXIT_CONDITION",
+                            "nodepath": ""
+                        }
+                    }
+                ],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "child_custom_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_reflected_enum_properties": []
+            }
+        },
         "stationary_vision_bonus": {
             "upgrade_bag": {
                 "enable_in_hold": "False",
@@ -10464,7 +12190,10 @@
                     "apply_to_unit_classes": [],
                     "apply_to_application_type": "current_and_future_units",
                     "apply_to_future_units": "current_and_future_units",
-                    "apply_to_squad_types": []
+                    "apply_to_squad_types": [],
+                    "undo_payload_if_disqualified_after_property_change": "True",
+                    "undo_payload_on_upgrade_removal": "False",
+                    "on_property_change_behavior": "reapply_only_if_stopped"
                 },
                 "squad_cost": {
                     "action": 0.0,
@@ -10673,7 +12402,10 @@
                     "apply_to_future_units": "current_and_future_units",
                     "apply_to_squad_types": [],
                     "apply_to_target_type": "entity",
-                    "apply_to_unit_classes": []
+                    "apply_to_unit_classes": [],
+                    "undo_payload_if_disqualified_after_property_change": "True",
+                    "undo_payload_on_upgrade_removal": "False",
+                    "on_property_change_behavior": "reapply_only_if_stopped"
                 },
                 "global_max_limit": 0.0,
                 "has_speech_code": "False",
@@ -10940,7 +12672,10 @@
                     "apply_to_future_units": "current_and_future_units",
                     "apply_to_squad_types": [],
                     "apply_to_target_type": "entity",
-                    "apply_to_unit_classes": []
+                    "apply_to_unit_classes": [],
+                    "undo_payload_if_disqualified_after_property_change": "True",
+                    "undo_payload_on_upgrade_removal": "False",
+                    "on_property_change_behavior": "reapply_only_if_stopped"
                 },
                 "global_max_limit": 0.0,
                 "has_speech_code": "True",
@@ -10967,6 +12702,33 @@
                             "is_secured_by_checkpoint": "False",
                             "not_in_transition": "False",
                             "relative_to_caster": "False"
+                        }
+                    },
+                    {
+                        "required": {
+                            "template_reference": {
+                                "name": "required",
+                                "value": "requirements\\required_entity_upgrade"
+                            },
+                            "include_completed": "False",
+                            "include_pbg_parenting": {
+                                "include_child_pbgs": "True",
+                                "include_parent_pbgs": "False"
+                            },
+                            "include_queued": "True",
+                            "is_present": "False",
+                            "max_completed": 100.0,
+                            "min_completed": 1.0,
+                            "reason": "usage",
+                            "ui_name": {
+                                "locstring": {
+                                    "name": "ui_name",
+                                    "value": "0"
+                                }
+                            },
+                            "upgrade_name": {
+                                "instance_reference": "upgrade/afrika_korps/defense/kriegsmarine_20mm_aa_gun_quad_ak"
+                            }
                         }
                     }
                 ],
@@ -11247,7 +13009,10 @@
                     "apply_to_future_units": "current_and_future_units",
                     "apply_to_squad_types": [],
                     "apply_to_target_type": "entity",
-                    "apply_to_unit_classes": []
+                    "apply_to_unit_classes": [],
+                    "undo_payload_if_disqualified_after_property_change": "True",
+                    "undo_payload_on_upgrade_removal": "False",
+                    "on_property_change_behavior": "reapply_only_if_stopped"
                 },
                 "global_max_limit": 0.0,
                 "has_speech_code": "False",
@@ -11520,7 +13285,10 @@
                     "apply_to_future_units": "current_and_future_units",
                     "apply_to_squad_types": [],
                     "apply_to_target_type": "squad",
-                    "apply_to_unit_classes": []
+                    "apply_to_unit_classes": [],
+                    "undo_payload_if_disqualified_after_property_change": "True",
+                    "undo_payload_on_upgrade_removal": "False",
+                    "on_property_change_behavior": "reapply_only_if_stopped"
                 },
                 "global_max_limit": 0.0,
                 "has_speech_code": "False",
@@ -11931,7 +13699,10 @@
                     "apply_to_unit_classes": [],
                     "apply_to_application_type": "current_and_future_units",
                     "apply_to_future_units": "current_and_future_units",
-                    "apply_to_squad_types": []
+                    "apply_to_squad_types": [],
+                    "undo_payload_if_disqualified_after_property_change": "True",
+                    "undo_payload_on_upgrade_removal": "False",
+                    "on_property_change_behavior": "reapply_only_if_stopped"
                 },
                 "squad_cost": {
                     "action": 0.0,
@@ -12324,7 +14095,10 @@
                     "apply_to_unit_classes": [],
                     "apply_to_application_type": "current_and_future_units",
                     "apply_to_future_units": "current_and_future_units",
-                    "apply_to_squad_types": []
+                    "apply_to_squad_types": [],
+                    "undo_payload_if_disqualified_after_property_change": "True",
+                    "undo_payload_on_upgrade_removal": "False",
+                    "on_property_change_behavior": "reapply_only_if_stopped"
                 },
                 "squad_cost": {
                     "action": 0.0,
@@ -12721,7 +14495,10 @@
                     "apply_to_unit_classes": [],
                     "apply_to_application_type": "current_and_future_units",
                     "apply_to_future_units": "current_and_future_units",
-                    "apply_to_squad_types": []
+                    "apply_to_squad_types": [],
+                    "undo_payload_if_disqualified_after_property_change": "True",
+                    "undo_payload_on_upgrade_removal": "False",
+                    "on_property_change_behavior": "reapply_only_if_stopped"
                 },
                 "squad_cost": {
                     "action": 0.0,
@@ -12840,7 +14617,10 @@
                     "apply_to_filter_condition_statetree_ref": "",
                     "apply_to_future_units": "current_and_future_units",
                     "apply_to_target_type": "squad",
-                    "apply_to_unit_classes": []
+                    "apply_to_unit_classes": [],
+                    "undo_payload_if_disqualified_after_property_change": "True",
+                    "undo_payload_on_upgrade_removal": "False",
+                    "on_property_change_behavior": "reapply_only_if_stopped"
                 },
                 "state_tree_references": {
                     "on_action_squad_tree": {
@@ -13255,7 +15035,10 @@
                     "apply_to_unit_classes": [],
                     "apply_to_application_type": "current_and_future_units",
                     "apply_to_future_units": "current_and_future_units",
-                    "apply_to_squad_types": []
+                    "apply_to_squad_types": [],
+                    "undo_payload_if_disqualified_after_property_change": "True",
+                    "undo_payload_on_upgrade_removal": "False",
+                    "on_property_change_behavior": "reapply_only_if_stopped"
                 },
                 "squad_cost": {
                     "action": 0.0,
@@ -13628,7 +15411,10 @@
                     "apply_to_unit_classes": [],
                     "apply_to_application_type": "current_and_future_units",
                     "apply_to_future_units": "current_and_future_units",
-                    "apply_to_squad_types": []
+                    "apply_to_squad_types": [],
+                    "undo_payload_if_disqualified_after_property_change": "True",
+                    "undo_payload_on_upgrade_removal": "False",
+                    "on_property_change_behavior": "reapply_only_if_stopped"
                 },
                 "squad_cost": {
                     "action": 0.0,
@@ -13865,7 +15651,10 @@
                     "apply_to_future_units": "current_and_future_units",
                     "apply_to_squad_types": [],
                     "apply_to_target_type": "entity",
-                    "apply_to_unit_classes": []
+                    "apply_to_unit_classes": [],
+                    "undo_payload_if_disqualified_after_property_change": "True",
+                    "undo_payload_on_upgrade_removal": "False",
+                    "on_property_change_behavior": "reapply_only_if_stopped"
                 },
                 "global_max_limit": 0.0,
                 "has_speech_code": "False",
@@ -14132,7 +15921,10 @@
                     "apply_to_future_units": "current_and_future_units",
                     "apply_to_squad_types": [],
                     "apply_to_target_type": "entity",
-                    "apply_to_unit_classes": []
+                    "apply_to_unit_classes": [],
+                    "undo_payload_if_disqualified_after_property_change": "True",
+                    "undo_payload_on_upgrade_removal": "False",
+                    "on_property_change_behavior": "reapply_only_if_stopped"
                 },
                 "global_max_limit": 0.0,
                 "has_speech_code": "False",
@@ -14399,7 +16191,10 @@
                     "apply_to_future_units": "current_and_future_units",
                     "apply_to_squad_types": [],
                     "apply_to_target_type": "entity",
-                    "apply_to_unit_classes": []
+                    "apply_to_unit_classes": [],
+                    "undo_payload_if_disqualified_after_property_change": "True",
+                    "undo_payload_on_upgrade_removal": "False",
+                    "on_property_change_behavior": "reapply_only_if_stopped"
                 },
                 "global_max_limit": 0.0,
                 "has_speech_code": "False",
@@ -14666,7 +16461,10 @@
                     "apply_to_future_units": "current_and_future_units",
                     "apply_to_squad_types": [],
                     "apply_to_target_type": "entity",
-                    "apply_to_unit_classes": []
+                    "apply_to_unit_classes": [],
+                    "undo_payload_if_disqualified_after_property_change": "True",
+                    "undo_payload_on_upgrade_removal": "False",
+                    "on_property_change_behavior": "reapply_only_if_stopped"
                 },
                 "global_max_limit": 0.0,
                 "has_speech_code": "False",

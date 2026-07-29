@@ -4401,7 +4401,7 @@
                             "ui_setfacing": {
                                 "instance_reference": ""
                             },
-                            "query_weapon_for_range_ui": "True",
+                            "query_weapon_for_range_ui": "False",
                             "squad_ignore_pathfinding": "False",
                             "placement_requirements": {
                                 "must_be_in_line_of_sight": "False",
@@ -5275,7 +5275,7 @@
                                 }
                             },
                             "ui_priority": 0.0,
-                            "minimap_icon_scale": 0.6,
+                            "minimap_icon_scale": 0.725,
                             "brief_text": {
                                 "locstring": {
                                     "name": "brief_text",
@@ -5323,8 +5323,8 @@
                             "decorator_height": 6.0,
                             "icon_name": "races/american/buildings/observation_post_us",
                             "minimap_color": "*",
-                            "minimap_icon": "common/resources/symbols/mm_point_secured",
-                            "symbol_icon_name": "common/resources/symbols/mm_point_secured",
+                            "minimap_icon": "common/resources/symbols/tm_point_secured",
+                            "symbol_icon_name": "races/common/symbols/hardpoint",
                             "targeting_and_bandbox_selection_priority": "low",
                             "selection_method": "terrain_obb_mesh",
                             "terrain_info_display_offset": {
@@ -9824,7 +9824,7 @@
                         "camouflage_detection_respects_fog_of_war_vision": "True",
                         "camouflage_detection_respects_shot_blockers": "True",
                         "detect_camouflage": {
-                            "tp_global": 50.0,
+                            "tp_global": 45.0,
                             "tp_mine": -1.0,
                             "tp_unit": -1.0,
                             "tp_democharge": -1.0
@@ -11175,6 +11175,16 @@
                                 "value": "custom_properties\\custom_float_property"
                             },
                             "id": "AMOUNT_MANPOWER",
+                            "value": 0.0
+                        }
+                    },
+                    {
+                        "custom_float_property": {
+                            "template_reference": {
+                                "name": "custom_float_property",
+                                "value": "custom_properties\\custom_float_property"
+                            },
+                            "id": "PARACHUTE_DETACH_DELAY",
                             "value": 0.0
                         }
                     }
@@ -13169,7 +13179,8 @@
                             "allow_allies_to_occupy": "False",
                             "has_internal_entrances": "False",
                             "ignore_stationable_combat_slot_markers": "False",
-                            "hold_selection_on_load_type": "hold"
+                            "hold_selection_on_load_type": "hold",
+                            "show_held_units_on_ui": "True"
                         }
                     },
                     {
@@ -13452,7 +13463,8 @@
                             "allow_allies_to_occupy": "False",
                             "has_internal_entrances": "True",
                             "ignore_stationable_combat_slot_markers": "False",
-                            "hold_selection_on_load_type": "hold"
+                            "hold_selection_on_load_type": "hold",
+                            "show_held_units_on_ui": "True"
                         }
                     },
                     {
@@ -13816,7 +13828,8 @@
                             "allow_allies_to_occupy": "False",
                             "has_internal_entrances": "True",
                             "ignore_stationable_combat_slot_markers": "False",
-                            "hold_selection_on_load_type": "hold"
+                            "hold_selection_on_load_type": "hold",
+                            "show_held_units_on_ui": "True"
                         }
                     },
                     {
@@ -15105,7 +15118,8 @@
                             "allow_allies_to_occupy": "False",
                             "has_internal_entrances": "False",
                             "ignore_stationable_combat_slot_markers": "False",
-                            "hold_selection_on_load_type": "hold"
+                            "hold_selection_on_load_type": "hold",
+                            "show_held_units_on_ui": "True"
                         }
                     }
                 ],

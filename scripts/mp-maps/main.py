@@ -22,7 +22,6 @@ import os
 import shutil
 import subprocess
 import sys
-import tempfile
 import time
 
 from lua_info_parser import LuaInfoParseError, parse_info_file
@@ -47,6 +46,12 @@ DEFAULT_ESSENCE_CLI = os.path.join(
 DEFAULT_LOCSTRING = os.path.join(PROJECT_ROOT_DIR, 'data', 'locales', 'en-locstring.json')
 DEFAULT_EBPS = os.path.join(PROJECT_ROOT_DIR, 'data', 'ebps.json')
 DEFAULT_OUTPUT = os.path.join(PROJECT_ROOT_DIR, 'data', 'mp-maps.json')
+
+# Unpack inside the project (gitignored), NOT into the system temp directory.
+# On GitHub Windows runners the workspace lives on the fast local SSD (D:) while the
+# system temp directory is on the slow OS disk (C:): unpacking this 1 GB archive to
+# C: took over 105 minutes and never finished, versus ~5 minutes on D:.
+DEFAULT_UNPACK_DIR = os.path.join(PROJECT_ROOT_DIR, 'scenarios')
 
 SCHEMA_VERSION = 1
 
@@ -82,7 +87,10 @@ def parse_args():
     )
     parser.add_argument(
         '--unpack-dir',
-        help='Where to unpack the archive (default: a temporary directory, removed afterwards)',
+        default=DEFAULT_UNPACK_DIR,
+        help='Where to unpack the archive; removed afterwards if the script created it '
+             f'(default: {DEFAULT_UNPACK_DIR}). Keep this on a fast local disk - see the '
+             'note in the source about GitHub runners.',
     )
     parser.add_argument(
         '--keep-unpacked',
@@ -126,15 +134,25 @@ def unpack_archive(sga_path, essence_cli, output_dir):
         )
 
     os.makedirs(output_dir, exist_ok=True)
-    print(f'## Unpacking {sga_path}')
-    print('   this takes a few minutes and needs a few GB of free disk space...')
+
+    archive_size = os.path.getsize(sga_path) / (1024 ** 3)
+    free = shutil.disk_usage(output_dir).free / (1024 ** 3)
+    print(f'## Unpacking {sga_path} ({archive_size:.1f} GB)')
+    print(f'   into {os.path.abspath(output_dir)} ({free:.1f} GB free)')
+    print('   expect roughly 4 GB of output and a few minutes; if this takes much longer, '
+          'the target is probably not on a fast local disk')
+
+    if free < 6:
+        print(f'   warning: only {free:.1f} GB free, the unpack needs about 4 GB')
 
     started = time.time()
     result = subprocess.run(
         [essence_cli, 'sga-unpack', sga_path, output_dir],
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
+        stdin=subprocess.DEVNULL,
         text=True,
+        errors='replace',
     )
 
     if result.returncode != 0:
@@ -379,6 +397,13 @@ def main():
     args = parse_args()
     started = time.time()
 
+    # CI pipes stdout, which makes Python block-buffer it: without this every line
+    # only shows up once the script exits, so a slow unpack looks like a silent hang.
+    try:
+        sys.stdout.reconfigure(line_buffering=True)
+    except AttributeError:
+        pass
+
     sga_path = args.sga
     if args.game_path:
         sga_path = os.path.join(args.game_path, SCENARIOS_ARCHIVE)
@@ -395,16 +420,16 @@ def main():
     ebps_index = load_ebps_index(args.ebps)
     print(f'   {len(ebps_index)} gameplay/hoff blueprints indexed')
 
-    temp_dir = None
+    # Only clean up a directory this run created, so pointing --unpack-dir at an
+    # existing folder never deletes someone's data.
+    created_unpack_dir = None
     try:
         if args.scenarios_dir:
             scenarios_root = args.scenarios_dir
         else:
-            unpack_dir = args.unpack_dir
-            if not unpack_dir:
-                temp_dir = tempfile.mkdtemp(prefix='coh3-scenarios-')
-                unpack_dir = temp_dir
-            scenarios_root = unpack_archive(sga_path, args.essence_cli, unpack_dir)
+            if not os.path.exists(args.unpack_dir):
+                created_unpack_dir = args.unpack_dir
+            scenarios_root = unpack_archive(sga_path, args.essence_cli, args.unpack_dir)
 
         scenarios_dir = find_scenarios_dir(scenarios_root)
         print('## Reading scenarios from ' + scenarios_dir)
@@ -413,9 +438,9 @@ def main():
             scenarios_dir, locstrings, ebps_index, args.dump_info_dir, args.include_test
         )
     finally:
-        if temp_dir and not args.keep_unpacked:
-            print('## Removing ' + temp_dir)
-            shutil.rmtree(temp_dir, ignore_errors=True)
+        if created_unpack_dir and not args.keep_unpacked:
+            print('## Removing ' + created_unpack_dir)
+            shutil.rmtree(created_unpack_dir, ignore_errors=True)
 
     for warning in warnings:
         print('   warning: ' + warning)

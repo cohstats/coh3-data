@@ -101,6 +101,13 @@ python scripts/mp-maps/main.py --game-path "D:\SteamLibrary\steamapps\common\Com
 Note that unpacking needs a few GB of free disk space and takes a few minutes; the archive is
 about 1 GB and AOEMods.Essence cannot extract single files from it.
 
+**The unpack target must be on a fast local disk.** It defaults to `scenarios/` inside the
+repository (gitignored, removed again afterwards) for exactly this reason. Do not point
+`--unpack-dir` at a system temp directory on a CI runner: on GitHub Windows runners the
+workspace is the fast local SSD (`D:`) while the system temp directory is on the OS disk
+(`C:`), and unpacking this archive to `C:` ran for over 105 minutes without finishing, versus
+about 5 minutes on `D:`.
+
 Useful options:
 - `--essence-cli <path>` - the tool defaults to `tools/AOEMods.Essence/AOEMods.Essence.CLI.exe`,
   so unzip `tools/AOEMods.Essence-0.7.0.zip` first (or point at your own copy).

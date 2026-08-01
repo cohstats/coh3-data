@@ -233,11 +233,22 @@ jobs:
       # (for data/ebps.json) - the map data is cross-referenced against both.
       - name: Extract Multiplayer Maps
         if: steps.check_exe.outputs.EXE_EXISTS == 'true'
+        # Unpacking ScenariosMP.sga takes about 5 minutes on the runner's workspace disk.
+        # A tighter timeout here means a hang fails this step instead of burning the
+        # whole job's 120 minute budget, which is what happened when the unpack target
+        # was on the slow C: drive.
+        timeout-minutes: 25
+        env:
+          PYTHONUNBUFFERED: '1'
         run: |
           Write-Host "Extracting multiplayer map data from ScenariosMP.sga..."
+          # --unpack-dir must stay inside the workspace (D:), which is the fast local
+          # disk on GitHub Windows runners. The system temp dir is on C: and unpacking
+          # there does not finish in any reasonable time.
           python .\scripts\mp-maps\main.py `
             --sga ".\steamcmd\coh3\anvil\archives\ScenariosMP.sga" `
             --essence-cli ".\tools\AOEMods.Essence\AOEMods.Essence.CLI.exe" `
+            --unpack-dir ".\scenarios" `
             --locstring ".\tools\COH3-SGA-Extraction\anvil.en.ucs" `
             --ebps ".\data\ebps.json" `
             --output ".\data\mp-maps.json" `
@@ -248,6 +259,15 @@ jobs:
             exit 1
           }
         shell: pwsh
+
+      - name: Clean up unpacked scenarios
+        if: always()
+        run: |
+          if (Test-Path ".\scenarios") {
+            Remove-Item -Path ".\scenarios" -Recurse -Force -ErrorAction SilentlyContinue
+          }
+        shell: pwsh
+        continue-on-error: true
 
 
       - name: Setup GitHub CLI

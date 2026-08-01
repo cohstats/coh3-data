@@ -63,6 +63,25 @@ as a silent stall inside Python. Same approach as
 The map step must run after the UCS step (for `anvil.en.ucs`) and after the ReferenceAttributes
 step (for `data/ebps.json`) - the map data is cross-referenced against both.
 
+### Do not download the whole game in that job
+
+The unpack step is very sensitive to how much was written to the runner's `D:` drive before it.
+When the workflow downloaded the full ~34 GB game with SteamCMD, the unpack of this 1.07 GB
+archive never finished inside a 20-25 minute timeout - and the 5 second cleanup afterwards showed
+it had barely written anything. `cohstats/coh3-cdn` hit the same wall and measured it on identical
+runners with the identical tool and archive:
+
+| coh3-cdn run | Download method | `sga-unpack` duration |
+| --- | --- | --- |
+| 2026-05-12 | SteamCMD, full ~34 GB game | 30m16s |
+| 2026-05-24 | DepotDownloader + filelist, ~1 GB | 6m29s |
+| 2026-07-29 | DepotDownloader + filelist, ~1 GB | 5m23s |
+
+The only change between the first two runs was the commit *"Try to migrate to depot downloader"*.
+This repo now does the same: [`.github/workflows/coh3-filelist.txt`](../../.github/workflows/coh3-filelist.txt)
+limits the download to `RelicCoH3.exe` and the four archives the workflow reads. Keep it that way -
+switching back to a full game download will make the unpack time out again.
+
 ## What is in the file
 
 Keyed by map id (the `.info` filename), plus a `__meta` block with counts. Cinematic and test

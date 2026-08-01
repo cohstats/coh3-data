@@ -35,7 +35,8 @@ You can use the GitHub workflow to automatically extract and process game data:
 4. Click "Run workflow"
 
 The workflow will:
-- Download the latest game files
+- Download only the game files it needs (about 1 GB) with DepotDownloader, using the file list in
+  [`.github/workflows/coh3-filelist.txt`](.github/workflows/coh3-filelist.txt) - not the whole ~34 GB game
 - Extract USC lang files from .sga using COH3-SGA-Extraction tool for all languages (en, fr, de, it, ja, ko, pl, pt-br, zh-hans, es, zh-hant, tr, cs)
 - Process UCS files into JSON using `scripts/ucs-to-json.py` which converts the raw localization data into structured JSON files
 - Extract and process ReferenceAttributes using AOEMods.Essence tool, which:

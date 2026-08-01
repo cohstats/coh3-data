@@ -23,54 +23,54 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Create SteamCMD directory
-        run: mkdir -p steamcmd
-        shell: bash
-
-      - name: Download SteamCMD
-        run: |
-          Invoke-WebRequest -Uri "https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip" -OutFile "steamcmd.zip"
-          Expand-Archive -Path "steamcmd.zip" -DestinationPath "steamcmd" -Force
-        shell: pwsh
-
       - name: Create game directory
         run: mkdir -p coh3
         shell: bash
 
-      - name: Initialize SteamCMD
+      - name: Download DepotDownloader
         run: |
-          .\steamcmd\steamcmd.exe +quit
+          Invoke-WebRequest -Uri "https://github.com/SteamRE/DepotDownloader/releases/latest/download/DepotDownloader-windows-x64.zip" -OutFile "DepotDownloader.zip"
+          Expand-Archive -Path "DepotDownloader.zip" -DestinationPath "DepotDownloader" -Force
         shell: pwsh
-        continue-on-error: true
-        timeout-minutes: 2
 
-      - name: Download COH3 using SteamCMD with direct command
+      # Only the handful of files this workflow actually reads, via
+      # .github/workflows/coh3-filelist.txt (~1 GB) instead of the whole ~34 GB game.
+      #
+      # This is not just about the download time. Writing 34 GB to the runner's D:
+      # drive leaves the subsequent AOEMods.Essence sga-unpack of ScenariosMP.sga
+      # crawling: cohstats/coh3-cdn measured 30m16s for that unpack while using
+      # SteamCMD, and 6m29s on the very next run after switching to DepotDownloader
+      # (same tool, same archive, same runner image). With SteamCMD this job kept
+      # hitting the unpack timeout.
+      - name: Download COH3 files using DepotDownloader
         id: direct_download
-        timeout-minutes: 60 # Add a timeout for this step
+        timeout-minutes: 30
         run: |
-          # Use direct command line approach with all parameters - force_install_dir BEFORE login
-          .\steamcmd\steamcmd.exe +@NoPromptForPassword 1 +@ShutdownOnFailedCommand 1 +force_install_dir ./coh3 +login $env:STEAM_USERNAME $env:STEAM_PASSWORD +app_update $env:COH3_APP_ID validate +quit
-        shell: pwsh
+          Write-Host "Downloading COH3 files listed in .github/workflows/coh3-filelist.txt..."
+          .\DepotDownloader\DepotDownloader.exe `
+            -app $env:COH3_APP_ID `
+            -username $env:STEAM_USERNAME `
+            -password $env:STEAM_PASSWORD `
+            -filelist ".github/workflows/coh3-filelist.txt" `
+            -dir "./coh3" `
+            -validate
 
-      - name: List SteamCMD logs
-        run: |
-          echo "SteamCMD logs:"
-          if (Test-Path "steamcmd\logs") {
-            Get-ChildItem -Path "steamcmd\logs" -Recurse | ForEach-Object {
-              echo "Log file: $($_.FullName)"
-              Get-Content $_.FullName
-            }
-          } else {
-            echo "No logs directory found"
+          if ($LASTEXITCODE -ne 0) {
+            Write-Host "ERROR: DepotDownloader failed with exit code $LASTEXITCODE"
+            exit 1
           }
+
+          Write-Host "Downloaded files:"
+          Get-ChildItem -Path ".\coh3" -Recurse -File |
+            Where-Object { $_.Extension -in '.sga', '.exe' } |
+            ForEach-Object { Write-Host "  $($_.FullName) ($([math]::Round($_.Length / 1MB)) MB)" }
         shell: pwsh
-        continue-on-error: true
 
       - name: Check RelicCoH3.exe
         id: check_exe
         run: |
           # Direct path to the executable
-          $exePath = ".\steamcmd\coh3\RelicCoH3.exe"
+          $exePath = ".\coh3\RelicCoH3.exe"
           if (Test-Path $exePath) {
             echo "EXE_EXISTS=true" >> $env:GITHUB_OUTPUT
             echo "RelicCoH3.exe found at the expected location"
@@ -84,7 +84,7 @@ jobs:
         id: get_version
         if: steps.check_exe.outputs.EXE_EXISTS == 'true'
         run: |
-          $exePath = ".\steamcmd\coh3\RelicCoH3.exe"
+          $exePath = ".\coh3\RelicCoH3.exe"
           $versionInfo = (Get-Item $exePath).VersionInfo
           $fileVersion = $versionInfo.FileVersion
           echo "COH3_VERSION=$fileVersion" >> $env:GITHUB_OUTPUT
@@ -129,7 +129,7 @@ jobs:
           )
           
           foreach ($locale in $localeFiles) {
-            $sgaPath = ".\steamcmd\coh3\anvil\archives\$($locale.sga)"
+            $sgaPath = ".\coh3\anvil\archives\$($locale.sga)"
             if (Test-Path $sgaPath) {
               $outDir = Split-Path $locale.out -Parent
               New-Item -Path $outDir -ItemType Directory -Force
@@ -219,7 +219,7 @@ jobs:
           
           # Unpack ReferenceAttributes.sga
           Write-Host "Unpacking ReferenceAttributes.sga..."
-          & ".\tools\AOEMods.Essence\AOEMods.Essence.CLI.exe" sga-unpack ".\steamcmd\coh3\anvil\archives\ReferenceAttributes.sga" "./xml/attrib"
+          & ".\tools\AOEMods.Essence\AOEMods.Essence.CLI.exe" sga-unpack ".\coh3\anvil\archives\ReferenceAttributes.sga" "./xml/attrib"
           
           # Run XML to JSON conversion
           Write-Host "Converting XML to JSON..."
@@ -238,7 +238,7 @@ jobs:
         if: steps.check_exe.outputs.EXE_EXISTS == 'true'
         timeout-minutes: 20
         run: |
-          $sgaPath = ".\steamcmd\coh3\anvil\archives\ScenariosMP.sga"
+          $sgaPath = ".\coh3\anvil\archives\ScenariosMP.sga"
           if (-not (Test-Path $sgaPath)) {
             Write-Host "ERROR: ScenariosMP.sga not found at $sgaPath"
             exit 1

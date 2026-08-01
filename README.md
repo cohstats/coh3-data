@@ -41,6 +41,7 @@ The workflow will:
 - Extract and process ReferenceAttributes using AOEMods.Essence tool, which:
   - Unpacks ReferenceAttributes.sga into XML files
   - Converts XML data to JSON using `scripts/xml-to-json/main.py`
+- Extract multiplayer map data from ScenariosMP.sga into `data/mp-maps.json` using `scripts/mp-maps/main.py`
 - Create a new branch with changes
 - Submit a Pull Request with the updates
 
@@ -83,6 +84,81 @@ The folder /data should always have the stable export of the data.
 
 ## Folder `chunked`
 Folder `chunked` has the big json files split to a smaller files for better manipulation.
+
+## Multiplayer maps (`data/mp-maps.json`)
+
+Map data comes from a different archive than the attributes: `...\Company of Heroes 3\anvil\archives\ScenariosMP.sga`.
+Every scenario in it ships a small `.info` file (a plain text Lua table) holding the map name,
+description, size, player slots and the position of every resource point.
+
+Generate it with one command - the script unpacks the archive with the same AOEMods.Essence
+CLI the workflow already uses, reads the `.info` files, then removes the unpacked data again:
+
+```
+python scripts/mp-maps/main.py --game-path "D:\SteamLibrary\steamapps\common\Company of Heroes 3"
+```
+
+Note that unpacking needs a few GB of free disk space and takes a few minutes; the archive is
+about 1 GB and AOEMods.Essence cannot extract single files from it.
+
+Useful options:
+- `--essence-cli <path>` - the tool defaults to `tools/AOEMods.Essence/AOEMods.Essence.CLI.exe`,
+  so unzip `tools/AOEMods.Essence-0.7.0.zip` first (or point at your own copy).
+- `--locstring <path>` - defaults to `data/locales/en-locstring.json`. **Generate the locale data
+  and `data/ebps.json` first**, otherwise map names will come out empty: a map added by the
+  latest patch has no locstring id in an older `en-locstring.json`. A raw `anvil.en.ucs` is
+  accepted here too.
+- `--scenarios-dir <path>` - skip unpacking and read an already unpacked scenarios folder.
+- `--unpack-dir <path>` / `--keep-unpacked` - keep the unpacked archive around instead of
+  using a temporary directory.
+- `--min-maps <n>` - the script fails if fewer than this many scenarios were found (default 60),
+  so a broken extraction cannot silently produce a near-empty data file.
+- `--include-test` - also export the cinematic/test scenarios that are normally skipped.
+
+### What is in the file
+
+Keyed by map id (the `.info` filename), plus a `__meta` block with counts. Cinematic and test
+scenarios (`*_video`, `*_defend_01`, `[TEST] ...`) are dropped; everything else is **tagged**
+rather than filtered, so nothing playable is lost:
+
+- `category` - `mp` for normal multiplayer maps, `hoff` for the co-op "Hold Off" maps.
+- `isLobbyVisible` - whether the game shows the map in the lobby.
+- `isCommunity` - community made map (`map_origin = 2`), also reflected in the `folder` path.
+
+Most consumers want `category == "mp" && isLobbyVisible`.
+
+Other fields worth knowing about:
+- `name` and `description` each hold `{ "locstring": "11266017", "en": "(4) El Alamein" }`.
+  Use `locstring` to look the text up in `data/locales/<code>-locstring.json` for other
+  languages - but note **`locstring` can be `null`**, because a few maps store a literal
+  English name in the `.info` instead of a locstring id. Always fall back to `en`.
+  (The `.info` files also carry a `ScenarioDescriptionlong` field, but the game writes the
+  same locstring id into it as into the short description on every scenario, so it is not
+  exported.)
+- `resources.counts` / `resources.countsByTier` - number of fuel, munitions, strategic
+  (manpower) and victory points, broken down by tier (`low`, `medium`, `high`, ...).
+- `resources.incomePerMinute` - total manpower/fuel/munitions per minute if one player held
+  every point on the map. Rates are read from `data/ebps.json`, not hardcoded, so they carry
+  the game's own rounding: a medium fuel point is stored as `0.1667`/second and therefore
+  reports `10.002`/minute rather than a clean `10`.
+- `points[].kind` - the point category, or `other` for a non territory entity (map markers,
+  co-op capture areas), or `unknown` if the `ebp` is missing from `data/ebps.json` - which
+  means a patch added something new and the script logs a warning about it.
+- `maxPlayers` / `teamLayout` / `teams` / `enabledSlots` describe the lobby. The `.info` files
+  hold a 16 entry per slot table, but it is not exported: on every regular multiplayer map it
+  is entirely derivable from `enabledSlots` (status is 0 for the first N slots and 1 after,
+  team alternates 0/1, flags are constant) and would be ~19% of this file for no information.
+  `aiSlots` keeps the one part that is not derivable - the co-op maps mark their enemy slots
+  with a third status, which is also why they have more spawn points than lobby seats.
+- `points` - every point with its `ebp` name, category, tier, footprint `shape`, `x`/`y`
+  position, income and capture time. Enough to draw a map overlay.
+- `mapSize` is the full world size from the `.info`. `playableAreaEstimate` is derived from the
+  bounding box of all points, so it is an estimate, not authored data.
+
+Minimap images are **not** exported. The `*_mm_generated.rrtex` / `*_mm_handmade.rrtex` files
+are listed per map in `minimapFiles`, but AOEMods.Essence 0.7.0 cannot decode them
+(`RRTexDataTman.unknown6 not 1`, then an unsupported compression error) - COH3 uses a newer
+RRTex variant.
 
 
 ## How to add/fix missing data not delivered by the Essence Editor

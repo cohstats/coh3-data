@@ -229,26 +229,52 @@ jobs:
         shell: pwsh
 
 
-      # Must run after both the UCS step (for anvil.en.ucs) and the step above
-      # (for data/ebps.json) - the map data is cross-referenced against both.
-      - name: Extract Multiplayer Maps
+      # The unpack is its own step so a slow or hanging sga-unpack is visible here
+      # instead of inside the Python script. The output directory must stay inside the
+      # workspace (D:), the fast local disk on GitHub Windows runners - unpacking to
+      # the system temp dir on C: ran for over 105 minutes without finishing.
+      - name: Unpack ScenariosMP.sga
+        id: unpack_scenarios
         if: steps.check_exe.outputs.EXE_EXISTS == 'true'
-        # Unpacking ScenariosMP.sga takes about 5 minutes on the runner's workspace disk.
-        # A tighter timeout here means a hang fails this step instead of burning the
-        # whole job's 120 minute budget, which is what happened when the unpack target
-        # was on the slow C: drive.
-        timeout-minutes: 25
+        timeout-minutes: 20
+        run: |
+          $sgaPath = ".\steamcmd\coh3\anvil\archives\ScenariosMP.sga"
+          if (-not (Test-Path $sgaPath)) {
+            Write-Host "ERROR: ScenariosMP.sga not found at $sgaPath"
+            exit 1
+          }
+
+          Write-Host "Unpacking $sgaPath ($([math]::Round((Get-Item $sgaPath).Length / 1GB, 2)) GB)..."
+          & ".\tools\AOEMods.Essence\AOEMods.Essence.CLI.exe" sga-unpack $sgaPath ".\scenarios"
+
+          if ($LASTEXITCODE -ne 0) {
+            Write-Host "ERROR: sga-unpack failed with exit code $LASTEXITCODE"
+            exit 1
+          }
+
+          $multiplayerPath = ".\scenarios\scenarios\multiplayer"
+          if (-not (Test-Path $multiplayerPath)) {
+            Write-Host "ERROR: $multiplayerPath not found after unpacking"
+            Get-ChildItem -Path ".\scenarios" -Depth 2 -ErrorAction SilentlyContinue | Select-Object FullName
+            exit 1
+          }
+
+          $mapFolders = Get-ChildItem -Path $multiplayerPath -Directory
+          Write-Host "Unpacked $($mapFolders.Count) map folders"
+        shell: pwsh
+
+      # Must run after the UCS step (for anvil.en.ucs), the ReferenceAttributes step
+      # (for data/ebps.json) and the unpack above - the map data is cross-referenced
+      # against all three.
+      - name: Extract Multiplayer Maps
+        if: steps.unpack_scenarios.outcome == 'success'
+        timeout-minutes: 10
         env:
           PYTHONUNBUFFERED: '1'
         run: |
-          Write-Host "Extracting multiplayer map data from ScenariosMP.sga..."
-          # --unpack-dir must stay inside the workspace (D:), which is the fast local
-          # disk on GitHub Windows runners. The system temp dir is on C: and unpacking
-          # there does not finish in any reasonable time.
+          Write-Host "Generating mp-maps.json from the unpacked scenarios..."
           python .\scripts\mp-maps\main.py `
-            --sga ".\steamcmd\coh3\anvil\archives\ScenariosMP.sga" `
-            --essence-cli ".\tools\AOEMods.Essence\AOEMods.Essence.CLI.exe" `
-            --unpack-dir ".\scenarios" `
+            --scenarios-dir ".\scenarios" `
             --locstring ".\tools\COH3-SGA-Extraction\anvil.en.ucs" `
             --ebps ".\data\ebps.json" `
             --output ".\data\mp-maps.json" `

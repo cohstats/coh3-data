@@ -84,6 +84,20 @@ You can verify the changes by running command `git diff`
 
 The folder /data should always have the stable export of the data. 
 
+## Releases
+
+This repo uses [Release Drafter](https://github.com/release-drafter/release-drafter) to keep a draft release
+up to date as PRs are merged into `master` (config: [`.github/release-drafter.yml`](.github/release-drafter.yml)).
+Merged PRs are auto-labeled (`data-update`, `bug`, `enhancement`, `chore`) based on title/branch patterns so
+they show up under the right section of the draft.
+
+When you're ready to cut a release:
+1. Go to the [Releases page](https://github.com/cohstats/coh3-data/releases) and open the draft.
+2. Edit the tag/title to follow this repo's convention: `vMAJOR.MINOR.PATCH-REVISION`, e.g. `v2.5.2-1` means
+   game patch `2.5.2`, data revision `1` (see the "Convention" section above) - Release Drafter doesn't know
+   about the game's version number, so this always needs a manual edit.
+3. Publish the release, which creates the matching git tag used by the [data download URL](#downloading-the-data).
+
 ## Folder `chunked`
 Folder `chunked` has the big json files split to a smaller files for better manipulation.
 

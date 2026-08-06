@@ -78,6 +78,21 @@ the filtered JSON files should be used to reduce file size.
 
 You can verify the changes by running command `git diff`
 
+### Final Stand (HOFF) perks
+
+The Final Stand perk trees are exported by a separate script, because they need a different
+output shape than the generic XML dump. It reads the same unpacked `xml/attrib` folder, so run
+it after the extraction above:
+
+```
+python scripts/xml-to-json/fs_perks.py
+```
+
+It writes `data/fs-perks.json` - the four faction perk trees, their tiers (with the
+`unlockThreshold`, i.e. how many perk points must be spent to unlock the tier) and every perk
+with its levels, perk point costs and modifiers. All text is kept as locstring IDs, resolve them
+against `data/locales/<lang>-locstring.json`.
+
 ## Changes after the patch
 1. Generate the data into folder `/data`
 2. Make an MR with the changes 

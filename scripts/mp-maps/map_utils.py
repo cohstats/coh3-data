@@ -20,6 +20,7 @@ import math
 import os
 
 from layer_parser import is_territory_entity
+from sector_geometry import build_sector_polygons, sector_at
 
 # Footprint variants. Same income, different physical size on the map, so they are
 # recorded separately but do not affect classification.
@@ -481,6 +482,80 @@ def team_layout(teams):
     if len(numeric) < 2:
         return None
     return 'v'.join(str(count) for _, count in numeric)
+
+
+def build_sectors(territory, points):
+    """
+    Builds the exported `sectors` list for one map.
+
+    Each sector carries its outline, the indices of the `points` it contains and the
+    ids of the sectors it borders, which is what a client needs to draw the territory
+    overlay and to reason about cut off chains.
+
+    `stats` reports points that landed outside every sector so the caller can warn:
+    on a well formed map every capturable point sits in a sector.
+    """
+    stats = {'pointsOutside': [], 'sectorsWithoutPoints': []}
+    if not territory:
+        return None, stats
+
+    polygons = build_sector_polygons(territory)
+    if not polygons:
+        return None, stats
+
+    members = {sector_id: [] for sector_id in polygons}
+    for index, point in enumerate(points):
+        if point.get('kind') == KIND_STARTING_POSITION:
+            continue
+        if not isinstance(point.get('x'), (int, float)):
+            continue
+
+        sector_id = sector_at(territory, point['x'], point['y'])
+        if sector_id in members:
+            members[sector_id].append(index)
+        elif point.get('kind') in CAPTURABLE_KINDS:
+            stats['pointsOutside'].append(point.get('ebp'))
+
+    records = territory['sectors']
+    half_width = territory['width'] / 2.0
+    half_height = territory['height'] / 2.0
+
+    sectors = []
+    for sector_id in sorted(polygons):
+        polygon = polygons[sector_id]
+        record = records[sector_id - 1] if sector_id - 1 < len(records) else {}
+        # Neighbours are dropped rather than kept dangling when the sector they name
+        # was too small to export.
+        neighbors = [
+            neighbor for neighbor in record.get('neighbors', []) if neighbor in polygons
+        ]
+
+        entry = {
+            'id': sector_id,
+            'isBase': bool(record.get('isBase')),
+            'neighbors': neighbors,
+            'points': members[sector_id],
+            'area': polygon['cellCount'],
+            'rings': polygon['rings'],
+        }
+
+        bbox = record.get('bbox')
+        if bbox:
+            min_x, max_x, min_y, max_y = bbox
+            entry['bounds'] = {
+                'minX': min_x - half_width,
+                # The stored box is inclusive of its last cell, which spans one unit.
+                'maxX': max_x + 1 - half_width,
+                'minY': min_y - half_height,
+                'maxY': max_y + 1 - half_height,
+            }
+
+        if not entry['points']:
+            stats['sectorsWithoutPoints'].append(sector_id)
+
+        sectors.append(entry)
+
+    return sectors, stats
 
 
 def playable_bounds(points):

@@ -132,6 +132,83 @@ Other fields worth knowing about:
   already reported as `playerSlot`.
 - `mapSize` is the full world size from the `.info`. `playableAreaEstimate` is derived from the
   bounding box of all points, so it is an estimate, not authored data.
+- `sectors` - the territory regions *between* the points, the areas the game shades in the
+  tactical map. Authored data, not inferred. See [Territory sectors](#territory-sectors).
+
+## Territory sectors
+
+Every scenario ships a `<map>_territory.override` next to its `.info`. It is a Relic Chunky
+holding the sector layout the designer painted in the editor: a `width x height` grid of
+`uint32` sector ids (`FOLDTCEL`), then one `FOLDSECT` record per sector with its bounding box,
+the ids of the sectors it borders and a flag marking the base (HQ) sectors. `territory_parser.py`
+documents the byte layout.
+
+The grid is always exactly `mapsize`, so **one cell is one world unit** and sector coordinates
+land in the same space as `points[].x/y` - no conversion between the two. That mapping was
+verified rather than assumed: all **198 starting positions** across the shipped maps fall inside
+a sector flagged as a base, and the bounding box recomputed from the cell grid matches the
+declared one **exactly on every map**.
+
+Each entry in `sectors` holds:
+
+- `id` - 1 based, and what `neighbors` refers to.
+- `neighbors` - the sectors this one borders. Enough to walk cut off chains.
+- `isBase` - a starting/HQ sector.
+- `points` - indices into this map's `points` array for the points inside this sector.
+- `area` - the sector's size in cells, which is also world units squared.
+- `bounds` - the authored bounding box, in world units.
+- `rings` - the outline as closed rings of `[x, y]` world coordinates. The first ring is the
+  outline; any further ring is a hole or a detached piece, so fill with the even-odd rule.
+  The closing vertex is implied, not repeated.
+
+Rendering one is a `<path>` per sector:
+
+```jsx
+const toPath = (rings) =>
+  rings.map((r) => 'M' + r.map(([x, y]) => `${x} ${y}`).join('L') + 'Z').join(' ')
+
+// viewBox is the map itself, so the polygons need no scaling
+<svg viewBox={`${-mapSize.width / 2} ${-mapSize.height / 2} ${mapSize.width} ${mapSize.height}`}>
+  {sectors.map((s) => <path key={s.id} d={toPath(s.rings)} fillRule="evenodd" />)}
+</svg>
+```
+
+Coordinates are the game's, in which `+y` is the same direction as in `points[].y`; whichever
+flip a minimap image needs applies equally to points and sectors.
+
+### Why the outlines are simplified, and why not per sector
+
+Traced verbatim the staircase along the cell edges costs ~205 vertices per sector - 197k
+vertices, 3.7 MB - and nearly all of it is quantisation, not authored detail: the layout is
+painted at one world unit, so a step never says anything the grid had not already rounded.
+Douglas-Peucker at a **1 unit tolerance** cuts that to ~36 vertices per sector while no edge can
+stray further from the authored border than the border's own resolution.
+
+Simplifying each sector on its own would not work. **77% of all sector boundary is shared with
+another sector**, and simplifying the same border twice, once from each side, gives two slightly
+different lines - hairline cracks and overlaps along three quarters of the overlay. So
+`sector_geometry.py` first cuts the boundary into *arcs* (a run of edges separating the same pair
+of sectors, cut again where more than two sectors meet), simplifies each arc once, and caches it
+under a direction independent key. Both sectors either side of a border reuse the identical
+vertex list and stay welded together.
+
+The result is checked by rasterising the exported polygons back onto the authored grid:
+**0.31% of cells differ, and every differing cell is within one cell of an authored border** -
+the simplification band, and nothing structural.
+
+Sectors of fewer than 4 cells are dropped (painting leaves the odd stray cell behind) and a
+neighbour naming a dropped sector is dropped with it, so `neighbors` never dangles.
+
+A few capturable points - usually a central victory point - sit exactly on the seam where
+sectors meet or on deliberately unpainted ground, and so appear in no sector's `points`. That is
+authored; the script lists the maps it happens on. Scenarios with no painted layout at all get
+`"sectors": null`.
+
+The `FOLDTCEL` grid carries a second, `uint8` 0/1 plane after the ids whose meaning is not
+identified. It is nearly a subset of the painted cells - on `twin_beach_2p_mkii` only 1,850 of
+its 64,999 set cells fall outside a sector - but it covers just under 60% of them, so it is not
+the sector mask, and it is not a plain rectangle either. It is parsed past (its presence is
+checked, since the chunk would not be the size we expect without it) and not exported.
 
 Minimap images are **not** exported. The `*_mm_generated.rrtex` / `*_mm_handmade.rrtex` files
 are listed per map in `minimapFiles`, but AOEMods.Essence 0.7.0 cannot decode them
@@ -184,5 +261,8 @@ Renames found on build 48837 (all logged as warnings when the script runs):
 - `lua_info_parser.py` - parser for the Lua table in a `.info` file.
 - `layer_parser.py` - reads the real resource point entities out of the scenario's
   `.layer` / `.scenario` Relic Chunky files.
+- `territory_parser.py` - reads the painted sector layout out of `*_territory.override`.
+- `sector_geometry.py` - turns the sector cell grid into the polygon outlines that are
+  exported, including the shared arc simplification.
 - `map_utils.py` - locstring/ebps lookups, the `.info`/scenario reconciliation, point
   classification and the per map summaries.

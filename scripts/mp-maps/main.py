@@ -20,14 +20,18 @@ See scripts/mp-maps/README.md for the full walkthrough.
 import argparse
 import json
 import os
+import re
 import shutil
+import struct
 import sys
 import time
 
 from layer_parser import collect_scenario_entities
 from lua_info_parser import LuaInfoParseError, parse_info_file
+from territory_parser import TerritoryParseError, parse_territory_file
 from map_utils import (
     KIND_STARTING_POSITION,
+    build_sectors,
     classify_point,
     load_ebps_index,
     load_locstrings,
@@ -165,8 +169,26 @@ def classify_scenario(relative_folder, header, name):
     return CATEGORY_MP
 
 
+def load_territory(scenario_dir, map_id):
+    """
+    Reads `<map_id>_territory.override`, the painted sector layout.
+
+    Returns (territory, warning). A missing file is not an error - the cinematic
+    scenarios and a few stubs ship none - but a malformed one is worth reporting
+    rather than silently exporting a map without its sectors.
+    """
+    path = os.path.join(scenario_dir, map_id + '_territory.override')
+    if not os.path.isfile(path):
+        return None, None
+
+    try:
+        return parse_territory_file(path), None
+    except (TerritoryParseError, OSError, struct.error) as error:
+        return None, f'{map_id}: could not read territory sectors: {error}'
+
+
 def build_map_entry(map_id, relative_folder, header, locstrings, ebps_index, unresolved,
-                    sibling_files, layer_entities):
+                    sibling_files, layer_entities, territory):
     name_id, name = resolve_locstring(header.get('scenarioname'), locstrings)
     # `ScenarioDescriptionlong` is not exported: the game writes the same locstring id
     # into it as into `ScenarioDescription` on every single scenario, so it is pure
@@ -190,6 +212,7 @@ def build_map_entry(map_id, relative_folder, header, locstrings, ebps_index, unr
     ]
     slot_counts, teams = summarize_slots(header)
     summary = summarize_points(points)
+    sectors, sector_stats = build_sectors(territory, points)
 
     map_size = header.get('mapsize')
     if isinstance(map_size, list) and len(map_size) >= 2:
@@ -226,6 +249,7 @@ def build_map_entry(map_id, relative_folder, header, locstrings, ebps_index, unr
         'totalSlots': slot_counts['total'],
         'resources': summary,
         'points': points,
+        'sectors': sectors,
         'minimapFiles': sorted(
             name for name in sibling_files if name.lower().endswith('.rrtex')
         ),
@@ -245,7 +269,7 @@ def build_map_entry(map_id, relative_folder, header, locstrings, ebps_index, unr
         if source in header:
             entry[target] = header[source]
 
-    return entry, reconcile_stats
+    return entry, reconcile_stats, sector_stats
 
 
 def describe_reconciliation(map_id, layer_entities, stats):
@@ -293,6 +317,8 @@ def build_mp_maps(scenarios_dir, locstrings, ebps_index, dump_info_dir=None,
     warnings = []
     skipped_test = []
     without_entities = []
+    without_sectors = []
+    points_outside = []
 
     for map_id, relative_folder, path in info_files:
         try:
@@ -304,9 +330,10 @@ def build_mp_maps(scenarios_dir, locstrings, ebps_index, dump_info_dir=None,
         scenario_dir = os.path.dirname(path)
         sibling_files = os.listdir(scenario_dir)
         layer_entities = collect_scenario_entities(scenario_dir, map_id)
-        entry, reconcile_stats = build_map_entry(
+        territory, territory_warning = load_territory(scenario_dir, map_id)
+        entry, reconcile_stats, sector_stats = build_map_entry(
             map_id, relative_folder, header, locstrings, ebps_index, unresolved,
-            sibling_files, layer_entities,
+            sibling_files, layer_entities, territory,
         )
 
         # Cinematic and defend/test scenarios are not playable maps.
@@ -319,6 +346,25 @@ def build_mp_maps(scenarios_dir, locstrings, ebps_index, dump_info_dir=None,
         warnings.extend(describe_reconciliation(map_id, layer_entities, reconcile_stats))
         if not layer_entities:
             without_entities.append(map_id)
+
+        if territory_warning:
+            warnings.append(territory_warning)
+        if entry['sectors'] is None:
+            without_sectors.append(map_id)
+        elif entry['category'] == CATEGORY_MP:
+            if sector_stats['pointsOutside']:
+                points_outside.append(
+                    f'{map_id} ({len(sector_stats["pointsOutside"])})'
+                )
+            if territory and entry['mapSize'] and (
+                territory['width'] != entry['mapSize']['width']
+                or territory['height'] != entry['mapSize']['height']
+            ):
+                warnings.append(
+                    f'{map_id}: sector grid {territory["width"]}x{territory["height"]} '
+                    f'does not match mapsize {entry["mapSize"]["width"]}x'
+                    f'{entry["mapSize"]["height"]}; sector coordinates may be offset'
+                )
 
         if map_id in maps:
             warnings.append(f'duplicate map id "{map_id}" ({entry["folder"]})')
@@ -353,6 +399,18 @@ def build_mp_maps(scenarios_dir, locstrings, ebps_index, dump_info_dir=None,
               'reconcile against, keeping their .info point list: '
               + ', '.join(without_entities))
 
+    if without_sectors:
+        print(f'## {len(without_sectors)} scenarios ship no painted territory sectors, '
+              'their "sectors" is null: ' + ', '.join(without_sectors))
+
+    if points_outside:
+        # Authored, not a defect: a victory point is often placed exactly on the seam
+        # where several sectors meet, or in a deliberately unpainted neutral area, so
+        # it belongs to no sector and appears in no sector's `points`.
+        print(f'## {len(points_outside)} scenarios have capturable points that sit on a '
+              'sector seam or on unpainted ground and so belong to no sector: '
+              + ', '.join(points_outside))
+
     return maps, unresolved, failures, warnings
 
 
@@ -368,16 +426,58 @@ def build_meta(maps):
         'categories': dict(sorted(categories.items())),
         'lobbyVisibleCount': sum(1 for entry in maps.values() if entry['isLobbyVisible']),
         'communityCount': sum(1 for entry in maps.values() if entry['isCommunity']),
+        'withSectorsCount': sum(1 for entry in maps.values() if entry.get('sectors')),
     }
+
+
+# Sector outlines are written one ring per line instead of one number per line.
+# Indented, the ~197k polygon vertices would take 3.7 MB and turn every regeneration
+# into a 240k line diff; collapsed, the same data is a few hundred KB and a ring that
+# did not change stays a single unchanged line.
+RING_PLACEHOLDER = '@@ring:{}@@'
+
+
+def _collapse_rings(node, collected):
+    """Swaps every polygon ring for a placeholder, returning the rewritten tree."""
+    if isinstance(node, dict):
+        out = {}
+        for key, value in node.items():
+            if key == 'rings' and isinstance(value, list):
+                rings = []
+                for ring in value:
+                    collected.append(json.dumps(ring, separators=(',', ':')))
+                    rings.append(RING_PLACEHOLDER.format(len(collected) - 1))
+                out[key] = rings
+            else:
+                out[key] = _collapse_rings(value, collected)
+        return out
+
+    if isinstance(node, list):
+        return [_collapse_rings(item, collected) for item in node]
+
+    return node
 
 
 def save_json(data, path):
     directory = os.path.dirname(os.path.abspath(path))
     os.makedirs(directory, exist_ok=True)
 
+    collected = []
+    text = json.dumps(
+        _collapse_rings(data, collected), indent=2, ensure_ascii=False, sort_keys=False
+    )
+
+    # One pass: replacing the placeholders one at a time would rescan the whole
+    # document per ring.
+    text = re.sub(
+        r'"@@ring:(\d+)@@"',
+        lambda match: collected[int(match.group(1))],
+        text,
+    )
+
     # newline='\n' keeps the file LF only on Windows, matching .gitattributes.
     with open(path, 'w', encoding='utf-8', newline='\n') as json_file:
-        json.dump(data, json_file, indent=2, ensure_ascii=False, sort_keys=False)
+        json_file.write(text)
         json_file.write('\n')
 
 

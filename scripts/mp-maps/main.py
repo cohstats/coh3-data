@@ -24,6 +24,7 @@ import shutil
 import sys
 import time
 
+from layer_parser import collect_scenario_entities
 from lua_info_parser import LuaInfoParseError, parse_info_file
 from map_utils import (
     KIND_STARTING_POSITION,
@@ -31,6 +32,7 @@ from map_utils import (
     load_ebps_index,
     load_locstrings,
     playable_bounds,
+    reconcile_with_layers,
     resolve_locstring,
     summarize_points,
     summarize_slots,
@@ -164,7 +166,7 @@ def classify_scenario(relative_folder, header, name):
 
 
 def build_map_entry(map_id, relative_folder, header, locstrings, ebps_index, unresolved,
-                    sibling_files):
+                    sibling_files, layer_entities):
     name_id, name = resolve_locstring(header.get('scenarioname'), locstrings)
     # `ScenarioDescriptionlong` is not exported: the game writes the same locstring id
     # into it as into `ScenarioDescription` on every single scenario, so it is pure
@@ -175,6 +177,8 @@ def build_map_entry(map_id, relative_folder, header, locstrings, ebps_index, unr
 
     raw_points = header.get('point_positions')
     raw_points = raw_points if isinstance(raw_points, list) else []
+    # The `.info` point list is a stale editor summary; the scenario's own entities win.
+    raw_points, reconcile_stats = reconcile_with_layers(raw_points, layer_entities)
     points = [
         classify_point(point, ebps_index, unresolved)
         for point in raw_points
@@ -241,7 +245,41 @@ def build_map_entry(map_id, relative_folder, header, locstrings, ebps_index, unr
         if source in header:
             entry[target] = header[source]
 
-    return entry
+    return entry, reconcile_stats
+
+
+def describe_reconciliation(map_id, layer_entities, stats):
+    """
+    Turns the reconciliation result for one scenario into log lines.
+
+    A rename is normal and is the whole point of reading the layers, so it is logged
+    as information. An unmatched point on either side is not: it means the `.info` and
+    the scenario disagree by more than a drifted position, and the exported point list
+    then still carries stale data for that point.
+    """
+    messages = []
+
+    if not layer_entities:
+        # Expected for the co-op maps, whose capture areas are not `DATAENTI` entities.
+        return messages
+
+    for old, new in stats['renamed']:
+        messages.append(f'{map_id}: .info says "{old}", scenario has "{new}"')
+
+    if stats['unmatchedInfo']:
+        messages.append(
+            f'{map_id}: {len(stats["unmatchedInfo"])} .info point(s) have no entity '
+            'in the scenario, keeping the .info values: '
+            + ', '.join(sorted(stats['unmatchedInfo']))
+        )
+    if stats['unmatchedLayer']:
+        messages.append(
+            f'{map_id}: {len(stats["unmatchedLayer"])} scenario entit(y/ies) are not '
+            'in the .info and are not exported: '
+            + ', '.join(sorted(stats['unmatchedLayer']))
+        )
+
+    return messages
 
 
 def build_mp_maps(scenarios_dir, locstrings, ebps_index, dump_info_dir=None,
@@ -254,6 +292,7 @@ def build_mp_maps(scenarios_dir, locstrings, ebps_index, dump_info_dir=None,
     failures = []
     warnings = []
     skipped_test = []
+    without_entities = []
 
     for map_id, relative_folder, path in info_files:
         try:
@@ -262,16 +301,24 @@ def build_mp_maps(scenarios_dir, locstrings, ebps_index, dump_info_dir=None,
             failures.append((path, str(error)))
             continue
 
-        sibling_files = os.listdir(os.path.dirname(path))
-        entry = build_map_entry(
+        scenario_dir = os.path.dirname(path)
+        sibling_files = os.listdir(scenario_dir)
+        layer_entities = collect_scenario_entities(scenario_dir, map_id)
+        entry, reconcile_stats = build_map_entry(
             map_id, relative_folder, header, locstrings, ebps_index, unresolved,
-            sibling_files,
+            sibling_files, layer_entities,
         )
 
         # Cinematic and defend/test scenarios are not playable maps.
         if entry['category'] == CATEGORY_TEST and not include_test:
             skipped_test.append(map_id)
             continue
+
+        # Reported after the skip: the `*_defend_01` scenarios ship a copy of another
+        # map's `.info` and would drown the real findings in noise.
+        warnings.extend(describe_reconciliation(map_id, layer_entities, reconcile_stats))
+        if not layer_entities:
+            without_entities.append(map_id)
 
         if map_id in maps:
             warnings.append(f'duplicate map id "{map_id}" ({entry["folder"]})')
@@ -298,6 +345,13 @@ def build_mp_maps(scenarios_dir, locstrings, ebps_index, dump_info_dir=None,
     if skipped_test:
         print(f'## Skipped {len(skipped_test)} test/cinematic scenarios: '
               + ', '.join(skipped_test))
+
+    if without_entities:
+        # Expected for the co-op maps - their capture areas are not `DATAENTI`
+        # entities - and for `hill_400_8p`, a stub with no points at all.
+        print(f'## {len(without_entities)} scenarios ship no territory entities to '
+              'reconcile against, keeping their .info point list: '
+              + ', '.join(without_entities))
 
     return maps, unresolved, failures, warnings
 

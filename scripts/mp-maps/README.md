@@ -4,6 +4,10 @@ Map data comes from a different archive than the attributes: `...\Company of Her
 Every scenario in it ships a small `.info` file (a plain text Lua table) holding the map name,
 description, size, player slots and the position of every resource point.
 
+**The `.info` point list is not trusted.** It is a summary the editor writes on save and it goes
+stale, so the resource points are re-read from the scenario's own binary data and the `.info`
+values are overwritten. See [Why the points come from the scenario, not the `.info`](#why-the-points-come-from-the-scenario-not-the-info).
+
 ## Generating the data
 
 This is a two step process. The script **does not unpack the archive** - unpacking is by far the
@@ -117,8 +121,15 @@ Other fields worth knowing about:
   team alternates 0/1, flags are constant) and would be ~19% of this file for no information.
   `aiSlots` keeps the one part that is not derivable - the co-op maps mark their enemy slots
   with a third status, which is also why they have more spawn points than lobby seats.
-- `points` - every point with its `ebp` name, category, tier, footprint `shape`, `x`/`y`
-  position, income and capture time. Enough to draw a map overlay.
+- `points` - every point with its `ebp` name, category, tier, `x`/`y` position, income and
+  capture time. Enough to draw a map overlay. The `ebp` and position of a resource point
+  come from the scenario itself, not from the `.info` - see
+  [below](#why-the-points-come-from-the-scenario-not-the-info).
+  `shape` is only present on the ~1/3 of points that use a non default footprint
+  (`_smaller`, `_larger`, `_square7x7`, `_square10x10`, `_rect15x20`); absent means the
+  default footprint. The `.info`'s `owner_id` is not exported at all: it is 0 on every
+  territory point, and on a starting position it only encodes the lobby slot, which is
+  already reported as `playerSlot`.
 - `mapSize` is the full world size from the `.info`. `playableAreaEstimate` is derived from the
   bounding box of all points, so it is an estimate, not authored data.
 
@@ -128,8 +139,50 @@ are listed per map in `minimapFiles`, but AOEMods.Essence 0.7.0 cannot decode th
 RRTex variant. Map images are handled by
 [`cohstats/coh3-cdn`](https://github.com/cohstats/coh3-cdn) instead.
 
+## Why the points come from the scenario, not the `.info`
+
+`point_positions` in a `.info` is written by the editor when the map is saved, and on a
+handful of maps it never caught up with the map itself. On `twin_beach_2p_mkii` it calls all
+five fuel points `territory_fuel_point_medium`, while the map really holds two medium ones
+(+10 fuel) and three `territory_fuel_point_extra_low` (+8) - which is what you see in game.
+
+The entities the game actually loads live in `DATAENTI` chunks of the scenario's Relic Chunky
+files, and `layer_parser.py` reads them from both places they can appear:
+
+- `<map>/<map>/*.layer` - one file per editor layer. Usually `territory.layer` or
+  `territorylayout.layer`, but the layer names are per map, so every `.layer` is scanned.
+- `<map>/<map>.scenario` - the main scenario chunky. `black_gold_8p` keeps every point here
+  and has no territory layer at all; `torrente_4p_mkiii` keeps most in a layer and three here.
+  Both sources are always read and merged, duplicates collapsed.
+
+`reconcile_with_layers()` in `map_utils.py` then matches each `.info` point to its entity by
+nearest position (greedy, within `MATCH_RADIUS` = 10 units) and takes the entity's `ebp_name`
+and coordinates. 66 of 78 scenarios match to the millimetre; the largest genuine drift is 8.2
+units on `across_the_rhine_6p`, and the closest two points on any shipped map are 25.9 units
+apart, so the radius cannot reach a neighbouring point. Anything that does not match on either
+side keeps its `.info` values and is logged as a warning.
+
+Starting positions are not touched - they only exist in the `.info`.
+
+Nine co-op `hoff_*` maps, the cinematic scenarios and the `hill_400_8p` stub ship no territory
+entities at all and fall back to the `.info` unchanged; the script lists them on stdout.
+
+Renames found on build 48837 (all logged as warnings when the script runs):
+
+| map | change | effect |
+| --- | --- | --- |
+| `twin_beach_2p_mkii` | 3 fuel `medium` -> `extra_low` | fuel 50.01 -> 44.0 /min |
+| `primosole_4p`, `primosole_6p` | 2 fuel `low` -> `medium`, 2 fuel `low` -> muni `low`, 1 muni `medium` -> fuel `low` | fuel 40.01 -> 45.01 /min |
+| `egletons_2p` | 1 fuel `medium` -> `extra_low`, 1 muni `medium` -> `high` | fuel 41.99 -> 39.99, muni 97.05 -> 103.07 /min |
+| `across_the_rhine_6p` | a fuel and a victory point swapped | positions only |
+| `desert_airfield_6p_mkii`, `bologna_2p` | wrong footprint variant (`_square10x10`, `_rect15x20`) | `shape` and position only |
+| `oasis_depot_8p` | 2 points up to 3.4 units off | position only |
+
 ## Files here
 
 - `main.py` - CLI entry point: walks the scenarios, builds and writes the JSON.
 - `lua_info_parser.py` - parser for the Lua table in a `.info` file.
-- `map_utils.py` - locstring/ebps lookups, point classification and the per map summaries.
+- `layer_parser.py` - reads the real resource point entities out of the scenario's
+  `.layer` / `.scenario` Relic Chunky files.
+- `map_utils.py` - locstring/ebps lookups, the `.info`/scenario reconciliation, point
+  classification and the per map summaries.

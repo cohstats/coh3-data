@@ -9,10 +9,17 @@ Two external inputs are cross-referenced:
 * `data/ebps.json` (or the smaller `data/chunked/ebps/*.json`), to look up what each
   `ebp_name` in `point_positions` actually is: which resource it provides, at what
   rate, and how long it takes to capture. Rates are never hardcoded here.
+
+The `.info` point list itself is not trusted: `reconcile_with_layers` replaces it with
+the entities `layer_parser` reads out of the scenario's Chunky files. See that module
+for why.
 """
 
 import json
+import math
 import os
+
+from layer_parser import is_territory_entity
 
 # Footprint variants. Same income, different physical size on the map, so they are
 # recorded separately but do not affect classification.
@@ -254,17 +261,92 @@ def _tier_from_name(base_name):
     return None
 
 
+# How far apart, in game units, a `.info` point and the layer entity it is taken to be
+# may sit. The `.info` positions are stale, not random: 66 of 78 scenarios match to the
+# millimetre and the largest genuine drift on a playable map is 8.2 units
+# (across_the_rhine_6p). 10 leaves headroom and still cannot reach a neighbouring point
+# - the closest two territory points on any shipped map are 25.9 units apart.
+MATCH_RADIUS = 10.0
+
+
+def reconcile_with_layers(raw_points, entities, radius=MATCH_RADIUS):
+    """
+    Replaces the `.info` territory points with the entities the game actually loads.
+
+    Returns `(points, stats)`. The `.info` order is kept and non territory entries
+    (starting positions, which only exist in the `.info`) pass through untouched.
+
+    Matching is greedy nearest pair: both lists describe the same map, so the shortest
+    remaining pair is always the same point, and each side is consumed once. A point
+    that finds no partner within `radius` keeps its `.info` values and is counted in
+    `stats` so the caller can warn about it.
+    """
+    points = [dict(point) if isinstance(point, dict) else point for point in raw_points]
+    stats = {
+        'matched': 0,
+        'renamed': [],
+        'moved': 0,
+        'unmatchedInfo': [],
+        'unmatchedLayer': [],
+    }
+
+    if not entities:
+        return points, stats
+
+    candidates = [
+        index for index, point in enumerate(points)
+        if isinstance(point, dict) and is_territory_entity(str(point.get('ebp_name', '')))
+        and isinstance(point.get('x'), (int, float))
+        and isinstance(point.get('y'), (int, float))
+    ]
+
+    pairs = []
+    for index in candidates:
+        point = points[index]
+        for entity_index, entity in enumerate(entities):
+            distance = math.dist((point['x'], point['y']), (entity['x'], entity['y']))
+            if distance <= radius:
+                pairs.append((distance, index, entity_index))
+    pairs.sort()
+
+    used_points = set()
+    used_entities = set()
+    for distance, index, entity_index in pairs:
+        if index in used_points or entity_index in used_entities:
+            continue
+        used_points.add(index)
+        used_entities.add(entity_index)
+
+        point = points[index]
+        entity = entities[entity_index]
+        if point['ebp_name'] != entity['ebp']:
+            stats['renamed'].append((point['ebp_name'], entity['ebp']))
+        if distance:
+            stats['moved'] += 1
+
+        point['ebp_name'] = entity['ebp']
+        point['x'] = entity['x']
+        point['y'] = entity['y']
+        stats['matched'] += 1
+
+    stats['unmatchedInfo'] = [points[index]['ebp_name'] for index in candidates
+                              if index not in used_points]
+    stats['unmatchedLayer'] = [entity['ebp'] for entity_index, entity in enumerate(entities)
+                               if entity_index not in used_entities]
+
+    return points, stats
+
+
 def classify_point(point, ebps_index, unresolved):
     """
     Turns one `point_positions` entry into the record written to the JSON.
     `unresolved` collects ebp names missing from ebps.json so the caller can report
     them instead of silently dropping information.
     """
+    # `owner_id` is not exported: it is 0 on every territory point, and on a starting
+    # position it only encodes the lobby slot, which is reported as `playerSlot`.
     ebp_name = point.get('ebp_name')
-    record = {
-        'ebp': ebp_name,
-        'ownerId': point.get('owner_id'),
-    }
+    record = {'ebp': ebp_name}
 
     for source, target in (('x', 'x'), ('y', 'y'), ('z', 'z')):
         if source in point:
@@ -296,7 +378,10 @@ def classify_point(point, ebps_index, unresolved):
         record['kind'] = KIND_UNKNOWN if descriptor is None else KIND_OTHER
     record['category'] = category
     record['tier'] = _tier_from_name(base_name)
-    record['shape'] = shape
+    # Only the ~1/3 of points that actually have a footprint variant carry `shape`;
+    # two thirds of them use the default footprint and would just be `"shape": null`.
+    if shape:
+        record['shape'] = shape
 
     if descriptor:
         income = descriptor.get('incomePerSecond') or {}

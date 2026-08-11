@@ -1510,17 +1510,31 @@
                 "iconAlternate": "hoff/perks/reduce_unit_training_time_1"
               },
               "maxLevel": 2,
-              "totalCost": 155,
+              "totalCost": 160,
               "levels": [
                 {
                   "level": 1,
-                  "cost": 90,
+                  "cost": 70,
                   "modifiers": [
                     {
                       "id": "PRODUCTION_SPEED_MODIFIER",
                       "type": "float",
                       "value": 2.0
-                    },
+                    }
+                  ],
+                  "ui": {
+                    "helpTextFormatter": {
+                      "formatter": "11273227",
+                      "arguments": [
+                        50
+                      ]
+                    }
+                  }
+                },
+                {
+                  "level": 2,
+                  "cost": 90,
+                  "modifiers": [
                     {
                       "id": "PRODUCTION_SPEED_MODIFIER",
                       "type": "float",
@@ -1531,27 +1545,7 @@
                     "helpTextFormatter": {
                       "formatter": "11273227",
                       "arguments": [
-                        50,
                         100
-                      ]
-                    }
-                  }
-                },
-                {
-                  "level": 2,
-                  "cost": 65,
-                  "modifiers": [
-                    {
-                      "id": "PRODUCTION_SPEED_MODIFIER",
-                      "type": "float",
-                      "value": 3.0
-                    }
-                  ],
-                  "ui": {
-                    "helpTextFormatter": {
-                      "formatter": "11273227",
-                      "arguments": [
-                        66
                       ]
                     }
                   }
@@ -4121,11 +4115,24 @@
                 "icon": "hoff/perks/extra_tech_pick_0",
                 "iconAlternate": "hoff/perks/extra_tech_pick_1"
               },
-              "maxLevel": 1,
-              "totalCost": 65,
+              "maxLevel": 2,
+              "totalCost": 115,
               "levels": [
                 {
                   "level": 1,
+                  "cost": 50,
+                  "modifiers": [],
+                  "ui": {
+                    "helpTextFormatter": {
+                      "formatter": "11273408",
+                      "arguments": [
+                        1
+                      ]
+                    }
+                  }
+                },
+                {
+                  "level": 2,
                   "cost": 65,
                   "modifiers": [],
                   "ui": {

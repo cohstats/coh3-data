@@ -84,6 +84,12 @@ def match_in_parent(parent, child):
 
     Inside a list an override carries List.ParentItemID pointing at the parent item,
     everywhere else an element is identified by its tag and name.
+
+    An item which only has a List.ItemID is a new one the child adds to the list (the
+    attribute editor marks those with List.ListAction="Append"). It must not fall through to
+    the tag / name match below - every item of a list shares the same tag and name, so the
+    new item would silently be merged into the first item of the parent list instead of being
+    appended to it, which loses a level of the perk.
     """
     parent_item_id = child.get("List.ParentItemID")
     if parent_item_id is not None:
@@ -92,10 +98,22 @@ def match_in_parent(parent, child):
                 return element
         return None
 
+    if child.get("List.ItemID") is not None:
+        return None
+
     for element in parent:
         if element.tag == child.tag and element.get("name") == child.get("name"):
             return element
     return None
+
+
+def removed_item_ids(child):
+    """Items of the parent list the child removes, eg. removedIds="123, -456"."""
+    removed = child.get("removedIds")
+    if not removed:
+        return set()
+
+    return {item_id.strip() for item_id in removed.split(",") if item_id.strip()}
 
 
 def merge_element(parent, child):
@@ -103,8 +121,15 @@ def merge_element(parent, child):
     merged = copy.deepcopy(parent)
 
     for key, value in child.attrib.items():
-        if key != "overrideParent":
+        if key not in ("overrideParent", "removedIds"):
             merged.set(key, value)
+
+    # A list drops the parent items it lists in removedIds, eg. the Afrikakorps unit training
+    # time perk replaces the second level of the generic perk with one of its own.
+    for item_id in removed_item_ids(child):
+        for element in list(merged):
+            if element.get("List.ItemID") == item_id:
+                merged.remove(element)
 
     for child_element in child:
         parent_element = match_in_parent(merged, child_element)

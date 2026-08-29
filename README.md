@@ -44,6 +44,8 @@ The workflow will:
   - Converts XML data to JSON using `scripts/xml-to-json/main.py`
 - Unpack ScenariosMP.sga and extract multiplayer map data into `data/mp-maps.json` using `scripts/mp-maps/main.py`
   (see [`scripts/mp-maps/README.md`](scripts/mp-maps/README.md))
+- Unpack Data.sga and extract the Final Stand technology choices into `data/fs-technologies.json`
+  using `scripts/xml-to-json/fs_technologies.py`
 - Create a new branch with changes
 - Submit a Pull Request with the updates
 
@@ -92,6 +94,47 @@ It writes `data/fs-perks.json` - the four faction perk trees, their tiers (with 
 `unlockThreshold`, i.e. how many perk points must be spent to unlock the tier) and every perk
 with its levels, perk point costs and modifiers. All text is kept as locstring IDs, resolve them
 against `data/locales/<lang>-locstring.json`.
+
+### Final Stand (HOFF) technology choices
+
+Perks are the meta progression between matches; the *technology choices* are the in-match one.
+At the start of the game and at the start of every wave the player is shown three technologies
+and picks one - a new unit for the Barracks, a new player ability, or a passive bonus.
+
+They are exported by `scripts/xml-to-json/fs_technologies.py` into `data/fs-technologies.json`.
+Unlike the other scripts this one needs a second archive: the pool of technologies is in
+`xml/attrib` (see above), but the *order of the twelve picks* is game script that lives in
+`Data.sga`, so that archive has to be unpacked first:
+
+```
+tools/AOEMods.Essence/AOEMods.Essence.CLI.exe sga-unpack "<game>/anvil/archives/Data.sga" ./game-data
+python scripts/xml-to-json/fs_technologies.py --game-data ./game-data
+```
+
+(`./game-data` is the default, so `--game-data` can be left out when you unpack it there. The
+folder is gitignored.)
+
+The file has two parts:
+
+- `meta` - how a match plays out. `choicesPerPick` (3), `maxOfferingCount` (a technology is only
+  ever offered once) and `picks`: the twelve picks in order, each with the `wave` it is handed
+  out at, the `category` it draws from (`unit` / `ability` / `passive`) and the `upgradeTypes`
+  (the "bucket") a technology must be tagged with to appear in it. Read from
+  `scar/hoff/hoff_technologymenu.scar` and `statemodel_schema/technologymenu`.
+- `races` - the pool per faction. Each `technologies` entry is one technology, already merged
+  from the faction list and the shared "common" list (`source` says which list it came from),
+  with its `category` / `buckets` / `tags` (the `upgrade_type` tags the picks match against),
+  the `thresholdMin` / `thresholdMax` pick indices it may be offered between, its `ui` text and
+  icon, all of its raw custom `properties`, and the `squad` / `ability` / `upgrade` it unlocks
+  for cross referencing `sbps.json` and `abilities.json`.
+
+Which of the matching technologies are actually shown is a weighted random draw, so the file
+describes what *can* appear at each pick, not a fixed tree. Two caveats worth handling on the
+consuming side: a technology with `"enabled": false` is in a faction list but not reachable in
+game (its `ui_menu` is not the technologies menu), and one with `"category": null` matches no
+bucket, so it can only ever turn up when the game tops up a menu it could not fill.
+
+All text is kept as locstring IDs, resolve them against `data/locales/<lang>-locstring.json`.
 
 ## Changes after the patch
 1. Generate the data into folder `/data`

@@ -143,6 +143,13 @@ holding the sector layout the designer painted in the editor: a `width x height`
 the ids of the sectors it borders and a flag marking the base (HQ) sectors. `territory_parser.py`
 documents the byte layout.
 
+Two versions of the format ship side by side - a map moves to the newer one only when Relic
+re-saves it. `FOLDTRTY` 3004 marks a base sector with a `uint16` flag; `FOLDTRTY` 3005 (first
+seen in game version 52061 on `ancona_railyard_2p`, `across_the_rhine_6p`,
+`foggia_airfield_winter_6p`, `mammut_8p`, `sedjenane_6p` and `turin_8p`) replaces it with a list
+of owner ids, non empty on the base sectors. All chunk versions moved up by one between the two,
+so the parser finds the per sector records by their place in the chunk tree, not by version.
+
 The grid is always exactly `mapsize`, so **one cell is one world unit** and sector coordinates
 land in the same space as `points[].x/y` - no conversion between the two. That mapping was
 verified rather than assumed: all **198 starting positions** across the shipped maps fall inside

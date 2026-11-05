@@ -33,7 +33,21 @@ Each per sector `DATADATA` body is:
     uint16   minX, maxX, minY, maxY   bounding box in grid cells
     uint32   neighbour count
     uint32   neighbour sector ids, 1 based, same numbering as the cell values
-    uint16   1 on a base (HQ) sector, 0 otherwise
+
+followed by a tail that depends on the format version. Two versions ship side by side,
+a map only moves to the newer one when Relic re-saves it in the editor:
+
+    FOLDTRTY 3004 (sector count chunk v3003, per sector chunk v3004)
+        uint16   1 on a base (HQ) sector, 0 otherwise
+
+    FOLDTRTY 3005 (sector count chunk v3004, per sector chunk v3005)
+        uint8    not identified, 0 on every shipped sector
+        uint32   owner count
+        uint32   owner ids - 1000, 1001, ... on the base sectors, none elsewhere
+
+The chunk versions moved up by one between the two, so the per sector records are found
+by where they sit (the `DATADATA` of a nested `FOLDSECT`), not by their version - the
+v3004 of the old per sector record is the v3004 of the new sector count chunk.
 
 The grid is always exactly `mapsize` from the `.info`, so one cell is one world unit,
 and a cell at grid (gx, gy) covers world x in `[gx - width/2, gx + 1 - width/2]` - the
@@ -49,21 +63,30 @@ CHUNK_HEADER_LENGTH = 20
 # "Relic Chunky\r\n\x1a\0" plus version and platform.
 CHUNKY_HEADER_LENGTH = 0x18
 
-# Chunk versions identify the two payloads we want; the surrounding folders are
-# walked generically so an added sibling chunk cannot shift our parsing.
+# The cell grid is identified by its version; the surrounding folders are walked
+# generically so an added sibling chunk cannot shift our parsing.
 CELL_GRID_VERSION = 3001
-SECTOR_VERSION = 3004
+
+# Per sector record versions, see the module docstring for the tail of each.
+SECTOR_RECORD_BASE_FLAG = 3004
+SECTOR_RECORD_OWNERS = 3005
+SECTOR_RECORD_VERSIONS = (SECTOR_RECORD_BASE_FLAG, SECTOR_RECORD_OWNERS)
 
 SECTOR_BBOX_LENGTH = 8
 MAX_REASONABLE_NEIGHBOURS = 256
+MAX_REASONABLE_OWNERS = 64
 
 
 class TerritoryParseError(ValueError):
     """Raised when a `*_territory.override` is not shaped the way we expect."""
 
 
-def _walk(data, start, end):
-    """Yields (name, version, size, body_offset) for every chunk in a range."""
+def _walk(data, start, end, parents=()):
+    """
+    Yields (chunk, version, size, body_offset, parents) for every chunk in a range,
+    where chunk is the 8 byte kind + name (eg. `b'DATADATA'`) and parents is the tuple
+    of (chunk, version) of the enclosing folders, outermost first.
+    """
     position = start
     while position + CHUNK_HEADER_LENGTH <= end:
         kind = data[position:position + 4]
@@ -78,14 +101,43 @@ def _walk(data, start, end):
         if body + size > end:
             return
 
-        yield name, version, size, body
+        yield kind + name, version, size, body, parents
         if kind == b'FOLD':
-            yield from _walk(data, body, body + size)
+            yield from _walk(data, body, body + size, parents + ((kind + name, version),))
         position = body + size
 
 
-def _parse_sector_record(data, body, size):
+def _is_sector_record(chunk, parents):
+    """
+    The per sector records are the `DATADATA` of a `FOLDSECT` nested in the `FOLDSECT`
+    that holds the sector count. The count itself is the `DATADATA` of the outer one.
+    """
+    return (
+        chunk == b'DATADATA'
+        and len(parents) >= 2
+        and parents[-1][0] == b'FOLDSECT'
+        and parents[-2][0] == b'FOLDSECT'
+    )
+
+
+def _parse_base_flag(tail, version):
+    """Whether a sector is a base, from the bytes after its neighbour list."""
+    if version == SECTOR_RECORD_BASE_FLAG:
+        return bool(struct.unpack('<H', tail[:2])[0]) if len(tail) >= 2 else False
+
+    # SECTOR_RECORD_OWNERS: uint8 (unknown), uint32 owner count, uint32 owner ids.
+    if len(tail) < 5:
+        raise TerritoryParseError(f'sector record tail too short ({len(tail)} bytes)')
+    owner_count = struct.unpack('<I', tail[1:5])[0]
+    if owner_count > MAX_REASONABLE_OWNERS or 5 + 4 * owner_count > len(tail):
+        raise TerritoryParseError(f'implausible sector owner count {owner_count}')
+    return owner_count > 0
+
+
+def _parse_sector_record(data, body, size, version):
     """One per sector `DATADATA`: bounding box, neighbours, base flag."""
+    if version not in SECTOR_RECORD_VERSIONS:
+        raise TerritoryParseError(f'unknown sector record version {version}')
     if size < SECTOR_BBOX_LENGTH + 4:
         raise TerritoryParseError('sector record too short')
 
@@ -100,13 +152,10 @@ def _parse_sector_record(data, body, size):
     neighbours = struct.unpack(f'<{count}I', data[cursor:cursor + 4 * count]) if count else ()
     cursor += 4 * count
 
-    tail = data[cursor:body + size]
-    is_base = bool(struct.unpack('<H', tail[:2])[0]) if len(tail) >= 2 else False
-
     return {
         'bbox': (min_x, max_x, min_y, max_y),
         'neighbors': sorted(neighbours),
-        'isBase': is_base,
+        'isBase': _parse_base_flag(data[cursor:body + size], version),
     }
 
 
@@ -124,13 +173,14 @@ def parse_territory_file(path):
 
     grid = None
     sectors = []
-    for name, version, size, body in _walk(data, CHUNKY_HEADER_LENGTH, len(data)):
-        if name != b'DATA':
+    for chunk, version, size, body, parents in _walk(data, CHUNKY_HEADER_LENGTH, len(data)):
+        if chunk != b'DATADATA':
             continue
-        if version == CELL_GRID_VERSION and grid is None:
-            grid = (body, size)
-        elif version == SECTOR_VERSION:
-            sectors.append(_parse_sector_record(data, body, size))
+        if parents and parents[-1][0] == b'FOLDTCEL' and version == CELL_GRID_VERSION:
+            if grid is None:
+                grid = (body, size)
+        elif _is_sector_record(chunk, parents):
+            sectors.append(_parse_sector_record(data, body, size, version))
 
     if grid is None:
         return None

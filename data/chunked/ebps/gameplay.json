@@ -3004,7 +3004,7 @@
                         "value": "ebpextensions\\sight_ext"
                     },
                     "detect_camouflage": {
-                        "tp_global": 60.0,
+                        "tp_global": 40.0,
                         "tp_mine": -1.0,
                         "tp_unit": -1.0,
                         "tp_democharge": -1.0
@@ -6819,7 +6819,7 @@
                         },
                         "blocking_box": {
                             "x": 6.5,
-                            "y": 500.0,
+                            "y": 25.0,
                             "z": 6.5
                         },
                         "is_shot_blocking": "True",
@@ -6867,7 +6867,7 @@
                         },
                         "blocking_box": {
                             "x": 6.5,
-                            "y": 500.0,
+                            "y": 25.0,
                             "z": 6.5
                         },
                         "is_shot_blocking": "True",
@@ -7726,6 +7726,150 @@
     },
     "projectiles": {
         "american": {
+            "artillery": {
+                "p_artillery_medium_priest_us": {
+                    "extensions": [
+                        {
+                            "exts": {
+                                "template_reference": {
+                                    "name": "exts",
+                                    "value": "ebpextensions\\explosion_ext"
+                                },
+                                "terrain_hit": {
+                                    "chance_splat_only": 0.0,
+                                    "cover_type": "tp_light_cover",
+                                    "deformation": {
+                                        "deform_decal_file": "deform_crater_a_hgt",
+                                        "limited": "True",
+                                        "random_rotation": "True",
+                                        "rotation": 1.0,
+                                        "vertical_scale": 0.015,
+                                        "deform_type": "tp_additive",
+                                        "splat_list": []
+                                    },
+                                    "radius_max": 3.0,
+                                    "radius_min": 2.75,
+                                    "splat_only_splat_seconds": 0.0,
+                                    "splat_only_splats": []
+                                },
+                                "area_over_time_option": {
+                                    "template_reference": {
+                                        "name": "area_over_time_option",
+                                        "value": "options\\none"
+                                    }
+                                },
+                                "on_detonate_action_tree": {
+                                    "template_reference": {
+                                        "name": "on_detonate_action_tree",
+                                        "value": "state_tree_reference_info"
+                                    },
+                                    "ActionTree_OpeningBranch": ""
+                                },
+                                "on_absorbed_action_tree": {
+                                    "template_reference": {
+                                        "name": "on_absorbed_action_tree",
+                                        "value": "state_tree_reference_info"
+                                    },
+                                    "ActionTree_OpeningBranch": ""
+                                },
+                                "can_hit_targets_outside_interactive_area": "False"
+                            }
+                        },
+                        {
+                            "exts": {
+                                "template_reference": {
+                                    "name": "exts",
+                                    "value": "ebpextensions\\projectile_ext"
+                                },
+                                "acceleration": 0.0,
+                                "artillery": {
+                                    "can_counter_barrage": "True",
+                                    "is_artillery": "True",
+                                    "is_target_only": "False",
+                                    "speed_distance_multiplier": 0.0,
+                                    "speed_increment": 0.75,
+                                    "firing_angle_type": "lowest_non_collide_angle",
+                                    "use_homing_when_no_blocker": "False",
+                                    "non_collide_start_angle": 5.0,
+                                    "non_collide_end_angle": 35.0,
+                                    "gravity_multiplier": 1.0
+                                },
+                                "collision_building_wall_panel_ignore": "False",
+                                "collision_type": {
+                                    "enum_projectile_collision": "tp_artillery"
+                                },
+                                "deathtimer": 0.0,
+                                "delay_detonate_time": 0.0,
+                                "delay_detonate_ui_enabled": "False",
+                                "launcher_marker": "fx_cannon_muzzle",
+                                "life_time_while_alive": 0.0,
+                                "rotation_speed": 0.0,
+                                "spawn_collision_fx": "False",
+                                "speed": 25.0,
+                                "collision_land_ignore": "True",
+                                "snap_above_terrain": "False",
+                                "collision_cover_shoot_through_ignore": "False",
+                                "can_be_disjointed": "True",
+                                "set_player_owner": "False",
+                                "trajectory_option": {
+                                    "template_reference": {
+                                        "name": "trajectory_option",
+                                        "value": "options\\none"
+                                    }
+                                },
+                                "collide_using_bounding_box": "False",
+                                "force_3d_collision": "True",
+                                "target_squad_if_homing": "False",
+                                "prediction": {
+                                    "use_predictive_aiming": "False",
+                                    "max_prediction_speed": 4.0
+                                },
+                                "use_target_entity_position": "False",
+                                "projectile_piercing_damage_option": {
+                                    "template_reference": {
+                                        "name": "projectile_piercing_damage_option",
+                                        "value": "options\\none"
+                                    }
+                                },
+                                "check_collision_against_target_entity_only": "False",
+                                "trajectory_preview_line_bag": {
+                                    "instance_reference": ""
+                                },
+                                "barrels_info": {
+                                    "markers": [],
+                                    "cur_barrel_parameter": "self_marker",
+                                    "send_marker_to_owner": "False"
+                                }
+                            }
+                        }
+                    ],
+                    "pbgid": 2174439.0,
+                    "parent_pbg": {
+                        "instance_reference": "ebps/gameplay/projectiles/parent/p_arc_shot_parent"
+                    },
+                    "custom_properties": {
+                        "template_reference": {
+                            "name": "custom_properties",
+                            "value": "custom_property_template"
+                        },
+                        "child_custom_properties": [],
+                        "custom_bool_properties": [],
+                        "custom_deferred_entity_state_tree_reference_properties": [],
+                        "custom_entity_state_tree_reference_properties": [],
+                        "custom_enum_properties": [],
+                        "custom_float_properties": [],
+                        "custom_global_state_tree_reference_properties": [],
+                        "custom_hash_key_properties": [],
+                        "custom_int32_properties": [],
+                        "custom_loc_string_properties": [],
+                        "custom_pbgid_properties": [],
+                        "custom_physical_state_tree_reference_properties": [],
+                        "custom_reflected_enum_properties": [],
+                        "custom_squad_state_tree_reference_properties": [],
+                        "custom_vector3f_properties": []
+                    }
+                }
+            },
             "gun": {
                 "p_gun_rifle_grenade_us": {
                     "extensions": [
@@ -19290,6 +19434,151 @@
                         "custom_vector3f_properties": []
                     }
                 },
+                "p_gun_shell_small_silenced": {
+                    "extensions": [
+                        {
+                            "exts": {
+                                "template_reference": {
+                                    "name": "exts",
+                                    "value": "ebpextensions\\explosion_ext"
+                                },
+                                "terrain_hit": {
+                                    "chance_splat_only": 0.0,
+                                    "cover_type": "",
+                                    "deformation": {
+                                        "deform_decal_file": "deform_crater_a_hgt",
+                                        "limited": "True",
+                                        "random_rotation": "True",
+                                        "rotation": 0.0,
+                                        "vertical_scale": 0.0,
+                                        "deform_type": "tp_additive",
+                                        "splat_list": []
+                                    },
+                                    "radius_max": 1.0,
+                                    "radius_min": 0.5,
+                                    "splat_only_splat_seconds": 0.0,
+                                    "splat_only_splats": []
+                                },
+                                "area_over_time_option": {
+                                    "template_reference": {
+                                        "name": "area_over_time_option",
+                                        "value": "options\\none"
+                                    }
+                                },
+                                "on_detonate_action_tree": {
+                                    "template_reference": {
+                                        "name": "on_detonate_action_tree",
+                                        "value": "state_tree_reference_info"
+                                    },
+                                    "ActionTree_OpeningBranch": ""
+                                },
+                                "on_absorbed_action_tree": {
+                                    "template_reference": {
+                                        "name": "on_absorbed_action_tree",
+                                        "value": "state_tree_reference_info"
+                                    },
+                                    "ActionTree_OpeningBranch": ""
+                                },
+                                "can_hit_targets_outside_interactive_area": "False"
+                            }
+                        },
+                        {
+                            "exts": {
+                                "template_reference": {
+                                    "name": "exts",
+                                    "value": "ebpextensions\\projectile_ext"
+                                },
+                                "acceleration": 0.0,
+                                "artillery": {
+                                    "can_counter_barrage": "False",
+                                    "is_artillery": "False",
+                                    "is_target_only": "False",
+                                    "speed_distance_multiplier": 0.2,
+                                    "speed_increment": 0.5,
+                                    "firing_angle_type": "low_angle",
+                                    "use_homing_when_no_blocker": "True",
+                                    "non_collide_start_angle": 10.0,
+                                    "non_collide_end_angle": 89.0,
+                                    "gravity_multiplier": 1.0
+                                },
+                                "collision_building_wall_panel_ignore": "False",
+                                "collision_type": {
+                                    "enum_projectile_collision": "tp_vehicle_collide"
+                                },
+                                "deathtimer": 0.0,
+                                "delay_detonate_time": 0.0,
+                                "delay_detonate_ui_enabled": "False",
+                                "launcher_marker": "fx_cannon_muzzle",
+                                "life_time_while_alive": 0.0,
+                                "rotation_speed": 10000.0,
+                                "spawn_collision_fx": "False",
+                                "speed": 120.0,
+                                "collision_land_ignore": "True",
+                                "snap_above_terrain": "False",
+                                "collision_cover_shoot_through_ignore": "False",
+                                "can_be_disjointed": "True",
+                                "set_player_owner": "False",
+                                "trajectory_option": {
+                                    "template_reference": {
+                                        "name": "trajectory_option",
+                                        "value": "options\\none"
+                                    }
+                                },
+                                "collide_using_bounding_box": "False",
+                                "force_3d_collision": "True",
+                                "target_squad_if_homing": "False",
+                                "prediction": {
+                                    "use_predictive_aiming": "False",
+                                    "max_prediction_speed": 4.0
+                                },
+                                "use_target_entity_position": "False",
+                                "projectile_piercing_damage_option": {
+                                    "template_reference": {
+                                        "name": "projectile_piercing_damage_option",
+                                        "value": "options\\ebpextensions\\projectileext\\projectile_piercing_damage_option"
+                                    },
+                                    "max_target_count_to_pierce": 5.0,
+                                    "apply_damage_falloff_per_target": "True",
+                                    "detonate_on_last_pierced_target": "False"
+                                },
+                                "check_collision_against_target_entity_only": "False",
+                                "trajectory_preview_line_bag": {
+                                    "instance_reference": ""
+                                },
+                                "barrels_info": {
+                                    "markers": [],
+                                    "cur_barrel_parameter": "self_marker",
+                                    "send_marker_to_owner": "False"
+                                }
+                            }
+                        }
+                    ],
+                    "pbgid": 2174953.0,
+                    "parent_pbg": {
+                        "instance_reference": "ebps/gameplay/projectiles/parent/p_straight_shot_parent"
+                    },
+                    "custom_properties": {
+                        "template_reference": {
+                            "name": "custom_properties",
+                            "value": "custom_property_template"
+                        },
+                        "child_custom_properties": [],
+                        "custom_bool_properties": [],
+                        "custom_deferred_entity_state_tree_reference_properties": [],
+                        "custom_entity_state_tree_reference_properties": [],
+                        "custom_enum_properties": [],
+                        "custom_float_properties": [],
+                        "custom_global_state_tree_reference_properties": [],
+                        "custom_hash_key_properties": [],
+                        "custom_int32_properties": [],
+                        "custom_loc_string_properties": [],
+                        "custom_pbgid_properties": [],
+                        "custom_physical_state_tree_reference_properties": [],
+                        "custom_reflected_enum_properties": [],
+                        "custom_squad_state_tree_reference_properties": [],
+                        "custom_vector3f_properties": []
+                    }
+                },
                 "p_gun_shell_small_smoke": {
                     "extensions": [
                         {
@@ -22805,6 +23094,351 @@
                         "custom_vector3f_properties": []
                     }
                 },
+                "p_throw_grenade_red_warning_smoke_victor_target_us": {
+                    "extensions": [
+                        {
+                            "exts": {
+                                "template_reference": {
+                                    "name": "exts",
+                                    "value": "ebpextensions\\explosion_ext"
+                                },
+                                "terrain_hit": {
+                                    "chance_splat_only": 0.0,
+                                    "cover_type": "",
+                                    "deformation": {
+                                        "deform_decal_file": "crater",
+                                        "limited": "True",
+                                        "random_rotation": "True",
+                                        "rotation": 0.0,
+                                        "vertical_scale": 0.0,
+                                        "deform_type": "tp_additive",
+                                        "splat_list": []
+                                    },
+                                    "radius_max": 3.25,
+                                    "radius_min": 3.0,
+                                    "splat_only_splat_seconds": 60.0,
+                                    "splat_only_splats": []
+                                },
+                                "area_over_time_option": {
+                                    "template_reference": {
+                                        "name": "area_over_time_option",
+                                        "value": "options\\none"
+                                    }
+                                },
+                                "on_detonate_action_tree": {
+                                    "template_reference": {
+                                        "name": "on_detonate_action_tree",
+                                        "value": "state_tree_reference_info"
+                                    },
+                                    "ActionTree_OpeningBranch": "brazilian_victor_target_us"
+                                },
+                                "on_absorbed_action_tree": {
+                                    "template_reference": {
+                                        "name": "on_absorbed_action_tree",
+                                        "value": "state_tree_reference_info"
+                                    },
+                                    "ActionTree_OpeningBranch": "brazilian_victor_target_us"
+                                },
+                                "can_hit_targets_outside_interactive_area": "False"
+                            }
+                        },
+                        {
+                            "exts": {
+                                "template_reference": {
+                                    "name": "exts",
+                                    "value": "ebpextensions\\projectile_ext"
+                                },
+                                "acceleration": 0.0,
+                                "artillery": {
+                                    "can_counter_barrage": "False",
+                                    "is_artillery": "True",
+                                    "is_target_only": "True",
+                                    "speed_distance_multiplier": 0.3,
+                                    "speed_increment": 0.5,
+                                    "firing_angle_type": "low_angle",
+                                    "use_homing_when_no_blocker": "False",
+                                    "non_collide_start_angle": 30.0,
+                                    "non_collide_end_angle": 60.0,
+                                    "gravity_multiplier": 1.0
+                                },
+                                "collision_building_wall_panel_ignore": "True",
+                                "collision_type": {
+                                    "enum_projectile_collision": "tp_throw"
+                                },
+                                "deathtimer": 0.0,
+                                "delay_detonate_time": 0.0,
+                                "delay_detonate_ui_enabled": "True",
+                                "launcher_marker": "loc_weapon_01_r",
+                                "life_time_while_alive": 0.0,
+                                "rotation_speed": 0.0,
+                                "spawn_collision_fx": "False",
+                                "speed": 0.0,
+                                "collision_land_ignore": "True",
+                                "snap_above_terrain": "False",
+                                "collision_cover_shoot_through_ignore": "False",
+                                "can_be_disjointed": "True",
+                                "set_player_owner": "False",
+                                "trajectory_option": {
+                                    "template_reference": {
+                                        "name": "trajectory_option",
+                                        "value": "options\\none"
+                                    }
+                                },
+                                "collide_using_bounding_box": "False",
+                                "force_3d_collision": "True",
+                                "target_squad_if_homing": "False",
+                                "prediction": {
+                                    "use_predictive_aiming": "False",
+                                    "max_prediction_speed": 4.0
+                                },
+                                "use_target_entity_position": "False",
+                                "projectile_piercing_damage_option": {
+                                    "template_reference": {
+                                        "name": "projectile_piercing_damage_option",
+                                        "value": "options\\none"
+                                    }
+                                },
+                                "check_collision_against_target_entity_only": "False",
+                                "trajectory_preview_line_bag": {
+                                    "instance_reference": "ui_line/tactical_pause/tactical_pause_attack"
+                                },
+                                "barrels_info": {
+                                    "markers": [],
+                                    "cur_barrel_parameter": "self_marker",
+                                    "send_marker_to_owner": "False"
+                                }
+                            }
+                        },
+                        {
+                            "exts": {
+                                "template_reference": {
+                                    "name": "exts",
+                                    "value": "ebpextensions\\ui_ext"
+                                },
+                                "ap_killed_kicker": "True",
+                                "ap_loss_kicker": "True",
+                                "decorator_height": -1.0,
+                                "extra_text_deprecated": "",
+                                "ghost_enable": "False",
+                                "help_text": {
+                                    "locstring": {
+                                        "name": "help_text",
+                                        "value": "0"
+                                    }
+                                },
+                                "hotkey_name": "",
+                                "icon_name": "",
+                                "kill_type": "",
+                                "minimap_color": "*",
+                                "minimap_enable": "False",
+                                "minimap_team_only": "False",
+                                "minimap_teamcolor": "False",
+                                "overlay_name": "",
+                                "reveal_for_decryption": "False",
+                                "screen_name": {
+                                    "locstring": {
+                                        "name": "screen_name",
+                                        "value": "0"
+                                    }
+                                },
+                                "selection_name": "",
+                                "selection_scale": 1.0,
+                                "selection_type": "no_select",
+                                "tooltip_txt": {
+                                    "locstring": {
+                                        "name": "tooltip_txt",
+                                        "value": "0"
+                                    }
+                                },
+                                "ui_priority": 0.0,
+                                "minimap_icon": "",
+                                "minimap_icon_scale": 1.0,
+                                "brief_text": {
+                                    "locstring": {
+                                        "name": "brief_text",
+                                        "value": "0"
+                                    }
+                                },
+                                "extra_text": {
+                                    "locstring": {
+                                        "name": "extra_text",
+                                        "value": "0"
+                                    }
+                                },
+                                "screen_name_short": {
+                                    "locstring": {
+                                        "name": "screen_name_short",
+                                        "value": "0"
+                                    }
+                                },
+                                "show_in_build_log": "True",
+                                "show_entity_appearance": "True",
+                                "screen_name_world": {
+                                    "locstring": {
+                                        "name": "screen_name_world",
+                                        "value": "0"
+                                    }
+                                },
+                                "help_text_world": {
+                                    "locstring": {
+                                        "name": "help_text_world",
+                                        "value": "0"
+                                    }
+                                },
+                                "extra_text_world": {
+                                    "locstring": {
+                                        "name": "extra_text_world",
+                                        "value": "0"
+                                    }
+                                },
+                                "map_rotation_type_override": "no_override",
+                                "symbol_icon_name": "",
+                                "occlusion_state": "can_be_occluded",
+                                "decorator_visibility": "visible",
+                                "skin_pack_override": "False",
+                                "skin_summer": "",
+                                "skin_winter": "",
+                                "targeting_and_bandbox_selection_priority": "lowest",
+                                "selection_method": "obb",
+                                "terrain_info_display_offset": {
+                                    "x": 0.0,
+                                    "y": 0.0
+                                },
+                                "decorator_ledger_key": "",
+                                "decorator_ledger_bar_style": {
+                                    "instance_reference": ""
+                                },
+                                "selection_name_squad_override": "",
+                                "selection_grouping_ledger_key": "",
+                                "debug_text": "",
+                                "selection_datatemplate": "",
+                                "use_construction_range_on_selection": "False",
+                                "use_combat_range_on_selection": "True",
+                                "is_armoured": "False",
+                                "decorator_data_template": "",
+                                "ui_combine_type": "intersection",
+                                "spotted_on_spawn": "False",
+                                "district_info": {
+                                    "instance_reference": ""
+                                },
+                                "force_facing_and_range_visual_to_center_on_entity": "False",
+                                "is_unique_to_race": "False",
+                                "kicker_offset": 0.0,
+                                "portrait_name": "",
+                                "selection_secondary_bounds_scale": {
+                                    "x": 1.0,
+                                    "y": 1.0,
+                                    "z": 1.0
+                                },
+                                "decorator": "EntityProjectile",
+                                "map_layer": 0.0,
+                                "map_mark": "",
+                                "portrait_icon": "",
+                                "ui_codex_info": {
+                                    "priority": 0.0,
+                                    "exclusive": "False",
+                                    "ui_position": {
+                                        "ui_position_column": -1.0,
+                                        "ui_position_row": -1.0
+                                    }
+                                },
+                                "custom_selection_obbs": [],
+                                "ui_extra_infos": [],
+                                "screen_name_visibility": "visible",
+                                "help_text_formatter": {
+                                    "template_reference": {
+                                        "name": "help_text_formatter",
+                                        "value": ""
+                                    }
+                                },
+                                "extra_text_formatter": {
+                                    "template_reference": {
+                                        "name": "extra_text_formatter",
+                                        "value": ""
+                                    }
+                                },
+                                "extra_text_world_formatter": {
+                                    "template_reference": {
+                                        "name": "extra_text_world_formatter",
+                                        "value": ""
+                                    }
+                                },
+                                "help_text_world_formatter": {
+                                    "template_reference": {
+                                        "name": "help_text_world_formatter",
+                                        "value": ""
+                                    }
+                                },
+                                "screen_name_formatter": {
+                                    "template_reference": {
+                                        "name": "screen_name_formatter",
+                                        "value": ""
+                                    }
+                                },
+                                "screen_name_short_formatter": {
+                                    "template_reference": {
+                                        "name": "screen_name_short_formatter",
+                                        "value": ""
+                                    }
+                                },
+                                "screen_name_world_formatter": {
+                                    "template_reference": {
+                                        "name": "screen_name_world_formatter",
+                                        "value": ""
+                                    }
+                                },
+                                "brief_text_formatter": {
+                                    "template_reference": {
+                                        "name": "brief_text_formatter",
+                                        "value": ""
+                                    }
+                                },
+                                "sound": "",
+                                "sound_alternative": "",
+                                "telemetry_name": "",
+                                "selectable_in_non_interactive_area": "True",
+                                "selection_obb_size": {
+                                    "x": 1.0,
+                                    "y": 1.0,
+                                    "z": 1.0
+                                },
+                                "target_selection_priority_by_owner": "none",
+                                "bandbox_selection_priority_override": "",
+                                "turn_in_place_distance": 0.0,
+                                "decorator_visibility_statetree_node_condition": "",
+                                "selection_ui_visibility_statetree_node_condition": "",
+                                "global_unit_control_row": -1.0,
+                                "global_unit_control_row_special": -1.0,
+                                "disable_UI_if_garrison_disabled": "True"
+                            }
+                        }
+                    ],
+                    "pbgid": 2174759.0,
+                    "parent_pbg": {
+                        "instance_reference": "ebps/gameplay/projectiles/parent/p_arc_shot_parent"
+                    },
+                    "custom_properties": {
+                        "template_reference": {
+                            "name": "custom_properties",
+                            "value": "custom_property_template"
+                        },
+                        "child_custom_properties": [],
+                        "custom_bool_properties": [],
+                        "custom_deferred_entity_state_tree_reference_properties": [],
+                        "custom_entity_state_tree_reference_properties": [],
+                        "custom_enum_properties": [],
+                        "custom_float_properties": [],
+                        "custom_global_state_tree_reference_properties": [],
+                        "custom_hash_key_properties": [],
+                        "custom_int32_properties": [],
+                        "custom_loc_string_properties": [],
+                        "custom_pbgid_properties": [],
+                        "custom_physical_state_tree_reference_properties": [],
+                        "custom_reflected_enum_properties": [],
+                        "custom_squad_state_tree_reference_properties": [],
+                        "custom_vector3f_properties": []
+                    }
+                },
                 "p_throw_grenade_smoke": {
                     "extensions": [
                         {
@@ -24961,7 +25595,7 @@
                                     "firing_angle_type": "lowest_non_collide_angle",
                                     "use_homing_when_no_blocker": "False",
                                     "non_collide_start_angle": 20.0,
-                                    "non_collide_end_angle": 60.0,
+                                    "non_collide_end_angle": 45.0,
                                     "gravity_multiplier": 1.0
                                 },
                                 "collision_building_wall_panel_ignore": "False",
@@ -25016,6 +25650,148 @@
                     "pbgid": 2140869.0,
                     "parent_pbg": {
                         "instance_reference": "ebps/gameplay/projectiles/parent/p_arc_shot_parent"
+                    },
+                    "custom_properties": {
+                        "template_reference": {
+                            "name": "custom_properties",
+                            "value": "custom_property_template"
+                        },
+                        "child_custom_properties": [],
+                        "custom_bool_properties": [],
+                        "custom_deferred_entity_state_tree_reference_properties": [],
+                        "custom_entity_state_tree_reference_properties": [],
+                        "custom_enum_properties": [],
+                        "custom_float_properties": [],
+                        "custom_global_state_tree_reference_properties": [],
+                        "custom_hash_key_properties": [],
+                        "custom_int32_properties": [],
+                        "custom_loc_string_properties": [],
+                        "custom_pbgid_properties": [],
+                        "custom_physical_state_tree_reference_properties": [],
+                        "custom_reflected_enum_properties": [],
+                        "custom_squad_state_tree_reference_properties": [],
+                        "custom_vector3f_properties": []
+                    }
+                },
+                "p_artillery_medium_88mm_ger": {
+                    "extensions": [
+                        {
+                            "exts": {
+                                "template_reference": {
+                                    "name": "exts",
+                                    "value": "ebpextensions\\explosion_ext"
+                                },
+                                "terrain_hit": {
+                                    "chance_splat_only": 0.0,
+                                    "cover_type": "tp_light_cover",
+                                    "deformation": {
+                                        "deform_decal_file": "deform_crater_a_hgt",
+                                        "limited": "True",
+                                        "random_rotation": "True",
+                                        "rotation": 0.0,
+                                        "vertical_scale": 0.015,
+                                        "deform_type": "tp_additive",
+                                        "splat_list": []
+                                    },
+                                    "radius_max": 3.0,
+                                    "radius_min": 2.75,
+                                    "splat_only_splat_seconds": 0.0,
+                                    "splat_only_splats": []
+                                },
+                                "area_over_time_option": {
+                                    "template_reference": {
+                                        "name": "area_over_time_option",
+                                        "value": "options\\none"
+                                    }
+                                },
+                                "on_detonate_action_tree": {
+                                    "template_reference": {
+                                        "name": "on_detonate_action_tree",
+                                        "value": "state_tree_reference_info"
+                                    },
+                                    "ActionTree_OpeningBranch": ""
+                                },
+                                "on_absorbed_action_tree": {
+                                    "template_reference": {
+                                        "name": "on_absorbed_action_tree",
+                                        "value": "state_tree_reference_info"
+                                    },
+                                    "ActionTree_OpeningBranch": ""
+                                },
+                                "can_hit_targets_outside_interactive_area": "False"
+                            }
+                        },
+                        {
+                            "exts": {
+                                "template_reference": {
+                                    "name": "exts",
+                                    "value": "ebpextensions\\projectile_ext"
+                                },
+                                "acceleration": 0.0,
+                                "artillery": {
+                                    "can_counter_barrage": "True",
+                                    "is_artillery": "True",
+                                    "is_target_only": "False",
+                                    "speed_distance_multiplier": 0.0,
+                                    "speed_increment": 0.5,
+                                    "firing_angle_type": "low_angle",
+                                    "use_homing_when_no_blocker": "False",
+                                    "non_collide_start_angle": 0.0,
+                                    "non_collide_end_angle": 45.0,
+                                    "gravity_multiplier": 1.5
+                                },
+                                "collision_building_wall_panel_ignore": "False",
+                                "collision_type": {
+                                    "enum_projectile_collision": "tp_artillery"
+                                },
+                                "deathtimer": 0.0,
+                                "delay_detonate_time": 0.0,
+                                "delay_detonate_ui_enabled": "False",
+                                "launcher_marker": "fx_cannon_muzzle",
+                                "life_time_while_alive": 0.0,
+                                "rotation_speed": 0.0,
+                                "spawn_collision_fx": "False",
+                                "speed": 35.0,
+                                "collision_land_ignore": "True",
+                                "snap_above_terrain": "False",
+                                "collision_cover_shoot_through_ignore": "False",
+                                "can_be_disjointed": "True",
+                                "set_player_owner": "False",
+                                "trajectory_option": {
+                                    "template_reference": {
+                                        "name": "trajectory_option",
+                                        "value": "options\\none"
+                                    }
+                                },
+                                "collide_using_bounding_box": "False",
+                                "force_3d_collision": "True",
+                                "target_squad_if_homing": "False",
+                                "prediction": {
+                                    "use_predictive_aiming": "False",
+                                    "max_prediction_speed": 4.0
+                                },
+                                "use_target_entity_position": "False",
+                                "projectile_piercing_damage_option": {
+                                    "template_reference": {
+                                        "name": "projectile_piercing_damage_option",
+                                        "value": "options\\none"
+                                    }
+                                },
+                                "check_collision_against_target_entity_only": "False",
+                                "trajectory_preview_line_bag": {
+                                    "instance_reference": ""
+                                },
+                                "barrels_info": {
+                                    "markers": [],
+                                    "cur_barrel_parameter": "self_marker",
+                                    "send_marker_to_owner": "False"
+                                }
+                            }
+                        }
+                    ],
+                    "pbgid": 2175565.0,
+                    "parent_pbg": {
+                        "instance_reference": "ebps/gameplay/projectiles/common/artillery/p_artillery_large"
                     },
                     "custom_properties": {
                         "template_reference": {
@@ -26934,6 +27710,367 @@
                         "custom_vector3f_properties": []
                     }
                 },
+                "p_artillery_vehicle_semovente": {
+                    "extensions": [
+                        {
+                            "exts": {
+                                "template_reference": {
+                                    "name": "exts",
+                                    "value": "ebpextensions\\explosion_ext"
+                                },
+                                "terrain_hit": {
+                                    "chance_splat_only": 0.0,
+                                    "cover_type": "tp_light_cover",
+                                    "deformation": {
+                                        "deform_decal_file": "deform_crater_a_hgt",
+                                        "limited": "True",
+                                        "random_rotation": "True",
+                                        "rotation": 1.0,
+                                        "vertical_scale": 0.015,
+                                        "deform_type": "tp_additive",
+                                        "splat_list": []
+                                    },
+                                    "radius_max": 2.75,
+                                    "radius_min": 2.5,
+                                    "splat_only_splat_seconds": 0.0,
+                                    "splat_only_splats": []
+                                },
+                                "area_over_time_option": {
+                                    "template_reference": {
+                                        "name": "area_over_time_option",
+                                        "value": "options\\none"
+                                    }
+                                },
+                                "on_detonate_action_tree": {
+                                    "template_reference": {
+                                        "name": "on_detonate_action_tree",
+                                        "value": "state_tree_reference_info"
+                                    },
+                                    "ActionTree_OpeningBranch": ""
+                                },
+                                "on_absorbed_action_tree": {
+                                    "template_reference": {
+                                        "name": "on_absorbed_action_tree",
+                                        "value": "state_tree_reference_info"
+                                    },
+                                    "ActionTree_OpeningBranch": ""
+                                },
+                                "can_hit_targets_outside_interactive_area": "False"
+                            }
+                        },
+                        {
+                            "exts": {
+                                "template_reference": {
+                                    "name": "exts",
+                                    "value": "ebpextensions\\projectile_ext"
+                                },
+                                "acceleration": 0.0,
+                                "artillery": {
+                                    "can_counter_barrage": "True",
+                                    "is_artillery": "True",
+                                    "is_target_only": "False",
+                                    "speed_distance_multiplier": 0.0,
+                                    "speed_increment": 0.5,
+                                    "firing_angle_type": "low_angle",
+                                    "use_homing_when_no_blocker": "False",
+                                    "non_collide_start_angle": 5.0,
+                                    "non_collide_end_angle": 18.0,
+                                    "gravity_multiplier": 1.0
+                                },
+                                "collision_building_wall_panel_ignore": "False",
+                                "collision_type": {
+                                    "enum_projectile_collision": "tp_artillery"
+                                },
+                                "deathtimer": 0.0,
+                                "delay_detonate_time": 0.0,
+                                "delay_detonate_ui_enabled": "False",
+                                "launcher_marker": "fx_cannon_muzzle",
+                                "life_time_while_alive": 0.0,
+                                "rotation_speed": 0.0,
+                                "spawn_collision_fx": "False",
+                                "speed": 0.0,
+                                "collision_land_ignore": "True",
+                                "snap_above_terrain": "False",
+                                "collision_cover_shoot_through_ignore": "False",
+                                "can_be_disjointed": "True",
+                                "set_player_owner": "False",
+                                "trajectory_option": {
+                                    "template_reference": {
+                                        "name": "trajectory_option",
+                                        "value": "options\\none"
+                                    }
+                                },
+                                "collide_using_bounding_box": "False",
+                                "force_3d_collision": "True",
+                                "target_squad_if_homing": "False",
+                                "prediction": {
+                                    "use_predictive_aiming": "False",
+                                    "max_prediction_speed": 4.0
+                                },
+                                "use_target_entity_position": "False",
+                                "projectile_piercing_damage_option": {
+                                    "template_reference": {
+                                        "name": "projectile_piercing_damage_option",
+                                        "value": "options\\none"
+                                    }
+                                },
+                                "check_collision_against_target_entity_only": "False",
+                                "trajectory_preview_line_bag": {
+                                    "instance_reference": ""
+                                },
+                                "barrels_info": {
+                                    "markers": [],
+                                    "cur_barrel_parameter": "self_marker",
+                                    "send_marker_to_owner": "False"
+                                }
+                            }
+                        }
+                    ],
+                    "pbgid": 2177590.0,
+                    "parent_pbg": {
+                        "instance_reference": "ebps/gameplay/projectiles/parent/p_arc_shot_parent"
+                    },
+                    "custom_properties": {
+                        "template_reference": {
+                            "name": "custom_properties",
+                            "value": "custom_property_template"
+                        },
+                        "child_custom_properties": [],
+                        "custom_bool_properties": [],
+                        "custom_deferred_entity_state_tree_reference_properties": [],
+                        "custom_entity_state_tree_reference_properties": [],
+                        "custom_enum_properties": [],
+                        "custom_float_properties": [],
+                        "custom_global_state_tree_reference_properties": [],
+                        "custom_hash_key_properties": [],
+                        "custom_int32_properties": [],
+                        "custom_loc_string_properties": [],
+                        "custom_pbgid_properties": [],
+                        "custom_physical_state_tree_reference_properties": [],
+                        "custom_reflected_enum_properties": [],
+                        "custom_squad_state_tree_reference_properties": [],
+                        "custom_vector3f_properties": []
+                    }
+                },
+                "p_crashing_plane_savoia_marchetti_sm82_ak": {
+                    "extensions": [
+                        {
+                            "exts": {
+                                "template_reference": {
+                                    "name": "exts",
+                                    "value": "ebpextensions\\explosion_ext"
+                                },
+                                "terrain_hit": {
+                                    "chance_splat_only": 0.0,
+                                    "cover_type": "tp_light_cover",
+                                    "deformation": {
+                                        "deform_decal_file": "deform_crater_plane_a_mrb_hgt",
+                                        "limited": "True",
+                                        "random_rotation": "False",
+                                        "rotation": 180.0,
+                                        "vertical_scale": 0.03,
+                                        "deform_type": "tp_additive",
+                                        "splat_list": []
+                                    },
+                                    "radius_max": 7.0,
+                                    "radius_min": 5.0,
+                                    "splat_only_splat_seconds": 0.0,
+                                    "splat_only_splats": []
+                                },
+                                "area_over_time_option": {
+                                    "template_reference": {
+                                        "name": "area_over_time_option",
+                                        "value": "options\\none"
+                                    }
+                                },
+                                "on_detonate_action_tree": {
+                                    "template_reference": {
+                                        "name": "on_detonate_action_tree",
+                                        "value": "state_tree_reference_info"
+                                    },
+                                    "ActionTree_OpeningBranch": "spawn_and_crash_plane\\library\\explode"
+                                },
+                                "on_absorbed_action_tree": {
+                                    "template_reference": {
+                                        "name": "on_absorbed_action_tree",
+                                        "value": "state_tree_reference_info"
+                                    },
+                                    "ActionTree_OpeningBranch": ""
+                                },
+                                "can_hit_targets_outside_interactive_area": "False"
+                            }
+                        },
+                        {
+                            "exts": {
+                                "template_reference": {
+                                    "name": "exts",
+                                    "value": "ebpextensions\\projectile_ext"
+                                },
+                                "acceleration": 1.0,
+                                "artillery": {
+                                    "can_counter_barrage": "True",
+                                    "is_artillery": "False",
+                                    "is_target_only": "False",
+                                    "speed_distance_multiplier": 0.1,
+                                    "speed_increment": 0.2,
+                                    "firing_angle_type": "low_angle",
+                                    "use_homing_when_no_blocker": "True",
+                                    "non_collide_start_angle": 60.0,
+                                    "non_collide_end_angle": 89.0,
+                                    "gravity_multiplier": 1.0
+                                },
+                                "collision_building_wall_panel_ignore": "False",
+                                "collision_type": {
+                                    "enum_projectile_collision": "tp_artillery"
+                                },
+                                "deathtimer": 0.0,
+                                "delay_detonate_time": 0.0,
+                                "delay_detonate_ui_enabled": "True",
+                                "launcher_marker": "fx_cannon_muzzle",
+                                "life_time_while_alive": 0.0,
+                                "rotation_speed": 0.0,
+                                "spawn_collision_fx": "False",
+                                "speed": 10.0,
+                                "collision_land_ignore": "True",
+                                "snap_above_terrain": "False",
+                                "collision_cover_shoot_through_ignore": "False",
+                                "can_be_disjointed": "True",
+                                "set_player_owner": "False",
+                                "trajectory_option": {
+                                    "template_reference": {
+                                        "name": "trajectory_option",
+                                        "value": "options\\ebpextensions\\projectileext\\projectile_trajectory_option"
+                                    },
+                                    "height_min": 0.0,
+                                    "height_max": 0.0,
+                                    "speed_min": 1.0,
+                                    "speed_max": 100.0,
+                                    "time_seconds": 0.0,
+                                    "interpolate_distance_min": 1.0,
+                                    "interpolate_distance_max": 1000.0,
+                                    "slope_aggression": 0.05,
+                                    "random_rotation_during_flight": [
+                                        {
+                                            "rotation_entry": {
+                                                "rotation_axis": {
+                                                    "template_reference": {
+                                                        "name": "rotation_axis",
+                                                        "value": "basic_data_types\\vector3"
+                                                    },
+                                                    "x": 0.1,
+                                                    "y": 0.0,
+                                                    "z": 0.1
+                                                },
+                                                "rotation_amount": 0.025
+                                            }
+                                        },
+                                        {
+                                            "rotation_entry": {
+                                                "rotation_axis": {
+                                                    "template_reference": {
+                                                        "name": "rotation_axis",
+                                                        "value": "basic_data_types\\vector3"
+                                                    },
+                                                    "x": 0.1,
+                                                    "y": 0.0,
+                                                    "z": 0.75
+                                                },
+                                                "rotation_amount": 0.05
+                                            }
+                                        },
+                                        {
+                                            "rotation_entry": {
+                                                "rotation_axis": {
+                                                    "template_reference": {
+                                                        "name": "rotation_axis",
+                                                        "value": "basic_data_types\\vector3"
+                                                    },
+                                                    "x": 0.0,
+                                                    "y": 0.15,
+                                                    "z": 0.35
+                                                },
+                                                "rotation_amount": 0.25
+                                            }
+                                        },
+                                        {
+                                            "rotation_entry": {
+                                                "rotation_axis": {
+                                                    "template_reference": {
+                                                        "name": "rotation_axis",
+                                                        "value": "basic_data_types\\vector3"
+                                                    },
+                                                    "x": 0.0,
+                                                    "y": 0.0,
+                                                    "z": -0.5
+                                                },
+                                                "rotation_amount": 0.45
+                                            }
+                                        }
+                                    ]
+                                },
+                                "collide_using_bounding_box": "False",
+                                "force_3d_collision": "True",
+                                "target_squad_if_homing": "False",
+                                "prediction": {
+                                    "use_predictive_aiming": "False",
+                                    "max_prediction_speed": 4.0
+                                },
+                                "use_target_entity_position": "False",
+                                "projectile_piercing_damage_option": {
+                                    "template_reference": {
+                                        "name": "projectile_piercing_damage_option",
+                                        "value": "options\\none"
+                                    }
+                                },
+                                "check_collision_against_target_entity_only": "False",
+                                "trajectory_preview_line_bag": {
+                                    "instance_reference": ""
+                                },
+                                "barrels_info": {
+                                    "markers": [],
+                                    "cur_barrel_parameter": "self_marker",
+                                    "send_marker_to_owner": "False"
+                                }
+                            }
+                        },
+                        {
+                            "exts": {
+                                "template_reference": {
+                                    "name": "exts",
+                                    "value": "ebpextensions\\weapon_ext"
+                                },
+                                "weapon": {
+                                    "instance_reference": "weapon/afrika_korps/special/crashing_plane_savoia_marchetti_sm82"
+                                }
+                            }
+                        }
+                    ],
+                    "pbgid": 2173358.0,
+                    "parent_pbg": {
+                        "instance_reference": ""
+                    },
+                    "custom_properties": {
+                        "template_reference": {
+                            "name": "custom_properties",
+                            "value": "custom_property_template"
+                        },
+                        "child_custom_properties": [],
+                        "custom_bool_properties": [],
+                        "custom_deferred_entity_state_tree_reference_properties": [],
+                        "custom_entity_state_tree_reference_properties": [],
+                        "custom_enum_properties": [],
+                        "custom_float_properties": [],
+                        "custom_global_state_tree_reference_properties": [],
+                        "custom_hash_key_properties": [],
+                        "custom_int32_properties": [],
+                        "custom_loc_string_properties": [],
+                        "custom_pbgid_properties": [],
+                        "custom_physical_state_tree_reference_properties": [],
+                        "custom_reflected_enum_properties": [],
+                        "custom_squad_state_tree_reference_properties": [],
+                        "custom_vector3f_properties": []
+                    }
+                },
                 "p_gun_20mm_quad": {
                     "extensions": [
                         {
@@ -27994,6 +29131,290 @@
                     "pbgid": 2151747.0,
                     "parent_pbg": {
                         "instance_reference": "ebps/gameplay/projectiles/common/special/p_artillery_propaganda"
+                    },
+                    "custom_properties": {
+                        "template_reference": {
+                            "name": "custom_properties",
+                            "value": "custom_property_template"
+                        },
+                        "child_custom_properties": [],
+                        "custom_bool_properties": [],
+                        "custom_deferred_entity_state_tree_reference_properties": [],
+                        "custom_entity_state_tree_reference_properties": [],
+                        "custom_enum_properties": [],
+                        "custom_float_properties": [],
+                        "custom_global_state_tree_reference_properties": [],
+                        "custom_hash_key_properties": [],
+                        "custom_int32_properties": [],
+                        "custom_loc_string_properties": [],
+                        "custom_pbgid_properties": [],
+                        "custom_physical_state_tree_reference_properties": [],
+                        "custom_reflected_enum_properties": [],
+                        "custom_squad_state_tree_reference_properties": [],
+                        "custom_vector3f_properties": []
+                    }
+                },
+                "p_italian_airborne_grand_counterttack_flare_ak": {
+                    "extensions": [
+                        {
+                            "exts": {
+                                "template_reference": {
+                                    "name": "exts",
+                                    "value": "ebpextensions\\explosion_ext"
+                                },
+                                "terrain_hit": {
+                                    "chance_splat_only": 0.0,
+                                    "cover_type": "",
+                                    "deformation": {
+                                        "deform_decal_file": "crater",
+                                        "limited": "True",
+                                        "random_rotation": "True",
+                                        "rotation": 0.0,
+                                        "vertical_scale": 0.0,
+                                        "deform_type": "tp_additive",
+                                        "splat_list": []
+                                    },
+                                    "radius_max": 3.25,
+                                    "radius_min": 3.0,
+                                    "splat_only_splat_seconds": 60.0,
+                                    "splat_only_splats": []
+                                },
+                                "area_over_time_option": {
+                                    "template_reference": {
+                                        "name": "area_over_time_option",
+                                        "value": "options\\none"
+                                    }
+                                },
+                                "on_detonate_action_tree": {
+                                    "template_reference": {
+                                        "name": "on_detonate_action_tree",
+                                        "value": "state_tree_reference_info"
+                                    },
+                                    "ActionTree_OpeningBranch": "italian_airborne_grand_counterattack_ak\\on_projectile\\spawn_flare"
+                                },
+                                "on_absorbed_action_tree": {
+                                    "template_reference": {
+                                        "name": "on_absorbed_action_tree",
+                                        "value": "state_tree_reference_info"
+                                    },
+                                    "ActionTree_OpeningBranch": "italian_airborne_grand_counterattack_ak\\on_projectile\\spawn_flare"
+                                },
+                                "can_hit_targets_outside_interactive_area": "False"
+                            }
+                        },
+                        {
+                            "exts": {
+                                "template_reference": {
+                                    "name": "exts",
+                                    "value": "ebpextensions\\projectile_ext"
+                                },
+                                "acceleration": 0.0,
+                                "artillery": {
+                                    "can_counter_barrage": "True",
+                                    "is_artillery": "False",
+                                    "is_target_only": "False",
+                                    "speed_distance_multiplier": 2.0,
+                                    "speed_increment": 2.0,
+                                    "firing_angle_type": "lowest_non_collide_angle",
+                                    "use_homing_when_no_blocker": "False",
+                                    "non_collide_start_angle": 0.0,
+                                    "non_collide_end_angle": 89.0,
+                                    "gravity_multiplier": 1.0
+                                },
+                                "collision_building_wall_panel_ignore": "False",
+                                "collision_type": {
+                                    "enum_projectile_collision": "tp_artillery"
+                                },
+                                "deathtimer": 0.0,
+                                "delay_detonate_time": 0.0,
+                                "delay_detonate_ui_enabled": "False",
+                                "launcher_marker": "fx_cannon_muzzle",
+                                "life_time_while_alive": 0.0,
+                                "rotation_speed": 0.0,
+                                "spawn_collision_fx": "False",
+                                "speed": 60.0,
+                                "collision_land_ignore": "True",
+                                "snap_above_terrain": "False",
+                                "collision_cover_shoot_through_ignore": "False",
+                                "can_be_disjointed": "True",
+                                "set_player_owner": "False",
+                                "trajectory_option": {
+                                    "template_reference": {
+                                        "name": "trajectory_option",
+                                        "value": "options\\none"
+                                    }
+                                },
+                                "collide_using_bounding_box": "False",
+                                "force_3d_collision": "True",
+                                "target_squad_if_homing": "False",
+                                "prediction": {
+                                    "use_predictive_aiming": "False",
+                                    "max_prediction_speed": 4.0
+                                },
+                                "use_target_entity_position": "False",
+                                "projectile_piercing_damage_option": {
+                                    "template_reference": {
+                                        "name": "projectile_piercing_damage_option",
+                                        "value": "options\\none"
+                                    }
+                                },
+                                "check_collision_against_target_entity_only": "False",
+                                "trajectory_preview_line_bag": {
+                                    "instance_reference": ""
+                                },
+                                "barrels_info": {
+                                    "markers": [],
+                                    "cur_barrel_parameter": "self_marker",
+                                    "send_marker_to_owner": "False"
+                                }
+                            }
+                        }
+                    ],
+                    "pbgid": 2174164.0,
+                    "parent_pbg": {
+                        "instance_reference": "ebps/gameplay/projectiles/parent/p_arc_shot_parent"
+                    },
+                    "custom_properties": {
+                        "template_reference": {
+                            "name": "custom_properties",
+                            "value": "custom_property_template"
+                        },
+                        "child_custom_properties": [],
+                        "custom_bool_properties": [],
+                        "custom_deferred_entity_state_tree_reference_properties": [],
+                        "custom_entity_state_tree_reference_properties": [],
+                        "custom_enum_properties": [],
+                        "custom_float_properties": [],
+                        "custom_global_state_tree_reference_properties": [],
+                        "custom_hash_key_properties": [],
+                        "custom_int32_properties": [],
+                        "custom_loc_string_properties": [],
+                        "custom_pbgid_properties": [],
+                        "custom_physical_state_tree_reference_properties": [],
+                        "custom_reflected_enum_properties": [],
+                        "custom_squad_state_tree_reference_properties": [],
+                        "custom_vector3f_properties": []
+                    }
+                },
+                "p_italian_airborne_linchpin_bonus_ak": {
+                    "extensions": [
+                        {
+                            "exts": {
+                                "template_reference": {
+                                    "name": "exts",
+                                    "value": "ebpextensions\\explosion_ext"
+                                },
+                                "terrain_hit": {
+                                    "chance_splat_only": 0.0,
+                                    "cover_type": "",
+                                    "deformation": {
+                                        "deform_decal_file": "crater",
+                                        "limited": "True",
+                                        "random_rotation": "True",
+                                        "rotation": 0.0,
+                                        "vertical_scale": 0.0,
+                                        "deform_type": "tp_additive",
+                                        "splat_list": []
+                                    },
+                                    "radius_max": 3.25,
+                                    "radius_min": 3.0,
+                                    "splat_only_splat_seconds": 60.0,
+                                    "splat_only_splats": []
+                                },
+                                "area_over_time_option": {
+                                    "template_reference": {
+                                        "name": "area_over_time_option",
+                                        "value": "options\\none"
+                                    }
+                                },
+                                "on_detonate_action_tree": {
+                                    "template_reference": {
+                                        "name": "on_detonate_action_tree",
+                                        "value": "state_tree_reference_info"
+                                    },
+                                    "ActionTree_OpeningBranch": "italian_airborne_linch_pin_ak\\on_projectile\\spawn_flare"
+                                },
+                                "on_absorbed_action_tree": {
+                                    "template_reference": {
+                                        "name": "on_absorbed_action_tree",
+                                        "value": "state_tree_reference_info"
+                                    },
+                                    "ActionTree_OpeningBranch": "italian_airborne_linch_pin_ak\\on_projectile\\spawn_flare"
+                                },
+                                "can_hit_targets_outside_interactive_area": "False"
+                            }
+                        },
+                        {
+                            "exts": {
+                                "template_reference": {
+                                    "name": "exts",
+                                    "value": "ebpextensions\\projectile_ext"
+                                },
+                                "acceleration": 0.0,
+                                "artillery": {
+                                    "can_counter_barrage": "True",
+                                    "is_artillery": "False",
+                                    "is_target_only": "False",
+                                    "speed_distance_multiplier": 2.0,
+                                    "speed_increment": 2.0,
+                                    "firing_angle_type": "lowest_non_collide_angle",
+                                    "use_homing_when_no_blocker": "False",
+                                    "non_collide_start_angle": 0.0,
+                                    "non_collide_end_angle": 89.0,
+                                    "gravity_multiplier": 1.0
+                                },
+                                "collision_building_wall_panel_ignore": "False",
+                                "collision_type": {
+                                    "enum_projectile_collision": "tp_artillery"
+                                },
+                                "deathtimer": 0.0,
+                                "delay_detonate_time": 0.0,
+                                "delay_detonate_ui_enabled": "False",
+                                "launcher_marker": "fx_cannon_muzzle",
+                                "life_time_while_alive": 0.0,
+                                "rotation_speed": 0.0,
+                                "spawn_collision_fx": "False",
+                                "speed": 60.0,
+                                "collision_land_ignore": "True",
+                                "snap_above_terrain": "False",
+                                "collision_cover_shoot_through_ignore": "False",
+                                "can_be_disjointed": "True",
+                                "set_player_owner": "False",
+                                "trajectory_option": {
+                                    "template_reference": {
+                                        "name": "trajectory_option",
+                                        "value": "options\\none"
+                                    }
+                                },
+                                "collide_using_bounding_box": "False",
+                                "force_3d_collision": "True",
+                                "target_squad_if_homing": "False",
+                                "prediction": {
+                                    "use_predictive_aiming": "False",
+                                    "max_prediction_speed": 4.0
+                                },
+                                "use_target_entity_position": "False",
+                                "projectile_piercing_damage_option": {
+                                    "template_reference": {
+                                        "name": "projectile_piercing_damage_option",
+                                        "value": "options\\none"
+                                    }
+                                },
+                                "check_collision_against_target_entity_only": "False",
+                                "trajectory_preview_line_bag": {
+                                    "instance_reference": ""
+                                },
+                                "barrels_info": {
+                                    "markers": [],
+                                    "cur_barrel_parameter": "self_marker",
+                                    "send_marker_to_owner": "False"
+                                }
+                            }
+                        }
+                    ],
+                    "pbgid": 2173494.0,
+                    "parent_pbg": {
+                        "instance_reference": "ebps/gameplay/projectiles/parent/p_arc_shot_parent"
                     },
                     "custom_properties": {
                         "template_reference": {
@@ -36742,6 +38163,148 @@
                         "custom_vector3f_properties": []
                     }
                 },
+                "p_royal_engineers_clearing_operation_artillery_flare_bonus_uk": {
+                    "extensions": [
+                        {
+                            "exts": {
+                                "template_reference": {
+                                    "name": "exts",
+                                    "value": "ebpextensions\\explosion_ext"
+                                },
+                                "terrain_hit": {
+                                    "chance_splat_only": 0.0,
+                                    "cover_type": "",
+                                    "deformation": {
+                                        "deform_decal_file": "crater",
+                                        "limited": "True",
+                                        "random_rotation": "True",
+                                        "rotation": 0.0,
+                                        "vertical_scale": 0.0,
+                                        "deform_type": "tp_additive",
+                                        "splat_list": []
+                                    },
+                                    "radius_max": 3.25,
+                                    "radius_min": 3.0,
+                                    "splat_only_splat_seconds": 60.0,
+                                    "splat_only_splats": []
+                                },
+                                "area_over_time_option": {
+                                    "template_reference": {
+                                        "name": "area_over_time_option",
+                                        "value": "options\\none"
+                                    }
+                                },
+                                "on_detonate_action_tree": {
+                                    "template_reference": {
+                                        "name": "on_detonate_action_tree",
+                                        "value": "state_tree_reference_info"
+                                    },
+                                    "ActionTree_OpeningBranch": "royal_engineers_clearing_operation_uk"
+                                },
+                                "on_absorbed_action_tree": {
+                                    "template_reference": {
+                                        "name": "on_absorbed_action_tree",
+                                        "value": "state_tree_reference_info"
+                                    },
+                                    "ActionTree_OpeningBranch": "royal_engineers_clearing_operation_uk"
+                                },
+                                "can_hit_targets_outside_interactive_area": "False"
+                            }
+                        },
+                        {
+                            "exts": {
+                                "template_reference": {
+                                    "name": "exts",
+                                    "value": "ebpextensions\\projectile_ext"
+                                },
+                                "acceleration": 0.0,
+                                "artillery": {
+                                    "can_counter_barrage": "True",
+                                    "is_artillery": "False",
+                                    "is_target_only": "False",
+                                    "speed_distance_multiplier": 2.0,
+                                    "speed_increment": 2.0,
+                                    "firing_angle_type": "lowest_non_collide_angle",
+                                    "use_homing_when_no_blocker": "False",
+                                    "non_collide_start_angle": 0.0,
+                                    "non_collide_end_angle": 89.0,
+                                    "gravity_multiplier": 1.0
+                                },
+                                "collision_building_wall_panel_ignore": "False",
+                                "collision_type": {
+                                    "enum_projectile_collision": "tp_artillery"
+                                },
+                                "deathtimer": 0.0,
+                                "delay_detonate_time": 0.0,
+                                "delay_detonate_ui_enabled": "False",
+                                "launcher_marker": "fx_cannon_muzzle",
+                                "life_time_while_alive": 0.0,
+                                "rotation_speed": 0.0,
+                                "spawn_collision_fx": "False",
+                                "speed": 60.0,
+                                "collision_land_ignore": "True",
+                                "snap_above_terrain": "False",
+                                "collision_cover_shoot_through_ignore": "False",
+                                "can_be_disjointed": "True",
+                                "set_player_owner": "False",
+                                "trajectory_option": {
+                                    "template_reference": {
+                                        "name": "trajectory_option",
+                                        "value": "options\\none"
+                                    }
+                                },
+                                "collide_using_bounding_box": "False",
+                                "force_3d_collision": "True",
+                                "target_squad_if_homing": "False",
+                                "prediction": {
+                                    "use_predictive_aiming": "False",
+                                    "max_prediction_speed": 4.0
+                                },
+                                "use_target_entity_position": "False",
+                                "projectile_piercing_damage_option": {
+                                    "template_reference": {
+                                        "name": "projectile_piercing_damage_option",
+                                        "value": "options\\none"
+                                    }
+                                },
+                                "check_collision_against_target_entity_only": "False",
+                                "trajectory_preview_line_bag": {
+                                    "instance_reference": ""
+                                },
+                                "barrels_info": {
+                                    "markers": [],
+                                    "cur_barrel_parameter": "self_marker",
+                                    "send_marker_to_owner": "False"
+                                }
+                            }
+                        }
+                    ],
+                    "pbgid": 2172321.0,
+                    "parent_pbg": {
+                        "instance_reference": "ebps/gameplay/projectiles/parent/p_arc_shot_parent"
+                    },
+                    "custom_properties": {
+                        "template_reference": {
+                            "name": "custom_properties",
+                            "value": "custom_property_template"
+                        },
+                        "child_custom_properties": [],
+                        "custom_bool_properties": [],
+                        "custom_deferred_entity_state_tree_reference_properties": [],
+                        "custom_entity_state_tree_reference_properties": [],
+                        "custom_enum_properties": [],
+                        "custom_float_properties": [],
+                        "custom_global_state_tree_reference_properties": [],
+                        "custom_hash_key_properties": [],
+                        "custom_int32_properties": [],
+                        "custom_loc_string_properties": [],
+                        "custom_pbgid_properties": [],
+                        "custom_physical_state_tree_reference_properties": [],
+                        "custom_reflected_enum_properties": [],
+                        "custom_squad_state_tree_reference_properties": [],
+                        "custom_vector3f_properties": []
+                    }
+                },
                 "p_throw_grenade_gammon_incendiary_uk": {
                     "extensions": [
                         {
@@ -42382,7 +43945,7 @@
                                     "is_artillery": "True",
                                     "is_target_only": "True",
                                     "speed_distance_multiplier": 0.3,
-                                    "speed_increment": 0.5,
+                                    "speed_increment": 0.75,
                                     "firing_angle_type": "low_angle",
                                     "use_homing_when_no_blocker": "False",
                                     "non_collide_start_angle": 30.0,
@@ -47103,6 +48666,715 @@
                 "custom_vector3f_properties": []
             }
         },
+        "territory_medic_station_torch": {
+            "extensions": [
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\line_of_sight_ext"
+                        },
+                        "blocking_box": {
+                            "x": 0.01,
+                            "y": 0.01,
+                            "z": 0.01
+                        },
+                        "is_shot_blocking": "False",
+                        "use_blocking_box": "False",
+                        "reveal_center_when_outside_is_visible": "True",
+                        "does_block_line_of_sight": "never",
+                        "disable_shot_blocking_on_death": "False",
+                        "blocks_ground_targeting_if_shot_block": "False"
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\type_ext"
+                        },
+                        "weapon_targeting": "no_targeting",
+                        "intersection_testing": "True",
+                        "unit_type_list": [
+                            {
+                                "unit_type": "building"
+                            },
+                            {
+                                "unit_type": "capture"
+                            },
+                            {
+                                "unit_type": "triage_center"
+                            },
+                            {
+                                "unit_type": "medical_support_center"
+                            },
+                            {
+                                "unit_type": "territory_point"
+                            },
+                            {
+                                "unit_type": "sp_only"
+                            }
+                        ],
+                        "race_type_list": [],
+                        "attack_target_restriction_on_attacker": [],
+                        "attack_target_restriction_on_victim": [],
+                        "weapon_category_targeting_filter": {
+                            "1melee": "True",
+                            "2ranged": "True",
+                            "3siege": "True",
+                            "4charge": "True",
+                            "5brace": "True",
+                            "6auto_ability_cast": "True",
+                            "7single_cast_ability": "True",
+                            "8dummy": "True"
+                        }
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\ui_ext"
+                        },
+                        "ap_killed_kicker": "True",
+                        "ap_loss_kicker": "True",
+                        "extra_text_deprecated": "",
+                        "ghost_enable": "True",
+                        "help_text": {
+                            "locstring": {
+                                "name": "help_text",
+                                "value": "11235661"
+                            }
+                        },
+                        "hotkey_name": "R",
+                        "kill_type": "",
+                        "minimap_enable": "True",
+                        "minimap_team_only": "False",
+                        "minimap_teamcolor": "False",
+                        "overlay_name": "",
+                        "reveal_for_decryption": "False",
+                        "screen_name": {
+                            "locstring": {
+                                "name": "screen_name",
+                                "value": "11183407"
+                            }
+                        },
+                        "selection_name": "building",
+                        "selection_scale": 1.0,
+                        "selection_type": "single_entity_select",
+                        "tooltip_txt": {
+                            "locstring": {
+                                "name": "tooltip_txt",
+                                "value": "0"
+                            }
+                        },
+                        "ui_priority": 0.0,
+                        "minimap_icon_scale": 0.8,
+                        "brief_text": {
+                            "locstring": {
+                                "name": "brief_text",
+                                "value": "11260452"
+                            }
+                        },
+                        "extra_text": {
+                            "locstring": {
+                                "name": "extra_text",
+                                "value": "11183406"
+                            }
+                        },
+                        "screen_name_short": {
+                            "locstring": {
+                                "name": "screen_name_short",
+                                "value": "0"
+                            }
+                        },
+                        "show_in_build_log": "True",
+                        "show_entity_appearance": "True",
+                        "screen_name_world": {
+                            "locstring": {
+                                "name": "screen_name_world",
+                                "value": "0"
+                            }
+                        },
+                        "help_text_world": {
+                            "locstring": {
+                                "name": "help_text_world",
+                                "value": "0"
+                            }
+                        },
+                        "extra_text_world": {
+                            "locstring": {
+                                "name": "extra_text_world",
+                                "value": "0"
+                            }
+                        },
+                        "map_rotation_type_override": "no_override",
+                        "occlusion_state": "terrain_layer",
+                        "decorator_visibility": "default",
+                        "skin_pack_override": "False",
+                        "skin_summer": "",
+                        "skin_winter": "",
+                        "decorator_height": -1.0,
+                        "icon_name": "races/common/buildings/medical_station",
+                        "minimap_color": "*",
+                        "minimap_icon": "common/buildings/symbols/triage_center_us",
+                        "symbol_icon_name": "common/buildings/symbols/triage_center_us",
+                        "targeting_and_bandbox_selection_priority": "lowest",
+                        "selection_method": "terrain_obb_mesh",
+                        "terrain_info_display_offset": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "decorator_ledger_key": "",
+                        "decorator_ledger_bar_style": {
+                            "instance_reference": ""
+                        },
+                        "selection_name_squad_override": "",
+                        "selection_grouping_ledger_key": "",
+                        "debug_text": "",
+                        "selection_datatemplate": "",
+                        "use_construction_range_on_selection": "False",
+                        "use_combat_range_on_selection": "True",
+                        "is_armoured": "False",
+                        "decorator_data_template": "",
+                        "ui_combine_type": "intersection",
+                        "spotted_on_spawn": "True",
+                        "district_info": {
+                            "instance_reference": ""
+                        },
+                        "force_facing_and_range_visual_to_center_on_entity": "False",
+                        "is_unique_to_race": "False",
+                        "kicker_offset": 0.0,
+                        "portrait_name": "races/common/buildings/medical_station_portrait",
+                        "selection_secondary_bounds_scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "z": 1.0
+                        },
+                        "decorator": "",
+                        "map_layer": 0.0,
+                        "map_mark": "",
+                        "portrait_icon": "",
+                        "ui_codex_info": {
+                            "priority": 0.0,
+                            "exclusive": "False",
+                            "ui_position": {
+                                "ui_position_column": -1.0,
+                                "ui_position_row": -1.0
+                            }
+                        },
+                        "custom_selection_obbs": [],
+                        "ui_extra_infos": [],
+                        "screen_name_visibility": "visible",
+                        "help_text_formatter": {
+                            "template_reference": {
+                                "name": "help_text_formatter",
+                                "value": ""
+                            }
+                        },
+                        "extra_text_formatter": {
+                            "template_reference": {
+                                "name": "extra_text_formatter",
+                                "value": ""
+                            }
+                        },
+                        "extra_text_world_formatter": {
+                            "template_reference": {
+                                "name": "extra_text_world_formatter",
+                                "value": ""
+                            }
+                        },
+                        "help_text_world_formatter": {
+                            "template_reference": {
+                                "name": "help_text_world_formatter",
+                                "value": ""
+                            }
+                        },
+                        "screen_name_formatter": {
+                            "template_reference": {
+                                "name": "screen_name_formatter",
+                                "value": ""
+                            }
+                        },
+                        "screen_name_short_formatter": {
+                            "template_reference": {
+                                "name": "screen_name_short_formatter",
+                                "value": ""
+                            }
+                        },
+                        "screen_name_world_formatter": {
+                            "template_reference": {
+                                "name": "screen_name_world_formatter",
+                                "value": ""
+                            }
+                        },
+                        "brief_text_formatter": {
+                            "template_reference": {
+                                "name": "brief_text_formatter",
+                                "value": ""
+                            }
+                        },
+                        "sound": "",
+                        "sound_alternative": "",
+                        "telemetry_name": "",
+                        "selectable_in_non_interactive_area": "True",
+                        "selection_obb_size": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "z": 1.0
+                        },
+                        "target_selection_priority_by_owner": "none",
+                        "turn_in_place_distance": 0.0,
+                        "bandbox_selection_priority_override": "",
+                        "decorator_visibility_statetree_node_condition": "",
+                        "selection_ui_visibility_statetree_node_condition": "",
+                        "global_unit_control_row": -1.0,
+                        "global_unit_control_row_special": -1.0,
+                        "disable_UI_if_garrison_disabled": "True"
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\health_ext"
+                        },
+                        "can_repair": "True",
+                        "cuttable": "False",
+                        "death_event_name": "Death",
+                        "death_seconds": 1.0,
+                        "delete_when_dead": "True",
+                        "force_attacker_memory": "False",
+                        "hitpoints": 600.0,
+                        "is_invincible": "True",
+                        "is_salvagable_wreck": "False",
+                        "rebuilt_entity": {
+                            "instance_reference": ""
+                        },
+                        "rebuilt_squad": {
+                            "instance_reference": ""
+                        },
+                        "rebuilt_use_wreck_owner": "False",
+                        "receive_weapon_cover_modifiers": "False",
+                        "regeneration": 0.0,
+                        "regeneration_disabled": "True",
+                        "remove_from_pathfinding_on_death": "True",
+                        "reveal_to_all_on_death": "False",
+                        "ui_can_scuttle": "False",
+                        "target_size": 2.0,
+                        "weapon_priority": -20.0,
+                        "wreck_entity_option": {
+                            "template_reference": {
+                                "name": "wreck_entity_option",
+                                "value": "options\\none"
+                            }
+                        },
+                        "armor_type": "None",
+                        "armor_layout_option": {
+                            "template_reference": {
+                                "name": "armor_layout_option",
+                                "value": "options\\ebpextensions\\healthext\\armor_layouts\\armor_layout_uniform"
+                            },
+                            "armor": 10.0
+                        },
+                        "allegiance_override": "none",
+                        "not_default_attackable": "False",
+                        "armor_scaler_by_damage_type": {
+                            "True Damage": 1.0,
+                            "flame": 1.0,
+                            "ballistic": 1.0,
+                            "explosive": 1.0
+                        },
+                        "self_destruct_action_tree": {
+                            "template_reference": {
+                                "name": "self_destruct_action_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "rebuilt_entity_action_tree": {
+                            "template_reference": {
+                                "name": "rebuilt_entity_action_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "on_received_damage_action_tree": {
+                            "template_reference": {
+                                "name": "on_received_damage_action_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "death_action_tree": "",
+                        "can_be_damaged_by_ally": "False",
+                        "on_reach_invulnerable_min_cap_entity_state_tree_ref": "",
+                        "on_reach_max_health_entity_state_tree_ref": "",
+                        "restore_hook_offsets": [],
+                        "can_be_restored": "False",
+                        "can_be_damaged_by_ally_default_attack_allowed": "True",
+                        "can_be_targeted_by_ally": "False"
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\sight_ext"
+                        },
+                        "detect_camouflage": {
+                            "tp_global": -1.0,
+                            "tp_mine": -1.0,
+                            "tp_unit": -1.0,
+                            "tp_democharge": -1.0
+                        },
+                        "extended_sight": "False",
+                        "extended_sight_radius": 70.0,
+                        "reveal_area_on_death_time": 1.5,
+                        "sight_package": {
+                            "inner_height": 2.5,
+                            "inner_radius": 0.0,
+                            "outer_height": 0.0,
+                            "outer_radius": 35.0,
+                            "cone_angle": 360.0,
+                            "cone_start_radius": 0.0
+                        },
+                        "specific_detector_actions": [],
+                        "vertical_truesight": {
+                            "enable": "True",
+                            "tolerance": 1.0,
+                            "eye_height": 2.5
+                        },
+                        "camouflage_detection_enabled": "True",
+                        "blockers_check_bounding_box": "True",
+                        "reveal_area_on_death_radius": 0.0,
+                        "camouflage_detection_respects_fog_of_war_vision": "True",
+                        "camouflage_detection_respects_shot_blockers": "True"
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\spawner_ext"
+                        },
+                        "must_be_in_supply": "True",
+                        "reinforce_radius": 25.0,
+                        "spawn_items": [],
+                        "bonus_xp_from_hold_list": [],
+                        "reinforce_requirements": [],
+                        "spawn_to_hold_try_first": "False",
+                        "queue_requirements": [],
+                        "can_rally": "True",
+                        "animated_spawn_option": {
+                            "template_reference": {
+                                "name": "animated_spawn_option",
+                                "value": "options\\none"
+                            }
+                        },
+                        "max_queue_size_override": -1.0,
+                        "queue_requirements_openingbranch": "",
+                        "reinforce_requirements_openingbranch": "",
+                        "production_item_completed_openingbranch": "",
+                        "enforce_minimum_clearance_at_spawn_positions": "False",
+                        "enforce_minimum_clearance_if_entities_blocking": "True",
+                        "enforce_minimum_clearance_at_spawn_positions_search_range": 0.0,
+                        "rally_pass_type": {
+                            "instance_reference": ""
+                        },
+                        "parallel_production_count": 1.0,
+                        "default_rally_point_offset": {
+                            "template_reference": {
+                                "name": "default_rally_point_offset",
+                                "value": ""
+                            }
+                        },
+                        "always_paradrop_spawn": "False",
+                        "shared_team_production": "False"
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\upgrade_ext"
+                        },
+                        "must_be_in_supply": "False",
+                        "number_of_standard_slots": -1.0,
+                        "standard_upgrades": [],
+                        "max_queue_size_override": -1.0,
+                        "production_item_completed_openingbranch": "",
+                        "shared_team_production": "False"
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\ability_ext"
+                        },
+                        "abilities": [
+                            {
+                                "ability": {
+                                    "instance_reference": "abilities/races/common/buildings/common_healing_aura_building"
+                                }
+                            },
+                            {
+                                "ability": {
+                                    "instance_reference": "abilities/races/common/buildings/retreat_point_mobile_toggle_torch"
+                                }
+                            },
+                            {
+                                "ability": {
+                                    "instance_reference": "abilities/races/common/buildings/auto_reinforce"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\requirement_ext"
+                        },
+                        "requirement_table": [],
+                        "requirement_statetree": ""
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\strategic_point_ext"
+                        },
+                        "capture_time": 15.0,
+                        "revert_time": 15.0,
+                        "secure_radius": 6.0,
+                        "use_decorator": "True",
+                        "entity_for_annihilation": {
+                            "instance_reference": ""
+                        },
+                        "unsecure_time_by_race": [],
+                        "capture_area_info": {
+                            "template_reference": {
+                                "name": "capture_area_info",
+                                "value": "options\\area_info_options\\circle_area_option"
+                            },
+                            "outer_radius": 10.0,
+                            "inner_radius": 0.0,
+                            "is_two_dimensional": "True",
+                            "dynamic_radius_type": "fixed"
+                        },
+                        "instant_uncapture": "False",
+                        "auto_revert_condition": "none",
+                        "point_type": "strategic_point",
+                        "ui_reticules": {
+                            "ui_reticule_neutral": {
+                                "instance_reference": "ui_reticule/capture_point_reticule_neutral"
+                            },
+                            "ui_reticule_ally": {
+                                "instance_reference": "ui_reticule/capture_point_reticule_ally"
+                            },
+                            "ui_reticule_enemy": {
+                                "instance_reference": "ui_reticule/capture_point_reticule_enemy"
+                            },
+                            "ui_reticule_ally_outofsupply": {
+                                "instance_reference": "ui_reticule/capture_point_reticule_ally_outofsupply"
+                            },
+                            "ui_reticule_enemy_outofsupply": {
+                                "instance_reference": "ui_reticule/capture_point_reticule_enemy_outofsupply"
+                            },
+                            "enable_team_color": "False",
+                            "ui_reticule_ally_capturing": {
+                                "instance_reference": ""
+                            },
+                            "ui_reticule_enemy_capturing": {
+                                "instance_reference": ""
+                            }
+                        },
+                        "on_capture_ownership_change": "capturing_team",
+                        "contested_capture_type": "pause_capture",
+                        "can_capture_team": "any_team",
+                        "start_captured_if_owned": "True",
+                        "exclude_unit_types": [],
+                        "state_tree_references": {
+                            "self_capturing_action_tree": {
+                                "template_reference": {
+                                    "name": "self_capturing_action_tree",
+                                    "value": "state_tree_reference_info"
+                                },
+                                "ActionTree_OpeningBranch": "physical_capture_states\\capturing"
+                            },
+                            "self_captured_action_tree": {
+                                "template_reference": {
+                                    "name": "self_captured_action_tree",
+                                    "value": "state_tree_reference_info"
+                                },
+                                "ActionTree_OpeningBranch": "physical_capture_states\\captured"
+                            },
+                            "self_secured_action_tree": {
+                                "template_reference": {
+                                    "name": "self_secured_action_tree",
+                                    "value": "state_tree_reference_info"
+                                },
+                                "ActionTree_OpeningBranch": "physical_capture_states\\secured"
+                            },
+                            "self_reverting_action_tree": {
+                                "template_reference": {
+                                    "name": "self_reverting_action_tree",
+                                    "value": "state_tree_reference_info"
+                                },
+                                "ActionTree_OpeningBranch": "physical_capture_states\\reverting"
+                            },
+                            "self_uncaptured_action_tree": {
+                                "template_reference": {
+                                    "name": "self_uncaptured_action_tree",
+                                    "value": "state_tree_reference_info"
+                                },
+                                "ActionTree_OpeningBranch": "physical_capture_states\\uncaptured"
+                            },
+                            "lost_point_player_action_tree": {
+                                "template_reference": {
+                                    "name": "lost_point_player_action_tree",
+                                    "value": "state_tree_reference_info"
+                                },
+                                "ActionTree_OpeningBranch": ""
+                            },
+                            "lost_point_team_action_tree": {
+                                "template_reference": {
+                                    "name": "lost_point_team_action_tree",
+                                    "value": "state_tree_reference_info"
+                                },
+                                "ActionTree_OpeningBranch": ""
+                            },
+                            "decapture_point_player_action_tree": {
+                                "template_reference": {
+                                    "name": "decapture_point_player_action_tree",
+                                    "value": "state_tree_reference_info"
+                                },
+                                "ActionTree_OpeningBranch": ""
+                            },
+                            "halted_action_tree": {
+                                "template_reference": {
+                                    "name": "halted_action_tree",
+                                    "value": "state_tree_reference_info"
+                                },
+                                "ActionTree_OpeningBranch": ""
+                            }
+                        },
+                        "secure_area_info": {
+                            "template_reference": {
+                                "name": "secure_area_info",
+                                "value": "options\\area_info_options\\sector_area_option"
+                            }
+                        },
+                        "allow_capture_or_secure_from_hold": "True",
+                        "ui_use_owner_team_colour": "False",
+                        "capture_area_offset": {
+                            "template_reference": {
+                                "name": "capture_area_offset",
+                                "value": "basic_data_types\\vector2"
+                            },
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "capture_area_angle": 0.0,
+                        "check_territory_capturable": "False",
+                        "post_stat_weight": 1.0,
+                        "veterancy_rewards_for_capture": [
+                            {
+                                "veterancy_reward": {
+                                    "applicable_squad_type": "veterancy_on_capture",
+                                    "reward_on_capture": 75.0,
+                                    "reward_on_neutralize": 75.0
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\resource_ext"
+                        },
+                        "default_provided_resource": "manpower",
+                        "resource_provided_per_second": {
+                            "action": 0.0,
+                            "command": 0.0,
+                            "popcap": 0.0,
+                            "fuel": 0.0,
+                            "munition": 0.0,
+                            "manpower": 0.5,
+                            "requisition": 0.0,
+                            "ultimate": 0.0,
+                            "ability_resource_1": 0.0,
+                            "ability_resource_2": 0.0
+                        },
+                        "total_amount_of_resources": {
+                            "action": 3.402823e+38,
+                            "command": 0.0,
+                            "popcap": 0.0,
+                            "fuel": 0.0,
+                            "munition": 0.0,
+                            "manpower": 3.402823e+38,
+                            "requisition": 0.0,
+                            "ultimate": 0.0,
+                            "ability_resource_1": 0.0,
+                            "ability_resource_2": 0.0
+                        },
+                        "resources_divided_by_team_size": "False",
+                        "enable_sector_linked_resourcing": "True",
+                        "auto_generate_resources": "True",
+                        "depleted_action_tree": {
+                            "template_reference": {
+                                "name": "depleted_action_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "resource_provided_per_turn": {
+                            "action": 0.0,
+                            "command": 0.0,
+                            "popcap": 0.0,
+                            "fuel": 0.0,
+                            "munition": 0.0,
+                            "manpower": 0.0,
+                            "requisition": 0.0,
+                            "ultimate": 0.0,
+                            "ability_resource_1": 0.0,
+                            "ability_resource_2": 0.0
+                        }
+                    }
+                }
+            ],
+            "pbgid": 2175703.0,
+            "parent_pbg": {
+                "instance_reference": ""
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "child_custom_properties": [],
+                "custom_bool_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "custom_float_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_int32_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_reflected_enum_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_vector3f_properties": []
+            }
+        },
         "territory_medic_station_us": {
             "extensions": [
                 {
@@ -48794,7 +51066,7 @@
                                 "action": 0.0,
                                 "command": 0.0,
                                 "popcap": 0.0,
-                                "fuel": 0.1333,
+                                "fuel": 0.1,
                                 "munition": 0.0,
                                 "manpower": 0.0,
                                 "requisition": 0.0,
@@ -49353,7 +51625,7 @@
                                 "action": 0.0,
                                 "command": 0.0,
                                 "popcap": 0.0,
-                                "fuel": 0.1333,
+                                "fuel": 0.1,
                                 "munition": 0.0,
                                 "manpower": 0.0,
                                 "requisition": 0.0,
@@ -49912,7 +52184,7 @@
                                 "action": 0.0,
                                 "command": 0.0,
                                 "popcap": 0.0,
-                                "fuel": 0.1333,
+                                "fuel": 0.1,
                                 "munition": 0.0,
                                 "manpower": 0.0,
                                 "requisition": 0.0,
@@ -50471,7 +52743,7 @@
                                 "action": 0.0,
                                 "command": 0.0,
                                 "popcap": 0.0,
-                                "fuel": 0.1333,
+                                "fuel": 0.1,
                                 "munition": 0.0,
                                 "manpower": 0.0,
                                 "requisition": 0.0,
@@ -51030,7 +53302,7 @@
                                 "action": 0.0,
                                 "command": 0.0,
                                 "popcap": 0.0,
-                                "fuel": 0.1333,
+                                "fuel": 0.1,
                                 "munition": 0.0,
                                 "manpower": 0.0,
                                 "requisition": 0.0,
@@ -51589,7 +53861,7 @@
                                 "action": 0.0,
                                 "command": 0.0,
                                 "popcap": 0.0,
-                                "fuel": 0.2,
+                                "fuel": 0.1667,
                                 "munition": 0.0,
                                 "manpower": 0.0,
                                 "requisition": 0.0,
@@ -52148,7 +54420,7 @@
                                 "action": 0.0,
                                 "command": 0.0,
                                 "popcap": 0.0,
-                                "fuel": 0.2,
+                                "fuel": 0.1667,
                                 "munition": 0.0,
                                 "manpower": 0.0,
                                 "requisition": 0.0,
@@ -52707,7 +54979,7 @@
                                 "action": 0.0,
                                 "command": 0.0,
                                 "popcap": 0.0,
-                                "fuel": 0.2,
+                                "fuel": 0.1667,
                                 "munition": 0.0,
                                 "manpower": 0.0,
                                 "requisition": 0.0,
@@ -53266,7 +55538,7 @@
                                 "action": 0.0,
                                 "command": 0.0,
                                 "popcap": 0.0,
-                                "fuel": 0.2,
+                                "fuel": 0.1667,
                                 "munition": 0.0,
                                 "manpower": 0.0,
                                 "requisition": 0.0,
@@ -53825,7 +56097,7 @@
                                 "action": 0.0,
                                 "command": 0.0,
                                 "popcap": 0.0,
-                                "fuel": 0.2,
+                                "fuel": 0.1667,
                                 "munition": 0.0,
                                 "manpower": 0.0,
                                 "requisition": 0.0,
@@ -54465,6 +56737,9 @@
                                 },
                                 {
                                     "unit_type": "fuel_point_high"
+                                },
+                                {
+                                    "unit_type": "fuel_point_massive"
                                 }
                             ],
                             "weapon_targeting": "no_targeting",
@@ -55024,6 +57299,9 @@
                                 },
                                 {
                                     "unit_type": "fuel_point_high"
+                                },
+                                {
+                                    "unit_type": "fuel_point_massive"
                                 }
                             ],
                             "weapon_targeting": "no_targeting",
@@ -55583,6 +57861,9 @@
                                 },
                                 {
                                     "unit_type": "fuel_point_high"
+                                },
+                                {
+                                    "unit_type": "fuel_point_massive"
                                 }
                             ],
                             "weapon_targeting": "no_targeting",
@@ -56142,6 +58423,9 @@
                                 },
                                 {
                                     "unit_type": "fuel_point_high"
+                                },
+                                {
+                                    "unit_type": "fuel_point_massive"
                                 }
                             ],
                             "weapon_targeting": "no_targeting",
@@ -56701,6 +58985,9 @@
                                 },
                                 {
                                     "unit_type": "fuel_point_high"
+                                },
+                                {
+                                    "unit_type": "fuel_point_massive"
                                 }
                             ],
                             "weapon_targeting": "no_targeting",
@@ -57179,7 +59466,7 @@
                                 "action": 0.0,
                                 "command": 0.0,
                                 "popcap": 0.0,
-                                "fuel": 0.08335,
+                                "fuel": 0.06666,
                                 "munition": 0.0,
                                 "manpower": 0.0,
                                 "requisition": 0.0,
@@ -57738,7 +60025,7 @@
                                 "action": 0.0,
                                 "command": 0.0,
                                 "popcap": 0.0,
-                                "fuel": 0.08335,
+                                "fuel": 0.06666,
                                 "munition": 0.0,
                                 "manpower": 0.0,
                                 "requisition": 0.0,
@@ -58297,7 +60584,7 @@
                                 "action": 0.0,
                                 "command": 0.0,
                                 "popcap": 0.0,
-                                "fuel": 0.08335,
+                                "fuel": 0.06666,
                                 "munition": 0.0,
                                 "manpower": 0.0,
                                 "requisition": 0.0,
@@ -58856,7 +61143,7 @@
                                 "action": 0.0,
                                 "command": 0.0,
                                 "popcap": 0.0,
-                                "fuel": 0.08335,
+                                "fuel": 0.06666,
                                 "munition": 0.0,
                                 "manpower": 0.0,
                                 "requisition": 0.0,
@@ -59415,7 +61702,7 @@
                                 "action": 0.0,
                                 "command": 0.0,
                                 "popcap": 0.0,
-                                "fuel": 0.08335,
+                                "fuel": 0.06666,
                                 "munition": 0.0,
                                 "manpower": 0.0,
                                 "requisition": 0.0,
@@ -59974,7 +62261,7 @@
                                 "action": 0.0,
                                 "command": 0.0,
                                 "popcap": 0.0,
-                                "fuel": 0.1667,
+                                "fuel": 0.1333,
                                 "munition": 0.0,
                                 "manpower": 0.0,
                                 "requisition": 0.0,
@@ -60533,7 +62820,7 @@
                                 "action": 0.0,
                                 "command": 0.0,
                                 "popcap": 0.0,
-                                "fuel": 0.1667,
+                                "fuel": 0.1333,
                                 "munition": 0.0,
                                 "manpower": 0.0,
                                 "requisition": 0.0,
@@ -61092,7 +63379,7 @@
                                 "action": 0.0,
                                 "command": 0.0,
                                 "popcap": 0.0,
-                                "fuel": 0.1667,
+                                "fuel": 0.1333,
                                 "munition": 0.0,
                                 "manpower": 0.0,
                                 "requisition": 0.0,
@@ -61651,7 +63938,7 @@
                                 "action": 0.0,
                                 "command": 0.0,
                                 "popcap": 0.0,
-                                "fuel": 0.1667,
+                                "fuel": 0.1333,
                                 "munition": 0.0,
                                 "manpower": 0.0,
                                 "requisition": 0.0,
@@ -62210,7 +64497,7 @@
                                 "action": 0.0,
                                 "command": 0.0,
                                 "popcap": 0.0,
-                                "fuel": 0.1667,
+                                "fuel": 0.1333,
                                 "munition": 0.0,
                                 "manpower": 0.0,
                                 "requisition": 0.0,

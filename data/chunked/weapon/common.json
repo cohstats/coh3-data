@@ -6664,7 +6664,7 @@
                     "fx_always_visible": "True",
                     "fx_building_hit_delay": 0.0,
                     "fx_delay_in_building": 0.0,
-                    "fx_munition_name": "\\cannon\\shell_small",
+                    "fx_munition_name": "\\cannon\\cannon_shell_light",
                     "fx_tracer_name": "",
                     "fx_tracer_speed": 0.0,
                     "fx_use_building_panel_normal": "True",
@@ -6822,8 +6822,8 @@
                         "fire_cone_angle": 10.0,
                         "normal": {
                             "max_down": -25.0,
-                            "max_left": -40.0,
-                            "max_right": 40.0,
+                            "max_left": -33.0,
+                            "max_right": 33.0,
                             "max_up": 25.0,
                             "speed_horizontal": 24.0,
                             "speed_vertical": 24.0
@@ -6878,6 +6878,18 @@
                                 },
                                 "base_damage_modifier": 0.0
                             }
+                        },
+                        {
+                            "target_unit_type_multipliers": {
+                                "unit_type": "building",
+                                "weapon_multipliers": {
+                                    "accuracy_multiplier": 1.0,
+                                    "damage_multiplier": 0.75,
+                                    "penetration_multiplier": 1.0,
+                                    "suppression_multiplier": 1.0
+                                },
+                                "base_damage_modifier": 0.0
+                            }
                         }
                     ],
                     "cover_table": {
@@ -6897,10 +6909,10 @@
                                 "name": "tp_heavy_cover",
                                 "value": "weapon_cover_info"
                             },
-                            "accuracy_multiplier": 1.0,
-                            "damage_multiplier": 1.0,
+                            "accuracy_multiplier": 0.5,
+                            "damage_multiplier": 0.5,
                             "penetration_multiplier": 1.0,
-                            "suppression_multiplier": 1.0,
+                            "suppression_multiplier": 0.1,
                             "aim_time_multiplier": 1.0
                         },
                         "tp_light_cover": {
@@ -6908,10 +6920,10 @@
                                 "name": "tp_light_cover",
                                 "value": "weapon_cover_info"
                             },
-                            "accuracy_multiplier": 1.0,
+                            "accuracy_multiplier": 0.5,
                             "damage_multiplier": 1.0,
                             "penetration_multiplier": 1.0,
-                            "suppression_multiplier": 1.0,
+                            "suppression_multiplier": 0.5,
                             "aim_time_multiplier": 1.0
                         },
                         "tp_negative_cover": {
@@ -6953,10 +6965,10 @@
                                 "value": "weapon_cover_info"
                             },
                             "accuracy_multiplier": 1.0,
-                            "damage_multiplier": 1.0,
+                            "damage_multiplier": 0.5,
                             "penetration_multiplier": 1.0,
                             "suppression_multiplier": 1.0,
-                            "aim_time_multiplier": 1.0
+                            "aim_time_multiplier": 0.1
                         },
                         "tp_trench_cover": {
                             "template_reference": {
@@ -8590,9 +8602,9 @@
                             "dynamic_radius_type": "fixed"
                         },
                         "damage": {
-                            "far": 0.2,
+                            "far": 0.15,
                             "near": 1.0,
-                            "mid": 0.85
+                            "mid": 0.64
                         },
                         "damage_friendly": {
                             "far": 0.025,
@@ -8639,8 +8651,8 @@
                             }
                         },
                         "damage_own_units": {
-                            "far": 0.2,
-                            "mid": 0.85,
+                            "far": 0.15,
+                            "mid": 0.64,
                             "near": 1.0
                         }
                     },
@@ -8734,8 +8746,8 @@
                         "persistent_cooldownticks": "False"
                     },
                     "damage": {
-                        "max": 120.0,
-                        "min": 120.0,
+                        "max": 160.0,
+                        "min": 160.0,
                         "damage_type": "explosive",
                         "allow_overkill": "False",
                         "on_penetrated_state_trees": [],
@@ -9025,6 +9037,18 @@
                                 },
                                 "base_damage_modifier": 0.0
                             }
+                        },
+                        {
+                            "target_unit_type_multipliers": {
+                                "base_damage_modifier": 0.0,
+                                "unit_type": "vehicle",
+                                "weapon_multipliers": {
+                                    "accuracy_multiplier": 1.0,
+                                    "damage_multiplier": 0.75,
+                                    "penetration_multiplier": 1.0,
+                                    "suppression_multiplier": 1.0
+                                }
+                            }
                         }
                     ],
                     "cover_table": {
@@ -9297,7 +9321,7 @@
                                 "statetree_condition": "",
                                 "weapon_multipliers": {
                                     "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 2.5,
+                                    "damage_multiplier": 1.875,
                                     "penetration_ multiplier": 1.0,
                                     "suppression_multiplier": 1.0
                                 }
@@ -9394,9 +9418,9 @@
                             "dynamic_radius_type": "fixed"
                         },
                         "damage": {
-                            "far": 0.225,
+                            "far": 0.17,
                             "near": 1.0,
-                            "mid": 0.7
+                            "mid": 0.525
                         },
                         "damage_friendly": {
                             "far": 0.025,
@@ -9443,8 +9467,8 @@
                             }
                         },
                         "damage_own_units": {
-                            "far": 0.225,
-                            "mid": 0.7,
+                            "far": 0.17,
+                            "mid": 0.525,
                             "near": 1.0
                         }
                     },
@@ -9538,8 +9562,8 @@
                         "persistent_cooldownticks": "False"
                     },
                     "damage": {
-                        "max": 120.0,
-                        "min": 120.0,
+                        "max": 160.0,
+                        "min": 160.0,
                         "damage_type": "explosive",
                         "allow_overkill": "False",
                         "on_penetrated_state_trees": [],
@@ -9829,6 +9853,18 @@
                                 },
                                 "base_damage_modifier": 0.0
                             }
+                        },
+                        {
+                            "target_unit_type_multipliers": {
+                                "base_damage_modifier": 0.0,
+                                "unit_type": "vehicle",
+                                "weapon_multipliers": {
+                                    "accuracy_multiplier": 1.0,
+                                    "damage_multiplier": 0.75,
+                                    "penetration_multiplier": 1.0,
+                                    "suppression_multiplier": 1.0
+                                }
+                            }
                         }
                     ],
                     "cover_table": {
@@ -10101,7 +10137,7 @@
                                 "statetree_condition": "",
                                 "weapon_multipliers": {
                                     "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 2.5,
+                                    "damage_multiplier": 1.875,
                                     "penetration_ multiplier": 1.0,
                                     "suppression_multiplier": 1.0
                                 }
@@ -10198,7 +10234,7 @@
                             "dynamic_radius_type": "fixed"
                         },
                         "damage": {
-                            "far": 0.1669,
+                            "far": 0.13,
                             "near": 1.0,
                             "mid": 1.0
                         },
@@ -10208,9 +10244,9 @@
                             "mid": 0.075
                         },
                         "distance": {
-                            "far": 1.5,
-                            "near": 1.5,
-                            "mid": 1.5
+                            "far": 1.75,
+                            "near": 1.75,
+                            "mid": 1.75
                         },
                         "has_friendly_fire": "True",
                         "can_harm_shooter": "True",
@@ -10247,7 +10283,7 @@
                             }
                         },
                         "damage_own_units": {
-                            "far": 0.1669,
+                            "far": 0.13,
                             "mid": 1.0,
                             "near": 1.0
                         }
@@ -10342,8 +10378,8 @@
                         "persistent_cooldownticks": "False"
                     },
                     "damage": {
-                        "max": 120.0,
-                        "min": 120.0,
+                        "max": 160.0,
+                        "min": 160.0,
                         "damage_type": "explosive",
                         "allow_overkill": "False",
                         "on_penetrated_state_trees": [],
@@ -10633,6 +10669,18 @@
                                 },
                                 "base_damage_modifier": 0.0
                             }
+                        },
+                        {
+                            "target_unit_type_multipliers": {
+                                "base_damage_modifier": 0.0,
+                                "unit_type": "vehicle",
+                                "weapon_multipliers": {
+                                    "accuracy_multiplier": 1.0,
+                                    "damage_multiplier": 0.75,
+                                    "penetration_multiplier": 1.0,
+                                    "suppression_multiplier": 1.0
+                                }
+                            }
                         }
                     ],
                     "cover_table": {
@@ -10826,7 +10874,13 @@
                         "ally": "True",
                         "neutral": "True"
                     },
-                    "weapon_tags": [],
+                    "weapon_tags": [
+                        {
+                            "tag": {
+                                "weapon_tag": "full_body_ability_weapon"
+                            }
+                        }
+                    ],
                     "building_charring_settings": {
                         "instance_reference": ""
                     },
@@ -10834,7 +10888,84 @@
                         "suppress_under_fire_callout": "False"
                     },
                     "weapon_impact_modifier": 0.0,
-                    "conditional_table": [],
+                    "conditional_table": [
+                        {
+                            "conditional_multipliers": {
+                                "flat_damage_modifier_pre_multiplier": 0.0,
+                                "flat_damage_modifier_post_multiplier": 0.0,
+                                "requirements": [
+                                    {
+                                        "requirement": {
+                                            "template_reference": {
+                                                "name": "requirement",
+                                                "value": "requirements\\required_any_in_list"
+                                            },
+                                            "reason": "usage",
+                                            "requirements": [
+                                                {
+                                                    "requirement": {
+                                                        "template_reference": {
+                                                            "name": "requirement",
+                                                            "value": "requirements\\required_is_entity_pbg"
+                                                        },
+                                                        "include_pbg_parenting": {
+                                                            "include_child_pbgs": "False",
+                                                            "include_parent_pbgs": "False"
+                                                        },
+                                                        "is_entity_pbg": {
+                                                            "instance_reference": "ebps/races/afrika_korps/buildings/defensive/point_fortification_cache_ak"
+                                                        },
+                                                        "reason": "usage",
+                                                        "ui_name": {
+                                                            "locstring": {
+                                                                "name": "ui_name",
+                                                                "value": "0"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "requirement": {
+                                                        "template_reference": {
+                                                            "name": "requirement",
+                                                            "value": "requirements\\required_is_entity_pbg"
+                                                        },
+                                                        "include_pbg_parenting": {
+                                                            "include_child_pbgs": "False",
+                                                            "include_parent_pbgs": "False"
+                                                        },
+                                                        "is_entity_pbg": {
+                                                            "instance_reference": "ebps/races/afrika_korps/buildings/defensive/point_fortification_cache_20mm_aa_ak"
+                                                        },
+                                                        "reason": "usage",
+                                                        "ui_name": {
+                                                            "locstring": {
+                                                                "name": "ui_name",
+                                                                "value": "0"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "ui_name": {
+                                                "locstring": {
+                                                    "name": "ui_name",
+                                                    "value": "0"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ],
+                                "statetree_condition": "",
+                                "weapon_multipliers": {
+                                    "accuracy_multiplier": 1.0,
+                                    "damage_multiplier": 1.875,
+                                    "penetration_ multiplier": 1.0,
+                                    "suppression_multiplier": 1.0
+                                }
+                            }
+                        }
+                    ],
                     "always_calculate_cover_from_shooting_position": "False",
                     "directional_modifier": {
                         "ignore_directional_damage_bonus": "False",
@@ -11813,7 +11944,7 @@
                     "fx_always_visible": "True",
                     "fx_building_hit_delay": 0.0,
                     "fx_delay_in_building": 0.5,
-                    "fx_munition_name": "\\mortars\\mortar_medium_smoke",
+                    "fx_munition_name": "\\grenades\\smoke",
                     "fx_tracer_name": "",
                     "fx_tracer_speed": 0.0,
                     "fx_use_building_panel_normal": "True",
@@ -12355,7 +12486,7 @@
                             }
                         },
                         "damage_own_units": {
-                            "far": 0.1669,
+                            "far": 0.13,
                             "mid": 1.0,
                             "near": 1.0
                         }
@@ -12479,7 +12610,7 @@
                     "fx_always_visible": "True",
                     "fx_building_hit_delay": 0.0,
                     "fx_delay_in_building": 0.0,
-                    "fx_munition_name": "\\mortars\\mortar_medium_smoke",
+                    "fx_munition_name": "\\grenades\\smoke",
                     "fx_tracer_name": "",
                     "fx_tracer_speed": 0.0,
                     "fx_use_building_panel_normal": "True",
@@ -12681,7 +12812,20 @@
                     "weapon_class": "rifle_grenade",
                     "fx_aoe_munition_name": "",
                     "speech_code": "",
-                    "target_type_table": [],
+                    "target_type_table": [
+                        {
+                            "target_unit_type_multipliers": {
+                                "base_damage_modifier": 0.0,
+                                "unit_type": "vehicle",
+                                "weapon_multipliers": {
+                                    "accuracy_multiplier": 1.0,
+                                    "damage_multiplier": 0.75,
+                                    "penetration_multiplier": 1.0,
+                                    "suppression_multiplier": 1.0
+                                }
+                            }
+                        }
+                    ],
                     "cover_table": {
                         "tp_defcover": {
                             "template_reference": {
@@ -12873,7 +13017,13 @@
                         "ally": "True",
                         "neutral": "True"
                     },
-                    "weapon_tags": [],
+                    "weapon_tags": [
+                        {
+                            "tag": {
+                                "weapon_tag": "full_body_ability_weapon"
+                            }
+                        }
+                    ],
                     "building_charring_settings": {
                         "instance_reference": ""
                     },
@@ -12881,7 +13031,84 @@
                         "suppress_under_fire_callout": "False"
                     },
                     "weapon_impact_modifier": 0.0,
-                    "conditional_table": [],
+                    "conditional_table": [
+                        {
+                            "conditional_multipliers": {
+                                "flat_damage_modifier_pre_multiplier": 0.0,
+                                "flat_damage_modifier_post_multiplier": 0.0,
+                                "requirements": [
+                                    {
+                                        "requirement": {
+                                            "template_reference": {
+                                                "name": "requirement",
+                                                "value": "requirements\\required_any_in_list"
+                                            },
+                                            "reason": "usage",
+                                            "requirements": [
+                                                {
+                                                    "requirement": {
+                                                        "template_reference": {
+                                                            "name": "requirement",
+                                                            "value": "requirements\\required_is_entity_pbg"
+                                                        },
+                                                        "include_pbg_parenting": {
+                                                            "include_child_pbgs": "False",
+                                                            "include_parent_pbgs": "False"
+                                                        },
+                                                        "is_entity_pbg": {
+                                                            "instance_reference": "ebps/races/afrika_korps/buildings/defensive/point_fortification_cache_ak"
+                                                        },
+                                                        "reason": "usage",
+                                                        "ui_name": {
+                                                            "locstring": {
+                                                                "name": "ui_name",
+                                                                "value": "0"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "requirement": {
+                                                        "template_reference": {
+                                                            "name": "requirement",
+                                                            "value": "requirements\\required_is_entity_pbg"
+                                                        },
+                                                        "include_pbg_parenting": {
+                                                            "include_child_pbgs": "False",
+                                                            "include_parent_pbgs": "False"
+                                                        },
+                                                        "is_entity_pbg": {
+                                                            "instance_reference": "ebps/races/afrika_korps/buildings/defensive/point_fortification_cache_20mm_aa_ak"
+                                                        },
+                                                        "reason": "usage",
+                                                        "ui_name": {
+                                                            "locstring": {
+                                                                "name": "ui_name",
+                                                                "value": "0"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "ui_name": {
+                                                "locstring": {
+                                                    "name": "ui_name",
+                                                    "value": "0"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ],
+                                "statetree_condition": "",
+                                "weapon_multipliers": {
+                                    "accuracy_multiplier": 1.0,
+                                    "damage_multiplier": 1.875,
+                                    "penetration_ multiplier": 1.0,
+                                    "suppression_multiplier": 1.0
+                                }
+                            }
+                        }
+                    ],
                     "always_calculate_cover_from_shooting_position": "False",
                     "directional_modifier": {
                         "ignore_directional_damage_bonus": "False",
@@ -13369,6 +13596,18 @@
                                 "weapon_multipliers": {
                                     "accuracy_multiplier": 1.0,
                                     "damage_multiplier": 1.5,
+                                    "penetration_multiplier": 1.0,
+                                    "suppression_multiplier": 1.0
+                                }
+                            }
+                        },
+                        {
+                            "target_unit_type_multipliers": {
+                                "base_damage_modifier": 0.0,
+                                "unit_type": "offmap_and_artillery_resistance",
+                                "weapon_multipliers": {
+                                    "accuracy_multiplier": 1.0,
+                                    "damage_multiplier": 0.75,
                                     "penetration_multiplier": 1.0,
                                     "suppression_multiplier": 1.0
                                 }
@@ -14044,6 +14283,18 @@
                                 },
                                 "base_damage_modifier": 0.0
                             }
+                        },
+                        {
+                            "target_unit_type_multipliers": {
+                                "base_damage_modifier": 0.0,
+                                "unit_type": "offmap_and_artillery_resistance",
+                                "weapon_multipliers": {
+                                    "accuracy_multiplier": 1.0,
+                                    "damage_multiplier": 0.75,
+                                    "penetration_multiplier": 1.0,
+                                    "suppression_multiplier": 1.0
+                                }
+                            }
                         }
                     ],
                     "cover_table": {
@@ -14694,7 +14945,7 @@
                     "target_type_table": [
                         {
                             "target_unit_type_multipliers": {
-                                "unit_type": "building",
+                                "unit_type": "emplacement",
                                 "weapon_multipliers": {
                                     "accuracy_multiplier": 1.0,
                                     "damage_multiplier": 0.75,
@@ -14711,6 +14962,18 @@
                                 "weapon_multipliers": {
                                     "accuracy_multiplier": 1.0,
                                     "damage_multiplier": 2.0,
+                                    "penetration_multiplier": 1.0,
+                                    "suppression_multiplier": 1.0
+                                }
+                            }
+                        },
+                        {
+                            "target_unit_type_multipliers": {
+                                "base_damage_modifier": 0.0,
+                                "unit_type": "offmap_and_artillery_resistance",
+                                "weapon_multipliers": {
+                                    "accuracy_multiplier": 1.0,
+                                    "damage_multiplier": 0.75,
                                     "penetration_multiplier": 1.0,
                                     "suppression_multiplier": 1.0
                                 }
@@ -14944,7 +15207,7 @@
                         "post_firing_aim_time_seconds": 4.0,
                         "post_firing_cooldown_interval_seconds": 0.0,
                         "ready_aim_time": {
-                            "max": 0.125,
+                            "max": 0.375,
                             "min": 0.125
                         },
                         "aim_time_multiplier": {
@@ -15222,11 +15485,11 @@
                         "midair_detonation_height": 0.0
                     },
                     "range": {
-                        "max": 160.0,
+                        "max": 500.0,
                         "min": 35.0,
                         "distance": {
                             "near": 40.0,
-                            "far": 120.0,
+                            "far": -1.0,
                             "mid": 80.0
                         },
                         "max_height": 75.0,
@@ -15322,7 +15585,7 @@
                             "max_right": 0.0,
                             "max_up": 45.0,
                             "speed_horizontal": 25.0,
-                            "speed_vertical": 25.0
+                            "speed_vertical": 35.0
                         },
                         "pivot_end_time": 0.0,
                         "pivot_only": "False",
@@ -15394,6 +15657,18 @@
                                 "weapon_multipliers": {
                                     "accuracy_multiplier": 1.0,
                                     "damage_multiplier": 0.66667,
+                                    "penetration_multiplier": 1.0,
+                                    "suppression_multiplier": 1.0
+                                }
+                            }
+                        },
+                        {
+                            "target_unit_type_multipliers": {
+                                "base_damage_modifier": 0.0,
+                                "unit_type": "offmap_and_artillery_resistance",
+                                "weapon_multipliers": {
+                                    "accuracy_multiplier": 1.0,
+                                    "damage_multiplier": 0.75,
                                     "penetration_multiplier": 1.0,
                                     "suppression_multiplier": 1.0
                                 }
@@ -16765,10 +17040,10 @@
                     "target_type_table": [
                         {
                             "target_unit_type_multipliers": {
-                                "unit_type": "sniper",
+                                "unit_type": "emplacement",
                                 "weapon_multipliers": {
                                     "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 0.8,
+                                    "damage_multiplier": 0.6,
                                     "penetration_multiplier": 1.0,
                                     "suppression_multiplier": 1.0
                                 },
@@ -16778,10 +17053,10 @@
                         {
                             "target_unit_type_multipliers": {
                                 "base_damage_modifier": 0.0,
-                                "unit_type": "bunker",
+                                "unit_type": "bridge",
                                 "weapon_multipliers": {
                                     "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 0.5,
+                                    "damage_multiplier": 2.0,
                                     "penetration_multiplier": 1.0,
                                     "suppression_multiplier": 1.0
                                 }
@@ -16789,14 +17064,14 @@
                         },
                         {
                             "target_unit_type_multipliers": {
-                                "unit_type": "emplacement",
+                                "base_damage_modifier": 0.0,
+                                "unit_type": "offmap_and_artillery_resistance",
                                 "weapon_multipliers": {
                                     "accuracy_multiplier": 1.0,
-                                    "damage_multiplier": 0.5,
+                                    "damage_multiplier": 0.75,
                                     "penetration_multiplier": 1.0,
                                     "suppression_multiplier": 1.0
-                                },
-                                "base_damage_modifier": 0.0
+                                }
                             }
                         }
                     ],
@@ -17469,6 +17744,18 @@
                                     "suppression_multiplier": 1.0
                                 }
                             }
+                        },
+                        {
+                            "target_unit_type_multipliers": {
+                                "base_damage_modifier": 0.0,
+                                "unit_type": "offmap_and_artillery_resistance",
+                                "weapon_multipliers": {
+                                    "accuracy_multiplier": 1.0,
+                                    "damage_multiplier": 0.75,
+                                    "penetration_multiplier": 1.0,
+                                    "suppression_multiplier": 1.0
+                                }
+                            }
                         }
                     ],
                     "cover_table": {
@@ -18136,6 +18423,18 @@
                                 "weapon_multipliers": {
                                     "accuracy_multiplier": 1.0,
                                     "damage_multiplier": 2.0,
+                                    "penetration_multiplier": 1.0,
+                                    "suppression_multiplier": 1.0
+                                }
+                            }
+                        },
+                        {
+                            "target_unit_type_multipliers": {
+                                "base_damage_modifier": 0.0,
+                                "unit_type": "offmap_and_artillery_resistance",
+                                "weapon_multipliers": {
+                                    "accuracy_multiplier": 1.0,
+                                    "damage_multiplier": 0.75,
                                     "penetration_multiplier": 1.0,
                                     "suppression_multiplier": 1.0
                                 }
@@ -19719,9 +20018,9 @@
                             "dynamic_radius_type": "fixed"
                         },
                         "damage": {
-                            "far": 0.2,
-                            "near": 0.3,
-                            "mid": 0.25
+                            "far": 0.15,
+                            "near": 0.25,
+                            "mid": 0.175
                         },
                         "damage_friendly": {
                             "far": 0.025,
@@ -19768,9 +20067,9 @@
                             }
                         },
                         "damage_own_units": {
-                            "far": 0.2,
-                            "mid": 0.25,
-                            "near": 0.3
+                            "far": 0.15,
+                            "mid": 0.175,
+                            "near": 0.25
                         }
                     },
                     "behaviour": {
@@ -19892,7 +20191,7 @@
                     "fx_always_visible": "True",
                     "fx_building_hit_delay": 0.0,
                     "fx_delay_in_building": 0.0,
-                    "fx_munition_name": "\\mortars\\mortar_medium",
+                    "fx_munition_name": "\\mortars\\mortar_standard",
                     "fx_tracer_name": "",
                     "fx_tracer_speed": 0.0,
                     "fx_use_building_panel_normal": "True",
@@ -19992,7 +20291,7 @@
                         "distance_scatter_max": 7.5,
                         "distance_scatter_obj_hit_min": 7.0,
                         "distance_scatter_offset": 0.0,
-                        "distance_scatter_ratio": 0.08,
+                        "distance_scatter_ratio": 0.1,
                         "fow_angle_multiplier": 1.25,
                         "fow_distance_multiplier": 1.25,
                         "max_tilt_angle": 0.0,
@@ -20482,9 +20781,9 @@
                             "dynamic_radius_type": "fixed"
                         },
                         "damage": {
-                            "far": 0.2,
-                            "near": 0.3,
-                            "mid": 0.25
+                            "far": 0.15,
+                            "near": 0.25,
+                            "mid": 0.175
                         },
                         "damage_friendly": {
                             "far": 0.025,
@@ -20531,9 +20830,9 @@
                             }
                         },
                         "damage_own_units": {
-                            "far": 0.2,
-                            "mid": 0.25,
-                            "near": 0.3
+                            "far": 0.15,
+                            "mid": 0.175,
+                            "near": 0.25
                         }
                     },
                     "behaviour": {
@@ -20655,7 +20954,7 @@
                     "fx_always_visible": "True",
                     "fx_building_hit_delay": 0.0,
                     "fx_delay_in_building": 0.0,
-                    "fx_munition_name": "\\mortars\\mortar_medium",
+                    "fx_munition_name": "\\mortars\\mortar_standard",
                     "fx_tracer_name": "",
                     "fx_tracer_speed": 0.0,
                     "fx_use_building_panel_normal": "True",
@@ -21245,9 +21544,9 @@
                             "dynamic_radius_type": "fixed"
                         },
                         "damage": {
-                            "far": 0.2,
-                            "near": 0.3,
-                            "mid": 0.25
+                            "far": 0.15,
+                            "near": 0.25,
+                            "mid": 0.175
                         },
                         "damage_friendly": {
                             "far": 0.025,
@@ -21294,9 +21593,9 @@
                             }
                         },
                         "damage_own_units": {
-                            "far": 0.2,
-                            "mid": 0.25,
-                            "near": 0.3
+                            "far": 0.15,
+                            "mid": 0.175,
+                            "near": 0.25
                         }
                     },
                     "behaviour": {
@@ -21418,7 +21717,7 @@
                     "fx_always_visible": "True",
                     "fx_building_hit_delay": 0.0,
                     "fx_delay_in_building": 0.0,
-                    "fx_munition_name": "\\mortars\\mortar_medium",
+                    "fx_munition_name": "\\mortars\\mortar_standard",
                     "fx_tracer_name": "",
                     "fx_tracer_speed": 0.0,
                     "fx_use_building_panel_normal": "True",
@@ -21510,15 +21809,15 @@
                         "weapon_reload_behavior_on_blueprint_convert": "persistent"
                     },
                     "scatter": {
-                        "angle_scatter": 5.0,
+                        "angle_scatter": 6.5,
                         "burst_pattern_enable": "False",
                         "delay_bracket_change_chance": 0.0,
                         "distance_bracket_count_air": 0.0,
                         "distance_bracket_count_ground": 1.0,
-                        "distance_scatter_max": 5.0,
+                        "distance_scatter_max": 6.0,
                         "distance_scatter_obj_hit_min": 7.0,
                         "distance_scatter_offset": 0.0,
-                        "distance_scatter_ratio": 0.04,
+                        "distance_scatter_ratio": 0.05,
                         "fow_angle_multiplier": 1.25,
                         "fow_distance_multiplier": 1.25,
                         "max_tilt_angle": 0.0,
@@ -22177,7 +22476,7 @@
                     "fx_always_visible": "True",
                     "fx_building_hit_delay": 0.0,
                     "fx_delay_in_building": 0.0,
-                    "fx_munition_name": "\\mortars\\mortar_medium_smoke",
+                    "fx_munition_name": "\\mortars\\mortar_smoke_standard",
                     "fx_tracer_name": "",
                     "fx_tracer_speed": 0.0,
                     "fx_use_building_panel_normal": "True",
@@ -22239,7 +22538,7 @@
                         "midair_detonation_height": 0.0
                     },
                     "range": {
-                        "max": 110.0,
+                        "max": 300.0,
                         "min": 15.0,
                         "distance": {
                             "near": -1.0,
@@ -22797,7 +23096,13 @@
                     "min": 0.0,
                     "damage_type": "True Damage",
                     "allow_overkill": "False",
-                    "on_penetrated_state_trees": [],
+                    "on_penetrated_state_trees": [
+                        {
+                            "container": {
+                                "state_tree": "hoff_burning_shells_ak"
+                            }
+                        }
+                    ],
                     "on_deflected_state_trees": [],
                     "post_damage_state_trees": [],
                     "damage_target_requirement": "",
@@ -23042,10 +23347,10 @@
                             "name": "tp_heavy_cover",
                             "value": "weapon_cover_info"
                         },
-                        "accuracy_multiplier": 1.0,
-                        "damage_multiplier": 1.0,
+                        "accuracy_multiplier": 0.5,
+                        "damage_multiplier": 0.5,
                         "penetration_multiplier": 1.0,
-                        "suppression_multiplier": 1.0,
+                        "suppression_multiplier": 0.1,
                         "aim_time_multiplier": 1.0
                     },
                     "tp_light_cover": {
@@ -23053,10 +23358,10 @@
                             "name": "tp_light_cover",
                             "value": "weapon_cover_info"
                         },
-                        "accuracy_multiplier": 1.0,
+                        "accuracy_multiplier": 0.5,
                         "damage_multiplier": 1.0,
                         "penetration_multiplier": 1.0,
-                        "suppression_multiplier": 1.0,
+                        "suppression_multiplier": 0.5,
                         "aim_time_multiplier": 1.0
                     },
                     "tp_negative_cover": {
@@ -23098,10 +23403,10 @@
                             "value": "weapon_cover_info"
                         },
                         "accuracy_multiplier": 1.0,
-                        "damage_multiplier": 1.0,
+                        "damage_multiplier": 0.5,
                         "penetration_multiplier": 1.0,
                         "suppression_multiplier": 1.0,
-                        "aim_time_multiplier": 1.0
+                        "aim_time_multiplier": 0.1
                     },
                     "tp_trench_cover": {
                         "template_reference": {
@@ -23454,7 +23759,13 @@
                     "min": 0.0,
                     "damage_type": "True Damage",
                     "allow_overkill": "False",
-                    "on_penetrated_state_trees": [],
+                    "on_penetrated_state_trees": [
+                        {
+                            "container": {
+                                "state_tree": "hoff_burning_shells_ak"
+                            }
+                        }
+                    ],
                     "on_deflected_state_trees": [],
                     "post_damage_state_trees": [],
                     "damage_target_requirement": "",
@@ -23699,10 +24010,10 @@
                             "name": "tp_heavy_cover",
                             "value": "weapon_cover_info"
                         },
-                        "accuracy_multiplier": 1.0,
-                        "damage_multiplier": 1.0,
+                        "accuracy_multiplier": 0.5,
+                        "damage_multiplier": 0.5,
                         "penetration_multiplier": 1.0,
-                        "suppression_multiplier": 1.0,
+                        "suppression_multiplier": 0.1,
                         "aim_time_multiplier": 1.0
                     },
                     "tp_light_cover": {
@@ -23710,10 +24021,10 @@
                             "name": "tp_light_cover",
                             "value": "weapon_cover_info"
                         },
-                        "accuracy_multiplier": 1.0,
+                        "accuracy_multiplier": 0.5,
                         "damage_multiplier": 1.0,
                         "penetration_multiplier": 1.0,
-                        "suppression_multiplier": 1.0,
+                        "suppression_multiplier": 0.5,
                         "aim_time_multiplier": 1.0
                     },
                     "tp_negative_cover": {
@@ -23755,10 +24066,10 @@
                             "value": "weapon_cover_info"
                         },
                         "accuracy_multiplier": 1.0,
-                        "damage_multiplier": 1.0,
+                        "damage_multiplier": 0.5,
                         "penetration_multiplier": 1.0,
                         "suppression_multiplier": 1.0,
-                        "aim_time_multiplier": 1.0
+                        "aim_time_multiplier": 0.1
                     },
                     "tp_trench_cover": {
                         "template_reference": {
@@ -24111,7 +24422,13 @@
                     "min": 0.0,
                     "damage_type": "True Damage",
                     "allow_overkill": "False",
-                    "on_penetrated_state_trees": [],
+                    "on_penetrated_state_trees": [
+                        {
+                            "container": {
+                                "state_tree": "hoff_burning_shells_ak"
+                            }
+                        }
+                    ],
                     "on_deflected_state_trees": [],
                     "post_damage_state_trees": [],
                     "damage_target_requirement": "",
@@ -24356,10 +24673,10 @@
                             "name": "tp_heavy_cover",
                             "value": "weapon_cover_info"
                         },
-                        "accuracy_multiplier": 1.0,
-                        "damage_multiplier": 1.0,
+                        "accuracy_multiplier": 0.5,
+                        "damage_multiplier": 0.5,
                         "penetration_multiplier": 1.0,
-                        "suppression_multiplier": 1.0,
+                        "suppression_multiplier": 0.1,
                         "aim_time_multiplier": 1.0
                     },
                     "tp_light_cover": {
@@ -24367,10 +24684,10 @@
                             "name": "tp_light_cover",
                             "value": "weapon_cover_info"
                         },
-                        "accuracy_multiplier": 1.0,
+                        "accuracy_multiplier": 0.5,
                         "damage_multiplier": 1.0,
                         "penetration_multiplier": 1.0,
-                        "suppression_multiplier": 1.0,
+                        "suppression_multiplier": 0.5,
                         "aim_time_multiplier": 1.0
                     },
                     "tp_negative_cover": {
@@ -24412,10 +24729,10 @@
                             "value": "weapon_cover_info"
                         },
                         "accuracy_multiplier": 1.0,
-                        "damage_multiplier": 1.0,
+                        "damage_multiplier": 0.5,
                         "penetration_multiplier": 1.0,
                         "suppression_multiplier": 1.0,
-                        "aim_time_multiplier": 1.0
+                        "aim_time_multiplier": 0.1
                     },
                     "tp_trench_cover": {
                         "template_reference": {
@@ -24768,7 +25085,13 @@
                     "min": 0.0,
                     "damage_type": "True Damage",
                     "allow_overkill": "False",
-                    "on_penetrated_state_trees": [],
+                    "on_penetrated_state_trees": [
+                        {
+                            "container": {
+                                "state_tree": "hoff_burning_shells_ak"
+                            }
+                        }
+                    ],
                     "on_deflected_state_trees": [],
                     "post_damage_state_trees": [],
                     "damage_target_requirement": "",
@@ -25013,10 +25336,10 @@
                             "name": "tp_heavy_cover",
                             "value": "weapon_cover_info"
                         },
-                        "accuracy_multiplier": 1.0,
-                        "damage_multiplier": 1.0,
+                        "accuracy_multiplier": 0.5,
+                        "damage_multiplier": 0.5,
                         "penetration_multiplier": 1.0,
-                        "suppression_multiplier": 1.0,
+                        "suppression_multiplier": 0.1,
                         "aim_time_multiplier": 1.0
                     },
                     "tp_light_cover": {
@@ -25024,10 +25347,10 @@
                             "name": "tp_light_cover",
                             "value": "weapon_cover_info"
                         },
-                        "accuracy_multiplier": 1.0,
+                        "accuracy_multiplier": 0.5,
                         "damage_multiplier": 1.0,
                         "penetration_multiplier": 1.0,
-                        "suppression_multiplier": 1.0,
+                        "suppression_multiplier": 0.5,
                         "aim_time_multiplier": 1.0
                     },
                     "tp_negative_cover": {
@@ -25069,10 +25392,10 @@
                             "value": "weapon_cover_info"
                         },
                         "accuracy_multiplier": 1.0,
-                        "damage_multiplier": 1.0,
+                        "damage_multiplier": 0.5,
                         "penetration_multiplier": 1.0,
                         "suppression_multiplier": 1.0,
-                        "aim_time_multiplier": 1.0
+                        "aim_time_multiplier": 0.1
                     },
                     "tp_trench_cover": {
                         "template_reference": {
@@ -26203,6 +26526,11 @@
                             "container": {
                                 "state_tree": "anti_tank_weapon_on_penetrate_wrapper"
                             }
+                        },
+                        {
+                            "container": {
+                                "state_tree": "hoff_burning_shells_ak"
+                            }
                         }
                     ],
                     "on_deflected_state_trees": [],
@@ -26229,7 +26557,7 @@
                 "fx_always_visible": "True",
                 "fx_building_hit_delay": 0.0,
                 "fx_delay_in_building": 0.0,
-                "fx_munition_name": "\\cannon\\shell_small",
+                "fx_munition_name": "\\cannon\\cannon_shell_light",
                 "fx_tracer_name": "",
                 "fx_tracer_speed": 0.0,
                 "fx_use_building_panel_normal": "True",
@@ -26545,7 +26873,7 @@
                         "damage_multiplier": 0.25,
                         "penetration_multiplier": 1.0,
                         "suppression_multiplier": 0.0,
-                        "aim_time_multiplier": 1.0
+                        "aim_time_multiplier": 0.1
                     },
                     "tp_trench_cover": {
                         "template_reference": {
@@ -26987,7 +27315,7 @@
                 "fx_always_visible": "True",
                 "fx_building_hit_delay": 0.0,
                 "fx_delay_in_building": 0.0,
-                "fx_munition_name": "\\mines\\mine_antitank",
+                "fx_munition_name": "\\mines\\mine_standard",
                 "fx_tracer_name": "",
                 "fx_tracer_speed": 0.0,
                 "fx_use_building_panel_normal": "False",
@@ -28337,10 +28665,10 @@
                     "persistent_cooldownticks": "False"
                 },
                 "damage": {
-                    "max": 200.0,
-                    "min": 175.0,
+                    "max": 250.0,
+                    "min": 200.0,
                     "damage_type": "explosive",
-                    "allow_overkill": "False",
+                    "allow_overkill": "True",
                     "on_penetrated_state_trees": [],
                     "on_deflected_state_trees": [],
                     "post_damage_state_trees": [],
@@ -30275,10 +30603,10 @@
                     "persistent_cooldownticks": "False"
                 },
                 "damage": {
-                    "max": 200.0,
-                    "min": 175.0,
+                    "max": 250.0,
+                    "min": 200.0,
                     "damage_type": "explosive",
-                    "allow_overkill": "False",
+                    "allow_overkill": "True",
                     "on_penetrated_state_trees": [],
                     "on_deflected_state_trees": [],
                     "post_damage_state_trees": [],
@@ -31762,7 +32090,7 @@
                                 "max_left": -47.5,
                                 "max_right": 47.5,
                                 "max_up": 0.0,
-                                "speed_horizontal": 50.0,
+                                "speed_horizontal": 38.0,
                                 "speed_vertical": 60.0
                             },
                             "pivot_end_time": 0.0,
@@ -32525,7 +32853,20 @@
                         "weapon_class": "rifle",
                         "fx_aoe_munition_name": "bullet_hvy",
                         "speech_code": "",
-                        "target_type_table": [],
+                        "target_type_table": [
+                            {
+                                "target_unit_type_multipliers": {
+                                    "base_damage_modifier": 0.0,
+                                    "unit_type": "offmap_and_artillery_resistance",
+                                    "weapon_multipliers": {
+                                        "accuracy_multiplier": 1.0,
+                                        "damage_multiplier": 0.75,
+                                        "penetration_multiplier": 1.0,
+                                        "suppression_multiplier": 1.0
+                                    }
+                                }
+                            }
+                        ],
                         "cover_table": {
                             "tp_defcover": {
                                 "template_reference": {

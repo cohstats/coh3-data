@@ -1484,7 +1484,7 @@
                             "remove_from_pathfinding_on_death": "True",
                             "reveal_to_all_on_death": "True",
                             "ui_can_scuttle": "False",
-                            "target_size": 26.0,
+                            "target_size": 20.0,
                             "weapon_priority": -80.0,
                             "wreck_entity_option": {
                                 "template_reference": {
@@ -2401,7 +2401,7 @@
                             "remove_from_pathfinding_on_death": "True",
                             "reveal_to_all_on_death": "False",
                             "ui_can_scuttle": "False",
-                            "target_size": 26.0,
+                            "target_size": 20.0,
                             "weapon_priority": -80.0,
                             "wreck_entity_option": {
                                 "template_reference": {
@@ -2566,9 +2566,9 @@
                                     "action": 0.0,
                                     "command": 0.0,
                                     "popcap": 0.0,
-                                    "fuel": 40.0,
+                                    "fuel": 60.0,
                                     "munition": 0.0,
-                                    "manpower": 400.0,
+                                    "manpower": 320.0,
                                     "requisition": 0.0,
                                     "ultimate": 0.0,
                                     "ability_resource_1": 0.0,
@@ -5397,7 +5397,7 @@
                                 "formatter": {
                                     "locstring": {
                                         "name": "formatter",
-                                        "value": "11272099"
+                                        "value": "11318376"
                                     }
                                 }
                             },
@@ -5468,7 +5468,7 @@
                             "death_seconds": 3.0,
                             "delete_when_dead": "True",
                             "force_attacker_memory": "False",
-                            "hitpoints": 600.0,
+                            "hitpoints": 840.0,
                             "is_invincible": "False",
                             "is_salvagable_wreck": "False",
                             "rebuilt_entity": {
@@ -5667,6 +5667,46 @@
                                             "is_secured_by_checkpoint": "False",
                                             "not_in_transition": "False",
                                             "relative_to_caster": "False"
+                                        }
+                                    },
+                                    {
+                                        "requirement": {
+                                            "template_reference": {
+                                                "name": "requirement",
+                                                "value": "requirements\\required_not"
+                                            },
+                                            "reason": "usage",
+                                            "requirement_table": [
+                                                {
+                                                    "required": {
+                                                        "template_reference": {
+                                                            "name": "required",
+                                                            "value": "requirements\\required_unit_type"
+                                                        },
+                                                        "qualify_option": {
+                                                            "template_reference": {
+                                                                "name": "qualify_option",
+                                                                "value": "options\\none"
+                                                            }
+                                                        },
+                                                        "reason": "usage",
+                                                        "search_load_out": "False",
+                                                        "ui_name": {
+                                                            "locstring": {
+                                                                "name": "ui_name",
+                                                                "value": "0"
+                                                            }
+                                                        },
+                                                        "unit_type": "victory_point"
+                                                    }
+                                                }
+                                            ],
+                                            "ui_name": {
+                                                "locstring": {
+                                                    "name": "ui_name",
+                                                    "value": "11217402"
+                                                }
+                                            }
                                         }
                                     }
                                 ],
@@ -5883,6 +5923,11 @@
                                 {
                                     "ability": {
                                         "instance_reference": "abilities/races/common/buildings/salvage_resource_cache_common"
+                                    }
+                                },
+                                {
+                                    "ability": {
+                                        "instance_reference": "abilities/races/british/building/royal_engineers_ordnance_survey_reveal_aura_uk"
                                     }
                                 }
                             ]
@@ -7173,7 +7218,7 @@
                         "remove_from_pathfinding_on_death": "True",
                         "reveal_to_all_on_death": "False",
                         "ui_can_scuttle": "False",
-                        "target_size": 26.0,
+                        "target_size": 20.0,
                         "weapon_priority": -80.0,
                         "wreck_entity_option": {
                             "template_reference": {
@@ -8310,7 +8355,7 @@
                                                             "restore_snap_to_ground_on_detach": "False",
                                                             "no_sim_update": "False",
                                                             "join_parent_squad": "False",
-                                                            "redirect_damage_to_parent_entity": "True",
+                                                            "redirect_damage_to_parent_entity": "False",
                                                             "receive_parent_animations": "True",
                                                             "receive_parent_death": "False"
                                                         }
@@ -8534,7 +8579,7 @@
                                                             "restore_snap_to_ground_on_detach": "False",
                                                             "no_sim_update": "False",
                                                             "join_parent_squad": "False",
-                                                            "redirect_damage_to_parent_entity": "True",
+                                                            "redirect_damage_to_parent_entity": "False",
                                                             "receive_parent_animations": "True",
                                                             "receive_parent_death": "False"
                                                         }
@@ -8758,7 +8803,7 @@
                                                             "restore_snap_to_ground_on_detach": "False",
                                                             "no_sim_update": "False",
                                                             "join_parent_squad": "False",
-                                                            "redirect_damage_to_parent_entity": "True",
+                                                            "redirect_damage_to_parent_entity": "False",
                                                             "receive_parent_animations": "True",
                                                             "receive_parent_death": "False"
                                                         }
@@ -8982,7 +9027,7 @@
                                                             "restore_snap_to_ground_on_detach": "False",
                                                             "no_sim_update": "False",
                                                             "join_parent_squad": "False",
-                                                            "redirect_damage_to_parent_entity": "True",
+                                                            "redirect_damage_to_parent_entity": "False",
                                                             "receive_parent_animations": "True",
                                                             "receive_parent_death": "False"
                                                         }
@@ -9206,7 +9251,7 @@
                                                             "restore_snap_to_ground_on_detach": "False",
                                                             "no_sim_update": "False",
                                                             "join_parent_squad": "False",
-                                                            "redirect_damage_to_parent_entity": "True",
+                                                            "redirect_damage_to_parent_entity": "False",
                                                             "receive_parent_animations": "True",
                                                             "receive_parent_death": "False"
                                                         }
@@ -15152,6 +15197,954 @@
         }
     },
     "parent": {
+        "hmg_parent": {
+            "extensions": [
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\weapon_ext"
+                        },
+                        "weapon": {
+                            "instance_reference": "weapon/american/small_arms/machine_gun/heavy_machine_gun/30cal_hmg_us"
+                        }
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\team_weapon_ext"
+                        },
+                        "can_manual_abandon": "True",
+                        "disable_garrison": "False",
+                        "team_weapon_type": "tp_carried",
+                        "role_list": [
+                            {
+                                "role": {
+                                    "join_sync_marker": "loc_gunner",
+                                    "required": "True",
+                                    "role_name": "gunner",
+                                    "animation_role_override": {
+                                        "instance_reference": "animation_role/soldier/hmg_variants/us_hmg_gunner"
+                                    },
+                                    "setup_join_sync_marker_override": "",
+                                    "apply_role_overrides_only_when_synced": "True",
+                                    "parent_inventory_slot": "",
+                                    "weapon_override": {
+                                        "template_reference": {
+                                            "name": "weapon_override",
+                                            "value": ""
+                                        }
+                                    },
+                                    "setup_position_marker": "",
+                                    "teardown_position_marker": "",
+                                    "automatic_weapon_change": "True"
+                                }
+                            },
+                            {
+                                "role": {
+                                    "join_sync_marker": "loc_loader",
+                                    "required": "False",
+                                    "role_name": "loader",
+                                    "animation_role_override": {
+                                        "instance_reference": "animation_role/soldier/hmg_variants/us_hmg_loader"
+                                    },
+                                    "setup_join_sync_marker_override": "loc_loader_takeover",
+                                    "apply_role_overrides_only_when_synced": "False",
+                                    "parent_inventory_slot": "",
+                                    "weapon_override": {
+                                        "template_reference": {
+                                            "name": "weapon_override",
+                                            "value": "weapon_choice"
+                                        },
+                                        "weapon_choice": {
+                                            "type": "default",
+                                            "non_entity_weapon_wrapper": {
+                                                "template_reference": {
+                                                    "name": "non_entity_weapon_wrapper",
+                                                    "value": ""
+                                                }
+                                            },
+                                            "weapon_entity_attachment": {
+                                                "template_reference": {
+                                                    "name": "weapon_entity_attachment",
+                                                    "value": "options\\attachment_types\\entity_create_attachment"
+                                                },
+                                                "entity_attach_data": {
+                                                    "template_reference": {
+                                                        "name": "entity_attach_data",
+                                                        "value": "attachments\\attach_data_entity"
+                                                    },
+                                                    "attach_data": {
+                                                        "template_reference": {
+                                                            "name": "attach_data",
+                                                            "value": "attachments\\attach_data"
+                                                        },
+                                                        "marker_name_parent": "loc_weapon_01_r",
+                                                        "parent_rigidbody_target_name": "",
+                                                        "game_object_attachment_type": "scenegraph"
+                                                    },
+                                                    "ebp": {
+                                                        "instance_reference": "ebps/races/american/weapons/special/w_ammo_box_us"
+                                                    },
+                                                    "attachment_flags": {
+                                                        "sim_only": "False",
+                                                        "no_pathfinding": "True",
+                                                        "not_snappable": "True",
+                                                        "restore_snap_to_ground_on_detach": "True",
+                                                        "no_sim_update": "False",
+                                                        "join_parent_squad": "False",
+                                                        "redirect_damage_to_parent_entity": "True",
+                                                        "receive_parent_animations": "True",
+                                                        "receive_parent_death": "False"
+                                                    }
+                                                }
+                                            },
+                                            "heading": {
+                                                "x": 0.0,
+                                                "y": 0.0,
+                                                "z": 0.0
+                                            },
+                                            "length": 0.0,
+                                            "origin": {
+                                                "x": 0.0,
+                                                "y": 0.0,
+                                                "z": 0.0
+                                            }
+                                        }
+                                    },
+                                    "setup_position_marker": "loc_loader_takeover",
+                                    "teardown_position_marker": "loc_loader",
+                                    "automatic_weapon_change": "False"
+                                }
+                            }
+                        ],
+                        "destroy_on_abandon_health_threshold": -1.0,
+                        "on_abandon_action_tree": {
+                            "template_reference": {
+                                "name": "on_abandon_action_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "on_abandon_weapon_action_tree": {
+                            "template_reference": {
+                                "name": "on_abandon_weapon_action_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "is_crew_crushable": "True",
+                        "is_crew_targetable": "True",
+                        "destroy_on_abandon_chance": 0.0,
+                        "compute_aim_sector": "False"
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\recrewable_ext"
+                        },
+                        "race_list": [
+                            {
+                                "race_data": {
+                                    "ext_key": {
+                                        "instance_reference": "racebps/americans"
+                                    },
+                                    "info": {
+                                        "capture_squad_blueprint": {
+                                            "instance_reference": "sbps/races/american/team_weapons/hmg_30cal_us"
+                                        },
+                                        "max_capture_crew_size": 2.0,
+                                        "min_capture_crew_size": 1.0,
+                                        "abandon_animation_seconds": 0.0,
+                                        "recrew_max_squad_size": 4.0,
+                                        "abandoned_allows_pass_through": "False",
+                                        "driver_death_chance_on_entity_death": 1.0,
+                                        "driver_squad_blueprint": {
+                                            "instance_reference": ""
+                                        },
+                                        "hide_selection_visual_when_crewed": "False",
+                                        "reinforce_entity_blueprint": {
+                                            "instance_reference": "ebps/races/american/infantry/crew_hmg_us"
+                                        },
+                                        "is_abandoned_on_spawn": "False"
+                                    }
+                                }
+                            },
+                            {
+                                "race_data": {
+                                    "ext_key": {
+                                        "instance_reference": "racebps/germans"
+                                    },
+                                    "info": {
+                                        "capture_squad_blueprint": {
+                                            "instance_reference": "sbps/races/american/team_weapons/hmg_30cal_us"
+                                        },
+                                        "max_capture_crew_size": 2.0,
+                                        "min_capture_crew_size": 1.0,
+                                        "abandon_animation_seconds": 0.0,
+                                        "recrew_max_squad_size": 4.0,
+                                        "abandoned_allows_pass_through": "False",
+                                        "driver_death_chance_on_entity_death": 1.0,
+                                        "driver_squad_blueprint": {
+                                            "instance_reference": ""
+                                        },
+                                        "hide_selection_visual_when_crewed": "False",
+                                        "reinforce_entity_blueprint": {
+                                            "instance_reference": "ebps/races/german/infantry/crew_hmg_ger"
+                                        },
+                                        "is_abandoned_on_spawn": "False"
+                                    }
+                                }
+                            },
+                            {
+                                "race_data": {
+                                    "ext_key": {
+                                        "instance_reference": "racebps/british"
+                                    },
+                                    "info": {
+                                        "capture_squad_blueprint": {
+                                            "instance_reference": "sbps/races/american/team_weapons/hmg_30cal_us"
+                                        },
+                                        "max_capture_crew_size": 2.0,
+                                        "min_capture_crew_size": 1.0,
+                                        "abandon_animation_seconds": 0.0,
+                                        "recrew_max_squad_size": 4.0,
+                                        "abandoned_allows_pass_through": "False",
+                                        "driver_death_chance_on_entity_death": 1.0,
+                                        "driver_squad_blueprint": {
+                                            "instance_reference": ""
+                                        },
+                                        "hide_selection_visual_when_crewed": "False",
+                                        "reinforce_entity_blueprint": {
+                                            "instance_reference": "ebps/races/british/infantry/crew_hmg_uk"
+                                        },
+                                        "is_abandoned_on_spawn": "False"
+                                    }
+                                }
+                            },
+                            {
+                                "race_data": {
+                                    "ext_key": {
+                                        "instance_reference": "racebps/british_africa"
+                                    },
+                                    "info": {
+                                        "capture_squad_blueprint": {
+                                            "instance_reference": "sbps/races/american/team_weapons/hmg_30cal_us"
+                                        },
+                                        "max_capture_crew_size": 2.0,
+                                        "min_capture_crew_size": 1.0,
+                                        "abandon_animation_seconds": 0.0,
+                                        "recrew_max_squad_size": 4.0,
+                                        "abandoned_allows_pass_through": "False",
+                                        "driver_death_chance_on_entity_death": 1.0,
+                                        "driver_squad_blueprint": {
+                                            "instance_reference": ""
+                                        },
+                                        "hide_selection_visual_when_crewed": "False",
+                                        "reinforce_entity_blueprint": {
+                                            "instance_reference": "ebps/races/british_africa/infantry/crew_hmg_africa_uk"
+                                        },
+                                        "is_abandoned_on_spawn": "False"
+                                    }
+                                }
+                            },
+                            {
+                                "race_data": {
+                                    "ext_key": {
+                                        "instance_reference": "racebps/afrika_korps"
+                                    },
+                                    "info": {
+                                        "capture_squad_blueprint": {
+                                            "instance_reference": "sbps/races/american/team_weapons/hmg_30cal_us"
+                                        },
+                                        "max_capture_crew_size": 2.0,
+                                        "min_capture_crew_size": 1.0,
+                                        "abandon_animation_seconds": 0.0,
+                                        "recrew_max_squad_size": 4.0,
+                                        "abandoned_allows_pass_through": "False",
+                                        "driver_death_chance_on_entity_death": 1.0,
+                                        "driver_squad_blueprint": {
+                                            "instance_reference": ""
+                                        },
+                                        "hide_selection_visual_when_crewed": "False",
+                                        "reinforce_entity_blueprint": {
+                                            "instance_reference": "ebps/races/afrika_korps/infantry/crew_hmg_ak"
+                                        },
+                                        "is_abandoned_on_spawn": "False"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\ui_ext"
+                        },
+                        "ap_killed_kicker": "True",
+                        "ap_loss_kicker": "True",
+                        "decorator_height": -1.0,
+                        "extra_text_deprecated": "",
+                        "ghost_enable": "False",
+                        "help_text": {
+                            "locstring": {
+                                "name": "help_text",
+                                "value": "0"
+                            }
+                        },
+                        "hotkey_name": "",
+                        "icon_name": "races/american/team_weapons/hmg_30cal_weapon_us",
+                        "kill_type": "",
+                        "minimap_color": "*",
+                        "minimap_enable": "False",
+                        "minimap_team_only": "False",
+                        "minimap_teamcolor": "False",
+                        "overlay_name": "",
+                        "reveal_for_decryption": "False",
+                        "screen_name": {
+                            "locstring": {
+                                "name": "screen_name",
+                                "value": "0"
+                            }
+                        },
+                        "selection_name": "weapon",
+                        "selection_scale": 1.0,
+                        "selection_type": "multi_entity_select",
+                        "tooltip_txt": {
+                            "locstring": {
+                                "name": "tooltip_txt",
+                                "value": "0"
+                            }
+                        },
+                        "ui_priority": 0.0,
+                        "minimap_icon": "",
+                        "minimap_icon_scale": 1.0,
+                        "brief_text": {
+                            "locstring": {
+                                "name": "brief_text",
+                                "value": "11235729"
+                            }
+                        },
+                        "extra_text": {
+                            "locstring": {
+                                "name": "extra_text",
+                                "value": "0"
+                            }
+                        },
+                        "screen_name_short": {
+                            "locstring": {
+                                "name": "screen_name_short",
+                                "value": "0"
+                            }
+                        },
+                        "show_in_build_log": "True",
+                        "show_entity_appearance": "True",
+                        "screen_name_world": {
+                            "locstring": {
+                                "name": "screen_name_world",
+                                "value": "0"
+                            }
+                        },
+                        "help_text_world": {
+                            "locstring": {
+                                "name": "help_text_world",
+                                "value": "11235511"
+                            }
+                        },
+                        "extra_text_world": {
+                            "locstring": {
+                                "name": "extra_text_world",
+                                "value": "0"
+                            }
+                        },
+                        "map_rotation_type_override": "no_override",
+                        "symbol_icon_name": "",
+                        "occlusion_state": "can_be_occluded",
+                        "decorator_visibility": "default",
+                        "skin_pack_override": "False",
+                        "skin_summer": "",
+                        "skin_winter": "",
+                        "targeting_and_bandbox_selection_priority": "medium",
+                        "selection_method": "obb_size",
+                        "terrain_info_display_offset": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "decorator_ledger_key": "",
+                        "decorator_ledger_bar_style": {
+                            "instance_reference": ""
+                        },
+                        "selection_name_squad_override": "",
+                        "selection_grouping_ledger_key": "",
+                        "debug_text": "",
+                        "selection_datatemplate": "",
+                        "use_construction_range_on_selection": "False",
+                        "use_combat_range_on_selection": "True",
+                        "is_armoured": "False",
+                        "decorator_data_template": "",
+                        "ui_combine_type": "intersection",
+                        "spotted_on_spawn": "False",
+                        "district_info": {
+                            "instance_reference": ""
+                        },
+                        "force_facing_and_range_visual_to_center_on_entity": "False",
+                        "is_unique_to_race": "False",
+                        "kicker_offset": 0.0,
+                        "portrait_name": "races/american/team_weapons/hmg_30cal_weapon_us_portrait",
+                        "selection_secondary_bounds_scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "z": 1.0
+                        },
+                        "decorator": "",
+                        "map_layer": 0.0,
+                        "map_mark": "",
+                        "portrait_icon": "",
+                        "ui_codex_info": {
+                            "priority": 0.0,
+                            "exclusive": "False",
+                            "ui_position": {
+                                "ui_position_column": -1.0,
+                                "ui_position_row": -1.0
+                            }
+                        },
+                        "custom_selection_obbs": [],
+                        "ui_extra_infos": [],
+                        "screen_name_visibility": "visible",
+                        "help_text_formatter": {
+                            "template_reference": {
+                                "name": "help_text_formatter",
+                                "value": ""
+                            }
+                        },
+                        "extra_text_formatter": {
+                            "template_reference": {
+                                "name": "extra_text_formatter",
+                                "value": ""
+                            }
+                        },
+                        "extra_text_world_formatter": {
+                            "template_reference": {
+                                "name": "extra_text_world_formatter",
+                                "value": ""
+                            }
+                        },
+                        "help_text_world_formatter": {
+                            "template_reference": {
+                                "name": "help_text_world_formatter",
+                                "value": ""
+                            }
+                        },
+                        "screen_name_formatter": {
+                            "template_reference": {
+                                "name": "screen_name_formatter",
+                                "value": ""
+                            }
+                        },
+                        "screen_name_short_formatter": {
+                            "template_reference": {
+                                "name": "screen_name_short_formatter",
+                                "value": ""
+                            }
+                        },
+                        "screen_name_world_formatter": {
+                            "template_reference": {
+                                "name": "screen_name_world_formatter",
+                                "value": ""
+                            }
+                        },
+                        "brief_text_formatter": {
+                            "template_reference": {
+                                "name": "brief_text_formatter",
+                                "value": ""
+                            }
+                        },
+                        "sound": "",
+                        "sound_alternative": "",
+                        "telemetry_name": "",
+                        "selectable_in_non_interactive_area": "True",
+                        "selection_obb_size": {
+                            "x": 3.0,
+                            "y": 3.0,
+                            "z": 3.0
+                        },
+                        "target_selection_priority_by_owner": "none",
+                        "turn_in_place_distance": 0.0,
+                        "bandbox_selection_priority_override": "",
+                        "decorator_visibility_statetree_node_condition": "",
+                        "selection_ui_visibility_statetree_node_condition": "",
+                        "global_unit_control_row": -1.0,
+                        "global_unit_control_row_special": -1.0,
+                        "disable_UI_if_garrison_disabled": "True"
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\health_ext"
+                        },
+                        "can_repair": "True",
+                        "cuttable": "False",
+                        "death_event_name": "Death",
+                        "death_seconds": 180.0,
+                        "delete_when_dead": "False",
+                        "force_attacker_memory": "False",
+                        "hitpoints": 180.0,
+                        "is_invincible": "False",
+                        "is_salvagable_wreck": "False",
+                        "rebuilt_entity": {
+                            "instance_reference": ""
+                        },
+                        "rebuilt_squad": {
+                            "instance_reference": ""
+                        },
+                        "rebuilt_use_wreck_owner": "False",
+                        "receive_weapon_cover_modifiers": "True",
+                        "regeneration": 0.0,
+                        "regeneration_disabled": "False",
+                        "remove_from_pathfinding_on_death": "True",
+                        "reveal_to_all_on_death": "False",
+                        "ui_can_scuttle": "False",
+                        "target_size": 20.0,
+                        "weapon_priority": -100.0,
+                        "wreck_entity_option": {
+                            "template_reference": {
+                                "name": "wreck_entity_option",
+                                "value": "options\\none"
+                            }
+                        },
+                        "armor_type": "None",
+                        "armor_layout_option": {
+                            "template_reference": {
+                                "name": "armor_layout_option",
+                                "value": "options\\ebpextensions\\healthext\\armor_layouts\\armor_layout_uniform"
+                            },
+                            "armor": 60.0
+                        },
+                        "allegiance_override": "none",
+                        "not_default_attackable": "False",
+                        "armor_scaler_by_damage_type": {
+                            "True Damage": 1.0,
+                            "flame": 1.0,
+                            "ballistic": 1.0,
+                            "explosive": 1.0
+                        },
+                        "self_destruct_action_tree": {
+                            "template_reference": {
+                                "name": "self_destruct_action_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "rebuilt_entity_action_tree": {
+                            "template_reference": {
+                                "name": "rebuilt_entity_action_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "on_received_damage_action_tree": {
+                            "template_reference": {
+                                "name": "on_received_damage_action_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "death_action_tree": "",
+                        "can_be_damaged_by_ally": "False",
+                        "on_reach_invulnerable_min_cap_entity_state_tree_ref": "",
+                        "on_reach_max_health_entity_state_tree_ref": "",
+                        "restore_hook_offsets": [],
+                        "can_be_restored": "False",
+                        "can_be_damaged_by_ally_default_attack_allowed": "True",
+                        "can_be_targeted_by_ally": "False"
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\ability_ext"
+                        },
+                        "abilities": []
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\attachment_child_ext"
+                        },
+                        "on_attach": {
+                            "template_reference": {
+                                "name": "on_attach",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": "entity_weapon_attach\\library\\disable_weapon_aim_of_shooter"
+                        },
+                        "on_detach": {
+                            "template_reference": {
+                                "name": "on_detach",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": "entity_weapon_attach\\library\\enable_weapon_aim_of_shooter"
+                        },
+                        "requires_attachment_dynamics": "True",
+                        "tracking_affects_transformation_when_setup": "False",
+                        "rotation_rate_degrees_per_second_signed_dca_key": "",
+                        "output_dca_to_parent": "True",
+                        "dca_vertical_degrees_offset": 0.0,
+                        "horizontal_angle_limits_only_apply_when_setup": "False"
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\paradrop_ext"
+                        },
+                        "make_dead_on_drop": "False",
+                        "reserve_sparse_grid_entry": "True",
+                        "sight_start_height": -1.0,
+                        "on_landing_action_tree": {
+                            "template_reference": {
+                                "name": "on_landing_action_tree",
+                                "value": "state_tree_global_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": "airborne_paradrop_util\\on_landing"
+                        },
+                        "drop_height": 66.0,
+                        "on_landed_action_tree": {
+                            "template_reference": {
+                                "name": "on_landed_action_tree",
+                                "value": "state_tree_global_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": "airborne_paradrop_util\\detach_parachute"
+                        },
+                        "on_start_paradropping_action_tree": {
+                            "template_reference": {
+                                "name": "on_start_paradropping_action_tree",
+                                "value": "state_tree_global_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "travel_distance": 1.0,
+                        "cord_length": 3.0,
+                        "swing_speed": 0.005,
+                        "steering_duration": 1.0,
+                        "parachute_ebp": {
+                            "instance_reference": "ebps/races/american/props/parachute"
+                        },
+                        "descent_speed": 10.0,
+                        "landing_sequence_seconds": 4.0,
+                        "animated_motion": "False",
+                        "kill_if_landing_on_impass": "True"
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\camouflage_ext"
+                        },
+                        "attack_priority": 5.0,
+                        "camouflage_type": "tp_global",
+                        "chain_revealer": "False",
+                        "detection_radius": 4.0,
+                        "must_be_fully_constructed": "False",
+                        "permanently_activated": "False",
+                        "combat_reset_time": 5.0,
+                        "first_strike_shots": 1.0,
+                        "revert_max": 25.0,
+                        "revert_multiplier": 2.0,
+                        "revert_time": 1.5,
+                        "revert_time_on_detection": 1.0,
+                        "camouflaged_combat_stance": "attack",
+                        "camouflage_action_tree": {
+                            "template_reference": {
+                                "name": "camouflage_action_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "first_strike_tree": {
+                            "template_reference": {
+                                "name": "first_strike_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "on_observed_by_detector_tree": {
+                            "template_reference": {
+                                "name": "on_observed_by_detector_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "on_observed_wear_off_seconds": 2.0
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\type_ext"
+                        },
+                        "unit_type_list": [
+                            {
+                                "unit_type": "team_weapon"
+                            },
+                            {
+                                "unit_type": "rapid_response"
+                            }
+                        ],
+                        "weapon_targeting": "no_targeting",
+                        "intersection_testing": "True",
+                        "race_type_list": [],
+                        "attack_target_restriction_on_attacker": [],
+                        "attack_target_restriction_on_victim": [],
+                        "weapon_category_targeting_filter": {
+                            "1melee": "True",
+                            "2ranged": "True",
+                            "3siege": "True",
+                            "4charge": "True",
+                            "5brace": "True",
+                            "6auto_ability_cast": "True",
+                            "7single_cast_ability": "True",
+                            "8dummy": "True"
+                        }
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\cost_ext"
+                        },
+                        "time_cost": {
+                            "cost": {
+                                "action": 0.0,
+                                "command": 0.0,
+                                "popcap": 0.0,
+                                "fuel": 0.0,
+                                "munition": 0.0,
+                                "manpower": 40.0,
+                                "requisition": 0.0,
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
+                            },
+                            "time_seconds": 5.0,
+                            "time_turns": 0.0,
+                            "builder_cost": {
+                                "action_points": 0.0
+                            },
+                            "squad_cost": {
+                                "action": 0.0,
+                                "command": 0.0,
+                                "popcap": 0.0,
+                                "fuel": 0.0,
+                                "munition": 0.0,
+                                "manpower": 0.0,
+                                "requisition": 0.0,
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
+                            }
+                        }
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\presentation_override_ext"
+                        },
+                        "only_after_repossession": "True",
+                        "race_mapping_list": [
+                            {
+                                "race_mapping": {
+                                    "race_key": {
+                                        "instance_reference": "racebps/british"
+                                    },
+                                    "presentation_entity_override": {
+                                        "instance_reference": "ebps/races/british/weapons/small_arms/machine_guns/heavy_machine_gun/w_vickers_hmg_uk"
+                                    },
+                                    "presentation_squad_override": {
+                                        "instance_reference": "sbps/races/british/team_weapons/hmg_vickers_uk"
+                                    }
+                                }
+                            },
+                            {
+                                "race_mapping": {
+                                    "race_key": {
+                                        "instance_reference": "racebps/british_africa"
+                                    },
+                                    "presentation_entity_override": {
+                                        "instance_reference": "ebps/races/british_africa/weapons/small_arms/machine_guns/heavy_machine_gun/w_vickers_hmg_africa_uk"
+                                    },
+                                    "presentation_squad_override": {
+                                        "instance_reference": "sbps/races/british_africa/team_weapons/hmg_vickers_africa_uk"
+                                    }
+                                }
+                            },
+                            {
+                                "race_mapping": {
+                                    "race_key": {
+                                        "instance_reference": "racebps/germans"
+                                    },
+                                    "presentation_entity_override": {
+                                        "instance_reference": "ebps/races/german/weapons/small_arms/machine_gun/heavy_machine_gun/w_mg42_hmg_ger"
+                                    },
+                                    "presentation_squad_override": {
+                                        "instance_reference": "sbps/races/german/team_weapons/hmg_mg42_ger"
+                                    }
+                                }
+                            },
+                            {
+                                "race_mapping": {
+                                    "race_key": {
+                                        "instance_reference": "racebps/afrika_korps"
+                                    },
+                                    "presentation_entity_override": {
+                                        "instance_reference": "ebps/races/afrika_korps/weapons/small_arms/machine_gun/heavy_machine_gun/w_mg34_hmg_ak"
+                                    },
+                                    "presentation_squad_override": {
+                                        "instance_reference": "sbps/races/afrika_korps/team_weapons/hmg_mg34_ak"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\moving_ext"
+                        },
+                        "acceleration": -1.0,
+                        "deceleration": -1.0,
+                        "high_path_look_ahead_max_dist": 10.0,
+                        "orient_to_terrain": "True",
+                        "pass_type": {
+                            "instance_reference": ""
+                        },
+                        "rotation_rate": 10000.0,
+                        "turn_plan": {
+                            "instance_reference": ""
+                        },
+                        "on_land_overturn_scale": 0.0,
+                        "motion_tree_movement_direction_count": 4.0,
+                        "right_of_way_priority": -1.0,
+                        "use_prediction": "False",
+                        "reduce_clipping_by_slowing_other": "False",
+                        "walker_option": {
+                            "template_reference": {
+                                "name": "walker_option",
+                                "value": "options\\none"
+                            }
+                        },
+                        "motion_tree_pivot_animations_count": 0.0,
+                        "motion_tree_atomic_pivot_anim": "False",
+                        "skimmer_option": {
+                            "template_reference": {
+                                "name": "skimmer_option",
+                                "value": "options\\none"
+                            }
+                        },
+                        "can_path_into_blocked_cover": "False",
+                        "convertible_dynamics_option": {
+                            "template_reference": {
+                                "name": "convertible_dynamics_option",
+                                "value": "options\\none"
+                            }
+                        },
+                        "pathfinding_option": {
+                            "template_reference": {
+                                "name": "pathfinding_option",
+                                "value": "options\\none"
+                            }
+                        },
+                        "motion_tree_strafing_anim": "False",
+                        "speed_levels": {
+                            "speed_level_0": 0.0,
+                            "speed_level_1": 0.0,
+                            "speed_level_2": 0.0,
+                            "speed_level_3": 0.0,
+                            "speed_level_4": 0.0
+                        },
+                        "melee_move_tolerance": 0.0,
+                        "navigation_agent_info": {
+                            "instance_reference": ""
+                        },
+                        "can_evacuate_enemy_unit": "False",
+                        "pass_type_destination": {
+                            "instance_reference": ""
+                        },
+                        "speed_scaling_table": {
+                            "min_speed": 1.0,
+                            "default_speed": 1.0,
+                            "max_speed": 1.0,
+                            "reverse_max_speed": 1.0
+                        },
+                        "snap_to_surface_type": "GroundOrWalkable",
+                        "reverse_acceleration": 0.0,
+                        "reverse_deceleration": 0.0,
+                        "pivot_rate": 0.0,
+                        "portal_to_portal_cost_exponent": 1.0,
+                        "smooth_path_option": {
+                            "template_reference": {
+                                "name": "smooth_path_option",
+                                "value": "options\\ebpextensions\\movingext\\cover_and_blockers_smoothing_option"
+                            },
+                            "ignore_num_cells_at_start": 3.0,
+                            "ignore_num_cells_worse_cost": 3.0,
+                            "with_cost_speed_multiplier": 0.4
+                        },
+                        "direct_path_look_ahead_max_dist": 20.0,
+                        "start_move_speed_option": {
+                            "template_reference": {
+                                "name": "start_move_speed_option",
+                                "value": "options\\none"
+                            }
+                        }
+                    }
+                }
+            ],
+            "pbgid": 2177570.0,
+            "parent_pbg": {
+                "instance_reference": ""
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "child_custom_properties": [],
+                "custom_bool_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "custom_float_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_int32_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_reflected_enum_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_vector3f_properties": []
+            }
+        },
         "infantry_parent": {
             "extensions": [
                 {
@@ -16494,9 +17487,9 @@
                                 "action": 0.0,
                                 "command": 0.0,
                                 "popcap": 0.0,
-                                "fuel": 40.0,
+                                "fuel": 20.0,
                                 "munition": 0.0,
-                                "manpower": 280.0,
+                                "manpower": 140.0,
                                 "requisition": 0.0,
                                 "ultimate": 0.0,
                                 "ability_resource_1": 0.0,
@@ -17169,9 +18162,9 @@
                                 "action": 0.0,
                                 "command": 0.0,
                                 "popcap": 0.0,
-                                "fuel": 40.0,
+                                "fuel": 20.0,
                                 "munition": 0.0,
-                                "manpower": 280.0,
+                                "manpower": 140.0,
                                 "requisition": 0.0,
                                 "ultimate": 0.0,
                                 "ability_resource_1": 0.0,
@@ -17201,6 +18194,1464 @@
             "pbgid": 2146553.0,
             "parent_pbg": {
                 "instance_reference": ""
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "child_custom_properties": [],
+                "custom_bool_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "custom_float_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_int32_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_reflected_enum_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_vector3f_properties": []
+            }
+        },
+        "vehicle_heavy_parent": {
+            "extensions": [
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\health_ext"
+                        },
+                        "can_repair": "True",
+                        "cuttable": "False",
+                        "death_event_name": "Death",
+                        "death_seconds": 0.0,
+                        "delete_when_dead": "False",
+                        "force_attacker_memory": "False",
+                        "hitpoints": 100.0,
+                        "is_invincible": "False",
+                        "is_salvagable_wreck": "False",
+                        "rebuilt_entity": {
+                            "instance_reference": ""
+                        },
+                        "rebuilt_squad": {
+                            "instance_reference": ""
+                        },
+                        "rebuilt_use_wreck_owner": "False",
+                        "receive_weapon_cover_modifiers": "False",
+                        "regeneration": 0.0,
+                        "regeneration_disabled": "False",
+                        "remove_from_pathfinding_on_death": "False",
+                        "reveal_to_all_on_death": "True",
+                        "ui_can_scuttle": "False",
+                        "target_size": 20.0,
+                        "weapon_priority": 0.0,
+                        "wreck_entity_option": {
+                            "template_reference": {
+                                "name": "wreck_entity_option",
+                                "value": "options\\ebpextensions\\healthext\\wreck_table"
+                            },
+                            "wreck_entities": {
+                                "default": {
+                                    "instance_reference": ""
+                                },
+                                "brewup": {
+                                    "instance_reference": ""
+                                }
+                            },
+                            "spawn_wreck_requirements": [
+                                {
+                                    "requirement": {
+                                        "template_reference": {
+                                            "name": "requirement",
+                                            "value": "requirements\\required_passable_path"
+                                        },
+                                        "pass_walkable_surface": "True",
+                                        "reason": "usage",
+                                        "ui_name": {
+                                            "locstring": {
+                                                "name": "ui_name",
+                                                "value": "0"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "keep_wreck_ownership": "False"
+                        },
+                        "armor_type": "None",
+                        "armor_layout_option": {
+                            "template_reference": {
+                                "name": "armor_layout_option",
+                                "value": "options\\ebpextensions\\healthext\\armor_layouts\\armor_layout_front_rear_side"
+                            },
+                            "front_armor": 100.0,
+                            "rear_armor": 100.0,
+                            "side_armor": 100.0,
+                            "rear_damage_multiplier": 1.0,
+                            "side_damage_multiplier": 1.0,
+                            "front_damage_multiplier": 1.0
+                        },
+                        "allegiance_override": "none",
+                        "not_default_attackable": "False",
+                        "armor_scaler_by_damage_type": {
+                            "True Damage": 1.0,
+                            "flame": -1.0,
+                            "ballistic": 1.0,
+                            "explosive": 1.0
+                        },
+                        "self_destruct_action_tree": {
+                            "template_reference": {
+                                "name": "self_destruct_action_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "rebuilt_entity_action_tree": {
+                            "template_reference": {
+                                "name": "rebuilt_entity_action_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "on_received_damage_action_tree": {
+                            "template_reference": {
+                                "name": "on_received_damage_action_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "death_action_tree": "",
+                        "can_be_damaged_by_ally": "True",
+                        "on_reach_invulnerable_min_cap_entity_state_tree_ref": "",
+                        "on_reach_max_health_entity_state_tree_ref": "",
+                        "restore_hook_offsets": [],
+                        "can_be_restored": "False",
+                        "can_be_damaged_by_ally_default_attack_allowed": "True",
+                        "can_be_targeted_by_ally": "False"
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\cost_ext"
+                        },
+                        "time_cost": {
+                            "cost": {
+                                "action": 0.0,
+                                "command": 0.0,
+                                "popcap": 0.0,
+                                "fuel": 0.0,
+                                "munition": 0.0,
+                                "manpower": 0.0,
+                                "requisition": 0.0,
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
+                            },
+                            "time_seconds": 0.0,
+                            "time_turns": 0.0,
+                            "builder_cost": {
+                                "action_points": 0.0
+                            },
+                            "squad_cost": {
+                                "action": 0.0,
+                                "command": 0.0,
+                                "popcap": 0.0,
+                                "fuel": 0.0,
+                                "munition": 0.0,
+                                "manpower": 0.0,
+                                "requisition": 0.0,
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
+                            }
+                        }
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\sight_ext"
+                        },
+                        "detect_camouflage": {
+                            "tp_global": 10.0,
+                            "tp_mine": -1.0,
+                            "tp_unit": -1.0,
+                            "tp_democharge": -1.0
+                        },
+                        "extended_sight": "False",
+                        "extended_sight_radius": 70.0,
+                        "reveal_area_on_death_time": 3.0,
+                        "sight_package": {
+                            "inner_height": 2.5,
+                            "inner_radius": 0.0,
+                            "outer_height": 0.0,
+                            "outer_radius": 35.0,
+                            "cone_angle": 360.0,
+                            "cone_start_radius": 0.0
+                        },
+                        "specific_detector_actions": [],
+                        "vertical_truesight": {
+                            "enable": "True",
+                            "tolerance": 1.0,
+                            "eye_height": 2.5
+                        },
+                        "camouflage_detection_enabled": "True",
+                        "blockers_check_bounding_box": "True",
+                        "reveal_area_on_death_radius": 5.0,
+                        "camouflage_detection_respects_fog_of_war_vision": "True",
+                        "camouflage_detection_respects_shot_blockers": "True"
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\type_ext"
+                        },
+                        "unit_type_list": [
+                            {
+                                "unit_type": "vehicle"
+                            },
+                            {
+                                "unit_type": "cover_object"
+                            }
+                        ],
+                        "weapon_targeting": "automatic",
+                        "intersection_testing": "False",
+                        "race_type_list": [
+                            {
+                                "race_type": {
+                                    "instance_reference": ""
+                                }
+                            }
+                        ],
+                        "attack_target_restriction_on_attacker": [],
+                        "attack_target_restriction_on_victim": [],
+                        "weapon_category_targeting_filter": {
+                            "1melee": "True",
+                            "2ranged": "True",
+                            "3siege": "True",
+                            "4charge": "True",
+                            "5brace": "True",
+                            "6auto_ability_cast": "True",
+                            "7single_cast_ability": "True",
+                            "8dummy": "True"
+                        }
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\ui_ext"
+                        },
+                        "ap_killed_kicker": "True",
+                        "ap_loss_kicker": "True",
+                        "decorator_height": 4.5,
+                        "extra_text_deprecated": "",
+                        "ghost_enable": "False",
+                        "help_text": {
+                            "locstring": {
+                                "name": "help_text",
+                                "value": "0"
+                            }
+                        },
+                        "hotkey_name": "",
+                        "kill_type": "light_armour",
+                        "minimap_color": "*",
+                        "minimap_enable": "True",
+                        "minimap_team_only": "False",
+                        "minimap_teamcolor": "True",
+                        "overlay_name": "",
+                        "reveal_for_decryption": "False",
+                        "screen_name": {
+                            "locstring": {
+                                "name": "screen_name",
+                                "value": "0"
+                            }
+                        },
+                        "selection_name": "vehicle",
+                        "selection_scale": 1.0,
+                        "selection_type": "squad_select",
+                        "tooltip_txt": {
+                            "locstring": {
+                                "name": "tooltip_txt",
+                                "value": "0"
+                            }
+                        },
+                        "ui_priority": 0.0,
+                        "minimap_icon_scale": 1.0,
+                        "brief_text": {
+                            "locstring": {
+                                "name": "brief_text",
+                                "value": "0"
+                            }
+                        },
+                        "extra_text": {
+                            "locstring": {
+                                "name": "extra_text",
+                                "value": "0"
+                            }
+                        },
+                        "screen_name_short": {
+                            "locstring": {
+                                "name": "screen_name_short",
+                                "value": "0"
+                            }
+                        },
+                        "show_in_build_log": "True",
+                        "show_entity_appearance": "True",
+                        "screen_name_world": {
+                            "locstring": {
+                                "name": "screen_name_world",
+                                "value": "0"
+                            }
+                        },
+                        "help_text_world": {
+                            "locstring": {
+                                "name": "help_text_world",
+                                "value": "0"
+                            }
+                        },
+                        "extra_text_world": {
+                            "locstring": {
+                                "name": "extra_text_world",
+                                "value": "0"
+                            }
+                        },
+                        "map_rotation_type_override": "heading",
+                        "occlusion_state": "can_be_occluded",
+                        "decorator_visibility": "default",
+                        "skin_pack_override": "False",
+                        "skin_summer": "",
+                        "skin_winter": "",
+                        "targeting_and_bandbox_selection_priority": "high",
+                        "selection_method": "terrain_obb",
+                        "terrain_info_display_offset": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "decorator_ledger_key": "",
+                        "decorator_ledger_bar_style": {
+                            "instance_reference": ""
+                        },
+                        "selection_name_squad_override": "",
+                        "selection_grouping_ledger_key": "",
+                        "debug_text": "",
+                        "icon_name": "",
+                        "minimap_icon": "",
+                        "symbol_icon_name": "",
+                        "selection_datatemplate": "",
+                        "use_construction_range_on_selection": "False",
+                        "use_combat_range_on_selection": "True",
+                        "is_armoured": "False",
+                        "decorator_data_template": "",
+                        "ui_combine_type": "intersection",
+                        "spotted_on_spawn": "False",
+                        "district_info": {
+                            "instance_reference": ""
+                        },
+                        "force_facing_and_range_visual_to_center_on_entity": "False",
+                        "is_unique_to_race": "False",
+                        "kicker_offset": 0.0,
+                        "portrait_name": "",
+                        "selection_secondary_bounds_scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "z": 1.0
+                        },
+                        "decorator": "",
+                        "map_layer": 0.0,
+                        "map_mark": "",
+                        "portrait_icon": "",
+                        "ui_codex_info": {
+                            "priority": 0.0,
+                            "exclusive": "False",
+                            "ui_position": {
+                                "ui_position_column": -1.0,
+                                "ui_position_row": -1.0
+                            }
+                        },
+                        "custom_selection_obbs": [],
+                        "ui_extra_infos": [],
+                        "screen_name_visibility": "visible",
+                        "help_text_formatter": {
+                            "template_reference": {
+                                "name": "help_text_formatter",
+                                "value": ""
+                            }
+                        },
+                        "extra_text_formatter": {
+                            "template_reference": {
+                                "name": "extra_text_formatter",
+                                "value": ""
+                            }
+                        },
+                        "extra_text_world_formatter": {
+                            "template_reference": {
+                                "name": "extra_text_world_formatter",
+                                "value": ""
+                            }
+                        },
+                        "help_text_world_formatter": {
+                            "template_reference": {
+                                "name": "help_text_world_formatter",
+                                "value": ""
+                            }
+                        },
+                        "screen_name_formatter": {
+                            "template_reference": {
+                                "name": "screen_name_formatter",
+                                "value": ""
+                            }
+                        },
+                        "screen_name_short_formatter": {
+                            "template_reference": {
+                                "name": "screen_name_short_formatter",
+                                "value": ""
+                            }
+                        },
+                        "screen_name_world_formatter": {
+                            "template_reference": {
+                                "name": "screen_name_world_formatter",
+                                "value": ""
+                            }
+                        },
+                        "brief_text_formatter": {
+                            "template_reference": {
+                                "name": "brief_text_formatter",
+                                "value": ""
+                            }
+                        },
+                        "sound": "",
+                        "sound_alternative": "",
+                        "telemetry_name": "",
+                        "selectable_in_non_interactive_area": "True",
+                        "selection_obb_size": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "z": 1.0
+                        },
+                        "target_selection_priority_by_owner": "none",
+                        "turn_in_place_distance": 0.0,
+                        "bandbox_selection_priority_override": "medium",
+                        "decorator_visibility_statetree_node_condition": "",
+                        "selection_ui_visibility_statetree_node_condition": "",
+                        "global_unit_control_row": -1.0,
+                        "global_unit_control_row_special": -1.0,
+                        "disable_UI_if_garrison_disabled": "True"
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\upgrade_ext"
+                        },
+                        "must_be_in_supply": "False",
+                        "number_of_standard_slots": -1.0,
+                        "standard_upgrades": [],
+                        "max_queue_size_override": -1.0,
+                        "production_item_completed_openingbranch": "",
+                        "shared_team_production": "False"
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\moving_ext"
+                        },
+                        "acceleration": 2.0,
+                        "deceleration": 4.0,
+                        "high_path_look_ahead_max_dist": 35.0,
+                        "orient_to_terrain": "True",
+                        "pass_type": {
+                            "instance_reference": "pass_types/trench_crossing_vehicle_medium"
+                        },
+                        "rotation_rate": 35.0,
+                        "turn_plan": {
+                            "instance_reference": "turn_plan/tank_i"
+                        },
+                        "on_land_overturn_scale": 0.0,
+                        "motion_tree_movement_direction_count": 4.0,
+                        "right_of_way_priority": 100.0,
+                        "use_prediction": "True",
+                        "reduce_clipping_by_slowing_other": "True",
+                        "walker_option": {
+                            "template_reference": {
+                                "name": "walker_option",
+                                "value": "options\\none"
+                            }
+                        },
+                        "motion_tree_pivot_animations_count": 0.0,
+                        "motion_tree_atomic_pivot_anim": "False",
+                        "skimmer_option": {
+                            "template_reference": {
+                                "name": "skimmer_option",
+                                "value": "options\\none"
+                            }
+                        },
+                        "can_path_into_blocked_cover": "False",
+                        "convertible_dynamics_option": {
+                            "template_reference": {
+                                "name": "convertible_dynamics_option",
+                                "value": "options\\none"
+                            }
+                        },
+                        "pathfinding_option": {
+                            "template_reference": {
+                                "name": "pathfinding_option",
+                                "value": "options\\ebpextensions\\movingext\\pathfinding_option"
+                            },
+                            "can_path_through_allies": "False",
+                            "path_blocking_priority": 255.0,
+                            "right_of_way_evacuate_in_combat_allies": "True",
+                            "right_of_way_allies_time_in_combat_seconds": 5.0,
+                            "ignore_entity_collision": "False"
+                        },
+                        "motion_tree_strafing_anim": "False",
+                        "speed_levels": {
+                            "speed_level_0": 2.0,
+                            "speed_level_1": 4.0,
+                            "speed_level_2": 5.0,
+                            "speed_level_3": 6.0,
+                            "speed_level_4": 8.0
+                        },
+                        "melee_move_tolerance": 0.0,
+                        "navigation_agent_info": {
+                            "instance_reference": ""
+                        },
+                        "can_evacuate_enemy_unit": "True",
+                        "pass_type_destination": {
+                            "instance_reference": "pass_types/vehicle_medium"
+                        },
+                        "speed_scaling_table": {
+                            "min_speed": 0.0,
+                            "default_speed": 5.0,
+                            "max_speed": 5.0,
+                            "reverse_max_speed": 0.0
+                        },
+                        "snap_to_surface_type": "GroundOrWalkable",
+                        "reverse_acceleration": 0.0,
+                        "reverse_deceleration": 0.0,
+                        "pivot_rate": 0.0,
+                        "portal_to_portal_cost_exponent": 1.0,
+                        "smooth_path_option": {
+                            "template_reference": {
+                                "name": "smooth_path_option",
+                                "value": "options\\ebpextensions\\movingext\\cover_and_blockers_smoothing_option"
+                            },
+                            "ignore_num_cells_at_start": 3.0,
+                            "ignore_num_cells_worse_cost": 3.0,
+                            "with_cost_speed_multiplier": 0.4
+                        },
+                        "direct_path_look_ahead_max_dist": 71.0,
+                        "start_move_speed_option": {
+                            "template_reference": {
+                                "name": "start_move_speed_option",
+                                "value": "options\\ebpextensions\\movingext\\start_move_speed_option"
+                            },
+                            "max_frame_ticks_from_stopped": 2.0,
+                            "rotation_rate_multiplier": 1.3
+                        }
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\combat_ext"
+                        },
+                        "reject_attack_command": "False",
+                        "hardpoints": [],
+                        "sight_hardpoint": -1.0,
+                        "attack_move": {
+                            "attack_move_targeting_range": 30.0
+                        },
+                        "idle_targeting": {
+                            "idle_targeting_range": 15.0
+                        },
+                        "kill_action_tree": {
+                            "template_reference": {
+                                "name": "kill_action_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "unequip_weapons_on_death": "False",
+                        "ui_show_most_progressed_weapon_reload": "False"
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\population_ext"
+                        },
+                        "medic_pop": 0.0,
+                        "personnel_pop": 6.0,
+                        "vehicle_pop": 0.0,
+                        "upkeep_per_pop_per_minute_override": {
+                            "action": 0.0,
+                            "command": 0.0,
+                            "popcap": 0.0,
+                            "fuel": 0.0,
+                            "munition": 0.0,
+                            "manpower": 1.5,
+                            "requisition": 0.0,
+                            "ultimate": 0.0,
+                            "ability_resource_1": 0.0,
+                            "ability_resource_2": 0.0
+                        }
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\camouflage_ext"
+                        },
+                        "attack_priority": 5.0,
+                        "camouflage_type": "tp_global",
+                        "chain_revealer": "False",
+                        "detection_radius": 0.0,
+                        "must_be_fully_constructed": "False",
+                        "permanently_activated": "False",
+                        "combat_reset_time": 5.0,
+                        "first_strike_shots": 1.0,
+                        "revert_max": 10.0,
+                        "revert_multiplier": 2.0,
+                        "revert_time": 1.5,
+                        "revert_time_on_detection": 10.0,
+                        "camouflaged_combat_stance": "attack",
+                        "camouflage_action_tree": {
+                            "template_reference": {
+                                "name": "camouflage_action_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": "entity_vehicle_root\\camouflage_hold_riders\\cammo_units_in_hold\\sync_hold_cammo\\cammo_tank_riders\\cammo_held_squads"
+                        },
+                        "first_strike_tree": {
+                            "template_reference": {
+                                "name": "first_strike_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "on_observed_by_detector_tree": {
+                            "template_reference": {
+                                "name": "on_observed_by_detector_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "on_observed_wear_off_seconds": 2.0
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\line_of_sight_ext"
+                        },
+                        "blocking_box": {
+                            "x": 0.01,
+                            "y": 0.01,
+                            "z": 0.01
+                        },
+                        "is_shot_blocking": "False",
+                        "use_blocking_box": "False",
+                        "does_block_line_of_sight": "Never",
+                        "reveal_center_when_outside_is_visible": "True",
+                        "disable_shot_blocking_on_death": "False",
+                        "blocks_ground_targeting_if_shot_block": "False"
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\crew_ext"
+                        },
+                        "race_list": []
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\ability_ext"
+                        },
+                        "abilities": []
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\entity_inventory_ext"
+                        },
+                        "category_capacity": {
+                            "special": 0.0,
+                            "default": -1.0,
+                            "upgrade": 0.0,
+                            "casualty": 0.0,
+                            "vehicle_wreck": 0.0,
+                            "hold_weapon": 0.0
+                        }
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\presentation_override_ext"
+                        },
+                        "only_after_repossession": "True",
+                        "race_mapping_list": []
+                    }
+                }
+            ],
+            "pbgid": 2175289.0,
+            "parent_pbg": {
+                "instance_reference": "ebps/races/common/parent/vehicle_parent"
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "child_custom_properties": [],
+                "custom_bool_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "custom_float_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_int32_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_reflected_enum_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_vector3f_properties": []
+            }
+        },
+        "vehicle_medium_parent": {
+            "extensions": [
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\health_ext"
+                        },
+                        "can_repair": "True",
+                        "cuttable": "False",
+                        "death_event_name": "Death",
+                        "death_seconds": 0.0,
+                        "delete_when_dead": "False",
+                        "force_attacker_memory": "False",
+                        "hitpoints": 100.0,
+                        "is_invincible": "False",
+                        "is_salvagable_wreck": "False",
+                        "rebuilt_entity": {
+                            "instance_reference": ""
+                        },
+                        "rebuilt_squad": {
+                            "instance_reference": ""
+                        },
+                        "rebuilt_use_wreck_owner": "False",
+                        "receive_weapon_cover_modifiers": "False",
+                        "regeneration": 0.0,
+                        "regeneration_disabled": "False",
+                        "remove_from_pathfinding_on_death": "False",
+                        "reveal_to_all_on_death": "True",
+                        "ui_can_scuttle": "False",
+                        "target_size": 20.0,
+                        "weapon_priority": 0.0,
+                        "wreck_entity_option": {
+                            "template_reference": {
+                                "name": "wreck_entity_option",
+                                "value": "options\\ebpextensions\\healthext\\wreck_table"
+                            },
+                            "wreck_entities": {
+                                "default": {
+                                    "instance_reference": ""
+                                },
+                                "brewup": {
+                                    "instance_reference": ""
+                                }
+                            },
+                            "spawn_wreck_requirements": [
+                                {
+                                    "requirement": {
+                                        "template_reference": {
+                                            "name": "requirement",
+                                            "value": "requirements\\required_passable_path"
+                                        },
+                                        "pass_walkable_surface": "True",
+                                        "reason": "usage",
+                                        "ui_name": {
+                                            "locstring": {
+                                                "name": "ui_name",
+                                                "value": "0"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "keep_wreck_ownership": "False"
+                        },
+                        "armor_type": "None",
+                        "armor_layout_option": {
+                            "template_reference": {
+                                "name": "armor_layout_option",
+                                "value": "options\\ebpextensions\\healthext\\armor_layouts\\armor_layout_front_rear_side"
+                            },
+                            "front_armor": 100.0,
+                            "rear_armor": 100.0,
+                            "side_armor": 100.0,
+                            "rear_damage_multiplier": 1.0,
+                            "side_damage_multiplier": 1.0,
+                            "front_damage_multiplier": 1.0
+                        },
+                        "allegiance_override": "none",
+                        "not_default_attackable": "False",
+                        "armor_scaler_by_damage_type": {
+                            "True Damage": 1.0,
+                            "flame": -1.0,
+                            "ballistic": 1.0,
+                            "explosive": 1.0
+                        },
+                        "self_destruct_action_tree": {
+                            "template_reference": {
+                                "name": "self_destruct_action_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "rebuilt_entity_action_tree": {
+                            "template_reference": {
+                                "name": "rebuilt_entity_action_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "on_received_damage_action_tree": {
+                            "template_reference": {
+                                "name": "on_received_damage_action_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "death_action_tree": "",
+                        "can_be_damaged_by_ally": "True",
+                        "on_reach_invulnerable_min_cap_entity_state_tree_ref": "",
+                        "on_reach_max_health_entity_state_tree_ref": "",
+                        "restore_hook_offsets": [],
+                        "can_be_restored": "False",
+                        "can_be_damaged_by_ally_default_attack_allowed": "True",
+                        "can_be_targeted_by_ally": "False"
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\cost_ext"
+                        },
+                        "time_cost": {
+                            "cost": {
+                                "action": 0.0,
+                                "command": 0.0,
+                                "popcap": 0.0,
+                                "fuel": 0.0,
+                                "munition": 0.0,
+                                "manpower": 0.0,
+                                "requisition": 0.0,
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
+                            },
+                            "time_seconds": 0.0,
+                            "time_turns": 0.0,
+                            "builder_cost": {
+                                "action_points": 0.0
+                            },
+                            "squad_cost": {
+                                "action": 0.0,
+                                "command": 0.0,
+                                "popcap": 0.0,
+                                "fuel": 0.0,
+                                "munition": 0.0,
+                                "manpower": 0.0,
+                                "requisition": 0.0,
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
+                            }
+                        }
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\sight_ext"
+                        },
+                        "detect_camouflage": {
+                            "tp_global": 10.0,
+                            "tp_mine": -1.0,
+                            "tp_unit": -1.0,
+                            "tp_democharge": -1.0
+                        },
+                        "extended_sight": "False",
+                        "extended_sight_radius": 70.0,
+                        "reveal_area_on_death_time": 3.0,
+                        "sight_package": {
+                            "inner_height": 2.5,
+                            "inner_radius": 0.0,
+                            "outer_height": 0.0,
+                            "outer_radius": 35.0,
+                            "cone_angle": 360.0,
+                            "cone_start_radius": 0.0
+                        },
+                        "specific_detector_actions": [],
+                        "vertical_truesight": {
+                            "enable": "True",
+                            "tolerance": 1.0,
+                            "eye_height": 2.5
+                        },
+                        "camouflage_detection_enabled": "True",
+                        "blockers_check_bounding_box": "True",
+                        "reveal_area_on_death_radius": 5.0,
+                        "camouflage_detection_respects_fog_of_war_vision": "True",
+                        "camouflage_detection_respects_shot_blockers": "True"
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\type_ext"
+                        },
+                        "unit_type_list": [
+                            {
+                                "unit_type": "vehicle"
+                            },
+                            {
+                                "unit_type": "cover_object"
+                            }
+                        ],
+                        "weapon_targeting": "automatic",
+                        "intersection_testing": "False",
+                        "race_type_list": [
+                            {
+                                "race_type": {
+                                    "instance_reference": ""
+                                }
+                            }
+                        ],
+                        "attack_target_restriction_on_attacker": [],
+                        "attack_target_restriction_on_victim": [],
+                        "weapon_category_targeting_filter": {
+                            "1melee": "True",
+                            "2ranged": "True",
+                            "3siege": "True",
+                            "4charge": "True",
+                            "5brace": "True",
+                            "6auto_ability_cast": "True",
+                            "7single_cast_ability": "True",
+                            "8dummy": "True"
+                        }
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\ui_ext"
+                        },
+                        "ap_killed_kicker": "True",
+                        "ap_loss_kicker": "True",
+                        "decorator_height": 4.5,
+                        "extra_text_deprecated": "",
+                        "ghost_enable": "False",
+                        "help_text": {
+                            "locstring": {
+                                "name": "help_text",
+                                "value": "0"
+                            }
+                        },
+                        "hotkey_name": "",
+                        "kill_type": "light_armour",
+                        "minimap_color": "*",
+                        "minimap_enable": "True",
+                        "minimap_team_only": "False",
+                        "minimap_teamcolor": "True",
+                        "overlay_name": "",
+                        "reveal_for_decryption": "False",
+                        "screen_name": {
+                            "locstring": {
+                                "name": "screen_name",
+                                "value": "0"
+                            }
+                        },
+                        "selection_name": "vehicle",
+                        "selection_scale": 1.0,
+                        "selection_type": "squad_select",
+                        "tooltip_txt": {
+                            "locstring": {
+                                "name": "tooltip_txt",
+                                "value": "0"
+                            }
+                        },
+                        "ui_priority": 0.0,
+                        "minimap_icon_scale": 1.0,
+                        "brief_text": {
+                            "locstring": {
+                                "name": "brief_text",
+                                "value": "0"
+                            }
+                        },
+                        "extra_text": {
+                            "locstring": {
+                                "name": "extra_text",
+                                "value": "0"
+                            }
+                        },
+                        "screen_name_short": {
+                            "locstring": {
+                                "name": "screen_name_short",
+                                "value": "0"
+                            }
+                        },
+                        "show_in_build_log": "True",
+                        "show_entity_appearance": "True",
+                        "screen_name_world": {
+                            "locstring": {
+                                "name": "screen_name_world",
+                                "value": "0"
+                            }
+                        },
+                        "help_text_world": {
+                            "locstring": {
+                                "name": "help_text_world",
+                                "value": "0"
+                            }
+                        },
+                        "extra_text_world": {
+                            "locstring": {
+                                "name": "extra_text_world",
+                                "value": "0"
+                            }
+                        },
+                        "map_rotation_type_override": "heading",
+                        "occlusion_state": "can_be_occluded",
+                        "decorator_visibility": "default",
+                        "skin_pack_override": "False",
+                        "skin_summer": "",
+                        "skin_winter": "",
+                        "targeting_and_bandbox_selection_priority": "high",
+                        "selection_method": "terrain_obb",
+                        "terrain_info_display_offset": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "decorator_ledger_key": "",
+                        "decorator_ledger_bar_style": {
+                            "instance_reference": ""
+                        },
+                        "selection_name_squad_override": "",
+                        "selection_grouping_ledger_key": "",
+                        "debug_text": "",
+                        "icon_name": "",
+                        "minimap_icon": "",
+                        "symbol_icon_name": "",
+                        "selection_datatemplate": "",
+                        "use_construction_range_on_selection": "False",
+                        "use_combat_range_on_selection": "True",
+                        "is_armoured": "False",
+                        "decorator_data_template": "",
+                        "ui_combine_type": "intersection",
+                        "spotted_on_spawn": "False",
+                        "district_info": {
+                            "instance_reference": ""
+                        },
+                        "force_facing_and_range_visual_to_center_on_entity": "False",
+                        "is_unique_to_race": "False",
+                        "kicker_offset": 0.0,
+                        "portrait_name": "",
+                        "selection_secondary_bounds_scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "z": 1.0
+                        },
+                        "decorator": "",
+                        "map_layer": 0.0,
+                        "map_mark": "",
+                        "portrait_icon": "",
+                        "ui_codex_info": {
+                            "priority": 0.0,
+                            "exclusive": "False",
+                            "ui_position": {
+                                "ui_position_column": -1.0,
+                                "ui_position_row": -1.0
+                            }
+                        },
+                        "custom_selection_obbs": [],
+                        "ui_extra_infos": [],
+                        "screen_name_visibility": "visible",
+                        "help_text_formatter": {
+                            "template_reference": {
+                                "name": "help_text_formatter",
+                                "value": ""
+                            }
+                        },
+                        "extra_text_formatter": {
+                            "template_reference": {
+                                "name": "extra_text_formatter",
+                                "value": ""
+                            }
+                        },
+                        "extra_text_world_formatter": {
+                            "template_reference": {
+                                "name": "extra_text_world_formatter",
+                                "value": ""
+                            }
+                        },
+                        "help_text_world_formatter": {
+                            "template_reference": {
+                                "name": "help_text_world_formatter",
+                                "value": ""
+                            }
+                        },
+                        "screen_name_formatter": {
+                            "template_reference": {
+                                "name": "screen_name_formatter",
+                                "value": ""
+                            }
+                        },
+                        "screen_name_short_formatter": {
+                            "template_reference": {
+                                "name": "screen_name_short_formatter",
+                                "value": ""
+                            }
+                        },
+                        "screen_name_world_formatter": {
+                            "template_reference": {
+                                "name": "screen_name_world_formatter",
+                                "value": ""
+                            }
+                        },
+                        "brief_text_formatter": {
+                            "template_reference": {
+                                "name": "brief_text_formatter",
+                                "value": ""
+                            }
+                        },
+                        "sound": "",
+                        "sound_alternative": "",
+                        "telemetry_name": "",
+                        "selectable_in_non_interactive_area": "True",
+                        "selection_obb_size": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "z": 1.0
+                        },
+                        "target_selection_priority_by_owner": "none",
+                        "turn_in_place_distance": 0.0,
+                        "bandbox_selection_priority_override": "medium",
+                        "decorator_visibility_statetree_node_condition": "",
+                        "selection_ui_visibility_statetree_node_condition": "",
+                        "global_unit_control_row": -1.0,
+                        "global_unit_control_row_special": -1.0,
+                        "disable_UI_if_garrison_disabled": "True"
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\upgrade_ext"
+                        },
+                        "must_be_in_supply": "False",
+                        "number_of_standard_slots": -1.0,
+                        "standard_upgrades": [],
+                        "max_queue_size_override": -1.0,
+                        "production_item_completed_openingbranch": "",
+                        "shared_team_production": "False"
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\moving_ext"
+                        },
+                        "acceleration": 2.0,
+                        "deceleration": 4.0,
+                        "high_path_look_ahead_max_dist": 35.0,
+                        "orient_to_terrain": "True",
+                        "pass_type": {
+                            "instance_reference": "pass_types/trench_crossing_vehicle_medium"
+                        },
+                        "rotation_rate": 35.0,
+                        "turn_plan": {
+                            "instance_reference": "turn_plan/tank_i"
+                        },
+                        "on_land_overturn_scale": 0.0,
+                        "motion_tree_movement_direction_count": 4.0,
+                        "right_of_way_priority": 100.0,
+                        "use_prediction": "True",
+                        "reduce_clipping_by_slowing_other": "True",
+                        "walker_option": {
+                            "template_reference": {
+                                "name": "walker_option",
+                                "value": "options\\none"
+                            }
+                        },
+                        "motion_tree_pivot_animations_count": 0.0,
+                        "motion_tree_atomic_pivot_anim": "False",
+                        "skimmer_option": {
+                            "template_reference": {
+                                "name": "skimmer_option",
+                                "value": "options\\none"
+                            }
+                        },
+                        "can_path_into_blocked_cover": "False",
+                        "convertible_dynamics_option": {
+                            "template_reference": {
+                                "name": "convertible_dynamics_option",
+                                "value": "options\\none"
+                            }
+                        },
+                        "pathfinding_option": {
+                            "template_reference": {
+                                "name": "pathfinding_option",
+                                "value": "options\\ebpextensions\\movingext\\pathfinding_option"
+                            },
+                            "can_path_through_allies": "False",
+                            "path_blocking_priority": 255.0,
+                            "right_of_way_evacuate_in_combat_allies": "True",
+                            "right_of_way_allies_time_in_combat_seconds": 5.0,
+                            "ignore_entity_collision": "False"
+                        },
+                        "motion_tree_strafing_anim": "False",
+                        "speed_levels": {
+                            "speed_level_0": 2.0,
+                            "speed_level_1": 4.0,
+                            "speed_level_2": 5.0,
+                            "speed_level_3": 6.0,
+                            "speed_level_4": 8.0
+                        },
+                        "melee_move_tolerance": 0.0,
+                        "navigation_agent_info": {
+                            "instance_reference": ""
+                        },
+                        "can_evacuate_enemy_unit": "True",
+                        "pass_type_destination": {
+                            "instance_reference": "pass_types/vehicle_medium"
+                        },
+                        "speed_scaling_table": {
+                            "min_speed": 0.0,
+                            "default_speed": 5.0,
+                            "max_speed": 5.0,
+                            "reverse_max_speed": 0.0
+                        },
+                        "snap_to_surface_type": "GroundOrWalkable",
+                        "reverse_acceleration": 0.0,
+                        "reverse_deceleration": 0.0,
+                        "pivot_rate": 0.0,
+                        "portal_to_portal_cost_exponent": 1.0,
+                        "smooth_path_option": {
+                            "template_reference": {
+                                "name": "smooth_path_option",
+                                "value": "options\\ebpextensions\\movingext\\cover_and_blockers_smoothing_option"
+                            },
+                            "ignore_num_cells_at_start": 3.0,
+                            "ignore_num_cells_worse_cost": 3.0,
+                            "with_cost_speed_multiplier": 0.4
+                        },
+                        "direct_path_look_ahead_max_dist": 71.0,
+                        "start_move_speed_option": {
+                            "template_reference": {
+                                "name": "start_move_speed_option",
+                                "value": "options\\ebpextensions\\movingext\\start_move_speed_option"
+                            },
+                            "max_frame_ticks_from_stopped": 2.0,
+                            "rotation_rate_multiplier": 1.3
+                        }
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\combat_ext"
+                        },
+                        "reject_attack_command": "False",
+                        "hardpoints": [],
+                        "sight_hardpoint": -1.0,
+                        "attack_move": {
+                            "attack_move_targeting_range": 30.0
+                        },
+                        "idle_targeting": {
+                            "idle_targeting_range": 15.0
+                        },
+                        "kill_action_tree": {
+                            "template_reference": {
+                                "name": "kill_action_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "unequip_weapons_on_death": "False",
+                        "ui_show_most_progressed_weapon_reload": "False"
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\population_ext"
+                        },
+                        "medic_pop": 0.0,
+                        "personnel_pop": 6.0,
+                        "vehicle_pop": 0.0,
+                        "upkeep_per_pop_per_minute_override": {
+                            "action": 0.0,
+                            "command": 0.0,
+                            "popcap": 0.0,
+                            "fuel": 0.0,
+                            "munition": 0.0,
+                            "manpower": 1.5,
+                            "requisition": 0.0,
+                            "ultimate": 0.0,
+                            "ability_resource_1": 0.0,
+                            "ability_resource_2": 0.0
+                        }
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\camouflage_ext"
+                        },
+                        "attack_priority": 5.0,
+                        "camouflage_type": "tp_global",
+                        "chain_revealer": "False",
+                        "detection_radius": 0.0,
+                        "must_be_fully_constructed": "False",
+                        "permanently_activated": "False",
+                        "combat_reset_time": 5.0,
+                        "first_strike_shots": 1.0,
+                        "revert_max": 10.0,
+                        "revert_multiplier": 2.0,
+                        "revert_time": 1.5,
+                        "revert_time_on_detection": 10.0,
+                        "camouflaged_combat_stance": "attack",
+                        "camouflage_action_tree": {
+                            "template_reference": {
+                                "name": "camouflage_action_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": "entity_vehicle_root\\camouflage_hold_riders\\cammo_units_in_hold\\sync_hold_cammo\\cammo_tank_riders\\cammo_held_squads"
+                        },
+                        "first_strike_tree": {
+                            "template_reference": {
+                                "name": "first_strike_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "on_observed_by_detector_tree": {
+                            "template_reference": {
+                                "name": "on_observed_by_detector_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "on_observed_wear_off_seconds": 2.0
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\line_of_sight_ext"
+                        },
+                        "blocking_box": {
+                            "x": 0.01,
+                            "y": 0.01,
+                            "z": 0.01
+                        },
+                        "is_shot_blocking": "False",
+                        "use_blocking_box": "False",
+                        "does_block_line_of_sight": "Never",
+                        "reveal_center_when_outside_is_visible": "True",
+                        "disable_shot_blocking_on_death": "False",
+                        "blocks_ground_targeting_if_shot_block": "False"
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\crew_ext"
+                        },
+                        "race_list": []
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\ability_ext"
+                        },
+                        "abilities": []
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\entity_inventory_ext"
+                        },
+                        "category_capacity": {
+                            "special": 0.0,
+                            "default": -1.0,
+                            "upgrade": 0.0,
+                            "casualty": 0.0,
+                            "vehicle_wreck": 0.0,
+                            "hold_weapon": 0.0
+                        }
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\presentation_override_ext"
+                        },
+                        "only_after_repossession": "True",
+                        "race_mapping_list": []
+                    }
+                }
+            ],
+            "pbgid": 2175288.0,
+            "parent_pbg": {
+                "instance_reference": "ebps/races/common/parent/vehicle_parent"
             },
             "custom_properties": {
                 "template_reference": {
@@ -17269,7 +19720,24 @@
                                     "instance_reference": ""
                                 }
                             },
-                            "spawn_wreck_requirements": [],
+                            "spawn_wreck_requirements": [
+                                {
+                                    "requirement": {
+                                        "template_reference": {
+                                            "name": "requirement",
+                                            "value": "requirements\\required_passable_path"
+                                        },
+                                        "pass_walkable_surface": "True",
+                                        "reason": "usage",
+                                        "ui_name": {
+                                            "locstring": {
+                                                "name": "ui_name",
+                                                "value": "0"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
                             "keep_wreck_ownership": "False"
                         },
                         "armor_type": "None",
@@ -17938,6 +20406,1179 @@
         }
     },
     "team_weapons": {
+        "tw_artillery_mobile_parent": {
+            "extensions": [
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\combat_ext"
+                        },
+                        "reject_attack_command": "False",
+                        "hardpoints": [
+                            {
+                                "hardpoint": {
+                                    "parent_hardpoint": -1.0,
+                                    "weapon_table": [
+                                        {
+                                            "weapon": {
+                                                "heading": {
+                                                    "x": 0.0,
+                                                    "y": 0.0,
+                                                    "z": 1.0
+                                                },
+                                                "length": 3.0,
+                                                "origin": {
+                                                    "x": 0.0,
+                                                    "y": 0.0,
+                                                    "z": 0.0
+                                                },
+                                                "type": "default",
+                                                "weapon_entity_attachment": {
+                                                    "template_reference": {
+                                                        "name": "weapon_entity_attachment",
+                                                        "value": "options\\attachment_types\\entity_create_attachment"
+                                                    },
+                                                    "entity_attach_data": {
+                                                        "template_reference": {
+                                                            "name": "entity_attach_data",
+                                                            "value": "attachments\\attach_data_entity"
+                                                        },
+                                                        "attach_data": {
+                                                            "template_reference": {
+                                                                "name": "attach_data",
+                                                                "value": "attachments\\attach_data"
+                                                            },
+                                                            "marker_name_parent": "",
+                                                            "parent_rigidbody_target_name": "",
+                                                            "game_object_attachment_type": "scenegraph"
+                                                        },
+                                                        "ebp": {
+                                                            "instance_reference": "ebps/races/american/weapons/ballistic_weapon/anti_tank_gun/w_57mm_at_gun_us"
+                                                        },
+                                                        "attachment_flags": {
+                                                            "sim_only": "False",
+                                                            "no_pathfinding": "True",
+                                                            "not_snappable": "False",
+                                                            "restore_snap_to_ground_on_detach": "False",
+                                                            "no_sim_update": "False",
+                                                            "join_parent_squad": "False",
+                                                            "redirect_damage_to_parent_entity": "True",
+                                                            "receive_parent_animations": "False",
+                                                            "receive_parent_death": "False"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "weapon": {
+                                                "heading": {
+                                                    "x": 0.0,
+                                                    "y": 0.0,
+                                                    "z": 1.0
+                                                },
+                                                "length": 3.0,
+                                                "origin": {
+                                                    "x": 0.0,
+                                                    "y": 6.0,
+                                                    "z": 0.0
+                                                },
+                                                "type": "default",
+                                                "weapon_entity_attachment": {
+                                                    "template_reference": {
+                                                        "name": "weapon_entity_attachment",
+                                                        "value": "options\\attachment_types\\entity_create_attachment"
+                                                    },
+                                                    "entity_attach_data": {
+                                                        "template_reference": {
+                                                            "name": "entity_attach_data",
+                                                            "value": "attachments\\attach_data_entity"
+                                                        },
+                                                        "attach_data": {
+                                                            "template_reference": {
+                                                                "name": "attach_data",
+                                                                "value": "attachments\\attach_data"
+                                                            },
+                                                            "marker_name_parent": "",
+                                                            "parent_rigidbody_target_name": "",
+                                                            "game_object_attachment_type": "scenegraph"
+                                                        },
+                                                        "ebp": {
+                                                            "instance_reference": "ebps/races/american/weapons/ballistic_weapon/anti_tank_gun/w_57mm_at_gun_armor_piercing_us"
+                                                        },
+                                                        "attachment_flags": {
+                                                            "sim_only": "False",
+                                                            "no_pathfinding": "True",
+                                                            "not_snappable": "False",
+                                                            "restore_snap_to_ground_on_detach": "False",
+                                                            "no_sim_update": "False",
+                                                            "join_parent_squad": "False",
+                                                            "redirect_damage_to_parent_entity": "True",
+                                                            "receive_parent_animations": "False",
+                                                            "receive_parent_death": "False"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "receives_attack_commands": "True",
+                                    "base_marker": "",
+                                    "preferred_inventory_item_categories": [],
+                                    "firing_offset_markers": [],
+                                    "offhand_marker": "",
+                                    "initialize_weapons_on_creation": "True"
+                                }
+                            }
+                        ],
+                        "sight_hardpoint": -1.0,
+                        "attack_move": {
+                            "attack_move_targeting_range": 30.0
+                        },
+                        "idle_targeting": {
+                            "idle_targeting_range": 15.0
+                        },
+                        "kill_action_tree": {
+                            "template_reference": {
+                                "name": "kill_action_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "unequip_weapons_on_death": "True",
+                        "ui_show_most_progressed_weapon_reload": "False"
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\health_ext"
+                        },
+                        "can_repair": "True",
+                        "cuttable": "False",
+                        "death_event_name": "Death",
+                        "death_seconds": 30.0,
+                        "delete_when_dead": "True",
+                        "force_attacker_memory": "False",
+                        "hitpoints": 350.0,
+                        "is_invincible": "False",
+                        "is_salvagable_wreck": "False",
+                        "rebuilt_entity": {
+                            "instance_reference": ""
+                        },
+                        "rebuilt_squad": {
+                            "instance_reference": ""
+                        },
+                        "rebuilt_use_wreck_owner": "False",
+                        "receive_weapon_cover_modifiers": "True",
+                        "regeneration": 0.0,
+                        "regeneration_disabled": "False",
+                        "remove_from_pathfinding_on_death": "True",
+                        "reveal_to_all_on_death": "False",
+                        "ui_can_scuttle": "False",
+                        "target_size": 20.0,
+                        "weapon_priority": -100.0,
+                        "wreck_entity_option": {
+                            "template_reference": {
+                                "name": "wreck_entity_option",
+                                "value": "options\\none"
+                            }
+                        },
+                        "armor_type": "None",
+                        "armor_layout_option": {
+                            "template_reference": {
+                                "name": "armor_layout_option",
+                                "value": "options\\ebpextensions\\healthext\\armor_layouts\\armor_layout_uniform"
+                            },
+                            "armor": 70.0
+                        },
+                        "allegiance_override": "none",
+                        "not_default_attackable": "False",
+                        "armor_scaler_by_damage_type": {
+                            "True Damage": 1.0,
+                            "flame": 1.0,
+                            "ballistic": 1.0,
+                            "explosive": 1.0
+                        },
+                        "self_destruct_action_tree": {
+                            "template_reference": {
+                                "name": "self_destruct_action_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "rebuilt_entity_action_tree": {
+                            "template_reference": {
+                                "name": "rebuilt_entity_action_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "on_received_damage_action_tree": {
+                            "template_reference": {
+                                "name": "on_received_damage_action_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "death_action_tree": "",
+                        "can_be_damaged_by_ally": "True",
+                        "on_reach_invulnerable_min_cap_entity_state_tree_ref": "",
+                        "on_reach_max_health_entity_state_tree_ref": "",
+                        "restore_hook_offsets": [],
+                        "can_be_restored": "False",
+                        "can_be_damaged_by_ally_default_attack_allowed": "True",
+                        "can_be_targeted_by_ally": "False"
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\moving_ext"
+                        },
+                        "acceleration": 0.0,
+                        "deceleration": 0.0,
+                        "high_path_look_ahead_max_dist": 25.0,
+                        "orient_to_terrain": "True",
+                        "pass_type": {
+                            "instance_reference": "pass_types/infantry"
+                        },
+                        "rotation_rate": 75.0,
+                        "turn_plan": {
+                            "instance_reference": "turn_plan/gun_i"
+                        },
+                        "on_land_overturn_scale": 0.0,
+                        "motion_tree_movement_direction_count": 4.0,
+                        "right_of_way_priority": 100.0,
+                        "use_prediction": "True",
+                        "reduce_clipping_by_slowing_other": "False",
+                        "walker_option": {
+                            "template_reference": {
+                                "name": "walker_option",
+                                "value": "options\\none"
+                            }
+                        },
+                        "motion_tree_pivot_animations_count": 0.0,
+                        "motion_tree_atomic_pivot_anim": "False",
+                        "skimmer_option": {
+                            "template_reference": {
+                                "name": "skimmer_option",
+                                "value": "options\\none"
+                            }
+                        },
+                        "can_path_into_blocked_cover": "False",
+                        "convertible_dynamics_option": {
+                            "template_reference": {
+                                "name": "convertible_dynamics_option",
+                                "value": "options\\none"
+                            }
+                        },
+                        "pathfinding_option": {
+                            "template_reference": {
+                                "name": "pathfinding_option",
+                                "value": "options\\ebpextensions\\movingext\\pathfinding_option"
+                            },
+                            "can_path_through_allies": "False",
+                            "path_blocking_priority": 255.0,
+                            "right_of_way_evacuate_in_combat_allies": "True",
+                            "right_of_way_allies_time_in_combat_seconds": 5.0,
+                            "ignore_entity_collision": "False"
+                        },
+                        "motion_tree_strafing_anim": "False",
+                        "speed_levels": {
+                            "speed_level_0": 1.5,
+                            "speed_level_1": 2.0,
+                            "speed_level_2": 3.6,
+                            "speed_level_3": 5.4,
+                            "speed_level_4": 6.0
+                        },
+                        "melee_move_tolerance": 0.0,
+                        "navigation_agent_info": {
+                            "instance_reference": ""
+                        },
+                        "can_evacuate_enemy_unit": "False",
+                        "pass_type_destination": {
+                            "instance_reference": ""
+                        },
+                        "speed_scaling_table": {
+                            "min_speed": 0.0,
+                            "default_speed": 3.6,
+                            "max_speed": 3.6,
+                            "reverse_max_speed": 0.0
+                        },
+                        "snap_to_surface_type": "GroundOrWalkable",
+                        "reverse_acceleration": 0.0,
+                        "reverse_deceleration": 0.0,
+                        "pivot_rate": 0.0,
+                        "portal_to_portal_cost_exponent": 1.0,
+                        "smooth_path_option": {
+                            "template_reference": {
+                                "name": "smooth_path_option",
+                                "value": "options\\ebpextensions\\movingext\\cover_and_blockers_smoothing_option"
+                            },
+                            "ignore_num_cells_at_start": 3.0,
+                            "ignore_num_cells_worse_cost": 3.0,
+                            "with_cost_speed_multiplier": 0.8
+                        },
+                        "direct_path_look_ahead_max_dist": 20.0,
+                        "start_move_speed_option": {
+                            "template_reference": {
+                                "name": "start_move_speed_option",
+                                "value": "options\\none"
+                            }
+                        }
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\sight_ext"
+                        },
+                        "detect_camouflage": {
+                            "tp_global": 10.0,
+                            "tp_mine": -1.0,
+                            "tp_unit": -1.0,
+                            "tp_democharge": -1.0
+                        },
+                        "extended_sight": "False",
+                        "extended_sight_radius": 90.0,
+                        "reveal_area_on_death_time": 3.0,
+                        "sight_package": {
+                            "inner_height": 2.5,
+                            "inner_radius": 0.0,
+                            "outer_height": 0.0,
+                            "outer_radius": 35.0,
+                            "cone_angle": 360.0,
+                            "cone_start_radius": 0.0
+                        },
+                        "specific_detector_actions": [],
+                        "vertical_truesight": {
+                            "enable": "True",
+                            "tolerance": 1.0,
+                            "eye_height": 2.5
+                        },
+                        "camouflage_detection_enabled": "True",
+                        "blockers_check_bounding_box": "True",
+                        "reveal_area_on_death_radius": 5.0,
+                        "camouflage_detection_respects_fog_of_war_vision": "True",
+                        "camouflage_detection_respects_shot_blockers": "True"
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\type_ext"
+                        },
+                        "unit_type_list": [
+                            {
+                                "unit_type": "team_weapon"
+                            },
+                            {
+                                "unit_type": "cover_object"
+                            },
+                            {
+                                "unit_type": "artillery"
+                            }
+                        ],
+                        "weapon_targeting": "no_targeting",
+                        "intersection_testing": "True",
+                        "race_type_list": [
+                            {
+                                "race_type": {
+                                    "instance_reference": "racebps/americans"
+                                }
+                            }
+                        ],
+                        "attack_target_restriction_on_attacker": [],
+                        "attack_target_restriction_on_victim": [],
+                        "weapon_category_targeting_filter": {
+                            "1melee": "True",
+                            "2ranged": "True",
+                            "3siege": "True",
+                            "4charge": "True",
+                            "5brace": "True",
+                            "6auto_ability_cast": "True",
+                            "7single_cast_ability": "True",
+                            "8dummy": "True"
+                        }
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\ui_ext"
+                        },
+                        "ap_killed_kicker": "True",
+                        "ap_loss_kicker": "True",
+                        "decorator_height": 3.0,
+                        "extra_text_deprecated": "",
+                        "ghost_enable": "False",
+                        "help_text": {
+                            "locstring": {
+                                "name": "help_text",
+                                "value": "0"
+                            }
+                        },
+                        "hotkey_name": "",
+                        "icon_name": "",
+                        "kill_type": "",
+                        "minimap_color": "*",
+                        "minimap_enable": "True",
+                        "minimap_team_only": "False",
+                        "minimap_teamcolor": "False",
+                        "overlay_name": "",
+                        "reveal_for_decryption": "False",
+                        "screen_name": {
+                            "locstring": {
+                                "name": "screen_name",
+                                "value": "0"
+                            }
+                        },
+                        "selection_name": "vehicle",
+                        "selection_scale": 1.0,
+                        "selection_type": "multi_entity_select",
+                        "tooltip_txt": {
+                            "locstring": {
+                                "name": "tooltip_txt",
+                                "value": "0"
+                            }
+                        },
+                        "ui_priority": 0.0,
+                        "minimap_icon": "",
+                        "minimap_icon_scale": 1.0,
+                        "brief_text": {
+                            "locstring": {
+                                "name": "brief_text",
+                                "value": "0"
+                            }
+                        },
+                        "extra_text": {
+                            "locstring": {
+                                "name": "extra_text",
+                                "value": "0"
+                            }
+                        },
+                        "screen_name_short": {
+                            "locstring": {
+                                "name": "screen_name_short",
+                                "value": "0"
+                            }
+                        },
+                        "show_in_build_log": "True",
+                        "show_entity_appearance": "True",
+                        "screen_name_world": {
+                            "locstring": {
+                                "name": "screen_name_world",
+                                "value": "0"
+                            }
+                        },
+                        "help_text_world": {
+                            "locstring": {
+                                "name": "help_text_world",
+                                "value": "0"
+                            }
+                        },
+                        "extra_text_world": {
+                            "locstring": {
+                                "name": "extra_text_world",
+                                "value": "0"
+                            }
+                        },
+                        "map_rotation_type_override": "no_override",
+                        "symbol_icon_name": "",
+                        "occlusion_state": "can_be_occluded",
+                        "decorator_visibility": "default",
+                        "skin_pack_override": "False",
+                        "skin_summer": "",
+                        "skin_winter": "",
+                        "targeting_and_bandbox_selection_priority": "medium",
+                        "selection_method": "obb",
+                        "terrain_info_display_offset": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "decorator_ledger_key": "",
+                        "decorator_ledger_bar_style": {
+                            "instance_reference": ""
+                        },
+                        "selection_name_squad_override": "",
+                        "selection_grouping_ledger_key": "",
+                        "debug_text": "",
+                        "selection_datatemplate": "",
+                        "use_construction_range_on_selection": "False",
+                        "use_combat_range_on_selection": "True",
+                        "is_armoured": "False",
+                        "decorator_data_template": "",
+                        "ui_combine_type": "intersection",
+                        "spotted_on_spawn": "False",
+                        "district_info": {
+                            "instance_reference": ""
+                        },
+                        "force_facing_and_range_visual_to_center_on_entity": "False",
+                        "is_unique_to_race": "False",
+                        "kicker_offset": 0.0,
+                        "portrait_name": "races/american/team_weapons/at_gun57mm_us_portrait",
+                        "selection_secondary_bounds_scale": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "z": 1.0
+                        },
+                        "decorator": "",
+                        "map_layer": 0.0,
+                        "map_mark": "",
+                        "portrait_icon": "",
+                        "ui_codex_info": {
+                            "priority": 0.0,
+                            "exclusive": "False",
+                            "ui_position": {
+                                "ui_position_column": -1.0,
+                                "ui_position_row": -1.0
+                            }
+                        },
+                        "custom_selection_obbs": [],
+                        "ui_extra_infos": [],
+                        "screen_name_visibility": "visible",
+                        "help_text_formatter": {
+                            "template_reference": {
+                                "name": "help_text_formatter",
+                                "value": ""
+                            }
+                        },
+                        "extra_text_formatter": {
+                            "template_reference": {
+                                "name": "extra_text_formatter",
+                                "value": ""
+                            }
+                        },
+                        "extra_text_world_formatter": {
+                            "template_reference": {
+                                "name": "extra_text_world_formatter",
+                                "value": ""
+                            }
+                        },
+                        "help_text_world_formatter": {
+                            "template_reference": {
+                                "name": "help_text_world_formatter",
+                                "value": ""
+                            }
+                        },
+                        "screen_name_formatter": {
+                            "template_reference": {
+                                "name": "screen_name_formatter",
+                                "value": ""
+                            }
+                        },
+                        "screen_name_short_formatter": {
+                            "template_reference": {
+                                "name": "screen_name_short_formatter",
+                                "value": ""
+                            }
+                        },
+                        "screen_name_world_formatter": {
+                            "template_reference": {
+                                "name": "screen_name_world_formatter",
+                                "value": ""
+                            }
+                        },
+                        "brief_text_formatter": {
+                            "template_reference": {
+                                "name": "brief_text_formatter",
+                                "value": ""
+                            }
+                        },
+                        "sound": "",
+                        "sound_alternative": "",
+                        "telemetry_name": "",
+                        "selectable_in_non_interactive_area": "True",
+                        "selection_obb_size": {
+                            "x": 1.0,
+                            "y": 1.0,
+                            "z": 1.0
+                        },
+                        "target_selection_priority_by_owner": "none",
+                        "turn_in_place_distance": 3.0,
+                        "bandbox_selection_priority_override": "",
+                        "decorator_visibility_statetree_node_condition": "",
+                        "selection_ui_visibility_statetree_node_condition": "",
+                        "global_unit_control_row": -1.0,
+                        "global_unit_control_row_special": -1.0,
+                        "disable_UI_if_garrison_disabled": "True"
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\upgrade_ext"
+                        },
+                        "must_be_in_supply": "False",
+                        "number_of_standard_slots": -1.0,
+                        "standard_upgrades": [],
+                        "max_queue_size_override": -1.0,
+                        "production_item_completed_openingbranch": "",
+                        "shared_team_production": "False"
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\cost_ext"
+                        },
+                        "time_cost": {
+                            "cost": {
+                                "action": 0.0,
+                                "command": 0.0,
+                                "popcap": 0.0,
+                                "fuel": 0.0,
+                                "munition": 0.0,
+                                "manpower": 20.0,
+                                "requisition": 0.0,
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
+                            },
+                            "time_seconds": 20.0,
+                            "time_turns": 0.0,
+                            "builder_cost": {
+                                "action_points": 0.0
+                            },
+                            "squad_cost": {
+                                "action": 0.0,
+                                "command": 0.0,
+                                "popcap": 0.0,
+                                "fuel": 0.0,
+                                "munition": 0.0,
+                                "manpower": 0.0,
+                                "requisition": 0.0,
+                                "ultimate": 0.0,
+                                "ability_resource_1": 0.0,
+                                "ability_resource_2": 0.0
+                            }
+                        }
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\camouflage_ext"
+                        },
+                        "attack_priority": 0.0,
+                        "camouflage_type": "tp_global",
+                        "chain_revealer": "False",
+                        "detection_radius": 0.0,
+                        "must_be_fully_constructed": "False",
+                        "permanently_activated": "False",
+                        "combat_reset_time": 5.0,
+                        "first_strike_shots": 1.0,
+                        "revert_max": 10.0,
+                        "revert_multiplier": 2.0,
+                        "revert_time": 1.5,
+                        "revert_time_on_detection": 10.0,
+                        "camouflaged_combat_stance": "attack",
+                        "camouflage_action_tree": {
+                            "template_reference": {
+                                "name": "camouflage_action_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "first_strike_tree": {
+                            "template_reference": {
+                                "name": "first_strike_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "on_observed_by_detector_tree": {
+                            "template_reference": {
+                                "name": "on_observed_by_detector_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "on_observed_wear_off_seconds": 2.0
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\population_ext"
+                        },
+                        "medic_pop": 0.0,
+                        "personnel_pop": 3.0,
+                        "vehicle_pop": 0.0,
+                        "upkeep_per_pop_per_minute_override": {
+                            "action": 0.0,
+                            "command": 0.0,
+                            "popcap": 0.0,
+                            "fuel": 0.0,
+                            "munition": 0.0,
+                            "manpower": 1.0,
+                            "requisition": 0.0,
+                            "ultimate": 0.0,
+                            "ability_resource_1": 0.0,
+                            "ability_resource_2": 0.0
+                        }
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\team_weapon_ext"
+                        },
+                        "can_manual_abandon": "True",
+                        "disable_garrison": "True",
+                        "team_weapon_type": "tp_mobile",
+                        "role_list": [
+                            {
+                                "role": {
+                                    "join_sync_marker": "loc_gunner",
+                                    "required": "True",
+                                    "role_name": "gunner",
+                                    "animation_role_override": {
+                                        "instance_reference": "animation_role/team_weapon/us_at_57mm_gunner"
+                                    },
+                                    "setup_join_sync_marker_override": "loc_gunner_setup",
+                                    "apply_role_overrides_only_when_synced": "True",
+                                    "parent_inventory_slot": "",
+                                    "weapon_override": {
+                                        "template_reference": {
+                                            "name": "weapon_override",
+                                            "value": ""
+                                        }
+                                    },
+                                    "setup_position_marker": "loc_gunner_setup",
+                                    "teardown_position_marker": "loc_gunner",
+                                    "automatic_weapon_change": "True"
+                                }
+                            },
+                            {
+                                "role": {
+                                    "join_sync_marker": "loc_loader",
+                                    "required": "True",
+                                    "role_name": "loader",
+                                    "animation_role_override": {
+                                        "instance_reference": "animation_role/team_weapon/us_at_57mm_loader"
+                                    },
+                                    "setup_join_sync_marker_override": "loc_loader_setup",
+                                    "apply_role_overrides_only_when_synced": "True",
+                                    "parent_inventory_slot": "",
+                                    "weapon_override": {
+                                        "template_reference": {
+                                            "name": "weapon_override",
+                                            "value": "weapon_choice"
+                                        },
+                                        "weapon_choice": {
+                                            "type": "dummy",
+                                            "non_entity_weapon_wrapper": {
+                                                "template_reference": {
+                                                    "name": "non_entity_weapon_wrapper",
+                                                    "value": ""
+                                                }
+                                            },
+                                            "weapon_entity_attachment": {
+                                                "template_reference": {
+                                                    "name": "weapon_entity_attachment",
+                                                    "value": "options\\attachment_types\\entity_create_attachment"
+                                                },
+                                                "entity_attach_data": {
+                                                    "template_reference": {
+                                                        "name": "entity_attach_data",
+                                                        "value": "attachments\\attach_data_entity"
+                                                    },
+                                                    "attach_data": {
+                                                        "template_reference": {
+                                                            "name": "attach_data",
+                                                            "value": "attachments\\attach_data"
+                                                        },
+                                                        "marker_name_parent": "WeaponPivot_R",
+                                                        "parent_rigidbody_target_name": "",
+                                                        "game_object_attachment_type": "scenegraph"
+                                                    },
+                                                    "ebp": {
+                                                        "instance_reference": "ebps/races/american/weapons/special/w_57mm_shell"
+                                                    },
+                                                    "attachment_flags": {
+                                                        "sim_only": "False",
+                                                        "no_pathfinding": "True",
+                                                        "not_snappable": "False",
+                                                        "restore_snap_to_ground_on_detach": "False",
+                                                        "no_sim_update": "False",
+                                                        "join_parent_squad": "False",
+                                                        "redirect_damage_to_parent_entity": "True",
+                                                        "receive_parent_animations": "False",
+                                                        "receive_parent_death": "False"
+                                                    }
+                                                }
+                                            },
+                                            "heading": {
+                                                "x": 120.0,
+                                                "y": 120.0,
+                                                "z": 120.0
+                                            },
+                                            "length": 0.0,
+                                            "origin": {
+                                                "x": 0.0,
+                                                "y": 0.0,
+                                                "z": 0.0
+                                            }
+                                        }
+                                    },
+                                    "setup_position_marker": "loc_loader_setup",
+                                    "teardown_position_marker": "loc_loader",
+                                    "automatic_weapon_change": "True"
+                                }
+                            }
+                        ],
+                        "destroy_on_abandon_health_threshold": -1.0,
+                        "on_abandon_action_tree": {
+                            "template_reference": {
+                                "name": "on_abandon_action_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "on_abandon_weapon_action_tree": {
+                            "template_reference": {
+                                "name": "on_abandon_weapon_action_tree",
+                                "value": "state_tree_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "is_crew_crushable": "False",
+                        "is_crew_targetable": "True",
+                        "destroy_on_abandon_chance": 0.0,
+                        "compute_aim_sector": "True"
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\ability_ext"
+                        },
+                        "abilities": [
+                            {
+                                "ability": {
+                                    "instance_reference": "abilities/races/american/team_weapons/armor_piercing_at_gun_57mm_us"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\recrewable_ext"
+                        },
+                        "race_list": [
+                            {
+                                "race_data": {
+                                    "ext_key": {
+                                        "instance_reference": "racebps/americans"
+                                    },
+                                    "info": {
+                                        "capture_squad_blueprint": {
+                                            "instance_reference": "sbps/races/american/team_weapons/at_gun_57mm_us"
+                                        },
+                                        "max_capture_crew_size": 2.0,
+                                        "min_capture_crew_size": 2.0,
+                                        "abandon_animation_seconds": 0.0,
+                                        "recrew_max_squad_size": 5.0,
+                                        "abandoned_allows_pass_through": "False",
+                                        "driver_death_chance_on_entity_death": 1.0,
+                                        "driver_squad_blueprint": {
+                                            "instance_reference": ""
+                                        },
+                                        "hide_selection_visual_when_crewed": "False",
+                                        "reinforce_entity_blueprint": {
+                                            "instance_reference": "ebps/races/american/infantry/crew_at_gun_57mm_us"
+                                        },
+                                        "is_abandoned_on_spawn": "False"
+                                    }
+                                }
+                            },
+                            {
+                                "race_data": {
+                                    "ext_key": {
+                                        "instance_reference": "racebps/germans"
+                                    },
+                                    "info": {
+                                        "capture_squad_blueprint": {
+                                            "instance_reference": "sbps/races/american/team_weapons/at_gun_57mm_us"
+                                        },
+                                        "max_capture_crew_size": 2.0,
+                                        "min_capture_crew_size": 2.0,
+                                        "abandon_animation_seconds": 0.0,
+                                        "recrew_max_squad_size": 5.0,
+                                        "abandoned_allows_pass_through": "False",
+                                        "driver_death_chance_on_entity_death": 1.0,
+                                        "driver_squad_blueprint": {
+                                            "instance_reference": ""
+                                        },
+                                        "hide_selection_visual_when_crewed": "False",
+                                        "reinforce_entity_blueprint": {
+                                            "instance_reference": "ebps/races/german/infantry/crew_at_gun_ger"
+                                        },
+                                        "is_abandoned_on_spawn": "False"
+                                    }
+                                }
+                            },
+                            {
+                                "race_data": {
+                                    "ext_key": {
+                                        "instance_reference": "racebps/british"
+                                    },
+                                    "info": {
+                                        "capture_squad_blueprint": {
+                                            "instance_reference": "sbps/races/american/team_weapons/at_gun_57mm_us"
+                                        },
+                                        "max_capture_crew_size": 2.0,
+                                        "min_capture_crew_size": 2.0,
+                                        "abandon_animation_seconds": 0.0,
+                                        "recrew_max_squad_size": 5.0,
+                                        "abandoned_allows_pass_through": "False",
+                                        "driver_death_chance_on_entity_death": 1.0,
+                                        "driver_squad_blueprint": {
+                                            "instance_reference": ""
+                                        },
+                                        "hide_selection_visual_when_crewed": "False",
+                                        "reinforce_entity_blueprint": {
+                                            "instance_reference": "ebps/races/british/infantry/crew_at_gun_uk"
+                                        },
+                                        "is_abandoned_on_spawn": "False"
+                                    }
+                                }
+                            },
+                            {
+                                "race_data": {
+                                    "ext_key": {
+                                        "instance_reference": "racebps/british_africa"
+                                    },
+                                    "info": {
+                                        "capture_squad_blueprint": {
+                                            "instance_reference": "sbps/races/american/team_weapons/at_gun_57mm_us"
+                                        },
+                                        "max_capture_crew_size": 2.0,
+                                        "min_capture_crew_size": 2.0,
+                                        "abandon_animation_seconds": 0.0,
+                                        "recrew_max_squad_size": 5.0,
+                                        "abandoned_allows_pass_through": "False",
+                                        "driver_death_chance_on_entity_death": 1.0,
+                                        "driver_squad_blueprint": {
+                                            "instance_reference": ""
+                                        },
+                                        "hide_selection_visual_when_crewed": "False",
+                                        "reinforce_entity_blueprint": {
+                                            "instance_reference": "ebps/races/british_africa/infantry/crew_at_gun_africa_uk"
+                                        },
+                                        "is_abandoned_on_spawn": "False"
+                                    }
+                                }
+                            },
+                            {
+                                "race_data": {
+                                    "ext_key": {
+                                        "instance_reference": "racebps/afrika_korps"
+                                    },
+                                    "info": {
+                                        "capture_squad_blueprint": {
+                                            "instance_reference": "sbps/races/american/team_weapons/at_gun_57mm_us"
+                                        },
+                                        "max_capture_crew_size": 2.0,
+                                        "min_capture_crew_size": 2.0,
+                                        "abandon_animation_seconds": 0.0,
+                                        "recrew_max_squad_size": 5.0,
+                                        "abandoned_allows_pass_through": "False",
+                                        "driver_death_chance_on_entity_death": 1.0,
+                                        "driver_squad_blueprint": {
+                                            "instance_reference": ""
+                                        },
+                                        "hide_selection_visual_when_crewed": "False",
+                                        "reinforce_entity_blueprint": {
+                                            "instance_reference": "ebps/races/afrika_korps/infantry/crew_at_gun_ak"
+                                        },
+                                        "is_abandoned_on_spawn": "False"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\entity_inventory_ext"
+                        },
+                        "category_capacity": {
+                            "special": 0.0,
+                            "default": -1.0,
+                            "upgrade": 0.0,
+                            "casualty": 0.0,
+                            "vehicle_wreck": 0.0,
+                            "hold_weapon": 0.0
+                        }
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\paradrop_ext"
+                        },
+                        "make_dead_on_drop": "False",
+                        "reserve_sparse_grid_entry": "True",
+                        "sight_start_height": -1.0,
+                        "drop_height": 35.0,
+                        "on_landing_action_tree": {
+                            "template_reference": {
+                                "name": "on_landing_action_tree",
+                                "value": "state_tree_global_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": "airborne_paradrop_util\\on_landing"
+                        },
+                        "on_landed_action_tree": {
+                            "template_reference": {
+                                "name": "on_landed_action_tree",
+                                "value": "state_tree_global_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": "airborne_paradrop_util\\detach_parachute"
+                        },
+                        "on_start_paradropping_action_tree": {
+                            "template_reference": {
+                                "name": "on_start_paradropping_action_tree",
+                                "value": "state_tree_global_reference_info"
+                            },
+                            "ActionTree_OpeningBranch": ""
+                        },
+                        "travel_distance": 1.0,
+                        "cord_length": 3.0,
+                        "swing_speed": 0.005,
+                        "steering_duration": 1.0,
+                        "parachute_ebp": {
+                            "instance_reference": "ebps/races/american/props/parachute"
+                        },
+                        "descent_speed": 4.0,
+                        "landing_sequence_seconds": 4.0,
+                        "animated_motion": "False",
+                        "kill_if_landing_on_impass": "True"
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\towing_trailer_ext"
+                        },
+                        "pivot_offset": 3.59,
+                        "weight": 50.0,
+                        "pivot_cost_bonus": -5.0,
+                        "attaching_duration": 0.0,
+                        "detaching_duration": 0.0
+                    }
+                },
+                {
+                    "exts": {
+                        "template_reference": {
+                            "name": "exts",
+                            "value": "ebpextensions\\presentation_override_ext"
+                        },
+                        "only_after_repossession": "True",
+                        "race_mapping_list": [
+                            {
+                                "race_mapping": {
+                                    "race_key": {
+                                        "instance_reference": "racebps/british"
+                                    },
+                                    "presentation_entity_override": {
+                                        "instance_reference": "ebps/races/british/team_weapons/tw_pack_howitzer_75mm_uk"
+                                    },
+                                    "presentation_squad_override": {
+                                        "instance_reference": "sbps/races/british/team_weapons/pack_howitzer_75mm_uk"
+                                    }
+                                }
+                            },
+                            {
+                                "race_mapping": {
+                                    "race_key": {
+                                        "instance_reference": "racebps/british_africa"
+                                    },
+                                    "presentation_entity_override": {
+                                        "instance_reference": "ebps/races/british_africa/team_weapons/tw_pack_howitzer_75mm_africa_uk"
+                                    },
+                                    "presentation_squad_override": {
+                                        "instance_reference": "sbps/races/british_africa/team_weapons/pack_howitzer_75mm_africa_uk"
+                                    }
+                                }
+                            },
+                            {
+                                "race_mapping": {
+                                    "race_key": {
+                                        "instance_reference": "racebps/germans"
+                                    },
+                                    "presentation_entity_override": {
+                                        "instance_reference": "ebps/races/german/team_weapons/tw_howitzer_75mm_leig_ger"
+                                    },
+                                    "presentation_squad_override": {
+                                        "instance_reference": "sbps/races/german/team_weapons/leig_75mm_ger"
+                                    }
+                                }
+                            },
+                            {
+                                "race_mapping": {
+                                    "race_key": {
+                                        "instance_reference": "racebps/afrika_korps"
+                                    },
+                                    "presentation_entity_override": {
+                                        "instance_reference": "ebps/races/afrika_korps/team_weapons/tw_howitzer_75mm_leig_ak"
+                                    },
+                                    "presentation_squad_override": {
+                                        "instance_reference": "sbps/races/afrika_korps/team_weapons/leig_75mm_ak"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            ],
+            "pbgid": 2175385.0,
+            "parent_pbg": {
+                "instance_reference": "ebps/races/common/team_weapons/tw_at_gun_mobile_parent"
+            },
+            "custom_properties": {
+                "template_reference": {
+                    "name": "custom_properties",
+                    "value": "custom_property_template"
+                },
+                "child_custom_properties": [],
+                "custom_bool_properties": [],
+                "custom_deferred_entity_state_tree_reference_properties": [],
+                "custom_entity_state_tree_reference_properties": [],
+                "custom_enum_properties": [],
+                "custom_float_properties": [],
+                "custom_global_state_tree_reference_properties": [],
+                "custom_hash_key_properties": [],
+                "custom_int32_properties": [],
+                "custom_loc_string_properties": [],
+                "custom_pbgid_properties": [],
+                "custom_physical_state_tree_reference_properties": [],
+                "custom_reflected_enum_properties": [],
+                "custom_squad_state_tree_reference_properties": [],
+                "custom_vector3f_properties": []
+            }
+        },
         "tw_at_gun_mobile_parent": {
             "extensions": [
                 {
@@ -19159,6 +22800,22 @@
                                 }
                             },
                             "spawn_wreck_requirements": [
+                                {
+                                    "requirement": {
+                                        "template_reference": {
+                                            "name": "requirement",
+                                            "value": "requirements\\required_passable_path"
+                                        },
+                                        "pass_walkable_surface": "True",
+                                        "reason": "usage",
+                                        "ui_name": {
+                                            "locstring": {
+                                                "name": "ui_name",
+                                                "value": "0"
+                                            }
+                                        }
+                                    }
+                                },
                                 {
                                     "requirement": {
                                         "template_reference": {

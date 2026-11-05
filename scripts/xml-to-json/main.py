@@ -102,6 +102,7 @@ def main():
         ('abilities', ''),
         ('daily_challenges_store_release', 'challenges\\challenge\\'),
         ('weekly_challenges_store_release', 'challenges\\challenge\\'),
+        ('veterancy', 'custom_property_container\\'),
         # Disable army upgrade until we have a better understanding of the data
         # ('army_upgrade')
     ]

@@ -120253,7 +120253,7 @@
                                     "ability_resource_1": 0.0,
                                     "ability_resource_2": 0.0
                                 },
-                                "time_seconds": 30.0,
+                                "time_seconds": 60.0,
                                 "time_turns": 0.0,
                                 "builder_cost": {
                                     "action_points": 0.0
@@ -487465,7 +487465,7 @@
                                     "y": 0.01,
                                     "z": 0.01
                                 },
-                                "is_shot_blocking": "True",
+                                "is_shot_blocking": "False",
                                 "use_blocking_box": "False",
                                 "reveal_center_when_outside_is_visible": "True",
                                 "does_block_line_of_sight": "never",
@@ -488057,10 +488057,31 @@
                                     "must_be_in_line_of_sight": "False",
                                     "must_not_be_in_walkable_surfaces": "False",
                                     "must_be_on_strategic_point": "False",
-                                    "requirements": [],
+                                    "requirements": [
+                                        {
+                                            "requirement": {
+                                                "template_reference": {
+                                                    "name": "requirement",
+                                                    "value": "requirements\\required_in_territory"
+                                                },
+                                                "reason": "usage",
+                                                "ui_name": {
+                                                    "locstring": {
+                                                        "name": "ui_name",
+                                                        "value": "11219005"
+                                                    }
+                                                },
+                                                "in_supply": "True",
+                                                "is_secured": "False",
+                                                "is_secured_by_checkpoint": "False",
+                                                "not_in_transition": "False",
+                                                "relative_to_caster": "False"
+                                            }
+                                        }
+                                    ],
                                     "spacing_distance": 0.0,
                                     "skip_impass_checks_and_ignore_immovable_entities": "False",
-                                    "state_tree_conditions": "entity_emplacement_root_v2\\construction_requirements_library\\not_in_enemy_territory",
+                                    "state_tree_conditions": "",
                                     "must_be_in_explored_area": "False",
                                     "must_be_on_movement_node": "False",
                                     "placement_requirement_options": [],

@@ -104729,7 +104729,7 @@
                                         "int_value": 40.0
                                     },
                                     {
-                                        "float_value": 5.5
+                                        "int_value": 4.0
                                     }
                                 ],
                                 "formatter": {
@@ -105085,7 +105085,7 @@
                                         "value": "custom_properties\\custom_float_property"
                                     },
                                     "id": "FRONT_ARMOR_MODIFIER",
-                                    "value": 5.5
+                                    "value": 4.0
                                 }
                             },
                             {
@@ -105095,7 +105095,7 @@
                                         "value": "custom_properties\\custom_float_property"
                                     },
                                     "id": "SIDE_ARMOR_MODIFIER",
-                                    "value": 5.5
+                                    "value": 4.0
                                 }
                             },
                             {
@@ -105105,7 +105105,7 @@
                                         "value": "custom_properties\\custom_float_property"
                                     },
                                     "id": "REAR_ARMOR_MODIFIER",
-                                    "value": 5.5
+                                    "value": 4.0
                                 }
                             }
                         ],
@@ -113094,7 +113094,7 @@
                                     "int_value": 40.0
                                 },
                                 {
-                                    "int_value": 2.0
+                                    "float_value": 3.5
                                 },
                                 {
                                     "int_value": 15.0
@@ -245757,7 +245757,7 @@
                                     "value": "custom_properties\\custom_float_property"
                                 },
                                 "id": "UPGRADE_PRODUCTION_SPEED_MODIFIER",
-                                "value": 0.1333333
+                                "value": 0.1333334
                             }
                         }
                     ],
@@ -466542,6 +466542,33 @@
                                 },
                                 "count": 1.0
                             }
+                        },
+                        {
+                            "required": {
+                                "template_reference": {
+                                    "name": "required",
+                                    "value": "requirements\\required_squad_upgrade"
+                                },
+                                "reason": "usage_and_display",
+                                "ui_name": {
+                                    "locstring": {
+                                        "name": "ui_name",
+                                        "value": "0"
+                                    }
+                                },
+                                "is_present": "True",
+                                "upgrade_name": {
+                                    "instance_reference": "upgrade/german/infantry/panzerschrek_jaeger_ger"
+                                },
+                                "include_completed": "True",
+                                "include_pbg_parenting": {
+                                    "include_child_pbgs": "False",
+                                    "include_parent_pbgs": "False"
+                                },
+                                "include_queued": "True",
+                                "max_completed": 100.0,
+                                "min_completed": 1.0
+                            }
                         }
                     ],
                     "blueprint_convert_options": {
@@ -509387,6 +509414,9 @@
                                             "int_value": 40.0
                                         },
                                         {
+                                            "int_value": 4.0
+                                        },
+                                        {
                                             "float_value": 20.0
                                         },
                                         {
@@ -509725,7 +509755,7 @@
                                             "value": "custom_properties\\custom_float_property"
                                         },
                                         "id": "FRONT_ARMOR_MODIFIER",
-                                        "value": 5.5
+                                        "value": 4.0
                                     }
                                 },
                                 {
@@ -509735,7 +509765,7 @@
                                             "value": "custom_properties\\custom_float_property"
                                         },
                                         "id": "SIDE_ARMOR_MODIFIER",
-                                        "value": 5.5
+                                        "value": 4.0
                                     }
                                 },
                                 {
@@ -509745,7 +509775,7 @@
                                             "value": "custom_properties\\custom_float_property"
                                         },
                                         "id": "REAR_ARMOR_MODIFIER",
-                                        "value": 5.5
+                                        "value": 4.0
                                     }
                                 },
                                 {
@@ -535078,7 +535108,7 @@
                                         "int_value": 40.0
                                     },
                                     {
-                                        "int_value": 2.0
+                                        "float_value": 3.5
                                     },
                                     {
                                         "int_value": 15.0
@@ -733313,8 +733343,27 @@
                     "extra_text_formatter": {
                         "template_reference": {
                             "name": "extra_text_formatter",
-                            "value": ""
-                        }
+                            "value": "ui_text_formatter"
+                        },
+                        "formatter": {
+                            "locstring": {
+                                "name": "formatter",
+                                "value": "11317019"
+                            }
+                        },
+                        "formatter_arguments": [
+                            {
+                                "int_value": 20.0
+                            },
+                            {
+                                "locstring_value": {
+                                    "locstring": {
+                                        "name": "locstring_value",
+                                        "value": "11264684"
+                                    }
+                                }
+                            }
+                        ]
                     },
                     "help_text": {
                         "locstring": {
@@ -734318,7 +734367,7 @@
                     "apply_to_future_units": "current_and_future_units",
                     "apply_to_squad_types": [
                         {
-                            "squad_type": "tier4"
+                            "squad_type": "medium_armor"
                         }
                     ],
                     "undo_payload_if_disqualified_after_property_change": "True",
@@ -745832,6 +745881,9 @@
                         },
                         {
                             "squad_type": "teamweapon_burst"
+                        },
+                        {
+                            "squad_type": "light_armor"
                         }
                     ],
                     "undo_payload_if_disqualified_after_property_change": "True",
@@ -746154,6 +746206,9 @@
                         },
                         {
                             "squad_type": "teamweapon_burst"
+                        },
+                        {
+                            "squad_type": "light_armor"
                         }
                     ],
                     "undo_payload_if_disqualified_after_property_change": "True",

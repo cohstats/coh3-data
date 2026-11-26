@@ -106,8 +106,10 @@ python scripts/xml-to-json/ingame_tips.py
 ```
 
 Every tip keeps its text as a locstring ID (`locstring`) - resolve it against
-`data/locales/<lang>-locstring.json`. `winConditions` limits a tip to a game mode (e.g. `hoff`
-for Final Stand); empty means the tip is shown in every mode.
+`data/locales/<lang>-locstring.json`. `gameMode` limits a tip to a game mode (e.g. `hoff`
+for Final Stand); `null` means the tip is shown in every mode. `category` comes from the tip
+file name, `topic` is a broader group assigned from `CATEGORY_TOPICS` in the script - a new
+category not listed there is exported with the topic `other`.
 
 ### Final Stand (HOFF) technology choices
 

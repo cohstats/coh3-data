@@ -1,4 +1,5 @@
 import os
+import shutil
 from scriptUtils import mod_overwrite, resolve_inheritance_dic, get_nth_level_parent, build_files_dictionary, \
     save_dict_to_json, get_path_as_string, resolve_dict_value_by_path, create_locstring_dictionary, is_internal_list_meta_key
 from weapons import parse_weapon_xml_data
@@ -75,12 +76,20 @@ def main():
     xml_data_dir = os.path.abspath(os.path.join(script_root_dir, 'xml'))
 
     print('## Started processing locale....')
-    # create locstring dictionary
-    loc_string_path = os.path.abspath(os.path.join(xml_data_dir, 'loc_english', 'locale.txt'))
-    loc_string = create_locstring_dictionary(loc_string_path)
-    # export to json
     loc_string_export_path = os.path.join(script_root_dir, f'{CONST_EXPORT_DIR}')
-    save_dict_to_json(loc_string, loc_string_export_path, "locstring.json")
+    # data/locstring.json is a copy of the English locale generated from the game's UCS file
+    # (scripts/ucs-to-json.py). Only fall back to the hand exported locale.txt when that file
+    # is missing - locale.txt is not refreshed by the workflow, and overwriting the copy with
+    # it is what kept data/locstring.json stuck on an old patch.
+    en_locstring_path = os.path.join(loc_string_export_path, 'locales', 'en-locstring.json')
+    if os.path.isfile(en_locstring_path):
+        shutil.copyfile(en_locstring_path, os.path.join(loc_string_export_path, 'locstring.json'))
+        print('Copied ' + en_locstring_path + ' to locstring.json')
+    else:
+        loc_string_path = os.path.abspath(os.path.join(xml_data_dir, 'loc_english', 'locale.txt'))
+        print('No en-locstring.json found, using ' + loc_string_path)
+        loc_string = create_locstring_dictionary(loc_string_path)
+        save_dict_to_json(loc_string, loc_string_export_path, "locstring.json")
     print(' ')
 
     # exportByType('ebps')

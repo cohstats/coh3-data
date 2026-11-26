@@ -242,6 +242,16 @@ jobs:
             exit 1
           }
 
+          # Loading screen tips -> data/ingame-tips.json
+          Write-Host "Generating ingame-tips.json..."
+          python ingame_tips.py
+
+          if ($LASTEXITCODE -ne 0) {
+            Write-Host "ERROR: ingame_tips.py failed with exit code $LASTEXITCODE"
+            Pop-Location
+            exit 1
+          }
+
           Pop-Location
         shell: pwsh
 
@@ -392,6 +402,7 @@ jobs:
                       - Added new reference attribute files extracted from ReferenceAttributes.sga
                       - Generated JSON files from reference XML data
                       - Added Final Stand perk trees (data/fs-perks.json)
+                      - Added loading screen tips (data/ingame-tips.json)
                       - Added Final Stand technology choices (data/fs-technologies.json)
                       - Added multiplayer map data (data/mp-maps.json) extracted from ScenariosMP.sga
                       
@@ -405,6 +416,7 @@ jobs:
                       - Added new reference attribute files extracted from ReferenceAttributes.sga
                       - Generated JSON files from reference XML data
                       - Added Final Stand perk trees (data/fs-perks.json)
+                      - Added loading screen tips (data/ingame-tips.json)
                       - Added Final Stand technology choices (data/fs-technologies.json)
                       - Added multiplayer map data (data/mp-maps.json) extracted from ScenariosMP.sga
                       

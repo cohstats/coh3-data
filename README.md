@@ -42,6 +42,7 @@ The workflow will:
 - Extract and process ReferenceAttributes using AOEMods.Essence tool, which:
   - Unpacks ReferenceAttributes.sga into XML files
   - Converts XML data to JSON using `scripts/xml-to-json/main.py`
+  - Exports the loading screen tips into `data/ingame-tips.json` using `scripts/xml-to-json/ingame_tips.py`
 - Unpack ScenariosMP.sga and extract multiplayer map data into `data/mp-maps.json` using `scripts/mp-maps/main.py`
   (see [`scripts/mp-maps/README.md`](scripts/mp-maps/README.md))
 - Unpack Data.sga and extract the Final Stand technology choices into `data/fs-technologies.json`
@@ -94,6 +95,19 @@ It writes `data/fs-perks.json` - the four faction perk trees, their tiers (with 
 `unlockThreshold`, i.e. how many perk points must be spent to unlock the tier) and every perk
 with its levels, perk point costs and modifiers. All text is kept as locstring IDs, resolve them
 against `data/locales/<lang>-locstring.json`.
+
+### Loading screen tips
+
+The tips shown on the loading screen are exported by `scripts/xml-to-json/ingame_tips.py` from
+`xml/attrib/instances/load_tips` into `data/ingame-tips.json`:
+
+```
+python scripts/xml-to-json/ingame_tips.py
+```
+
+Every tip keeps its text as a locstring ID (`locstring`) - resolve it against
+`data/locales/<lang>-locstring.json`. `winConditions` limits a tip to a game mode (e.g. `hoff`
+for Final Stand); empty means the tip is shown in every mode.
 
 ### Final Stand (HOFF) technology choices
 
